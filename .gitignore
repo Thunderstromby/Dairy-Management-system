@@ -1,0 +1,45 @@
+# Secrets / local environment
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Dependencies
+node_modules/
+.pnpm-store/
+.yarn/cache
+.yarn/install-state.gz
+
+# Build output
+dist/
+build/
+out/
+.output/
+.next/
+.astro/
+.svelte-kit/
+
+# Cloudflare Wrangler
+.wrangler/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# Caches
+.cache/
+.turbo/
+.eslintcache
+*.tsbuildinfo
+
+# Testing / coverage
+coverage/
+.nyc_output/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
