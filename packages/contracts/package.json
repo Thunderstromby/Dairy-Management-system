@@ -1,0 +1,12 @@
+{
+  "name": "@smartfarm/contracts",
+  "version": "0.1.0-scaffold",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit --project tsconfig.json"
+  },
+  "dependencies": {
+    "zod": "^3.25.76"
+  }
+}

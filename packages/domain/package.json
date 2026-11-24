@@ -1,0 +1,12 @@
+{
+  "name": "@smartfarm/domain",
+  "version": "0.1.0-scaffold",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit --project tsconfig.json"
+  },
+  "dependencies": {
+    "decimal.js": "^10.6.0"
+  }
+}

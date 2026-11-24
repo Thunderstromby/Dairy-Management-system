@@ -1,0 +1,20 @@
+/* Canonical semantic tokens from docs/architecture.md section 7. */
+:root {
+  --color-primary: #245c45;
+  --color-secondary: #397a58;
+  --color-accent: #d5a64a;
+  --color-background: #f7f7f1;
+  --color-surface: #ffffff;
+  --color-text: #25332c;
+  --color-border: #dce3da;
+}
+
+[data-theme='dark'] {
+  --color-primary: #8dc6a1;
+  --color-secondary: #75b38b;
+  --color-accent: #e4bc69;
+  --color-background: #151d19;
+  --color-surface: #1e2922;
+  --color-text: #edf3ee;
+  --color-border: #35443a;
+}

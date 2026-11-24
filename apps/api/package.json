@@ -1,0 +1,28 @@
+{
+  "name": "@smartfarm/api",
+  "version": "0.1.0-scaffold",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build && node dist/server.js",
+    "build": "tsc --project tsconfig.json",
+    "typecheck": "tsc --noEmit --project tsconfig.json"
+  },
+  "dependencies": {
+    "argon2": "^0.31.2",
+    "connect-pg-simple": "^9.0.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.1",
+    "express-session": "^1.19.0",
+    "helmet": "^7.2.0",
+    "pino": "^8.21.0",
+    "pino-http": "^7.1.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/express-session": "^1.18.1",
+    "@types/supertest": "^6.0.2",
+    "supertest": "^6.3.4"
+  }
+}

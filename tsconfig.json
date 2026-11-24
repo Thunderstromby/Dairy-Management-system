@@ -2,20 +2,27 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "ESNext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "Bundler",
     "jsx": "react-jsx",
     "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "/*": ["./*"]
+      "@smartfarm/database/*": ["packages/database/*"],
+      "@smartfarm/contracts/*": ["packages/contracts/*"],
+      "@smartfarm/domain/*": ["packages/domain/*"],
+      "@smartfarm/ui/*": ["packages/ui/*"]
     },
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "types": ["node"]
   },
-  "include": ["*.ts", "*.tsx", "*.js", "*.jsx", "packages/**/*", "apps/**/*"]
+  "include": ["*.ts", "*.tsx"]
 }
