@@ -24,8 +24,9 @@ This document supersedes the earlier architecture drafts, not the approved produ
 | `design-system.md` | Reusable visual rules |
 | `sitemap.md` | Page and navigation scope |
 | `stitch-visual-handoff.md` | Visual references only |
+| `acr-001-prototype-fixtures.md` | Approved prototype fixture and data-access seam exception |
 
-The SRS, permission matrix and approved business rules govern behavior. Stitch is not a source of permissions, calculations, routes, fake statuses or new features. Unresolved requirements remain open questions. The owner has requested a small amount of 3D in this revision; because SRS section 24 and scope section 6.3 exclude dedicated 3D, this is a **proposed limited marketing enhancement**, requiring scope/design approval before implementation. It does not authorize operational 3D, farm simulations or additional pages.
+The SRS, permission matrix and approved business rules govern behavior. Stitch is not a source of permissions, calculations, routes, fake statuses or new features. Unresolved requirements remain open questions. ACR-001, approved 24 November 2026, permits visual-only fixtures only under `apps/web/src/fixtures/`, reached exclusively through the build-time data-access seam at `@smartfarm/data-source`; production builds use the non-fixture adapter by default and must contain no fixture markers. Prototype route guards and local-draft UI state are labels only and never substitute for server enforcement or persistence. The owner has requested a small amount of 3D in this revision; because SRS section 24 and scope section 6.3 exclude dedicated 3D, this is a **proposed limited marketing enhancement**, requiring scope/design approval before implementation. It does not authorize operational 3D, farm simulations or additional pages.
 
 ## 2. Project evaluation
 

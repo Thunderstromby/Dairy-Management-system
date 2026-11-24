@@ -16,6 +16,7 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
+      "@smartfarm/data-source": ["apps/web/src/data/data-source.api.ts"],
       "@smartfarm/database/*": ["packages/database/*"],
       "@smartfarm/contracts/*": ["packages/contracts/*"],
       "@smartfarm/domain/*": ["packages/domain/*"],

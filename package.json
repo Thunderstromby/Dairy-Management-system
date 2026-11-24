@@ -23,6 +23,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test --pass-with-no-tests",
+    "verify:no-fixtures": "node infrastructure/scripts/verify-no-fixtures.mjs",
     "preview": "vite preview --config vite.config.ts"
   },
   "devDependencies": {

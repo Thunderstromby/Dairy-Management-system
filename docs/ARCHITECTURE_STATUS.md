@@ -93,3 +93,4 @@ The owner supplied the following content specification for "System architecture 
 | Corrections in §6 | Correction 7 resolved; corrections 1–6 and 8 pending |
 | Correct reference for "Section 13a" | Pending from owner |
 | Architecture approval itself | Granted by project owner 24 November 2026; `architecture.md` LOCKED |
+| ACR-001 prototype fixture exception | Approved by owner 24 November 2026; mapped to `apps/web/src/fixtures` and `@smartfarm/data-source` |

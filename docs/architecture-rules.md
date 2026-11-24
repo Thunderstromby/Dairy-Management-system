@@ -1,7 +1,7 @@
 # SmartFarm — Architecture Rules
 
 **Status:** LOCKED — approved by the project owner on 24 November 2026
-**Authority:** `docs/architecture.md` (LOCKED), `AGENTS.md`, `README.md`
+**Authority:** `docs/architecture.md` (LOCKED), `docs/acr-001-prototype-fixtures.md` (approved prototype exception), `AGENTS.md`, `README.md`
 **Purpose:** one operating rule set for implementation agents. This document restates approved decisions; it adds, removes and reinterprets nothing. Stitch exports, templates and visual handoff files are visual reference only and never set architecture, permissions, data or workflow rules.
 
 ## System map
@@ -64,10 +64,11 @@ Allowed direction:
 4. Repository → PostgreSQL with transaction-local workspace context.
 5. Worker → PostgreSQL outbox → policy check → provider adapter.
 6. UI component → owned/shared UI primitives; navigation visibility follows role but never grants permission.
+7. Prototype UI component → `@smartfarm/data-source` only (ACR-001). The build-time switch selects `apps/web/src/fixtures/` in development and the non-fixture adapter in production. Components never import fixture files directly.
 
 Named forbidden paths:
 
-- UI → PostgreSQL, direct SQL, direct file storage, or secrets.
+- UI → PostgreSQL, direct SQL, direct file storage, secrets, or a fixture file imported directly (use `@smartfarm/data-source`).
 - Controller → business rules, calculations, or direct SQL.
 - Repository → HTTP responses, permission decisions, or authorization bypass.
 - Any component → client-supplied workspace ID as an authority; membership comes from trusted session context.
@@ -109,6 +110,7 @@ Named forbidden paths:
 - Secrets, credentials, production data and realistic worker records never enter source control, logs or error responses; sensitive fields are redacted.
 - Unresolved business rules, formulas, transitions and statuses stay blocked. No fake data, fake metrics or simulated live telemetry.
 - 3D/WebGL is excluded by default; any 3D work requires explicit written scope and design change approval.
+- ACR-001 is the only sample-data exception: fixtures are visual-only, labelled, neutral, reached through `@smartfarm/data-source`, and excluded from production bundles. Prototype route guards and local-draft state are never authorization or persistence.
 - No library outside the approved stack; no new package for a trivial utility.
 
 ## Stop-and-report rule

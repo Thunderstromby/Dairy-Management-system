@@ -79,7 +79,7 @@ Brevo email, OCI private Object Storage, Cloudflare Pages/OCI hosting, independe
 - Prefer small, typed modules. No package for a trivial utility.
 - Use exact decimal arithmetic (`decimal.js` / PostgreSQL `numeric`) for money and quantities; never binary floating point for stored truth.
 - Server is authoritative. Client previews are never saved as financial truth.
-- No fake data, fake metrics, simulated live telemetry, or placeholder production values in code or tests.
+- No fake data, fake metrics, simulated live telemetry, or placeholder production values in code or tests. Approved exception: ACR-001 visual-only fixtures under `apps/web/src/fixtures/`, each starting with `// visual-only sample data`, using neutral tokens, reached only through `@smartfarm/data-source`, and absent from production builds.
 - Unresolved business rules remain blocked; do not invent formulas, transitions, or statuses.
 
 ## 6. Naming conventions
@@ -97,7 +97,7 @@ Brevo email, OCI private Object Storage, Cloudflare Pages/OCI hosting, independe
 - Use Public, Auth, Platform and Farm layouts with lazy-loaded feature modules.
 - Use shadcn/ui + Radix primitives; keep source-owned styling.
 - Shared UI never grants shared permissions. Navigation visibility is not authorization.
-- Components do not query the database or call APIs directly; use the typed API client and server state layer.
+- Components do not query the database or call APIs directly; use the typed API client and server state layer. In the prototype, components import data only from `@smartfarm/data-source` (ACR-001); the single build-time switch selects the visual-only fixture adapter in development and the non-fixture adapter in production.
 - Every screen must map to an approved sitemap page/section. No extra public routes from Stitch exports.
 - Provide explicit loading, empty, no-results, and error states; no silent failure.
 - Only Farm Admin sees privileged actions; Supervisor sees the approved operational subset.
@@ -232,7 +232,7 @@ Brevo email, OCI private Object Storage, Cloudflare Pages/OCI hosting, independe
 
 - Build an original SmartFarm identity: serious agricultural technology, warm minimalism, clean corporate structure — not a generic SaaS dashboard.
 - No Framer/template export as production code; no borrowed dashboards, marketing copy, badges, or workflow language.
-- No emoji or random solid icons; use Lucide consistently. No lorem ipsum, fictional farmer names, fake metrics, or live-looking demo telemetry.
+- No emoji or random solid icons; use Lucide consistently. No lorem ipsum, fictional farmer names, fake metrics, or live-looking demo telemetry. ACR-001 is the only sample-data carve-out and requires neutral tokens plus visible "illustrative" labelling.
 - No generic filler cards, gratuitous gradients, neon/futuristic styling, or 3D farm scenes.
 - Every visual element must correspond to an approved sitemap section or reusable design-system primitive.
 - Use authentic licensed dairy imagery only; preserve the approved light/dark semantic palette.
