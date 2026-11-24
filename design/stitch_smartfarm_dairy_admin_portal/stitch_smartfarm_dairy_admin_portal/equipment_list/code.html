@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "on-tertiary-fixed": "#301400", "surface": "#fbf9f3", "surface-container-low": "#f5f3ed", "secondary-container": "#d9e8c7", "surface-container-highest": "#e4e2dd", "on-secondary-fixed": "#141f0a", "outline-variant": "#c4c8bd", "on-secondary-fixed-variant": "#3e4b32", "secondary-fixed-dim": "#bdcbac", "on-tertiary": "#ffffff", "on-tertiary-container": "#ffb785", "primary-fixed": "#d4e9c3", "on-primary-fixed-variant": "#3a4c30", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "tertiary": "#5e3007", "tertiary-container": "#7a461c", "inverse-surface": "#30312d", "primary-fixed-dim": "#b8cda8", "on-primary-fixed": "#101f08", "secondary": "#556249", "surface-container-high": "#eae8e2", "primary-container": "#46583b", "tertiary-fixed-dim": "#ffb784", "on-surface": "#1b1c18", "surface-container": "#f0eee8", "secondary-fixed": "#d9e8c7", "outline": "#75786f", "surface-bright": "#fbf9f3", "tertiary-fixed": "#ffdcc6", "on-tertiary-fixed-variant": "#6c3a11", "on-primary-container": "#b8cda9", "inverse-on-surface": "#f3f1eb", "background": "#fbf9f3", "error-container": "#ffdad6", "surface-variant": "#e4e2dd", "on-error-container": "#93000a", "on-error": "#ffffff", "inverse-primary": "#b8cda8", "on-background": "#1b1c18", "primary": "#2f4126", "surface-dim": "#dcdad4", "on-surface-variant": "#444840", "on-secondary": "#ffffff", "surface-tint": "#516446", "on-secondary-container": "#5b694e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-xl": "2.5rem", "margin": "2rem", "margin-mobile": "1rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "headline-md": [ "Manrope" ], "body-lg": [ "Inter" ], "label-md": [ "Inter" ], "display-lg-mobile": [ "Manrope" ], "headline-sm": [ "Manrope" ], "data-metric-md": [ "Inter" ], "body-md": [ "Inter" ], "label-sm": [ "Inter" ], "data-metric-lg": [ "Manrope" ], "headline-xl": [ "Manrope" ], "headline-lg": [ "Manrope" ], "headline-xl-mobile": [ "Manrope" ], "display-lg": [ "Manrope" ], "body-sm": [ "Inter" ] }, "fontSize": { "headline-md": [ "1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "label-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" } ], "display-lg-mobile": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "data-metric-md": [ "1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "label-sm": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" } ], "data-metric-lg": [ "2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-xl": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-xl-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-lg": [ "3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZuhXF_IhBdGhJ4eix1oqj3wBimwP9kKeGGChH_b2ax1lMLHMcXPmCVu9b3MJqlJ3XUJHZyp_ietndJCcoi5tapKDT0swhF14GEZxUKYZjg6g5LvxUeQzsGptFXM8XbwZz0B0M4Kbg8tH48Ys1NpBq3q3ceaJWAzrxO8XU7fzOrfQL6K9wOMESU_VEMnfcbKwhEtKD90-MYyU8fO7yBiUm20ljVe33W-rRqQJED0H"/><div><div class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight truncate">SmartFarm</div><div class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Dairy Management</div></div></div><span class="font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold px-space-xs py-0.5 rounded">Farm Admin Only</span></div><div class="px-space-md py-space-sm bg-surface-container-low/80 flex items-center justify-between"><div class="truncate"><div class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Greenfield Dairy Estate</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">Workspace: GF-042</div></div><span class="h-2 w-2 rounded-full bg-primary-container ring-2 ring-primary-fixed flex-shrink-0"></span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Overview</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#">Dashboard</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Herd Management</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#">Animals</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#">Animal Health</a><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface font-semibold">Feeding Management</div><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="feeding-plans" href="#">Feeding Plans</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="feeding-schedule" href="#">Feeding Schedule</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="actual-feeding-records" href="#">Actual Feeding Records</a></div></div></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Operations &amp; Assets</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#">Milk Production</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-management" href="#">Milk Management</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#">Inventory</a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="inventory-list" href="#">Inventory List</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="item-details" href="#">Item Details</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="purchases-and-inbound-invoices" href="#">Purchases &amp; Inbound Invoices</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="stock-additions" href="#">Stock Additions</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="stock-adjustments" href="#">Stock Adjustments</a></div><div class="space-y-space-xs"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#">Equipment</a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a aria-current="page" class="flex items-center px-space-sm py-1 transition-all bg-primary-container text-on-primary font-semibold rounded-lg" data-path="equipment-list" href="#">Equipment List</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="equipment-details" href="#">Equipment Details</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="maintenance-history" href="#">Maintenance History</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="usage-records" href="#">Usage Records</a></div></div></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Workforce &amp; Finance</div><div class="space-y-space-xs"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers" href="#">Workers</a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="worker-directory" href="#">Worker Directory</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="add-worker" href="#">Add Worker</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="worker-profile" href="#">Worker Profile</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="worker-documents" href="#">Worker Documents</a></div></div><div class="space-y-space-xs"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="attendance" href="#">Attendance</a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="attendance-records" href="#">Attendance Records</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="manual-check-in-check-out-overtime" href="#">Manual Check-in/Check-out &amp; Overtime</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="leave-management" href="#">Leave Management</a></div></div><div class="space-y-space-xs"><div class="flex items-center justify-between px-space-sm py-1"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Payroll Management</span><span class="font-label-sm text-[0.625rem] bg-surface-container-high text-on-surface-variant px-1.5 py-0.5 rounded font-medium">Admin</span></div><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="salary-management" href="#">Salary Management</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="payroll-records" href="#">Payroll Records</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="salary-advances" href="#">Salary Advances</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="payroll-deductions" href="#">Payroll Deductions</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="payslips" href="#">Payslips</a></div></div><div class="space-y-space-xs"><div class="flex items-center justify-between px-space-sm py-1"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Finance</span><span class="font-label-sm text-[0.625rem] bg-primary-container text-on-primary px-1.5 py-0.5 rounded font-semibold">Farm Admin Only</span></div><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="financial-dashboard" href="#">Financial Dashboard</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="income-records" href="#">Income Records</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="expense-records" href="#">Expense Records</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="financial-reports" href="#">Financial Reports</a></div></div></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Governance &amp; Core</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="supervisor-access" href="#">Supervisor Access</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#">Reports</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="data-management" href="#">Data Management</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#">Settings</a></div></nav><div class="p-space-sm bg-surface-container-low/60"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex justify-between items-center mb-1"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Storage Quota</span><span class="font-label-sm text-label-sm text-primary font-bold">42%</span></div><div class="w-full bg-surface-container rounded-full h-1.5 mb-2"><div class="bg-primary-container h-1.5 rounded-full w-[42%]"></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-body-sm text-body-sm">1,280 Active Head</span><span class="material-symbols-outlined text-sm text-tertiary-container">sensors</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><button class="p-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-xl">menu_open</span></button><nav class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="text-on-surface-variant">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface-variant">Workspace: GF-042</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface-variant">Workforce &amp; Finance</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="font-semibold text-on-surface">Finance</span></nav><div class="relative flex-1 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full h-10 pl-9 pr-14 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search finances, herd, rations, schedules, inventory..." type="text"/><span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded shadow-sm">⌘K</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm"><span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span><span>Connected • Live</span></div><div class="flex items-center gap-1 px-2.5 py-1 rounded-md bg-primary-container/10 border border-primary/20 text-primary font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-sm">verified_user</span><span>Farm Admin Only</span></div><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Mode" type="button"><span class="material-symbols-outlined text-xl">routine</span></button><div class="relative"><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" title="Alerts" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 h-4 min-w-[1rem] px-1 bg-error text-on-error font-label-sm text-[0.625rem] rounded-full flex items-center justify-center font-bold">3</span></button></div><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#" title="Docs &amp; Support"><span class="material-symbols-outlined text-xl">help</span></a><div class="h-6 w-[1px] bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative flex items-center"><img alt="Elena Vance" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHGkwzAmXeAWZgoliBfM3J0Dk3rRvKbrFcaSDXWTFXvp7mK8JZlIDpaM_-PKsE2e-9DSWj_thQxg7ZvMO7_J2wdBeJdNp3xHQNrTkReCH1iwd77yI5cACPrn8AVBGbsgSIRzl_r1aNrbkvrI3tTJT7qFPLASAjAk_cx85172_N3qz8dJ2RbazkMZxrYU4--z2VriyTURPXkRqv4-UUhJWONTqJq0P8IWMmPKFhLYX7"/><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></div><div class="hidden lg:block text-left"><div class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-none">Farm Administrator</div></div><button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-lg">expand_more</span></button></div></div></header><main class="relative pt-16 w-full px-space-lg py-space-lg bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Command & Narrative Header -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg mb-space-lg">
+<div class="space-y-space-xs max-w-3xl">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary px-2 py-0.5 bg-surface-container-high rounded font-semibold">
+          Asset Register &amp; Machinery Operations
+        </span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary">verified</span>
+          SRS-EQ-042 Validated
+        </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">
+        Farm Equipment &amp; Machinery Inventory
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Operational machinery catalog, fleet asset condition tracking, and service status for Workspace GF-042. High-precision dairy machinery deployment and supervisor access governance.
+      </p>
+</div>
+<!-- Master Action Stack -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 bg-primary-container text-on-primary rounded-lg font-label-md text-label-md font-semibold hover:bg-primary transition-colors shadow-sm focus:outline-none" onclick="openRegisterModal()" type="button">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span>+ Register Equipment</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 bg-surface-container-lowest text-on-surface rounded-lg font-label-md text-label-md font-medium hover:bg-surface-container transition-colors shadow-sm" onclick="exportInventoryCSV()" type="button">
+<span class="material-symbols-outlined text-lg text-secondary">file_download</span>
+<span>Export Inventory CSV</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 bg-surface-container-lowest text-on-surface rounded-lg font-label-md text-label-md font-medium hover:bg-surface-container transition-colors shadow-sm" onclick="triggerAuditSheet()" type="button">
+<span class="material-symbols-outlined text-lg text-secondary">fact_check</span>
+<span>Condition Audit Sheet</span>
+</button>
+</div>
+</div>
+<!-- State Simulator Toolbar for SRS Prototyping -->
+<div class="bg-surface-container-low px-space-md py-space-sm rounded-lg mb-space-lg flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base text-primary-container">science</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider">SRS Simulator Bar:</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5">
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold transition-all" id="sim-standard" onclick="applySimState('standard')">
+        Standard Fleet (Active)
+      </button>
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-all" id="sim-register" onclick="openRegisterModal()">
+        Register Modal
+      </button>
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-all" id="sim-archive" onclick="openArchiveModal('EQ-FEED-03', 'Jaylor 5850 TMR Vertical Feed Mixer Wagon')">
+        Archive Confirmation Trigger
+      </button>
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-all" id="sim-filter" onclick="applySimState('maintenance')">
+        Filter: Needs Maintenance (6)
+      </button>
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-all" id="sim-zero" onclick="applySimState('zero')">
+        Zero Equipment State
+      </button>
+</div>
+</div>
+<!-- KPI Indicators & Operational Metric Mosaic -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Total Units -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Total Fleet Count</span>
+<div class="font-data-metric-lg text-data-metric-lg text-on-surface mt-1 font-bold">42 <span class="font-body-md text-body-md text-on-surface-variant font-normal">Units</span></div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined text-2xl">agriculture</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">16 Master asset models</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">100% Accounted</span>
+</div>
+</div>
+<!-- Operational Condition -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Operational Condition</span>
+<div class="font-data-metric-lg text-data-metric-lg text-primary mt-1 font-bold">34 <span class="font-body-md text-body-md text-on-surface-variant font-normal">Units (81%)</span></div>
+</div>
+<div class="p-2.5 rounded-lg bg-secondary-container/70 text-on-secondary-container">
+<span class="material-symbols-outlined text-2xl">check_circle</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-sm">
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary-container h-1.5 rounded-full w-[81%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">81%</span>
+</div>
+</div>
+<!-- Scheduled Maintenance -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Service Required</span>
+<div class="font-data-metric-lg text-data-metric-lg text-tertiary mt-1 font-bold">6 <span class="font-body-md text-body-md text-on-surface-variant font-normal">Units (14%)</span></div>
+</div>
+<div class="p-2.5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-2xl">build_circle</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">4 Routines • 2 Overdue</span>
+<span class="font-label-sm text-label-sm font-semibold text-tertiary">Inspection Due</span>
+</div>
+</div>
+<!-- Standby / Under Repair -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Critical / Impaired</span>
+<div class="font-data-metric-lg text-data-metric-lg text-error mt-1 font-bold">2 <span class="font-body-md text-body-md text-on-surface-variant font-normal">Units (5%)</span></div>
+</div>
+<div class="p-2.5 rounded-lg bg-error-container text-on-error-container">
+<span class="material-symbols-outlined text-2xl">warning</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">Standby • Repair Queue</span>
+<span class="font-label-sm text-label-sm font-semibold text-error">Requires Signoff</span>
+</div>
+</div>
+</div>
+<!-- Boundary & SRS Policy Callout Banner -->
+<div class="p-space-md bg-surface-container-low rounded-xl mb-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="p-2 rounded-lg bg-primary-container text-on-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">admin_panel_settings</span>
+</div>
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">
+              Equipment Governance &amp; Access Boundary (SRS-EQ-042)
+            </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-container/20 text-primary font-bold">
+              Farm Admin Master Role
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Farm Admin retains master authority to Register, Edit, and Archive equipment assets. Supervisors have operational permissions to View equipment, Record maintenance and usage logs, and update Condition following verified servicing. Decommissioning, irreversible disposal, and master profile deletion are restricted.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end sm:self-center flex-shrink-0">
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:underline flex items-center gap-0.5" href="#supervisor-access">
+<span>Security Matrix</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Search & Multi-Filter Control Panel -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm mb-space-md">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm items-center">
+<!-- Search Input -->
+<div class="md:col-span-5 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+<input class="w-full h-10 pl-9 pr-4 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" id="equipmentSearchInput" oninput="handleFilterChange()" placeholder="Search equipment by name, asset tag, serial, or station..." type="text"/>
+</div>
+<!-- Type / Category Filter -->
+<div class="md:col-span-3">
+<div class="relative">
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface appearance-none focus:outline-none focus:ring-2 focus:ring-primary/20 pr-8" id="categoryFilter" onchange="handleFilterChange()">
+<option value="all">All Equipment Types</option>
+<option value="Heavy Tractors &amp; Tillage">Heavy Tractors &amp; Tillage</option>
+<option value="Milking &amp; Rotary Systems">Milking &amp; Rotary Systems</option>
+<option value="Feeding &amp; TMR Wagons">Feeding &amp; TMR Wagons</option>
+<option value="Storage &amp; Refrigeration">Storage &amp; Refrigeration</option>
+<option value="Barn Sanitation &amp; Loaders">Barn Sanitation &amp; Loaders</option>
+<option value="Field Utility &amp; Pasture">Field Utility &amp; Pasture</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-lg">expand_more</span>
+</div>
+</div>
+<!-- Condition Filter -->
+<div class="md:col-span-2">
+<div class="relative">
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface appearance-none focus:outline-none focus:ring-2 focus:ring-primary/20 pr-8" id="conditionFilter" onchange="handleFilterChange()">
+<option value="all">All Conditions</option>
+<option value="Operational / Excellent">Operational / Excellent</option>
+<option value="Operational / Good">Operational / Good</option>
+<option value="Maintenance Required">Maintenance Required</option>
+<option value="Standby / Under Repair">Standby / Under Repair</option>
+<option value="Standby / Winterized">Standby / Winterized</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-lg">expand_more</span>
+</div>
+</div>
+<!-- Yard / Location Filter -->
+<div class="md:col-span-2">
+<div class="relative">
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface appearance-none focus:outline-none focus:ring-2 focus:ring-primary/20 pr-8" id="locationFilter" onchange="handleFilterChange()">
+<option value="all">All Stations &amp; Yards</option>
+<option value="Milking Parlor A">Milking Parlor A</option>
+<option value="South Machinery Shed">South Machinery Shed</option>
+<option value="Feed Bunk &amp; Preparation Yard">Feed Bunk &amp; Prep</option>
+<option value="Milk House &amp; Cold Vault">Milk House Vault</option>
+<option value="Barn 02 Quarters">Barn 02 Quarters</option>
+<option value="Pasture Sector 4">Pasture Sector 4</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-lg">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Master Equipment Records Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden mb-space-lg">
+<div class="p-space-md bg-surface-container-low/50 flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Cataloged Fleet Inventory</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold" id="active-count-badge">
+          6 Displayed
+        </span>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1">
+<span class="h-2 w-2 rounded-full bg-primary-container"></span> Operational (34)
+        </span>
+<span class="inline-flex items-center gap-1">
+<span class="h-2 w-2 rounded-full bg-tertiary-container"></span> Maintenance (6)
+        </span>
+<span class="inline-flex items-center gap-1">
+<span class="h-2 w-2 rounded-full bg-error"></span> Standby/Repair (2)
+        </span>
+</div>
+</div>
+<!-- The Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left" id="equipmentTable">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<th class="py-3.5 pl-space-md pr-space-xs font-semibold" scope="col">Asset Tag</th>
+<th class="py-3.5 px-space-md font-semibold" scope="col">Equipment Name &amp; Model</th>
+<th class="py-3.5 px-space-md font-semibold" scope="col">Category / Type</th>
+<th class="py-3.5 px-space-md text-right font-semibold" scope="col">Quantity</th>
+<th class="py-3.5 px-space-md font-semibold" scope="col">Current Condition</th>
+<th class="py-3.5 px-space-md font-semibold" scope="col">Last Serviced</th>
+<th class="py-3.5 px-space-md font-semibold" scope="col">Station / Primary Operator</th>
+<th class="py-3.5 pr-space-md pl-space-sm text-right font-semibold" scope="col">SRS Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface" id="equipmentTableBody">
+<!-- Row 1: John Deere Tractor -->
+<tr class="equipment-row hover:bg-surface-container/40 transition-colors" data-condition="Operational / Good" data-location="South Machinery Shed" data-type="Heavy Tractors &amp; Tillage">
+<td class="py-4 pl-space-md pr-space-xs whitespace-nowrap">
+<span class="font-label-sm text-label-sm font-mono px-2 py-1 rounded bg-surface-container text-on-surface font-semibold">
+                EQ-TRAC-01
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">John Deere 6155M Tractor</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>PTO 155 HP</span> • <span>VIN: 1L06155MHK1920</span> • <span class="text-primary font-medium">Deere &amp; Co.</span>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary">cloud_download</span>
+                Heavy Tractors &amp; Tillage
+              </span>
+</td>
+<td class="py-4 px-space-md text-right whitespace-nowrap font-data-metric-md text-data-metric-md font-bold text-on-surface">
+              2 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">Units</span>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="h-2 w-2 rounded-full bg-primary-container"></span>
+<span>Operational / Good</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Fluids &amp; PTO certified</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Oct 12, 2024</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">500h Engine Service</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">South Machinery Shed</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Carlos Mendez (Supervisor)</div>
+</td>
+<td class="py-4 pr-space-md pl-space-sm text-right whitespace-nowrap">
+<div class="inline-flex items-center justify-end gap-1">
+<a class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" href="#equipment-details" title="View Details">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</a>
+<a class="p-1.5 text-on-surface-variant hover:text-tertiary hover:bg-surface-container rounded-lg transition-colors" href="#maintenance-history" title="Record Maintenance">
+<span class="material-symbols-outlined text-lg">handyman</span>
+</a>
+<a class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" href="#usage-records" title="Record Daily Usage">
+<span class="material-symbols-outlined text-lg">schedule</span>
+</a>
+<button class="p-1.5 text-on-surface-variant hover:text-error hover:bg-error-container/30 rounded-lg transition-colors" onclick="openArchiveModal('EQ-TRAC-01', 'John Deere 6155M Tractor')" title="Archive Master Asset">
+<span class="material-symbols-outlined text-lg">archive</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: DeLaval Rotary Milking Parlor -->
+<tr class="equipment-row hover:bg-surface-container/40 transition-colors" data-condition="Operational / Excellent" data-location="Milking Parlor A" data-type="Milking &amp; Rotary Systems">
+<td class="py-4 pl-space-md pr-space-xs whitespace-nowrap">
+<span class="font-label-sm text-label-sm font-mono px-2 py-1 rounded bg-surface-container text-on-surface font-semibold">
+                EQ-PARL-01
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">DeLaval Rotary Milking Parlor 60-Stall</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>60-Stall High Capacity</span> • <span>Auto Teat Dip</span> • <span class="text-primary font-medium">DeLaval Sweden</span>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary">rotate_right</span>
+                Milking &amp; Rotary Systems
+              </span>
+</td>
+<td class="py-4 px-space-md text-right whitespace-nowrap font-data-metric-md text-data-metric-md font-bold text-on-surface">
+              1 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">Unit</span>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="h-2 w-2 rounded-full bg-primary-container"></span>
+<span>Operational / Excellent</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Vacuum pulsators calibrated</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Nov 01, 2024</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Monthly Sanitization Check</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Milking Parlor A</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Marcus Brody (Head Milker)</div>
+</td>
+<td class="py-4 pr-space-md pl-space-sm text-right whitespace-nowrap">
+<div class="inline-flex items-center justify-end gap-1">
+<a class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" href="#equipment-details" title="View Details">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</a>
+<a class="p-1.5 text-on-surface-variant hover:text-tertiary hover:bg-surface-container rounded-lg transition-colors" href="#maintenance-history" title="Record Maintenance">
+<span class="material-symbols-outlined text-lg">handyman</span>
+</a>
+<a class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" href="#usage-records" title="Record Daily Usage">
+<span class="material-symbols-outlined text-lg">schedule</span>
+</a>
+<button class="p-1.5 text-on-surface-variant hover:text-error hover:bg-error-container/30 rounded-lg transition-colors" onclick="openArchiveModal('EQ-PARL-01', 'DeLaval Rotary Milking Parlor 60-Stall')" title="Archive Master Asset">
+<span class="material-symbols-outlined text-lg">archive</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Jaylor TMR Feed Mixer Wagon -->
+<tr class="equipment-row hover:bg-surface-container/40 transition-colors bg-tertiary-fixed/10" data-condition="Maintenance Required" data-location="Feed Bunk &amp; Preparation Yard" data-type="Feeding &amp; TMR Wagons">
+<td class="py-4 pl-space-md pr-space-xs whitespace-nowrap">
+<span class="font-label-sm text-label-sm font-mono px-2 py-1 rounded bg-surface-container text-on-surface font-semibold">
+                EQ-FEED-03
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">Jaylor 5850 TMR Vertical Feed Mixer Wagon</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>Dual Auger 850 cu.ft.</span> • <span>Auger seal wear flagged</span> • <span class="text-primary font-medium">Jaylor Fabricating</span>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-tertiary">dinner_dining</span>
+                Feeding &amp; TMR Wagons
+              </span>
+</td>
+<td class="py-4 px-space-md text-right whitespace-nowrap font-data-metric-md text-data-metric-md font-bold text-on-surface">
+              2 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">Units</span>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="h-2 w-2 rounded-full bg-tertiary"></span>
+<span>Maintenance Required</span>
+</div>
+<div class="font-body-sm text-body-sm text-error font-medium mt-0.5">Drive seal replacement required</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Aug 14, 2024</div>
+<div class="font-body-sm text-body-sm text-tertiary">Overdue by 18 days</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Feed Bunk Yard</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Tomas Ruiz (Nutrition Lead)</div>
+</td>
+<td class="py-4 pr-space-md pl-space-sm text-right whitespace-nowrap">
+<div class="inline-flex items-center justify-end gap-1">
+<a class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" href="#equipment-details" title="View Details">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</a>
+<a class="p-1.5 text-on-tertiary-fixed-variant bg-tertiary-fixed/40 hover:bg-tertiary-fixed rounded-lg transition-colors" href="#maintenance-history" title="Record Maintenance Now">
+<span class="material-symbols-outlined text-lg">build</span>
+</a>
+<a class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" href="#usage-records" title="Record Daily Usage">
+<span class="material-symbols-outlined text-lg">schedule</span>
+</a>
+<button class="p-1.5 text-on-surface-variant hover:text-error hover:bg-error-container/30 rounded-lg transition-colors" onclick="openArchiveModal('EQ-FEED-03', 'Jaylor 5850 TMR Vertical Feed Mixer Wagon')" title="Archive Master Asset">
+<span class="material-symbols-outlined text-lg">archive</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Mueller Milk Chiller Tank -->
+<tr class="equipment-row hover:bg-surface-container/40 transition-colors" data-condition="Operational / Good" data-location="Milk House &amp; Cold Vault" data-type="Storage &amp; Refrigeration">
+<td class="py-4 pl-space-md pr-space-xs whitespace-nowrap">
+<span class="font-label-sm text-label-sm font-mono px-2 py-1 rounded bg-surface-container text-on-surface font-semibold">
+                EQ-TANK-02
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">Mueller 10,000L Bulk Milk Chiller Tank #2</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>Stainless Steel 316</span> • <span>Temp: 3.2°C steady</span> • <span class="text-primary font-medium">Paul Mueller Co.</span>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary">ac_unit</span>
+                Storage &amp; Refrigeration
+              </span>
+</td>
+<td class="py-4 px-space-md text-right whitespace-nowrap font-data-metric-md text-data-metric-md font-bold text-on-surface">
+              1 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">Unit</span>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="h-2 w-2 rounded-full bg-primary-container"></span>
+<span>Operational / Good</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Compressor Freon levels nominal</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Sep 28, 2024</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Cryo Compressor Test</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Milk House Vault</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Elena Vance (Admin)</div>
+</td>
+<td class="py-4 pr-space-md pl-space-sm text-right whitespace-nowrap">
+<div class="inline-flex items-center justify-end gap-1">
+<a class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" href="#equipment-details" title="View Details">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</a>
+<a class="p-1.5 text-on-surface-variant hover:text-tertiary hover:bg-surface-container rounded-lg transition-colors" href="#maintenance-history" title="Record Maintenance">
+<span class="material-symbols-outlined text-lg">handyman</span>
+</a>
+<a class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" href="#usage-records" title="Record Daily Usage">
+<span class="material-symbols-outlined text-lg">schedule</span>
+</a>
+<button class="p-1.5 text-on-surface-variant hover:text-error hover:bg-error-container/30 rounded-lg transition-colors" onclick="openArchiveModal('EQ-TANK-02', 'Mueller 10,000L Bulk Milk Chiller Tank #2')" title="Archive Master Asset">
+<span class="material-symbols-outlined text-lg">archive</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Bobcat Skid Steer -->
+<tr class="equipment-row hover:bg-surface-container/40 transition-colors" data-condition="Operational / Good" data-location="Barn 02 Quarters" data-type="Barn Sanitation &amp; Loaders">
+<td class="py-4 pl-space-md pr-space-xs whitespace-nowrap">
+<span class="font-label-sm text-label-sm font-mono px-2 py-1 rounded bg-surface-container text-on-surface font-semibold">
+                EQ-BOB-04
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">Bobcat S650 Skid Steer Loader</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>Manure Scraper Bucket</span> • <span>Hydro Drive</span> • <span class="text-primary font-medium">Doosan Bobcat</span>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary">cleaning_services</span>
+                Barn Sanitation &amp; Loaders
+              </span>
+</td>
+<td class="py-4 px-space-md text-right whitespace-nowrap font-data-metric-md text-data-metric-md font-bold text-on-surface">
+              2 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">Units</span>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="h-2 w-2 rounded-full bg-primary-container"></span>
+<span>Operational / Good</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Track tension inspected</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Oct 19, 2024</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Hydraulic Flush</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Barn 02 Quarters</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Barn Cleaning Crew</div>
+</td>
+<td class="py-4 pr-space-md pl-space-sm text-right whitespace-nowrap">
+<div class="inline-flex items-center justify-end gap-1">
+<a class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" href="#equipment-details" title="View Details">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</a>
+<a class="p-1.5 text-on-surface-variant hover:text-tertiary hover:bg-surface-container rounded-lg transition-colors" href="#maintenance-history" title="Record Maintenance">
+<span class="material-symbols-outlined text-lg">handyman</span>
+</a>
+<a class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" href="#usage-records" title="Record Daily Usage">
+<span class="material-symbols-outlined text-lg">schedule</span>
+</a>
+<button class="p-1.5 text-on-surface-variant hover:text-error hover:bg-error-container/30 rounded-lg transition-colors" onclick="openArchiveModal('EQ-BOB-04', 'Bobcat S650 Skid Steer Loader')" title="Archive Master Asset">
+<span class="material-symbols-outlined text-lg">archive</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Bauer Rainstar Hose Irrigant Reel -->
+<tr class="equipment-row hover:bg-surface-container/40 transition-colors" data-condition="Standby / Winterized" data-location="Pasture Sector 4" data-type="Field Utility &amp; Pasture">
+<td class="py-4 pl-space-md pr-space-xs whitespace-nowrap">
+<span class="font-label-sm text-label-sm font-mono px-2 py-1 rounded bg-surface-container text-on-surface font-semibold">
+                EQ-IRR-01
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">Bauer Rainstar Hard Hose Irrigant Reel</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>PE pipe 110mm / 400m</span> • <span>Off-season storage</span> • <span class="text-primary font-medium">Bauer Group</span>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-secondary">water_drop</span>
+                Field Utility &amp; Pasture
+              </span>
+</td>
+<td class="py-4 px-space-md text-right whitespace-nowrap font-data-metric-md text-data-metric-md font-bold text-on-surface">
+              3 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">Units</span>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="h-2 w-2 rounded-full bg-outline"></span>
+<span>Standby / Winterized</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Drained &amp; greased for freeze</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Oct 05, 2024</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">End of Season Decommission</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Pasture Sector 4</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Irrigation Crew</div>
+</td>
+<td class="py-4 pr-space-md pl-space-sm text-right whitespace-nowrap">
+<div class="inline-flex items-center justify-end gap-1">
+<a class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" href="#equipment-details" title="View Details">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</a>
+<a class="p-1.5 text-on-surface-variant hover:text-tertiary hover:bg-surface-container rounded-lg transition-colors" href="#maintenance-history" title="Record Maintenance">
+<span class="material-symbols-outlined text-lg">handyman</span>
+</a>
+<a class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" href="#usage-records" title="Record Daily Usage">
+<span class="material-symbols-outlined text-lg">schedule</span>
+</a>
+<button class="p-1.5 text-on-surface-variant hover:text-error hover:bg-error-container/30 rounded-lg transition-colors" onclick="openArchiveModal('EQ-IRR-01', 'Bauer Rainstar Hard Hose Irrigant Reel')" title="Archive Master Asset">
+<span class="material-symbols-outlined text-lg">archive</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Empty State Container (Hidden by default, triggered by simulator) -->
+<div class="hidden p-space-xl text-center flex-col items-center justify-center" id="zero-state-view">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant mb-space-sm">
+<span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">No Machinery or Equipment Found</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-1 mb-space-md">
+        There are currently no assets registered in this equipment register view or matching your filter query.
+      </p>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 bg-primary-container text-on-primary rounded-lg font-label-md text-label-md font-semibold hover:bg-primary transition-colors shadow-sm" onclick="openRegisterModal()">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span>Register First Equipment Asset</span>
+</button>
+</div>
+<!-- Pagination & Catalog Meta Footer -->
+<div class="p-space-md bg-surface-container-low/50 flex flex-col sm:flex-row items-center justify-between gap-space-md" id="table-footer">
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+        Showing <span class="font-semibold text-on-surface">1</span> to <span class="font-semibold text-on-surface">6</span> of <span class="font-semibold text-on-surface">16</span> registered asset classifications (42 total operational units)
+      </div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-semibold disabled:opacity-50" disabled="">
+          Previous
+        </button>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-bold">
+          1
+        </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-semibold">
+          2
+        </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-semibold">
+          3
+        </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-semibold">
+          Next
+        </button>
+</div>
+</div>
+</div>
+<!-- Operational Machinery Mosaic Cards (Bento Feature Display) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mb-space-lg">
+<!-- Card 1: Milking Machine Quick Status -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Rotary Automation</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Continuous CIP</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">DeLaval 60-Stall System</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Currently processing Batch A milking. Clean-in-Place cycle scheduled at 11:30 AM following parlor transition.
+        </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">Daily Milking Shifts: <strong>3 Runs</strong></span>
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:underline" href="#usage-records">Telemetry Logs →</a>
+</div>
+</div>
+<!-- Card 2: Feed Delivery Wagons -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-bold">TMR Ration Wagon</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-semibold">Auger Wear Watch</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">Jaylor 5850 TMR Wagon</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Auger blade tolerance measured at 4.2mm gap. Supervisor Tomasz scheduled seal grease and overhaul for Thursday maintenance window.
+        </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">Mixed Rations: <strong>14.2 Tons / Day</strong></span>
+<a class="font-label-sm text-label-sm text-tertiary font-semibold hover:underline" href="#maintenance-history">Work Order →</a>
+</div>
+</div>
+<!-- Card 3: Cold Storage Cryo Vault -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Bulk Storage</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Chilled 3.2°C</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">Mueller Bulk Tanks #1 &amp; #2</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Dual cryogenic cooling units certified by BioSecurity standards. Routine agitator speed check verified at 32 RPM.
+        </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">Total Capacity: <strong>20,000 Liters</strong></span>
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:underline" href="#milk-management">Chiller Readings →</a>
+</div>
+</div>
+</div>
+<!-- Scope & SRS Boundary Note Footer -->
+<div class="p-space-md bg-surface-container-low rounded-lg text-on-surface-variant">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-base text-secondary flex-shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-body-sm leading-relaxed">
+<strong>SRS Scope Boundary:</strong> Live telemetry, IoT sensor tracking, automatic runtime timers, and predictive maintenance algorithms are strictly excluded. Quantity indicates deployed physical units under a single asset classification. All servicing verifications and condition changes must be authenticated via verified Supervisor or Farm Admin entries.
+      </p>
+</div>
+</div>
+<!-- MODAL 1: Register / Edit Equipment Modal -->
+<div class="fixed inset-0 z-50 hidden bg-inverse-surface/40 backdrop-blur-sm flex items-center justify-center p-space-md" id="register-modal">
+<div class="bg-surface-container-lowest rounded-xl shadow-2xl max-w-2xl w-full max-h-[921px] overflow-y-auto">
+<!-- Modal Header -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="p-2 bg-primary-container text-on-primary rounded-lg">
+<span class="material-symbols-outlined text-xl">precision_manufacturing</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Register Equipment Asset</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">SRS-EQ-042 Equipment Classification Master Form</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg" onclick="closeRegisterModal()">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<!-- Registration Form Body -->
+<form class="p-space-lg space-y-space-md" onsubmit="handleRegisterSubmit(event)">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Name -->
+<div class="md:col-span-2">
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">
+              Equipment Name &amp; Model *
+            </label>
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="e.g. Case IH Puma 220 Tractor" required="" type="text"/>
+</div>
+<!-- Equipment Type -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">
+              Equipment Type / Category *
+            </label>
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20">
+<option value="Heavy Tractors &amp; Tillage">Heavy Tractors &amp; Tillage</option>
+<option value="Milking &amp; Rotary Systems">Milking &amp; Rotary Systems</option>
+<option value="Feeding &amp; TMR Wagons">Feeding &amp; TMR Wagons</option>
+<option value="Storage &amp; Refrigeration">Storage &amp; Refrigeration</option>
+<option value="Barn Sanitation &amp; Loaders">Barn Sanitation &amp; Loaders</option>
+<option value="Field Utility &amp; Pasture">Field Utility &amp; Pasture</option>
+</select>
+</div>
+<!-- Asset Tag / Serial -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">
+              Asset Tag / Serial Prefix *
+            </label>
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface font-mono focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="e.g. EQ-TRAC-02" required="" type="text"/>
+</div>
+<!-- Quantity -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">
+              Quantity (Units) *
+            </label>
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" min="1" required="" type="number" value="1"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[0.7rem] block mt-0.5">Physical units classified under this record</span>
+</div>
+<!-- Initial Condition -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">
+              Initial Operational Condition *
+            </label>
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20">
+<option value="Operational / Excellent">Operational / Excellent</option>
+<option selected="" value="Operational / Good">Operational / Good</option>
+<option value="Maintenance Required">Maintenance Required</option>
+<option value="Standby / Under Repair">Standby / Under Repair</option>
+</select>
+</div>
+<!-- Manufacturer -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">
+              Manufacturer / Vendor
+            </label>
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="e.g. CNH Industrial / John Deere" type="text"/>
+</div>
+<!-- Commission / Purchase Year -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">
+              Purchase / Commission Year
+            </label>
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" max="2030" min="1990" type="number" value="2024"/>
+</div>
+<!-- Assigned Station / Yard -->
+<div class="md:col-span-2">
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">
+              Station &amp; Yard Placement
+            </label>
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="e.g. South Machinery Shed / Milking Parlor A" type="text"/>
+</div>
+</div>
+<!-- Role Assurance Banner in Modal -->
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-sm text-primary">verified_user</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+            Authenticated as <strong>Farm Admin (Elena Vance)</strong>. Registering this unit creates an asset master record for Workspace GF-042.
+          </span>
+</div>
+<!-- Footer Actions -->
+<div class="pt-space-md flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2.5 bg-surface-container-low text-on-surface rounded-lg font-label-md text-label-md font-medium hover:bg-surface-container transition-colors" onclick="closeRegisterModal()" type="button">
+            Cancel
+          </button>
+<button class="px-space-md py-2.5 bg-primary-container text-on-primary rounded-lg font-label-md text-label-md font-semibold hover:bg-primary transition-colors shadow-sm" type="submit">
+            Save &amp; Commission Equipment
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- MODAL 2: Archive Confirmation Protocol Modal (SRS Compliance) -->
+<div class="fixed inset-0 z-50 hidden bg-inverse-surface/40 backdrop-blur-sm flex items-center justify-center p-space-md" id="archive-modal">
+<div class="bg-surface-container-lowest rounded-xl shadow-2xl max-w-lg w-full">
+<div class="p-space-lg">
+<div class="flex items-start gap-space-md">
+<div class="p-3 bg-error-container text-on-error-container rounded-xl flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">archive</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+              Archive Equipment Asset?
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1" id="archive-target-text">
+              Are you sure you want to archive this asset?
+            </p>
+</div>
+</div>
+<div class="my-space-md p-space-sm bg-surface-container rounded-lg">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Per <strong>SRS-EQ-042 Specifications</strong>, archived equipment is moved into historic records and excluded from active maintenance schedules and daily runtime logs. Irreversible permanent disposal or deletion is intentionally restricted and unautomated in accordance with dairy audit compliance.
+          </p>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2 bg-surface-container-low text-on-surface rounded-lg font-label-md text-label-md font-medium hover:bg-surface-container transition-colors" onclick="closeArchiveModal()" type="button">
+            Cancel
+          </button>
+<button class="px-space-md py-2 bg-error text-on-error rounded-lg font-label-md text-label-md font-semibold hover:opacity-90 transition-opacity shadow-sm" onclick="confirmArchive()" type="button">
+            Confirm &amp; Archive Asset
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Toast Notification System -->
+<div class="fixed bottom-6 right-6 z-50 hidden bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-lg shadow-xl flex items-center gap-space-sm transition-all transform duration-200" id="toast-notification">
+<span class="material-symbols-outlined text-primary-fixed" id="toast-icon">check_circle</span>
+<span class="font-body-sm text-body-sm font-medium" id="toast-text">Action completed successfully.</span>
+</div>
+</div>
+<script>
+  // Filter and Interactive Behavior Logic
+  function handleFilterChange() {
+    const searchVal = document.getElementById('equipmentSearchInput').value.toLowerCase().trim();
+    const catVal = document.getElementById('categoryFilter').value;
+    const condVal = document.getElementById('conditionFilter').value;
+    const locVal = document.getElementById('locationFilter').value;
+
+    const rows = document.querySelectorAll('.equipment-row');
+    let visibleCount = 0;
+
+    rows.forEach(row => {
+      const text = row.innerText.toLowerCase();
+      const rowCond = row.getAttribute('data-condition');
+      const rowType = row.getAttribute('data-type');
+      const rowLoc = row.getAttribute('data-location');
+
+      const matchesSearch = !searchVal || text.includes(searchVal);
+      const matchesCat = catVal === 'all' || rowType === catVal;
+      const matchesCond = condVal === 'all' || rowCond === condVal;
+      const matchesLoc = locVal === 'all' || rowLoc === locVal;
+
+      if (matchesSearch && matchesCat && matchesCond && matchesLoc) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    const badge = document.getElementById('active-count-badge');
+    if (badge) badge.innerText = visibleCount + ' Displayed';
+
+    const zeroView = document.getElementById('zero-state-view');
+    const tableFooter = document.getElementById('table-footer');
+
+    if (visibleCount === 0) {
+      if (zeroView) zeroView.classList.remove('hidden');
+      if (zeroView) zeroView.classList.add('flex');
+      if (tableFooter) tableFooter.classList.add('hidden');
+    } else {
+      if (zeroView) zeroView.classList.add('hidden');
+      if (zeroView) zeroView.classList.remove('flex');
+      if (tableFooter) tableFooter.classList.remove('hidden');
+    }
+  }
+
+  // Simulator Bar State Switching
+  function applySimState(state) {
+    const btnIds = ['sim-standard', 'sim-filter', 'sim-zero'];
+    btnIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.className = "px-2.5 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-all";
+      }
+    });
+
+    const searchInput = document.getElementById('equipmentSearchInput');
+    const condFilter = document.getElementById('conditionFilter');
+    const catFilter = document.getElementById('categoryFilter');
+    const locFilter = document.getElementById('locationFilter');
+
+    if (state === 'standard') {
+      const activeBtn = document.getElementById('sim-standard');
+      if (activeBtn) activeBtn.className = "px-2.5 py-1 rounded font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold transition-all";
+      if (searchInput) searchInput.value = '';
+      if (condFilter) condFilter.value = 'all';
+      if (catFilter) catFilter.value = 'all';
+      if (locFilter) locFilter.value = 'all';
+      handleFilterChange();
+      showToast('Standard active equipment roster loaded.', 'view_list');
+    } else if (state === 'maintenance') {
+      const activeBtn = document.getElementById('sim-filter');
+      if (activeBtn) activeBtn.className = "px-2.5 py-1 rounded font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold transition-all";
+      if (searchInput) searchInput.value = '';
+      if (condFilter) condFilter.value = 'Maintenance Required';
+      if (catFilter) catFilter.value = 'all';
+      if (locFilter) locFilter.value = 'all';
+      handleFilterChange();
+      showToast('Filtered: Showing units requiring maintenance.', 'build');
+    } else if (state === 'zero') {
+      const activeBtn = document.getElementById('sim-zero');
+      if (activeBtn) activeBtn.className = "px-2.5 py-1 rounded font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold transition-all";
+      if (searchInput) searchInput.value = 'Non-Existent-Hardware-Key-999';
+      handleFilterChange();
+      showToast('Zero equipment empty state triggered.', 'info');
+    }
+  }
+
+  // Modal Handlers
+  function openRegisterModal() {
+    const modal = document.getElementById('register-modal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  function closeRegisterModal() {
+    const modal = document.getElementById('register-modal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  function handleRegisterSubmit(e) {
+    e.preventDefault();
+    closeRegisterModal();
+    showToast('Equipment asset registered successfully into GF-042 catalog.', 'check_circle');
+  }
+
+  let pendingArchiveTag = '';
+  function openArchiveModal(tag, name) {
+    pendingArchiveTag = tag;
+    const targetText = document.getElementById('archive-target-text');
+    if (targetText) {
+      targetText.innerHTML = `Equipment asset <strong>${name}</strong> (${tag}) will be transitioned to archived status.`;
+    }
+    const modal = document.getElementById('archive-modal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  function closeArchiveModal() {
+    const modal = document.getElementById('archive-modal');
+    if (modal) modal.classList.add('hidden');
+    pendingArchiveTag = '';
+  }
+
+  function confirmArchive() {
+    closeArchiveModal();
+    showToast(`Asset ${pendingArchiveTag} archived into historical registry.`, 'archive');
+  }
+
+  // Export and Sheet Action Mock Triggers
+  function exportInventoryCSV() {
+    showToast('Generating Equipment Catalog CSV for Workspace GF-042...', 'file_download');
+  }
+
+  function triggerAuditSheet() {
+    showToast('Generating Condition Physical Audit Sheet (PDF printable)...', 'print');
+  }
+
+  // Minimal Toast Display
+  function showToast(msg, icon = 'check_circle') {
+    const toast = document.getElementById('toast-notification');
+    const toastText = document.getElementById('toast-text');
+    const toastIcon = document.getElementById('toast-icon');
+    if (!toast || !toastText) return;
+
+    toastText.innerText = msg;
+    if (toastIcon) toastIcon.innerText = icon;
+
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 3800);
+  }
+</script></main></div></body></html>

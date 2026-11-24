@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "on-tertiary-fixed": "#301400", "surface": "#fbf9f3", "surface-container-low": "#f5f3ed", "secondary-container": "#d9e8c7", "surface-container-highest": "#e4e2dd", "on-secondary-fixed": "#141f0a", "outline-variant": "#c4c8bd", "on-secondary-fixed-variant": "#3e4b32", "secondary-fixed-dim": "#bdcbac", "on-tertiary": "#ffffff", "on-tertiary-container": "#ffb785", "primary-fixed": "#d4e9c3", "on-primary-fixed-variant": "#3a4c30", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "tertiary": "#5e3007", "tertiary-container": "#7a461c", "inverse-surface": "#30312d", "primary-fixed-dim": "#b8cda8", "on-primary-fixed": "#101f08", "secondary": "#556249", "surface-container-high": "#eae8e2", "primary-container": "#46583b", "tertiary-fixed-dim": "#ffb784", "on-surface": "#1b1c18", "surface-container": "#f0eee8", "secondary-fixed": "#d9e8c7", "outline": "#75786f", "surface-bright": "#fbf9f3", "tertiary-fixed": "#ffdcc6", "on-tertiary-fixed-variant": "#6c3a11", "on-primary-container": "#b8cda9", "inverse-on-surface": "#f3f1eb", "background": "#fbf9f3", "error-container": "#ffdad6", "surface-variant": "#e4e2dd", "on-error-container": "#93000a", "on-error": "#ffffff", "inverse-primary": "#b8cda8", "on-background": "#1b1c18", "primary": "#2f4126", "surface-dim": "#dcdad4", "on-surface-variant": "#444840", "on-secondary": "#ffffff", "surface-tint": "#516446", "on-secondary-container": "#5b694e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-xl": "2.5rem", "margin": "2rem", "margin-mobile": "1rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "headline-md": [ "Manrope" ], "body-lg": [ "Inter" ], "label-md": [ "Inter" ], "display-lg-mobile": [ "Manrope" ], "headline-sm": [ "Manrope" ], "data-metric-md": [ "Inter" ], "body-md": [ "Inter" ], "label-sm": [ "Inter" ], "data-metric-lg": [ "Manrope" ], "headline-xl": [ "Manrope" ], "headline-lg": [ "Manrope" ], "headline-xl-mobile": [ "Manrope" ], "display-lg": [ "Manrope" ], "body-sm": [ "Inter" ] }, "fontSize": { "headline-md": [ "1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "label-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" } ], "display-lg-mobile": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "data-metric-md": [ "1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "label-sm": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" } ], "data-metric-lg": [ "2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-xl": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-xl-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-lg": [ "3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZuhXF_IhBdGhJ4eix1oqj3wBimwP9kKeGGChH_b2ax1lMLHMcXPmCVu9b3MJqlJ3XUJHZyp_ietndJCcoi5tapKDT0swhF14GEZxUKYZjg6g5LvxUeQzsGptFXM8XbwZz0B0M4Kbg8tH48Ys1NpBq3q3ceaJWAzrxO8XU7fzOrfQL6K9wOMESU_VEMnfcbKwhEtKD90-MYyU8fO7yBiUm20ljVe33W-rRqQJED0H"/><div><div class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight truncate">SmartFarm</div><div class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Dairy Management</div></div></div><span class="font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold px-space-xs py-0.5 rounded">Farm Admin Only</span></div><div class="px-space-md py-space-sm bg-surface-container-low/80 flex items-center justify-between"><div class="truncate"><div class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Greenfield Dairy Estate</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">Workspace: GF-042</div></div><span class="h-2 w-2 rounded-full bg-primary-container ring-2 ring-primary-fixed flex-shrink-0"></span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Overview</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#">Dashboard</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Herd Management</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#">Animals</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#">Animal Health</a><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface font-semibold">Feeding Management</div><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="feeding-plans" href="#">Feeding Plans</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="feeding-schedule" href="#">Feeding Schedule</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="actual-feeding-records" href="#">Actual Feeding Records</a></div></div></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Operations &amp; Assets</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#">Milk Production</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-management" href="#">Milk Management</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#">Inventory</a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="inventory-list" href="#">Inventory List</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="item-details" href="#">Item Details</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="purchases-and-inbound-invoices" href="#">Purchases &amp; Inbound Invoices</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="stock-additions" href="#">Stock Additions</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="stock-adjustments" href="#">Stock Adjustments</a></div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#">Equipment</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Workforce &amp; Finance</div><div class="space-y-space-xs"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers" href="#">Workers</a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="worker-directory" href="#">Worker Directory</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="add-worker" href="#">Add Worker</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="worker-profile" href="#">Worker Profile</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="worker-documents" href="#">Worker Documents</a></div></div><div class="space-y-space-xs"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="attendance" href="#">Attendance</a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="attendance-records" href="#">Attendance Records</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="manual-check-in-check-out-overtime" href="#">Manual Check-in/Check-out &amp; Overtime</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="leave-management" href="#">Leave Management</a></div></div><div class="space-y-space-xs"><div class="flex items-center justify-between px-space-sm py-1"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Payroll Management</span><span class="font-label-sm text-[0.625rem] bg-surface-container-high text-on-surface-variant px-1.5 py-0.5 rounded font-medium">Admin</span></div><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a aria-current="page" class="flex items-center px-space-sm py-1 transition-all bg-primary-container text-on-primary font-semibold rounded-lg" data-path="salary-management" href="#">Salary Management</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="payroll-records" href="#">Payroll Records</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="salary-advances" href="#">Salary Advances</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="payroll-deductions" href="#">Payroll Deductions</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="payslips" href="#">Payslips</a></div></div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="finance" href="#">Finance</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Governance &amp; Core</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="supervisor-access" href="#">Supervisor Access</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#">Reports</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="data-management" href="#">Data Management</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#">Settings</a></div></nav><div class="p-space-sm bg-surface-container-low/60"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex justify-between items-center mb-1"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Storage Quota</span><span class="font-label-sm text-label-sm text-primary font-bold">42%</span></div><div class="w-full bg-surface-container rounded-full h-1.5 mb-2"><div class="bg-primary-container h-1.5 rounded-full w-[42%]"></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-body-sm text-body-sm">1,280 Active Head</span><span class="material-symbols-outlined text-sm text-tertiary-container">sensors</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><button class="p-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-xl">menu_open</span></button><nav class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="text-on-surface-variant">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface-variant">Workforce &amp; Finance</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="font-semibold text-on-surface">Payroll Management</span></nav><div class="relative flex-1 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full h-10 pl-9 pr-14 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search herd, rations, schedules, inventory..." type="text"/><span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded shadow-sm">⌘K</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm"><span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span><span>Connected • Live</span></div><div class="flex items-center gap-1 px-2.5 py-1 rounded-md bg-primary-container/10 border border-primary/20 text-primary font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-sm">verified_user</span><span>Farm Admin Only</span></div><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Mode" type="button"><span class="material-symbols-outlined text-xl">routine</span></button><div class="relative"><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" title="Alerts" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 h-4 min-w-[1rem] px-1 bg-error text-on-error font-label-sm text-[0.625rem] rounded-full flex items-center justify-center font-bold">3</span></button></div><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#" title="Docs &amp; Support"><span class="material-symbols-outlined text-xl">help</span></a><div class="h-6 w-[1px] bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative flex items-center"><img alt="Elena Vance" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHGkwzAmXeAWZgoliBfM3J0Dk3rRvKbrFcaSDXWTFXvp7mK8JZlIDpaM_-PKsE2e-9DSWj_thQxg7ZvMO7_J2wdBeJdNp3xHQNrTkReCH1iwd77yI5cACPrn8AVBGbsgSIRzl_r1aNrbkvrI3tTJT7qFPLASAjAk_cx85172_N3qz8dJ2RbazkMZxrYU4--z2VriyTURPXkRqv4-UUhJWONTqJq0P8IWMmPKFhLYX7"/><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></div><div class="hidden lg:block text-left"><div class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-none">Farm Administrator</div></div><button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-lg">expand_more</span></button></div></div></header><main class="relative pt-16 w-full px-space-lg py-space-lg bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive State Simulator Dock -->
+<div class="bg-surface-container-low px-space-md py-space-sm rounded-xl mb-space-lg flex flex-wrap items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base text-primary">science</span>
+<span class="uppercase tracking-wider font-semibold">Interactive Prototype State Simulator:</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5" id="state-simulator-bar">
+<button class="px-2.5 py-1 rounded-md font-label-sm text-label-sm transition-all bg-primary-container text-on-primary font-semibold shadow-xs" id="btn-state-standard" onclick="setSimState('standard')">
+        Standard View
+      </button>
+<button class="px-2.5 py-1 rounded-md font-label-sm text-label-sm transition-all bg-surface-container-highest text-on-surface hover:bg-surface-variant" id="btn-state-modal" onclick="setSimState('modal')">
+        Edit Structure Modal Active
+      </button>
+<button class="px-2.5 py-1 rounded-md font-label-sm text-label-sm transition-all bg-surface-container-highest text-on-surface hover:bg-surface-variant" id="btn-state-saved" onclick="setSimState('saved')">
+        Save Confirmation Feedback
+      </button>
+<button class="px-2.5 py-1 rounded-md font-label-sm text-label-sm transition-all bg-surface-container-highest text-on-surface hover:bg-surface-variant" id="btn-state-restricted" onclick="setSimState('restricted')">
+        Supervisor Restricted Warning
+      </button>
+<button class="px-2.5 py-1 rounded-md font-label-sm text-label-sm transition-all bg-surface-container-highest text-on-surface hover:bg-surface-variant" id="btn-state-empty" onclick="setSimState('empty')">
+        Empty / Zero Salaries
+      </button>
+</div>
+</div>
+<!-- Header & Context Area -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm mb-1.5">
+<span class="hover:text-primary transition-colors cursor-pointer">Workforce &amp; Finance</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Payroll</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-semibold">Salary Management</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">
+        Farm Workforce Salary &amp; Wage Structure Management
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl mt-1">
+        Configure baseline wage structures, payment frequencies, and manage worker salary profiles for Greenfield Dairy Estate (<span class="font-semibold text-primary">Workspace GF-042</span>).
+      </p>
+</div>
+<!-- Quick Stats Metric Pills -->
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<div class="bg-surface-container-lowest px-space-md py-space-sm rounded-xl shadow-sm text-left">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Active Ledgers</div>
+<div class="font-data-metric-md text-data-metric-md text-on-surface font-bold">6 Active</div>
+</div>
+<div class="bg-surface-container-lowest px-space-md py-space-sm rounded-xl shadow-sm text-left">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Bi-Weekly Target</div>
+<div class="font-data-metric-md text-data-metric-md text-primary font-bold">$7,460.00</div>
+</div>
+</div>
+</div>
+<!-- Prominent Governance & Architectural Policy Banner -->
+<div class="relative bg-surface-container-lowest rounded-xl p-space-md mb-space-lg shadow-sm overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pl-space-xs">
+<div class="flex items-start gap-space-sm">
+<div class="p-2 rounded-lg bg-primary-container/10 text-primary-container flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">gavel</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm bg-primary-container text-on-primary font-bold px-2 py-0.5 rounded tracking-wide uppercase">
+              Farm Admin Sole Authority • Confidential Workforce Ledger
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant hidden sm:inline">• Strict System Policy (SRS-PAY-042)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 max-w-4xl leading-relaxed">
+            Workers exist as records <span class="font-semibold text-on-surface">ONLY</span> with zero self-service or employee login access. Supervisors are strictly barred from payroll administration. Monthly and daily wage calculations, partial months, absence deductions, and overtime payroll implications remain mathematically uncalculated per SRS specification.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end md:self-center flex-shrink-0">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary">lock</span> Read/Write Verified
+        </span>
+</div>
+</div>
+</div>
+<!-- Alert State Banner Container (Triggered by simulator) -->
+<div class="hidden mb-space-lg" id="dynamic-alert-banner"></div>
+<!-- Main Grid: Configuration Form & Context Insights (Split Bento View) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Worker Selector & Salary Configuration Card (7 Cols) -->
+<div class="xl:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">settings_account_box</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+              Worker Salary Profile Configuration
+            </h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded">
+            Record Editor: ACTIVE
+          </span>
+</div>
+<form class="space-y-space-md" id="salary-config-form" onsubmit="event.preventDefault(); showConfirmationModal();">
+<!-- Worker Selector -->
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold mb-1.5" for="worker-select">
+              Select Worker Record (Active Roster)
+            </label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">person_search</span>
+<select class="w-full h-10 pl-9 pr-8 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 appearance-none cursor-pointer" id="worker-select" onchange="updateWorkerContext(this.value)">
+<option selected="" value="WKR-042-01">Marcus Brody — WKR-042-01 (Parlor Lead)</option>
+<option value="WKR-042-04">Tomas Ruiz — WKR-042-04 (Feeding Specialist)</option>
+<option value="WKR-042-19">Carlos Mendez — WKR-042-19 (Machinery Operator)</option>
+<option value="WKR-042-12">Sofia Al-Mansoor — WKR-042-12 (Herd Health Assistant)</option>
+<option value="WKR-042-08">Johnathan Wu — WKR-042-08 (Milking Tech)</option>
+<option value="WKR-042-15">Aris Thorne — WKR-042-15 (Calf Feeder)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-base pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Confirmed Salary Structures Radio Pills -->
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold mb-1.5">
+              Baseline Wage Structure
+            </label>
+<div class="grid grid-cols-2 gap-space-sm" id="wage-structure-group">
+<label class="relative flex items-center p-3 rounded-lg bg-surface-container-low cursor-pointer transition-all hover:bg-surface-container" id="lbl-struct-monthly">
+<input checked="" class="sr-only" name="salary_structure" onchange="handleStructureChange('monthly')" type="radio" value="monthly"/>
+<div class="flex items-center gap-2.5">
+<div class="w-4 h-4 rounded-full border-2 border-primary-container flex items-center justify-center p-0.5" id="radio-dot-monthly">
+<div class="w-2 h-2 rounded-full bg-primary-container"></div>
+</div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Monthly Salary</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Fixed baseline rate per month</div>
+</div>
+</div>
+</label>
+<label class="relative flex items-center p-3 rounded-lg bg-surface-container-low cursor-pointer transition-all hover:bg-surface-container" id="lbl-struct-daily">
+<input class="sr-only" name="salary_structure" onchange="handleStructureChange('daily')" type="radio" value="daily"/>
+<div class="flex items-center gap-2.5">
+<div class="w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center p-0.5" id="radio-dot-daily">
+<div class="w-2 h-2 rounded-full bg-transparent"></div>
+</div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Daily Wage</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Baseline compensation per shift day</div>
+</div>
+</div>
+</label>
+</div>
+</div>
+<!-- Amount Input & Currency -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold mb-1.5" for="salary-amount">
+                Baseline Amount (<span id="amount-unit-label">USD / Month</span>)
+              </label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 font-headline-sm text-headline-sm text-on-surface-variant font-bold">$</span>
+<input class="w-full h-10 pl-8 pr-16 bg-surface-container-low rounded-lg font-data-metric-md text-data-metric-md text-on-surface font-semibold focus:outline-none focus:ring-2 focus:ring-primary/20" id="salary-amount" type="text" value="2,800.00"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">USD</span>
+</div>
+<span class="font-body-sm text-[0.6875rem] text-on-surface-variant mt-1 block">Est. PKR ~ 780,000 / mo exchange peg</span>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold mb-1.5" for="payment-frequency">
+                Payment Frequency
+              </label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 appearance-none cursor-pointer" id="payment-frequency">
+<option value="Daily">Daily</option>
+<option value="Weekly">Weekly</option>
+<option selected="" value="Biweekly">Biweekly (Every 14 Days)</option>
+<option value="Monthly">Monthly</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-base pointer-events-none">expand_more</span>
+</div>
+<span class="font-body-sm text-[0.6875rem] text-on-surface-variant mt-1 block">Approved dairy payroll disbursement period</span>
+</div>
+</div>
+<!-- Effective Date Range -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold mb-1.5" for="effective-date">
+                Structure Effective Date
+              </label>
+<div class="relative">
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" id="effective-date" type="date" value="2025-01-01"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold mb-1.5" for="review-term">
+                Contract Term / Review
+              </label>
+<div class="relative">
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" id="review-term" type="text" value="Annual Review — Q4 2025"/>
+</div>
+</div>
+</div>
+<!-- CTAs -->
+<div class="pt-space-sm flex items-center justify-between border-t border-outline-variant/30">
+<button class="px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container transition-colors" onclick="resetForm()" type="button">
+              Reset Edits
+            </button>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded-lg font-label-md text-label-md text-primary bg-surface-container-low hover:bg-surface-container transition-colors" onclick="quickSimulateHistory()" type="button">
+                Audit Trail
+              </button>
+<button class="px-space-lg py-2 rounded-lg font-label-md text-label-md text-on-primary bg-primary-container hover:bg-primary transition-all font-semibold shadow-sm flex items-center gap-1.5" type="submit">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+<span>Save Wage Structure</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<!-- Attendance Context Information (5 Cols - Read Only) -->
+<div class="xl:col-span-5 flex flex-col justify-between space-y-space-md">
+<!-- Reference Data Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex-1">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-container text-xl">fact_check</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+              Attendance Context Reference
+            </h3>
+</div>
+<span class="font-label-sm text-[0.625rem] uppercase tracking-wider bg-surface-container-high text-on-surface-variant px-1.5 py-0.5 rounded font-bold">
+            Read-Only Telemetry
+          </span>
+</div>
+<div class="space-y-space-md">
+<!-- Worker Identity Badge -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Selected Worker</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold" id="ctx-worker-name">Marcus Brody</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant" id="ctx-worker-code">WKR-042-01 • Milking Department</div>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-semibold bg-secondary-container text-on-secondary-container">
+                Shift 1 (Morning)
+              </span>
+<div class="font-body-sm text-[0.6875rem] text-on-surface-variant mt-0.5">Parlor Lead</div>
+</div>
+</div>
+<!-- Attendance Telemetry Metrics Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Current Cycle Present</div>
+<div class="font-data-metric-md text-data-metric-md text-on-surface font-bold mt-0.5" id="ctx-present-days">14 Days</div>
+<div class="font-body-sm text-[0.6875rem] text-on-surface-variant">Full shift completions</div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Standard Hours / Cycle</div>
+<div class="font-data-metric-md text-data-metric-md text-on-surface font-bold mt-0.5">80.0 hrs</div>
+<div class="font-body-sm text-[0.6875rem] text-on-surface-variant">14-day biweekly schedule</div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Late / Irregular Clocks</div>
+<div class="font-data-metric-md text-data-metric-md text-tertiary-container font-bold mt-0.5" id="ctx-late-days">1 Late Flag</div>
+<div class="font-body-sm text-[0.6875rem] text-on-surface-variant">+12 min turnstile stamp</div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Overtime Logged</div>
+<div class="font-data-metric-md text-data-metric-md text-primary font-bold mt-0.5" id="ctx-overtime">4.5 hrs</div>
+<div class="font-body-sm text-[0.6875rem] text-on-surface-variant">Robotic wash extra cycle</div>
+</div>
+</div>
+<!-- Informational Notice strictly citing SRS -->
+<div class="p-space-sm bg-surface-container-high rounded-lg flex items-start gap-2.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-tertiary-container mt-0.5 flex-shrink-0">info</span>
+<p class="font-body-sm text-[0.75rem] leading-snug">
+<span class="font-semibold text-on-surface">Informational Specification Notice:</span>
+              Attendance metrics are displayed for administrative operational context only. Under current Greenfield Dairy specification, the software engine carries <span class="font-semibold underline decoration-dotted">zero automated deduction formulas</span>, absence docking, or overtime calculations. All figures represent baseline contractual entitlements.
+            </p>
+</div>
+</div>
+</div>
+<!-- Quick Distribution Visualizer -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-2">
+<span>Roster Wage Structure Distribution</span>
+<span class="font-semibold text-on-surface">6 Configured</span>
+</div>
+<!-- Inline Simple Distribution Bar Chart SVG -->
+<div class="w-full bg-surface-container-low rounded-full h-3 overflow-hidden flex">
+<div class="bg-primary-container h-full" style="width: 50%;" title="Monthly Salary (3)"></div>
+<div class="bg-tertiary-fixed-dim h-full" style="width: 50%;" title="Daily Wage (3)"></div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-[0.6875rem] text-on-surface-variant mt-2">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary-container"></span>
+<span>Monthly Rate (50%)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-tertiary-fixed-dim"></span>
+<span>Daily Wage (50%)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Master Salary Registry Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden mb-space-lg">
+<!-- Header of the Table Container -->
+<div class="p-space-md bg-surface-container-low/50 flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+          Master Farm Workforce Salary Registry
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Complete baseline payroll records for operational herd, parlor, and feed technicians.
+        </p>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded-md font-label-sm text-label-sm font-semibold bg-primary-container text-on-primary" id="btn-filt-all" onclick="filterRegistry('all')">
+          All (6)
+        </button>
+<button class="px-2.5 py-1 rounded-md font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container" id="btn-filt-monthly" onclick="filterRegistry('monthly')">
+          Monthly (3)
+        </button>
+<button class="px-2.5 py-1 rounded-md font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container" id="btn-filt-daily" onclick="filterRegistry('daily')">
+          Daily Wage (3)
+        </button>
+</div>
+</div>
+<!-- Table Wrapper -->
+<div class="overflow-x-auto" id="table-container">
+<table class="w-full text-left border-collapse" id="salary-table">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md font-semibold">Worker ID &amp; Name</th>
+<th class="py-3 px-space-md font-semibold">Assigned Role</th>
+<th class="py-3 px-space-md font-semibold">Salary Structure</th>
+<th class="py-3 px-space-md font-semibold text-right">Baseline Amount</th>
+<th class="py-3 px-space-md font-semibold">Payment Frequency</th>
+<th class="py-3 px-space-md font-semibold">Effective Date</th>
+<th class="py-3 px-space-md font-semibold text-center">Status</th>
+<th class="py-3 px-space-md font-semibold text-right">Permitted Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/30 font-body-sm text-body-sm" id="salary-tbody">
+<!-- Row 1: Marcus Brody -->
+<tr class="hover:bg-surface-container-low/60 transition-colors" data-id="WKR-042-01" data-structure="monthly">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-xs flex-shrink-0">
+                  MB
+                </div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Marcus Brody</div>
+<div class="font-body-sm text-[0.75rem] text-on-surface-variant font-mono">WKR-042-01</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-on-surface font-medium">Parlor Lead</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-semibold bg-primary-fixed text-on-primary-fixed">
+                Monthly Salary
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-semibold text-on-surface">
+              $2,800.00 <span class="text-on-surface-variant font-normal">/ mo</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-medium bg-surface-container-high text-on-surface">
+                Biweekly
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">2025-01-01</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[0.6875rem] font-semibold bg-secondary-container text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Active
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" onclick="editWorker('WKR-042-01', 'Marcus Brody', 'monthly', '2800.00', 'Biweekly')" title="Edit Structure">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" onclick="viewHistory('Marcus Brody')" title="View Wage History">
+<span class="material-symbols-outlined text-lg">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Tomas Ruiz -->
+<tr class="hover:bg-surface-container-low/60 transition-colors" data-id="WKR-042-04" data-structure="daily">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center font-bold text-xs flex-shrink-0">
+                  TR
+                </div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Tomas Ruiz</div>
+<div class="font-body-sm text-[0.75rem] text-on-surface-variant font-mono">WKR-042-04</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-on-surface font-medium">Feeding Specialist</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed">
+                Daily Wage
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-semibold text-on-surface">
+              $75.00 <span class="text-on-surface-variant font-normal">/ day</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-medium bg-surface-container-high text-on-surface">
+                Weekly
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">2025-01-15</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[0.6875rem] font-semibold bg-secondary-container text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Active
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" onclick="editWorker('WKR-042-04', 'Tomas Ruiz', 'daily', '75.00', 'Weekly')" title="Edit Structure">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" onclick="viewHistory('Tomas Ruiz')" title="View Wage History">
+<span class="material-symbols-outlined text-lg">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Carlos Mendez -->
+<tr class="hover:bg-surface-container-low/60 transition-colors" data-id="WKR-042-19" data-structure="monthly">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-xs flex-shrink-0">
+                  CM
+                </div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Carlos Mendez</div>
+<div class="font-body-sm text-[0.75rem] text-on-surface-variant font-mono">WKR-042-19</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-on-surface font-medium">Machinery Operator</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-semibold bg-primary-fixed text-on-primary-fixed">
+                Monthly Salary
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-semibold text-on-surface">
+              $2,200.00 <span class="text-on-surface-variant font-normal">/ mo</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-medium bg-surface-container-high text-on-surface">
+                Biweekly
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">2024-11-01</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[0.6875rem] font-semibold bg-secondary-container text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Active
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" onclick="editWorker('WKR-042-19', 'Carlos Mendez', 'monthly', '2200.00', 'Biweekly')" title="Edit Structure">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" onclick="viewHistory('Carlos Mendez')" title="View Wage History">
+<span class="material-symbols-outlined text-lg">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Sofia Al-Mansoor -->
+<tr class="hover:bg-surface-container-low/60 transition-colors" data-id="WKR-042-12" data-structure="monthly">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-xs flex-shrink-0">
+                  SM
+                </div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Sofia Al-Mansoor</div>
+<div class="font-body-sm text-[0.75rem] text-on-surface-variant font-mono">WKR-042-12</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-on-surface font-medium">Herd Health Assistant</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-semibold bg-primary-fixed text-on-primary-fixed">
+                Monthly Salary
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-semibold text-on-surface">
+              $2,500.00 <span class="text-on-surface-variant font-normal">/ mo</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-medium bg-surface-container-high text-on-surface">
+                Monthly
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">2024-09-15</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[0.6875rem] font-semibold bg-secondary-container text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Active
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" onclick="editWorker('WKR-042-12', 'Sofia Al-Mansoor', 'monthly', '2500.00', 'Monthly')" title="Edit Structure">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" onclick="viewHistory('Sofia Al-Mansoor')" title="View Wage History">
+<span class="material-symbols-outlined text-lg">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Johnathan Wu -->
+<tr class="hover:bg-surface-container-low/60 transition-colors" data-id="WKR-042-08" data-structure="daily">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center font-bold text-xs flex-shrink-0">
+                  JW
+                </div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Johnathan Wu</div>
+<div class="font-body-sm text-[0.75rem] text-on-surface-variant font-mono">WKR-042-08</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-on-surface font-medium">Milking Tech</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed">
+                Daily Wage
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-semibold text-on-surface">
+              $65.00 <span class="text-on-surface-variant font-normal">/ day</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-medium bg-surface-container-high text-on-surface">
+                Biweekly
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">2025-02-01</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[0.6875rem] font-semibold bg-secondary-container text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Active
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" onclick="editWorker('WKR-042-08', 'Johnathan Wu', 'daily', '65.00', 'Biweekly')" title="Edit Structure">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" onclick="viewHistory('Johnathan Wu')" title="View Wage History">
+<span class="material-symbols-outlined text-lg">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Aris Thorne -->
+<tr class="hover:bg-surface-container-low/60 transition-colors" data-id="WKR-042-15" data-structure="daily">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center font-bold text-xs flex-shrink-0">
+                  AT
+                </div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Aris Thorne</div>
+<div class="font-body-sm text-[0.75rem] text-on-surface-variant font-mono">WKR-042-15</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-on-surface font-medium">Calf Feeder</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed">
+                Daily Wage
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-semibold text-on-surface">
+              $60.00 <span class="text-on-surface-variant font-normal">/ day</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-medium bg-surface-container-high text-on-surface">
+                Weekly
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">2025-01-10</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[0.6875rem] font-semibold bg-secondary-container text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Active
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" onclick="editWorker('WKR-042-15', 'Aris Thorne', 'daily', '60.00', 'Weekly')" title="Edit Structure">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" onclick="viewHistory('Aris Thorne')" title="View Wage History">
+<span class="material-symbols-outlined text-lg">history</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Empty State Container (Hidden by default) -->
+<div class="hidden py-space-xl px-space-md text-center bg-surface-container-low/30" id="table-empty-state">
+<div class="w-12 h-12 mx-auto rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant mb-space-sm">
+<span class="material-symbols-outlined text-2xl">folder_off</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">Zero Salary Records Configured</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mx-auto mt-1">
+        No active baseline wage structures exist for this filter or tenant workspace. Create a new record using the configuration card above.
+      </p>
+</div>
+<!-- Table Footer / Audit Info -->
+<div class="px-space-md py-space-sm bg-surface-container-low/30 flex flex-col sm:flex-row items-center justify-between text-on-surface-variant font-body-sm text-body-sm gap-2">
+<div>Showing <span class="font-semibold text-on-surface" id="visible-record-count">6</span> configured workforce payroll entities</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Registry synchronized with GF-042 Central Roster</span>
+</div>
+</div>
+</div>
+<!-- Confirmation Modal (Tier 2 Elevation) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden flex items-center justify-center p-4" id="confirmation-modal">
+<div class="bg-surface-container-lowest max-w-lg w-full rounded-2xl shadow-xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+<div class="p-space-lg">
+<div class="flex items-center gap-space-sm mb-space-md">
+<div class="p-2.5 rounded-xl bg-primary-container/10 text-primary-container">
+<span class="material-symbols-outlined text-2xl">verified</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Confirm Salary Structure Update</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Farm Admin Cryptographic Verification Record</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md space-y-2 mb-space-md font-body-sm text-body-sm">
+<div class="flex justify-between py-1 border-b border-outline-variant/20">
+<span class="text-on-surface-variant">Worker Target</span>
+<span class="font-semibold text-on-surface" id="modal-worker-name">Marcus Brody (WKR-042-01)</span>
+</div>
+<div class="flex justify-between py-1 border-b border-outline-variant/20">
+<span class="text-on-surface-variant">Structure Type</span>
+<span class="font-semibold text-on-surface" id="modal-structure-type">Monthly Salary</span>
+</div>
+<div class="flex justify-between py-1 border-b border-outline-variant/20">
+<span class="text-on-surface-variant">New Baseline Amount</span>
+<span class="font-semibold text-primary" id="modal-baseline-amount">$2,800.00 USD</span>
+</div>
+<div class="flex justify-between py-1 border-b border-outline-variant/20">
+<span class="text-on-surface-variant">Frequency</span>
+<span class="font-semibold text-on-surface" id="modal-frequency">Biweekly</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="text-on-surface-variant">Statutory Deduction Formula</span>
+<span class="font-semibold text-tertiary">None (Uncalculated per SRS)</span>
+</div>
+</div>
+<p class="font-body-sm text-[0.75rem] text-on-surface-variant mb-space-lg">
+          By confirming, this baseline rate becomes the binding contractual reference on file for Greenfield Dairy Estate. Worker cannot access this data directly.
+        </p>
+<div class="flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container transition-colors" onclick="closeConfirmationModal()" type="button">
+            Cancel
+          </button>
+<button class="px-space-lg py-2 rounded-lg font-label-md text-label-md text-on-primary bg-primary-container hover:bg-primary transition-all font-semibold shadow-sm" onclick="executeSave()" type="button">
+            Authorize &amp; Update Ledger
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Audit History Slideout Modal / Overlay -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden flex items-center justify-center p-4" id="history-modal">
+<div class="bg-surface-container-lowest max-w-md w-full rounded-2xl shadow-xl overflow-hidden p-space-lg">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">history_edu</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Wage Revision Ledger</h3>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1" onclick="closeHistoryModal()">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+        Historical wage configurations for <span class="font-semibold text-on-surface" id="hist-worker-name">Worker</span>.
+      </p>
+<div class="space-y-3 mb-space-md">
+<div class="p-3 rounded-lg bg-surface-container-low border-l-4 border-primary">
+<div class="flex justify-between items-center text-label-sm font-semibold text-on-surface">
+<span>$2,800.00 / mo (Biweekly)</span>
+<span class="text-[0.6875rem] text-on-surface-variant">2025-01-01</span>
+</div>
+<div class="font-body-sm text-[0.75rem] text-on-surface-variant mt-1">Admin adjustment: Annual parlor lead wage review.</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low border-l-4 border-outline-variant/60">
+<div class="flex justify-between items-center text-label-sm font-semibold text-on-surface">
+<span>$2,600.00 / mo (Biweekly)</span>
+<span class="text-[0.6875rem] text-on-surface-variant">2024-01-01</span>
+</div>
+<div class="font-body-sm text-[0.75rem] text-on-surface-variant mt-1">Initial employment baseline baseline rate.</div>
+</div>
+</div>
+<button class="w-full py-2 bg-surface-container-high rounded-lg font-label-md text-label-md text-on-surface font-medium hover:bg-surface-variant transition-colors" onclick="closeHistoryModal()" type="button">
+        Close History Log
+      </button>
+</div>
+</div>
+</div>
+<script>
+  // Prototype State Data Model
+  const workerProfiles = {
+    'WKR-042-01': {
+      name: 'Marcus Brody',
+      role: 'Parlor Lead',
+      shift: 'Shift 1 (Morning)',
+      dept: 'Milking Department',
+      structure: 'monthly',
+      amount: '2,800.00',
+      frequency: 'Biweekly',
+      effective: '2025-01-01',
+      review: 'Annual Review — Q4 2025',
+      attendance: { present: '14 Days', late: '1 Late Flag', overtime: '4.5 hrs' }
+    },
+    'WKR-042-04': {
+      name: 'Tomas Ruiz',
+      role: 'Feeding Specialist',
+      shift: 'Shift 2 (Afternoon)',
+      dept: 'Nutrition & Feed Storage',
+      structure: 'daily',
+      amount: '75.00',
+      frequency: 'Weekly',
+      effective: '2025-01-15',
+      review: 'Biannual Review — Q2 2025',
+      attendance: { present: '13 Days', late: '0 Late Flags', overtime: '2.0 hrs' }
+    },
+    'WKR-042-19': {
+      name: 'Carlos Mendez',
+      role: 'Machinery Operator',
+      shift: 'Shift 1 (Morning)',
+      dept: 'Barn Automation & Tractors',
+      structure: 'monthly',
+      amount: '2,200.00',
+      frequency: 'Biweekly',
+      effective: '2024-11-01',
+      review: 'Annual Review — Q4 2025',
+      attendance: { present: '14 Days', late: '2 Late Flags', overtime: '6.0 hrs' }
+    },
+    'WKR-042-12': {
+      name: 'Sofia Al-Mansoor',
+      role: 'Herd Health Assistant',
+      shift: 'Day Shift (Vet Clinic)',
+      dept: 'Veterinary Hospital',
+      structure: 'monthly',
+      amount: '2,500.00',
+      frequency: 'Monthly',
+      effective: '2024-09-15',
+      review: 'Clinical Assessment — Q3 2025',
+      attendance: { present: '14 Days', late: '0 Late Flags', overtime: '1.5 hrs' }
+    },
+    'WKR-042-08': {
+      name: 'Johnathan Wu',
+      role: 'Milking Tech',
+      shift: 'Shift 3 (Night Flush)',
+      dept: 'Milking Department',
+      structure: 'daily',
+      amount: '65.00',
+      frequency: 'Biweekly',
+      effective: '2025-02-01',
+      review: 'Probation Completion — Q2 2025',
+      attendance: { present: '12 Days', late: '1 Late Flag', overtime: '0.0 hrs' }
+    },
+    'WKR-042-15': {
+      name: 'Aris Thorne',
+      role: 'Calf Feeder',
+      shift: 'Shift 1 (Maternity Pen)',
+      dept: 'Calf Nursery Pen 3',
+      structure: 'daily',
+      amount: '60.00',
+      frequency: 'Weekly',
+      effective: '2025-01-10',
+      review: '6-Month Review — Q3 2025',
+      attendance: { present: '14 Days', late: '0 Late Flags', overtime: '3.0 hrs' }
+    }
+  };
+
+  let currentSelectedWorkerId = 'WKR-042-01';
+
+  function updateWorkerContext(workerId) {
+    currentSelectedWorkerId = workerId;
+    const worker = workerProfiles[workerId];
+    if (!worker) return;
+
+    // Update Form fields
+    document.getElementById('salary-amount').value = worker.amount;
+    document.getElementById('payment-frequency').value = worker.frequency;
+    document.getElementById('effective-date').value = worker.effective;
+    document.getElementById('review-term').value = worker.review;
+
+    handleStructureChange(worker.structure, false);
+
+    // Update Telemetry Panel
+    document.getElementById('ctx-worker-name').textContent = worker.name;
+    document.getElementById('ctx-worker-code').textContent = `${workerId} • ${worker.dept}`;
+    document.getElementById('ctx-present-days').textContent = worker.attendance.present;
+    document.getElementById('ctx-late-days').textContent = worker.attendance.late;
+    document.getElementById('ctx-overtime').textContent = worker.attendance.overtime;
+  }
+
+  function handleStructureChange(type, updateRadio = true) {
+    const unitLabel = document.getElementById('amount-unit-label');
+    const radioMonthly = document.getElementById('radio-dot-monthly');
+    const radioDaily = document.getElementById('radio-dot-daily');
+
+    if (type === 'monthly') {
+      unitLabel.textContent = 'USD / Month';
+      radioMonthly.className = 'w-4 h-4 rounded-full border-2 border-primary-container flex items-center justify-center p-0.5';
+      radioMonthly.innerHTML = '<div class="w-2 h-2 rounded-full bg-primary-container"></div>';
+      radioDaily.className = 'w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center p-0.5';
+      radioDaily.innerHTML = '<div class="w-2 h-2 rounded-full bg-transparent"></div>';
+      if (updateRadio) {
+        document.querySelector('input[name="salary_structure"][value="monthly"]').checked = true;
+      }
+    } else {
+      unitLabel.textContent = 'USD / Day';
+      radioDaily.className = 'w-4 h-4 rounded-full border-2 border-primary-container flex items-center justify-center p-0.5';
+      radioDaily.innerHTML = '<div class="w-2 h-2 rounded-full bg-primary-container"></div>';
+      radioMonthly.className = 'w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center p-0.5';
+      radioMonthly.innerHTML = '<div class="w-2 h-2 rounded-full bg-transparent"></div>';
+      if (updateRadio) {
+        document.querySelector('input[name="salary_structure"][value="daily"]').checked = true;
+      }
+    }
+  }
+
+  function editWorker(id, name, struct, amount, freq) {
+    document.getElementById('worker-select').value = id;
+    updateWorkerContext(id);
+    document.getElementById('salary-amount').value = amount;
+    document.getElementById('payment-frequency').value = freq;
+    handleStructureChange(struct);
+    
+    // Smooth scroll up to form on small viewports
+    window.scrollTo({ top: 120, behavior: 'smooth' });
+  }
+
+  function filterRegistry(filter) {
+    const rows = document.querySelectorAll('#salary-tbody tr');
+    const btnAll = document.getElementById('btn-filt-all');
+    const btnMonthly = document.getElementById('btn-filt-monthly');
+    const btnDaily = document.getElementById('btn-filt-daily');
+
+    const defaultClass = 'px-2.5 py-1 rounded-md font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container';
+    const activeClass = 'px-2.5 py-1 rounded-md font-label-sm text-label-sm font-semibold bg-primary-container text-on-primary';
+
+    btnAll.className = defaultClass;
+    btnMonthly.className = defaultClass;
+    btnDaily.className = defaultClass;
+
+    let count = 0;
+    rows.forEach(row => {
+      const struct = row.getAttribute('data-structure');
+      if (filter === 'all' || struct === filter) {
+        row.style.display = '';
+        count++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    if (filter === 'all') btnAll.className = activeClass;
+    if (filter === 'monthly') btnMonthly.className = activeClass;
+    if (filter === 'daily') btnDaily.className = activeClass;
+
+    document.getElementById('visible-record-count').textContent = count;
+  }
+
+  function resetForm() {
+    updateWorkerContext(currentSelectedWorkerId);
+  }
+
+  function showConfirmationModal() {
+    const worker = workerProfiles[currentSelectedWorkerId];
+    const amountVal = document.getElementById('salary-amount').value;
+    const freqVal = document.getElementById('payment-frequency').value;
+    const isMonthly = document.querySelector('input[name="salary_structure"]:checked').value === 'monthly';
+
+    document.getElementById('modal-worker-name').textContent = `${worker.name} (${currentSelectedWorkerId})`;
+    document.getElementById('modal-structure-type').textContent = isMonthly ? 'Monthly Salary' : 'Daily Wage';
+    document.getElementById('modal-baseline-amount').textContent = `$${amountVal} USD / ${isMonthly ? 'month' : 'day'}`;
+    document.getElementById('modal-frequency').textContent = freqVal;
+
+    document.getElementById('confirmation-modal').classList.remove('hidden');
+  }
+
+  function closeConfirmationModal() {
+    document.getElementById('confirmation-modal').classList.add('hidden');
+  }
+
+  function executeSave() {
+    closeConfirmationModal();
+    setSimState('saved');
+  }
+
+  function viewHistory(name) {
+    document.getElementById('hist-worker-name').textContent = name;
+    document.getElementById('history-modal').classList.remove('hidden');
+  }
+
+  function closeHistoryModal() {
+    document.getElementById('history-modal').classList.add('hidden');
+  }
+
+  function quickSimulateHistory() {
+    const worker = workerProfiles[currentSelectedWorkerId];
+    viewHistory(worker.name);
+  }
+
+  // Prototype State Simulator Controller
+  function setSimState(stateName) {
+    // Reset simulator button styles
+    ['standard', 'modal', 'saved', 'restricted', 'empty'].forEach(s => {
+      const b = document.getElementById('btn-state-' + s);
+      if (b) {
+        b.className = 'px-2.5 py-1 rounded-md font-label-sm text-label-sm transition-all bg-surface-container-highest text-on-surface hover:bg-surface-variant';
+      }
+    });
+    const currentBtn = document.getElementById('btn-state-' + stateName);
+    if (currentBtn) {
+      currentBtn.className = 'px-2.5 py-1 rounded-md font-label-sm text-label-sm transition-all bg-primary-container text-on-primary font-semibold shadow-xs';
+    }
+
+    const alertBanner = document.getElementById('dynamic-alert-banner');
+    const tableContainer = document.getElementById('table-container');
+    const emptyState = document.getElementById('table-empty-state');
+    closeConfirmationModal();
+    closeHistoryModal();
+
+    if (stateName === 'standard') {
+      alertBanner.classList.add('hidden');
+      alertBanner.innerHTML = '';
+      tableContainer.classList.remove('hidden');
+      emptyState.classList.add('hidden');
+      filterRegistry('all');
+    } else if (stateName === 'modal') {
+      alertBanner.classList.add('hidden');
+      tableContainer.classList.remove('hidden');
+      emptyState.classList.add('hidden');
+      showConfirmationModal();
+    } else if (stateName === 'saved') {
+      tableContainer.classList.remove('hidden');
+      emptyState.classList.add('hidden');
+      alertBanner.classList.remove('hidden');
+      alertBanner.innerHTML = `
+        <div class="p-space-md rounded-xl bg-secondary-container/80 text-on-secondary-container flex items-center justify-between shadow-sm">
+          <div class="flex items-center gap-space-sm">
+            <span class="material-symbols-outlined text-primary text-2xl">check_circle</span>
+            <div>
+              <div class="font-headline-sm text-headline-sm font-bold text-on-secondary-fixed">Ledger Record Updated Successfully</div>
+              <div class="font-body-sm text-body-sm text-on-secondary-variant">
+                Salary structure profile for <span class="font-semibold text-primary">${workerProfiles[currentSelectedWorkerId].name}</span> written to Workspace GF-042 encrypted audit trail.
+              </div>
+            </div>
+          </div>
+          <button onclick="setSimState('standard')" class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container">
+            Dismiss
+          </button>
+        </div>
+      `;
+    } else if (stateName === 'restricted') {
+      tableContainer.classList.remove('hidden');
+      emptyState.classList.add('hidden');
+      alertBanner.classList.remove('hidden');
+      alertBanner.innerHTML = `
+        <div class="p-space-md rounded-xl bg-error-container text-on-error-container flex items-center justify-between shadow-sm border border-error/20">
+          <div class="flex items-center gap-space-sm">
+            <span class="material-symbols-outlined text-error text-2xl">block</span>
+            <div>
+              <div class="font-headline-sm text-headline-sm font-bold text-on-error-container">Supervisor Access Restricted (Role Violation Attempt)</div>
+              <div class="font-body-sm text-body-sm">
+                Supervisors are strictly barred from payroll administration under SRS-PAY-042. Attempted write operation by non-Admin token logged and blocked.
+              </div>
+            </div>
+          </div>
+          <button onclick="setSimState('standard')" class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container">
+            Dismiss
+          </button>
+        </div>
+      `;
+    } else if (stateName === 'empty') {
+      alertBanner.classList.add('hidden');
+      tableContainer.classList.add('hidden');
+      emptyState.classList.remove('hidden');
+      document.getElementById('visible-record-count').textContent = '0';
+    }
+  }
+
+  // Initialize
+  document.addEventListener('DOMContentLoaded', () => {
+    updateWorkerContext('WKR-042-01');
+  });
+</script></main></div></body></html>

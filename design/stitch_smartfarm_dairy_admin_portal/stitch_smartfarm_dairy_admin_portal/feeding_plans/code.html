@@ -1,0 +1,629 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "on-tertiary-fixed": "#301400", "surface": "#fbf9f3", "surface-container-low": "#f5f3ed", "secondary-container": "#d9e8c7", "surface-container-highest": "#e4e2dd", "on-secondary-fixed": "#141f0a", "outline-variant": "#c4c8bd", "on-secondary-fixed-variant": "#3e4b32", "secondary-fixed-dim": "#bdcbac", "on-tertiary": "#ffffff", "on-tertiary-container": "#ffb785", "primary-fixed": "#d4e9c3", "on-primary-fixed-variant": "#3a4c30", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "tertiary": "#5e3007", "tertiary-container": "#7a461c", "inverse-surface": "#30312d", "primary-fixed-dim": "#b8cda8", "on-primary-fixed": "#101f08", "secondary": "#556249", "surface-container-high": "#eae8e2", "primary-container": "#46583b", "tertiary-fixed-dim": "#ffb784", "on-surface": "#1b1c18", "surface-container": "#f0eee8", "secondary-fixed": "#d9e8c7", "outline": "#75786f", "surface-bright": "#fbf9f3", "tertiary-fixed": "#ffdcc6", "on-tertiary-fixed-variant": "#6c3a11", "on-primary-container": "#b8cda9", "inverse-on-surface": "#f3f1eb", "background": "#fbf9f3", "error-container": "#ffdad6", "surface-variant": "#e4e2dd", "on-error-container": "#93000a", "on-error": "#ffffff", "inverse-primary": "#b8cda8", "on-background": "#1b1c18", "primary": "#2f4126", "surface-dim": "#dcdad4", "on-surface-variant": "#444840", "on-secondary": "#ffffff", "surface-tint": "#516446", "on-secondary-container": "#5b694e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-xl": "2.5rem", "margin": "2rem", "margin-mobile": "1rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "headline-md": [ "Manrope" ], "body-lg": [ "Inter" ], "label-md": [ "Inter" ], "display-lg-mobile": [ "Manrope" ], "headline-sm": [ "Manrope" ], "data-metric-md": [ "Inter" ], "body-md": [ "Inter" ], "label-sm": [ "Inter" ], "data-metric-lg": [ "Manrope" ], "headline-xl": [ "Manrope" ], "headline-lg": [ "Manrope" ], "headline-xl-mobile": [ "Manrope" ], "display-lg": [ "Manrope" ], "body-sm": [ "Inter" ] }, "fontSize": { "headline-md": [ "1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "label-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" } ], "display-lg-mobile": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "data-metric-md": [ "1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "label-sm": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" } ], "data-metric-lg": [ "2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-xl": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-xl-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-lg": [ "3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZuhXF_IhBdGhJ4eix1oqj3wBimwP9kKeGGChH_b2ax1lMLHMcXPmCVu9b3MJqlJ3XUJHZyp_ietndJCcoi5tapKDT0swhF14GEZxUKYZjg6g5LvxUeQzsGptFXM8XbwZz0B0M4Kbg8tH48Ys1NpBq3q3ceaJWAzrxO8XU7fzOrfQL6K9wOMESU_VEMnfcbKwhEtKD90-MYyU8fO7yBiUm20ljVe33W-rRqQJED0H"><div><div class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight truncate">SmartFarm</div><div class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Dairy Management</div></div></div><span class="font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold px-space-xs py-0.5 rounded">Admin</span></div><div class="px-space-md py-space-sm bg-surface-container-low/80 flex items-center justify-between"><div class="truncate"><div class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Greenfield Dairy Estate</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">Workspace: GF-042</div></div><span class="h-2 w-2 rounded-full bg-primary-container ring-2 ring-primary-fixed flex-shrink-0"></span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Overview</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#">Dashboard</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Herd Management</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#">Animals</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#">Animal Health</a><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface font-semibold">Feeding Management</div><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a aria-current="page" class="flex items-center px-space-sm py-1 transition-all bg-primary-container text-on-primary font-semibold rounded-lg" data-path="feeding-plans" href="#">Feeding Plans</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="feeding-schedule" href="#">Feeding Schedule</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="actual-feeding-records" href="#">Actual Feeding Records</a></div></div></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Operations &amp; Assets</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#">Milk Production</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-management" href="#">Milk Management</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#">Inventory</a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="inventory-list" href="#">Inventory List</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="item-details" href="#">Item Details</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="purchases-and-inbound-invoices" href="#">Purchases &amp; Inbound Invoices</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="stock-additions" href="#">Stock Additions</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="stock-adjustments" href="#">Stock Adjustments</a></div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#">Equipment</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Workforce &amp; Finance</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers" href="#">Workers</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="attendance" href="#">Attendance</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="payroll" href="#">Payroll</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="finance" href="#">Finance</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Governance &amp; Core</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="supervisor-access" href="#">Supervisor Access</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#">Reports</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="data-management" href="#">Data Management</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#">Settings</a></div></nav><div class="p-space-sm bg-surface-container-low/60"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex justify-between items-center mb-1"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Storage Quota</span><span class="font-label-sm text-label-sm text-primary font-bold">100% Formulated</span></div><div class="w-full bg-surface-container rounded-full h-1.5 mb-2"><div class="bg-primary-container h-1.5 rounded-full w-[42%]"></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-body-sm text-body-sm">1,280 Active Head</span><span class="material-symbols-outlined text-sm text-tertiary-container">sensors</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><button class="p-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-xl">menu_open</span></button><nav class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="text-on-surface-variant">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface-variant">Herd Management</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="font-semibold text-on-surface">Feeding Management</span></nav><div class="relative flex-1 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full h-10 pl-9 pr-14 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search herd, rations, schedules, inventory..." type="text"><span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded shadow-sm">⌘K</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm"><span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span><span>Connected • Live</span></div><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Mode" type="button"><span class="material-symbols-outlined text-xl">routine</span></button><div class="relative"><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" title="Alerts" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 h-4 min-w-[1rem] px-1 bg-error text-on-error font-label-sm text-[0.625rem] rounded-full flex items-center justify-center font-bold">3</span></button></div><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#" title="Docs &amp; Support"><span class="material-symbols-outlined text-xl">help</span></a><div class="h-6 w-[1px] bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHGkwzAmXeAWZgoliBfM3J0Dk3rRvKbrFcaSDXWTFXvp7mK8JZlIDpaM_-PKsE2e-9DSWj_thQxg7ZvMO7_J2wdBeJdNp3xHQNrTkReCH1iwd77yI5cACPrn8AVBGbsgSIRzl_r1aNrbkvrI3tTJT7qFPLASAjAk_cx85172_N3qz8dJ2RbazkMZxrYU4--z2VriyTURPXkRqv4-UUhJWONTqJq0P8IWMmPKFhLYX7"><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></div><div class="hidden lg:block text-left"><div class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-none">Farm Administrator</div></div><button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-lg">expand_more</span></button></div></div></header><main class="relative pt-16 w-full px-space-lg py-space-lg bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Section: Breadcrumb & Context Header -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-1.5">
+<span class="hover:text-primary transition-colors cursor-pointer">Operations &amp; Assets</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Feeding Management</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-on-surface font-semibold">Feeding Plans</span>
+</div>
+<div class="flex flex-col gap-1"><div class="flex items-center gap-2"><h1 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">Feeding Plans</h1><span class="px-2.5 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Greenfield Dairy Estate • Workspace GF-042</span></div></div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-3xl">Administer herd ration plans, individual animal diets, feeding times, and Farm Admin prescription overrides. Formulated allocations establish target quantities; actual feeding records and inventory deductions operate independently.</p>
+</div>
+<!-- Header Action CTAs -->
+<div class="flex items-center flex-wrap gap-space-sm">
+<button class="inline-flex items-center gap-1.5 px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md font-semibold shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg text-on-surface-variant">file_download</span>
+<span>Export Plans CSV</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md font-semibold shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg text-on-surface-variant">move_group</span>
+<span>Batch Group Re-Assignment</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all font-label-md text-label-md font-semibold shadow-sm" onclick="toggleDetailsModal(true)" type="button">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span>+ Create Feeding Plan</span>
+</button>
+</div>
+</div>
+<!-- Plans Overview KPI Cards (4 Cards Grid) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Card 1: Active Plans -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Active Plans</span>
+<div class="w-9 h-9 rounded-lg bg-secondary-container/40 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-xl">menu_book</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-baseline gap-2">
+<span class="font-data-metric-lg text-data-metric-lg font-bold text-on-surface">18</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Active Plans</span>
+</div>
+<div class="mt-3 pt-3 border-t-0 bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md py-2.5 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>14 Group-Level Plans</span>
+<span class="text-outline-variant">•</span>
+<span class="text-tertiary-container font-medium">4 Individual Diets</span>
+</div>
+</div>
+<!-- Card 2: Total Daily Planned Ration -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Daily Planned Ration</span>
+<div class="w-9 h-9 rounded-lg bg-primary-fixed/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">scale</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-baseline gap-1.5">
+<span class="font-data-metric-lg text-data-metric-lg font-bold text-on-surface">34,250</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">kg / day</span>
+</div>
+<div class="mt-3 pt-3 bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md py-2 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<div class="truncate"><span class="font-medium text-on-surface">Roughage:</span> 26.5t</div>
+<div class="truncate"><span class="font-medium text-on-surface">Conc:</span> 6.8t</div>
+<div class="truncate"><span class="font-medium text-on-surface">Premix:</span> 950kg</div>
+</div>
+</div>
+<!-- Card 3: Herd Nutritional Coverage -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Herd Nutritional Coverage</span>
+<div class="w-9 h-9 rounded-lg bg-secondary-container/40 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-xl">verified</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-baseline gap-2">
+<span class="font-data-metric-lg text-data-metric-lg font-bold text-on-surface">1,280</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ 1,280 Head</span>
+</div>
+<div class="mt-3 pt-3 bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md py-2 flex items-center justify-between">
+<div class="w-full flex items-center gap-2">
+<div class="flex-1 bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary-container h-2 rounded-full w-full"></div>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">100% Formulated</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Custom Prescription Overrides -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Admin Prescriptions</span>
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed/60 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-xl">medical_services</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-baseline gap-2">
+<span class="font-data-metric-lg text-data-metric-lg font-bold text-tertiary">3</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Active Overrides</span>
+</div>
+<div class="mt-3 pt-3 bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md py-2.5 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-tertiary font-medium">Infirmary &amp; Convalescence</span>
+<span class="inline-flex items-center gap-1 text-label-sm font-semibold text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-ping"></span>
+          Active
+        </span>
+</div>
+</div>
+</div>
+<!-- Mandatory SRS Regulatory & Suggestion Logic Notice Banner -->
+<div class="mb-space-lg rounded-xl bg-surface-container-low border-l border-outline-variant/40 p-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md shadow-sm"><div class="flex items-start gap-space-sm"><div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0 mt-0.5"><span class="material-symbols-outlined text-xl">info</span></div><div><div class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-2">Age &amp; Breed Nutritional Guidelines<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[0.6875rem] font-semibold uppercase tracking-wider">Reference Guidelines</span></div><p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-3xl">The SmartFarm platform provides conceptual nutritional reference guidelines. Formulations, dry matter percentages, and ingredient ratios are established and maintained by Farm Administration without automated numeric diet derivation.</p><div class="mt-2 flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-base text-secondary">inventory_2</span><span>Actual feeding records remain separate from planned feeding allocations. Planned feeding does not automatically deduct stock from inventory.</span></div></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><span class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-xs border-outline-variant/40">SRS v1.0 Compliant</span></div></div>
+<!-- State Switcher Pills (Interactive Frontend Preview Controls) -->
+<div class="flex items-center justify-between flex-wrap gap-space-sm mb-space-md"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm font-bold text-on-surface">Configured Plans Directory</span><span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">18 Plans</span></div><div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm"><span class="inline-block w-2 h-2 rounded-full bg-primary-container"></span><span>Workspace: <strong class="text-on-surface">GF-042 (Greenfield)</strong></span><span>•</span><span>Prescription Authority: <span class="text-primary font-medium">Elena Vance (Admin)</span></span></div></div>
+<!-- Filter and Search Toolbar -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm">
+<!-- Search Input -->
+<div class="md:col-span-4 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+<input class="w-full h-10 pl-9 pr-4 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:bg-surface focus:ring-2 focus:ring-primary-container" id="planSearchInput" placeholder="Search by Plan Name, Animal Ear-Tag, Group/Pen, or Feed Item..." type="text">
+</div>
+<!-- Target Type Filter -->
+<div class="md:col-span-2">
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-label-sm text-label-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container cursor-pointer">
+<option value="all">All Targets (Pens &amp; Head)</option>
+<option value="group">Groups / Pens Only</option>
+<option value="individual">Individual Animals Only</option>
+</select>
+</div>
+<!-- Feed Item Filter -->
+<div class="md:col-span-2">
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-label-sm text-label-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container cursor-pointer">
+<option value="all">All Feed Items</option>
+<option value="soy">High-Protein Soy Conc.</option>
+<option value="alfalfa">Alfalfa Haylage</option>
+<option value="corn">Corn Silage Bunker #3</option>
+<option value="premix">Mineral Premix #MP-091</option>
+</select>
+</div>
+<!-- Feeding Time Filter -->
+<div class="md:col-span-2">
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-label-sm text-label-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container cursor-pointer">
+<option value="all">All Feeding Times</option>
+<option value="morning">Morning (05:30 - 06:00)</option>
+<option value="evening">Evening (16:30 - 17:00)</option>
+<option value="split">Split AM / PM</option>
+<option value="custom">Custom Timing</option>
+</select>
+</div>
+<!-- Plan Status Filter -->
+<div class="md:col-span-2 flex items-center gap-2">
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-label-sm text-label-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container cursor-pointer">
+<option value="active">Status: Active Only</option>
+<option value="all">Status: All (Active &amp; Draft)</option>
+<option value="draft">Draft Only</option>
+<option value="expired">Archived / Expired</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Validation Error Container (Conditional Display) -->
+<div class="hidden mb-space-md p-space-md rounded-xl bg-error-container text-on-error-container shadow-sm" id="validation-error-banner">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error text-2xl flex-shrink-0">warning</span>
+<div class="flex-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-error-container">Nutritional Plan Allocation Conflict Detected</h3>
+<p class="font-body-md text-body-md text-on-error-container/90 mt-1">
+          Animal <strong>ET-GF-8711 (Rosie Clover)</strong> has overlapping target entries: assigned both to <em>Pen 04 (High Production TMR)</em> and <em>FP-2024-014 (Specialized Convalescence Diet)</em>. Active individual diet overrides group diet automatically. Please verify total Dry Matter Intake (DMI).
+        </p>
+<div class="mt-3 flex items-center gap-space-sm">
+<button class="px-3 py-1.5 rounded-lg bg-error text-on-error text-label-sm font-semibold shadow-sm hover:opacity-90" type="button">
+            Resolve Target Conflict
+          </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface text-label-sm font-semibold shadow-sm" onclick="switchState('all')" type="button">
+            Dismiss Warning
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Master Feeding Plans Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden mb-space-lg" id="table-container">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/70 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider"><th class="py-3 px-space-md font-semibold">Plan ID &amp; Name</th><th class="py-3 px-space-md font-semibold">Assigned Target</th><th class="py-3 px-space-md font-semibold">Feed Items &amp; Formulation</th><th class="py-3 px-space-md font-semibold text-right">Quantities &amp; Units</th><th class="py-3 px-space-md font-semibold">Feeding Times / Windows</th><th class="py-3 px-space-md font-semibold">Effective Term / Dates</th><th class="py-3 px-space-md font-semibold">Authorization</th><th class="py-3 px-space-md font-semibold text-right">Actions</th></tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/40 font-body-md text-body-md" id="plans-table-body">
+<!-- Row 1: Group TMR High Production -->
+<tr class="hover:bg-surface-container-low/30 transition-colors group-row">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface">FP-2024-001</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">High-Yield Lactation TMR</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base text-primary">groups</span>
+<span class="font-semibold">Pen 04 (High Production)</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">304 Active Lactating Head</div>
+</td>
+<td class="py-3.5 px-space-md max-w-xs">
+<div class="flex flex-wrap gap-1">
+<a class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant hover:text-primary font-label-sm text-[0.6875rem] font-medium transition-colors" href="#" title="SKU: INV-FED-0012">Corn Silage #3</a>
+<a class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant hover:text-primary font-label-sm text-[0.6875rem] font-medium transition-colors" href="#" title="SKU: INV-FED-0042">Soy Concentrate</a>
+<a class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant hover:text-primary font-label-sm text-[0.6875rem] font-medium transition-colors" href="#" title="SKU: INV-FED-0008">Alfalfa Haylage</a>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[0.6875rem]">+1 item</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="font-label-md text-label-md font-bold text-on-surface">24.50 <span class="font-normal text-on-surface-variant">kg/hd</span></div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">7,448 kg pen total</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-xs">schedule</span> Split AM/PM
+              </span>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">05:30 &amp; 16:30</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-body-sm text-body-sm font-medium text-on-surface">Oct 01 – Dec 31, 2024</div>
+<div class="font-label-sm text-[0.6875rem] text-primary font-semibold">Q4 Lactation Cycle</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-label-sm text-label-sm font-semibold text-on-surface">Elena Vance</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Farm Administrator</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Edit Plan" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Duplicate Plan" type="button">
+<span class="material-symbols-outlined text-lg">content_copy</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" onclick="openRosiePlan()" title="View Details" type="button">
+<span class="material-symbols-outlined text-lg">open_in_new</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Individual Animal Prescription (Rosie Clover) -->
+<tr class="bg-tertiary-fixed/15 hover:bg-tertiary-fixed/25 transition-colors individual-row">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<div>
+<div class="font-label-md text-label-md font-bold text-tertiary flex items-center gap-1.5">
+                    FP-2024-014
+                    <span class="px-1.5 py-0.2 rounded bg-tertiary-container text-on-primary font-label-sm text-[0.625rem] uppercase font-bold">Admin Override</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface">Specialized Convalescence Diet</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<img class="w-8 h-8 rounded-full object-cover shadow-xs flex-shrink-0" data-alt="Close up portrait photograph of a purebred black and white Holstein cow with distinctive markings and a yellow ear tag in a clean dairy infirmary stall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC2CoD-sxUS0kg2dFNlHepFRekA_Xq2kPbj96Djbv697moX6qthLwqc12RxCt0DZbkVOqrxVwbHwVDYWB1GUhk49dJG-crc5ugCUQ1COIB4SjZZOWRifeXZhy-X8_UISW8zd6xqvXZNj1gXZiCzSaIomXSQtOgFdUL0lAZ66ZAGd4HSezzQ4vUkfZL4ot5sd36DW8qgphSCVIynrbV5P4jG4cI-gWiVrKUTSgqjLnW">
+<div>
+<a class="font-label-md text-label-md font-bold text-primary hover:underline flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">sell</span>
+                    ET-GF-8711
+                  </a>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Rosie Clover (Pen H-1 Sick Bay)</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md max-w-xs">
+<div class="flex flex-wrap gap-1">
+<a class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface hover:text-primary font-label-sm text-[0.6875rem] font-medium transition-colors" href="#" title="Inventory: INV-FED-0042">High-Protein Soy (2.0kg)</a>
+<a class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface hover:text-primary font-label-sm text-[0.6875rem] font-medium transition-colors" href="#">Alfalfa (6.5kg)</a>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[0.6875rem] font-semibold">Calf Vit Electrolyte</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="font-label-md text-label-md font-bold text-tertiary">8.75 <span class="font-normal text-on-surface-variant">kg</span></div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Configured per item</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-xs">wb_twilight</span> Morning (06:00)
+              </span>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Evening (17:00) 4.75 kg</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-body-sm text-body-sm font-semibold text-tertiary">Oct 22 – Nov 05, 2024</div>
+<div class="font-label-sm text-[0.6875rem] text-tertiary font-medium">14-Day Health Protocol</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-label-sm text-label-sm font-semibold text-on-surface">Elena Vance (Admin)</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Prescribed with Dr. Chen</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded bg-tertiary-container text-on-primary hover:bg-tertiary transition-colors font-label-sm text-label-sm font-semibold shadow-xs flex items-center gap-1" onclick="openRosiePlan()" type="button">
+<span class="material-symbols-outlined text-sm">tune</span>
+<span>Inspect</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Individual Cow Diet (Bella Prime) -->
+<tr class="hover:bg-surface-container-low/30 transition-colors individual-row">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface">FP-2024-009</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Elite Donor Dam Metabolic Diet</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<img class="w-8 h-8 rounded-full object-cover shadow-xs flex-shrink-0" data-alt="Side profile photograph of an award winning dairy cow standing in a modern ventilated dairy barn stall with clean straw bedding" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY24xsJgO2Cd-ZWY1rZxvSPyAYjEf354ly6d1Tbc2Cck2GDEZY_t-Qacb5ob1Gqnp1zRj4UkX8j2fWvUXXcGeOXNC_KyBiEREkI3ni30EoWNpmBBJZNX8pjNWj32OrwUwWTo1Bd47ZP856CM2fOS9NNb0DMNzNlHqk75S8gD3xfhSLghpsGpzPz-Nzah6zvv2M_JgbKp2jPKWNgAsoXqCJ7hPUjdy9zGYeHrVlKuA1">
+<div>
+<a class="font-label-md text-label-md font-bold text-primary hover:underline flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">sell</span>
+                    ET-GF-8849
+                  </a>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Bella Prime (Pen 02 Elite)</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md max-w-xs">
+<div class="flex flex-wrap gap-1">
+<a class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[0.6875rem]" href="#">Chelated Minerals #MP-091</a>
+<a class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[0.6875rem]" href="#">Bypass Protein Blend</a>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="font-label-md text-label-md font-bold text-on-surface">19.20 <span class="font-normal text-on-surface-variant">kg</span></div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Dry matter ratio 62%</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-xs">alarm</span> Morning (05:00)
+              </span>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Automated Feeder Gate 3</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-body-sm text-body-sm font-medium text-on-surface">Sep 15 – Nov 30, 2024</div>
+<div class="font-label-sm text-[0.6875rem] text-on-surface-variant">Flushing Protocol</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-label-sm text-label-sm font-semibold text-on-surface">Dr. Robert Chen, DVM</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Herd Veterinarian</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Edit Plan" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="View Details" type="button">
+<span class="material-symbols-outlined text-lg">open_in_new</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Group - Far-Off Dry Cow Group -->
+<tr class="hover:bg-surface-container-low/30 transition-colors group-row">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface">FP-2024-004</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Dry Cow Gestational Maintenance</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base text-secondary">groups</span>
+<span class="font-semibold">Pen 08 (Far-Off Dry)</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">142 Gestating Cows</div>
+</td>
+<td class="py-3.5 px-space-md max-w-xs">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[0.6875rem]">Grass Hay (Low K)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[0.6875rem]">Straw Fiber</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[0.6875rem]">Anionic Salts</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="font-label-md text-label-md font-bold text-on-surface">14.00 <span class="font-normal text-on-surface-variant">kg/hd</span></div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">1,988 kg pen total</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-xs">sunny</span> Midday (11:30)
+              </span>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Single Push-out</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-body-sm text-body-sm font-medium text-on-surface">Indefinite / Recurring</div>
+<div class="font-label-sm text-[0.6875rem] text-on-surface-variant">Standard Operating Plan</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-label-sm text-label-sm font-semibold text-on-surface">Elena Vance</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Farm Administrator</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Edit Plan" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Duplicate Plan" type="button">
+<span class="material-symbols-outlined text-lg">content_copy</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="View Details" type="button">
+<span class="material-symbols-outlined text-lg">open_in_new</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Group - Fresh Heifer Transition -->
+<tr class="hover:bg-surface-container-low/30 transition-colors group-row">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface">FP-2024-006</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Fresh Heifer Transition Blend</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base text-primary">groups</span>
+<span class="font-semibold">Pen 01 (Fresh Transition)</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">88 Primiparous Heifers</div>
+</td>
+<td class="py-3.5 px-space-md max-w-xs">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[0.6875rem]">Steam Flaked Corn</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[0.6875rem]">Molasses Liquid Feed</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[0.6875rem]">Alfalfa Hay</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="font-label-md text-label-md font-bold text-on-surface">18.50 <span class="font-normal text-on-surface-variant">kg/hd</span></div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">1,628 kg pen total</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-xs">schedule</span> Split AM/PM
+              </span>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">06:00 &amp; 17:00</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-body-sm text-body-sm font-medium text-on-surface">Nov 01, 2024 – Feb 28, 2025</div>
+<div class="font-label-sm text-[0.6875rem] text-primary font-semibold">Active Winter Transition</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-label-sm text-label-sm font-semibold text-on-surface">Elena Vance</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Farm Administrator</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Edit Plan" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Duplicate Plan" type="button">
+<span class="material-symbols-outlined text-lg">content_copy</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="View Details" type="button">
+<span class="material-symbols-outlined text-lg">open_in_new</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination / Summary Footer -->
+<div class="px-space-md py-space-sm bg-surface-container-low/50 flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-label-sm text-label-sm border-t-0">
+<div class="flex items-center gap-2">
+<span>Showing <strong class="text-on-surface">5</strong> of <strong class="text-on-surface">18</strong> Active Feeding Plans</span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface-variant">Units configured independently per feed formulation</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded text-outline-variant cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-semibold shadow-xs">1</span>
+<button class="px-2.5 py-1 rounded hover:bg-surface-container text-on-surface-variant font-semibold" type="button">2</button>
+<button class="px-2.5 py-1 rounded hover:bg-surface-container text-on-surface-variant font-semibold" type="button">3</button>
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Empty State Preview Card (Hidden by default, toggled via state switcher) -->
+<div class="hidden bg-surface-container-lowest rounded-xl p-space-xl shadow-sm mb-space-lg text-center" id="empty-state-view">
+<div class="max-w-md mx-auto flex flex-col items-center">
+<div class="w-16 h-16 rounded-2xl bg-surface-container flex items-center justify-center text-outline mb-space-md">
+<span class="material-symbols-outlined text-3xl">restaurant</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">No Feeding Plans Found</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Administer herd ration plans, individual animal diets, feeding times, and Farm Admin prescription overrides. Formulated allocations establish target quantities; actual feeding records and inventory deductions operate independently.</p>
+<div class="mt-space-md flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-high transition-colors" onclick="switchState('all')" type="button">
+          Reset Filter Filters
+        </button>
+<button class="px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-primary transition-colors" onclick="toggleDetailsModal(true)" type="button">
+          + Create First Plan
+        </button>
+</div>
+</div>
+</div>
+<!-- Detailed Plan Edit & Admin Prescription Override Slideout Modal -->
+<div class="hidden fixed inset-0 z-50 overflow-hidden bg-on-surface/40 backdrop-blur-xs flex justify-end" id="details-slideout"><div class="relative w-full max-w-2xl bg-surface-container-lowest h-full shadow-2xl flex flex-col overflow-y-auto"><div class="p-space-lg bg-surface-container-low/70 flex items-start justify-between border-b border-outline-variant/40"><div><div class="flex items-center gap-2 mb-1"><span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-[0.6875rem] font-bold uppercase" id="modal-badge">Feeding Plan Config</span><span class="font-label-sm text-label-sm text-on-surface-variant" id="modal-plan-id">Plan: FP-2024-014</span></div><h2 class="font-headline-lg text-headline-lg font-bold text-on-surface" id="modal-title">Specialized Convalescence Diet</h2><p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Formulated Dietary Plan &amp; Prescription Overrides for Workspace GF-042</p></div><button class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" onclick="toggleDetailsModal(false)" type="button"><span class="material-symbols-outlined text-2xl">close</span></button></div><div class="p-space-lg space-y-space-lg flex-1"><div class="grid grid-cols-1 md:grid-cols-2 gap-space-md"><div><label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Plan Name *</label><input class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container" id="formPlanName" placeholder="e.g. High-Yield Lactation TMR" type="text" value="Specialized Convalescence Diet"></div><div><label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Target Category *</label><select class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-label-sm text-label-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container"><option value="group">Animal Group / Pen</option><option selected="" value="individual">Individual Animal (Ear-Tag)</option></select></div></div><div class="p-space-md rounded-xl bg-surface-container-low/60 flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="Animal Photo" class="w-12 h-12 rounded-xl object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYD-QaRpAq5onnqjNipueysa5PaLib3HWx_9FkOqZyL0W8WqNG39gIOra80whvvZ6uElejJKUWynqZvm7SEfw76pnDHwljpthP5Kwk_Squ7TPrJPGVRz81FBnk1UunkRZgao8tYlNg8RZ_WAfuhlNDNBJsIXjwubOl_xHxMnya2bCcJFBfNkmvgCWCX9FLzP37lIAeRfCFwYJK5SAJubTjIa6HQxtisRp-HKmfNZLN"><div><div class="flex items-center gap-2"><span class="font-label-md text-label-md font-bold text-on-surface">Rosie Clover</span><span class="px-2 py-0.5 rounded-full bg-secondary-container/80 text-on-secondary-container font-label-sm text-label-sm font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-xs">sell</span> ET-GF-8711</span></div><div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Location: <strong class="text-on-surface">Pen H-1 Sick Bay / Infirmary</strong> • Lactation: Day 44</div></div></div><a class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold shadow-xs hover:bg-surface transition-colors flex items-center gap-1" href="#"><span>Profile</span><span class="material-symbols-outlined text-sm">open_in_new</span></a></div><div><div class="flex items-center justify-between mb-space-xs"><h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Feed Items &amp; Formulation</h4><button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm font-semibold" type="button"><span class="material-symbols-outlined text-sm">add</span><span>Add Ingredient Row</span></button></div><div class="rounded-lg bg-surface-container-lowest border border-outline-variant/40 overflow-hidden shadow-xs"><table class="w-full text-left font-body-sm text-body-sm"><thead class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm"><tr><th class="py-2 px-3 font-semibold">Ingredient / Feed Formulation</th><th class="py-2 px-3 font-semibold">SKU</th><th class="py-2 px-3 font-semibold text-right">Ratio (%)</th><th class="py-2 px-3 font-semibold text-right">Planned Qty</th><th class="py-2 px-3 text-center">Action</th></tr></thead><tbody class="divide-y divide-surface-container-high/40"><tr><td class="py-2 px-3 font-medium text-on-surface">High-Protein Soy Concentrate (48% CP)</td><td class="py-2 px-3 text-primary font-mono text-label-sm">INV-FED-0042</td><td class="py-2 px-3 text-right font-medium text-on-surface">22.8%</td><td class="py-2 px-3 text-right font-bold text-on-surface">2.00 kg</td><td class="py-2 px-3 text-center"><button class="text-on-surface-variant hover:text-error" type="button"><span class="material-symbols-outlined text-sm">delete</span></button></td></tr><tr><td class="py-2 px-3 font-medium text-on-surface">Premium Chopped Alfalfa Haylage</td><td class="py-2 px-3 text-primary font-mono text-label-sm">INV-FED-0008</td><td class="py-2 px-3 text-right font-medium text-on-surface">74.3%</td><td class="py-2 px-3 text-right font-bold text-on-surface">6.50 kg</td><td class="py-2 px-3 text-center"><button class="text-on-surface-variant hover:text-error" type="button"><span class="material-symbols-outlined text-sm">delete</span></button></td></tr><tr><td class="py-2 px-3 font-medium text-on-surface">Calf &amp; Convalescent Electrolyte Buffer</td><td class="py-2 px-3 text-primary font-mono text-label-sm">INV-MED-0112</td><td class="py-2 px-3 text-right font-medium text-on-surface">2.9%</td><td class="py-2 px-3 text-right font-bold text-on-surface">0.25 kg</td><td class="py-2 px-3 text-center"><button class="text-on-surface-variant hover:text-error" type="button"><span class="material-symbols-outlined text-sm">delete</span></button></td></tr></tbody></table></div></div><div class="grid grid-cols-2 gap-space-md"><div><label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Feeding Times / Windows</label><input class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container" type="text" value="Morning (06:00) &amp; Evening (17:00)"></div><div><label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Effective Dates (Start – End)</label><div class="flex items-center gap-2"><input class="w-1/2 h-10 px-2.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container" type="date" value="2024-10-22"><input class="w-1/2 h-10 px-2.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container" type="date" value="2024-11-05"></div></div></div><div class="p-space-md rounded-xl bg-surface-container-low/40 space-y-space-sm"><div class="flex items-center justify-between"><div><h4 class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-base">verified_user</span> Farm Admin Plan Override</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Permits veterinary and convalescence manual dosage allocation adjustments</p></div><input checked="" class="w-5 h-5 rounded text-primary focus:ring-primary cursor-pointer" type="checkbox"></div><div><label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Rationale &amp; Dispensary Instructions</label><textarea class="w-full p-2.5 bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container" rows="2">Prescribed convalescent buffer with concentrated soy bypass protein. Actual feeding and dispensary records documented separately.</textarea></div></div></div><div class="p-space-md bg-surface-container-low/70 flex items-center justify-between border-t border-outline-variant/40"><button class="px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md font-semibold" onclick="toggleDetailsModal(false)" type="button">Cancel</button><div class="flex items-center gap-space-sm"><button class="px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all font-label-md text-label-md font-semibold shadow-sm flex items-center gap-1.5" onclick="saveOverrideSuccess()" type="button"><span class="material-symbols-outlined text-base">save</span><span>Save Feeding Plan</span></button></div></div></div></div>
+<!-- Cross-Module Integration Badges & System Governance Footer -->
+<div class="rounded-xl bg-surface-container-low/60 p-space-md flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center flex-wrap gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-base text-primary">link</span>
+        Cross-Module References:
+      </span>
+<a class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container-lowest text-on-surface hover:text-primary transition-colors shadow-xs" href="#">
+<span class="material-symbols-outlined text-xs text-primary">pets</span>
+<span>Animal Profile (ET-GF-8849)</span>
+</a>
+<a class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container-lowest text-on-surface hover:text-primary transition-colors shadow-xs" href="#">
+<span class="material-symbols-outlined text-xs text-tertiary">pets</span>
+<span>Animal Profile (ET-GF-8711)</span>
+</a>
+<a class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container-lowest text-on-surface hover:text-primary transition-colors shadow-xs" href="#">
+<span class="material-symbols-outlined text-xs text-primary">inventory_2</span>
+<span>Inventory SKU: INV-FED-0042</span>
+</a>
+</div>
+<!-- Governance Notice -->
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-sm text-primary">verified_user</span>
+<span>Workspace GF-042 • Farm Admin role authorization active for ration modifications.</span>
+</div>
+</div>
+<!-- Interactive JavaScript -->
+<script>
+    function toggleDetailsModal(show) {
+      const modal = document.getElementById('details-slideout');
+      if (show) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      } else {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    function openRosiePlan() {
+      toggleDetailsModal(true);
+    }
+
+    function saveOverrideSuccess() {
+      alert("Plan FP-2024-014 updated successfully. Prescription changes applied to Workspace GF-042 feeding schedule.");
+      toggleDetailsModal(false);
+    }
+
+    function switchState(state) {
+      const tableContainer = document.getElementById('table-container');
+      const emptyStateView = document.getElementById('empty-state-view');
+      const errorBanner = document.getElementById('validation-error-banner');
+      const groupRows = document.querySelectorAll('.group-row');
+      const individualRows = document.querySelectorAll('.individual-row');
+
+      // Reset pill styles
+      const pillIds = ['pill-all', 'pill-group', 'pill-individual', 'pill-empty', 'pill-error'];
+      pillIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.className = "px-3.5 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold text-on-surface-variant hover:text-on-surface transition-all";
+        }
+      });
+
+      const activePill = document.getElementById(`pill-${state}`);
+      if (activePill) {
+        activePill.className = "px-3.5 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold bg-surface-container-lowest text-on-surface shadow-sm transition-all";
+      }
+
+      // Hide conditional blocks by default
+      emptyStateView.classList.add('hidden');
+      errorBanner.classList.add('hidden');
+      tableContainer.classList.remove('hidden');
+
+      if (state === 'all') {
+        groupRows.forEach(r => r.classList.remove('hidden'));
+        individualRows.forEach(r => r.classList.remove('hidden'));
+      } else if (state === 'group') {
+        groupRows.forEach(r => r.classList.remove('hidden'));
+        individualRows.forEach(r => r.classList.add('hidden'));
+      } else if (state === 'individual') {
+        groupRows.forEach(r => r.classList.add('hidden'));
+        individualRows.forEach(r => r.classList.remove('hidden'));
+      } else if (state === 'empty') {
+        tableContainer.classList.add('hidden');
+        emptyStateView.classList.remove('hidden');
+      } else if (state === 'error') {
+        errorBanner.classList.remove('hidden');
+        groupRows.forEach(r => r.classList.remove('hidden'));
+        individualRows.forEach(r => r.classList.remove('hidden'));
+      }
+    }
+
+    // Client-side quick filter on search
+    document.getElementById('planSearchInput').addEventListener('input', function(e) {
+      const query = e.target.value.toLowerCase();
+      const rows = document.querySelectorAll('#plans-table-body tr');
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(query) ? '' : 'none';
+      });
+    });
+  </script>
+</div></main></div>
+
+</body></html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary":"#ffffff","on-secondary-container":"#5b694e","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","error-container":"#ffdad6","inverse-on-surface":"#eff2ea","on-tertiary-fixed":"#301400","surface-container-highest":"#e0e4dc","on-primary-fixed-variant":"#3a4c30","on-primary-container":"#b8cda9","surface-container-high":"#e6e9e1","on-error-container":"#93000a","on-error":"#ffffff","primary-fixed-dim":"#b8cda8","outline":"#75786f","on-surface":"#191d18","surface-variant":"#e0e4dc","on-primary":"#ffffff","tertiary":"#5e3007","outline-variant":"#c4c8bd","inverse-primary":"#b8cda8","surface-container":"#ecefe7","tertiary-fixed":"#ffdcc6","inverse-surface":"#2d312c","surface":"#f7faf2","secondary":"#556249","secondary-fixed":"#d9e8c7","secondary-container":"#d9e8c7","on-surface-variant":"#444840","on-secondary-fixed":"#141f0a","primary":"#2f4126","tertiary-container":"#7a461c","secondary-fixed-dim":"#bdcbac","on-tertiary-container":"#ffb785","surface-tint":"#516446","on-primary-fixed":"#101f08","error":"#ba1a1a","primary-fixed":"#d4e9c3","background":"#f7faf2","on-secondary-fixed-variant":"#3e4b32","tertiary-fixed-dim":"#ffb784","on-background":"#191d18","surface-dim":"#d8dbd3","surface-container-low":"#f2f5ed","on-tertiary-fixed-variant":"#6c3a11","primary-container":"#46583b","surface-bright":"#f7faf2"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1.25rem","margin-desktop":"2rem","space-sm":"0.5rem","space-lg":"1.5rem","margin":"1rem","gutter-desktop":"1.5rem","space-md":"1rem","space-xl":"2.5rem","space-xs":"0.25rem"},"fontFamily":{"body-lg":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"tabular-data":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"title-md":["15px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"600"}],"label-lg":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"600"}],"tabular-data":["13px",{"lineHeight":"18px","letterSpacing":"-0.01em","fontWeight":"500"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">agriculture</span></div><div class="flex flex-col leading-none"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">SmartFarm</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Super Admin</span></div></div><div class="px-space-md py-space-sm"><span class="font-label-sm text-label-sm text-outline uppercase px-space-sm tracking-wider">Platform Fleet</span></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary rounded-lg font-title-md"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="customers" href="#"><span class="material-symbols-outlined text-[20px]">domain</span><span class="font-body-md text-body-md">Customers</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="workspaces" href="#"><span class="material-symbols-outlined text-[20px]">hub</span><span class="font-body-md text-body-md">Workspaces</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary-container text-on-primary rounded-lg font-title-md" data-path="farm-admin-accounts" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span class="font-body-md text-body-md">Farm Admin Accounts</span></a></nav></div><div class="p-space-md m-space-sm rounded-xl bg-surface-container-low"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Fleet Telemetry</span><span class="font-label-sm text-label-sm text-tertiary-container">Nominal</span></div><div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden"><div class="bg-primary-container h-full w-[94%]"></div></div><div class="flex items-center justify-between mt-space-xs"><span class="font-label-sm text-label-sm text-outline">1,420 / 1,510 Nodes</span><span class="font-label-sm text-label-sm text-outline">94%</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter-desktop"><div class="flex items-center gap-space-md w-96"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none placeholder:text-outline" placeholder="Search farms, telemetry, accounts..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high rounded-full"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-label-sm text-label-sm text-on-surface tracking-wide">US-WEST-CENTRAL</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary-container"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Eleanor Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Super Admin</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="px-margin-desktop py-space-lg flex flex-col gap-space-lg max-w-[1520px] mx-auto w-full">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<a class="hover:text-primary transition-colors" href="#">Farm Admin Accounts</a>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Provision Farm Admin</a>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+<span class="text-primary font-semibold">Success Confirmation</span>
+</nav>
+<!-- Success Header Block -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col md:flex-row md:items-start justify-between gap-space-lg relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-primary-fixed/30 pointer-events-none blur-2xl"></div>
+<div class="flex items-start gap-space-lg relative z-10">
+<div class="w-14 h-14 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[32px]">check_circle</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-0.5 rounded-full bg-primary-container/15 text-primary text-label-sm font-label-sm tracking-wide font-bold uppercase">Provisioning Complete</span>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container/50 text-secondary text-label-sm font-label-sm">Stage 03 Verified</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Farm Admin Account Provisioned Successfully</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+            The Farm Admin account has been prepared, identity credentials bound, and authority delegated to the targeted operational facility.
+          </p>
+<div class="flex items-center gap-space-xs mt-space-xs text-tertiary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>Prototype confirmation — record staged in active session state.</span>
+</div>
+</div>
+</div>
+<div class="flex md:flex-col items-end justify-between shrink-0 gap-space-sm relative z-10 self-stretch md:self-auto border-t md:border-t-0 pt-space-md md:pt-0">
+<div class="text-right">
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Timestamp</div>
+<div class="font-tabular-data text-tabular-data text-on-surface font-semibold">Today • 14:32:08 UTC</div>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-1 bg-surface-container rounded-lg text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Security Ledger: SYNCHRONIZED</span>
+</div>
+</div>
+</div>
+<!-- Onboarding Pipeline Progress Ribbon (3 of 3 Finished) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">account_tree</span>
+<span class="font-title-md text-title-md text-on-surface">3-Stage Manual Onboarding Workflow</span>
+</div>
+<span class="px-space-md py-1 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm tracking-wider uppercase flex items-center gap-space-xs font-semibold">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+          Onboarding Pipeline 3 of 3 Complete
+        </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs">
+<!-- Step 1 Complete -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex items-start gap-space-md relative overflow-hidden group">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Stage 01</span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Completed</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface truncate">Register Customer</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Highland Dairy Collective</span>
+<span class="font-tabular-data text-tabular-data text-outline">CUST-4829</span>
+</div>
+</div>
+<!-- Step 2 Complete -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex items-start gap-space-md relative overflow-hidden group">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Stage 02</span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Completed</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface truncate">Create Farm Workspace</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Highland North Rotary Unit</span>
+<span class="font-tabular-data text-tabular-data text-outline">WS-1042</span>
+</div>
+</div>
+<!-- Step 3 Complete -->
+<div class="bg-surface-container-high rounded-lg p-space-md flex items-start gap-space-md relative overflow-hidden group">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Stage 03</span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Completed</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface truncate">Provision Farm Admin</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold truncate">Thomas Wright</span>
+<span class="font-tabular-data text-tabular-data text-on-surface-variant">Operations Lead • FA-8042</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Confirmed Account & Tenancy Details -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Primary Profile Card (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">badge</span>
+<span class="font-title-md text-title-md text-on-surface">Confirmed Farm Admin Identity</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-primary-container/15 text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+            Active (Pending Initial Sign-In)
+          </span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pb-space-md bg-surface-container-lowest">
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-xl bg-surface-container-high text-primary flex items-center justify-center font-headline-md text-headline-md font-bold tracking-tight">
+                TW
+              </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Thomas Wright</span>
+<span class="material-symbols-outlined text-primary text-[18px]" title="Identity Verified">verified</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant">Operations Lead</span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">Assigned to Rotary Systems &amp; Milking Parlors</span>
+</div>
+</div>
+<div class="flex sm:flex-col items-start sm:items-end justify-between gap-1 p-space-sm bg-surface-container-low rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Account ID</span>
+<span class="font-tabular-data text-tabular-data font-bold text-on-surface tracking-wide">FA-8042</span>
+</div>
+</div>
+<!-- Metadata Spec Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Assigned System Role</span>
+<div class="flex items-center gap-space-xs text-on-surface font-title-md text-title-md">
+<span class="material-symbols-outlined text-[18px] text-primary">admin_panel_settings</span>
+<span>Farm Admin</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Active Workspace Administrator Tier</span>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Login Identifier / Work Email</span>
+<div class="flex items-center gap-space-xs text-on-surface font-title-md text-title-md truncate">
+<span class="material-symbols-outlined text-[18px] text-primary">mail</span>
+<span class="font-tabular-data truncate">t.wright@highlanddairy.co</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Primary Authentication Route</span>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">MFA Requirement Policy</span>
+<div class="flex items-center gap-space-xs text-on-surface font-title-md text-title-md">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">encrypted</span>
+<span>Hardware Token or TOTP</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Enforced at First Login</span>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Workspace Scope</span>
+<div class="flex items-center gap-space-xs text-on-surface font-title-md text-title-md">
+<span class="material-symbols-outlined text-[18px] text-primary">corporate_fare</span>
+<span>Single Site Bound</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Confined to WS-1042</span>
+</div>
+</div>
+<!-- Micro Telemetry Readiness Checklist -->
+<div class="p-space-md bg-surface-container-high/60 rounded-lg flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Account Provisioning State Checklist</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm font-label-md text-label-md">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span>Directory Sync</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span>Cluster RBAC Granted</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span>Audit Stash Logged</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Tenancy & Workspace Context (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Bound Customer Organization Module -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">domain</span>
+<span class="font-title-md text-title-md text-on-surface">Bound Customer Organization</span>
+</div>
+<span class="font-tabular-data text-tabular-data text-outline font-semibold">CUST-4829</span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Highland Dairy Collective</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Regional Agrarian Enterprise • Pacific Northwest</span>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between text-body-sm font-body-sm py-1">
+<span class="text-outline">Primary Liaison:</span>
+<span class="text-on-surface font-semibold">Evelyn Harper</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm py-1">
+<span class="text-outline">Liaison Contact:</span>
+<span class="text-primary font-tabular-data">e.harper@highlanddairy.co</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm py-1">
+<span class="text-outline">Account Manager:</span>
+<span class="text-on-surface">Eleanor Vance (Super Admin)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Assigned Operational Workspace Module -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">precision_manufacturing</span>
+<span class="font-title-md text-title-md text-on-surface">Assigned Operational Workspace</span>
+</div>
+<span class="font-tabular-data text-tabular-data text-outline font-semibold">WS-1042</span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Highland North Rotary Unit</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">72-Stall Rotary Milking Parlor • Real-time Fluid Dynamics</span>
+</div>
+<!-- Location Visualizer Bar -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">pin_drop</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-outline uppercase">Physical Location</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate">Building B, Sector 4, Sunnyside Basin</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Telemetry Bridge: Node Cluster 04 (Online)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Actions & Workflow Continuation -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm w-full md:w-auto">
+<span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+<span class="font-body-md text-body-md text-on-surface">Account configuration finalized. Ready for administrative governance.</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm w-full md:w-auto justify-end">
+<button class="px-space-md py-2 bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors rounded-lg font-title-md text-title-md flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Back to Farm Admin Accounts</span>
+</button>
+<button class="px-space-md py-2 bg-surface-container text-on-surface hover:bg-surface-container-highest transition-colors rounded-lg font-title-md text-title-md flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+<span>View Associated Workspace</span>
+</button>
+<button class="px-space-lg py-2 bg-primary-container text-on-primary hover:bg-primary transition-colors rounded-lg font-title-md text-title-md flex items-center gap-space-xs shadow-sm" type="button">
+<span>View Farm Admin Account</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Super Admin Security & Privacy Advisory Banner -->
+<div class="p-space-lg rounded-xl bg-surface-container-low text-on-surface flex items-start gap-space-md">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-tertiary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</div>
+<div class="flex flex-col gap-1 text-on-surface">
+<div class="font-title-md text-title-md text-on-surface font-semibold flex items-center gap-space-xs">
+<span>Super Admin Security &amp; Privacy Advisory</span>
+<span class="font-label-sm text-label-sm text-outline font-normal">• Zero-Plaintext Standard</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Access credentials and portal login instructions must be delivered according to approved organizational security protocols. Farm worker records and daily dairy herd management are managed within the local workspace portal.
+        </p>
+<span class="font-label-sm text-label-sm text-outline mt-1">
+          Reference Protocol: SEC-AGRO-2024-C • Audit Trail Log #9948-HD-CONFIRM
+        </span>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

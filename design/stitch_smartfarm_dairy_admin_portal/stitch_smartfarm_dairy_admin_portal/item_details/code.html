@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#30312d", "on-background": "#1b1c18", "secondary": "#556249", "tertiary-fixed-dim": "#ffb784", "surface-container-low": "#f5f3ed", "on-tertiary": "#ffffff", "surface-dim": "#dcdad4", "on-primary-container": "#b8cda9", "on-primary-fixed": "#101f08", "inverse-on-surface": "#f3f1eb", "outline": "#75786f", "background": "#fbf9f3", "on-tertiary-fixed": "#301400", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#3e4b32", "surface": "#fbf9f3", "outline-variant": "#c4c8bd", "surface-container": "#f0eee8", "surface-container-high": "#eae8e2", "surface-tint": "#516446", "surface-bright": "#fbf9f3", "on-surface-variant": "#444840", "primary-container": "#46583b", "primary": "#2f4126", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffdcc6", "on-primary-fixed-variant": "#3a4c30", "secondary-container": "#d9e8c7", "on-surface": "#1b1c18", "error": "#ba1a1a", "secondary-fixed-dim": "#bdcbac", "on-tertiary-container": "#ffb785", "on-secondary-container": "#5b694e", "on-error": "#ffffff", "primary-fixed": "#d4e9c3", "on-tertiary-fixed-variant": "#6c3a11", "tertiary": "#5e3007", "primary-fixed-dim": "#b8cda8", "on-error-container": "#93000a", "secondary-fixed": "#d9e8c7", "tertiary-container": "#7a461c", "on-secondary-fixed": "#141f0a", "on-primary": "#ffffff", "surface-variant": "#e4e2dd", "inverse-primary": "#b8cda8", "surface-container-highest": "#e4e2dd", "on-secondary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "gutter-mobile": "0.75rem", "margin": "2rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter": "1.5rem", "margin-mobile": "1rem" }, "fontFamily": { "data-metric-md": [ "Inter" ], "body-lg": [ "Inter" ], "display-lg-mobile": [ "Manrope" ], "body-sm": [ "Inter" ], "headline-md": [ "Manrope" ], "label-sm": [ "Inter" ], "headline-sm": [ "Manrope" ], "headline-xl": [ "Manrope" ], "body-md": [ "Inter" ], "headline-xl-mobile": [ "Manrope" ], "display-lg": [ "Manrope" ], "headline-lg": [ "Manrope" ], "data-metric-lg": [ "Manrope" ], "label-md": [ "Inter" ] }, "fontSize": { "data-metric-md": [ "1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "display-lg-mobile": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ], "headline-md": [ "1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" } ], "label-sm": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "headline-xl": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "headline-xl-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-lg": [ "3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "data-metric-lg": [ "2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZuhXF_IhBdGhJ4eix1oqj3wBimwP9kKeGGChH_b2ax1lMLHMcXPmCVu9b3MJqlJ3XUJHZyp_ietndJCcoi5tapKDT0swhF14GEZxUKYZjg6g5LvxUeQzsGptFXM8XbwZz0B0M4Kbg8tH48Ys1NpBq3q3ceaJWAzrxO8XU7fzOrfQL6K9wOMESU_VEMnfcbKwhEtKD90-MYyU8fO7yBiUm20ljVe33W-rRqQJED0H"/><div><div class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight truncate">SmartFarm</div><div class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Dairy Management</div></div></div><span class="font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold px-space-xs py-0.5 rounded">Admin</span></div><div class="px-space-md py-space-sm bg-surface-container-low/80 flex items-center justify-between"><div class="truncate"><div class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Greenfield Dairy Estate</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">Workspace: GF-042</div></div><span class="h-2 w-2 rounded-full bg-primary-container ring-2 ring-primary-fixed flex-shrink-0"></span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Overview</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="font-body-md text-body-md flex-1">Dashboard</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Herd Management</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#"><span class="font-body-md text-body-md flex-1">Animals</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#"><span class="font-body-md text-body-md flex-1">Animal Health</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding" href="#"><span class="font-body-md text-body-md flex-1">Feeding Plans</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Operations &amp; Assets</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#"><span class="font-body-md text-body-md flex-1">Milk Production</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-management" href="#"><span class="font-body-md text-body-md flex-1">Milk Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#"><span class="font-body-md text-body-md flex-1">Inventory</span></a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="inventory-list" href="#">Inventory List</a><a aria-current="page" class="flex items-center px-space-sm py-1 transition-all bg-primary-container text-on-primary font-semibold rounded-lg" data-path="item-details" href="#">Item Details</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="purchases-and-inbound-invoices" href="#">Purchases &amp; Inbound Invoices</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="stock-additions" href="#">Stock Additions</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="stock-adjustments" href="#">Stock Adjustments</a></div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#"><span class="font-body-md text-body-md flex-1">Equipment</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Workforce &amp; Finance</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers" href="#"><span class="font-body-md text-body-md flex-1">Workers</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="attendance" href="#"><span class="font-body-md text-body-md flex-1">Attendance</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="payroll" href="#"><span class="font-body-md text-body-md flex-1">Payroll</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="finance" href="#"><span class="font-body-md text-body-md flex-1">Finance</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Governance &amp; Core</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="supervisor-access" href="#"><span class="font-body-md text-body-md flex-1">Supervisor Access</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#"><span class="font-body-md text-body-md flex-1">Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="data-management" href="#"><span class="font-body-md text-body-md flex-1">Data Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="font-body-md text-body-md flex-1">Settings</span></a></div></nav><div class="p-space-sm bg-surface-container-low/60"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex justify-between items-center mb-1"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Storage Quota</span><span class="font-label-sm text-label-sm text-primary font-bold">42%</span></div><div class="w-full bg-surface-container rounded-full h-1.5 mb-2"><div class="bg-primary-container h-1.5 rounded-full w-[42%]"></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-body-sm text-body-sm">1,280 Active Head</span><span class="material-symbols-outlined text-sm text-tertiary-container">sensors</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><button class="p-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-xl">menu_open</span></button><nav class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="text-on-surface-variant">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface-variant">Operations &amp; Assets</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="font-semibold text-on-surface">Inventory</span></nav><div class="relative flex-1 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full h-10 pl-9 pr-14 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search Inventory, SKU, Batch, PO..." type="text"/><span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded shadow-sm">⌘K</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm"><span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span><span>Connected • Live</span></div><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Mode" type="button"><span class="material-symbols-outlined text-xl">routine</span></button><div class="relative"><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" title="Alerts" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 h-4 min-w-[1rem] px-1 bg-error text-on-error font-label-sm text-[0.625rem] rounded-full flex items-center justify-center font-bold">3</span></button></div><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#" title="Docs &amp; Support"><span class="material-symbols-outlined text-xl">help</span></a><div class="h-6 w-[1px] bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHGkwzAmXeAWZgoliBfM3J0Dk3rRvKbrFcaSDXWTFXvp7mK8JZlIDpaM_-PKsE2e-9DSWj_thQxg7ZvMO7_J2wdBeJdNp3xHQNrTkReCH1iwd77yI5cACPrn8AVBGbsgSIRzl_r1aNrbkvrI3tTJT7qFPLASAjAk_cx85172_N3qz8dJ2RbazkMZxrYU4--z2VriyTURPXkRqv4-UUhJWONTqJq0P8IWMmPKFhLYX7"/><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></div><div class="hidden lg:block text-left"><div class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-none">Farm Administrator</div></div><button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-lg">expand_more</span></button></div></div></header><main class="relative pt-16 w-full px-space-lg py-space-lg bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Micro Breadcrumb & Operational Alert Topbar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm pb-space-md">
+<nav class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="hover:text-primary transition-colors cursor-pointer">Operations</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Inventory</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Master Directory</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="font-semibold text-on-surface bg-surface-container px-space-xs py-0.5 rounded">INV-FED-0042</span>
+</nav>
+<div class="flex items-center gap-space-sm self-start lg:self-auto">
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span>Farm Admin Privileges Active</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sync ID: #GF-SYNC-8819</span>
+</div>
+</div>
+<!-- Item Header Bar with Rich Visual Context & Actions -->
+<div class="relative bg-surface-container-lowest rounded-xl shadow-sm p-space-lg mb-space-lg overflow-hidden">
+<!-- Subtle Agrarian Texture Backing -->
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-gradient-to-br from-tertiary-fixed/10 via-primary/5 to-transparent pointer-events-none blur-2xl"></div>
+<div class="relative z-10 flex flex-col xl:flex-row xl:items-start justify-between gap-space-lg">
+<div class="flex flex-col md:flex-row gap-space-lg items-start">
+<div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden shadow-sm flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up detailed macro shot of organic golden high-protein soy concentrate feed pellets piled together in a clean modern dairy nutrition laboratory with natural sunlight and deep olive shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgk6Zx0aa9VgrqAKgOyCCfuEwY9IbzcMKxapGA616eCGj7SyTYGcw9GK-GJ_oiHKkS-TDSKrefY3piixjg3aRribn0_mnKKs_iCevpTS4UMCbOjj2K5h4gHBA6_N9OIzyjV__bLNrevBMSr6EkW0c4o36PcS2I7e5_R3b4i6hh0saK25NXs_xJ5c40zsQtSnmDCAr-t5lhjo4I0RZ0_Jc_h2dVo3l-1DtcorxRhBLz"/>
+<span class="absolute bottom-1 right-1 bg-surface-container-lowest/90 backdrop-blur-sm px-1.5 py-0.5 rounded text-[10px] font-label-sm font-semibold text-primary">BULK FEED</span>
+</div>
+<div class="space-y-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold">Feed Commodity</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Raw Ingredient</span>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm ml-1">
+<span class="material-symbols-outlined text-sm">warehouse</span>
+<span>Silo Tower 03 / Bunker North</span>
+</div>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">High-Protein Soy Concentrate</h1>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-body-sm text-body-sm text-on-surface-variant pt-1">
+<span class="font-mono bg-surface-container-low px-2 py-0.5 rounded text-on-surface font-semibold text-xs tracking-wider">SKU: INV-FED-0042</span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">science</span>
+              Crude Protein: 48.5% DM
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-tertiary-container font-medium">
+<span class="material-symbols-outlined text-xs">event</span>
+              Expiry: Dec 15, 2024 (Batch #LOT-SY-992)
+            </span>
+</div>
+<!-- Alert Status Tag -->
+<div class="pt-2">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-error-container text-on-error-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base font-bold">warning</span>
+<span class="font-bold tracking-wide">LOW STOCK ALERT:</span>
+<span>Current Stock (1,400.00 kg) ≤ Configured Safety Minimum (1,400.00 kg)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Panel Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm xl:flex-col xl:items-end justify-start">
+<div class="flex flex-wrap gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-2.5 bg-primary text-on-primary rounded-lg font-label-md text-label-md shadow-sm hover:bg-primary-container transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span>+ Quick Stock Addition</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 bg-surface-container-low text-tertiary-container hover:bg-surface-container hover:text-tertiary rounded-lg font-label-md text-label-md transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-lg">tune</span>
+<span>⚡ Farm Admin Stock Adjustment</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-1.5 px-space-sm py-2 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-sm text-label-sm transition-colors">
+<span class="material-symbols-outlined text-base">edit_note</span>
+<span>Edit Item Attributes</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-sm py-2 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-sm text-label-sm transition-colors">
+<span class="material-symbols-outlined text-base">print</span>
+<span>Print Shelf Tag</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Core Attributes & Stock Information Metrics Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Metric 1: Current Bulk Stock Level -->
+<div class="relative bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-error"></div>
+<div class="flex items-center justify-between text-on-surface-variant pb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Active Bulk Stock</span>
+<span class="material-symbols-outlined text-error text-xl">inventory_2</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-data-metric-lg text-data-metric-lg text-error font-bold tracking-tight">1,400.00</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">kg</span>
+</div>
+<div class="mt-2 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Silo 03 fill gauge</span>
+<span class="font-mono font-medium text-error">14.0% of 10,000 kg cap</span>
+</div>
+<!-- Inline Progress Bar -->
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-1.5 overflow-hidden">
+<div class="bg-error h-1.5 rounded-full w-[14%]"></div>
+</div>
+</div>
+<div class="pt-3 mt-3 bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md py-2 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Variance status</span>
+<span class="text-error font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-sm">arrow_downward</span> At Threshold
+        </span>
+</div>
+</div>
+<!-- Metric 2: Minimum Stock Threshold -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant pb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Configured Safety Floor</span>
+<span class="material-symbols-outlined text-on-surface-variant text-xl">security</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-data-metric-lg text-data-metric-lg text-on-surface font-bold">1,400.00</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">kg</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+          Trigger floor set for 3-day buffer during peak ration dispensing at Barn 02.
+        </p>
+</div>
+<div class="pt-3 mt-3 bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md py-2 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Evaluated Rule</span>
+<span class="font-mono text-xs font-semibold text-primary">RULE-MIN-STK-04</span>
+</div>
+</div>
+<!-- Metric 3: Re-Order Recommendation -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant pb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Suggested Re-Order</span>
+<span class="material-symbols-outlined text-tertiary text-xl">shopping_cart_checkout</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-data-metric-lg text-data-metric-lg text-tertiary font-bold">+5,000</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">kg lot</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+          Contracted AgriFeed Corp bulk discount tier (Tier 2: $0.41/kg at ≥ 5,000 kg).
+        </p>
+</div>
+<div class="pt-3 mt-3 bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md py-2 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Est. PO Outlay</span>
+<span class="font-semibold text-on-surface">$2,050.00 USD</span>
+</div>
+</div>
+<!-- Metric 4: Unit & Conversion Configuration -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant pb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Configured Unit</span>
+<span class="material-symbols-outlined text-primary text-xl">balance</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-data-metric-lg text-data-metric-lg text-primary font-bold">Kilograms</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-mono font-semibold">(kg)</span>
+</div>
+<div class="mt-2 text-on-surface-variant font-body-sm text-body-sm leading-snug">
+          Configured item-specific unit. No automatic unit conversion applied across bunkers.
+        </div>
+</div>
+<div class="pt-3 mt-3 bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md py-2 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Precision Level</span>
+<span class="font-mono text-xs font-semibold text-primary">2 Decimal Decimals</span>
+</div>
+</div>
+</div>
+<!-- Permitted Actions & Operational Safeguards Notice Callout -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md mb-space-lg flex flex-col sm:flex-row items-start gap-space-md">
+<div class="p-2.5 rounded-lg bg-surface-container text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">policy</span>
+</div>
+<div class="flex-1 space-y-1">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-md text-label-md font-bold text-on-surface">Operational Safeguard Notice: Stock Deductions &amp; SRS Protocol</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-mono font-semibold bg-surface-container-high text-on-surface-variant">SRS COMPLIANT v4.2</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Notice on Stock Deductions: Approved daily inventory usage records are logged below. Per approved SRS rules, feeding allocations and manual usages do not automatically deduct bulk stock until automated deduction rules are formally approved. All physical removals must be verified via physical scale logs.
+      </p>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end gap-2 flex-shrink-0">
+<button class="px-space-sm py-1.5 text-xs font-label-sm font-semibold rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">visibility</span>
+<span>View SRS Spec</span>
+</button>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Auditor: Vance, E.</span>
+</div>
+</div>
+<!-- Historical Data & Analytics Split (Chart & Details) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md mb-space-lg">
+<!-- Visual Consumption Trend Sparkline Chart Container -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-md">
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">30-Day Silo Velocity &amp; Reserve Trend</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Tracking bulk replenishment spikes vs. estimated daily ration drain</div>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container text-on-surface">
+<span class="h-2 w-2 rounded-full bg-primary"></span> Stock Level
+          </span>
+<span class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container text-on-surface">
+<span class="h-2 w-2 rounded-full bg-error"></span> Threshold Floor (1,400 kg)
+          </span>
+</div>
+</div>
+<!-- Vector SVG Trend Visualization -->
+<div class="relative w-full h-48 py-2">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 700 160">
+<defs>
+<lineargradient id="stockAreaGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#46583b" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#46583b" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Horizontal Grid Lines -->
+<line stroke="#f0eee8" stroke-dasharray="4" stroke-width="1" x1="0" x2="700" y1="20" y2="20"></line>
+<line stroke="#f0eee8" stroke-dasharray="4" stroke-width="1" x1="0" x2="700" y1="65" y2="65"></line>
+<line stroke="#f0eee8" stroke-dasharray="4" stroke-width="1" x1="0" x2="700" y1="110" y2="110"></line>
+<!-- Safety Floor Reference Line at y=130 (1,400 kg) -->
+<line stroke="#ba1a1a" stroke-dasharray="6 4" stroke-width="1.5" x1="0" x2="700" y1="130" y2="130"></line>
+<text fill="#ba1a1a" font-family="Inter" font-size="10" font-weight="600" text-anchor="end" x="680" y="125">Safety Min: 1,400 kg</text>
+<!-- Historical Gradient Area Fill -->
+<polygon fill="url(#stockAreaGrad)" points="0,70 120,40 240,45 360,25 450,55 560,95 620,115 700,130 700,160 0,160"></polygon>
+<!-- Historical Velocity Path Line -->
+<polyline fill="none" points="0,70 120,40 240,45 360,25 450,55 560,95 620,115 700,130" stroke="#2f4126" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<!-- Event Data Marker: Replenishment -->
+<circle cx="360" cy="25" fill="#ffffff" r="4.5" stroke="#2f4126" stroke-width="2.5"></circle>
+<!-- Current Event Marker at Low Threshold -->
+<circle class="animate-pulse" cx="700" cy="130" fill="#ba1a1a" r="5" stroke="#ffffff" stroke-width="2"></circle>
+</svg>
+<!-- Time Marker Axis -->
+<div class="flex justify-between items-center text-[11px] font-mono text-on-surface-variant pt-2">
+<span>Nov 01 (3,200 kg)</span>
+<span>Nov 10 (+4,000 kg PO)</span>
+<span>Nov 20 (3,800 kg)</span>
+<span class="text-error font-semibold">Today (1,400 kg Low)</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-sm bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg py-2.5 rounded-b-xl">
+<div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-primary">schedule</span>
+<span>Estimated stock depletion: <strong class="text-on-surface">2.3 days</strong> at current herd ration velocity</span>
+</div>
+<button class="text-primary hover:text-primary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span>View Forecast Model</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Batch Quality & Storage Verification Box -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">Storage &amp; Bio-Check</div>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-secondary-container text-on-secondary-container font-semibold">Pass</span>
+</div>
+<div class="space-y-2.5">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Active Silo:</span>
+<span class="font-semibold text-on-surface">Tower 03 (South Chute)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Current Moisture:</span>
+<span class="font-mono font-semibold text-on-surface">11.8% (Target &lt; 12.5%)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Silo Ambient Temp:</span>
+<span class="font-mono font-semibold text-on-surface">18.4°C (Controlled)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Last Sanitation Wash:</span>
+<span class="text-on-surface">Oct 28, 2024</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Supplier Tag:</span>
+<span class="font-semibold text-primary">AgriFeed Corp (Direct)</span>
+</div>
+</div>
+<!-- Bio-Security Stamp -->
+<div class="p- space-sm bg-surface-container-low rounded-lg p-3 space-y-1">
+<div class="flex items-center gap-1.5 text-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span>Non-GMO Certified Lot</span>
+</div>
+<p class="text-[11px] text-on-surface-variant font-body-sm leading-tight">
+            Certified compliant under ISO-22000 livestock feed safety directives.
+          </p>
+</div>
+</div>
+<div class="pt-3">
+<button class="w-full py-2 bg-surface-container text-on-surface hover:bg-surface-container-high rounded-lg font-label-sm text-label-sm font-semibold transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-base">lab_profile</span>
+<span>View Lab Certificate (PDF)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Tabbed Historical Ledgers -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden mb-space-lg">
+<!-- Tab Controls Header -->
+<div class="bg-surface-container-low px-space-md pt-space-md flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs" role="tablist">
+<button class="px-space-md py-2.5 rounded-t-lg font-label-md text-label-md font-bold transition-all bg-surface-container-lowest text-primary shadow-sm flex items-center gap-2" id="tab-btn-1" onclick="switchLedgerTab('tab-1')">
+<span class="material-symbols-outlined text-base">input</span>
+<span>Purchases &amp; Inbound History</span>
+<span class="ml-1 px-1.5 py-0.2 rounded-full bg-primary-container text-on-primary text-[10px]">2</span>
+</button>
+<button class="px-space-md py-2.5 rounded-t-lg font-label-md text-label-md font-medium transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 flex items-center gap-2" id="tab-btn-2" onclick="switchLedgerTab('tab-2')">
+<span class="material-symbols-outlined text-base">manage_history</span>
+<span>Adjustments &amp; Corrections (Admin)</span>
+<span class="ml-1 px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface-variant text-[10px]">1</span>
+</button>
+<button class="px-space-md py-2.5 rounded-t-lg font-label-md text-label-md font-medium transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 flex items-center gap-2" id="tab-btn-3" onclick="switchLedgerTab('tab-3')">
+<span class="material-symbols-outlined text-base">feed</span>
+<span>Daily Usage &amp; Allocations Log</span>
+<span class="ml-1 px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface-variant text-[10px]">Reference</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs pb-space-sm sm:pb-0">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Export Ledger">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Print Ledger">
+<span class="material-symbols-outlined text-lg">print</span>
+</button>
+</div>
+</div>
+<!-- Tab 1: Purchases & Inbound Additions History -->
+<div class="p-space-md overflow-x-auto" id="tab-content-tab-1">
+<div class="flex items-center justify-between pb-3 text-on-surface-variant font-body-sm text-body-sm">
+<span>Verified inbound shipments delivered to Silo Tower 03</span>
+<span class="font-mono">Total Recorded Receipts: 7,000.00 kg</span>
+</div>
+<table class="w-full text-left font-body-md text-body-md border-collapse min-w-[760px]">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md rounded-l-lg">Date</th>
+<th class="py-3 px-space-md">PO / Invoice Ref</th>
+<th class="py-3 px-space-md">Vendor / Supplier</th>
+<th class="py-3 px-space-md text-right">Quantity Added</th>
+<th class="py-3 px-space-md text-right">Unit Cost</th>
+<th class="py-3 px-space-md">Received By</th>
+<th class="py-3 px-space-md rounded-r-lg">Storage Silo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-space-md font-mono text-on-surface font-semibold text-xs">Nov 10, 2024</td>
+<td class="py-3.5 px-space-md">
+<span class="font-mono text-primary font-medium hover:underline cursor-pointer">PO-2024-9982</span>
+<span class="block text-xs text-on-surface-variant font-mono">INV-AGRI-44102</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-semibold text-on-surface">AgriFeed Corp</div>
+<div class="text-xs text-on-surface-variant">Midwest Feed Division</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="font-mono font-bold text-primary text-base">+4,000.00 kg</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono text-on-surface">
+              $0.42 / kg
+              <span class="block text-xs text-on-surface-variant">$1,680.00 total</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="text-on-surface font-medium">Marcus Brody</div>
+<div class="text-xs text-on-surface-variant">Feed Intake Operator</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded text-xs bg-surface-container font-mono text-on-surface">Silo 03 (North)</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-space-md font-mono text-on-surface font-semibold text-xs">Oct 14, 2024</td>
+<td class="py-3.5 px-space-md">
+<span class="font-mono text-primary font-medium hover:underline cursor-pointer">PO-2024-8114</span>
+<span class="block text-xs text-on-surface-variant font-mono">INV-AGRI-40911</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-semibold text-on-surface">AgriFeed Corp</div>
+<div class="text-xs text-on-surface-variant">Midwest Feed Division</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="font-mono font-bold text-primary text-base">+3,000.00 kg</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono text-on-surface">
+              $0.43 / kg
+              <span class="block text-xs text-on-surface-variant">$1,290.00 total</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="text-on-surface font-medium">Elena Vance</div>
+<div class="text-xs text-on-surface-variant">Farm Administrator</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded text-xs bg-surface-container font-mono text-on-surface">Silo 03 (North)</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Tab 2: Adjustments & Correction History (Farm Admin Only) -->
+<div class="p-space-md overflow-x-auto hidden" id="tab-content-tab-2">
+<div class="bg-surface-container-low/80 p-space-sm rounded-lg mb-space-md flex items-center justify-between">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-tertiary">lock</span>
+<span>Privileged Administrative Audit Ledger. All calibration events are cryptographically hashed.</span>
+</div>
+<span class="font-mono text-xs text-on-surface-variant">Ledger Hash: 0x9f8b...21e4</span>
+</div>
+<table class="w-full text-left font-body-md text-body-md border-collapse min-w-[800px]">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md rounded-l-lg">Timestamp</th>
+<th class="py-3 px-space-md">Adjustment ID</th>
+<th class="py-3 px-space-md text-right">Prior Stock</th>
+<th class="py-3 px-space-md text-right">Corrected</th>
+<th class="py-3 px-space-md text-right">Net Variance</th>
+<th class="py-3 px-space-md">Mandatory Justification</th>
+<th class="py-3 px-space-md">Authorizing Admin</th>
+<th class="py-3 px-space-md rounded-r-lg">Crypto Stamp</th>
+</tr>
+</thead>
+<tbody>
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-space-md font-mono text-on-surface font-semibold text-xs">
+              Nov 24, 2024<br/>
+<span class="text-on-surface-variant font-normal">08:14 AM UTC</span>
+</td>
+<td class="py-3.5 px-space-md font-mono text-primary font-medium">ADJ-2024-0091</td>
+<td class="py-3.5 px-space-md text-right font-mono text-on-surface">1,520.00 kg</td>
+<td class="py-3.5 px-space-md text-right font-mono font-bold text-on-surface">1,400.00 kg</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="font-mono font-bold text-error px-2 py-0.5 rounded bg-error-container/60">-120.00 kg</span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant text-body-sm max-w-xs">
+<span class="font-medium text-on-surface">Physical scale tare calibration &amp; moisture loss discrepancy</span>
+<span class="block text-xs text-on-surface-variant mt-0.5">Quarterly Silo 03 load-cell re-zeroing per Mettler-Toledo service report #MT-9011.</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-semibold text-on-surface">Elena Vance</div>
+<div class="text-xs text-on-surface-variant">Admin #GF-ADM-01</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 font-mono text-[11px] bg-surface-container px-2 py-1 rounded text-primary font-semibold" title="SHA-256 Validated">
+<span class="material-symbols-outlined text-xs">key</span>
+<span>SHA-Verified</span>
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Tab 3: Daily Usage & Allocation Log (SRS Reference) -->
+<div class="p-space-md overflow-x-auto hidden" id="tab-content-tab-3">
+<div class="p-space-sm bg-surface-container-low rounded-lg mb-space-md flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-primary">info</span>
+<span>Feed ration dispatches are recorded for nutritional accounting only; no direct automatic bulk deductions per SRS rules.</span>
+</div>
+<button class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-xs font-semibold text-on-surface font-label-sm">
+          Export Feeding Log
+        </button>
+</div>
+<table class="w-full text-left font-body-md text-body-md border-collapse min-w-[700px]">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md rounded-l-lg">Daily Schedule</th>
+<th class="py-3 px-space-md">Target Pen</th>
+<th class="py-3 px-space-md">Ration Formula</th>
+<th class="py-3 px-space-md text-right">Daily Planned Allocation</th>
+<th class="py-3 px-space-md">Mixer Wagon Station</th>
+<th class="py-3 px-space-md rounded-r-lg">System Accounting State</th>
+</tr>
+</thead>
+<tbody>
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-space-md font-mono text-on-surface font-semibold text-xs">Today (Ongoing)</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-on-surface">Pen 04 (Lactating High-Yield)</span>
+<span class="block text-xs text-on-surface-variant">142 head count</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="text-on-surface font-medium">TMR Formula #8 (Peak Performance)</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-bold text-on-surface">
+              420.00 kg / day
+            </td>
+<td class="py-3.5 px-space-md text-body-sm text-on-surface-variant">Station B (Automated Chute 2)</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-surface-container text-on-surface-variant">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+<span>Reference Only (Non-Deducting)</span>
+</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-space-md font-mono text-on-surface font-semibold text-xs">Today (Ongoing)</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold text-on-surface">Pen 01 (Fresh Cows &amp; Early Insemination)</span>
+<span class="block text-xs text-on-surface-variant">64 head count</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="text-on-surface font-medium">TMR Formula #3 (Transition Recovery)</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-bold text-on-surface">
+              180.00 kg / day
+            </td>
+<td class="py-3.5 px-space-md text-body-sm text-on-surface-variant">Station A (Manual Feed Cart)</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-surface-container text-on-surface-variant">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+<span>Reference Only (Non-Deducting)</span>
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Quick Context Footer Navigation -->
+<div class="mt-auto pt-space-md pb-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-md">
+<a class="inline-flex items-center gap-1.5 text-primary hover:underline font-semibold font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+<span>Return to Inventory List</span>
+</a>
+<span class="text-outline-variant/60 hidden sm:inline">•</span>
+<a class="inline-flex items-center gap-1 hover:text-on-surface transition-colors font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined text-sm">receipt_long</span>
+<span>Inbound Purchases &amp; Invoices</span>
+</a>
+<span class="text-outline-variant/60 hidden sm:inline">•</span>
+<a class="inline-flex items-center gap-1 hover:text-on-surface transition-colors font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined text-sm">add_box</span>
+<span>Manual Stock Additions</span>
+</a>
+</div>
+<div class="flex items-center gap-space-sm text-xs font-mono text-on-surface-variant">
+<span>Greenfield Estate Dairy Engine</span>
+<span>|</span>
+<span>Terminal #WS-GF04</span>
+</div>
+</div>
+</div>
+<!-- Inline Tab Navigation JavaScript -->
+<script>
+  function switchLedgerTab(targetTabId) {
+    // Tab IDs
+    const tabs = ['tab-1', 'tab-2', 'tab-3'];
+    
+    tabs.forEach(tab => {
+      const content = document.getElementById('tab-content-' + tab);
+      const button = document.getElementById('tab-btn-' + tab.replace('tab-', ''));
+      
+      if (tab === targetTabId) {
+        // Show content
+        content.classList.remove('hidden');
+        // Activate button styling
+        button.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-bold');
+        button.classList.remove('text-on-surface-variant', 'font-medium', 'hover:bg-surface-container/60');
+      } else {
+        // Hide content
+        content.classList.add('hidden');
+        // Reset button styling
+        button.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-bold');
+        button.classList.add('text-on-surface-variant', 'font-medium', 'hover:bg-surface-container/60');
+      }
+    });
+  }
+</script></main></div></body></html>

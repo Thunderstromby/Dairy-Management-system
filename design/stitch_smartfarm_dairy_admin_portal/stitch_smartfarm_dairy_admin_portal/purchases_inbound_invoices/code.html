@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#30312d", "on-background": "#1b1c18", "secondary": "#556249", "tertiary-fixed-dim": "#ffb784", "surface-container-low": "#f5f3ed", "on-tertiary": "#ffffff", "surface-dim": "#dcdad4", "on-primary-container": "#b8cda9", "on-primary-fixed": "#101f08", "inverse-on-surface": "#f3f1eb", "outline": "#75786f", "background": "#fbf9f3", "on-tertiary-fixed": "#301400", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#3e4b32", "surface": "#fbf9f3", "outline-variant": "#c4c8bd", "surface-container": "#f0eee8", "surface-container-high": "#eae8e2", "surface-tint": "#516446", "surface-bright": "#fbf9f3", "on-surface-variant": "#444840", "primary-container": "#46583b", "primary": "#2f4126", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffdcc6", "on-primary-fixed-variant": "#3a4c30", "secondary-container": "#d9e8c7", "on-surface": "#1b1c18", "error": "#ba1a1a", "secondary-fixed-dim": "#bdcbac", "on-tertiary-container": "#ffb785", "on-secondary-container": "#5b694e", "on-error": "#ffffff", "primary-fixed": "#d4e9c3", "on-tertiary-fixed-variant": "#6c3a11", "tertiary": "#5e3007", "primary-fixed-dim": "#b8cda8", "on-error-container": "#93000a", "secondary-fixed": "#d9e8c7", "tertiary-container": "#7a461c", "on-secondary-fixed": "#141f0a", "on-primary": "#ffffff", "surface-variant": "#e4e2dd", "inverse-primary": "#b8cda8", "surface-container-highest": "#e4e2dd", "on-secondary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "gutter-mobile": "0.75rem", "margin": "2rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter": "1.5rem", "margin-mobile": "1rem" }, "fontFamily": { "data-metric-md": [ "Inter" ], "body-lg": [ "Inter" ], "display-lg-mobile": [ "Manrope" ], "body-sm": [ "Inter" ], "headline-md": [ "Manrope" ], "label-sm": [ "Inter" ], "headline-sm": [ "Manrope" ], "headline-xl": [ "Manrope" ], "body-md": [ "Inter" ], "headline-xl-mobile": [ "Manrope" ], "display-lg": [ "Manrope" ], "headline-lg": [ "Manrope" ], "data-metric-lg": [ "Manrope" ], "label-md": [ "Inter" ] }, "fontSize": { "data-metric-md": [ "1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "display-lg-mobile": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ], "headline-md": [ "1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" } ], "label-sm": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "headline-xl": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "headline-xl-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-lg": [ "3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "data-metric-lg": [ "2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZuhXF_IhBdGhJ4eix1oqj3wBimwP9kKeGGChH_b2ax1lMLHMcXPmCVu9b3MJqlJ3XUJHZyp_ietndJCcoi5tapKDT0swhF14GEZxUKYZjg6g5LvxUeQzsGptFXM8XbwZz0B0M4Kbg8tH48Ys1NpBq3q3ceaJWAzrxO8XU7fzOrfQL6K9wOMESU_VEMnfcbKwhEtKD90-MYyU8fO7yBiUm20ljVe33W-rRqQJED0H"/><div><div class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight truncate">SmartFarm</div><div class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Dairy Management</div></div></div><span class="font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold px-space-xs py-0.5 rounded">Admin</span></div><div class="px-space-md py-space-sm bg-surface-container-low/80 flex items-center justify-between"><div class="truncate"><div class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Greenfield Dairy Estate</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">Workspace: GF-042</div></div><span class="h-2 w-2 rounded-full bg-primary-container ring-2 ring-primary-fixed flex-shrink-0"></span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Overview</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="font-body-md text-body-md flex-1">Dashboard</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Herd Management</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#"><span class="font-body-md text-body-md flex-1">Animals</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#"><span class="font-body-md text-body-md flex-1">Animal Health</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding" href="#"><span class="font-body-md text-body-md flex-1">Feeding Plans</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Operations &amp; Assets</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#"><span class="font-body-md text-body-md flex-1">Milk Production</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-management" href="#"><span class="font-body-md text-body-md flex-1">Milk Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#"><span class="font-body-md text-body-md flex-1">Inventory</span></a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="inventory-list" href="#">Inventory List</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="item-details" href="#">Item Details</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="purchases-and-inbound-invoices" href="#">Purchases &amp; Inbound Invoices</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="stock-additions" href="#">Stock Additions</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="stock-adjustments" href="#">Stock Adjustments</a></div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#"><span class="font-body-md text-body-md flex-1">Equipment</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Workforce &amp; Finance</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers" href="#"><span class="font-body-md text-body-md flex-1">Workers</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="attendance" href="#"><span class="font-body-md text-body-md flex-1">Attendance</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="payroll" href="#"><span class="font-body-md text-body-md flex-1">Payroll</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="finance" href="#"><span class="font-body-md text-body-md flex-1">Finance</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Governance &amp; Core</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="supervisor-access" href="#"><span class="font-body-md text-body-md flex-1">Supervisor Access</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#"><span class="font-body-md text-body-md flex-1">Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="data-management" href="#"><span class="font-body-md text-body-md flex-1">Data Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="font-body-md text-body-md flex-1">Settings</span></a></div></nav><div class="p-space-sm bg-surface-container-low/60"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex justify-between items-center mb-1"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Storage Quota</span><span class="font-label-sm text-label-sm text-primary font-bold">42%</span></div><div class="w-full bg-surface-container rounded-full h-1.5 mb-2"><div class="bg-primary-container h-1.5 rounded-full w-[42%]"></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-body-sm text-body-sm">1,280 Active Head</span><span class="material-symbols-outlined text-sm text-tertiary-container">sensors</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><button class="p-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-xl">menu_open</span></button><nav class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="text-on-surface-variant">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface-variant">Operations &amp; Assets</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="font-semibold text-on-surface">Inventory</span></nav><div class="relative flex-1 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full h-10 pl-9 pr-14 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search Inventory, SKU, Batch, PO..." type="text"/><span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded shadow-sm">⌘K</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm"><span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span><span>Connected • Live</span></div><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Mode" type="button"><span class="material-symbols-outlined text-xl">routine</span></button><div class="relative"><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" title="Alerts" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 h-4 min-w-[1rem] px-1 bg-error text-on-error font-label-sm text-[0.625rem] rounded-full flex items-center justify-center font-bold">3</span></button></div><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#" title="Docs &amp; Support"><span class="material-symbols-outlined text-xl">help</span></a><div class="h-6 w-[1px] bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHGkwzAmXeAWZgoliBfM3J0Dk3rRvKbrFcaSDXWTFXvp7mK8JZlIDpaM_-PKsE2e-9DSWj_thQxg7ZvMO7_J2wdBeJdNp3xHQNrTkReCH1iwd77yI5cACPrn8AVBGbsgSIRzl_r1aNrbkvrI3tTJT7qFPLASAjAk_cx85172_N3qz8dJ2RbazkMZxrYU4--z2VriyTURPXkRqv4-UUhJWONTqJq0P8IWMmPKFhLYX7"/><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></div><div class="hidden lg:block text-left"><div class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-none">Farm Administrator</div></div><button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-lg">expand_more</span></button></div></div></header><main class="relative pt-16 w-full px-space-lg py-space-lg bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Context & Action Bar -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md mb-space-xl">
+<div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider mb-space-xs">
+<span>Operations</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span>Inventory</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary font-semibold">Inbound Purchases</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">
+        Inventory Purchases &amp; Inbound Invoices
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-1">
+        Commercial supply acquisitions, supplier invoices, and delivery receipt records for Workspace GF-042.
+      </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg text-on-surface-variant">calendar_today</span>
+<span>Filter by Invoice Date</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg text-on-surface-variant">file_download</span>
+<span>Export Purchases CSV</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-colors shadow-sm" onclick="document.getElementById('recordPurchaseSection').scrollIntoView({ behavior: 'smooth' })" type="button">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span>Record Inbound Purchase</span>
+</button>
+</div>
+</div>
+<!-- Key Metrics & Architectural Notice Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-md mb-space-xl">
+<!-- MTD Spend Total -->
+<div class="lg:col-span-3 rounded-xl bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block font-semibold">Total Purchases MTD</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">16 commercial deliveries</span>
+</div>
+<span class="p-2 rounded-lg bg-primary-container/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">receipt_long</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-data-metric-lg text-data-metric-lg text-primary tracking-tight font-bold">$24,850.00</div>
+<div class="flex items-center gap-1.5 mt-1 font-body-sm text-body-sm text-secondary">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+4.2% vs previous 30d baseline</span>
+</div>
+</div>
+<!-- Mini Sparkline inline svg -->
+<div class="mt-space-sm pt-space-xs">
+<svg class="w-full h-8 text-primary/30" fill="none" preserveaspectratio="none" viewbox="0 0 100 24">
+<path d="M0,20 Q15,18 28,12 T55,14 T80,6 T100,2" stroke="currentColor" stroke-width="2"></path>
+<path d="M0,20 Q15,18 28,12 T55,14 T80,6 T100,2 L100,24 L0,24 Z" fill="currentColor" opacity="0.1"></path>
+</svg>
+</div>
+</div>
+<!-- Feed Share Metric -->
+<div class="lg:col-span-3 rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block font-semibold">Feed Commodities</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">74.0% share of total spend</span>
+</div>
+<span class="p-2 rounded-lg bg-secondary-container/30 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">grain</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-data-metric-lg text-data-metric-lg text-on-surface tracking-tight font-bold">$18,400.00</div>
+<div class="w-full bg-surface-container rounded-full h-2 mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 74%"></div>
+</div>
+<div class="flex justify-between items-center font-body-sm text-body-sm text-on-surface-variant mt-1.5">
+<span>Target budget: $20,000</span>
+<span class="font-semibold text-primary">In Range</span>
+</div>
+</div>
+</div>
+<!-- Vet & Other Categories Breakdown -->
+<div class="lg:col-span-3 rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Subcategory Allocation</span>
+<span class="material-symbols-outlined text-base text-on-surface-variant">pie_chart</span>
+</div>
+<div class="space-y-space-sm">
+<div>
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-body-md text-body-md text-on-surface font-medium">Veterinary &amp; Pharma</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">$4,250.00</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5">
+<div class="bg-tertiary h-full rounded-full" style="width: 17%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-body-md text-body-md text-on-surface font-medium">Other Consumables</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">$2,200.00</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5">
+<div class="bg-outline h-full rounded-full" style="width: 9%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-xs mt-space-sm bg-surface-container-low px-space-sm py-1.5 rounded-lg flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Combined variance</span>
+<span class="font-semibold text-secondary-fixed-variant">-1.4% Under Budget</span>
+</div>
+</div>
+<!-- Architecture Notice Card -->
+<div class="lg:col-span-3 rounded-xl bg-surface-container-low p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-tertiary-container mb-2">
+<span class="material-symbols-outlined text-lg">policy</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Traceability Governance</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface font-medium">SRS Architecture Note:</strong> Full inventory purchases are approved. Exact timing of stock changes after purchase is unresolved; purchases do not invent unconfirmed receiving workflows or automatic inventory stock incrementation.
+        </p>
+</div>
+<div class="flex items-center gap-2 pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="h-2 w-2 rounded-full bg-tertiary-container"></span>
+<span>Receipt verification required at weighbridge</span>
+</div>
+</div>
+</div>
+<!-- Operational Flow & Interactive Form Section -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm mb-space-xl" id="recordPurchaseSection">
+<!-- Form Header & Sandbox State Switcher -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-md mb-space-lg bg-surface-container-low/60 -mx-space-lg -mt-space-lg p-space-lg rounded-t-xl">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="p-1.5 rounded bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">post_add</span>
+</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">
+            Record New Inventory Purchase
+          </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Capture paper/electronic freight bills and vendor line-items into Greenfield Estate ledger.
+        </p>
+</div>
+<!-- State Preview Switcher Pills -->
+<div class="flex flex-wrap items-center gap-1.5 bg-surface-container-lowest p-1 rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant px-2 font-medium">State Simulator:</span>
+<button class="px-2.5 py-1 rounded text-xs font-semibold bg-primary text-on-primary transition-all" id="btn-state-default" onclick="setFormState('default')" type="button">
+          Default Form
+        </button>
+<button class="px-2.5 py-1 rounded text-xs font-semibold text-on-surface-variant hover:bg-surface-container transition-all" id="btn-state-error-qty" onclick="setFormState('error-qty')" type="button">
+          Invalid Quantity Error
+        </button>
+<button class="px-2.5 py-1 rounded text-xs font-semibold text-on-surface-variant hover:bg-surface-container transition-all" id="btn-state-error-dup" onclick="setFormState('error-dup')" type="button">
+          Duplicate Invoice # Error
+        </button>
+<button class="px-2.5 py-1 rounded text-xs font-semibold text-on-surface-variant hover:bg-surface-container transition-all" id="btn-state-success" onclick="setFormState('success')" type="button">
+          Success Feedback
+        </button>
+</div>
+</div>
+<!-- Alert / Validation Feedback Banner (Hidden by default, shown via state switcher) -->
+<div class="hidden mb-space-md p-space-md rounded-lg flex items-start gap-space-sm" id="validationAlert">
+<span class="material-symbols-outlined text-xl flex-shrink-0 mt-0.5" id="alertIcon"></span>
+<div class="flex-1">
+<h4 class="font-label-md text-label-md font-bold" id="alertTitle"></h4>
+<p class="font-body-sm text-body-sm mt-0.5" id="alertDescription"></p>
+</div>
+</div>
+<!-- The Purchase Recording Form -->
+<form class="space-y-space-md" id="purchaseForm" onsubmit="event.preventDefault();">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Supplier / Vendor -->
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+            Supplier / Vendor <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 appearance-none" id="vendorSelect">
+<option value="AgriFeed Corp">AgriFeed Corp (Preferred Silage/Grain)</option>
+<option value="Valley Vet Supplies">Valley Vet Supplies (Pharma &amp; Vaccines)</option>
+<option value="AgroChemical Direct">AgroChemical Direct (Sanitation &amp; Acids)</option>
+<option value="Mineral Solutions Ltd">Mineral Solutions Ltd (Bulk Minerals)</option>
+<option value="DairyPro Supplies">DairyPro Supplies (Milking Spares)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-base">expand_more</span>
+</div>
+</div>
+<!-- Purchase / Invoice Date -->
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+            Purchase / Invoice Date <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" type="date" value="2024-10-24"/>
+</div>
+</div>
+<!-- Invoice Reference # -->
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+            Invoice Reference # <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" id="invoiceRefInput" placeholder="e.g. INV-AF-2024-9102" type="text" value="INV-AF-2024-9102"/>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-base" id="invoiceRefIcon">receipt</span>
+</div>
+<span class="hidden font-body-sm text-body-sm text-error" id="invoiceRefErrorText"></span>
+</div>
+<!-- Selected Category -->
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+            Category <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 appearance-none">
+<option selected="" value="feed">Feed &amp; Silage</option>
+<option value="medicines">Medicines &amp; Biologics</option>
+<option value="consumables">Other supplies &amp; Consumables</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-base">expand_more</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md pt-space-xs">
+<!-- Item Selection Autocomplete -->
+<div class="space-y-1 lg:col-span-2">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+            Item Selection <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-10 pl-9 pr-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" type="text" value="High-Protein Soy Concentrate (48% CP)"/>
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-base">search</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Linked SKU: SKU-F-889 • Standard Warehouse: Silo Complex Alpha</span>
+</div>
+<!-- Purchase Quantity & Configured Unit -->
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+            Quantity &amp; Unit <span class="text-error">*</span>
+</label>
+<div class="flex gap-1.5">
+<div class="relative flex-1">
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" id="quantityInput" step="any" type="number" value="5000"/>
+</div>
+<select class="w-24 h-10 px-2 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20">
+<option selected="" value="kg">kg</option>
+<option value="T">T (Metric)</option>
+<option value="L">Litres</option>
+<option value="vials">Vials</option>
+<option value="units">Units</option>
+</select>
+</div>
+<span class="hidden font-body-sm text-body-sm text-error" id="quantityErrorText"></span>
+</div>
+<!-- Total Invoice Amount & Currency -->
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+            Total Invoice Amount <span class="text-error">*</span>
+</label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant font-bold">$</span>
+<input class="w-full h-10 pl-7 pr-12 bg-surface-container-low rounded-lg font-body-sm text-body-sm font-semibold text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" type="text" value="2,100.00"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant">USD</span>
+</div>
+</div>
+</div>
+<!-- Payment Status & Document Upload -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md pt-space-xs">
+<div class="lg:col-span-4 space-y-space-sm">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+            Payment &amp; Terms Status
+          </label>
+<div class="flex items-center gap-space-md bg-surface-container-low p-2.5 rounded-lg">
+<label class="inline-flex items-center gap-2 cursor-pointer font-body-md text-body-md text-on-surface">
+<input checked="" class="text-primary focus:ring-0 w-4 h-4" name="payment_status" type="radio" value="paid"/>
+<span class="font-medium">Paid in Full</span>
+</label>
+<label class="inline-flex items-center gap-2 cursor-pointer font-body-md text-body-md text-on-surface">
+<input class="text-primary focus:ring-0 w-4 h-4" name="payment_status" type="radio" value="unpaid"/>
+<span class="font-medium">Unpaid (Net 30)</span>
+</label>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5 font-semibold text-on-surface mb-1">
+<span class="material-symbols-outlined text-sm text-secondary">verified_user</span>
+<span>Operator Certification</span>
+</div>
+            Logged by Farm Admin <strong class="text-on-surface">Elena Vance (GF-042)</strong> with active signing authority.
+          </div>
+</div>
+<div class="lg:col-span-8 space-y-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+            Receiving Notes &amp; Bill of Lading (BOL) Attachment
+          </label>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<textarea class="w-full p-2.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 resize-none" placeholder="Enter batch lot details, vehicle registration (e.g. TRK-882), driver signature note..." rows="3">Delivered via Freight Express tanker TRK-9904. Sample lot QA inspected by J. Vance. Moisture content: 11.2%.</textarea>
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col justify-center items-center text-center cursor-pointer hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-2xl text-on-surface-variant mb-1">upload_file</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Attach Supplier Invoice / Scale Ticket</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">PDF, TIFF, or JPG up to 15MB</span>
+<span class="mt-2 text-xs bg-surface-container-highest px-2 py-0.5 rounded text-on-surface-variant font-mono">BOL-9102-scan.pdf (1.2 MB) attached</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center justify-end gap-space-sm pt-space-sm">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="reset">
+          Clear Fields
+        </button>
+<button class="px-space-lg py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-colors shadow-sm flex items-center gap-1.5" onclick="setFormState('success')" type="button">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+<span>Save &amp; Record Purchase</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Purchases Records High-Density Table Card -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden mb-space-xl">
+<!-- Table Header Actions & Filter Strip -->
+<div class="px-space-lg py-space-md bg-surface-container-low/40 flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Purchases &amp; Receiving Ledger</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Historical audit log for verified inbound deliveries and raw accounts payable.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-base">filter_list</span>
+<select class="h-9 pl-8 pr-7 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none appearance-none">
+<option>All Categories (3)</option>
+<option>Feed &amp; Silage</option>
+<option>Medicines &amp; Biologics</option>
+<option>Consumables</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-sm">expand_more</span>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-base">payments</span>
+<select class="h-9 pl-8 pr-7 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none appearance-none">
+<option>All Payment Statuses</option>
+<option>Paid in Full</option>
+<option>Pending / Net Term</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-sm">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<th class="py-3 px-space-md font-semibold">Purchase ID / Invoice #</th>
+<th class="py-3 px-space-md font-semibold">Purchase Date</th>
+<th class="py-3 px-space-md font-semibold">Vendor</th>
+<th class="py-3 px-space-md font-semibold">Category</th>
+<th class="py-3 px-space-md font-semibold">Item Purchased</th>
+<th class="py-3 px-space-md text-right font-semibold">Quantity &amp; Unit</th>
+<th class="py-3 px-space-md text-right font-semibold">Total Cost ($)</th>
+<th class="py-3 px-space-md font-semibold">Payment Status</th>
+<th class="py-3 px-space-md font-semibold">Recorded By</th>
+<th class="py-3 px-space-md text-right font-semibold">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: Bulk Corn Silage -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="font-label-md text-label-md font-bold text-primary">PO-4089</div>
+<div class="text-xs text-on-surface-variant font-mono">INV-AGRI-88210</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span>Oct 23, 2024</span>
+<div class="text-xs text-on-surface-variant">08:45 AM EDT</div>
+</td>
+<td class="py-3.5 px-space-md font-medium text-on-surface">AgriFeed Corp</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container">
+                Feed
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-medium text-on-surface">Bulk Corn Silage Delivery</div>
+<div class="text-xs text-on-surface-variant">Fermented whole-crop chop • Bunker 3</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-medium">
+              28 <span class="text-on-surface-variant font-normal">T</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-bold text-on-surface">
+              $6,420.00
+            </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-surface-container-high text-primary">
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                Paid
+              </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="font-medium">Elena Vance</div>
+<div class="text-xs text-on-surface-variant">Farm Administrator</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container" title="View Details" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container" title="Download Slip" type="button">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Mineral Solutions -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="font-label-md text-label-md font-bold text-primary">PO-4091</div>
+<div class="text-xs text-on-surface-variant font-mono">MS-2024-1109</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span>Oct 21, 2024</span>
+<div class="text-xs text-on-surface-variant">14:12 PM EDT</div>
+</td>
+<td class="py-3.5 px-space-md font-medium text-on-surface">Mineral Solutions Ltd</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container">
+                Feed
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-medium text-on-surface">Mineral Premix MP-091</div>
+<div class="text-xs text-on-surface-variant">25kg sealed dry-sacks • Room 2</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-medium">
+              500 <span class="text-on-surface-variant font-normal">kg</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-bold text-on-surface">
+              $1,250.00
+            </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-surface-container-high text-primary">
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                Paid
+              </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="font-medium">Elena Vance</div>
+<div class="text-xs text-on-surface-variant">Farm Administrator</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container" title="View Details" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container" title="Download Slip" type="button">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Valley Vet Supplies -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="font-label-md text-label-md font-bold text-primary">PO-4078</div>
+<div class="text-xs text-on-surface-variant font-mono">VV-MED-99402</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span>Oct 18, 2024</span>
+<div class="text-xs text-on-surface-variant">10:30 AM EDT</div>
+</td>
+<td class="py-3.5 px-space-md font-medium text-on-surface">Valley Vet Supplies</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-tertiary-fixed text-on-tertiary-fixed-variant">
+                Medicines
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-medium text-on-surface">Cefquinome &amp; Flunixin Lots</div>
+<div class="text-xs text-on-surface-variant">Cold chain 4°C verified • Dispensary Vault</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-medium">
+              45 <span class="text-on-surface-variant font-normal">vials</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-bold text-on-surface">
+              $1,850.00
+            </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-surface-container-high text-primary">
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                Paid
+              </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="font-medium">Dr. Robert Chen</div>
+<div class="text-xs text-on-surface-variant">Herd Veterinarian</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container" title="View Details" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container" title="Download Slip" type="button">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: DairyPro Supplies -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="font-label-md text-label-md font-bold text-primary">PO-4065</div>
+<div class="text-xs text-on-surface-variant font-mono">DP-PAR-40118</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span>Oct 15, 2024</span>
+<div class="text-xs text-on-surface-variant">16:05 PM EDT</div>
+</td>
+<td class="py-3.5 px-space-md font-medium text-on-surface">DairyPro Supplies</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-surface-container-highest text-on-surface-variant">
+                Other supplies
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-medium text-on-surface">Teat Dip &amp; Milking Liners</div>
+<div class="text-xs text-on-surface-variant">Food-grade silicone kit &amp; Iodine solution</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-medium">
+              120 <span class="text-on-surface-variant font-normal">units</span>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-bold text-on-surface">
+              $980.00
+            </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-surface-container-high text-primary">
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                Paid
+              </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="font-medium">Marcus Brody</div>
+<div class="text-xs text-on-surface-variant">Parlor Lead</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container" title="View Details" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container" title="Download Slip" type="button">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="px-space-lg py-space-sm bg-surface-container-low/60 flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span>Showing <strong class="text-on-surface">1 - 4</strong> of <strong class="text-on-surface">16</strong> inbound records</span>
+<span class="text-outline-variant">•</span>
+<span>Page 1 of 4</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded text-outline-variant cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm font-semibold" type="button">1</button>
+<button class="px-2.5 py-1 rounded hover:bg-surface-container text-on-surface font-label-sm text-label-sm" type="button">2</button>
+<button class="px-2.5 py-1 rounded hover:bg-surface-container text-on-surface font-label-sm text-label-sm" type="button">3</button>
+<button class="px-2.5 py-1 rounded hover:bg-surface-container text-on-surface font-label-sm text-label-sm" type="button">4</button>
+<button class="p-1.5 rounded text-on-surface hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Traceability Verification & Regulatory Assurance Footer Strip -->
+<div class="rounded-xl bg-surface-container p-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<div class="h-10 w-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-2xl">verified</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold">Biosecurity &amp; Chain-of-Custody Compliant</div>
+<div class="font-body-sm text-body-sm">USDA National Organic Program (NOP) &amp; ISO 22005 feed lot batch traceability active for Workspace GF-042.</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end md:self-auto font-label-sm text-label-sm">
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface shadow-sm font-mono">Hash: 8f9b-ec04-d42</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-secondary font-medium shadow-sm">Audit Node: Verified Sync</span>
+</div>
+</div>
+</div>
+<!-- Form State Preview Interactive Logic -->
+<script>
+  function setFormState(state) {
+    const alertBox = document.getElementById('validationAlert');
+    const alertIcon = document.getElementById('alertIcon');
+    const alertTitle = document.getElementById('alertTitle');
+    const alertDesc = document.getElementById('alertDescription');
+
+    const qtyInput = document.getElementById('quantityInput');
+    const qtyError = document.getElementById('quantityErrorText');
+
+    const invInput = document.getElementById('invoiceRefInput');
+    const invError = document.getElementById('invoiceRefErrorText');
+
+    // Reset simulator pill states
+    const states = ['default', 'error-qty', 'error-dup', 'success'];
+    states.forEach(s => {
+      const btn = document.getElementById('btn-state-' + s);
+      if (btn) {
+        btn.classList.remove('bg-primary', 'text-on-primary');
+        btn.classList.add('text-on-surface-variant');
+      }
+    });
+
+    const activeBtn = document.getElementById('btn-state-' + state);
+    if (activeBtn) {
+      activeBtn.classList.add('bg-primary', 'text-on-primary');
+      activeBtn.classList.remove('text-on-surface-variant');
+    }
+
+    // Reset base inputs
+    alertBox.className = 'hidden mb-space-md p-space-md rounded-lg flex items-start gap-space-sm';
+    qtyInput.classList.remove('bg-error-container/40', 'text-error');
+    qtyError.classList.add('hidden');
+    qtyError.innerText = '';
+
+    invInput.classList.remove('bg-error-container/40', 'text-error');
+    invError.classList.add('hidden');
+    invError.innerText = '';
+
+    if (state === 'default') {
+      // Clean default form
+      qtyInput.value = '5000';
+      invInput.value = 'INV-AF-2024-9102';
+    } else if (state === 'error-qty') {
+      qtyInput.value = '-250';
+      qtyInput.classList.add('bg-error-container/40', 'text-error');
+      qtyError.innerText = 'Purchase quantity must be greater than zero.';
+      qtyError.classList.remove('hidden');
+
+      alertBox.classList.remove('hidden');
+      alertBox.classList.add('bg-error-container', 'text-on-error-container');
+      alertIcon.innerText = 'error';
+      alertTitle.innerText = 'Validation Error: Invalid Quantity';
+      alertDesc.innerText = 'Entered quantity (-250 kg) is invalid. Commercial deliveries must record positive measurable inventory weights.';
+    } else if (state === 'error-dup') {
+      invInput.value = 'INV-AGRI-88210';
+      invInput.classList.add('bg-error-container/40', 'text-error');
+      invError.innerText = 'Duplicate Invoice: INV-AGRI-88210 already assigned to PO-4089.';
+      invError.classList.remove('hidden');
+
+      alertBox.classList.remove('hidden');
+      alertBox.classList.add('bg-error-container', 'text-on-error-container');
+      alertIcon.innerText = 'warning';
+      alertTitle.innerText = 'Duplicate Invoice Reference Detected';
+      alertDesc.innerText = 'Supplier invoice # INV-AGRI-88210 was already posted on Oct 23, 2024 under Purchase Order PO-4089. Please re-check the physical invoice.';
+    } else if (state === 'success') {
+      alertBox.classList.remove('hidden');
+      alertBox.classList.add('bg-secondary-container', 'text-on-secondary-container');
+      alertIcon.innerText = 'check_circle';
+      alertTitle.innerText = 'Inbound Purchase Logged Successfully';
+      alertDesc.innerText = 'Purchase Order PO-4093 recorded for AgriFeed Corp ($2,100.00). Stock lot awaiting scale weighbridge confirmation before inventory increments.';
+    }
+  }
+</script></main></div></body></html>

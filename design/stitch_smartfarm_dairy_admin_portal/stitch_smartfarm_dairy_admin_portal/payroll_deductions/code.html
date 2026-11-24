@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "on-tertiary-fixed": "#301400", "surface": "#fbf9f3", "surface-container-low": "#f5f3ed", "secondary-container": "#d9e8c7", "surface-container-highest": "#e4e2dd", "on-secondary-fixed": "#141f0a", "outline-variant": "#c4c8bd", "on-secondary-fixed-variant": "#3e4b32", "secondary-fixed-dim": "#bdcbac", "on-tertiary": "#ffffff", "on-tertiary-container": "#ffb785", "primary-fixed": "#d4e9c3", "on-primary-fixed-variant": "#3a4c30", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "tertiary": "#5e3007", "tertiary-container": "#7a461c", "inverse-surface": "#30312d", "primary-fixed-dim": "#b8cda8", "on-primary-fixed": "#101f08", "secondary": "#556249", "surface-container-high": "#eae8e2", "primary-container": "#46583b", "tertiary-fixed-dim": "#ffb784", "on-surface": "#1b1c18", "surface-container": "#f0eee8", "secondary-fixed": "#d9e8c7", "outline": "#75786f", "surface-bright": "#fbf9f3", "tertiary-fixed": "#ffdcc6", "on-tertiary-fixed-variant": "#6c3a11", "on-primary-container": "#b8cda9", "inverse-on-surface": "#f3f1eb", "background": "#fbf9f3", "error-container": "#ffdad6", "surface-variant": "#e4e2dd", "on-error-container": "#93000a", "on-error": "#ffffff", "inverse-primary": "#b8cda8", "on-background": "#1b1c18", "primary": "#2f4126", "surface-dim": "#dcdad4", "on-surface-variant": "#444840", "on-secondary": "#ffffff", "surface-tint": "#516446", "on-secondary-container": "#5b694e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-xl": "2.5rem", "margin": "2rem", "margin-mobile": "1rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "headline-md": [ "Manrope" ], "body-lg": [ "Inter" ], "label-md": [ "Inter" ], "display-lg-mobile": [ "Manrope" ], "headline-sm": [ "Manrope" ], "data-metric-md": [ "Inter" ], "body-md": [ "Inter" ], "label-sm": [ "Inter" ], "data-metric-lg": [ "Manrope" ], "headline-xl": [ "Manrope" ], "headline-lg": [ "Manrope" ], "headline-xl-mobile": [ "Manrope" ], "display-lg": [ "Manrope" ], "body-sm": [ "Inter" ] }, "fontSize": { "headline-md": [ "1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "label-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" } ], "display-lg-mobile": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "data-metric-md": [ "1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "label-sm": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" } ], "data-metric-lg": [ "2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-xl": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-xl-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-lg": [ "3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZuhXF_IhBdGhJ4eix1oqj3wBimwP9kKeGGChH_b2ax1lMLHMcXPmCVu9b3MJqlJ3XUJHZyp_ietndJCcoi5tapKDT0swhF14GEZxUKYZjg6g5LvxUeQzsGptFXM8XbwZz0B0M4Kbg8tH48Ys1NpBq3q3ceaJWAzrxO8XU7fzOrfQL6K9wOMESU_VEMnfcbKwhEtKD90-MYyU8fO7yBiUm20ljVe33W-rRqQJED0H"/><div><div class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight truncate">SmartFarm</div><div class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Dairy Management</div></div></div><span class="font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold px-space-xs py-0.5 rounded">Farm Admin Only</span></div><div class="px-space-md py-space-sm bg-surface-container-low/80 flex items-center justify-between"><div class="truncate"><div class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Greenfield Dairy Estate</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">Workspace: GF-042</div></div><span class="h-2 w-2 rounded-full bg-primary-container ring-2 ring-primary-fixed flex-shrink-0"></span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Overview</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#">Dashboard</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Herd Management</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#">Animals</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#">Animal Health</a><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface font-semibold">Feeding Management</div><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="feeding-plans" href="#">Feeding Plans</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="feeding-schedule" href="#">Feeding Schedule</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="actual-feeding-records" href="#">Actual Feeding Records</a></div></div></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Operations &amp; Assets</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#">Milk Production</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-management" href="#">Milk Management</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#">Inventory</a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="inventory-list" href="#">Inventory List</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="item-details" href="#">Item Details</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="purchases-and-inbound-invoices" href="#">Purchases &amp; Inbound Invoices</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="stock-additions" href="#">Stock Additions</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="stock-adjustments" href="#">Stock Adjustments</a></div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#">Equipment</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Workforce &amp; Finance</div><div class="space-y-space-xs"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers" href="#">Workers</a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="worker-directory" href="#">Worker Directory</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="add-worker" href="#">Add Worker</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="worker-profile" href="#">Worker Profile</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="worker-documents" href="#">Worker Documents</a></div></div><div class="space-y-space-xs"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="attendance" href="#">Attendance</a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="attendance-records" href="#">Attendance Records</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="manual-check-in-check-out-overtime" href="#">Manual Check-in/Check-out &amp; Overtime</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="leave-management" href="#">Leave Management</a></div></div><div class="space-y-space-xs"><div class="flex items-center justify-between px-space-sm py-1"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Payroll Management</span><span class="font-label-sm text-[0.625rem] bg-surface-container-high text-on-surface-variant px-1.5 py-0.5 rounded font-medium">Admin</span></div><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="salary-management" href="#">Salary Management</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="payroll-records" href="#">Payroll Records</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="salary-advances" href="#">Salary Advances</a><a aria-current="page" class="flex items-center px-space-sm py-1 transition-all bg-primary-container text-on-primary font-semibold rounded-lg" data-path="payroll-deductions" href="#">Payroll Deductions</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="payslips" href="#">Payslips</a></div></div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="finance" href="#">Finance</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Governance &amp; Core</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="supervisor-access" href="#">Supervisor Access</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#">Reports</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="data-management" href="#">Data Management</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#">Settings</a></div></nav><div class="p-space-sm bg-surface-container-low/60"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex justify-between items-center mb-1"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Storage Quota</span><span class="font-label-sm text-label-sm text-primary font-bold">42%</span></div><div class="w-full bg-surface-container rounded-full h-1.5 mb-2"><div class="bg-primary-container h-1.5 rounded-full w-[42%]"></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-body-sm text-body-sm">1,280 Active Head</span><span class="material-symbols-outlined text-sm text-tertiary-container">sensors</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><button class="p-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-xl">menu_open</span></button><nav class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="text-on-surface-variant">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface-variant">Workforce &amp; Finance</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="font-semibold text-on-surface">Payroll Management</span></nav><div class="relative flex-1 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full h-10 pl-9 pr-14 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search herd, rations, schedules, inventory..." type="text"/><span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded shadow-sm">⌘K</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm"><span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span><span>Connected • Live</span></div><div class="flex items-center gap-1 px-2.5 py-1 rounded-md bg-primary-container/10 border border-primary/20 text-primary font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-sm">verified_user</span><span>Farm Admin Only</span></div><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Mode" type="button"><span class="material-symbols-outlined text-xl">routine</span></button><div class="relative"><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" title="Alerts" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 h-4 min-w-[1rem] px-1 bg-error text-on-error font-label-sm text-[0.625rem] rounded-full flex items-center justify-center font-bold">3</span></button></div><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#" title="Docs &amp; Support"><span class="material-symbols-outlined text-xl">help</span></a><div class="h-6 w-[1px] bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative flex items-center"><img alt="Elena Vance" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHGkwzAmXeAWZgoliBfM3J0Dk3rRvKbrFcaSDXWTFXvp7mK8JZlIDpaM_-PKsE2e-9DSWj_thQxg7ZvMO7_J2wdBeJdNp3xHQNrTkReCH1iwd77yI5cACPrn8AVBGbsgSIRzl_r1aNrbkvrI3tTJT7qFPLASAjAk_cx85172_N3qz8dJ2RbazkMZxrYU4--z2VriyTURPXkRqv4-UUhJWONTqJq0P8IWMmPKFhLYX7"/><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></div><div class="hidden lg:block text-left"><div class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-none">Farm Administrator</div></div><button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-lg">expand_more</span></button></div></div></header><main class="relative pt-16 w-full px-space-lg py-space-lg bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive State Simulator Toolbar -->
+<div class="w-full bg-surface-container-high rounded-xl p-space-sm mb-space-lg flex flex-wrap items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">tune</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Interactive State Previewer</span>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest text-on-surface-variant px-2 py-0.5 rounded shadow-sm">SRS Protocol v4.2</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs" id="state-controls">
+<button class="state-btn px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all bg-primary-container text-on-primary shadow-sm" data-target="standard" onclick="setState('standard')">Standard Ledger</button>
+<button class="state-btn px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm" data-target="form-focused" onclick="setState('form-focused')">Form Focus &amp; Pre-Fill</button>
+<button class="state-btn px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm" data-target="error-state" onclick="setState('error-state')">Validation Error</button>
+<button class="state-btn px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm" data-target="success-state" onclick="setState('success-state')">Entry Created (Toast)</button>
+<button class="state-btn px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm" data-target="empty-state" onclick="setState('empty-state')">Zero Deductions (Audit Clear)</button>
+</div>
+</div>
+<!-- Header & Context Banner -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">
+<span>Workforce &amp; Finance</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span>Payroll Management</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-bold">Payroll Deductions</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Farm Workforce Payroll Deductions Ledger</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-3xl">
+        Manage manual permitted payroll deductions, penalty notations, equipment damage write-downs, and housing allocations for Workspace GF-042.
+      </p>
+</div>
+<!-- Live Audit Stamp Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm pl-space-md flex items-center gap-space-md shadow-sm self-start lg:self-auto">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">verified</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Authorized Authority</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Elena Vance (Admin)</div>
+<div class="font-body-sm text-body-sm text-primary flex items-center gap-1 mt-0.5">
+<span class="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>
+          Audit Lock GF-2024-Q4
+        </div>
+</div>
+</div>
+</div>
+<!-- Prominent Policy Notice Banner -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md mb-space-lg shadow-sm overflow-hidden relative">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md pl-2">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">gavel</span>
+</div>
+<div>
+<div class="inline-flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm font-bold tracking-wide uppercase px-2 py-0.5 rounded bg-tertiary-container text-surface-container-lowest">Farm Admin Permitted Deductions Only</span>
+<span class="font-label-sm text-label-sm font-semibold text-tertiary tracking-wide uppercase">• NO STATUTORY / TAX FORMULAS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-4xl leading-relaxed">
+            SRS explicitly excludes automated tax, pension, statutory insurance, and automated lateness penalty deductions. Only Farm Admin permitted adjustments (e.g., confirmed housing utility split, unreturned protective gear, manual administrative adjustments, or advance recovery allocations) are recorded here. All amounts require administrative entry and verification.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-2 flex-shrink-0">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high font-label-sm text-label-sm text-on-surface transition-colors flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-base">policy</span>
+<span>View Bylaw Memo 14-B</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Success Toast (Controlled by Simulator) -->
+<div class="hidden w-full bg-secondary-container text-on-secondary-container rounded-xl p-space-md mb-space-lg shadow-md flex items-center justify-between animate-fade-in" id="toast-success">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-2xl">check_circle</span>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold">Deduction Successfully Recorded &amp; Committed</div>
+<div class="font-body-sm text-body-sm opacity-90">Transaction ID <code class="bg-surface-container-lowest/60 px-1 py-0.5 rounded">DED-2024-053</code> logged under authorizer Elena Vance. Cycle Oct 16–31 updated.</div>
+</div>
+</div>
+<button class="p-1 hover:bg-black/5 rounded-lg transition-colors" onclick="document.getElementById('toast-success').classList.add('hidden')">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<!-- Two-Column Architecture: Record Form (Left) & Category Analytics (Right) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- LEFT COLUMN: Record Payroll Deduction Form (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between" id="record-form-card">
+<div>
+<div class="flex items-center justify-between mb-space-md pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">post_add</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Record Permitted Payroll Deduction</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Manual single-entry journal for agricultural workforce deductions</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-2.5 py-1 rounded-md">Farm Admin Verified</span>
+</div>
+<form class="space-y-space-md" id="deduction-form" onsubmit="event.preventDefault(); submitForm();">
+<!-- Worker Selector -->
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold mb-1.5 flex items-center justify-between">
+<span>Select Agricultural Worker</span>
+<span class="text-on-surface-variant font-normal">Active Staff: 28</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">badge</span>
+<select class="w-full h-11 pl-10 pr-10 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-sm appearance-none cursor-pointer" id="worker-select">
+<option value="">Select a worker by name or ID...</option>
+<option value="carlos">Carlos Mendez — Machinery Operator (EMP-0104)</option>
+<option value="aris">Aris Thorne — Senior Calf Feeder (EMP-0219)</option>
+<option value="marcus">Marcus Brody — Silo &amp; Ration Mixer (EMP-0082)</option>
+<option value="johnathan">Johnathan Wu — Milking Specialist (EMP-0143)</option>
+<option value="tomas">Tomas Ruiz — Feeding Unit Leader (EMP-0033)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Dual inputs: Amount & Target Cycle -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold mb-1.5">
+                Deduction Amount ($ USD)
+              </label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant font-semibold text-sm">$</span>
+<input class="w-full h-11 pl-8 pr-4 bg-surface-container-low rounded-lg font-data-metric-md text-data-metric-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-sm" id="input-amount" min="0" placeholder="0.00" step="0.50" type="number" value="45.00"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold mb-1.5">
+                Applicable Payroll Cycle
+              </label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">calendar_month</span>
+<select class="w-full h-11 pl-10 pr-10 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-sm appearance-none cursor-pointer" id="input-cycle">
+<option selected="">Cycle Oct 16–31, 2024 (Active)</option>
+<option>Cycle Nov 01–15, 2024 (Upcoming)</option>
+<option>Cycle Nov 16–30, 2024</option>
+<option>Cycle Oct 01–15, 2024 (Reconciliation Only)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Category Selection -->
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold mb-1.5">
+              Permitted Deduction Category / Classification
+            </label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">category</span>
+<select class="w-full h-11 pl-10 pr-10 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-sm appearance-none cursor-pointer" id="input-category">
+<option selected="" value="equipment">Lost / Damaged Equipment &amp; Protective Gear (PPE)</option>
+<option value="housing">Housing &amp; Quarters Electricity / Utilities Allocation</option>
+<option value="advance">Salary Advance Recovery Allocation</option>
+<option value="absence">Administrative Adjustment / Unpaid Absence Manual Write-Down</option>
+<option value="other">Other Permitted Administrative Deduction</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Description / Justification -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold">
+                Operational Justification &amp; Incident Particulars
+              </label>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="char-count">Min. 15 characters required</span>
+</div>
+<textarea class="w-full p-space-sm bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-sm" id="input-justification" placeholder="Provide clear incident particulars, asset tag IDs, or agreed settlement terms..." rows="3">Replacement cost for damaged biosecurity parlor rubber apron and heavy-duty nitrile boot pair (Incident ref: B-08).</textarea>
+<!-- Error message container -->
+<p class="hidden text-error font-body-sm text-body-sm mt-1.5 flex items-center gap-1 font-semibold" id="error-justification">
+<span class="material-symbols-outlined text-sm">error</span>
+              Mandatory operational justification missing or insufficiently detailed for audit sign-off.
+            </p>
+</div>
+<!-- Authorizing Meta -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary font-bold text-xs flex items-center justify-center">EV</div>
+<div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface block leading-none">Recording Administrator</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Elena Vance (Active Farm Administrator Token)</span>
+</div>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-lowest px-2 py-1 rounded shadow-sm">
+              Timestamp: Oct 24, 2024 • 14:32
+            </div>
+</div>
+<!-- Buttons -->
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-colors shadow-sm" onclick="resetForm()" type="button">
+              Reset
+            </button>
+<button class="px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md font-bold transition-all shadow-sm flex items-center gap-2" type="submit">
+<span class="material-symbols-outlined text-base">save</span>
+<span>Save Permitted Deduction</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- RIGHT COLUMN: Deduction Categories Analytics & Compliance Checklist (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Summary Metric Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Current Cycle Total</span>
+<div class="flex items-baseline gap-2 mt-0.5">
+<span class="font-data-metric-lg text-data-metric-lg text-on-surface font-bold">$520.00</span>
+<span class="font-body-sm text-body-sm text-tertiary-container font-semibold">USD</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Target Workers</span>
+<div class="font-headline-sm text-headline-sm text-on-surface mt-0.5 font-bold">8 Staff</div>
+</div>
+</div>
+<!-- Breakdown Visual Bar -->
+<div class="mb-space-md">
+<div class="flex justify-between text-body-sm font-body-sm text-on-surface-variant mb-1.5">
+<span>Deduction Distribution Ratio</span>
+<span class="font-semibold text-on-surface">100% Permitted Non-Statutory</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden flex">
+<div class="bg-primary h-full transition-all" style="width: 46%;" title="Housing Utilities: $240.00 (46%)"></div>
+<div class="bg-tertiary-container h-full transition-all" style="width: 21%;" title="Equipment Loss: $110.00 (21%)"></div>
+<div class="bg-secondary h-full transition-all" style="width: 33%;" title="Advance Recovery: $170.00 (33%)"></div>
+</div>
+</div>
+<!-- Category Progress Rows -->
+<div class="space-y-space-sm pt-space-xs">
+<!-- Housing -->
+<div class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary flex-shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Housing &amp; Quarters Utilities</span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-on-surface">$240.00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant ml-1">(46%)</span>
+</div>
+</div>
+<!-- Advance Recovery -->
+<div class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary flex-shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Salary Advance Recoveries</span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-on-surface">$170.00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant ml-1">(33%)</span>
+</div>
+</div>
+<!-- Equipment Loss -->
+<div class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-tertiary-container flex-shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Lost / Damaged Equipment &amp; PPE</span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-on-surface">$110.00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant ml-1">(21%)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Administrative Compliance Checklist -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex-1">
+<div class="flex items-center gap-2 mb-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">fact_check</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Administrative Compliance Checklist</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Estate bylaws mandate the following verification steps prior to final payroll closing:
+        </p>
+<div class="space-y-space-sm">
+<div class="flex items-start gap-space-sm p-space-sm bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
+<div class="text-body-sm">
+<div class="font-label-sm text-label-sm font-semibold text-on-surface">Farm Admin Physical/Digital Signature</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Elena Vance validated with credential token GF-042-ADMIN.</div>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
+<div class="text-body-sm">
+<div class="font-label-sm text-label-sm font-semibold text-on-surface">Worker Notification Protocol</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Worker notified via verbal farm briefing or supervisor morning rollcall sheet.</div>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
+<div class="text-body-sm">
+<div class="font-label-sm text-label-sm font-semibold text-on-surface">Zero Algorithmic Calculations</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Strict compliance: No automated software deductions, time penalties, or formulas applied.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Master Deductions History Ledger Section -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden mb-space-lg">
+<!-- Ledger Top Bar -->
+<div class="p-space-lg pb-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-low/40">
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-2xl">table_chart</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Master Deductions History Ledger</h2>
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-2.5 py-0.5 rounded-full font-bold" id="records-counter">4 Records</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Historical and active non-statutory payroll modifications for Greenfield Dairy Estate</p>
+</div>
+<!-- Filters & Export -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-base">search</span>
+<input class="h-9 pl-8 pr-3 bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" placeholder="Search deductions..." type="text"/>
+</div>
+<button class="h-9 px-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-base">filter_list</span>
+<span>Cycle: Oct 16–31</span>
+</button>
+<button class="h-9 px-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-base">file_download</span>
+<span>Export CSV</span>
+</button>
+</div>
+</div>
+<!-- Active Table View -->
+<div class="overflow-x-auto" id="ledger-table-container">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md">Deduction ID</th>
+<th class="py-3 px-space-md">Date</th>
+<th class="py-3 px-space-md">Worker ID &amp; Role</th>
+<th class="py-3 px-space-md">Category</th>
+<th class="py-3 px-space-md text-right">Amount</th>
+<th class="py-3 px-space-md">Target Cycle</th>
+<th class="py-3 px-space-md">Operational Justification</th>
+<th class="py-3 px-space-md">Recorded By</th>
+<th class="py-3 px-space-md">Status</th>
+<th class="py-3 px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-mono font-semibold text-primary">DED-2024-052</td>
+<td class="py-3.5 px-space-md text-on-surface-variant whitespace-nowrap">Oct 22, 2024</td>
+<td class="py-3.5 px-space-md">
+<div class="font-semibold text-on-surface">Carlos Mendez</div>
+<div class="text-body-sm text-on-surface-variant">EMP-0104 • Machinery Operator</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-tertiary-fixed text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-xs">handyman</span>
+                Equipment Loss
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-data-metric-md text-data-metric-md font-bold text-on-surface">$45.00</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="bg-surface-container px-2 py-0.5 rounded text-xs font-medium text-on-surface">Oct 16–31, 2024</span>
+</td>
+<td class="py-3.5 px-space-md max-w-xs truncate" title="Replacement TMR hopper shear pin damaged during uninstructed auger reverse">
+              Replacement TMR hopper shear pin
+            </td>
+<td class="py-3.5 px-space-md text-on-surface-variant whitespace-nowrap">Elena Vance</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-secondary-container text-on-secondary-container">
+<span class="h-1.5 w-1.5 rounded-full bg-primary-container"></span>
+                Applied to Payroll
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface" title="Inspect Record">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface" title="Print Justification Slip">
+<span class="material-symbols-outlined text-lg">print</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-mono font-semibold text-primary">DED-2024-049</td>
+<td class="py-3.5 px-space-md text-on-surface-variant whitespace-nowrap">Oct 18, 2024</td>
+<td class="py-3.5 px-space-md">
+<div class="font-semibold text-on-surface">Aris Thorne</div>
+<div class="text-body-sm text-on-surface-variant">EMP-0219 • Senior Calf Feeder</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-fixed text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-xs">cottage</span>
+                Housing Utilities
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-data-metric-md text-data-metric-md font-bold text-on-surface">$35.00</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="bg-surface-container px-2 py-0.5 rounded text-xs font-medium text-on-surface">Oct 16–31, 2024</span>
+</td>
+<td class="py-3.5 px-space-md max-w-xs truncate" title="Estate Quarters #6 shared electric grid surcharge for supplemental heater unit">
+              Estate Quarters #6 shared electric
+            </td>
+<td class="py-3.5 px-space-md text-on-surface-variant whitespace-nowrap">Elena Vance</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-secondary-container text-on-secondary-container">
+<span class="h-1.5 w-1.5 rounded-full bg-primary-container"></span>
+                Applied to Payroll
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface" title="Inspect Record">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface" title="Print Justification Slip">
+<span class="material-symbols-outlined text-lg">print</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-mono font-semibold text-primary">DED-2024-045</td>
+<td class="py-3.5 px-space-md text-on-surface-variant whitespace-nowrap">Oct 14, 2024</td>
+<td class="py-3.5 px-space-md">
+<div class="font-semibold text-on-surface">Johnathan Wu</div>
+<div class="text-body-sm text-on-surface-variant">EMP-0143 • Milking Specialist</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-tertiary-fixed text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-xs">handyman</span>
+                Equipment Loss
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-data-metric-md text-data-metric-md font-bold text-on-surface">$25.00</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="bg-surface-container px-2 py-0.5 rounded text-xs font-medium text-on-surface">Oct 01–15, 2024</span>
+</td>
+<td class="py-3.5 px-space-md max-w-xs truncate" title="Lost parlor digital infrared milk thermometer during rotary stall washdown">
+              Lost parlor digital thermometer
+            </td>
+<td class="py-3.5 px-space-md text-on-surface-variant whitespace-nowrap">Elena Vance</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-secondary-container text-on-secondary-container">
+<span class="h-1.5 w-1.5 rounded-full bg-primary-container"></span>
+                Applied to Payroll
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface" title="Inspect Record">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface" title="Print Justification Slip">
+<span class="material-symbols-outlined text-lg">print</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-mono font-semibold text-primary">DED-2024-041</td>
+<td class="py-3.5 px-space-md text-on-surface-variant whitespace-nowrap">Oct 02, 2024</td>
+<td class="py-3.5 px-space-md">
+<div class="font-semibold text-on-surface">Tomas Ruiz</div>
+<div class="text-body-sm text-on-surface-variant">EMP-0033 • Feeding Unit Leader</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-secondary-fixed-dim text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-xs">payments</span>
+                Advance Recovery
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right font-data-metric-md text-data-metric-md font-bold text-on-surface">$100.00</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="bg-surface-container px-2 py-0.5 rounded text-xs font-medium text-on-surface">Oct 01–15, 2024</span>
+</td>
+<td class="py-3.5 px-space-md max-w-xs truncate" title="Agreed recovery installment #1 for seasonal emergency salary advance granted in Sept">
+              Agreed recovery installment #1
+            </td>
+<td class="py-3.5 px-space-md text-on-surface-variant whitespace-nowrap">Elena Vance</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-secondary-container text-on-secondary-container">
+<span class="h-1.5 w-1.5 rounded-full bg-primary-container"></span>
+                Applied to Payroll
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface" title="Inspect Record">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface" title="Print Justification Slip">
+<span class="material-symbols-outlined text-lg">print</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Empty State Representation (Toggled via Simulator) -->
+<div class="hidden py-space-xl px-space-md text-center flex-col items-center justify-center" id="ledger-empty-state">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant mb-space-sm">
+<span class="material-symbols-outlined text-3xl">task_alt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Zero Deductions Pending</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md mt-1 mb-space-md">
+        No administrative deductions, equipment damage write-offs, or housing allocations are registered for this target payroll cycle. All 28 workers receive full gross remuneration.
+      </p>
+<button class="px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-sm hover:bg-primary transition-colors flex items-center gap-1.5" onclick="setState('form-focused')">
+<span class="material-symbols-outlined text-base">add</span>
+<span>Record Permitted Deduction</span>
+</button>
+</div>
+<!-- Ledger Footer / Pagination -->
+<div class="p-space-md bg-surface-container-low/40 flex flex-col sm:flex-row items-center justify-between gap-space-sm text-body-sm text-on-surface-variant">
+<div>Showing <span class="font-semibold text-on-surface">1 - 4</span> of 4 permitted deductions recorded</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm disabled:opacity-50" disabled="">Previous</button>
+<button class="px-3 py-1 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm disabled:opacity-50" disabled="">Next</button>
+</div>
+</div>
+</div>
+<!-- Operational Footnote & Audit Hash -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant pt-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-primary">security</span>
+<span>Farm Admin Protocol: Workspace GF-042 • Strict Manual Ledger Integrity • No Tax Logic Permitted</span>
+</div>
+<div class="font-mono text-xs text-on-surface-variant">
+      SHA-256 LEDGER HASH: 8f9b2a7c4e1d...0042-ADMIN
+    </div>
+</div>
+</div>
+<!-- Inline Simulator Controller JavaScript -->
+<script>
+  function setState(state) {
+    // Reset active button styling
+    document.querySelectorAll('.state-btn').forEach(btn => {
+      btn.classList.remove('bg-primary-container', 'text-on-primary');
+      btn.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+    });
+
+    const activeBtn = document.querySelector(`[data-target="${state}"]`);
+    if (activeBtn) {
+      activeBtn.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+      activeBtn.classList.add('bg-primary-container', 'text-on-primary');
+    }
+
+    const tableContainer = document.getElementById('ledger-table-container');
+    const emptyState = document.getElementById('ledger-empty-state');
+    const toastSuccess = document.getElementById('toast-success');
+    const errorMsg = document.getElementById('error-justification');
+    const textarea = document.getElementById('input-justification');
+    const workerSelect = document.getElementById('worker-select');
+    const recordsCounter = document.getElementById('records-counter');
+    const formCard = document.getElementById('record-form-card');
+
+    // Default clean-up
+    tableContainer.classList.remove('hidden');
+    emptyState.classList.add('hidden');
+    emptyState.classList.remove('flex');
+    toastSuccess.classList.add('hidden');
+    errorMsg.classList.add('hidden');
+    textarea.classList.remove('ring-2', 'ring-error', 'bg-error-container/20');
+    formCard.classList.remove('ring-2', 'ring-primary');
+
+    if (state === 'standard') {
+      recordsCounter.textContent = '4 Records';
+      workerSelect.value = '';
+    } else if (state === 'form-focused') {
+      workerSelect.value = 'carlos';
+      formCard.classList.add('ring-2', 'ring-primary');
+      textarea.value = 'Replacement cost for damaged biosecurity parlor rubber apron and heavy-duty nitrile boot pair (Incident ref: B-08).';
+      formCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else if (state === 'error-state') {
+      textarea.value = '';
+      errorMsg.classList.remove('hidden');
+      textarea.classList.add('ring-2', 'ring-error', 'bg-error-container/20');
+      formCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else if (state === 'success-state') {
+      toastSuccess.classList.remove('hidden');
+      toastSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else if (state === 'empty-state') {
+      tableContainer.classList.add('hidden');
+      emptyState.classList.remove('hidden');
+      emptyState.classList.add('flex');
+      recordsCounter.textContent = '0 Records';
+    }
+  }
+
+  function resetForm() {
+    document.getElementById('deduction-form').reset();
+    document.getElementById('error-justification').classList.add('hidden');
+    document.getElementById('input-justification').classList.remove('ring-2', 'ring-error', 'bg-error-container/20');
+  }
+
+  function submitForm() {
+    const textVal = document.getElementById('input-justification').value.trim();
+    if (textVal.length < 15) {
+      document.getElementById('error-justification').classList.remove('hidden');
+      document.getElementById('input-justification').classList.add('ring-2', 'ring-error', 'bg-error-container/20');
+    } else {
+      setState('success-state');
+    }
+  }
+</script></main></div></body></html>

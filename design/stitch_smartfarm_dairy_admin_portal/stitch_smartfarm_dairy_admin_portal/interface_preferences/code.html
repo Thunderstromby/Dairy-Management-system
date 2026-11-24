@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#30312d", "on-background": "#1b1c18", "secondary": "#556249", "tertiary-fixed-dim": "#ffb784", "surface-container-low": "#f5f3ed", "on-tertiary": "#ffffff", "surface-dim": "#dcdad4", "on-primary-container": "#b8cda9", "on-primary-fixed": "#101f08", "inverse-on-surface": "#f3f1eb", "outline": "#75786f", "background": "#fbf9f3", "on-tertiary-fixed": "#301400", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#3e4b32", "surface": "#fbf9f3", "outline-variant": "#c4c8bd", "surface-container": "#f0eee8", "surface-container-high": "#eae8e2", "surface-tint": "#516446", "surface-bright": "#fbf9f3", "on-surface-variant": "#444840", "primary-container": "#46583b", "primary": "#2f4126", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffdcc6", "on-primary-fixed-variant": "#3a4c30", "secondary-container": "#d9e8c7", "on-surface": "#1b1c18", "error": "#ba1a1a", "secondary-fixed-dim": "#bdcbac", "on-tertiary-container": "#ffb785", "on-secondary-container": "#5b694e", "on-error": "#ffffff", "primary-fixed": "#d4e9c3", "on-tertiary-fixed-variant": "#6c3a11", "tertiary": "#5e3007", "primary-fixed-dim": "#b8cda8", "on-error-container": "#93000a", "secondary-fixed": "#d9e8c7", "tertiary-container": "#7a461c", "on-secondary-fixed": "#141f0a", "on-primary": "#ffffff", "surface-variant": "#e4e2dd", "inverse-primary": "#b8cda8", "surface-container-highest": "#e4e2dd", "on-secondary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "gutter-mobile": "0.75rem", "margin": "2rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter": "1.5rem", "margin-mobile": "1rem" }, "fontFamily": { "data-metric-md": [ "Inter" ], "body-lg": [ "Inter" ], "display-lg-mobile": [ "Manrope" ], "body-sm": [ "Inter" ], "headline-md": [ "Manrope" ], "label-sm": [ "Inter" ], "headline-sm": [ "Manrope" ], "headline-xl": [ "Manrope" ], "body-md": [ "Inter" ], "headline-xl-mobile": [ "Manrope" ], "display-lg": [ "Manrope" ], "headline-lg": [ "Manrope" ], "data-metric-lg": [ "Manrope" ], "label-md": [ "Inter" ] }, "fontSize": { "data-metric-md": [ "1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "display-lg-mobile": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ], "headline-md": [ "1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" } ], "label-sm": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "headline-xl": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "headline-xl-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-lg": [ "3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "data-metric-lg": [ "2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZuhXF_IhBdGhJ4eix1oqj3wBimwP9kKeGGChH_b2ax1lMLHMcXPmCVu9b3MJqlJ3XUJHZyp_ietndJCcoi5tapKDT0swhF14GEZxUKYZjg6g5LvxUeQzsGptFXM8XbwZz0B0M4Kbg8tH48Ys1NpBq3q3ceaJWAzrxO8XU7fzOrfQL6K9wOMESU_VEMnfcbKwhEtKD90-MYyU8fO7yBiUm20ljVe33W-rRqQJED0H"/><div><div class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight truncate">SmartFarm</div><div class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Dairy Management</div></div></div><span class="font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold px-space-xs py-0.5 rounded">Admin</span></div><div class="px-space-md py-space-sm bg-surface-container-low/80 flex items-center justify-between"><div class="truncate"><div class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Greenfield Dairy Estate</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">Workspace: GF-042</div></div><span class="h-2 w-2 rounded-full bg-primary-container ring-2 ring-primary-fixed flex-shrink-0"></span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Overview</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="font-body-md text-body-md flex-1">Dashboard</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Herd Management</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#"><span class="font-body-md text-body-md flex-1">Animals</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#"><span class="font-body-md text-body-md flex-1">Animal Health</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Feeding Management</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding-plans" href="#"><span class="font-body-md text-body-md flex-1">Feeding Plans</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding-schedule" href="#"><span class="font-body-md text-body-md flex-1">Feeding Schedule</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="actual-feeding-records" href="#"><span class="font-body-md text-body-md flex-1">Actual Feeding Records</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Operations &amp; Assets</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#"><span class="font-body-md text-body-md flex-1">Milk Production</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-management" href="#"><span class="font-body-md text-body-md flex-1">Milk Management</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#"><span class="font-body-md text-body-md flex-1">Inventory</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#"><span class="font-body-md text-body-md flex-1">Equipment</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Reports &amp; Analytics</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-reports" href="#"><span class="font-body-md text-body-md flex-1">Milk Reports</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="financial-reports" href="#"><span class="font-body-md text-body-md flex-1">Financial Reports</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="data-exports" href="#"><span class="font-body-md text-body-md flex-1">Data Exports</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Workforce &amp; Finance</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers" href="#"><span class="font-body-md text-body-md flex-1">Workers</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="attendance" href="#"><span class="font-body-md text-body-md flex-1">Attendance</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="payroll" href="#"><span class="font-body-md text-body-md flex-1">Payroll</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="finance" href="#"><span class="font-body-md text-body-md flex-1">Finance</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">System &amp; Alerts</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notification-center" href="#"><span class="font-body-md text-body-md flex-1">Notification Center</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notification-history" href="#"><span class="font-body-md text-body-md flex-1">Notification History</span></a></div><div class="space-y-space-xs pt-space-xs"><div class="px-space-sm flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Settings &amp; Configuration</span><span class="font-label-sm text-[0.625rem] bg-error-container text-on-error-container font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">Admin Only</span></div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farm_profile" href="#"><span class="font-body-md text-body-md flex-1">Farm Profile</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="units" href="#"><span class="font-body-md text-body-md flex-1">Units of Measurement</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="currency" href="#"><span class="font-body-md text-body-md flex-1">Currency Settings</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="timezone" href="#"><span class="font-body-md text-body-md flex-1">Timezone Settings</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="preferences" href="#"><span class="font-body-md text-body-md flex-1">Interface Preferences</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notification_settings" href="#"><span class="font-body-md text-body-md flex-1">Notification Settings</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="configuration" href="#"><span class="font-body-md text-body-md flex-1">Module Configuration</span></a></div></nav><div class="p-space-sm bg-surface-container-low/60"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex justify-between items-center mb-1"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Storage Quota</span><span class="font-label-sm text-label-sm text-primary font-bold">42%</span></div><div class="w-full bg-surface-container rounded-full h-1.5 mb-2"><div class="bg-primary-container h-1.5 rounded-full w-[42%]"></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-body-sm text-body-sm">1,280 Active Head</span><span class="material-symbols-outlined text-sm text-tertiary-container">sensors</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><button class="p-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-xl">menu_open</span></button><nav class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="font-semibold text-on-surface">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface-variant">Workspace: GF-042</span></nav><div class="relative flex-1 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full h-10 pl-9 pr-14 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search Animal ID, Batch, Record..." type="text"/><span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded shadow-sm">⌘K</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm"><span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span><span>Connected • Live</span></div><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Mode" type="button"><span class="material-symbols-outlined text-xl">routine</span></button><div class="relative"><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative flex items-center justify-center" href="#" title="Alerts &amp; Notifications"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 h-4 min-w-[1rem] px-1 bg-error text-on-error font-label-sm text-[0.625rem] rounded-full flex items-center justify-center font-bold">3</span></a></div><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#" title="Docs &amp; Support"><span class="material-symbols-outlined text-xl">help</span></a><div class="h-6 w-[1px] bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHGkwzAmXeAWZgoliBfM3J0Dk3rRvKbrFcaSDXWTFXvp7mK8JZlIDpaM_-PKsE2e-9DSWj_thQxg7ZvMO7_J2wdBeJdNp3xHQNrTkReCH1iwd77yI5cACPrn8AVBGbsgSIRzl_r1aNrbkvrI3tTJT7qFPLASAjAk_cx85172_N3qz8dJ2RbazkMZxrYU4--z2VriyTURPXkRqv4-UUhJWONTqJq0P8IWMmPKFhLYX7"/><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></div><div class="hidden lg:block text-left"><div class="flex items-center gap-1.5"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</span><span class="font-label-sm text-[0.625rem] bg-primary-container text-on-primary font-bold px-1 rounded">Farm Admin Only</span></div><div class="font-label-sm text-label-sm text-on-surface-variant leading-none">Farm Administrator</div></div><button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-lg">expand_more</span></button></div></div></header><main class="relative pt-16 w-full px-space-lg py-space-lg bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Toast Feedback Banner (Controlled via JS) -->
+<div class="hidden mb-space-md p-space-md rounded-xl bg-secondary-container/90 text-on-secondary-container shadow-md flex items-center justify-between transition-all" id="feedbackBanner">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary font-bold">check_circle</span>
+<div>
+<p class="font-headline-sm text-headline-sm text-on-secondary-container font-semibold">Preferences Saved Successfully</p>
+<p class="font-body-sm text-body-sm text-on-secondary-variant">Workspace GF-042 regional standards and interface formatting have been synced across active herd sessions.</p>
+</div>
+</div>
+<button class="p-1 rounded text-on-secondary-variant hover:bg-surface-container/60 transition-colors" onclick="dismissBanner()">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<!-- Header & Administrative Governance Bar -->
+<header class="mb-space-lg flex flex-col md:flex-row md:items-end justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm relative overflow-hidden">
+<div class="space-y-space-xs max-w-3xl">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Settings &amp; Configuration</span>
+<span class="material-symbols-outlined text-xs text-outline">chevron_right</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">Interface Preferences</span>
+<span class="h-1.5 w-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-[0.625rem] bg-error-container text-on-error-container font-bold px-2 py-0.5 rounded uppercase tracking-wider">Farm Admin Only</span>
+<span class="font-label-sm text-[0.625rem] bg-surface-container-high text-on-surface-variant font-semibold px-2 py-0.5 rounded">GF-042 • Standards</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Interface Preferences &amp; Regional Numerics</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Configure regional numeric conventions, date and time representations, decimal precision thresholds, and system visual theme tailored for field tablets and office workstations.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="px-space-md py-2.5 rounded-lg font-label-md text-label-md text-on-surface bg-surface-container-low hover:bg-surface-container transition-colors font-medium" id="cancelBtn" onclick="resetForm()">
+        Cancel Changes
+      </button>
+<button class="px-space-lg py-2.5 rounded-lg font-label-md text-label-md text-on-primary bg-primary-container hover:bg-primary transition-all font-semibold shadow-sm flex items-center gap-space-xs" id="saveBtn" onclick="saveForm()">
+<span class="material-symbols-outlined text-lg">save</span>
+<span>Save Preferences</span>
+</button>
+</div>
+</header>
+<!-- Main Multi-Column Settings Architecture -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column (Inputs, Regional Conventions & Formats) -->
+<div class="lg:col-span-8 space-y-space-lg">
+<!-- 1. Regional Numeric Grouping Card -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-2xl">pin</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Regional Numeric Grouping</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Switch notation systems for volume tallies, herd costs, and dry matter quantities.</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-2.5 py-1 rounded font-medium">Agronomic Locale</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mb-space-md">
+<!-- Standard Western Format Option -->
+<label class="group relative cursor-pointer rounded-xl p-space-md bg-surface-container-low transition-all duration-200 block has-[:checked]:bg-secondary-container/40 has-[:checked]:shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<input checked="" class="accent-primary-container h-4 w-4" name="num_grouping" onchange="updateLivePreview()" type="radio" value="western"/>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Standard Western</span>
+</div>
+<span class="font-label-sm text-[0.6875rem] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-medium">Millions &amp; Billions</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Three-digit grouping separator used across European and American dairy equipment.</p>
+<div class="mt-space-md pt-space-xs bg-surface-container-lowest/80 p-space-sm rounded-lg">
+<span class="font-label-sm text-[0.625rem] uppercase tracking-wider text-on-surface-variant block mb-1">Live Representation</span>
+<p class="font-label-md text-label-md font-semibold text-primary">1,280,000 L • $42,650.00 • 142,500 kg</p>
+</div>
+</label>
+<!-- South Asian / Pakistani Format Option -->
+<label class="group relative cursor-pointer rounded-xl p-space-md bg-surface-container-low transition-all duration-200 block has-[:checked]:bg-secondary-container/40 has-[:checked]:shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<input class="accent-primary-container h-4 w-4" name="num_grouping" onchange="updateLivePreview()" type="radio" value="south_asian"/>
+<span class="font-label-md text-label-md font-semibold text-on-surface">South Asian / Pakistani</span>
+</div>
+<span class="font-label-sm text-[0.6875rem] px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-semibold">Lakhs &amp; Crores</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Two-digit progressive grouping for Pakistan, India, and regional cooperative procurement.</p>
+<div class="mt-space-md pt-space-xs bg-surface-container-lowest/80 p-space-sm rounded-lg">
+<span class="font-label-sm text-[0.625rem] uppercase tracking-wider text-on-surface-variant block mb-1">Live Representation</span>
+<p class="font-label-md text-label-md font-semibold text-primary">12,80,000 L (12.8 Lakh) • Rs 42,65,000 • 1,42,500 kg</p>
+</div>
+</label>
+</div>
+<!-- Verbal Suffix Scribing Toggle -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low/60">
+<div class="space-y-0.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface flex items-center gap-1.5">
+<span>Show Lakh/Crore Verbal Suffix</span>
+<span class="font-label-sm text-[0.6875rem] px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed-variant font-medium">Field UX</span>
+</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Appends descriptive text tag (e.g. "12.80 Lakh L") beside high-level production tiles.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="toggleLakhSuffix" onchange="updateLivePreview()" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:bg-primary-container peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+</section>
+<!-- 2. Date & Time Format Configuration -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-2xl">calendar_month</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Date &amp; Time Conventions</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Format timestamps for lactation records, insemination windows, and vet shift logs.</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-2.5 py-1 rounded font-medium">ISO / Regional</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Calendar Format -->
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface flex items-center justify-between">
+<span>Date Format</span>
+<span class="material-symbols-outlined text-sm text-outline">schedule</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container appearance-none transition-colors" id="dateFormatSelect" onchange="updateLivePreview()">
+<option selected="" value="DD/MM/YYYY">DD/MM/YYYY (e.g. 24/10/2024)</option>
+<option value="MM/DD/YYYY">MM/DD/YYYY (e.g. 10/24/2024)</option>
+<option value="YYYY-MM-DD">YYYY-MM-DD (ISO 8601: 2024-10-24)</option>
+<option value="DD-MMM-YYYY">DD-MMM-YYYY (e.g. 24-Oct-2024)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-base pointer-events-none">expand_more</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Applied to vaccination dates and lactation start charts.</p>
+</div>
+<!-- Time Format -->
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface flex items-center justify-between">
+<span>Time Display Mode</span>
+<span class="material-symbols-outlined text-sm text-outline">timer</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container appearance-none transition-colors" id="timeFormatSelect" onchange="updateLivePreview()">
+<option selected="" value="12h">12-Hour AM/PM (09:42 AM)</option>
+<option value="24h">24-Hour Military (09:42)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-base pointer-events-none">expand_more</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Recommended 24-hour for automated parlor telemetries.</p>
+</div>
+<!-- Week Start -->
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface flex items-center justify-between">
+<span>First Day of Week</span>
+<span class="material-symbols-outlined text-sm text-outline">date_range</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container appearance-none transition-colors" id="firstDaySelect">
+<option selected="" value="monday">Monday (ISO Standard)</option>
+<option value="sunday">Sunday (Regional Pastoral)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-base pointer-events-none">expand_more</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sets herd rotation calendar grids and milk summaries.</p>
+</div>
+</div>
+</section>
+<!-- 3. Numerical Precision Settings -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-2xl">tune</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Telemetry &amp; Metric Precision</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Control rounding thresholds to prevent visual noise while preserving audit precision.</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-2.5 py-1 rounded font-medium">Decimals</span>
+</div>
+<div class="space-y-space-md">
+<!-- Milk Yield Precision -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm p-space-sm bg-surface-container-low rounded-lg">
+<div class="space-y-0.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Milk Yield Precision</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Daily animal milk meter readings and bulk tank dispatch tallies.</p>
+</div>
+<div class="inline-flex p-1 bg-surface-container rounded-lg gap-1">
+<button class="px-3 py-1.5 rounded-md font-label-sm text-label-sm font-semibold bg-primary-container text-on-primary transition-all" id="prec_milk_1" onclick="setPrecision('milk', 1)" type="button">
+                1 Decimal (23.5 L)
+              </button>
+<button class="px-3 py-1.5 rounded-md font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface transition-all" id="prec_milk_2" onclick="setPrecision('milk', 2)" type="button">
+                2 Decimals (23.55 L)
+              </button>
+</div>
+</div>
+<!-- Feed & Silage Precision -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm p-space-sm bg-surface-container-low rounded-lg">
+<div class="space-y-0.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Feed &amp; Silage Rations</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">TMR mixer truck batch dispenser and individual manger supplements.</p>
+</div>
+<div class="inline-flex p-1 bg-surface-container rounded-lg gap-1">
+<button class="px-3 py-1.5 rounded-md font-label-sm text-label-sm font-semibold bg-primary-container text-on-primary transition-all" id="prec_feed_0" onclick="setPrecision('feed', 0)" type="button">
+                0 Decimals (6,850 kg)
+              </button>
+<button class="px-3 py-1.5 rounded-md font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface transition-all" id="prec_feed_1" onclick="setPrecision('feed', 1)" type="button">
+                1 Decimal (6,850.5 kg)
+              </button>
+</div>
+</div>
+<!-- Financial Values -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm p-space-sm bg-surface-container-low rounded-lg">
+<div class="space-y-0.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Financial Ledger Calculations</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Unit milk pricing rates, feed ingredient invoices, and operational payroll.</p>
+</div>
+<div class="inline-flex p-1 bg-surface-container rounded-lg gap-1">
+<button class="px-3 py-1.5 rounded-md font-label-sm text-label-sm font-semibold bg-primary-container text-on-primary transition-all" id="prec_finance_2" onclick="setPrecision('finance', 2)" type="button">
+                2 Decimals ($0.50 / L)
+              </button>
+<button class="px-3 py-1.5 rounded-md font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface transition-all" id="prec_finance_0" onclick="setPrecision('finance', 0)" type="button">
+                Rounded (Whole Dollar)
+              </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Visual Theme & Display Appearance -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-2xl">palette</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Visual Appearance &amp; Lighting Environment</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Calibrated for glare resistance in daytime pasture walks and low-light parlor shifts.</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed font-semibold px-2 py-0.5 rounded">Adaptive UX</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- AgroTerra Light Theme -->
+<div class="cursor-pointer p-space-md rounded-xl bg-surface-container-low transition-all duration-200 ring-2 ring-primary" id="theme-card-light" onclick="selectTheme('light')">
+<div class="h-24 w-full rounded-lg bg-[#fbf9f3] p-2 flex flex-col justify-between shadow-inner mb-space-sm border border-outline-variant/40">
+<div class="flex items-center justify-between">
+<div class="h-2 w-12 bg-primary rounded"></div>
+<div class="h-2 w-4 bg-secondary-container rounded"></div>
+</div>
+<div class="space-y-1">
+<div class="h-1.5 w-full bg-surface-container-high rounded"></div>
+<div class="h-1.5 w-3/4 bg-surface-container-high rounded"></div>
+</div>
+<div class="flex gap-1">
+<div class="h-3 w-8 bg-primary-container rounded"></div>
+<div class="h-3 w-8 bg-surface-container rounded"></div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">AgroTerra Light</span>
+<span class="material-symbols-outlined text-primary text-base font-bold" id="badge-theme-light">check_circle</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Warm stone #fbf9f3, deep olive headers, crisp contrast in milking parlors.</p>
+</div>
+<!-- Nocturnal Dairy Dark Theme -->
+<div class="cursor-pointer p-space-md rounded-xl bg-surface-container-low transition-all duration-200" id="theme-card-dark" onclick="selectTheme('dark')">
+<div class="h-24 w-full rounded-lg bg-[#1a1c18] p-2 flex flex-col justify-between shadow-inner mb-space-sm border border-inverse-surface">
+<div class="flex items-center justify-between">
+<div class="h-2 w-12 bg-[#b8cda8] rounded"></div>
+<div class="h-2 w-4 bg-[#3e4b32] rounded"></div>
+</div>
+<div class="space-y-1">
+<div class="h-1.5 w-full bg-[#30312d] rounded"></div>
+<div class="h-1.5 w-3/4 bg-[#30312d] rounded"></div>
+</div>
+<div class="flex gap-1">
+<div class="h-3 w-8 bg-[#46583b] rounded"></div>
+<div class="h-3 w-8 bg-[#30312d] rounded"></div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Nocturnal Dairy Dark</span>
+<span class="material-symbols-outlined text-outline text-base hidden" id="badge-theme-dark">check_circle</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Deep charcoal #1a1c18, muted olive accents, minimal glare during night inspection.</p>
+</div>
+<!-- System Match -->
+<div class="cursor-pointer p-space-md rounded-xl bg-surface-container-low transition-all duration-200" id="theme-card-system" onclick="selectTheme('system')">
+<div class="h-24 w-full rounded-lg bg-gradient-to-r from-[#fbf9f3] to-[#1a1c18] p-2 flex flex-col justify-between shadow-inner mb-space-sm border border-outline-variant/40">
+<div class="flex items-center justify-between">
+<div class="h-2 w-8 bg-primary rounded"></div>
+<div class="h-2 w-8 bg-[#b8cda8] rounded"></div>
+</div>
+<div class="space-y-1">
+<div class="h-1.5 w-full bg-surface-container-high/60 rounded"></div>
+<div class="h-1.5 w-2/3 bg-surface-container-high/60 rounded"></div>
+</div>
+<div class="flex justify-between">
+<div class="h-3 w-6 bg-primary-container rounded"></div>
+<div class="h-3 w-6 bg-[#46583b] rounded"></div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">System Default Sync</span>
+<span class="material-symbols-outlined text-outline text-base hidden" id="badge-theme-system">check_circle</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Synchronizes theme automatically with tablet device operating system schedule.</p>
+</div>
+</div>
+<!-- High-Contrast Sunlight Mode -->
+<div class="mt-space-md flex items-center justify-between p-space-md rounded-xl bg-surface-container-low/60">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary-container">light_mode</span>
+<div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">High-Contrast Sunlight Boost</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sharpens typography borders and boosts metric contrast ratios for outdoor direct sunlight pasture audits.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" id="highContrastToggle" onchange="toggleHighContrast()" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:bg-primary-container peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+</section>
+</div>
+<!-- Right Column (Interactive Live Preview & QA Simulator) -->
+<div class="lg:col-span-4 space-y-space-lg">
+<!-- Live Preview Canvas Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm sticky top-20">
+<div class="flex items-center justify-between pb-space-sm mb-space-md border-b border-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">visibility</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Live UI Simulator</span>
+</div>
+<span class="flex items-center gap-1 font-label-sm text-label-sm font-semibold text-on-secondary-container bg-secondary-container px-2 py-0.5 rounded-full">
+<span class="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>
+            Real-Time
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Inspect how these numeric and regional configurations render across herd inspection boards and milking ledger exports.
+        </p>
+<!-- Simulated Dashboard KPI Card Preview -->
+<div class="p-space-md rounded-xl bg-surface-container-low transition-all duration-300" id="simulatorCard">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary-container text-base">water_drop</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface uppercase tracking-wider">Shift Yield Summary</span>
+</div>
+<span class="font-label-sm text-[0.625rem] bg-primary-fixed text-on-primary-fixed-variant font-bold px-1.5 py-0.5 rounded" id="previewTag">
+              Morning Parlor
+            </span>
+</div>
+<!-- Big Stat -->
+<div class="my-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Total Bulk Tank Intake</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-data-metric-lg text-data-metric-lg text-on-surface font-extrabold tracking-tight" id="previewMilkYield">78,420.0 L</span>
+<span class="hidden font-label-sm text-label-sm text-primary font-bold" id="previewLakhSuffix">(0.78 Lakh L)</span>
+</div>
+</div>
+<!-- Secondary Grid -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs border-t border-surface-container">
+<div>
+<span class="font-body-sm text-[0.7rem] text-on-surface-variant block">Feed Allocation</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface" id="previewFeedRation">14,250 kg</span>
+</div>
+<div>
+<span class="font-body-sm text-[0.7rem] text-on-surface-variant block">Net Batch Valuation</span>
+<span class="font-label-md text-label-md font-semibold text-primary" id="previewValuation">$42,650.00</span>
+</div>
+</div>
+<!-- Timestamp Preview Footer -->
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-[0.6875rem] flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">sync</span>
+              Last Telemetry Sync
+            </span>
+<span class="font-label-sm text-label-sm font-medium text-on-surface" id="previewTimestamp">24/10/2024 09:42 AM</span>
+</div>
+</div>
+<!-- Simulator State Quick Triggers -->
+<div class="mt-space-lg space-y-space-sm">
+<span class="font-label-sm text-[0.6875rem] uppercase tracking-wider font-semibold text-on-surface-variant block">
+            QA Scenario Stress Tests
+          </span>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-medium text-left truncate flex items-center gap-1 transition-colors" onclick="quickApplyScenario('standard')" type="button">
+<span class="material-symbols-outlined text-sm">public</span>
+              Western Standard
+            </button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-medium text-left truncate flex items-center gap-1 transition-colors" onclick="quickApplyScenario('pk_dairy')" type="button">
+<span class="material-symbols-outlined text-sm">payments</span>
+              South Asian / PKR
+            </button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-medium text-left truncate flex items-center gap-1 transition-colors" onclick="quickApplyScenario('parlor_dark')" type="button">
+<span class="material-symbols-outlined text-sm">dark_mode</span>
+              Night Shift Dark
+            </button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-medium text-left truncate flex items-center gap-1 transition-colors" onclick="quickApplyScenario('high_prec')" type="button">
+<span class="material-symbols-outlined text-sm">decimal_increase</span>
+              High Precision QA
+            </button>
+</div>
+</div>
+<!-- Regional Compliance Note -->
+<div class="mt-space-lg p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-base text-primary-container mt-0.5">verified_user</span>
+<p class="font-body-sm text-[0.7rem] text-on-surface-variant leading-relaxed">
+            Formatting overrides apply immediately across the web dashboard and synched handheld pasture terminals. In-flight exports preserve ISO standard raw data points.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // State management for interface preferences
+  const state = {
+    grouping: 'western',
+    showLakhSuffix: true,
+    dateFormat: 'DD/MM/YYYY',
+    timeFormat: '12h',
+    firstDay: 'monday',
+    precision: {
+      milk: 1,
+      feed: 0,
+      finance: 2
+    },
+    theme: 'light',
+    highContrast: false,
+    hasChanges: false
+  };
+
+  function updateLivePreview() {
+    // 1. Grouping
+    const groupingEl = document.querySelector('input[name="num_grouping"]:checked');
+    if (groupingEl) state.grouping = groupingEl.value;
+
+    const suffixEl = document.getElementById('toggleLakhSuffix');
+    state.showLakhSuffix = suffixEl ? suffixEl.checked : true;
+
+    // 2. Date & Time
+    const dateEl = document.getElementById('dateFormatSelect');
+    if (dateEl) state.dateFormat = dateEl.value;
+
+    const timeEl = document.getElementById('timeFormatSelect');
+    if (timeEl) state.timeFormat = timeEl.value;
+
+    // 3. Update DOM Preview elements
+    const milkYieldEl = document.getElementById('previewMilkYield');
+    const lakhSuffixEl = document.getElementById('previewLakhSuffix');
+    const feedEl = document.getElementById('previewFeedRation');
+    const valuationEl = document.getElementById('previewValuation');
+    const timestampEl = document.getElementById('previewTimestamp');
+
+    // Sample raw values
+    const rawMilk = 78420.45;
+    const rawFeed = 14250.3;
+    const rawVal = 42650.00;
+
+    // Formatting Milk
+    let formattedMilk = '';
+    let suffixText = '';
+
+    if (state.grouping === 'south_asian') {
+      // Pakistani/Indian notation: 78,420 -> 78,420 (for large: e.g. 12,80,000)
+      // For 78,420:
+      const milkVal = state.precision.milk === 2 ? rawMilk.toFixed(2) : rawMilk.toFixed(1);
+      formattedMilk = '78,420.' + (state.precision.milk === 2 ? '45' : '5') + ' L';
+      suffixText = '(0.78 Lakh L)';
+      valuationEl.textContent = 'Rs 42,650' + (state.precision.finance === 2 ? '.00' : '');
+      feedEl.textContent = '14,250' + (state.precision.feed === 1 ? '.3' : '') + ' kg';
+    } else {
+      formattedMilk = (state.precision.milk === 2 ? '78,420.45' : '78,420.5') + ' L';
+      valuationEl.textContent = '$42,650' + (state.precision.finance === 2 ? '.00' : '');
+      feedEl.textContent = '14,250' + (state.precision.feed === 1 ? '.3' : '') + ' kg';
+    }
+
+    milkYieldEl.textContent = formattedMilk;
+
+    if (state.grouping === 'south_asian' && state.showLakhSuffix) {
+      lakhSuffixEl.textContent = suffixText;
+      lakhSuffixEl.classList.remove('hidden');
+    } else {
+      lakhSuffixEl.classList.add('hidden');
+    }
+
+    // Date Time Rendering
+    let dateStr = '24/10/2024';
+    if (state.dateFormat === 'MM/DD/YYYY') dateStr = '10/24/2024';
+    else if (state.dateFormat === 'YYYY-MM-DD') dateStr = '2024-10-24';
+    else if (state.dateFormat === 'DD-MMM-YYYY') dateStr = '24-Oct-2024';
+
+    let timeStr = state.timeFormat === '24h' ? '09:42' : '09:42 AM';
+    timestampEl.textContent = `${dateStr} ${timeStr}`;
+
+    markDirty();
+  }
+
+  function setPrecision(metric, digits) {
+    state.precision[metric] = digits;
+    
+    // Toggle active state classes
+    ['milk', 'feed', 'finance'].forEach(m => {
+      [0, 1, 2].forEach(d => {
+        const btn = document.getElementById(`prec_${m}_${d}`);
+        if (btn) {
+          if (m === metric && state.precision[m] === d) {
+            btn.className = 'px-3 py-1.5 rounded-md font-label-sm text-label-sm font-semibold bg-primary-container text-on-primary transition-all shadow-sm';
+          } else if (m === metric) {
+            btn.className = 'px-3 py-1.5 rounded-md font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface transition-all';
+          }
+        }
+      });
+    });
+
+    updateLivePreview();
+  }
+
+  function selectTheme(themeName) {
+    state.theme = themeName;
+    ['light', 'dark', 'system'].forEach(t => {
+      const card = document.getElementById(`theme-card-${t}`);
+      const badge = document.getElementById(`badge-theme-${t}`);
+      if (card && badge) {
+        if (t === themeName) {
+          card.classList.add('ring-2', 'ring-primary');
+          badge.classList.remove('hidden');
+          badge.classList.add('text-primary');
+        } else {
+          card.classList.remove('ring-2', 'ring-primary');
+          badge.classList.add('hidden');
+        }
+      }
+    });
+
+    // Mirror to simulator card preview
+    const simCard = document.getElementById('simulatorCard');
+    if (simCard) {
+      if (themeName === 'dark') {
+        simCard.classList.remove('bg-surface-container-low');
+        simCard.classList.add('bg-[#1a1c18]', 'text-inverse-on-surface');
+      } else {
+        simCard.classList.remove('bg-[#1a1c18]', 'text-inverse-on-surface');
+        simCard.classList.add('bg-surface-container-low');
+      }
+    }
+
+    markDirty();
+  }
+
+  function toggleHighContrast() {
+    const el = document.getElementById('highContrastToggle');
+    state.highContrast = el ? el.checked : false;
+    const simCard = document.getElementById('simulatorCard');
+    if (simCard) {
+      if (state.highContrast) {
+        simCard.classList.add('shadow-lg', 'border-2', 'border-on-surface');
+      } else {
+        simCard.classList.remove('shadow-lg', 'border-2', 'border-on-surface');
+      }
+    }
+    markDirty();
+  }
+
+  function markDirty() {
+    state.hasChanges = true;
+    const saveBtn = document.getElementById('saveBtn');
+    if (saveBtn) {
+      saveBtn.classList.remove('opacity-90');
+      saveBtn.classList.add('animate-pulse');
+      setTimeout(() => saveBtn.classList.remove('animate-pulse'), 400);
+    }
+  }
+
+  function quickApplyScenario(type) {
+    if (type === 'standard') {
+      const westernRadio = document.querySelector('input[name="num_grouping"][value="western"]');
+      if (westernRadio) westernRadio.checked = true;
+      document.getElementById('toggleLakhSuffix').checked = false;
+      document.getElementById('dateFormatSelect').value = 'DD/MM/YYYY';
+      document.getElementById('timeFormatSelect').value = '12h';
+      setPrecision('milk', 1);
+      setPrecision('feed', 0);
+      setPrecision('finance', 2);
+      selectTheme('light');
+    } else if (type === 'pk_dairy') {
+      const saRadio = document.querySelector('input[name="num_grouping"][value="south_asian"]');
+      if (saRadio) saRadio.checked = true;
+      document.getElementById('toggleLakhSuffix').checked = true;
+      document.getElementById('dateFormatSelect').value = 'DD/MM/YYYY';
+      document.getElementById('timeFormatSelect').value = '24h';
+      setPrecision('milk', 2);
+      setPrecision('feed', 1);
+      setPrecision('finance', 2);
+      selectTheme('light');
+    } else if (type === 'parlor_dark') {
+      selectTheme('dark');
+      document.getElementById('timeFormatSelect').value = '24h';
+      document.getElementById('dateFormatSelect').value = 'YYYY-MM-DD';
+    } else if (type === 'high_prec') {
+      setPrecision('milk', 2);
+      setPrecision('feed', 1);
+      setPrecision('finance', 2);
+      const hc = document.getElementById('highContrastToggle');
+      if (hc) {
+        hc.checked = true;
+        toggleHighContrast();
+      }
+    }
+    updateLivePreview();
+  }
+
+  function saveForm() {
+    const banner = document.getElementById('feedbackBanner');
+    if (banner) {
+      banner.classList.remove('hidden');
+      banner.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    state.hasChanges = false;
+  }
+
+  function dismissBanner() {
+    const banner = document.getElementById('feedbackBanner');
+    if (banner) banner.classList.add('hidden');
+  }
+
+  function resetForm() {
+    quickApplyScenario('standard');
+    dismissBanner();
+    state.hasChanges = false;
+  }
+
+  // Initial calculation
+  document.addEventListener('DOMContentLoaded', () => {
+    updateLivePreview();
+  });
+</script></main></div></body></html>

@@ -1,0 +1,751 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-high": "#eae8e2", "inverse-primary": "#b8cda8", "on-secondary-fixed": "#141f0a", "surface-container-highest": "#e4e2dd", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#bdcbac", "tertiary-fixed-dim": "#ffb784", "on-primary-fixed-variant": "#3a4c30", "secondary-container": "#d9e8c7", "on-primary": "#ffffff", "on-background": "#1b1c18", "surface": "#fbf9f3", "inverse-on-surface": "#f3f1eb", "on-tertiary-fixed": "#301400", "on-primary-fixed": "#101f08", "on-tertiary-fixed-variant": "#6c3a11", "error-container": "#ffdad6", "on-surface-variant": "#444840", "on-error": "#ffffff", "on-secondary-container": "#5b694e", "primary": "#2f4126", "primary-fixed-dim": "#b8cda8", "on-primary-container": "#b8cda9", "on-tertiary-container": "#ffb785", "tertiary-container": "#7a461c", "surface-container-lowest": "#ffffff", "surface-tint": "#516446", "primary-container": "#46583b", "surface-variant": "#e4e2dd", "outline-variant": "#c4c8bd", "background": "#fbf9f3", "on-surface": "#1b1c18", "tertiary": "#5e3007", "error": "#ba1a1a", "surface-bright": "#fbf9f3", "inverse-surface": "#30312d", "on-secondary": "#ffffff", "surface-dim": "#dcdad4", "tertiary-fixed": "#ffdcc6", "on-secondary-fixed-variant": "#3e4b32", "primary-fixed": "#d4e9c3", "surface-container": "#f0eee8", "outline": "#75786f", "surface-container-low": "#f5f3ed", "on-error-container": "#93000a", "secondary": "#556249", "secondary-fixed": "#d9e8c7" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-md": "1.5rem", "space-md": "0.75rem", "margin": "1rem", "space-lg": "1rem", "space-2xl": "2rem", "gutter": "1rem", "space-xl": "1.5rem", "margin-lg": "2rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter-md": "1.25rem", "gutter-lg": "1.5rem" }, "fontFamily": { "label-md": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"], "headline-lg-mobile": ["Manrope"], "headline-xl-mobile": ["Manrope"], "label-lg": ["Inter"], "headline-xl": ["Manrope"], "headline-lg": ["Manrope"], "body-md": ["Inter"], "headline-sm": ["Manrope"], "headline-md": ["Manrope"] }, "fontSize": { "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "400" }], "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "fontWeight": "400" }], "headline-lg-mobile": ["1.375rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "800" }], "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["0.875rem", { "lineHeight": "1.375rem", "fontWeight": "400" }], "headline-sm": ["1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "headline-md": ["1.25rem", { "lineHeight": "1.625rem", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-xl flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBYgTLzL4ixmW_u0Iuetl8cMytFAkTgo9j0OqmFpmR4ZdNIJA8TAM26gSRdozb0vdo_6xJy3scVi2laB3t23jDT5fSIe8Gnlt9IldNJ8j-8vQ9f0crSqtL97T814neAilUmvuxVi9XQNkQdm34ZBtCq3lRd3pGErjVhDlhDM1nNOW2QXZlG8cZB7Vpgu2pyG5oBekky3LdocMVoovOlsZt9zFE9JFdFVoDBX3w_DHLm0w"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none tracking-tight">SmartFarm</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-0.5">Supervisor Rail</span></div></div><button class="text-on-surface-variant hover:text-on-surface p-space-xs rounded-lg transition-colors" title="Toggle compact view" type="button"><span class="material-symbols-outlined text-lg leading-none">dock_to_right</span></button></div><div class="px-space-md py-space-sm"><div class="bg-surface-container px-space-md py-space-sm rounded-lg flex items-center justify-between"><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-on-surface-variant truncate">ESTATE CONTEXT</span><span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Greenfield Estate</span></div><span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-space-xs py-0.5 rounded font-mono">GF-042</span></div></div><nav class="flex-1 px-space-md py-space-xs space-y-0.5 overflow-y-auto" data-active-classes="bg-primary text-on-primary font-semibold shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-xl">dashboard</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#"><span class="material-symbols-outlined text-xl">pets</span><span class="font-label-lg text-label-lg">Animals</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#"><span class="material-symbols-outlined text-xl">healing</span><span class="font-label-lg text-label-lg">Animal Health</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#"><span class="material-symbols-outlined text-xl">water_drop</span><span class="font-label-lg text-label-lg">Milk Production</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding" href="#"><span class="material-symbols-outlined text-xl">grass</span><span class="font-label-lg text-label-lg">Feeding Plans</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#"><span class="material-symbols-outlined text-xl">inventory_2</span><span class="font-label-lg text-label-lg">Inventory Usage</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers-and-attendance" href="#"><span class="material-symbols-outlined text-xl">badge</span><span class="font-label-lg text-label-lg">Workers &amp; Attendance</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#"><span class="material-symbols-outlined text-xl">precision_manufacturing</span><span class="font-label-lg text-label-lg">Equipment</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notifications" href="#"><span class="material-symbols-outlined text-xl">notifications</span><span class="font-label-lg text-label-lg">Operational Alerts</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#"><span class="material-symbols-outlined text-xl">analytics</span><span class="font-label-lg text-label-lg">Shift Reports</span></a></nav></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-md"><button class="md:hidden p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container" type="button"><span class="material-symbols-outlined text-xl">menu</span></button><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Greenfield Dairy Estate</span><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-space-xs py-0.5 rounded font-mono">GF-042</span></div><span class="text-outline-variant text-sm">/</span><div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-sm">fence</span><span>Barn Zone A</span></div></div><div class="flex items-center gap-space-lg"><div class="hidden sm:flex items-center gap-2 bg-secondary-container/60 px-space-md py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-secondary-fixed font-semibold tracking-wide uppercase">On Duty · Active</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Operational Notifications" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary-container ring-2 ring-surface"></span></button><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Theme Display" type="button"><span class="material-symbols-outlined text-xl">light_mode</span></button><div class="h-6 w-px bg-outline-variant/60"></div><div class="flex items-center gap-space-md pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKRfnvDtcXaA_3fouE5OFtLyyygvIskuxgsScuB3RWTNQvZ0TXW1jZMn6P1jecz8rtfhaoeatFRSlhGxosuymj0Z74Gb3NeY9k-HpkTV1gVECMz-aOx4ic5cbig5OeibpkMiehHyRDxNEqsS1DvY0suVPQHSm8HBgREiL03zsO3CyppQ6P6Lx7Kj2AY9MjJWACPCsVCG6YU3N1OMaaoQVLKC4LbU9ah5w1pjafjyse"><div class="hidden lg:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface font-semibold leading-tight">Marcus Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant">Farm Supervisor</span></div><span class="material-symbols-outlined text-on-surface-variant text-base cursor-pointer">arrow_drop_down</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Content Container with Disciplined Spacing & Structural Cleanliness -->
+<div class="px-gutter-lg py-space-xl max-w-[1600px] w-full mx-auto space-y-space-xl">
+<!-- Operational Context & Breadcrumbs -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant">
+<span class="hover:text-primary transition-colors cursor-pointer">Greenfield Dairy Estate GF-042</span>
+<span class="text-outline-variant font-mono">/</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Barn Zone A</span>
+<span class="text-outline-variant font-mono">/</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Animal Health</span>
+<span class="text-outline-variant font-mono">/</span>
+<span class="text-primary font-semibold">Treatments &amp; Vaccinations</span>
+</div>
+<div class="flex items-center gap-space-md">
+
+<div class="text-on-surface-variant font-mono font-label-sm text-label-sm">
+          Last Vet Sign-Off: <span class="font-semibold text-on-surface">24 Oct 16:30</span>
+</div>
+</div>
+</div>
+<!-- Page Title & Operational Scope Callout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+<div class="lg:col-span-7 space-y-space-xs">
+
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">
+          Treatments, Vaccinations &amp; Veterinary Care
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          Operational administration logs, withdrawal period tracking, and preventative immunization schedules. Treatment administration is verified by attending veterinarian.
+        </p>
+</div>
+<!-- Scope Callout Card (Restricted View Clarity) -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-lg rounded-xl shadow-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div class="flex items-start gap-space-md pl-1">
+<span class="material-symbols-outlined text-primary-container text-2xl mt-0.5">policy</span>
+<div class="space-y-1">
+<span class="font-label-lg text-label-lg text-primary font-bold tracking-wide uppercase flex items-center gap-2">
+              Field Compliance Boundary
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Treatment costs and financial invoicing are restricted enterprise data and omitted from supervisor views. Prescription alterations and treatment closure require licensed Veterinarian authorization. Supervisors monitor milk withholding compliance and verify scheduled on-ground administrations.
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Supervisor Interactive View Tabs -->
+<div class="bg-surface-container-low p-1.5 rounded-xl shadow-sm flex items-center gap-1.5 overflow-x-auto">
+<button class="px-space-lg py-2.5 rounded-lg font-label-lg text-label-lg font-semibold bg-primary text-on-primary transition-all flex items-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg">medical_services</span>
+        Accessible Treatments
+        <span class="bg-surface-container-highest/20 text-on-primary text-label-sm px-1.5 py-0.5 rounded-full font-mono ml-1">3 Active</span>
+</button>
+<button class="px-space-lg py-2.5 rounded-lg font-label-lg text-label-lg font-medium text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-lg">vaccines</span>
+        Vaccination Records &amp; Due Dates
+        <span class="bg-secondary-container text-on-secondary-container text-label-sm px-1.5 py-0.5 rounded-full font-mono ml-1">12 Due</span>
+</button>
+<button class="px-space-lg py-2.5 rounded-lg font-label-lg text-label-lg font-medium text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-lg">event_available</span>
+        Veterinary Appointments (Read-Only)
+      </button>
+<button class="px-space-lg py-2.5 rounded-lg font-label-lg text-label-lg font-medium text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-lg">history_edu</span>
+        Permitted Disease History
+      </button>
+</div>
+<!-- SECTION A: ACCESSIBLE TREATMENT RECORDS -->
+<section class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">healing</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Active In-Pen Treatment Records</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Prescriptions actively undergoing intramammary, oral, or intramuscular administration with automated line diversion gates.
+          </p>
+</div>
+<!-- Filter Controls -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="relative">
+<input class="h-10 pl-9 pr-3 rounded-lg bg-surface-container text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/20 w-52" placeholder="Filter Ear Tag / Cow ID..." type="text">
+<span class="material-symbols-outlined absolute left-2.5 top-2.5 text-on-surface-variant text-base">search</span>
+</div>
+<div class="h-10 px-3 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-2">
+<span class="text-on-surface-variant">Pen:</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none font-semibold cursor-pointer">
+<option>All Barn Zones</option>
+<option selected="">Pen 04 (Hospital)</option>
+<option>Pen 01 (Fresh Cows)</option>
+<option>Pen 07 (Dry Pasture)</option>
+</select>
+</div>
+<div class="h-10 px-3 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-2">
+<span class="text-on-surface-variant">Withholding:</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none font-semibold cursor-pointer">
+<option selected="">Active Only</option>
+<option>Cleared This Week</option>
+<option>All States</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Treatments Detailed Cards / Table -->
+<div class="space-y-space-md">
+<!-- Treatment Card 1: Critical Mastitis (Intramammary) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<!-- Active Withholding Status Visual Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary"></div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-md items-start pl-space-xs">
+<!-- Left Info: Cow and Diagnosis -->
+<div class="xl:col-span-4 space-y-space-sm">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">NL-72901-B</span>
+<span class="font-label-lg text-label-lg font-semibold text-secondary">"Greendale Marigold"</span>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded font-mono">
+                  Pen 04 · Stall 08
+                </span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm text-tertiary">diagnosis</span>
+                  Vet Diagnosed Condition
+                </div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">
+                  Mild Clinical Mastitis (Quarter RF)
+                </div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-secondary">badge</span>
+<span>Attending: <strong>Dr. H. Jenkins, DVM</strong> (Lic #VT-8821)</span>
+</div>
+</div>
+</div>
+<!-- Middle Info: Medication, Dose, & Treatment Window -->
+<div class="xl:col-span-4 space-y-space-sm bg-surface-container-low p-space-md rounded-lg">
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide block">Prescribed Medication</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Cephapirin Sodium 300mg</span>
+<span class="text-body-sm text-on-surface-variant block">Route: Intramammary</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide block">Current Progress</span>
+<span class="font-label-lg text-label-lg font-bold text-primary">Day 4 of 5 (80%)</span>
+<span class="text-body-sm text-on-surface-variant block font-mono">21 Oct – 25 Oct 2024</span>
+</div>
+</div>
+<div class="pt-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide block mb-1">Supervisor Daily Instruction:</span>
+<p class="font-body-sm text-body-sm text-on-surface bg-surface-container-lowest p-2 rounded">
+                  Administer PM infusion immediately following post-dip milking; verify CMT paddle reaction score before morning milking.
+                </p>
+</div>
+</div>
+<!-- Right Info: Milk Withholding Flag & Lock Status -->
+<div class="xl:col-span-4 flex flex-col justify-between h-full space-y-space-md">
+<div class="bg-tertiary-fixed/30 p-space-md rounded-lg space-y-1.5">
+<div class="flex items-center gap-1.5 text-tertiary-container font-label-lg text-label-lg font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-base text-tertiary">lock</span>
+                  WITHHOLDING ACTIVE: Milk Line Locked
+                </div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                  Do Not Divert to Bulk Tank until:
+                  <span class="font-mono font-bold text-on-surface block text-base mt-0.5">28 Oct 2024 · 06:00 AM</span>
+</p>
+<div class="flex items-center gap-2 pt-1 font-label-sm text-label-sm text-secondary font-medium"><span class="w-2 h-2 rounded-full bg-tertiary"></span>Physical milk withholding in effect. Divert to isolation drain.</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-2">
+<button class="h-10 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg font-semibold transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">visibility</span>
+                  Protocol Details
+                </button>
+<button class="h-10 px-4 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">check_circle</span>
+                  Log Day 4 Dose
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Treatment Card 2: Foot Rot (Injectable) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary"></div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-md items-start pl-space-xs">
+<div class="xl:col-span-4 space-y-space-sm">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">NL-88419-A</span>
+<span class="font-label-lg text-label-lg font-semibold text-secondary">"Clarabelle #12"</span>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded font-mono">
+                  Pen 04 · Stall 03
+                </span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm text-tertiary">diagnosis</span>
+                  Vet Diagnosed Condition
+                </div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">
+                  Interdigital Necrobacillosis (Foot Rot)
+                </div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-secondary">badge</span>
+<span>Attending: <strong>Dr. H. Jenkins, DVM</strong> (Lic #VT-8821)</span>
+</div>
+</div>
+</div>
+<div class="xl:col-span-4 space-y-space-sm bg-surface-container-low p-space-md rounded-lg">
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide block">Prescribed Medication</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Oxytetracycline 200mg/ml</span>
+<span class="text-body-sm text-on-surface-variant block">Dose: 10ml IM Deep</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide block">Current Progress</span>
+<span class="font-label-lg text-label-lg font-bold text-primary">Day 2 of 3 (66%)</span>
+<span class="text-body-sm text-on-surface-variant block font-mono">23 Oct – 25 Oct 2024</span>
+</div>
+</div>
+<div class="pt-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide block mb-1">Supervisor Daily Instruction:</span>
+<p class="font-body-sm text-body-sm text-on-surface bg-surface-container-lowest p-2 rounded">
+                  Inspect left hind claw interdigital cleft for foul odor reduction. Re-apply copper sulfate footbath walk-through.
+                </p>
+</div>
+</div>
+<div class="xl:col-span-4 flex flex-col justify-between h-full space-y-space-md">
+<div class="bg-tertiary-fixed/30 p-space-md rounded-lg space-y-1.5">
+<div class="flex items-center gap-1.5 text-tertiary-container font-label-lg text-label-lg font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-base text-tertiary">lock</span>
+                  WITHHOLDING ACTIVE: Milk Line Locked
+                </div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                  Do Not Divert to Bulk Tank until:
+                  <span class="font-mono font-bold text-on-surface block text-base mt-0.5">31 Oct 2024 · 18:00 PM</span>
+</p>
+<div class="flex items-center gap-2 pt-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                  Standard 144-Hour Milk Clearance Hold Triggered
+                </div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-2">
+<button class="h-10 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg font-semibold transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">visibility</span>
+                  Protocol Details
+                </button>
+<button class="h-10 px-4 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">check_circle</span>
+                  Log Day 2 Dose
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Treatment Card 3: Hypocalcemia (Oral / Resolved Withholding) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-md items-start pl-space-xs">
+<div class="xl:col-span-4 space-y-space-sm">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">NL-64010-C</span>
+<span class="font-label-lg text-label-lg font-semibold text-secondary">"Greendale Blossom"</span>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded font-mono">
+                  Pen 01 · Fresh Herd
+                </span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm text-secondary">diagnosis</span>
+                  Vet Diagnosed Condition
+                </div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">
+                  Mild Post-Calving Hypocalcemia
+                </div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-secondary">badge</span>
+<span>Attending: <strong>Dr. H. Jenkins, DVM</strong> (Lic #VT-8821)</span>
+</div>
+</div>
+</div>
+<div class="xl:col-span-4 space-y-space-sm bg-surface-container-low p-space-md rounded-lg">
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide block">Prescribed Medication</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Calcium Gluconate Oral Bolus</span>
+<span class="text-body-sm text-on-surface-variant block">Dose: 2 Oral Doses (Complete)</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide block">Current Progress</span>
+<span class="font-label-lg text-label-lg font-bold text-secondary">Final Post-Check Stage</span>
+<span class="text-body-sm text-on-surface-variant block font-mono">22 Oct – 24 Oct 2024</span>
+</div>
+</div>
+<div class="pt-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide block mb-1">Supervisor Daily Instruction:</span>
+<p class="font-body-sm text-body-sm text-on-surface bg-surface-container-lowest p-2 rounded">
+                  Monitor rumen fill score and ear tip temperature during 14:00 pen walk. Confirm normal stand/rise reflex.
+                </p>
+</div>
+</div>
+<div class="xl:col-span-4 flex flex-col justify-between h-full space-y-space-md">
+<div class="bg-secondary-container/50 p-space-md rounded-lg space-y-1.5">
+<div class="flex items-center gap-1.5 text-primary font-label-lg text-label-lg font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-base text-primary">check_circle</span>
+                  CLEARED: Zero Milk Withholding
+                </div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                  Nutritional oral calcium requires no milk line lockdown.
+                  <span class="font-mono font-bold text-primary block text-sm mt-0.5">Bulk Tank Safe · Parlor Line Clear</span>
+</p>
+<div class="flex items-center gap-2 pt-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                  Cleared by Dr. Jenkins 24 Oct 08:00 AM
+                </div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-2">
+<button class="h-10 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg font-semibold transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">visibility</span>
+                  Protocol Details
+                </button>
+<button class="h-10 px-4 rounded-lg bg-surface-container-highest text-on-surface font-label-lg text-label-lg font-semibold transition-colors flex items-center gap-1.5 cursor-not-allowed opacity-75" disabled="" title="Protocol complete" type="button">
+<span class="material-symbols-outlined text-base">done_all</span>
+                  Schedule Complete
+                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION B: VACCINATION RECORDS & DUE-DATE SCHEDULE -->
+<section class="space-y-space-md pt-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">vaccines</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Vaccination Log &amp; Due-Date Schedule</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Vaccination scheduling is determined by approved herd veterinary protocols. Supervisors record field administration only.
+          </p>
+</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant bg-surface-container px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-secondary">help</span>
+<span>Field Verification Mode: Double-check batch lot number before needle injection</span>
+</div>
+</div>
+<!-- Vaccination KPI Telemetry Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-md">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex items-center justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Herd Immunization Rate</span>
+<div class="font-headline-xl text-headline-xl font-bold text-primary font-mono">96.4%</div>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">arrow_upward</span>
+<span>+1.2% over Q3 target threshold</span>
+</span>
+</div>
+<div class="w-16 h-16 rounded-full bg-secondary-container/60 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex items-center justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Boosters Due (Next 14 Days)</span>
+<div class="font-headline-xl text-headline-xl font-bold text-tertiary-container font-mono">12 Head</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Scheduled: BVD Booster &amp; Rotavirus</span>
+</div>
+<div class="w-16 h-16 rounded-full bg-tertiary-fixed/40 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-3xl">notification_important</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex items-center justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Completed Cycles (This Quarter)</span>
+<div class="font-headline-xl text-headline-xl font-bold text-on-surface font-mono">236 Head</div>
+<span class="font-body-sm text-body-sm text-secondary">Verified records archived in estate registry</span>
+</div>
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">inventory_2</span>
+</div>
+</div>
+</div>
+<!-- Vaccination Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<th class="py-3 px-space-lg">Animal Identification</th>
+<th class="py-3 px-space-md">Vaccine Product &amp; Lot</th>
+<th class="py-3 px-space-md">Target Group / Pen</th>
+<th class="py-3 px-space-md">Schedule Window</th>
+<th class="py-3 px-space-md">Protocol Stage</th>
+<th class="py-3 px-space-md">Recorded By</th>
+<th class="py-3 px-space-lg text-right">Action / Log</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<!-- Cow 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-space-lg">
+<div class="font-label-lg text-label-lg font-bold text-on-surface">NL-72901-B</div>
+<div class="text-secondary font-label-sm text-label-sm">Greendale Marigold</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="font-semibold text-primary">Bovi-Shield Gold FP5 L5</div>
+<div class="font-mono text-on-surface-variant font-label-sm text-label-sm">Lot #BV-9941</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="bg-surface-container px-2 py-1 rounded font-label-sm text-label-sm font-medium">Pen 04 · Hospital</span>
+</td>
+<td class="py-4 px-space-md">
+<div class="font-bold text-tertiary-container">Due: 28 Oct 2024</div>
+<div class="text-on-surface-variant text-label-sm">Primary: 15 Sep 2024</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="bg-tertiary-fixed/30 text-tertiary-container px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">timer</span>
+                    Booster Due (4 Days)
+                  </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="text-on-surface">M. Vance (Supervisor)</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm">Verif: Dr. Jenkins</div>
+</td>
+<td class="py-4 px-space-lg text-right">
+<button class="h-9 px-3 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                    Record Injection
+                  </button>
+</td>
+</tr>
+<!-- Cow 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-space-lg">
+<div class="font-label-lg text-label-lg font-bold text-on-surface">NL-81204-E</div>
+<div class="text-secondary font-label-sm text-label-sm">Greendale Amber</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="font-semibold text-primary">ScourGuard 4KC</div>
+<div class="font-mono text-on-surface-variant font-label-sm text-label-sm">Lot #SG-2041</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="bg-surface-container px-2 py-1 rounded font-label-sm text-label-sm font-medium">Pen 07 · Dry Pasture</span>
+</td>
+<td class="py-4 px-space-md">
+<div class="font-bold text-tertiary-container">Due: 30 Oct 2024</div>
+<div class="text-on-surface-variant text-label-sm">Pre-Calving Booster</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="bg-tertiary-fixed/30 text-tertiary-container px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">timer</span>
+                    Booster Due (6 Days)
+                  </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="text-on-surface">M. Vance (Supervisor)</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm">Verif: Dr. Jenkins</div>
+</td>
+<td class="py-4 px-space-lg text-right">
+<button class="h-9 px-3 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                    Record Injection
+                  </button>
+</td>
+</tr>
+<!-- Cow 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-space-lg">
+<div class="font-label-lg text-label-lg font-bold text-on-surface">NL-51922-A</div>
+<div class="text-secondary font-label-sm text-label-sm">Greendale Meadow</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="font-semibold text-primary">Bovi-Shield Gold FP5 L5</div>
+<div class="font-mono text-on-surface-variant font-label-sm text-label-sm">Lot #BV-9941</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="bg-surface-container px-2 py-1 rounded font-label-sm text-label-sm font-medium">Pen 01 · Fresh Cows</span>
+</td>
+<td class="py-4 px-space-md">
+<div class="text-on-surface">Administered 18 Oct 2024</div>
+<div class="text-on-surface-variant text-label-sm font-mono">10:45 AM Stamp</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified</span>
+                    Cycle Completed
+                  </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="text-on-surface">M. Vance (Supervisor)</div>
+<div class="text-secondary font-label-sm text-label-sm font-medium">Confirmed Record</div>
+</td>
+<td class="py-4 px-space-lg text-right">
+<button class="h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium transition-colors" type="button">
+                    View Cert
+                  </button>
+</td>
+</tr>
+<!-- Cow 4 (Calf in Nursery) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-space-lg">
+<div class="font-label-lg text-label-lg font-bold text-on-surface">NL-99103-H</div>
+<div class="text-secondary font-label-sm text-label-sm">Heifer Calf #421</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="font-semibold text-primary">Inforce 3 (Intranasal)</div>
+<div class="font-mono text-on-surface-variant font-label-sm text-label-sm">Lot #IN-7734</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="bg-surface-container px-2 py-1 rounded font-label-sm text-label-sm font-medium">Nursery Hutches · H-14</span>
+</td>
+<td class="py-4 px-space-md">
+<div class="text-on-surface">Administered 22 Oct 2024</div>
+<div class="text-on-surface-variant text-label-sm font-mono">07:15 AM Stamp</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified</span>
+                    Primary Dose Verified
+                  </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="text-on-surface">M. Vance (Supervisor)</div>
+<div class="text-secondary font-label-sm text-label-sm font-medium">Confirmed Record</div>
+</td>
+<td class="py-4 px-space-lg text-right">
+<button class="h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium transition-colors" type="button">
+                    View Cert
+                  </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- SECTION C & SECTION D: ASYMMETRIC DUAL PANEL (VET APPOINTMENTS & PERMITTED DISEASE ARCHIVE) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg pt-space-md">
+<!-- SECTION C: VETERINARY APPOINTMENTS & ROUTINE VISITS (READ-ONLY) -->
+<section class="lg:col-span-6 space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">calendar_month</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Veterinary Appointments</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Read-only visit schedules established by Estate Management &amp; Attending DVM.
+            </p>
+</div>
+<span class="bg-surface-container text-on-surface-variant text-label-sm px-2.5 py-1 rounded font-mono">
+            READ-ONLY
+          </span>
+</div>
+<!-- Appointment Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md relative overflow-hidden">
+<div class="absolute top-0 right-0 left-0 h-1 bg-primary"></div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm border-b border-surface-container">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-mono tracking-wider">Upcoming Routine Health Visit</span>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mt-0.5">
+                Tuesday, Oct 29, 2024
+              </div>
+<div class="font-mono text-primary font-semibold text-sm">
+                08:30 – 12:00 AM (Field Time)
+              </div>
+</div>
+<div class="bg-surface-container-low px-3 py-2 rounded-lg flex items-center gap-2 self-start sm:self-auto">
+<span class="material-symbols-outlined text-primary text-2xl">medical_information</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Attending Clinician</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Dr. H. Jenkins, DVM</span>
+</div>
+</div>
+</div>
+<!-- Agenda Purpose & Notes -->
+<div class="space-y-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Scope of Scheduled Visit</span>
+<p class="font-body-md text-body-md text-on-surface mt-0.5">
+                Routine Post-Calving Checkup (Pen 01), Dry-Cow Off Protocols, and Pen 04 Isolation Release Review for antibiotic cleared head.
+              </p>
+</div>
+<!-- Roster Assigned for Review -->
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+                  Roster Tagged for Clinical Inspection (6 Head)
+                </span>
+<span class="font-mono font-label-sm text-label-sm text-primary font-bold">Zone A Priority</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-1 font-mono text-label-sm text-label-sm">
+<div class="bg-surface-container-lowest p-2 rounded flex flex-col">
+<span class="font-bold text-on-surface">NL-72901-B</span>
+<span class="text-on-surface-variant text-xs">Mastitis Check</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded flex flex-col">
+<span class="font-bold text-on-surface">NL-88419-A</span>
+<span class="text-on-surface-variant text-xs">Foot Rot Clearance</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded flex flex-col">
+<span class="font-bold text-on-surface">NL-64010-C</span>
+<span class="text-on-surface-variant text-xs">Calcium Follow-up</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded flex flex-col">
+<span class="font-bold text-on-surface">NL-51209-F</span>
+<span class="text-on-surface-variant text-xs">Pregnancy Exam</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded flex flex-col">
+<span class="font-bold text-on-surface">NL-41008-D</span>
+<span class="text-on-surface-variant text-xs">Fresh Health Score</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded flex flex-col">
+<span class="font-bold text-on-surface">NL-33019-B</span>
+<span class="text-on-surface-variant text-xs">Dry-off Prep</span>
+</div>
+</div>
+</div>
+<!-- Operational Notice -->
+<div class="flex items-start gap-2 text-on-surface-variant font-body-sm text-body-sm pt-1">
+<span class="material-symbols-outlined text-sm text-secondary mt-0.5">info</span>
+<span>
+                Appointment scheduling and contractual vet dispatch are managed by Estate Administration. Supervisors may queue additional head to the inspection roster prior to 07:00 AM visit morning.
+              </span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION D: PERMITTED DISEASE HISTORY (READ-ONLY ARCHIVE) -->
+<section class="lg:col-span-6 space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">history_edu</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Permitted Disease History</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Strict historical register of past resolved veterinary cases. Free from prediction or telemetry noise.
+            </p>
+</div>
+<span class="bg-secondary-container text-on-secondary-container text-label-sm px-2.5 py-1 rounded font-mono">
+            VERIFIED RESOLVED
+          </span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md space-y-space-sm">
+<!-- Resolved Item 1 -->
+<div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="font-mono font-bold text-on-surface">NL-44109-D</span>
+<span class="text-on-surface-variant text-xs font-semibold">· Pen 02 (High Production)</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">
+                Ketosis (Type I Primary)
+              </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+                Treated with Propylene Glycol oral drench 300ml daily for 5 days.
+              </div>
+</div>
+<div class="text-left sm:text-right space-y-1">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm font-semibold text-secondary bg-secondary-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-xs">task_alt</span>
+                Resolved 12 Oct 2024
+              </span>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+                Cleared by Dr. Jenkins
+              </div>
+</div>
+</div>
+<!-- Resolved Item 2 -->
+<div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="font-mono font-bold text-on-surface">NL-29801-G</span>
+<span class="text-on-surface-variant text-xs font-semibold">· Pen 03 (Mid Lactation)</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">
+                Superficial Teat Laceration (LR)
+              </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+                Topical antiseptic cleansing and surgical barrier dip application.
+              </div>
+</div>
+<div class="text-left sm:text-right space-y-1">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm font-semibold text-secondary bg-secondary-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-xs">task_alt</span>
+                Resolved 04 Oct 2024
+              </span>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+                Cleared by Dr. Jenkins
+              </div>
+</div>
+</div>
+<!-- Resolved Item 3 -->
+<div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="font-mono font-bold text-on-surface">NL-61014-A</span>
+<span class="text-on-surface-variant text-xs font-semibold">· Pen 01 (Fresh Herd)</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">
+                Retained Fetal Membranes (Uncomplicated)
+              </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+                Single systemic Ceftiofur therapy; passed naturally on Day 3.
+              </div>
+</div>
+<div class="text-left sm:text-right space-y-1">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm font-semibold text-secondary bg-secondary-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-xs">task_alt</span>
+                Resolved 28 Sep 2024
+              </span>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+                Cleared by Dr. Jenkins
+              </div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Quick Operational Action Footer Bar (Touch-Optimized for Gloved Hand Interactions) -->
+<div class="bg-surface-container-high p-space-md rounded-xl shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-2xl">verified</span>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Field Administration Sync Verified</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">All logged injections match pharmaceutical batch inventories GF-042.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="h-11 px-space-lg rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-lg text-label-lg font-semibold transition-colors flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-base">print</span>
+          Print Pen 04 Dosing Sheet
+        </button>
+<button class="h-11 px-space-lg rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold transition-colors flex items-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-base">add_task</span>
+          Queue Animal for Next Vet Visit
+        </button>
+</div>
+</div>
+</div>
+</div></main></div>
+
+</body></html>

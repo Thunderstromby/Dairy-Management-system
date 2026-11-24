@@ -1,0 +1,752 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#f5f3ed", "tertiary": "#5e3007", "surface-bright": "#fbf9f3", "inverse-surface": "#30312d", "on-secondary-fixed": "#141f0a", "on-surface-variant": "#444840", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#bdcbac", "on-primary": "#ffffff", "on-secondary": "#ffffff", "tertiary-container": "#7a461c", "error": "#ba1a1a", "on-error-container": "#93000a", "secondary-fixed": "#d9e8c7", "primary-container": "#46583b", "primary-fixed": "#d4e9c3", "on-tertiary-fixed-variant": "#6c3a11", "inverse-on-surface": "#f3f1eb", "on-background": "#1b1c18", "outline-variant": "#c4c8bd", "error-container": "#ffdad6", "surface-tint": "#516446", "tertiary-fixed-dim": "#ffb784", "on-tertiary-container": "#ffb785", "on-tertiary-fixed": "#301400", "surface": "#fbf9f3", "secondary": "#556249", "primary": "#2f4126", "on-primary-fixed-variant": "#3a4c30", "on-error": "#ffffff", "background": "#fbf9f3", "surface-container-high": "#eae8e2", "on-primary-container": "#b8cda9", "primary-fixed-dim": "#b8cda8", "tertiary-fixed": "#ffdcc6", "outline": "#75786f", "surface-container-lowest": "#ffffff", "surface-container-highest": "#e4e2dd", "on-secondary-fixed-variant": "#3e4b32", "surface-container": "#f0eee8", "surface-variant": "#e4e2dd", "on-secondary-container": "#5b694e", "on-surface": "#1b1c18", "inverse-primary": "#b8cda8", "surface-dim": "#dcdad4", "on-primary-fixed": "#101f08", "secondary-container": "#d9e8c7" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "space-xs": "0.25rem", "space-md": "1rem", "space-sm": "0.5rem", "margin": "2rem", "margin-mobile": "1rem", "gutter-mobile": "0.75rem", "gutter": "1.5rem", "space-lg": "1.5rem" }, "fontFamily": { "body-sm": ["Inter"], "display-lg": ["Manrope"], "data-metric-md": ["Inter"], "display-lg-mobile": ["Manrope"], "headline-xl-mobile": ["Manrope"], "data-metric-lg": ["Manrope"], "body-lg": ["Inter"], "headline-lg": ["Manrope"], "headline-sm": ["Manrope"], "headline-md": ["Manrope"], "headline-xl": ["Manrope"], "body-md": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"] }, "fontSize": { "body-sm": ["0.75rem", { "lineHeight": "1rem", "fontWeight": "400" }], "display-lg": ["3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "data-metric-md": ["1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "display-lg-mobile": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "data-metric-lg": ["2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "400" }], "headline-lg": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "headline-md": ["1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" }], "headline-xl": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" }], "label-md": ["0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" }], "label-sm": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low z-50 flex flex-col justify-between overflow-y-auto shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-low"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[20px]">agriculture</span></div><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate">SmartFarm OS</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">GF-042 • Greenfield</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container flex items-center justify-between text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span><span class="font-label-sm text-label-sm">Barn Sector 4A</span></div><span class="w-2 h-2 rounded-full bg-primary"></span></div></div><nav class="flex flex-col px-space-sm py-space-xs gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md"><div class="px-space-sm pt-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Operations Core</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Dashboard</span></a><div class="px-space-sm pt-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Herd &amp; Livestock</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="animal-list" href="#"><span class="material-symbols-outlined text-[20px]">pets</span><span class="font-label-md text-label-md">Animal List</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="lifecycle-and-lineage-history" href="#"><span class="material-symbols-outlined text-[20px]">account_tree</span><span class="font-label-md text-label-md">Lifecycle &amp; Lineage</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="weight-history-and-growth-analytics" href="#"><span class="material-symbols-outlined text-[20px]">scale</span><span class="font-label-md text-label-md">Weight &amp; Growth</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="animal-health" href="#"><span class="material-symbols-outlined text-[20px]">stethoscope</span><span class="font-label-md text-label-md">Animal Health</span></a><div class="px-space-sm pt-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Production &amp; Parlor</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="milk-production" href="#"><span class="material-symbols-outlined text-[20px]">water_drop</span><span class="font-label-md text-label-md">Milk Production</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="milk-management" href="#"><span class="material-symbols-outlined text-[20px]">propane_tank</span><span class="font-label-md text-label-md">Milk Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="feeding" href="#"><span class="material-symbols-outlined text-[20px]">grass</span><span class="font-label-md text-label-md">Feeding &amp; Rations</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventory" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-md text-label-md">Inventory &amp; Silos</span></a><div class="px-space-sm pt-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Workforce &amp; Assets</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="workers" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-label-md text-label-md">Workers</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="attendance" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-label-md text-label-md">Attendance</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="payroll" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span class="font-label-md text-label-md">Payroll</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="finance" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span class="font-label-md text-label-md">Finance</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="equipment" href="#"><span class="material-symbols-outlined text-[20px]">precision_manufacturing</span><span class="font-label-md text-label-md">Equipment</span></a><div class="px-space-sm pt-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Governance</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="supervisor-access" href="#"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span><span class="font-label-md text-label-md">Supervisor Access</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">assessment</span><span class="font-label-md text-label-md">Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="data-management" href="#"><span class="material-symbols-outlined text-[20px]">database</span><span class="font-label-md text-label-md">Data Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-md text-label-md">Settings</span></a></nav></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant"><span class="hover:text-on-surface cursor-pointer">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="text-on-surface font-semibold">Workspace GF-042</span></div><div class="h-4 w-[1px] bg-outline-variant"></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant w-64 justify-between cursor-pointer hover:bg-surface-container transition-colors"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm">Search tag, pen, worker...</span></div><kbd class="px-1.5 py-0.5 rounded bg-surface font-label-sm text-label-sm text-outline border border-outline-variant">⌘K</kbd></div></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="h-6 w-[1px] bg-outline-variant"></div><div class="flex items-center gap-space-sm cursor-pointer"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-semibold">Elena Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant">Estate Farm Admin</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-gutter"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Utility Ribbon / Context -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pt-space-md pb-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm tracking-wider uppercase">
+<span class="inline-block w-2 h-2 rounded-full bg-primary"></span>
+<span>Workspace GF-042</span>
+<span>/</span>
+<span>Livestock Records</span>
+<span>/</span>
+<span class="text-on-surface font-semibold">ET-GF-8849</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span>Cryptographically Sealed Log</span>
+</div>
+<button class="flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm font-label-md text-label-md transition-colors" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Export Dossier</span>
+</button>
+</div>
+</div>
+<!-- SECTION 1: Master Animal Identification & Header Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-sm mb-space-lg">
+<!-- Subtle Agrarian Ambient Gradient -->
+<div class="absolute -right-20 -top-24 w-96 h-96 rounded-full bg-secondary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="absolute left-1/3 -bottom-20 w-80 h-80 rounded-full bg-primary-fixed/20 blur-2xl pointer-events-none"></div>
+<div class="relative p-space-lg flex flex-col xl:flex-row gap-space-lg items-start xl:items-center justify-between">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-lg">
+<!-- Physical Tag Visual Identifier -->
+<div class="relative flex flex-col items-center justify-center w-28 h-28 rounded-xl bg-surface-container-low shadow-inner">
+<div class="w-3.5 h-3.5 rounded-full bg-outline-variant absolute top-2.5"></div>
+<span class="text-[10px] font-label-sm text-outline uppercase tracking-widest mt-3">Greenfield</span>
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight font-bold">8849</span>
+<span class="font-body-sm text-[11px] text-tertiary-container font-mono font-semibold">ET-GF</span>
+<span class="absolute bottom-1.5 text-[9px] text-on-surface-variant font-mono">RFID-NFC: 982.049</span>
+</div>
+<!-- Specimen Core Demographics -->
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Bella Prime</h1>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">
+              ET-GF-8849
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">Internal ID: GF-ANI-08849</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-3">
+            Holstein Friesian Registered Dam • Female • Age: 3y 7m (Born Mar 14, 2021) • Milking Herd Cohort 4A
+          </p>
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">water_drop</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lactation:</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">2nd Cycle (Day 114)</span>
+</div>
+<div class="h-3 w-[1px] bg-surface-container-highest"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">scale</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Latest Weight:</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">638 kg</span>
+</div>
+<div class="h-3 w-[1px] bg-surface-container-highest"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary">monitor_heart</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Health Index:</span>
+<span class="font-headline-sm text-headline-sm text-primary">97/100 (Optimal)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Panel & Primary Lifecycle Status Badge -->
+<div class="flex flex-row xl:flex-col items-center xl:items-end justify-between w-full xl:w-auto gap-space-md pt-space-sm xl:pt-0">
+<div class="flex flex-col items-start xl:items-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">State Machine</span>
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-headline-sm text-headline-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+<span>ACTIVE (Lactating Cohort)</span>
+</div>
+</div>
+<!-- Dropdown & Transition Action -->
+<div class="relative">
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-md hover:bg-primary-container transition-all" id="transitionBtn" onclick="toggleTransitionMenu()" type="button">
+<span class="material-symbols-outlined text-[18px]">published_with_changes</span>
+<span>Execute Lifecycle Transition</span>
+<span class="material-symbols-outlined text-[18px]">arrow_drop_down</span>
+</button>
+<!-- Dropdown items -->
+<div class="hidden absolute right-0 mt-2 w-72 rounded-xl bg-surface-container-lowest shadow-xl z-30 py-2 flex-col" id="transitionDropdown">
+<div class="px-space-md py-1.5 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+              Permanent Actions
+            </div>
+<button class="w-full text-left px-space-md py-2 text-on-surface hover:bg-surface-container-low flex items-center gap-2 transition-colors" onclick="openTransitionModal('Sold')" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">local_shipping</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Mark as Sold</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Transfer ownership &amp; generate bill</span>
+</div>
+</button>
+<button class="w-full text-left px-space-md py-2 text-on-surface hover:bg-surface-container-low flex items-center gap-2 transition-colors" onclick="openTransitionModal('Deceased')" type="button">
+<span class="material-symbols-outlined text-[18px] text-error">heart_broken</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Record Deceased</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Log fatality &amp; veterinary cause</span>
+</div>
+</button>
+<button class="w-full text-left px-space-md py-2 text-on-surface hover:bg-surface-container-low flex items-center gap-2 transition-colors" onclick="openTransitionModal('Removed')" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">output</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Remove from Farm</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Culling, emergency slaughter</span>
+</div>
+</button>
+<div class="h-[1px] bg-surface-container my-1"></div>
+<button class="w-full text-left px-space-md py-2 text-on-surface hover:bg-surface-container-low flex items-center gap-2 transition-colors" onclick="openTransitionModal('Archive')" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">inventory_2</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Archive Animal Record</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Retire from active registers</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Lineage Pedigree Tree Diagram -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm mb-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm mb-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[22px] text-primary">account_tree</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Lineage Pedigree &amp; Genetic Succession</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Complete genomic trace spanning 3 registered generations, artificial insemination records, and direct progeny.
+        </p>
+</div>
+<!-- Verification Badges -->
+<div class="flex flex-wrap items-center gap-2">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Parent Verified in Workspace GF-042</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">biotech</span>
+<span>Father: Approved AI Sire (ABS Global)</span>
+</div>
+</div>
+</div>
+<!-- Tree Canvas Container -->
+<div class="w-full overflow-x-auto pb-space-sm">
+<div class="min-w-[940px] flex flex-col gap-6 py-2">
+<!-- Tier 1: Grandparents -->
+<div class="grid grid-cols-4 gap-4 relative">
+<!-- Paternal Grand-Sire -->
+<div class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors relative flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Pat. Grand-Sire</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Sandy-Valley Bolton</span>
+<span class="font-mono text-body-sm text-on-surface-variant">NAAB: 014HO03831</span>
+
+</div>
+<!-- Paternal Grand-Dam -->
+<div class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors relative flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Pat. Grand-Dam</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Picston Prelude BWM</span>
+<span class="font-mono text-body-sm text-on-surface-variant">ET-UK-904128</span>
+<span class="text-[11px] text-secondary font-medium mt-1">Lactation 4 Avg: 11,400 L</span>
+</div>
+<!-- Maternal Grand-Sire -->
+<div class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors relative flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Mat. Grand-Sire</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">O-Man Oman Justice</span>
+<span class="font-mono text-body-sm text-on-surface-variant">NAAB: 007HO06417</span>
+
+</div>
+<!-- Maternal Grand-Dam -->
+<div class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors relative flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Mat. Grand-Dam</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Rosette Sovereign 4</span>
+<span class="font-mono text-body-sm text-on-surface-variant">ET-GF-5410</span>
+<span class="text-[11px] text-secondary font-medium mt-1">Lifetime: 42,900 L (5 Calvings)</span>
+</div>
+</div>
+<!-- Connective Branch Lines Grandparents -> Parents -->
+<div class="grid grid-cols-2 gap-8 px-12 -my-2">
+<div class="flex items-center justify-center">
+<div class="w-full h-4 rounded-b-xl bg-surface-container-high/60"></div>
+</div>
+<div class="flex items-center justify-center">
+<div class="w-full h-4 rounded-b-xl bg-surface-container-high/60"></div>
+</div>
+</div>
+<!-- Tier 2: Parents (Sire & Dam) -->
+<div class="grid grid-cols-2 gap-8 relative px-6">
+<!-- Sire (Father) -->
+<div class="p-4 rounded-xl bg-surface-container flex items-center justify-between shadow-sm relative">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">male</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">Sire (Father)</span>
+<span class="px-2 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-semibold">AI Commercial Straw</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface">Picston Shottle</span>
+<span class="font-mono text-body-sm text-on-surface-variant">NAAB: 029HO14142 • Semen Lot #SH-8812</span>
+</div>
+</div>
+
+</div>
+<!-- Dam (Mother) -->
+<div class="p-4 rounded-xl bg-surface-container flex items-center justify-between shadow-sm relative">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">female</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Dam (Mother)</span>
+<span class="px-2 py-0.2 rounded bg-secondary-container text-on-secondary-container text-[10px] font-semibold">GF-042 Resident</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface">Rosette Star</span>
+<span class="font-mono text-body-sm text-on-surface-variant">Ear Tag: ET-GF-7201 • ID: GF-ANI-07201</span>
+</div>
+</div>
+<div class="text-right flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Peak Lactation Yield</span>
+<span class="font-data-metric-md text-data-metric-md text-primary">38.4 L/day</span>
+</div>
+</div>
+</div>
+<!-- Connective Branch Parents -> Target Animal -->
+<div class="flex items-center justify-center -my-2">
+<div class="w-1/2 h-5 rounded-b-xl bg-surface-container-highest"></div>
+</div>
+<!-- Tier 3: TARGET SUBJECT ANIMAL -->
+<div class="flex items-center justify-center px-24">
+<div class="w-full max-w-2xl p-5 rounded-xl bg-primary-container text-on-primary shadow-md flex flex-col sm:flex-row items-center justify-between gap-4 relative overflow-hidden">
+<div class="absolute -right-12 -bottom-12 w-32 h-32 rounded-full bg-white/10 blur-xl pointer-events-none"></div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-inner">
+<span class="material-symbols-outlined text-[28px]">pets</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary text-secondary-fixed text-xs font-semibold uppercase tracking-wider">Selected Specimen</span>
+<span class="text-secondary-fixed-dim font-mono text-xs">GF-ANI-08849</span>
+</div>
+<span class="font-headline-xl text-headline-xl font-bold tracking-tight">Bella Prime</span>
+<span class="text-on-primary-container font-mono text-body-sm">Visual Ear Tag: ET-GF-8849</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex flex-col text-right">
+<span class="text-xs uppercase tracking-wider text-on-primary-container">Current Status</span>
+<span class="font-label-md text-label-md text-secondary-fixed font-semibold">Active Producer</span>
+<span class="text-xs text-on-primary-container font-mono">Pen 04 • High Yield</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest/15 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px] text-white">star</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Connective Branch Target -> Offspring -->
+<div class="flex items-center justify-center -my-2">
+<div class="w-1/3 h-5 rounded-b-xl bg-surface-container-highest"></div>
+</div>
+<!-- Tier 4: Direct Offspring -->
+<div class="grid grid-cols-2 gap-8 px-16">
+<!-- Offspring 1 -->
+<div class="p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">female</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Direct Offspring • F1</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[10px] font-semibold">Active Heifer</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Heifer Nova</span>
+<span class="font-mono text-body-sm text-on-surface-variant">ET-GF-9240 • Calved Aug 12, 2024</span>
+</div>
+</div>
+<div class="flex flex-col text-right">
+<span class="text-[11px] text-on-surface-variant">Birth Weight</span>
+<span class="font-data-metric-md text-data-metric-md text-on-surface">41 kg</span>
+</div>
+</div>
+<!-- Offspring 2 -->
+<div class="p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">male</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Direct Offspring • F1</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant text-[10px] font-semibold">Sold Externally</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Bull Calf Titan 1</span>
+<span class="font-mono text-body-sm text-on-surface-variant">ET-GF-8102 • Calved May 02, 2023</span>
+</div>
+</div>
+<div class="flex flex-col text-right">
+<span class="text-[11px] text-on-surface-variant">Discharge Status</span>
+<span class="font-label-md text-label-md text-tertiary-container font-semibold">Buyer Transfer</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: Chronological Lifecycle Transition Event Log -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm mb-space-lg">
+<!-- Header & Interactive Filter Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[22px] text-primary">history_toggle_off</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Chronological Lifecycle &amp; Transition Audit Log</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Tamper-evident operational events logged with authorizing veterinarian and farm supervisor credentials.
+        </p>
+</div>
+<!-- Filter Buttons -->
+<div class="flex flex-wrap items-center gap-1.5 p-1 rounded-xl bg-surface-container-low" id="timelineFilters">
+<button class="timeline-tab active px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm font-label-md text-label-md font-semibold transition-all" onclick="filterTimeline('all')" type="button">
+          All Transitions (5)
+        </button>
+<button class="timeline-tab px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" onclick="filterTimeline('calving')" type="button">
+          Calving &amp; Birth
+        </button>
+<button class="timeline-tab px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" onclick="filterTimeline('group')" type="button">
+          Group &amp; Pen Changes
+        </button>
+<button class="timeline-tab px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" onclick="filterTimeline('veterinary')" type="button">
+          Veterinary &amp; Breeding
+        </button>
+<button class="timeline-tab px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" onclick="filterTimeline('disposal')" type="button">
+          Sale &amp; Disposal
+        </button>
+</div>
+</div>
+<!-- Timeline Vertical Track -->
+<div class="relative pl-6 sm:pl-8 space-y-6 before:absolute before:left-[11px] sm:before:left-[15px] before:top-3 before:bottom-3 before:w-[2px] before:bg-surface-container-high" id="eventsContainer">
+<!-- Event 1: Calving Event 2024 -->
+<div class="timeline-item relative flex flex-col md:flex-row md:items-start justify-between gap-4 p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all" data-category="calving">
+<span class="absolute -left-6 sm:-left-8 top-5 w-4 h-4 rounded-full bg-primary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></span>
+</span>
+<div class="flex flex-col flex-1">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Calving Event</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Calving Event (Lactation 2 Started)</span>
+<span class="font-mono text-body-sm text-outline">EVT-2024-8849-05</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-3">
+            Delivered healthy female heifer calf registered as <strong class="text-on-surface">ET-GF-9240 (41 kg)</strong> unassisted. Immediately transitioned animal cohort from Dry Cow Isolation to <strong class="text-on-surface">Pen 04 (High Production Milking Parlor Intake)</strong>.
+          </p>
+<div class="flex flex-wrap items-center gap-4 text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span>Auth: <strong>Dr. Robert Chen (DVM)</strong> &amp; <strong>Elena Vance (Farm Admin)</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">attachment</span>
+<a class="text-tertiary underline decoration-dotted font-semibold hover:text-on-surface" href="#">Calf_Health_Cert_9240.pdf</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:text-right shrink-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-mono">2024-08-12</span>
+<span class="font-body-sm text-body-sm text-outline">05:42 AM • Barn 4A</span>
+<span class="mt-2 text-xs font-semibold px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant inline-block self-start md:self-end">
+            Milking Day 001
+          </span>
+</div>
+</div>
+<!-- Event 2: Dry Period Transition -->
+<div class="timeline-item relative flex flex-col md:flex-row md:items-start justify-between gap-4 p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all" data-category="group">
+<span class="absolute -left-6 sm:-left-8 top-5 w-4 h-4 rounded-full bg-secondary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></span>
+</span>
+<div class="flex flex-col flex-1">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Dry Transition</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Dry Period Transition Protocol</span>
+<span class="font-mono text-body-sm text-outline">EVT-2024-8849-04</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-3">
+            Completed 1st lactation cycle (305-day cumulative yield: <strong class="text-on-surface">7,820 L</strong>). Pen relocation executed from Production Barn to Gestation Pen 02. Rationale: Pre-calving metabolic rest and teat sealant treatment.
+          </p>
+<div class="flex flex-wrap items-center gap-4 text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span>Auth: <strong>Elena Vance (Farm Admin)</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">vaccines</span>
+<span>Teat Sealant: Spectramast DC</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:text-right shrink-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-mono">2024-06-15</span>
+<span class="font-body-sm text-body-sm text-outline">14:15 PM • Milking Parlor A</span>
+<span class="mt-2 text-xs font-semibold px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant inline-block self-start md:self-end">
+            Yield Closed: 7,820 L
+          </span>
+</div>
+</div>
+<!-- Event 3: Artificial Insemination / Breeding Confirmed -->
+<div class="timeline-item relative flex flex-col md:flex-row md:items-start justify-between gap-4 p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all" data-category="veterinary">
+<span class="absolute -left-6 sm:-left-8 top-5 w-4 h-4 rounded-full bg-tertiary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></span>
+</span>
+<div class="flex flex-col flex-1">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">Reproduction</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Artificial Insemination Confirmed Pregnant</span>
+<span class="font-mono text-body-sm text-outline">EVT-2023-8849-03</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-3">
+            Service sire NAAB: <strong class="text-on-surface">029HO14142 (Picston Shottle)</strong>. Pregnancy confirmed via 35-day transrectal ultrasound by veterinary officer. Expected calving window estimated at August 10-15, 2024.
+          </p>
+<div class="flex flex-wrap items-center gap-4 text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span>Auth: <strong>Dr. Robert Chen (DVM)</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">image</span>
+<a class="text-tertiary underline decoration-dotted font-semibold hover:text-on-surface" href="#">Ultrasound_Scan_35d.dcm</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:text-right shrink-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-mono">2023-11-05</span>
+<span class="font-body-sm text-body-sm text-outline">09:30 AM • Insemination Stalls</span>
+<span class="mt-2 text-xs font-semibold px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant inline-block self-start md:self-end">
+            Conception Confirmed
+          </span>
+</div>
+</div>
+<!-- Event 4: Heifer Group Promotion -->
+<div class="timeline-item relative flex flex-col md:flex-row md:items-start justify-between gap-4 p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all" data-category="group">
+<span class="absolute -left-6 sm:-left-8 top-5 w-4 h-4 rounded-full bg-secondary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></span>
+</span>
+<div class="flex flex-col flex-1">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded bg-secondary-fixed-dim text-on-secondary-fixed-variant font-label-sm text-label-sm">Cohort Promotion</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Heifer Group Promotion &amp; Pen Reassignment</span>
+<span class="font-mono text-body-sm text-outline">EVT-2022-8849-02</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-3">
+            Scaled weight benchmark achieved (372 kg at 18 months). Relocated from Weaned Calves Barn 01 to <strong class="text-on-surface">Breeding Heifers (Pen 03)</strong>. Initiated automated estrus detection collar pairing (Sensor #S4-482).
+          </p>
+<div class="flex flex-wrap items-center gap-4 text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span>Auth: <strong>Elena Vance (Farm Admin)</strong> &amp; <strong>Marcus Ward (Herdsman)</strong></span>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:text-right shrink-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-mono">2022-09-20</span>
+<span class="font-body-sm text-body-sm text-outline">11:00 AM • Weaning Yard</span>
+<span class="mt-2 text-xs font-semibold px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant inline-block self-start md:self-end">
+            Weight: 372 kg
+          </span>
+</div>
+</div>
+<!-- Event 5: Birth Registration on Farm -->
+<div class="timeline-item relative flex flex-col md:flex-row md:items-start justify-between gap-4 p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all" data-category="calving">
+<span class="absolute -left-6 sm:-left-8 top-5 w-4 h-4 rounded-full bg-primary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></span>
+</span>
+<div class="flex flex-col flex-1">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Birth Registration</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Birth Registration on Farm &amp; Tag Affixation</span>
+<span class="font-mono text-body-sm text-outline">EVT-2021-8849-01</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-3">
+            Born to resident Dam <strong class="text-on-surface">Rosette Star (ET-GF-7201)</strong>. Internal Unique Master Identification generated: <code class="font-mono text-xs bg-surface-container px-1 py-0.5 rounded">GF-ANI-08849</code>. Affixed permanent official yellow ear tag <strong class="text-on-surface">ET-GF-8849</strong> and administered first colostrum protocol (4.2 L within 2h).
+          </p>
+<div class="flex flex-wrap items-center gap-4 text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span>Auth: <strong>Elena Vance (Farm Admin)</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">badge</span>
+<span>Brix Refractometer: 24.8% (Exceptional)</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:text-right shrink-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-mono">2021-03-14</span>
+<span class="font-body-sm text-body-sm text-outline">03:18 AM • Maternity Pen 01</span>
+<span class="mt-2 text-xs font-semibold px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant inline-block self-start md:self-end">
+            Birth Weight: 43.5 kg
+          </span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 4: Authorized Lifecycle Action Modal / Panel Simulation -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-inverse-surface/40 backdrop-blur-sm" id="transitionPanelWrapper">
+<div class="relative w-full max-w-2xl rounded-2xl bg-surface-container-lowest shadow-2xl p-space-lg flex flex-col max-h-[921px] overflow-y-auto">
+<!-- Panel Header -->
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container-high mb-space-md">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">published_with_changes</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Execute Lifecycle Transition</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Authorizing status migration for specimen <strong>ET-GF-8849</strong></span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface" onclick="closeTransitionModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Action Form Content -->
+<form class="space-y-space-md" onsubmit="handleTransitionSubmit(event)">
+<!-- Target Status Selector -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2 font-semibold">
+            Target Lifecycle Status <span class="text-error">*</span>
+</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="targetStatus" onchange="handleStatusChange('Sold')" type="radio" value="Sold">
+<div class="p-3 rounded-xl bg-surface-container-low peer-checked:bg-tertiary-fixed peer-checked:text-on-tertiary-fixed flex flex-col items-center gap-1 transition-all text-center">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+<span class="font-label-md text-label-md font-semibold">Sold</span>
+<span class="text-[10px] opacity-75">Ownership Out</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="targetStatus" onchange="handleStatusChange('Deceased')" type="radio" value="Deceased">
+<div class="p-3 rounded-xl bg-surface-container-low peer-checked:bg-error-container peer-checked:text-on-error-container flex flex-col items-center gap-1 transition-all text-center">
+<span class="material-symbols-outlined text-[20px]">heart_broken</span>
+<span class="font-label-md text-label-md font-semibold">Deceased</span>
+<span class="text-[10px] opacity-75">Fatal Outcome</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="targetStatus" onchange="handleStatusChange('Removed')" type="radio" value="Removed">
+<div class="p-3 rounded-xl bg-surface-container-low peer-checked:bg-surface-container-highest peer-checked:text-on-surface flex flex-col items-center gap-1 transition-all text-center">
+<span class="material-symbols-outlined text-[20px]">output</span>
+<span class="font-label-md text-label-md font-semibold">Removed</span>
+<span class="text-[10px] opacity-75">Culled / Salvage</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="targetStatus" onchange="handleStatusChange('Archive')" type="radio" value="Archive">
+<div class="p-3 rounded-xl bg-surface-container-low peer-checked:bg-primary-fixed peer-checked:text-on-primary-fixed flex flex-col items-center gap-1 transition-all text-center">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+<span class="font-label-md text-label-md font-semibold">Archive</span>
+<span class="text-[10px] opacity-75">Retire History</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Date & Time of Occurrence -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1">
+              Effective Transition Date <span class="text-error">*</span>
+</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all" required="" type="date" value="2024-11-04">
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1">
+              Authorizing Admin / Supervisor
+            </label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-high text-on-surface-variant font-body-md text-body-md cursor-not-allowed" disabled="" type="text" value="Elena Vance (Admin GF-042)">
+</div>
+</div>
+<!-- Sale-Specific Dynamic Fields Container -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-3" id="saleRecordSection">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+              Commercial Transfer Record (Required for Sold)
+            </span>
+<span class="text-[11px] text-outline font-mono">Ledger Code: REV-LIVESTOCK</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="sm:col-span-2">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">Acquiring Buyer / Estate Name</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:ring-2 focus:ring-primary focus:outline-none" placeholder="e.g. Red Valley Breeders Co-op" type="text">
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">Sale Price ($ USD)</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:ring-2 focus:ring-primary focus:outline-none" placeholder="2850.00" step="0.01" type="number">
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">Bill of Sale / Transfer Reference ID</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:ring-2 focus:ring-primary focus:outline-none font-mono" placeholder="BOS-GF042-2024-998" type="text">
+</div>
+</div>
+<!-- Mandatory Audit Narrative & Veterinary Reason -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1 font-semibold">
+            Transition Reason &amp; Compliance Audit Note <span class="text-error">*</span>
+</label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all" placeholder="Detail the veterinary, commercial, or operational reason for this transition. Provide protocol reference numbers..." required="" rows="3"></textarea>
+<span class="text-[11px] text-on-surface-variant mt-1 block">This declaration will be permanently recorded in the Workspace audit chain.</span>
+</div>
+<!-- Confirmation Safeguard Notice -->
+<div class="p-3 rounded-xl bg-secondary-fixed/50 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0 mt-0.5">security</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-secondary-fixed">
+              Cryptographic Safeguard Confirmation
+            </span>
+<span class="text-body-sm text-on-secondary-fixed-variant">
+              Confirm status change for <strong>ET-GF-8849</strong>. Status changes are registered with permanent timestamp. Reversible only by designated Farm Admin with auditable counter-entry.
+            </span>
+</div>
+</div>
+<!-- Modal Action Buttons -->
+<div class="flex items-center justify-end gap-3 pt-2">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold transition-colors" onclick="closeTransitionModal()" type="button">
+            Cancel
+          </button>
+<button class="flex items-center gap-2 px-space-lg py-2.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md font-semibold shadow-md transition-all" type="submit">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Authorize &amp; Sign Transition</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- SECTION 5: Audit & Governance Notice Bar -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[22px]">policy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary-container font-semibold">
+          Tenant Workspace Isolation Rule
+        </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl">
+          All lifecycle entries are permanently sealed to <strong>Workspace GF-042</strong> and cryptographically signed by authorized Farm Admin credentials. Zero unmonitored cross-farm transfers allowed under State Veterinary Protocol V-701.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-mono text-body-sm text-outline">SHA-256: 4e9f...8a21</span>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+</div>
+</div>
+<!-- Client-side Interactive Logic -->
+<script>
+  function toggleTransitionMenu() {
+    const dropdown = document.getElementById('transitionDropdown');
+    dropdown.classList.toggle('hidden');
+    dropdown.classList.toggle('flex');
+  }
+
+  // Close dropdown on outside click
+  window.addEventListener('click', function(e) {
+    const btn = document.getElementById('transitionBtn');
+    const dropdown = document.getElementById('transitionDropdown');
+    if (btn && dropdown && !btn.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.classList.add('hidden');
+      dropdown.classList.remove('flex');
+    }
+  });
+
+  function openTransitionModal(statusType) {
+    const modal = document.getElementById('transitionPanelWrapper');
+    const dropdown = document.getElementById('transitionDropdown');
+    if (dropdown) {
+      dropdown.classList.add('hidden');
+      dropdown.classList.remove('flex');
+    }
+    
+    // Set matching radio
+    const radio = document.querySelector(`input[name="targetStatus"][value="${statusType}"]`);
+    if (radio) {
+      radio.checked = true;
+      handleStatusChange(statusType);
+    }
+
+    if (modal) {
+      modal.classList.remove('hidden');
+    }
+  }
+
+  function closeTransitionModal() {
+    const modal = document.getElementById('transitionPanelWrapper');
+    if (modal) {
+      modal.classList.add('hidden');
+    }
+  }
+
+  function handleStatusChange(status) {
+    const saleSection = document.getElementById('saleRecordSection');
+    if (saleSection) {
+      if (status === 'Sold') {
+        saleSection.classList.remove('hidden');
+      } else {
+        saleSection.classList.add('hidden');
+      }
+    }
+  }
+
+  function handleTransitionSubmit(e) {
+    e.preventDefault();
+    alert('Lifecycle transition registered, signed by Elena Vance (GF-042), and committed to permanent audit ledger.');
+    closeTransitionModal();
+  }
+
+  function filterTimeline(category) {
+    // Update active tab button style
+    const tabs = document.querySelectorAll('#timelineFilters button');
+    tabs.forEach(tab => {
+      tab.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm', 'font-semibold');
+      tab.classList.add('text-on-surface-variant');
+    });
+
+    event.currentTarget.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm', 'font-semibold');
+    event.currentTarget.classList.remove('text-on-surface-variant');
+
+    // Filter elements
+    const items = document.querySelectorAll('#eventsContainer .timeline-item');
+    items.forEach(item => {
+      if (category === 'all' || item.dataset.category === category) {
+        item.style.display = 'flex';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+</script></main></div>
+
+</body></html>

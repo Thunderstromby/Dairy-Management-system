@@ -1,0 +1,400 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed-dim": "#bdcbac", "on-tertiary-fixed": "#301400", "on-secondary-container": "#5b694e", "surface-container-low": "#f2f5ed", "on-primary": "#ffffff", "error": "#ba1a1a", "inverse-surface": "#2d312c", "on-secondary": "#ffffff", "surface-dim": "#d8dbd3", "primary": "#2f4126", "on-surface": "#191d18", "on-primary-fixed": "#101f08", "secondary-container": "#d9e8c7", "secondary": "#556249", "tertiary-container": "#7a461c", "on-error-container": "#93000a", "primary-container": "#46583b", "on-background": "#191d18", "surface-container-highest": "#e0e4dc", "surface-container-lowest": "#ffffff", "surface": "#f7faf2", "outline-variant": "#c4c8bd", "inverse-primary": "#b8cda8", "on-primary-container": "#b8cda9", "surface-tint": "#516446", "surface-container-high": "#e6e9e1", "secondary-fixed": "#d9e8c7", "on-tertiary-container": "#ffb785", "surface-container": "#ecefe7", "surface-bright": "#f7faf2", "tertiary-fixed": "#ffdcc6", "inverse-on-surface": "#eff2ea", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#6c3a11", "surface-variant": "#e0e4dc", "on-surface-variant": "#444840", "on-error": "#ffffff", "on-tertiary": "#ffffff", "tertiary-fixed-dim": "#ffb784", "on-primary-fixed-variant": "#3a4c30", "on-secondary-fixed-variant": "#3e4b32", "background": "#f7faf2", "outline": "#75786f", "tertiary": "#5e3007", "primary-fixed-dim": "#b8cda8", "primary-fixed": "#d4e9c3", "on-secondary-fixed": "#141f0a" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter-desktop": "1.5rem", "space-xl": "2.5rem", "margin-desktop": "2rem", "space-md": "1rem", "margin": "1rem", "gutter": "1.25rem", "space-lg": "1.5rem" }, "fontFamily": { "label-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "tabular-data": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "title-md": ["15px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "tabular-data": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(41,45,40,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrC6T1Tbp5pS1dydxfZczvfUyYiDpiC_QYqFadSCxvL5V_vj1zsfSsuIpPtOD7Bj95C8lrLnUB806j-OYIAKbpdCPhceWa3ymPXJZMBoRELtI4e5ryhtwwGlCM78b6-gHMPKUQaxXa-NB7F-KvsxiAL6EPDW8OGp_njff3PYl7QsHEx8BwRRAaWwQy_voTnRY2fi7tnG53P7RSGSYLrLa-UBPD_joJCPVu2gQj4H6bkXEw"><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface leading-tight tracking-tight">SmartFarm</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Super Admin</span></div></div><button class="p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors rounded-lg flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[20px]">menu_open</span></button></div><div class="px-space-md pt-space-md"><div class="px-space-sm pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Main</span></div><nav class="flex flex-col gap-space-xs mb-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-title-md text-title-md">Dashboard</span></a></nav><div class="px-space-sm pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Management</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="customers" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-title-md text-title-md">Customers</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="workspaces" href="#"><span class="material-symbols-outlined text-[20px]">corporate_fare</span><span class="font-title-md text-title-md">Workspaces</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="farm-admin-accounts" href="#"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span><span class="font-title-md text-title-md">Farm Admin Accounts</span></a></nav></div></div><div class="p-space-md bg-surface-container-low flex flex-col gap-space-sm"><div class="flex items-center justify-between px-space-sm py-space-xs bg-surface-container-lowest rounded-lg shadow-[0_1px_2px_rgba(41,45,40,0.04)]"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold">SmartFarm Admin Portal</span></div><span class="font-tabular-data text-tabular-data text-outline">v2.0</span></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(41,45,40,0.04)] flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">home</span><span class="font-body-sm text-body-sm text-outline">/</span><span class="font-body-sm text-body-sm text-on-surface font-medium">Super Admin Control</span></div><div class="hidden lg:flex items-center bg-surface-container-low px-space-sm py-space-xs rounded-lg w-80 gap-space-xs focus-within:bg-surface-container-lowest transition-colors"><span class="material-symbols-outlined text-outline text-[18px]">search</span><input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline w-full" placeholder="Search customers, workspaces..." type="search"></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded-lg"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">US-WEST-CENTRAL</span></div><button class="relative p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors rounded-lg flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-tertiary-container rounded-full"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_2px_rgba(41,45,40,0.08)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwwCkRVhDwcAo-JFxPvUYMDDo62TRhe4K-1LE1TaxP7bXplABobCfoKUqTnJQH0OY5Vz5wFmTDgXSPIJ7Fk2aVEbxZEl-QWkoJmS5chMj_E9dAIaNlV_9oKCnVSuqwu57xviPBb3-GxUb_vgb-EExWlwUVxHTSP04VSaVoALBIKMqYxRTPmkxKAoXQVJRsWHcb8qrZuYxSvVVjJmF1XGXgFjUsT6noo6qaYb9bQFW-"><div class="hidden md:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Eleanor Vance</span><span class="font-label-sm text-label-sm text-secondary font-medium">Super Administrator</span></div><span class="material-symbols-outlined text-outline text-[18px]">expand_more</span></div></div></header><main class="flex-1 pt-16 bg-background w-full"><div class="flex flex-col w-full">
+<div class="max-w-[1540px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+<!-- Top Breadcrumb & Workflow Metadata Tracker -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<nav class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span class="hover:text-primary transition-colors cursor-pointer">Customers</span>
+<span class="text-outline text-xs">/</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Workspaces</span>
+<span class="text-outline text-xs">/</span>
+<span class="text-on-surface font-semibold bg-surface-container-high px-2 py-0.5 rounded">Create Farm Workspace</span>
+</nav>
+<div class="flex items-center gap-3 self-start md:self-auto"><div class="flex items-center gap-1.5 px-3 py-1 bg-surface-container-high rounded-lg shadow-sm"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">Step 2 of 3: Workspace Setup</span></div></div>
+</div>
+<!-- Title & Executive Subtext -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-4 relative overflow-hidden"><div><div class="flex items-center gap-2 mb-1"><span class="px-2.5 py-0.5 rounded font-label-sm text-label-sm bg-secondary-container text-on-secondary-container font-semibold uppercase tracking-wider">Farm Setup Wizard</span><span class="font-tabular-data text-tabular-data text-outline">Workspace Management</span></div><h1 class="font-display-lg text-headline-lg lg:text-display-lg text-on-surface tracking-tight font-bold">Create Farm Workspace</h1><p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-3xl">Configure a distinct dairy operational unit for the selected customer organization. Set up physical milking parlor boundaries, facility addressing, and workspace identification before provisioning farm administrators.</p></div></div>
+<!-- Main Form Grid (2/3 + 1/3) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- LEFT COLUMN: Main Configuration Form (8 Cols) -->
+<div class="lg:col-span-8 space-y-6">
+<!-- CARD 1: Customer Association -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-6 space-y-5">
+<div class="flex items-center justify-between pb-4 bg-surface-container-low -mx-6 -mt-6 p-6 rounded-t-xl">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-7 h-7 rounded-full bg-primary-container text-on-primary font-bold font-label-sm text-label-sm">1</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Customer Association</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Select the registered customer organization that owns and oversees this farm workspace.</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 text-primary-container font-label-sm text-label-sm font-semibold bg-surface-container-lowest px-2.5 py-1 rounded shadow-sm">
+<span class="material-symbols-outlined text-base">verified</span>
+              Pre-Bound
+            </span>
+</div>
+<!-- Pre-selection Banner -->
+<div class="flex items-center justify-between p-3.5 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-md text-label-md text-on-surface font-medium">Customer preselected from verified registration workflow queue.</span>
+</div>
+<button class="text-tertiary hover:text-tertiary-container font-label-sm text-label-sm font-bold uppercase tracking-wider hover:underline flex items-center gap-1" onclick="toggleCustomerDropdown()" type="button">
+              Change Customer
+              <span class="material-symbols-outlined text-sm">swap_horiz</span>
+</button>
+</div>
+<!-- Searchable Selection / Selected Entity Card -->
+<div class="space-y-3">
+<label class="block font-label-md text-label-md font-semibold text-on-surface uppercase tracking-wide">
+              Selected Parent Organization
+            </label>
+<!-- Active Selected Entity Tile -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm relative group hover:bg-surface-container-low/50 transition-colors">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-start gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-2xl">domain</span>
+</div>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-bold" id="selected-customer-name">Highland Dairy Collective</span>
+<span class="font-tabular-data text-tabular-data text-outline font-semibold bg-surface-container-high px-2 py-0.5 rounded">CUST-4829</span>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded font-bold uppercase">Active Organization</span>
+</div>
+<div class="flex items-center gap-4 mt-1.5 text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-outline">corporate_fare</span>
+                        2 Existing Workspaces
+                      </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-outline">badge</span>
+                        Primary Contact: <strong class="text-on-surface font-medium">Evelyn Harper</strong>
+</span>
+</div>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between gap-1 shrink-0 pt-2 sm:pt-0"><span class="font-label-sm text-label-sm text-outline uppercase">Customer ID</span><span class="font-tabular-data text-tabular-data text-primary font-bold" id="parent-org-id">CUST-4829</span></div>
+</div>
+</div>
+<!-- Expandable Search Drawer for alternative selection -->
+<div class="hidden space-y-2 pt-2" id="customer-picker-drawer"><div class="relative"><span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-lg">search</span><input class="w-full pl-9 pr-4 py-2 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" placeholder="Search customer directory by ID or entity name..." type="text"></div><div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1"><button class="p-2.5 text-left bg-surface-container-lowest rounded-lg hover:bg-surface-container-high transition-colors shadow-sm ring-1 ring-primary" onclick="selectCustomer('Highland Dairy Collective', 'CUST-4829', 'Evelyn Harper', '+1 (555) 389-1204', 'e.harper@highlanddairy.co', '2 Existing Workspaces', '2 Units', '2,480 Head')" type="button"><div class="font-label-md text-label-md font-bold text-on-surface">Highland Dairy Collective</div><div class="font-tabular-data text-tabular-data text-outline">CUST-4829 • 2 Workspaces</div></button><button class="p-2.5 text-left bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-colors shadow-sm" onclick="selectCustomer('Prairie Sun Dairies Co.', 'CUST-5210', 'Marcus Vance', '+1 (555) 672-9911', 'marcus.v@prairiesun.com', '5 Existing Workspaces', '5 Units', '4,120 Head')" type="button"><div class="font-label-md text-label-md font-bold text-on-surface">Prairie Sun Dairies Co.</div><div class="font-tabular-data text-tabular-data text-outline">CUST-5210 • 5 Workspaces</div></button><button class="p-2.5 text-left bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-colors shadow-sm" onclick="selectCustomer('Green Pastures Milk Co.', 'CUST-7703', 'Dr. Sarah Lin', '+1 (555) 814-3022', 'slin@greenpastures.ag', '1 Existing Workspace', '1 Unit', '950 Head')" type="button"><div class="font-label-md text-label-md font-bold text-on-surface">Green Pastures Milk Co.</div><div class="font-tabular-data text-tabular-data text-outline">CUST-7703 • 1 Workspace</div></button></div></div>
+<!-- Verification Summary Box -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 p-3 bg-surface-container-low rounded-lg"><div><span class="block font-label-sm text-label-sm text-outline uppercase font-semibold">Confirmed Contact Email</span><span class="font-tabular-data text-tabular-data text-on-surface font-medium truncate block" id="contact-email">e.harper@highlanddairy.co</span></div><div><span class="block font-label-sm text-label-sm text-outline uppercase font-semibold">Account Phone / Contact</span><span class="font-tabular-data text-tabular-data text-on-surface font-medium" id="contact-phone">+1 (555) 389-1204</span></div><div><span class="block font-label-sm text-label-sm text-outline uppercase font-semibold">Customer Status</span><span class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-1"><span class="material-symbols-outlined text-sm">check_circle</span>Verified Enterprise</span></div></div>
+</div>
+</div>
+<!-- CARD 2: Farm Workspace Information -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-6 space-y-6">
+<div class="flex items-center justify-between pb-4 bg-surface-container-low -mx-6 -mt-6 p-6 rounded-t-xl">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-7 h-7 rounded-full bg-primary-container text-on-primary font-bold font-label-sm text-label-sm">2</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Farm Workspace Information</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Specify the physical parlor scope, unique tenancy routing key, and operational location.</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">* Required parameters</span>
+</div>
+<form class="space-y-5" id="workspace-form" onsubmit="event.preventDefault(); handleFormSubmit();">
+<!-- Row: Workspace Name & Identifier -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+<!-- Workspace Name -->
+<div class="md:col-span-7 space-y-1.5">
+<label class="block font-label-md text-label-md font-semibold text-on-surface" for="ws-name">
+                  Workspace / Dairy Facility Name <span class="text-error font-bold">*</span>
+</label>
+<div class="relative">
+<input class="w-full px-3 py-2 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" id="ws-name" placeholder="e.g., Highland North Rotary Unit" required="" type="text" value="Highland North Rotary Unit">
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-primary text-lg" id="ws-name-icon">check_circle</span>
+</div>
+<p class="hidden font-label-sm text-label-sm text-error flex items-center gap-1 pt-0.5" id="ws-name-err">
+<span class="material-symbols-outlined text-sm">error</span>
+                  Workspace Name is required for cluster registry.
+                </p>
+</div>
+<!-- Identifier / Code -->
+<div class="md:col-span-5 space-y-1.5"><div class="flex items-center justify-between"><label class="block font-label-md text-label-md font-semibold text-on-surface" for="ws-code">Workspace Code <span class="text-error font-bold">*</span></label><button class="font-label-sm text-label-sm text-tertiary hover:underline flex items-center gap-0.5" onclick="regenerateCode()" type="button"><span class="material-symbols-outlined text-xs">autorenew</span>Regenerate</button></div><div class="relative"><input class="w-full px-3 py-2 bg-surface-container-low rounded-lg font-tabular-data text-tabular-data text-on-surface focus:bg-surface-container-lowest focus:outline-none focus:ring-1 focus:ring-primary shadow-sm tracking-wider uppercase font-semibold" id="ws-code" required="" type="text" value="WS-1042"><span class="material-symbols-outlined absolute right-3 top-2.5 text-primary text-lg" id="ws-code-status-icon">check_circle</span></div><p class="font-label-sm text-label-sm text-outline" id="ws-code-help">Unique identifier for internal farm operational routing.</p></div>
+</div>
+<!-- Physical Dairy Facility Type -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md font-semibold text-on-surface" for="ws-parlor-type">
+                Physical Dairy Facility Type <span class="text-error font-bold">*</span>
+</label>
+<div class="relative">
+<select class="w-full px-3 py-2.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:bg-surface-container-lowest focus:outline-none focus:ring-1 focus:ring-primary shadow-sm appearance-none pr-10 cursor-pointer" id="ws-parlor-type"><option selected="" value="rotary-72">72-Stall Rotary Milking Parlor</option><option value="robotic-vms">Automated Robotic Milking Facility (VMS)</option><option value="parallel-double24">Double-24 Parallel Milking Parlor</option><option value="herringbone">Herringbone Milking Parlor</option><option value="rotational-pasture">Rotational Pasture Milking Parlor</option></select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 pointer-events-none text-outline text-xl">expand_more</span>
+</div>
+<p class="font-label-sm text-label-sm text-outline">
+                Determines parlor hardware communication protocol bindings and milking telemetry metrics.
+              </p>
+</div>
+<!-- Facility Location / Physical Address -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md font-semibold text-on-surface" for="ws-address">
+                Facility Location / Physical Address
+              </label>
+<div class="relative">
+<input class="w-full px-3 py-2 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" id="ws-address" placeholder="e.g., County Rd 14, Building B" type="text" value="4820 County Rd 14, Building B, Sunnyside Basin">
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-outline text-lg">pin_drop</span>
+</div>
+<p class="font-label-sm text-label-sm text-outline">
+                Physical geocoding ensures localized climatic calibrations and field fleet telemetry synchronicity.
+              </p>
+</div>
+<!-- Operational Focus / Facility Scope Notes -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="block font-label-md text-label-md font-semibold text-on-surface" for="ws-notes">
+                  Operational Focus &amp; Facility Scope Notes
+                </label>
+<span class="font-label-sm text-label-sm text-outline">Optional • Internal Audit</span>
+</div>
+<textarea class="w-full px-3 py-2 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" id="ws-notes" placeholder="e.g., Primary high-yield dairy unit with automated milk meters and rotary parlor." rows="3">Primary high-yield dairy unit equipped with 72 automated milk meters, inline somatic cell counters, and dual vacuum line stabilization units. Serves dairy herd sections 4 through 9.</textarea>
+</div>
+<!-- Visual Facility Specification Preview Bar -->
+<div class="p-4 bg-surface-container-low rounded-lg flex flex-wrap items-center justify-between gap-4"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm"><span class="material-symbols-outlined">precision_manufacturing</span></div><div><div class="font-label-md text-label-md font-bold text-on-surface">72-Stall Rotary Milking Configuration</div><div class="font-tabular-data text-tabular-data text-on-surface-variant">Standard high-throughput dairy parlor specifications active</div></div></div><div class="flex items-center gap-2"><span class="px-2.5 py-1 bg-surface-container-lowest text-on-surface font-label-sm text-label-sm rounded font-semibold shadow-sm">72 Stalls</span><span class="px-2.5 py-1 bg-surface-container-lowest text-on-surface font-label-sm text-label-sm rounded font-semibold shadow-sm">Dual Bulk Tanks</span><span class="px-2.5 py-1 bg-surface-container-lowest text-primary font-label-sm text-label-sm rounded font-bold shadow-sm">Active Rotary</span></div></div>
+<!-- Form Actions & Submission Pipeline -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t-0"><a class="w-full sm:w-auto px-5 py-2.5 bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-title-md text-title-md rounded-lg shadow-sm transition-colors text-center inline-flex items-center justify-center" href="#workspaces"><span class="material-symbols-outlined text-base mr-1">arrow_back</span>Cancel &amp; Return to Workspaces</a><div class="flex items-center gap-3 w-full sm:w-auto"><button class="w-full sm:w-auto px-6 py-2.5 bg-primary-container hover:bg-primary text-on-primary font-title-md text-title-md rounded-lg shadow-md transition-all flex items-center justify-center gap-2 active:scale-95" id="submit-btn" type="submit"><span class="material-symbols-outlined text-base" id="btn-icon">add_business</span><span id="btn-text">Create Farm Workspace</span></button></div></div>
+</form>
+</div>
+<!-- Inline Visual Architectural Graphic Tile -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col sm:flex-row items-center gap-4 relative overflow-hidden"><div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center shrink-0 text-primary"><span class="material-symbols-outlined text-2xl">menu_book</span></div><div class="space-y-1 text-center sm:text-left"><div class="font-title-md text-title-md text-on-surface font-bold">Dairy Workspace Management Guidelines</div><p class="font-body-sm text-body-sm text-on-surface-variant">Each dairy workspace defines a dedicated operational boundary within the customer's organization. Milking parlor equipment, bulk tank capacities, and daily shift rosters are managed under this workspace before allocating farm administrators.</p></div></div>
+</div>
+<!-- RIGHT COLUMN: Context & Workflow Sidebar (4 Cols) -->
+<div class="lg:col-span-4 space-y-6">
+<!-- CARD: Onboarding Workflow Progression -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-6 space-y-5">
+<div class="flex items-center justify-between pb-3 bg-surface-container-low -mx-6 -mt-6 p-6 rounded-t-xl">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-xl">account_tree</span>
+              Workflow Progression
+            </h3>
+<span class="font-tabular-data text-tabular-data text-outline">Pipeline 2/3</span>
+</div>
+<div class="relative pl-6 space-y-6 before:absolute before:left-2.5 before:top-2.5 before:bottom-2.5 before:w-0.5 before:bg-surface-container-highest">
+<!-- Step 1: Register Customer (Completed) -->
+<div class="relative">
+<span class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-xs shadow-sm">
+<span class="material-symbols-outlined text-xs">check</span>
+</span>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-bold">Step 1 • Completed</span>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold">Register Customer</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Highland Dairy Collective bound under verified enterprise registry.</p>
+<div class="mt-2 inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-tabular-data text-tabular-data">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Verified 14 Oct 2024
+                </div>
+</div>
+</div>
+<!-- Step 2: Create Farm Workspace (Current / In Progress) -->
+<div class="relative">
+<span class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center font-bold text-xs ring-4 ring-tertiary-container/20 shadow-sm">
+                2
+              </span>
+<div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-bold">Step 2 • Active Session</span>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">Create Farm Workspace</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Define parlor architecture, tenant keys, and isolation boundary rules.</p>
+<div class="mt-2 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold">
+                  Awaiting Workspace Provisioning
+                </div>
+</div>
+</div>
+<!-- Step 3: Provision Farm Admin (Next) -->
+<div class="relative">
+<span class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-surface-container-highest text-outline flex items-center justify-center font-bold text-xs shadow-sm">
+                3
+              </span>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-bold">Step 3 • Pending</span>
+<h4 class="font-title-md text-title-md text-outline font-medium">Provision Farm Admin</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Create primary administrator credentials to manage milking operators.</p>
+<div class="mt-2 flex items-center gap-1 text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">schedule</span>
+                  Scheduled immediately after Step 2
+                </div>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD: Super Admin Binding Rules -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-6 space-y-4"><div class="flex items-center gap-2 pb-3 bg-surface-container-low -mx-6 -mt-6 p-6 rounded-t-xl"><span class="material-symbols-outlined text-primary text-xl">verified_user</span><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Workspace Policies &amp; Binding Rules</h3></div><div class="p-3.5 bg-surface-container-low rounded-lg space-y-1"><div class="flex items-center gap-2 font-label-md text-label-md font-bold text-on-surface"><span class="material-symbols-outlined text-primary text-base">domain</span>Workspace Operational Boundaries</div><p class="font-body-sm text-body-sm text-on-surface-variant">Every farm workspace is strictly linked to its customer organization. Milking yield, cow identification, and bulk tank data remain scoped exclusively to this facility.</p></div><div class="p-3.5 bg-surface-container-low rounded-lg space-y-1"><div class="flex items-center gap-2 font-label-md text-label-md font-bold text-tertiary"><span class="material-symbols-outlined text-base">admin_panel_settings</span>Admin Provisioning Policy</div><p class="font-body-sm text-body-sm text-on-surface-variant">Super Administrators create the workspace first. In Step 3, designated Farm Administrator credentials are generated and assigned for on-site parlor management.</p></div><div class="p-3.5 bg-surface-container rounded-lg space-y-1"><div class="flex items-center gap-2 font-label-md text-label-md font-semibold text-on-surface"><span class="material-symbols-outlined text-base text-outline">rule</span>Unique Identifier Requirement</div><p class="font-body-sm text-body-sm text-on-surface-variant">Workspace codes (e.g. WS-1042) must remain distinct within the customer portfolio to prevent operational routing ambiguity.</p></div></div>
+<!-- CARD: Associated Customer Summary -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-6 space-y-4"><div class="flex items-center justify-between pb-3 bg-surface-container-low -mx-6 -mt-6 p-6 rounded-t-xl"><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2"><span class="material-symbols-outlined text-primary text-xl">contacts</span>Customer Summary</h3><span class="font-label-sm text-label-sm bg-surface-container-highest px-2 py-0.5 rounded font-mono font-bold text-on-surface" id="summary-cust-badge">CUST-4829</span></div><div class="space-y-3 font-body-sm text-body-sm"><div class="flex justify-between py-1.5 bg-surface-container-low px-3 rounded-lg"><span class="text-outline">Organization</span><span class="font-bold text-on-surface text-right" id="summary-org">Highland Dairy Collective</span></div><div class="flex justify-between py-1.5 bg-surface-container-low px-3 rounded-lg"><span class="text-outline">Customer ID</span><span class="font-tabular-data text-tabular-data font-semibold text-on-surface" id="summary-cust-id">CUST-4829</span></div><div class="flex justify-between py-1.5 bg-surface-container-low px-3 rounded-lg"><span class="text-outline">Primary Contact</span><span class="font-medium text-on-surface text-right" id="summary-contact">Evelyn Harper</span></div><div class="flex justify-between py-1.5 bg-surface-container-low px-3 rounded-lg"><span class="text-outline">Phone</span><span class="font-tabular-data text-tabular-data font-medium text-on-surface text-right" id="summary-phone">+1 (555) 389-1204</span></div><div class="flex justify-between py-1.5 bg-surface-container-low px-3 rounded-lg"><span class="text-outline">Email</span><span class="font-tabular-data text-tabular-data text-primary text-right font-medium" id="summary-email">e.harper@highlanddairy.co</span></div></div><div class="pt-2 grid grid-cols-2 gap-2 text-center"><div class="bg-surface-container-low p-2.5 rounded-lg"><div class="font-label-sm text-label-sm text-outline uppercase font-semibold">Active Workspaces</div><div class="font-headline-sm text-headline-sm font-bold text-on-surface" id="summary-workspaces">2 Units</div></div><div class="bg-surface-container-low p-2.5 rounded-lg"><div class="font-label-sm text-label-sm text-outline uppercase font-semibold">Verified Herd</div><div class="font-headline-sm text-headline-sm font-bold text-on-surface" id="summary-herd">2,480 Head</div></div></div><div class="pt-2"><a class="w-full flex items-center justify-center gap-1.5 py-2 px-3 bg-surface-container hover:bg-surface-container-high rounded-lg font-label-md text-label-md text-on-surface font-semibold transition-colors" href="mailto:e.harper@highlanddairy.co"><span class="material-symbols-outlined text-sm">mail</span>Contact Evelyn Harper</a></div></div>
+</div>
+</div>
+<!-- Notification Toast Notification Placeholder (Fixed bottom-right) -->
+<div class="fixed bottom-6 right-6 hidden z-50 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 max-w-md transition-all duration-300 transform translate-y-4" id="toast-notification">
+<span class="material-symbols-outlined text-secondary-fixed text-2xl" id="toast-icon">check_circle</span>
+<div class="flex-1">
+<div class="font-title-md text-title-md font-bold text-inverse-on-surface" id="toast-title">Action Processed</div>
+<div class="font-body-sm text-body-sm text-inverse-on-surface/80" id="toast-message">Workspace configuration state updated.</div>
+</div>
+<button class="p-1 text-inverse-on-surface/60 hover:text-inverse-on-surface" onclick="hideToast()">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Customer Dropdown & Picker Toggle
+  function toggleCustomerDropdown() {
+    const drawer = document.getElementById('customer-picker-drawer');
+    drawer.classList.toggle('hidden');
+  }
+
+  function selectCustomer(name, custId, contact, email) {
+    document.getElementById('selected-customer-name').textContent = name;
+    document.getElementById('contact-email').textContent = email;
+    document.getElementById('summary-org').textContent = name;
+    document.getElementById('summary-cust-id').textContent = custId;
+    document.getElementById('summary-contact').textContent = contact;
+    document.getElementById('summary-email').textContent = email;
+    
+    // Auto collapse drawer
+    document.getElementById('customer-picker-drawer').classList.add('hidden');
+    showToast('Customer Organization Updated', 'Bound workspace provisioning target to ' + name);
+  }
+
+  // Code Generator Simulation
+  function regenerateCode() {
+    const randNum = Math.floor(1000 + Math.random() * 9000);
+    const newCode = 'WS-' + randNum;
+    const codeInput = document.getElementById('ws-code');
+    codeInput.value = newCode;
+    
+    // Reset any duplicate error states if active
+    document.getElementById('duplicate-error-box').classList.add('hidden');
+    codeInput.classList.remove('text-error', 'bg-error-container/20');
+    
+    showToast('New Identifier Generated', 'Unique workspace code set to ' + newCode);
+  }
+
+  // Interactive State Simulation Handler (Screen B & C Requirements)
+  function setSimState(state) {
+    const defaultBtn = document.getElementById('sim-default-btn');
+    const errorBtn = document.getElementById('sim-error-btn');
+    const loadingBtn = document.getElementById('sim-loading-btn');
+
+    const duplicateBox = document.getElementById('duplicate-error-box');
+    const wsCodeInput = document.getElementById('ws-code');
+    const codeStatusIcon = document.getElementById('ws-code-status-icon');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnSpinner = document.getElementById('btn-spinner');
+    const btnIcon = document.getElementById('btn-icon');
+    const btnText = document.getElementById('btn-text');
+    const nameErr = document.getElementById('ws-name-err');
+    const nameInput = document.getElementById('ws-name');
+
+    // Reset base button active classes
+    [defaultBtn, errorBtn, loadingBtn].forEach(b => {
+      b.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+      b.classList.add('text-on-surface-variant', 'font-medium');
+    });
+
+    if (state === 'default') {
+      defaultBtn.classList.add('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+      duplicateBox.classList.add('hidden');
+      wsCodeInput.value = 'WS-1044';
+      wsCodeInput.classList.remove('text-error', 'bg-error-container/20');
+      codeStatusIcon.textContent = 'check_circle';
+      codeStatusIcon.classList.remove('text-error');
+      codeStatusIcon.classList.add('text-primary');
+      
+      nameErr.classList.add('hidden');
+      nameInput.value = 'Highland North Rotary Unit';
+      nameInput.classList.remove('bg-error-container/20');
+
+      btnSpinner.classList.add('hidden');
+      btnIcon.classList.remove('hidden');
+      btnText.textContent = 'Create Farm Workspace';
+      submitBtn.removeAttribute('disabled');
+      showToast('State: Nominal Active', 'Ready for farm workspace creation schema commit.');
+    } 
+    else if (state === 'error') {
+      errorBtn.classList.add('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+      duplicateBox.classList.remove('hidden');
+      wsCodeInput.value = 'WS-1042';
+      wsCodeInput.classList.add('text-error', 'bg-error-container/20');
+      codeStatusIcon.textContent = 'cancel';
+      codeStatusIcon.classList.remove('text-primary');
+      codeStatusIcon.classList.add('text-error');
+
+      btnSpinner.classList.add('hidden');
+      btnIcon.classList.remove('hidden');
+      btnText.textContent = 'Create Farm Workspace';
+      submitBtn.removeAttribute('disabled');
+      showToast('Validation Error Triggered', 'Duplicate workspace code WS-1042 detected in cluster.');
+    } 
+    else if (state === 'loading') {
+      loadingBtn.classList.add('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+      duplicateBox.classList.add('hidden');
+      wsCodeInput.classList.remove('text-error', 'bg-error-container/20');
+      codeStatusIcon.textContent = 'hourglass_top';
+      codeStatusIcon.classList.remove('text-error');
+      codeStatusIcon.classList.add('text-outline');
+
+      btnSpinner.classList.remove('hidden');
+      btnIcon.classList.add('hidden');
+      btnText.textContent = 'Provisioning Cluster Schema...';
+      submitBtn.setAttribute('disabled', 'true');
+      showToast('Transaction In-Flight', 'Contacting tenant partition gateway...');
+    }
+  }
+
+  function testValidationErrors() {
+    const nameInput = document.getElementById('ws-name');
+    const nameErr = document.getElementById('ws-name-err');
+    
+    if (nameInput.value.trim() === '') {
+      nameErr.classList.remove('hidden');
+      nameInput.classList.add('bg-error-container/20');
+    } else {
+      nameErr.classList.add('hidden');
+      nameInput.classList.remove('bg-error-container/20');
+      showToast('Schema Validated', 'All required tenant fields satisfy syntax and security rules.');
+    }
+  }
+
+  function handleFormSubmit() {
+    setSimState('loading');
+    setTimeout(() => {
+      setSimState('default');
+      showToast('Workspace Created Successfully', 'WS-1044 is active. Proceeding to Step 3: Farm Admin Provisioning.');
+    }, 2200);
+  }
+
+  function cancelAction() {
+    showToast('Operation Aborted', 'Returning to Workspaces master ledger.');
+  }
+
+  function showToast(title, msg) {
+    const toast = document.getElementById('toast-notification');
+    const toastTitle = document.getElementById('toast-title');
+    const toastMsg = document.getElementById('toast-message');
+
+    toastTitle.textContent = title;
+    toastMsg.textContent = msg;
+
+    toast.classList.remove('hidden', 'translate-y-4');
+    toast.classList.add('translate-y-0');
+
+    setTimeout(() => {
+      hideToast();
+    }, 4500);
+  }
+
+  function hideToast() {
+    const toast = document.getElementById('toast-notification');
+    toast.classList.add('translate-y-4');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 300);
+  }
+</script></main></div>
+
+
+</body></html>

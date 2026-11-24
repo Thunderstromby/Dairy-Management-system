@@ -1,0 +1,732 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#30312d", "on-background": "#1b1c18", "secondary": "#556249", "tertiary-fixed-dim": "#ffb784", "surface-container-low": "#f5f3ed", "on-tertiary": "#ffffff", "surface-dim": "#dcdad4", "on-primary-container": "#b8cda9", "on-primary-fixed": "#101f08", "inverse-on-surface": "#f3f1eb", "outline": "#75786f", "background": "#fbf9f3", "on-tertiary-fixed": "#301400", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#3e4b32", "surface": "#fbf9f3", "outline-variant": "#c4c8bd", "surface-container": "#f0eee8", "surface-container-high": "#eae8e2", "surface-tint": "#516446", "surface-bright": "#fbf9f3", "on-surface-variant": "#444840", "primary-container": "#46583b", "primary": "#2f4126", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffdcc6", "on-primary-fixed-variant": "#3a4c30", "secondary-container": "#d9e8c7", "on-surface": "#1b1c18", "error": "#ba1a1a", "secondary-fixed-dim": "#bdcbac", "on-tertiary-container": "#ffb785", "on-secondary-container": "#5b694e", "on-error": "#ffffff", "primary-fixed": "#d4e9c3", "on-tertiary-fixed-variant": "#6c3a11", "tertiary": "#5e3007", "primary-fixed-dim": "#b8cda8", "on-error-container": "#93000a", "secondary-fixed": "#d9e8c7", "tertiary-container": "#7a461c", "on-secondary-fixed": "#141f0a", "on-primary": "#ffffff", "surface-variant": "#e4e2dd", "inverse-primary": "#b8cda8", "surface-container-highest": "#e4e2dd", "on-secondary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "gutter-mobile": "0.75rem", "margin": "2rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter": "1.5rem", "margin-mobile": "1rem" }, "fontFamily": { "data-metric-md": [ "Inter" ], "body-lg": [ "Inter" ], "display-lg-mobile": [ "Manrope" ], "body-sm": [ "Inter" ], "headline-md": [ "Manrope" ], "label-sm": [ "Inter" ], "headline-sm": [ "Manrope" ], "headline-xl": [ "Manrope" ], "body-md": [ "Inter" ], "headline-xl-mobile": [ "Manrope" ], "display-lg": [ "Manrope" ], "headline-lg": [ "Manrope" ], "data-metric-lg": [ "Manrope" ], "label-md": [ "Inter" ] }, "fontSize": { "data-metric-md": [ "1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "display-lg-mobile": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ], "headline-md": [ "1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" } ], "label-sm": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "headline-xl": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "headline-xl-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-lg": [ "3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "data-metric-lg": [ "2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZuhXF_IhBdGhJ4eix1oqj3wBimwP9kKeGGChH_b2ax1lMLHMcXPmCVu9b3MJqlJ3XUJHZyp_ietndJCcoi5tapKDT0swhF14GEZxUKYZjg6g5LvxUeQzsGptFXM8XbwZz0B0M4Kbg8tH48Ys1NpBq3q3ceaJWAzrxO8XU7fzOrfQL6K9wOMESU_VEMnfcbKwhEtKD90-MYyU8fO7yBiUm20ljVe33W-rRqQJED0H"><div><div class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight truncate">SmartFarm</div><div class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Dairy Management</div></div></div><span class="font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold px-space-xs py-0.5 rounded">Admin</span></div><div class="px-space-md py-space-sm bg-surface-container-low/80 flex items-center justify-between"><div class="truncate"><div class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Greenfield Dairy Estate</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">Workspace: GF-042</div></div><span class="h-2 w-2 rounded-full bg-primary-container ring-2 ring-primary-fixed flex-shrink-0"></span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Overview</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="dashboard" href="#">Dashboard</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Herd Management</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="animals" href="#">Animals</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="animal-health" href="#">Animal Health</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="feeding" href="#">Feeding Plans</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Milk Production</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="production-entry" href="#">Production Entry</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="animal-production-history" href="#">Animal Production History</a><a aria-current="page" class="flex items-center px-space-sm py-space-xs transition-all bg-primary-container text-on-primary font-semibold rounded-lg" data-path="daily-totals" href="#">Daily Totals</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="monthly-reports" href="#">Monthly Reports</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Operations &amp; Assets</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="milk-management" href="#">Milk Logistics</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="inventory" href="#">Inventory</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="equipment" href="#">Equipment</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Workforce &amp; Finance</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="workers" href="#">Workers</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="attendance" href="#">Attendance</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="payroll" href="#">Payroll</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="finance" href="#">Finance</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Governance &amp; Core</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="supervisor-access" href="#">Supervisor Access</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="reports" href="#">Reports</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="data-management" href="#">Data Management</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="settings" href="#">Settings</a></div></nav></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><button class="p-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-xl">menu_open</span></button><nav class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="font-semibold text-on-surface">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface-variant">Operations</span></nav><div class="relative flex-1 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full h-10 pl-9 pr-14 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search Animal ID, Batch, Record..." type="text"><span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded shadow-sm">⌘K</span></div></div><div class="flex items-center gap-space-sm"><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Mode" type="button"><span class="material-symbols-outlined text-xl">routine</span></button><div class="relative"><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" title="Alerts" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 h-4 min-w-[1rem] px-1 bg-error text-on-error font-label-sm text-[0.625rem] rounded-full flex items-center justify-center font-bold">3</span></button></div><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#" title="Docs &amp; Support"><span class="material-symbols-outlined text-xl">help</span></a><div class="h-6 w-[1px] bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHGkwzAmXeAWZgoliBfM3J0Dk3rRvKbrFcaSDXWTFXvp7mK8JZlIDpaM_-PKsE2e-9DSWj_thQxg7ZvMO7_J2wdBeJdNp3xHQNrTkReCH1iwd77yI5cACPrn8AVBGbsgSIRzl_r1aNrbkvrI3tTJT7qFPLASAjAk_cx85172_N3qz8dJ2RbazkMZxrYU4--z2VriyTURPXkRqv4-UUhJWONTqJq0P8IWMmPKFhLYX7"><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></div><div class="hidden lg:block text-left"><div class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-none">Farm Administrator</div></div><button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-lg">expand_more</span></button></div></div></header><main class="relative pt-16 w-full px-space-lg py-space-lg bg-background min-h-screen"><div class="flex flex-col w-full space-y-space-lg">
+<!-- 1. Breadcrumbs & Top Quick Meta -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-base">dashboard</span>
+<span>Dashboard</span>
+</a>
+<span class="material-symbols-outlined text-xs text-outline-variant">chevron_right</span>
+<span class="hover:text-primary transition-colors">Milk Production</span>
+<span class="material-symbols-outlined text-xs text-outline-variant">chevron_right</span>
+<span class="text-on-surface font-semibold">Daily Totals</span>
+</nav>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-sm text-primary">verified</span><span>Workspace Registry: <span class="font-bold text-on-surface">GF-042</span></span></div>
+</div>
+<!-- 2. Page Heading & Subtitle -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-container/80 text-on-secondary-container font-label-sm text-label-sm font-semibold tracking-wide uppercase mb-1.5">
+<span class="material-symbols-outlined text-xs">analytics</span> Production Ledger Auditing
+      </div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">Daily Milk Production Totals</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-3xl">
+        Farm-level workspace aggregations, shift volume breakdown, and cow-by-cow ledger validation for Greenfield Dairy Estate GF-042.
+      </p>
+</div>
+<!-- Action buttons group -->
+<div class="flex flex-wrap items-center gap-space-xs self-start md:self-auto">
+<button class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-base">file_download</span>
+<span>Export CSV</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-base">print</span>
+<span>Print Parlor Sheet</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md font-semibold transition-all shadow-md" type="button">
+<span class="material-symbols-outlined text-base">draw</span>
+<span>Sign-Off Daily Total</span>
+</button>
+</div>
+</div>
+<!-- 3. Date Selector & Shift Overview Banner -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-2">
+<div class="inline-flex items-center bg-surface-container-low rounded-lg p-0.5 shadow-inner">
+<button class="p-1.5 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface transition-colors flex items-center" title="Previous Day" type="button">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<div class="flex items-center gap-2 px-3 py-1 font-label-md text-label-md font-semibold text-on-surface">
+<span class="material-symbols-outlined text-base text-primary">calendar_today</span>
+<span>Wednesday, October 23, 2024</span>
+</div>
+<button class="p-1.5 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface transition-colors flex items-center" title="Next Day" type="button">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold transition-colors" type="button">
+        Today
+      </button>
+<button class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">history</span>
+<span>Select Range</span>
+</button>
+</div>
+<!-- Status Banner Badge -->
+<div class="flex flex-wrap items-center gap-3">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-secondary-container/40 text-on-secondary-container">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-label-sm text-label-sm font-semibold">Validated Daytime Ledger • Evening Shift Finalizing</span>
+</div>
+<div class="hidden xl:flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-sm">alarm_on</span>
+<span>Reconciliation Sync: 19:42:10 UTC</span>
+</div>
+</div>
+</div>
+<!-- 4. Farm Total Aggregation KPI Grid (4 Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1: Farm Daily Total Volume -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Farm Daily Total Volume</span>
+<span class="p-1.5 rounded-lg bg-secondary-container text-primary flex items-center">
+<span class="material-symbols-outlined text-lg">water_drop</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2">
+<div class="font-data-metric-lg text-data-metric-lg font-bold text-on-surface tracking-tight">24,650.0</div>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface-variant">Litres</span>
+</div>
+<div class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm mt-1">
+<span class="material-symbols-outlined text-sm font-bold">arrow_upward</span>
+<span class="font-bold">+2.28%</span>
+<span class="text-on-surface-variant">vs target (24,100 L)</span>
+</div>
+</div>
+<div class="mt-4 pt-3 bg-surface-container-low/50 -mx-space-md -mb-space-md px-space-md py-2 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>890 Eligible Lactating</span>
+<span class="font-semibold text-on-surface">Avg: 27.70 L/cow</span>
+</div>
+</div>
+<!-- Card 2: Morning Shift Total -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Morning Shift Total</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-on-surface-variant flex items-center">
+<span class="material-symbols-outlined text-lg">wb_sunny</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2">
+<div class="font-data-metric-lg text-data-metric-lg font-bold text-on-surface tracking-tight">13,200.0</div>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface-variant">L</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span>53.5% of Daily Total</span>
+<span class="text-primary font-medium">Completed 08:30</span>
+</div>
+</div>
+<div class="mt-4 pt-3 bg-surface-container-low/50 -mx-space-md -mb-space-md px-space-md py-2 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Session Duration: 4h 15m</span>
+<span class="font-semibold text-on-surface">Avg: 14.83 L/cow</span>
+</div>
+</div>
+<!-- Card 3: Evening Shift Total -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Evening Shift Total</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-on-surface-variant flex items-center">
+<span class="material-symbols-outlined text-lg">dark_mode</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2">
+<div class="font-data-metric-lg text-data-metric-lg font-bold text-on-surface tracking-tight">11,450.0</div>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface-variant">L</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span>46.5% of Daily Total</span>
+<span class="text-tertiary-container font-medium">Completed 19:00</span>
+</div>
+</div>
+<div class="mt-4 pt-3 bg-surface-container-low/50 -mx-space-md -mb-space-md px-space-md py-2 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Session Duration: 3h 48m</span>
+<span class="font-semibold text-on-surface">Avg: 12.87 L/cow</span>
+</div>
+</div>
+<!-- Card 4: Quality & Integrity Index -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Quality &amp; Integrity</span>
+<span class="p-1.5 rounded-lg bg-secondary-container/60 text-secondary flex items-center">
+<span class="material-symbols-outlined text-lg">fact_check</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2">
+<div class="font-data-metric-lg text-data-metric-lg font-bold text-on-surface tracking-tight">96.8%</div>
+<span class="font-headline-sm text-headline-sm font-semibold text-primary">Grade A</span>
+</div>
+<!-- Multi-segment quality bar -->
+<div class="w-full bg-surface-container rounded-full h-2 mt-2 flex overflow-hidden">
+<div class="bg-primary h-2" style="width: 96.8%" title="Grade A: 862"></div>
+<div class="bg-tertiary-fixed-dim h-2" style="width: 2.7%" title="Average: 24"></div>
+<div class="bg-error h-2" style="width: 0.5%" title="Withheld: 4"></div>
+</div>
+</div>
+<div class="mt-4 pt-3 bg-surface-container-low/50 -mx-space-md -mb-space-md px-space-md py-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>862 Good</span>
+<span>24 Avg</span>
+<span class="text-error font-semibold">4 Diverted</span>
+</div>
+</div>
+</div>
+<!-- 5. Parlor Shift Breakdown & Hourly Intake Visual Flow -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Chart Container (8 cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 gap-2">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Shift Volume Dynamics &amp; Parlor Throughput</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Intake curve across 24-hour cycle (October 23, 2024)</p>
+</div>
+<div class="flex items-center gap-3 font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-primary inline-block"></span>
+<span class="text-on-surface">Morning (13.2k L)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-secondary inline-block"></span>
+<span class="text-on-surface">Evening (11.45k L)</span>
+</div>
+</div>
+</div>
+<!-- Inline SVG Bimodal Diurnal Lactation Curve Chart -->
+<div class="relative w-full h-56 pt-2">
+<svg class="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 700 200">
+<!-- Soft Grid Lines -->
+<line class="text-surface-container-high" stroke="currentColor" stroke-dasharray="4,4" stroke-width="1" x1="0" x2="700" y1="30" y2="30"></line>
+<line class="text-surface-container-high" stroke="currentColor" stroke-dasharray="4,4" stroke-width="1" x1="0" x2="700" y1="80" y2="80"></line>
+<line class="text-surface-container-high" stroke="currentColor" stroke-dasharray="4,4" stroke-width="1" x1="0" x2="700" y1="130" y2="130"></line>
+<line class="text-surface-container-high" stroke="currentColor" stroke-width="1" x1="0" x2="700" y1="180" y2="180"></line>
+<!-- Morning Shift Area Gradient -->
+<defs>
+<linearGradient id="morningGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#46583b" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#46583b" stop-opacity="0.0"></stop>
+</linearGradient>
+<linearGradient id="eveningGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#556249" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#556249" stop-opacity="0.0"></stop>
+</linearGradient>
+</defs>
+<!-- Morning Pulse Curve (04:00 to 09:00 -> X: 80 to 280) -->
+<path d="M 70 180 C 110 180, 130 35, 175 35 C 220 35, 240 180, 290 180 Z" fill="url(#morningGrad)"></path>
+<path d="M 70 180 C 110 180, 130 35, 175 35 C 220 35, 240 180, 290 180" fill="none" stroke="#2f4126" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Evening Pulse Curve (15:00 to 20:00 -> X: 410 to 620) -->
+<path d="M 400 180 C 440 180, 470 55, 510 55 C 550 55, 570 180, 620 180 Z" fill="url(#eveningGrad)"></path>
+<path d="M 400 180 C 440 180, 470 55, 510 55 C 550 55, 570 180, 620 180" fill="none" stroke="#556249" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Morning Peak Indicator (06:00 peak) -->
+<circle class="fill-primary stroke-white stroke-2" cx="175" cy="35" r="4"></circle>
+<text class="text-xs font-semibold fill-primary font-mono" text-anchor="middle" x="175" y="24">06:00 Peak (3,820 L/h)</text>
+<!-- Evening Peak Indicator (17:00 peak) -->
+<circle class="fill-secondary stroke-white stroke-2" cx="510" cy="55" r="4"></circle>
+<text class="text-xs font-semibold fill-secondary font-mono" text-anchor="middle" x="510" y="44">17:00 Peak (3,210 L/h)</text>
+<!-- Midday Valley Tag -->
+<text class="text-[11px] fill-outline-variant font-mono" text-anchor="middle" x="345" y="150">Parlor CIP Wash Period</text>
+</svg>
+<!-- Time markers at axis -->
+<div class="flex justify-between text-on-surface-variant font-label-sm text-label-sm pt-1 px-1">
+<span>03:00</span>
+<span class="font-semibold text-primary">06:00 (M-Peak)</span>
+<span>09:00</span>
+<span>12:00</span>
+<span>15:00</span>
+<span class="font-semibold text-secondary">17:00 (E-Peak)</span>
+<span>20:00</span>
+<span>23:00</span>
+</div>
+</div>
+<div class="mt-4 pt-3 bg-surface-container-low/60 rounded-lg p-space-sm flex flex-wrap items-center justify-between text-on-surface-variant font-body-sm text-body-sm gap-2"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-primary">domain</span><span>Active Milking Stations: <span class="font-semibold text-on-surface">3 Operational Parlors</span></span></div><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-primary">groups</span><span>Eligible Head Accounted: <span class="font-semibold text-on-surface">890 / 890 (100%)</span></span></div><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-primary">check_circle</span><span>Shift Status: <span class="font-semibold text-on-surface">Day Confirmed • Evening Finalizing</span></span></div></div>
+</div>
+<!-- Parlor Throughput Cards (4 cols) -->
+<div class="lg:col-span-4 flex flex-col justify-between space-y-space-sm">
+<!-- Parlor 01 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow transition-shadow">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Parlor 01</h3>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Parallel 2x20</span>
+</div>
+<div class="flex items-baseline justify-between mt-2">
+<span class="font-data-metric-md text-data-metric-md font-bold text-on-surface">11,850 L</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">480 Cows processed</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-2">
+<div class="bg-primary h-1.5 rounded-full" style="width: 48.0%"></div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-body-sm text-body-sm mt-1">
+<span>Throughput: 112 cows/hr</span>
+<span class="text-primary font-medium">98.1% Validated</span>
+</div>
+</div>
+<!-- Parlor 02 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow transition-shadow">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Parlor 02</h3>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Herringbone</span>
+</div>
+<div class="flex items-baseline justify-between mt-2">
+<span class="font-data-metric-md text-data-metric-md font-bold text-on-surface">6,950 L</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">260 Cows processed</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-2">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 28.2%"></div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-body-sm text-body-sm mt-1">
+<span>Throughput: 68 cows/hr</span>
+<span class="text-primary font-medium">97.4% Validated</span>
+</div>
+</div>
+<!-- Rotary Parlor -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow transition-shadow">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Rotary Parlor</h3>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">40-Stall Continuous</span>
+</div>
+<div class="flex items-baseline justify-between mt-2">
+<span class="font-data-metric-md text-data-metric-md font-bold text-on-surface">5,850 L</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">150 High-Yield Head</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-2">
+<div class="bg-tertiary-container h-1.5 rounded-full" style="width: 23.8%"></div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-body-sm text-body-sm mt-1">
+<span>Throughput: 140 cows/hr</span>
+<span class="text-primary font-medium">99.0% Validated</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 7. Production Alert Notice (15% drop rule & reconciliation policy) -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="p-2 rounded-lg bg-surface-container text-tertiary-container flex items-center flex-shrink-0 mt-0.5 md:mt-0">
+<span class="material-symbols-outlined text-xl">notification_important</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Lactation Alert Threshold Protocol (≥ 15% Variance)</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-surface-container-highest text-on-surface-variant">Rule Rule-D-15</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 max-w-4xl">
+          Individual animals experiencing a 15% or greater drop below their 3-day rolling baseline are flagged automatically for veterinary triage. 
+          <span class="font-semibold text-on-surface">Note: Missing session and late entry reconciliation policies are pending client approval; values reflect recorded sessions.</span>
+</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end md:self-center flex-shrink-0">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold transition-colors" type="button">
+        Audit Protocol
+      </button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm font-semibold transition-colors" type="button">
+        Manage 1 Alert
+      </button>
+</div>
+</div>
+<!-- 6. Individual-Animal Production Breakdown Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Table Controls Toolbar -->
+<div class="p-space-md flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm bg-surface-container-low/40">
+<div class="flex flex-col sm:flex-row sm:items-center gap-space-sm flex-1 max-w-2xl">
+<!-- Search -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+<input class="w-full h-10 pl-9 pr-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-sm" placeholder="Search Ear-Tag (e.g. ET-GF-8849) or Name..." type="text">
+</div>
+<!-- Filters -->
+<div class="flex items-center gap-2">
+<select class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-sm">
+<option value="">All Housing Pens</option>
+<option value="pen-01">Pen 01 (Fresh Lactation)</option>
+<option value="pen-02">Pen 02 (Mid Lactation)</option>
+<option value="pen-03">Pen 03 (Mid Lactation)</option>
+<option value="pen-04">Pen 04 (High Production)</option>
+<option value="pen-h1">Pen H-1 (Infirmary / Quarantine)</option>
+</select>
+<select class="h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-sm">
+<option value="">All Quality Grades</option>
+<option value="good">Good (Grade A)</option>
+<option value="average">Average</option>
+<option value="poor">Poor / Diverted</option>
+</select>
+</div>
+</div>
+<div class="flex items-center justify-between lg:justify-end gap-3">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">
+          Displaying <span class="font-bold text-on-surface">890</span> Eligible Lactating Animals in Workspace GF-042
+        </span>
+<button class="p-2 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" title="Columns &amp; Layout" type="button">
+<span class="material-symbols-outlined text-lg">view_column</span>
+</button>
+</div>
+</div>
+<!-- Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md font-semibold">Animal Ear-Tag &amp; Name</th>
+<th class="py-3 px-space-md font-semibold">Pen / Housing</th>
+<th class="py-3 px-space-md font-semibold text-right">Morning Yield</th>
+<th class="py-3 px-space-md font-semibold text-right">Evening Yield</th>
+<th class="py-3 px-space-md font-semibold text-right">Daily Total (M+E)</th>
+<th class="py-3 px-space-md font-semibold text-center">Quality Grade</th>
+<th class="py-3 px-space-md font-semibold text-right">3-Day Rolling Avg</th>
+<th class="py-3 px-space-md font-semibold">Variance / Status</th>
+<th class="py-3 px-space-md font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1: Bella Prime -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2.5">
+<div class="p-1.5 rounded-lg bg-surface-container text-primary flex items-center">
+<span class="material-symbols-outlined text-base">tag</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface font-mono">ET-GF-8849</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Bella Prime (Holstein)</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container font-medium text-on-surface">Pen 04</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-md text-body-md font-medium text-on-surface">
+              14.85 <span class="text-xs text-on-surface-variant">L</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-md text-body-md font-medium text-on-surface">
+              12.85 <span class="text-xs text-on-surface-variant">L</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">27.70</span>
+<span class="text-xs font-semibold text-on-surface-variant"> L</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-secondary-container/70 text-on-secondary-container">
+                Good
+              </span>
+</td>
+<td class="py-3 px-space-md text-right font-body-md text-body-md text-on-surface-variant">
+              27.60 <span class="text-xs">L</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+0.4% Normal</span>
+</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="px-2.5 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm text-primary font-semibold transition-colors" type="button">
+                Details
+              </button>
+</td>
+</tr>
+<!-- Row 2: Daisy Meadow -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2.5">
+<div class="p-1.5 rounded-lg bg-surface-container text-primary flex items-center">
+<span class="material-symbols-outlined text-base">tag</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface font-mono">ET-GF-8852</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Daisy Meadow (Jersey Cross)</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container font-medium text-on-surface">Pen 02</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-md text-body-md font-medium text-on-surface">
+              12.40 <span class="text-xs text-on-surface-variant">L</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-md text-body-md font-medium text-on-surface">
+              11.10 <span class="text-xs text-on-surface-variant">L</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">23.50</span>
+<span class="text-xs font-semibold text-on-surface-variant"> L</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-secondary-container/70 text-on-secondary-container">
+                Good
+              </span>
+</td>
+<td class="py-3 px-space-md text-right font-body-md text-body-md text-on-surface-variant">
+              23.80 <span class="text-xs">L</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-sm">trending_flat</span>
+<span>-1.3% Normal</span>
+</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="px-2.5 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm text-primary font-semibold transition-colors" type="button">
+                Details
+              </button>
+</td>
+</tr>
+<!-- Row 3: Buttercup -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2.5">
+<div class="p-1.5 rounded-lg bg-surface-container text-primary flex items-center">
+<span class="material-symbols-outlined text-base">tag</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface font-mono">ET-GF-8870</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Buttercup (Holstein)</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container font-medium text-on-surface">Pen 04</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-md text-body-md font-medium text-on-surface">
+              15.10 <span class="text-xs text-on-surface-variant">L</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-md text-body-md font-medium text-on-surface">
+              13.40 <span class="text-xs text-on-surface-variant">L</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">28.50</span>
+<span class="text-xs font-semibold text-on-surface-variant"> L</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed">
+                Average
+              </span>
+</td>
+<td class="py-3 px-space-md text-right font-body-md text-body-md text-on-surface-variant">
+              28.10 <span class="text-xs">L</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+1.4% Normal</span>
+</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="px-2.5 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm text-primary font-semibold transition-colors" type="button">
+                Details
+              </button>
+</td>
+</tr>
+<!-- Row 4: Kashmir -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2.5">
+<div class="p-1.5 rounded-lg bg-surface-container text-primary flex items-center">
+<span class="material-symbols-outlined text-base">tag</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface font-mono">ET-GF-7910</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Kashmir (Fleckvieh)</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container font-medium text-on-surface">Pen 02</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-md text-body-md font-medium text-on-surface">
+              11.25 <span class="text-xs text-on-surface-variant">L</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-md text-body-md font-medium text-on-surface">
+              10.15 <span class="text-xs text-on-surface-variant">L</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">21.40</span>
+<span class="text-xs font-semibold text-on-surface-variant"> L</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-secondary-container/70 text-on-secondary-container">
+                Good
+              </span>
+</td>
+<td class="py-3 px-space-md text-right font-body-md text-body-md text-on-surface-variant">
+              21.60 <span class="text-xs">L</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-sm">trending_flat</span>
+<span>-0.9% Normal</span>
+</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="px-2.5 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm text-primary font-semibold transition-colors" type="button">
+                Details
+              </button>
+</td>
+</tr>
+<!-- Row 5: Rosie Clover (Mastitis Quarantine Alert) -->
+<tr class="bg-error-container/20 hover:bg-error-container/30 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2.5">
+<div class="p-1.5 rounded-lg bg-error-container text-error flex items-center">
+<span class="material-symbols-outlined text-base">emergency</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-bold text-error font-mono">ET-GF-8711</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Rosie Clover (Ayrshire)</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm bg-error-container text-on-error-container font-semibold">Pen H-1 (Infirmary)</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-md text-body-md font-medium text-error">
+              0.00 <span class="text-xs">L</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-md text-body-md font-medium text-error">
+              0.00 <span class="text-xs">L</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-error">0.00 L</span>
+<div class="text-[11px] font-bold uppercase text-error tracking-wide">Withheld / Diverted</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-error text-on-error">
+                Poor
+              </span>
+</td>
+<td class="py-3 px-space-md text-right font-body-md text-body-md text-on-surface-variant">
+              16.20 <span class="text-xs">L</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-error font-bold">
+<span class="material-symbols-outlined text-sm">warning</span>
+<span>-100% Drop Alert (Mastitis Quarantine)</span>
+</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="px-2.5 py-1 rounded bg-error/10 hover:bg-error/20 font-label-sm text-label-sm text-error font-semibold transition-colors" type="button">
+                View Clinical Case
+              </button>
+</td>
+</tr>
+<!-- Row 6: Starlight -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2.5">
+<div class="p-1.5 rounded-lg bg-surface-container text-primary flex items-center">
+<span class="material-symbols-outlined text-base">tag</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface font-mono">ET-GF-9102</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Starlight (Holstein)</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container font-medium text-on-surface">Pen 03</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-md text-body-md font-medium text-on-surface">
+              13.90 <span class="text-xs text-on-surface-variant">L</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-md text-body-md font-medium text-on-surface">
+              12.10 <span class="text-xs text-on-surface-variant">L</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">26.00</span>
+<span class="text-xs font-semibold text-on-surface-variant"> L</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-secondary-container/70 text-on-secondary-container">
+                Good
+              </span>
+</td>
+<td class="py-3 px-space-md text-right font-body-md text-body-md text-on-surface-variant">
+              25.80 <span class="text-xs">L</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+0.8% Normal</span>
+</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="px-2.5 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm text-primary font-semibold transition-colors" type="button">
+                Details
+              </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Footer -->
+<div class="p-space-md bg-surface-container-low/40 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+        Showing <span class="font-semibold text-on-surface">1</span> to <span class="font-semibold text-on-surface">6</span> of <span class="font-semibold text-on-surface">890</span> animals
+      </div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant disabled:opacity-40" disabled="" type="button">
+<span class="material-symbols-outlined text-base">first_page</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant disabled:opacity-40" disabled="" type="button">
+<span class="material-symbols-outlined text-base">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded bg-primary text-on-primary font-bold" type="button">1</button>
+<button class="w-8 h-8 rounded hover:bg-surface-container text-on-surface font-medium transition-colors" type="button">2</button>
+<button class="w-8 h-8 rounded hover:bg-surface-container text-on-surface font-medium transition-colors" type="button">3</button>
+<span class="px-1 text-on-surface-variant">...</span>
+<button class="w-8 h-8 rounded hover:bg-surface-container text-on-surface font-medium transition-colors" type="button">149</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant transition-colors" type="button">
+<span class="material-symbols-outlined text-base">chevron_right</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant transition-colors" type="button">
+<span class="material-symbols-outlined text-base">last_page</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 8. Export & Verification Bottom Bar -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-xl">verified_user</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface">Official Farm Daily Sign-Off</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+          Pending final authorization by Farm Administrator: <span class="font-semibold text-on-surface">Elena Vance</span> (ID: ADM-9402)
+        </div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm w-full md:w-auto justify-end">
+<button class="flex-1 md:flex-none inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-medium transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">download</span>
+<span>Export Daily Ledger (CSV)</span>
+</button>
+<button class="flex-1 md:flex-none inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-medium transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">local_printshop</span>
+<span>Print Parlor Sheet</span>
+</button>
+<button class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-bold transition-all shadow-md" type="button">
+<span class="material-symbols-outlined text-lg">signature</span>
+<span>Sign-Off Daily Total (Farm Admin)</span>
+</button>
+</div>
+</div>
+</div></main></div>
+
+</body></html>

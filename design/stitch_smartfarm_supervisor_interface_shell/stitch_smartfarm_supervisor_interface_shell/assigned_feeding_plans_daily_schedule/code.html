@@ -1,0 +1,1046 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-high": "#eae8e2", "inverse-primary": "#b8cda8", "on-secondary-fixed": "#141f0a", "surface-container-highest": "#e4e2dd", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#bdcbac", "tertiary-fixed-dim": "#ffb784", "on-primary-fixed-variant": "#3a4c30", "secondary-container": "#d9e8c7", "on-primary": "#ffffff", "on-background": "#1b1c18", "surface": "#fbf9f3", "inverse-on-surface": "#f3f1eb", "on-tertiary-fixed": "#301400", "on-primary-fixed": "#101f08", "on-tertiary-fixed-variant": "#6c3a11", "error-container": "#ffdad6", "on-surface-variant": "#444840", "on-error": "#ffffff", "on-secondary-container": "#5b694e", "primary": "#2f4126", "primary-fixed-dim": "#b8cda8", "on-primary-container": "#b8cda9", "on-tertiary-container": "#ffb785", "tertiary-container": "#7a461c", "surface-container-lowest": "#ffffff", "surface-tint": "#516446", "primary-container": "#46583b", "surface-variant": "#e4e2dd", "outline-variant": "#c4c8bd", "background": "#fbf9f3", "on-surface": "#1b1c18", "tertiary": "#5e3007", "error": "#ba1a1a", "surface-bright": "#fbf9f3", "inverse-surface": "#30312d", "on-secondary": "#ffffff", "surface-dim": "#dcdad4", "tertiary-fixed": "#ffdcc6", "on-secondary-fixed-variant": "#3e4b32", "primary-fixed": "#d4e9c3", "surface-container": "#f0eee8", "outline": "#75786f", "surface-container-low": "#f5f3ed", "on-error-container": "#93000a", "secondary": "#556249", "secondary-fixed": "#d9e8c7" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-md": "1.5rem", "space-md": "0.75rem", "margin": "1rem", "space-lg": "1rem", "space-2xl": "2rem", "gutter": "1rem", "space-xl": "1.5rem", "margin-lg": "2rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter-md": "1.25rem", "gutter-lg": "1.5rem" }, "fontFamily": { "label-md": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"], "headline-lg-mobile": ["Manrope"], "headline-xl-mobile": ["Manrope"], "label-lg": ["Inter"], "headline-xl": ["Manrope"], "headline-lg": ["Manrope"], "body-md": ["Inter"], "headline-sm": ["Manrope"], "headline-md": ["Manrope"] }, "fontSize": { "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "400" }], "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "fontWeight": "400" }], "headline-lg-mobile": ["1.375rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "800" }], "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["0.875rem", { "lineHeight": "1.375rem", "fontWeight": "400" }], "headline-sm": ["1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "headline-md": ["1.25rem", { "lineHeight": "1.625rem", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-xl flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBYgTLzL4ixmW_u0Iuetl8cMytFAkTgo9j0OqmFpmR4ZdNIJA8TAM26gSRdozb0vdo_6xJy3scVi2laB3t23jDT5fSIe8Gnlt9IldNJ8j-8vQ9f0crSqtL97T814neAilUmvuxVi9XQNkQdm34ZBtCq3lRd3pGErjVhDlhDM1nNOW2QXZlG8cZB7Vpgu2pyG5oBekky3LdocMVoovOlsZt9zFE9JFdFVoDBX3w_DHLm0w"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none tracking-tight">SmartFarm</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-0.5">Supervisor Rail</span></div></div><button class="text-on-surface-variant hover:text-on-surface p-space-xs rounded-lg transition-colors" title="Toggle compact view" type="button"><span class="material-symbols-outlined text-lg leading-none">dock_to_right</span></button></div><div class="px-space-md py-space-sm"><div class="bg-surface-container px-space-md py-space-sm rounded-lg flex items-center justify-between"><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-on-surface-variant truncate">ESTATE CONTEXT</span><span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Greenfield Estate</span></div><span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-space-xs py-0.5 rounded font-mono">GF-042</span></div></div><nav class="flex-1 px-space-md py-space-xs space-y-0.5 overflow-y-auto" data-active-classes="bg-primary text-on-primary font-semibold shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-xl">dashboard</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#"><span class="material-symbols-outlined text-xl">pets</span><span class="font-label-lg text-label-lg">Animals</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#"><span class="material-symbols-outlined text-xl">healing</span><span class="font-label-lg text-label-lg">Animal Health</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#"><span class="material-symbols-outlined text-xl">water_drop</span><span class="font-label-lg text-label-lg">Milk Production</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding" href="#"><span class="material-symbols-outlined text-xl">grass</span><span class="font-label-lg text-label-lg">Feeding Plans</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#"><span class="material-symbols-outlined text-xl">inventory_2</span><span class="font-label-lg text-label-lg">Inventory Usage</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers-and-attendance" href="#"><span class="material-symbols-outlined text-xl">badge</span><span class="font-label-lg text-label-lg">Workers &amp; Attendance</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#"><span class="material-symbols-outlined text-xl">precision_manufacturing</span><span class="font-label-lg text-label-lg">Equipment</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notifications" href="#"><span class="material-symbols-outlined text-xl">notifications</span><span class="font-label-lg text-label-lg">Operational Alerts</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#"><span class="material-symbols-outlined text-xl">analytics</span><span class="font-label-lg text-label-lg">Shift Reports</span></a></nav></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-md"><button class="md:hidden p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container" type="button"><span class="material-symbols-outlined text-xl">menu</span></button><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Greenfield Dairy Estate</span><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-space-xs py-0.5 rounded font-mono">GF-042</span></div><span class="text-outline-variant text-sm">/</span><div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-sm">fence</span><span>Barn Zone A</span></div></div><div class="flex items-center gap-space-lg"><div class="hidden sm:flex items-center gap-2 bg-secondary-container/60 px-space-md py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-secondary-fixed font-semibold tracking-wide uppercase">On Duty · Active</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Operational Notifications" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary-container ring-2 ring-surface"></span></button><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Theme Display" type="button"><span class="material-symbols-outlined text-xl">light_mode</span></button><div class="h-6 w-px bg-outline-variant/60"></div><div class="flex items-center gap-space-md pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKRfnvDtcXaA_3fouE5OFtLyyygvIskuxgsScuB3RWTNQvZ0TXW1jZMn6P1jecz8rtfhaoeatFRSlhGxosuymj0Z74Gb3NeY9k-HpkTV1gVECMz-aOx4ic5cbig5OeibpkMiehHyRDxNEqsS1DvY0suVPQHSm8HBgREiL03zsO3CyppQ6P6Lx7Kj2AY9MjJWACPCsVCG6YU3N1OMaaoQVLKC4LbU9ah5w1pjafjyse"><div class="hidden lg:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface font-semibold leading-tight">Marcus Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant">Farm Supervisor</span></div><span class="material-symbols-outlined text-on-surface-variant text-base cursor-pointer">arrow_drop_down</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Simulation Strip & Breadcrumb / Permissions Notice -->
+<div class="px-space-xl pt-space-md pb-space-sm bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<!-- Breadcrumb navigation -->
+<nav class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant">
+<span>Workspace GF-042</span>
+<span class="text-outline-variant font-mono">/</span>
+<span>Barn Zone A</span>
+<span class="text-outline-variant font-mono">/</span>
+<span class="text-on-surface font-semibold">Feeding</span>
+<span class="text-outline-variant font-mono">/</span>
+<span class="text-primary font-semibold">Assigned Feeding Plans &amp; Schedules</span>
+</nav>
+<!-- Interactive shift & mode simulator pills -->
+
+</div>
+<!-- Supervisor Role Boundary Compliance Alert -->
+<div class="bg-surface-container px-space-md py-space-sm rounded flex items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded bg-tertiary-container/15 text-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">shield_lock</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">SUPERVISOR VIEW ONLY</span>
+
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">
+            Plan formulation, dry matter target changes, and ration nutrient overrides require certified Farm Animal Nutritionist or Farm Administrator digital authorization.
+          </span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-label-sm text-label-sm text-secondary font-medium hidden md:inline">Nutritionist on Record: Dr. K. Lindqvist (Reg #NL-8842)</span>
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container-highest transition-colors" title="View Permission Protocol" type="button">
+<span class="material-symbols-outlined text-base">info</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Content Wrap -->
+<div class="px-space-xl py-space-lg space-y-space-xl max-w-[1600px] w-full mx-auto">
+<!-- Page Header & Quick Navigation Actions (No Add / Edit Controls) -->
+<header class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg pb-space-sm">
+<div class="space-y-1.5 max-w-3xl">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold font-mono">NUTRITION &amp; DAILY FORAGE CADENCE</span>
+<span class="text-outline-variant font-mono">/</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">BARN ZONE A · BUNK LINES 01-08</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+          Assigned Feeding Plans &amp; Daily Schedule
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Operational view of active nutritional formulations, feeding intervals, target dry matter intake (DMI), and bunk distribution runs for Workspace GF-042 herds.
+        </p>
+</div>
+<!-- Quick Action Group (Restricted strictly to Operational execution & documentation) -->
+<div class="flex items-center gap-space-md shrink-0">
+<button class="h-11 px-space-md rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center gap-2 shadow-sm transition-colors" onclick="printShiftSheet()" title="Export daily bunk worksheet" type="button">
+<span class="material-symbols-outlined text-lg">print</span>
+<span>Print Shift Sheet</span>
+</button>
+<a class="h-11 px-space-lg rounded bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg font-semibold flex items-center gap-2 shadow-sm transition-all" href="#" title="Record bunk drops and push-ups">
+<span>Record Actual Feeding</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</header>
+<!-- Key Performance Overview Cards (4 Metric Tiles) -->
+<section aria-label="Feeding plan key metrics" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-mono font-semibold">Active Feeding Plans</span>
+<span class="w-8 h-8 rounded bg-secondary-container/40 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">menu_book</span>
+</span>
+</div>
+<div class="my-space-md">
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">4 Formulations</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">100% herd coverage across milking, dry, nursery &amp; isolation</p>
+</div>
+<div class="pt-space-sm bg-surface-container-low px-space-sm py-1 rounded flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-secondary font-medium">Compliance Review:</span>
+<span class="text-on-surface font-mono font-semibold">Valid thru 31 Dec</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-mono font-semibold">Daily Planned Rations</span>
+<span class="w-8 h-8 rounded bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">scale</span>
+</span>
+</div>
+<div class="my-space-md">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">6,240</span>
+<span class="font-label-lg text-label-lg text-secondary font-semibold">kg Total</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Planned across morning, midday top-up, &amp; evening deliveries</p>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 38.6%;" title="Run 1 Completed: 2,410 kg"></div>
+<div class="bg-secondary h-full" style="width: 17.1%;" title="Run 2 &amp; 3 Completed: 1,065 kg"></div>
+<div class="bg-surface-tint h-full" style="width: 13.6%;" title="Run 4 Completed: 850 kg"></div>
+<div class="bg-surface-container-high h-full" style="width: 30.7%;" title="Runs 5 &amp; 6 Pending: 2,236 kg"></div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-mono font-semibold">Regulated Cohorts</span>
+<span class="w-8 h-8 rounded bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">groups</span>
+</span>
+</div>
+<div class="my-space-md">
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">128 Head Total</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">4 Distinct feed zones: Pens 01-03, Dry Herd, Hutches, Isolation</p>
+</div>
+<div class="pt-space-sm bg-surface-container-low px-space-sm py-1 rounded flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-secondary font-medium">Bunk Allocation:</span>
+<span class="text-primary font-semibold">8 Feed Tables Active</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-mono font-semibold">Shift Run Cadence</span>
+<span class="w-8 h-8 rounded bg-secondary-container/40 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">schedule</span>
+</span>
+</div>
+<div class="my-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">4 of 6</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold font-mono">Runs Logged</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Next delivery: 16:30 PM (Evening Balanced Ration, Pen 01-03)</p>
+</div>
+<div class="pt-space-sm bg-secondary-container/40 px-space-sm py-1 rounded flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-secondary-fixed font-semibold">Bunk Push Frequency:</span>
+<span class="text-primary font-bold font-mono">Every 2.5 Hrs</span>
+</div>
+</div>
+</section>
+<!-- Filter, Search, and Cohort Selector Rail -->
+<section class="bg-surface-container-lowest p-space-md rounded shadow-sm space-y-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Cohort category tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 lg:pb-0" id="cohortFilterBar">
+<button class="cohort-filter px-3 py-2 rounded text-label-md font-label-md font-semibold bg-primary text-on-primary shrink-0 transition-colors" onclick="filterCohort('all', this)" type="button">
+            All Cohorts (4)
+          </button>
+<button class="cohort-filter px-3 py-2 rounded text-label-md font-label-md text-on-surface-variant bg-surface-container-low hover:bg-surface-container hover:text-on-surface shrink-0 transition-colors" onclick="filterCohort('tmr-01', this)" type="button">
+            Pen 01-03 Lactating (TMR-01)
+          </button>
+<button class="cohort-filter px-3 py-2 rounded text-label-md font-label-md text-on-surface-variant bg-surface-container-low hover:bg-surface-container hover:text-on-surface shrink-0 transition-colors" onclick="filterCohort('tmr-04', this)" type="button">
+            Dry Cows (TMR-04)
+          </button>
+<button class="cohort-filter px-3 py-2 rounded text-label-md font-label-md text-on-surface-variant bg-surface-container-low hover:bg-surface-container hover:text-on-surface shrink-0 transition-colors" onclick="filterCohort('calf-02', this)" type="button">
+            Calf Hutches (Starter-02)
+          </button>
+<button class="cohort-filter px-3 py-2 rounded text-label-md font-label-md text-on-surface-variant bg-surface-container-low hover:bg-surface-container hover:text-on-surface shrink-0 transition-colors" onclick="filterCohort('isol-01', this)" type="button">
+            Hospital Pen 04 (Clear Diet)
+          </button>
+</div>
+<!-- Search input -->
+<div class="relative w-full lg:w-80">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-lg pointer-events-none">search</span>
+<input class="w-full h-11 pl-10 pr-3 rounded bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" id="feedPlanSearch" oninput="handleSearch(this.value)" placeholder="Search ingredient, code, or bunk..." type="text">
+</div>
+</div>
+<!-- Schedule Context Sub-filters -->
+<div class="flex items-center justify-between border-t border-surface-container pt-space-sm flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-xs text-label-sm font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-secondary">filter_alt</span>
+<span class="font-semibold uppercase tracking-wider">Run Window:</span>
+<button class="run-filter-btn px-2 py-0.5 rounded font-mono bg-surface-container-high text-on-surface font-semibold" onclick="filterRun('all', this)" type="button">ALL DAY</button>
+<button class="run-filter-btn px-2 py-0.5 rounded font-mono text-on-surface-variant hover:bg-surface-container" onclick="filterRun('0600', this)" type="button">06:00 AM</button>
+<button class="run-filter-btn px-2 py-0.5 rounded font-mono text-on-surface-variant hover:bg-surface-container" onclick="filterRun('0830', this)" type="button">08:30 AM</button>
+<button class="run-filter-btn px-2 py-0.5 rounded font-mono text-on-surface-variant hover:bg-surface-container" onclick="filterRun('1130', this)" type="button">11:30 AM</button>
+<button class="run-filter-btn px-2 py-0.5 rounded font-mono text-on-surface-variant hover:bg-surface-container" onclick="filterRun('1630', this)" type="button">16:30 PM</button>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-secondary">
+<span class="material-symbols-outlined text-base">lock</span>
+<span>Diet formulations locked by Estate Nutritionist Office</span>
+</div>
+</div>
+</section>
+<!-- Main Section: Assigned Feeding Plans Detailed Cards & Bunk Specifications -->
+<section aria-labelledby="section-assigned-plans" class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface" id="section-assigned-plans">
+            Active Ration Formulations &amp; Target Intakes
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Authorized nutritional breakdowns, bunk target dry matter, and scheduled run deliveries.
+          </p>
+</div>
+<div class="hidden sm:flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bunk Residual Standard:</span>
+<span class="font-label-sm text-label-sm font-mono bg-secondary-container/40 text-on-secondary-container px-2 py-0.5 rounded font-semibold">&lt; 3% Target</span>
+</div>
+</div>
+<!-- Plan List Cards Grid (2-column desktop layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg" id="plansGrid">
+<!-- PLAN CARD 1: TMR-01 High Lactation -->
+<article class="plan-card bg-surface-container-lowest rounded shadow-sm overflow-hidden flex flex-col justify-between transition-all" data-cohort="tmr-01">
+<div class="p-space-lg space-y-space-md">
+<!-- Header bar with Plan code & Status -->
+<div class="flex items-start justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-mono font-bold bg-primary text-on-primary px-2 py-0.5 rounded">TMR-01</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-secondary-container/60 text-on-secondary-fixed px-2 py-0.5 rounded font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    ACTIVE
+                  </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">BUNK 01 · 02 · 03</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">High Lactation Total Mixed Ration</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pen 02 Peak Lactation (64 Head) &amp; Pen 01 Fresh Cows (28 Head) · 92 Total Cows</p>
+</div>
+<!-- Nutritionist Stamp & Lock Icon -->
+<div class="text-right shrink-0 bg-surface-container-low px-2 py-1.5 rounded text-on-surface-variant">
+<div class="flex items-center justify-end gap-1 text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-sm text-secondary">verified</span>
+<span class="font-semibold text-on-surface">Dr. K. Lindqvist</span>
+</div>
+<span class="font-mono text-[10px] text-outline block">REV: 01 OCT - 31 DEC</span>
+</div>
+</div>
+<!-- Feed Component Composition Pill / Visual Graph Bar -->
+<div class="space-y-1.5 bg-surface-container-low p-space-md rounded">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="font-semibold text-on-surface uppercase tracking-wide">Ration Formulation Recipe</span>
+<span class="font-mono text-secondary font-bold">100% DRY MATTER MIX</span>
+</div>
+<!-- Stacked percentage composition bar -->
+<div class="h-3.5 w-full rounded-sm overflow-hidden flex bg-surface-container">
+<div class="bg-primary h-full" style="width: 52%;" title="Corn Silage (52%)"></div>
+<div class="bg-secondary h-full" style="width: 24%;" title="Chopped Alfalfa Hay (24%)"></div>
+<div class="bg-tertiary-container h-full" style="width: 24%;" title="Soy &amp; Mineral Premix (24%)"></div>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-1 font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary shrink-0"></span>
+<span class="text-on-surface truncate">Corn Silage <strong class="font-mono">52%</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary shrink-0"></span>
+<span class="text-on-surface truncate">Alfalfa Hay <strong class="font-mono">24%</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-tertiary-container shrink-0"></span>
+<span class="text-on-surface truncate">Soy &amp; Minerals <strong class="font-mono">24%</strong></span>
+</div>
+</div>
+</div>
+<!-- Quantitative Targets & Schedule Run Times -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Target DMI / Cow</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold font-mono">24.5 kg</span>
+<span class="font-body-sm text-body-sm text-secondary block">Dry Matter / Head / Day</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Planned Batch Load</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold font-mono">2,400 kg</span>
+<span class="font-body-sm text-body-sm text-secondary block">Per Delivery Drop</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded col-span-2 sm:col-span-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Run Schedule</span>
+<div class="font-label-md text-label-md font-mono font-bold text-on-surface mt-0.5">06:00 &amp; 16:30</div>
+<span class="font-body-sm text-body-sm text-secondary block">2 Drops + Midday Top-Up</span>
+</div>
+</div>
+</div>
+<!-- Bottom card footer with operational status -->
+<div class="bg-surface-container px-space-lg py-space-sm flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-secondary">checklist</span>
+<span>Target Bunk Residual: <strong class="text-on-surface font-mono">&lt; 3% Clean Score</strong></span>
+</div>
+<span class="font-mono text-secondary font-semibold">TRACTOR BUNK FEEDER #02</span>
+</div>
+</article>
+<!-- PLAN CARD 2: TMR-04 Dry Cow Maintenance -->
+<article class="plan-card bg-surface-container-lowest rounded shadow-sm overflow-hidden flex flex-col justify-between transition-all" data-cohort="tmr-04">
+<div class="p-space-lg space-y-space-md">
+<!-- Header bar with Plan code & Status -->
+<div class="flex items-start justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-mono font-bold bg-secondary text-on-secondary px-2 py-0.5 rounded">TMR-04</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-secondary-container/60 text-on-secondary-fixed px-2 py-0.5 rounded font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    ACTIVE
+                  </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">NORTH PASTURE FEED TABLE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Dry Cow Maintenance &amp; Anionic Pre-Calve</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dry Cow Pasture &amp; Maternity Transition Pen · 32 Cows Total</p>
+</div>
+<!-- Nutritionist Stamp -->
+<div class="text-right shrink-0 bg-surface-container-low px-2 py-1.5 rounded text-on-surface-variant">
+<div class="flex items-center justify-end gap-1 text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-sm text-secondary">verified</span>
+<span class="font-semibold text-on-surface">Dr. K. Lindqvist</span>
+</div>
+<span class="font-mono text-[10px] text-outline block">REV: 15 SEP - 15 NOV</span>
+</div>
+</div>
+<!-- Feed Component Composition Pill / Visual Graph Bar -->
+<div class="space-y-1.5 bg-surface-container-low p-space-md rounded">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="font-semibold text-on-surface uppercase tracking-wide">Ration Formulation Recipe</span>
+<span class="font-mono text-secondary font-bold">HIGH FIBER FORAGE</span>
+</div>
+<!-- Stacked percentage composition bar -->
+<div class="h-3.5 w-full rounded-sm overflow-hidden flex bg-surface-container">
+<div class="bg-secondary h-full" style="width: 58%;" title="Barley Straw Bulk (58%)"></div>
+<div class="bg-primary-container h-full" style="width: 30%;" title="Timothy Grass Hay (30%)"></div>
+<div class="bg-tertiary h-full" style="width: 12%;" title="Anionic Pre-Calve Mineral (12%)"></div>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-1 font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary shrink-0"></span>
+<span class="text-on-surface truncate">Straw Bulk <strong class="font-mono">58%</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary-container shrink-0"></span>
+<span class="text-on-surface truncate">Timothy Hay <strong class="font-mono">30%</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-tertiary shrink-0"></span>
+<span class="text-on-surface truncate">Anionic Min. <strong class="font-mono">12%</strong></span>
+</div>
+</div>
+</div>
+<!-- Quantitative Targets & Schedule Run Times -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Planned / Cow</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold font-mono">13.0 kg</span>
+<span class="font-body-sm text-body-sm text-secondary block">As-Fed / Head / Day</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Planned Batch Load</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold font-mono">850 kg</span>
+<span class="font-body-sm text-body-sm text-secondary block">Single Daily Drop</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded col-span-2 sm:col-span-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Run Schedule</span>
+<div class="font-label-md text-label-md font-mono font-bold text-on-surface mt-0.5">08:30 AM</div>
+<span class="font-body-sm text-body-sm text-secondary block">Morning Pasture Run</span>
+</div>
+</div>
+</div>
+<!-- Bottom card footer with operational status -->
+<div class="bg-surface-container px-space-lg py-space-sm flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-secondary">water_drop</span>
+<span>Urine pH Monitoring: <strong class="text-on-surface font-mono">Weekly Target 6.0-6.5</strong></span>
+</div>
+<span class="font-mono text-secondary font-semibold">TRACTOR BUNK FEEDER #01</span>
+</div>
+</article>
+<!-- PLAN CARD 3: CALF-02 Starter Pellets -->
+<article class="plan-card bg-surface-container-lowest rounded shadow-sm overflow-hidden flex flex-col justify-between transition-all" data-cohort="calf-02">
+<div class="p-space-lg space-y-space-md">
+<!-- Header bar with Plan code & Status -->
+<div class="flex items-start justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-mono font-bold bg-primary-container text-on-primary px-2 py-0.5 rounded">CALF-02</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-secondary-container/60 text-on-secondary-fixed px-2 py-0.5 rounded font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                    ACTIVE
+                  </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">HUTCHES H-01 TO H-28</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Starter Pellets &amp; Chopped Sweet Grass Hay</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Nursery Individual &amp; Group Hutches · 28 Calves (0-12 Weeks)</p>
+</div>
+<!-- Nutritionist Stamp -->
+<div class="text-right shrink-0 bg-surface-container-low px-2 py-1.5 rounded text-on-surface-variant">
+<div class="flex items-center justify-end gap-1 text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-sm text-secondary">verified</span>
+<span class="font-semibold text-on-surface">Dr. K. Lindqvist</span>
+</div>
+<span class="font-mono text-[10px] text-outline block">STANDARD PROTOCOL</span>
+</div>
+</div>
+<!-- Feed Component Composition Pill / Visual Graph Bar -->
+<div class="space-y-1.5 bg-surface-container-low p-space-md rounded">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="font-semibold text-on-surface uppercase tracking-wide">Ration Formulation Recipe</span>
+<span class="font-mono text-secondary font-bold">HIGH PROTEIN GROWTH</span>
+</div>
+<!-- Stacked percentage composition bar -->
+<div class="h-3.5 w-full rounded-sm overflow-hidden flex bg-surface-container">
+<div class="bg-primary-container h-full" style="width: 70%;" title="22% Starter Pellets (70%)"></div>
+<div class="bg-secondary h-full" style="width: 20%;" title="Chopped Sweet Hay (20%)"></div>
+<div class="bg-tertiary-fixed-dim h-full" style="width: 10%;" title="Electrolyte Supplement (10%)"></div>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-1 font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary-container shrink-0"></span>
+<span class="text-on-surface truncate">22% Pellets <strong class="font-mono">70%</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary shrink-0"></span>
+<span class="text-on-surface truncate">Sweet Hay <strong class="font-mono">20%</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-tertiary-fixed-dim shrink-0"></span>
+<span class="text-on-surface truncate">Electrolytes <strong class="font-mono">10%</strong></span>
+</div>
+</div>
+</div>
+<!-- Quantitative Targets & Schedule Run Times -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Target / Calf</span>
+<span class="font-headline-sm text-headline-sm text-primary-container font-bold font-mono">2.5 kg</span>
+<span class="font-body-sm text-body-sm text-secondary block">Ad-Libitum Access</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Planned Batch Load</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold font-mono">220 kg</span>
+<span class="font-body-sm text-body-sm text-secondary block">Divided 2 Runs</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded col-span-2 sm:col-span-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Run Schedule</span>
+<div class="font-label-md text-label-md font-mono font-bold text-on-surface mt-0.5">07:00 &amp; 15:00</div>
+<span class="font-body-sm text-body-sm text-secondary block">Direct Pail Distribution</span>
+</div>
+</div>
+</div>
+<!-- Bottom card footer with operational status -->
+<div class="bg-surface-container px-space-lg py-space-sm flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-secondary">water</span>
+<span>Water Pail Standard: <strong class="text-on-surface font-mono">Clean Twice Daily</strong></span>
+</div>
+<span class="font-mono text-secondary font-semibold">MANUAL UTILITY CART #03</span>
+</div>
+</article>
+<!-- PLAN CARD 4: ISOL-01 Hospital Pen 04 Withholding Diet -->
+<article class="plan-card bg-surface-container-lowest rounded shadow-sm overflow-hidden flex flex-col justify-between transition-all" data-cohort="isol-01">
+<div class="p-space-lg space-y-space-md">
+<!-- Header bar with Plan code & Status -->
+<div class="flex items-start justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-mono font-bold bg-tertiary-container text-on-primary px-2 py-0.5 rounded">ISOL-01</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-tertiary-container/20 text-tertiary-container px-2 py-0.5 rounded font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+                    WITHHOLDING / RESTRICTED
+                  </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">ISOLATION PEN 04</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Hospital Withholding Clean Diet</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pen 04 Veterinary Isolation · 4 Head (Active Therapy or Cleansing)</p>
+</div>
+<!-- Lock / Protocol Note -->
+<div class="text-right shrink-0 bg-error-container/40 px-2 py-1.5 rounded text-on-surface">
+<div class="flex items-center justify-end gap-1 text-label-sm font-label-sm text-error">
+<span class="material-symbols-outlined text-sm">do_not_disturb_on</span>
+<span class="font-semibold">Zero Medicated Additives</span>
+</div>
+<span class="font-mono text-[10px] text-error block">STRICT MILK WITHHOLD</span>
+</div>
+</div>
+<!-- Feed Component Composition Pill / Visual Graph Bar -->
+<div class="space-y-1.5 bg-surface-container-low p-space-md rounded">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="font-semibold text-on-surface uppercase tracking-wide">Ration Formulation Recipe</span>
+<span class="font-mono text-tertiary-container font-bold">MED-FREE CONTROLLED</span>
+</div>
+<!-- Stacked percentage composition bar -->
+<div class="h-3.5 w-full rounded-sm overflow-hidden flex bg-surface-container">
+<div class="bg-secondary h-full" style="width: 65%;" title="First-Cut Grass Hay (65%)"></div>
+<div class="bg-primary h-full" style="width: 35%;" title="Digestible Energy Pellets (35%)"></div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary shrink-0"></span>
+<span class="text-on-surface truncate">First-Cut Grass Hay <strong class="font-mono">65%</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary shrink-0"></span>
+<span class="text-on-surface truncate">Digestible Energy Pellets <strong class="font-mono">35%</strong></span>
+</div>
+</div>
+</div>
+<!-- Quantitative Targets & Schedule Run Times -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Target / Head</span>
+<span class="font-headline-sm text-headline-sm text-tertiary-container font-bold font-mono">18.0 kg</span>
+<span class="font-body-sm text-body-sm text-secondary block">As-Fed / Head / Day</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Daily Batch Total</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold font-mono">72 kg</span>
+<span class="font-body-sm text-body-sm text-secondary block">36 kg Morning / 36 kg PM</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded col-span-2 sm:col-span-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Run Schedule</span>
+<div class="font-label-md text-label-md font-mono font-bold text-on-surface mt-0.5">06:45 &amp; 17:00</div>
+<span class="font-body-sm text-body-sm text-secondary block">Dedicated Clean Bunk Tool</span>
+</div>
+</div>
+</div>
+<!-- Bottom card footer with operational status -->
+<div class="bg-surface-container px-space-lg py-space-sm flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-base">warning</span>
+<span>Sanitize wagon shovel prior to entry</span>
+</div>
+<span class="font-mono text-secondary font-semibold">ISOLATION BUNK 04 ONLY</span>
+</div>
+</article>
+</div>
+<!-- Empty State View (Triggered via Filter / Search) -->
+<div class="hidden bg-surface-container-lowest p-space-2xl rounded text-center space-y-space-md shadow-sm" id="plansEmptyState">
+<div class="w-16 h-16 rounded-full bg-surface-container-high mx-auto flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-3xl">filter_list_off</span>
+</div>
+<div class="max-w-md mx-auto space-y-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">No Matching Feeding Plans Found</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            No active feeding plans or cohorts match the selected filters. Change filter criteria or reset search terms to view assigned herd diets.
+          </p>
+</div>
+<div>
+<button class="px-4 py-2 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold transition-colors" onclick="resetAllFilters()" type="button">
+            Reset Filters
+          </button>
+</div>
+</div>
+</section>
+<!-- Daily Feeding Schedule: Operational Timeline & Bunk Run Sequence -->
+<section aria-labelledby="section-daily-schedule" class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface" id="section-daily-schedule">
+              Daily Feeding Schedule &amp; Execution Timeline
+            </h2>
+<span class="font-label-sm text-label-sm font-mono bg-surface-container-high text-on-surface px-2 py-0.5 rounded font-semibold">
+              Thursday, 24 Oct 2024
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Bunk-by-bunk operational delivery schedule, operator assignment, and batch verification log.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 text-label-sm font-label-sm text-secondary">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span>Completed (4)</span>
+</span>
+<span class="text-outline-variant font-mono">·</span>
+<span class="inline-flex items-center gap-1.5 text-label-sm font-label-sm text-primary">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span>Next Up (16:30)</span>
+</span>
+<span class="text-outline-variant font-mono">·</span>
+<span class="inline-flex items-center gap-1.5 text-label-sm font-label-sm text-outline">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></span>
+<span>Pending (2)</span>
+</span>
+</div>
+</div>
+<!-- Schedule Table / Sequence Cards -->
+<div class="bg-surface-container-lowest rounded shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-lg font-semibold">Run &amp; Time</th>
+<th class="py-3 px-space-md font-semibold">Cohort &amp; Target Bunk</th>
+<th class="py-3 px-space-md font-semibold">Assigned Plan</th>
+<th class="py-3 px-space-md font-semibold font-mono">Planned / Delivered</th>
+<th class="py-3 px-space-md font-semibold">Assigned Operator</th>
+<th class="py-3 px-space-lg font-semibold text-right">Run Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-body-md font-body-md text-on-surface" id="scheduleTableBody">
+<!-- RUN 1: 06:00 AM -->
+<tr class="hover:bg-surface-container-low/50 transition-colors" data-run-time="0600">
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<span class="font-mono font-bold text-on-surface">06:00 AM</span>
+<span class="font-label-sm text-label-sm font-mono text-outline">RUN 1</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Morning Push Run</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold block text-on-surface">High Lactation Cohort</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bunk Lines 01, 02 &amp; 03 (92 Head)</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-mono text-label-sm bg-primary/10 text-primary font-bold px-1.5 py-0.5 rounded">TMR-01</span>
+<span class="text-on-surface text-body-sm font-body-sm">High Lactation Rations</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-mono">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface">2,410 kg</span>
+<span class="text-label-sm text-outline">/ 2,400 kg planned</span>
+<span class="text-label-sm font-label-sm text-secondary font-semibold">(+10 kg)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold">DM</span>
+<span class="font-label-md text-label-md text-on-surface">D. Morales (Tractor 02)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-container/60 text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                    COMPLETED 06:15
+                  </span>
+</td>
+</tr>
+<!-- RUN 2: 07:00 AM -->
+<tr class="hover:bg-surface-container-low/50 transition-colors" data-run-time="0700">
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<span class="font-mono font-bold text-on-surface">07:00 AM</span>
+<span class="font-label-sm text-label-sm font-mono text-outline">RUN 2</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Nursery First Drop</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold block text-on-surface">Calf Hutches</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Individual Pails H-01 to H-28</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-mono text-label-sm bg-primary-container/15 text-primary-container font-bold px-1.5 py-0.5 rounded">CALF-02</span>
+<span class="text-on-surface text-body-sm font-body-sm">22% Starter Pellets</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-mono">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface">220 kg</span>
+<span class="text-label-sm text-outline">/ 220 kg planned</span>
+<span class="text-label-sm font-label-sm text-secondary font-semibold">(Exact)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-sm text-label-sm font-bold">EV</span>
+<span class="font-label-md text-label-md text-on-surface">E. Vance (Hand Cart 03)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-container/60 text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                    COMPLETED 07:18
+                  </span>
+</td>
+</tr>
+<!-- RUN 3: 08:30 AM -->
+<tr class="hover:bg-surface-container-low/50 transition-colors" data-run-time="0830">
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<span class="font-mono font-bold text-on-surface">08:30 AM</span>
+<span class="font-label-sm text-label-sm font-mono text-outline">RUN 3</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Dry Cow Delivery</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold block text-on-surface">Dry Cow Pasture</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">North Perimeter Feed Line (32 Head)</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-mono text-label-sm bg-secondary/15 text-secondary font-bold px-1.5 py-0.5 rounded">TMR-04</span>
+<span class="text-on-surface text-body-sm font-body-sm">Maintenance &amp; Anionic</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-mono">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface">845 kg</span>
+<span class="text-label-sm text-outline">/ 850 kg planned</span>
+<span class="text-label-sm font-label-sm text-secondary font-semibold">(-5 kg)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold">DM</span>
+<span class="font-label-md text-label-md text-on-surface">D. Morales (Tractor 01)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-container/60 text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                    COMPLETED 08:42
+                  </span>
+</td>
+</tr>
+<!-- RUN 4: 11:30 AM -->
+<tr class="hover:bg-surface-container-low/50 transition-colors" data-run-time="1130">
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<span class="font-mono font-bold text-on-surface">11:30 AM</span>
+<span class="font-label-sm text-label-sm font-mono text-outline">RUN 4</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Midday Forage Push</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold block text-on-surface">High Lactation Cohort</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bunk Lines 01, 02 &amp; 03 Top-Up</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-mono text-label-sm bg-primary/10 text-primary font-bold px-1.5 py-0.5 rounded">TMR-01</span>
+<span class="text-on-surface text-body-sm font-body-sm">Fresh Alfalfa Top-Up</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-mono">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface">850 kg</span>
+<span class="text-label-sm text-outline">/ 850 kg planned</span>
+<span class="text-label-sm font-label-sm text-secondary font-semibold">(Exact)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold">DM</span>
+<span class="font-label-md text-label-md text-on-surface">D. Morales (Tractor 02)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-container/60 text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                    COMPLETED 11:34
+                  </span>
+</td>
+</tr>
+<!-- RUN 5: 16:30 PM (NEXT UP) -->
+<tr class="bg-primary/5 hover:bg-primary/10 transition-colors" data-run-time="1630">
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<span class="font-mono font-bold text-primary">16:30 PM</span>
+<span class="font-label-sm text-label-sm font-mono text-primary font-semibold">RUN 5</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium">Evening Balanced Delivery</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold block text-on-surface">High Lactation Cohort</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bunk Lines 01, 02 &amp; 03 (92 Head)</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-mono text-label-sm bg-primary text-on-primary font-bold px-1.5 py-0.5 rounded">TMR-01</span>
+<span class="text-on-surface font-semibold text-body-sm font-body-sm">PM Full Ration Push</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-mono">
+<div class="flex items-center gap-2">
+<span class="font-bold text-primary">2,200 kg</span>
+<span class="text-label-sm text-outline">Target Mix</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold">PM</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Evening Shift Crew</span>
+</div>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span>
+                    NEXT SCHEDULED
+                  </span>
+</td>
+</tr>
+<!-- RUN 6: 17:00 PM (PENDING) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors opacity-85" data-run-time="1700">
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-2">
+<span class="font-mono font-bold text-on-surface">17:00 PM</span>
+<span class="font-label-sm text-label-sm font-mono text-outline">RUN 6</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Isolation Drop</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-semibold block text-on-surface">Hospital Isolation Pen</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pen 04 Enclosure (4 Head)</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-mono text-label-sm bg-tertiary-container/20 text-tertiary-container font-bold px-1.5 py-0.5 rounded">ISOL-01</span>
+<span class="text-on-surface text-body-sm font-body-sm">Withholding Diet Clean Drop</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-mono">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface">36 kg</span>
+<span class="text-label-sm text-outline">Target Mix</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-sm text-label-sm font-bold">PM</span>
+<span class="font-label-md text-label-md text-on-surface">Evening Shift Crew</span>
+</div>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                    PENDING (IN 2h 45m)
+                  </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Schedule summary bar -->
+<div class="bg-surface-container px-space-lg py-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm text-label-sm font-label-sm">
+<div class="flex items-center gap-space-md text-on-surface-variant">
+<span>Cumulative Delivered: <strong class="text-on-surface font-mono">4,325 kg</strong></span>
+<span class="text-outline-variant font-mono">/</span>
+<span>Pending Evening Bunk Fill: <strong class="text-on-surface font-mono">2,236 kg</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-secondary font-medium">Bunk Push Frequency Logged:</span>
+<span class="font-mono bg-surface-container-lowest px-2 py-0.5 rounded text-on-surface font-semibold">Every 2.5 Hrs (Bunk Swept 13:00)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Operational Protocols & Bunk Hygiene Supervisory Guidelines -->
+<section aria-label="Field bunk scoring guidelines" class="grid grid-cols-1 md:grid-cols-3 gap-space-lg pt-space-xs">
+<!-- Guideline 1: Bunk Residual Scoring -->
+<div class="bg-surface-container-lowest p-space-lg rounded shadow-sm space-y-space-sm">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-lg">fact_check</span>
+<span>Bunk Residual Scoring System</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Evaluate bunks 30 minutes before the 16:30 PM evening drop. Log scores in the bunk management worksheet:
+        </p>
+<ul class="space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center justify-between">
+<span><strong class="text-on-surface">Score 0:</strong> Completely clean bunk</span>
+<span class="font-mono text-label-sm text-secondary">Target for Pens 01-02</span>
+</li>
+<li class="flex items-center justify-between">
+<span><strong class="text-on-surface">Score 1:</strong> Thin scattered feed layer (&lt;3%)</span>
+<span class="font-mono text-label-sm text-primary font-semibold">Optimal Residual</span>
+</li>
+<li class="flex items-center justify-between">
+<span><strong class="text-on-surface">Score 2:</strong> 5-10% feed remaining</span>
+<span class="font-mono text-label-sm text-tertiary-container font-semibold">Notify Nutritionist</span>
+</li>
+<li class="flex items-center justify-between">
+<span><strong class="text-on-surface">Score 3:</strong> Substantial residual untouched</span>
+<span class="font-mono text-label-sm text-error font-semibold">Halt Extra Drop</span>
+</li>
+</ul>
+</div>
+<!-- Guideline 2: Weather & DM Compensation -->
+<div class="bg-surface-container-lowest p-space-lg rounded shadow-sm space-y-space-sm">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-lg">cloudy</span>
+<span>Weather Moisture Adjustment</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Outdoor bunks (Dry Herd table and Maternity lot) must be monitored during precipitation:
+        </p>
+<div class="bg-surface-container-low p-space-sm rounded space-y-1 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-semibold">Current Bunk Humidity:</span>
+<span class="font-mono font-bold">62% RH (Normal)</span>
+</div>
+<p class="text-on-surface-variant text-label-sm">
+            If silage face moisture exceeds 68%, alert Dr. Lindqvist for dry matter compensation table updates. Do not adjust tractor auger weights manually.
+          </p>
+</div>
+</div>
+<!-- Guideline 3: Water Trough Cleanliness Standard -->
+<div class="bg-surface-container-lowest p-space-lg rounded shadow-sm space-y-space-sm">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-lg">water_drop</span>
+<span>Water Line &amp; Trough Standard</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Dry matter intake is directly correlated with clean ad-libitum water volume:
+        </p>
+<ul class="space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">check</span>
+<span>Check float valves in Pens 01, 02, and 03 every 4 hours.</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">check</span>
+<span>Scrub algae rings from nursery calf pails every morning.</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">check</span>
+<span>Log trough freeze guard activation when overnight &lt; 2°C.</span>
+</li>
+</ul>
+</div>
+</section>
+</div>
+</div>
+<script>
+  // Filter by Cohort pill selection
+  function filterCohort(cohortKey, el) {
+    document.querySelectorAll('.cohort-filter').forEach(btn => {
+      btn.classList.remove('bg-primary', 'text-on-primary');
+      btn.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+    });
+    if (el) {
+      el.classList.add('bg-primary', 'text-on-primary');
+      el.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+    }
+
+    const cards = document.querySelectorAll('.plan-card');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      if (cohortKey === 'all' || card.getAttribute('data-cohort') === cohortKey) {
+        card.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    const emptyState = document.getElementById('plansEmptyState');
+    if (visibleCount === 0) {
+      emptyState.classList.remove('hidden');
+    } else {
+      emptyState.classList.add('hidden');
+    }
+  }
+
+  // Filter schedule rows by Run Window
+  function filterRun(runKey, el) {
+    document.querySelectorAll('.run-filter-btn').forEach(btn => {
+      btn.classList.remove('bg-surface-container-high', 'text-on-surface', 'font-semibold');
+      btn.classList.add('text-on-surface-variant');
+    });
+    if (el) {
+      el.classList.add('bg-surface-container-high', 'text-on-surface', 'font-semibold');
+      el.classList.remove('text-on-surface-variant');
+    }
+
+    const rows = document.querySelectorAll('#scheduleTableBody tr');
+    rows.forEach(row => {
+      if (runKey === 'all' || row.getAttribute('data-run-time') === runKey) {
+        row.classList.remove('hidden');
+      } else {
+        row.classList.add('hidden');
+      }
+    });
+  }
+
+  // Free-text search across Plan titles, codes, and cohorts
+  function handleSearch(term) {
+    const query = term.toLowerCase().trim();
+    const cards = document.querySelectorAll('.plan-card');
+    let visible = 0;
+
+    cards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      if (!query || text.includes(query)) {
+        card.classList.remove('hidden');
+        visible++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    const emptyState = document.getElementById('plansEmptyState');
+    if (visible === 0) {
+      emptyState.classList.remove('hidden');
+    } else {
+      emptyState.classList.add('hidden');
+    }
+  }
+
+  // Reset all filters button inside empty state
+  function resetAllFilters() {
+    const searchInput = document.getElementById('feedPlanSearch');
+    if (searchInput) searchInput.value = '';
+
+    const firstCohortBtn = document.querySelector('#cohortFilterBar button');
+    filterCohort('all', firstCohortBtn);
+
+    const firstRunBtn = document.querySelector('.run-filter-btn');
+    filterRun('all', firstRunBtn);
+  }
+
+  // Shift & Mode simulator pills
+  function setSimState(mode, btn) {
+    document.querySelectorAll('.sim-btn').forEach(b => {
+      b.classList.remove('bg-primary', 'text-on-primary');
+      b.classList.add('bg-surface-container', 'text-on-surface-variant');
+    });
+    btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+    btn.classList.add('bg-primary', 'text-on-primary');
+
+    if (mode === 'empty') {
+      document.querySelectorAll('.plan-card').forEach(c => c.classList.add('hidden'));
+      document.getElementById('plansEmptyState').classList.remove('hidden');
+    } else if (mode === 'afternoon') {
+      resetAllFilters();
+      const afternoonBtn = document.querySelector('[onclick*="1630"]');
+      if (afternoonBtn) afternoonBtn.click();
+      filterCohort('tmr-01', document.querySelectorAll('.cohort-filter')[1]);
+    } else {
+      resetAllFilters();
+    }
+  }
+
+  // Shift sheet print handler
+  function printShiftSheet() {
+    window.print();
+  }
+</script></main></div>
+
+</body></html>

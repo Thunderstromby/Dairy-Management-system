@@ -1,0 +1,836 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#30312d", "on-background": "#1b1c18", "secondary": "#556249", "tertiary-fixed-dim": "#ffb784", "surface-container-low": "#f5f3ed", "on-tertiary": "#ffffff", "surface-dim": "#dcdad4", "on-primary-container": "#b8cda9", "on-primary-fixed": "#101f08", "inverse-on-surface": "#f3f1eb", "outline": "#75786f", "background": "#fbf9f3", "on-tertiary-fixed": "#301400", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#3e4b32", "surface": "#fbf9f3", "outline-variant": "#c4c8bd", "surface-container": "#f0eee8", "surface-container-high": "#eae8e2", "surface-tint": "#516446", "surface-bright": "#fbf9f3", "on-surface-variant": "#444840", "primary-container": "#46583b", "primary": "#2f4126", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffdcc6", "on-primary-fixed-variant": "#3a4c30", "secondary-container": "#d9e8c7", "on-surface": "#1b1c18", "error": "#ba1a1a", "secondary-fixed-dim": "#bdcbac", "on-tertiary-container": "#ffb785", "on-secondary-container": "#5b694e", "on-error": "#ffffff", "primary-fixed": "#d4e9c3", "on-tertiary-fixed-variant": "#6c3a11", "tertiary": "#5e3007", "primary-fixed-dim": "#b8cda8", "on-error-container": "#93000a", "secondary-fixed": "#d9e8c7", "tertiary-container": "#7a461c", "on-secondary-fixed": "#141f0a", "on-primary": "#ffffff", "surface-variant": "#e4e2dd", "inverse-primary": "#b8cda8", "surface-container-highest": "#e4e2dd", "on-secondary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "gutter-mobile": "0.75rem", "margin": "2rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter": "1.5rem", "margin-mobile": "1rem" }, "fontFamily": { "data-metric-md": [ "Inter" ], "body-lg": [ "Inter" ], "display-lg-mobile": [ "Manrope" ], "body-sm": [ "Inter" ], "headline-md": [ "Manrope" ], "label-sm": [ "Inter" ], "headline-sm": [ "Manrope" ], "headline-xl": [ "Manrope" ], "body-md": [ "Inter" ], "headline-xl-mobile": [ "Manrope" ], "display-lg": [ "Manrope" ], "headline-lg": [ "Manrope" ], "data-metric-lg": [ "Manrope" ], "label-md": [ "Inter" ] }, "fontSize": { "data-metric-md": [ "1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "display-lg-mobile": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ], "headline-md": [ "1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" } ], "label-sm": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "headline-xl": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "headline-xl-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-lg": [ "3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "data-metric-lg": [ "2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZuhXF_IhBdGhJ4eix1oqj3wBimwP9kKeGGChH_b2ax1lMLHMcXPmCVu9b3MJqlJ3XUJHZyp_ietndJCcoi5tapKDT0swhF14GEZxUKYZjg6g5LvxUeQzsGptFXM8XbwZz0B0M4Kbg8tH48Ys1NpBq3q3ceaJWAzrxO8XU7fzOrfQL6K9wOMESU_VEMnfcbKwhEtKD90-MYyU8fO7yBiUm20ljVe33W-rRqQJED0H"><div><div class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight truncate">SmartFarm</div><div class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Dairy Management</div></div></div><span class="font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold px-space-xs py-0.5 rounded">Admin</span></div><div class="px-space-md py-space-sm bg-surface-container-low/80 flex items-center justify-between"><div class="truncate"><div class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Greenfield Dairy Estate</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">Workspace: GF-042</div></div><span class="h-2 w-2 rounded-full bg-primary-container ring-2 ring-primary-fixed flex-shrink-0"></span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Overview</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="dashboard" href="#">Dashboard</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Herd Management</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="animals" href="#">Animals</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="animal-health" href="#">Animal Health</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="feeding" href="#">Feeding Plans</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Milk Production</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="production-entry" href="#">Production Entry</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="animal-production-history" href="#">Animal Production History</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="daily-totals" href="#">Daily Totals</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="monthly-reports" href="#">Monthly Reports</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Milk Management</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="milk-collection" href="#milk-collection">Collection</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="milk-storage" href="#milk-storage">Storage</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="milk-sales" href="#milk-sales">Milk Sales</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="milk-wastage" href="#milk-wastage">Wastage Records</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Operations &amp; Assets</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="inventory" href="#">Inventory</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="equipment" href="#">Equipment</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Workforce &amp; Finance</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="workers" href="#">Workers</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="attendance" href="#">Attendance</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="payroll" href="#">Payroll</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="finance" href="#">Finance</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Governance &amp; Core</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="supervisor-access" href="#">Supervisor Access</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="reports" href="#">Reports</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="data-management" href="#">Data Management</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="settings" href="#">Settings</a></div></nav></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><button class="p-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-xl">menu_open</span></button><nav class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="font-semibold text-on-surface">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface-variant">Operations</span></nav><div class="relative flex-1 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full h-10 pl-9 pr-14 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search Animal ID, Batch, Record..." type="text"><span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded shadow-sm">⌘K</span></div></div><div class="flex items-center gap-space-sm"><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Mode" type="button"><span class="material-symbols-outlined text-xl">routine</span></button><div class="relative"><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" title="Alerts" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 h-4 min-w-[1rem] px-1 bg-error text-on-error font-label-sm text-[0.625rem] rounded-full flex items-center justify-center font-bold">3</span></button></div><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#" title="Docs &amp; Support"><span class="material-symbols-outlined text-xl">help</span></a><div class="h-6 w-[1px] bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHGkwzAmXeAWZgoliBfM3J0Dk3rRvKbrFcaSDXWTFXvp7mK8JZlIDpaM_-PKsE2e-9DSWj_thQxg7ZvMO7_J2wdBeJdNp3xHQNrTkReCH1iwd77yI5cACPrn8AVBGbsgSIRzl_r1aNrbkvrI3tTJT7qFPLASAjAk_cx85172_N3qz8dJ2RbazkMZxrYU4--z2VriyTURPXkRqv4-UUhJWONTqJq0P8IWMmPKFhLYX7"><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></div><div class="hidden lg:block text-left"><div class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-none">Farm Administrator</div></div><button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-lg">expand_more</span></button></div></div></header><main class="relative pt-16 w-full px-space-lg py-space-lg bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- State Handler Scripts & Micro-interactions -->
+<script>
+    function switchState(stateName) {
+      const allSections = ['view-main', 'view-wastage-modal', 'view-usage-form', 'view-empty', 'view-biohazard'];
+      allSections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.add('hidden');
+      });
+
+      const buttons = document.querySelectorAll('.state-switcher-pill');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        btn.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      });
+
+      const activeBtn = document.getElementById('btn-state-' + stateName);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        activeBtn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+      }
+
+      if (stateName === 'all') {
+        document.getElementById('view-main').classList.remove('hidden');
+      } else if (stateName === 'modal') {
+        document.getElementById('view-main').classList.remove('hidden');
+        document.getElementById('view-wastage-modal').classList.remove('hidden');
+      } else if (stateName === 'usage') {
+        document.getElementById('view-main').classList.remove('hidden');
+        document.getElementById('view-usage-form').classList.remove('hidden');
+      } else if (stateName === 'empty') {
+        document.getElementById('view-empty').classList.remove('hidden');
+      } else if (stateName === 'biohazard') {
+        document.getElementById('view-main').classList.remove('hidden');
+        document.getElementById('view-biohazard').classList.remove('hidden');
+      }
+    }
+
+    function toggleRowSelection(rowId) {
+      const row = document.getElementById(rowId);
+      if (row) {
+        row.classList.toggle('bg-primary-fixed/20');
+      }
+    }
+  </script>
+<!-- 1. Interactive Sandbox Preview Switcher (Administrative Tools) -->
+
+<!-- Breadcrumbs & Administrative Permissions Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-md mb-space-sm">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span>Operations</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span>Milk Management</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary font-semibold">Milk Wastage &amp; Usage Records</span>
+</div>
+<div class="flex items-center gap-space-sm px-space-sm py-1 bg-surface-container rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-base">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Security Protocol:</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">FARM-ADMIN-ONLY</span>
+<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">WORKSPACE GF-042</span>
+</div>
+</div>
+<!-- 2. Screen Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg mb-space-xl">
+<div class="space-y-1">
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">Milk Wastage &amp; Usage Records</h1>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium">Bio-Traceable</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+        Authorized disposal ledger, clinical mastitis discard logging, and on-farm calf feeding allocations for Workspace GF-042. All volume drops deduct directly from physical bulk stock.
+      </p>
+</div>
+<!-- Primary Action Trigger Suite -->
+<div class="flex flex-wrap items-center gap-space-sm flex-shrink-0">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-variant transition-colors flex items-center gap-space-xs shadow-sm" onclick="switchState('usage')" type="button">
+<span class="material-symbols-outlined text-lg">local_cafe</span>
+<span>+ Log Internal Usage</span>
+</button>
+<button class="px-space-md py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary/90 transition-all flex items-center gap-space-xs shadow-md hover:shadow-lg" onclick="switchState('modal')" type="button">
+<span class="material-symbols-outlined text-lg">delete_sweep</span>
+<span>+ Record Milk Wastage</span>
+</button>
+<button class="p-2.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors shadow-sm" title="Export Loss &amp; Usage Report" type="button">
+<span class="material-symbols-outlined text-lg">ios_share</span>
+</button>
+</div>
+</div>
+<!-- Biohazard / Critical Mastitis Warning Strip (Hidden by default, activated via button) -->
+<div class="hidden mb-space-lg p-space-md bg-error-container/40 rounded-xl shadow-sm" id="view-biohazard">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="p-2 rounded-lg bg-error-container text-on-error-container mt-0.5">
+<span class="material-symbols-outlined text-xl">biotech</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-error-container font-bold">Pen Quarantine Discard Directive • Batch #BIO-409</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            Cow ET-GF-8711 Rosie Clover flagged positive for active antibiotic withholding (Cefquinome 2.5%). Milking diverter was engaged automatically at Parlor Unit 04. Discarded 45.0 L to isolation tank. Stock balance reconciled.
+          </p>
+<div class="flex items-center gap-space-md mt-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>Diverter ID: <strong>PV-D04-AUTO</strong></span>
+<span>•</span>
+<span>Pathogen: <strong>Staphylococcus aureus (Clinical)</strong></span>
+<span>•</span>
+<span class="text-error font-semibold">Immediate Bio-Digester Flush Confirmed</span>
+</div>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1" onclick="this.parentElement.parentElement.classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+</div>
+<!-- 3. Primary Milk Stock Dynamics & Reduction Overview Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-xl">
+<!-- Card 1: Available Current Stock -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Available Bulk Stock</span>
+<div class="h-8 w-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg">water_drop</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="font-data-metric-lg text-data-metric-lg text-on-surface font-bold tracking-tight">32,840.0 <span class="font-label-md text-label-md font-medium text-on-surface-variant font-mono">L</span></div>
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span>Physical tanks verified (Silos 01-04)</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg py-2.5 rounded-b-xl flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Capacity: 45,000 L</span>
+<span class="font-semibold text-primary">72.9% Fill Level</span>
+</div>
+</div>
+<!-- Card 2: Monthly Wastage Discarded -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Monthly Wastage (MTD)</span>
+<div class="h-8 w-8 rounded-lg bg-error-container/40 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-lg">delete_forever</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="font-data-metric-lg text-data-metric-lg text-error font-bold tracking-tight">1,420.0 <span class="font-label-md text-label-md font-medium text-on-surface-variant font-mono">L</span></div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface">0.19%</span> of monthly total yield
+          <span class="px-1.5 py-0.2 bg-secondary-container text-on-secondary-container rounded font-bold text-[10px]">Under 0.5% Target</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg py-2.5 rounded-b-xl flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>7 Discard Incidents logged</span>
+<span class="text-on-surface font-medium">Zero Reversals</span>
+</div>
+</div>
+<!-- Card 3: Estimated Financial Loss (NEUTRAL PENDING-CALCULATION BADGE) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between"><div class="flex items-center justify-between mb-space-sm"><span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Total Discard Incidents</span><div class="h-8 w-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary"><span class="material-symbols-outlined text-lg">assignment_late</span></div></div><div class="space-y-1"><div class="font-data-metric-lg text-data-metric-lg text-on-surface font-bold tracking-tight">7 <span class="font-label-md text-label-md font-medium text-on-surface-variant font-mono">Events</span></div><div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-base text-secondary">verified_user</span><span>All authorized by Farm Admin</span></div></div><div class="mt-space-md pt-space-sm bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg py-2.5 rounded-b-xl flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm"><span>Strict Stock Deduction</span><span class="font-semibold text-primary">Audit-Locked</span></div></div>
+<!-- Card 4: Total Internal Milk Usage (MTD) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Internal Milk Usage (MTD)</span>
+<div class="h-8 w-8 rounded-lg bg-secondary-container/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-lg">local_dining</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="font-data-metric-lg text-data-metric-lg text-on-surface font-bold tracking-tight">9,850.0 <span class="font-label-md text-label-md font-medium text-on-surface-variant font-mono">L</span></div>
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-base">nutrition</span>
+<span>Calf nursery nutrition &amp; trial feeding</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg py-2.5 rounded-b-xl flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>180 Calves Nourished</span>
+<span class="text-primary font-semibold">100% Stock Accounted</span>
+</div>
+</div>
+</div>
+<!-- 5. Form Layer: Record Milk Wastage Entry Form (Modal / Dedicated Card) -->
+<div class="hidden mb-space-xl p-space-lg rounded-2xl bg-surface-container-lowest shadow-xl" id="view-wastage-modal">
+<div class="flex items-center justify-between pb-space-md mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="h-10 w-10 rounded-xl bg-error-container/50 text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">delete_sweep</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Record Milk Wastage / Sanitary Disposal</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Log sanitary dumps, clinical withdrawals, line flush drops, and parlor-side mastitis discards.</p>
+</div>
+</div>
+<button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" onclick="switchState('all')" type="button">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<!-- Critical Administrative Warning Banner -->
+<div class="p-space-md rounded-xl bg-error-container/30 text-on-error-container flex items-start gap-space-sm mb-space-lg">
+<span class="material-symbols-outlined text-xl text-error flex-shrink-0 mt-0.5">warning</span>
+<div class="space-y-0.5">
+<div class="font-label-md text-label-md font-bold text-error">Irreversible Bulk Stock Reduction Protocol</div>
+<div class="font-body-sm text-body-sm text-on-surface">
+          Confirming this entry permanently reduces available bulk milk stock by the stated quantity and creates an audit-locked bio-traceability incident. Reversals or negative stock overdrafts are strictly prohibited by system governance.
+        </div>
+</div>
+</div>
+<form class="space-y-space-lg" onsubmit="event.preventDefault(); switchState('all');">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Incident Date & Time -->
+<div class="space-y-1.5">
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface">Incident Timestamp *</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">calendar_clock</span>
+<input class="w-full h-11 pl-10 pr-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all font-mono" type="text" value="Oct 23, 2024, 08:45">
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Greenwich Farm Mean Time (GMT-5)</span>
+</div>
+<!-- Source Tank / Parlor Diverter -->
+<div class="space-y-1.5">
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface">Source Tank / Diverter Valve *</label>
+<select class="w-full h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all">
+<option selected="">Bulk Tank #03 Drain (Batch GF-889)</option>
+<option>Parlor 01 Mastitis Diverter Line</option>
+<option>Chilled Silo #01 Flush Tail</option>
+<option>Buffer Receiver Tank #04</option>
+</select>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Available volume in source: 8,400.0 L</span>
+</div>
+<!-- Discarded Quantity -->
+<div class="space-y-1.5">
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface">Discarded Quantity (Litres) *</label>
+<div class="relative">
+<input class="w-full h-11 pl-3 pr-10 rounded-lg bg-surface-container-low text-on-surface font-headline-sm text-headline-sm font-bold focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all font-mono" step="0.1" type="number" value="145.00">
+<span class="absolute right-3 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant font-bold">L</span>
+</div>
+<span class="font-body-sm text-body-sm text-error">Reduces current stock: 32,840.0 → 32,695.0 L</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Wastage Category / Reason -->
+<div class="space-y-1.5">
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface">Wastage Category &amp; Regulatory Cause *</label>
+<select class="w-full h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all">
+<option selected="">Clinical Antibiotic / Drug Withholding (e.g. Cow ET-GF-8711)</option>
+<option>Equipment Wash Flush / CIP Tail Dilution</option>
+<option>Temperature Excursion / Microbial Spoilage</option>
+<option>Colostrum Separation / High Somatic Contamination</option>
+<option>Mechanical Line Leak / Pipe Rupture Discard</option>
+</select>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mandatory for EPA bio-sanitation compliance</span>
+</div>
+<!-- Estimated Financial Loss Display (Neutral Pending calculation) -->
+<div class="space-y-1.5">
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface">Estimated Financial Valuation</label>
+<div class="h-11 px-3 rounded-lg bg-surface-container flex items-center justify-between text-on-surface font-body-md text-body-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base text-tertiary">hourglass_empty</span>
+<span class="font-label-md text-label-md font-semibold">Calculation Pending</span>
+</div>
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-surface-container-high text-on-surface-variant">Neutral Policy</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Base unit valuation formula awaiting Farm Admin audit confirmation.</span>
+</div>
+<!-- Drainage & Disposal Protocol -->
+<div class="space-y-1.5">
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface">Disposal Protocol / Drainage Point *</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" type="text" value="Approved Bio-Digester Lagoon Valve #02">
+<span class="font-body-sm text-body-sm text-on-surface-variant">EPA Licensed Effluent Channel</span>
+</div>
+</div>
+<!-- Additional Details & Cow Tag Link -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="space-y-1.5">
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface">Linked Animal RFID / Batch Note</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">tag</span>
+<input class="w-full h-11 pl-10 pr-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" type="text" value="Cow ET-GF-8711 (Rosie Clover) - Pen 04 - Mastitis Quarter L-Rear">
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface">Authorized Farm Admin Signing Officer</label>
+<div class="h-11 px-3 rounded-lg bg-surface-container-low flex items-center justify-between text-on-surface font-body-md text-body-md">
+<div class="flex items-center gap-space-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-lg">person_check</span>
+<span>Elena Vance (ADM-9402)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">RSA-Signed</span>
+</div>
+</div>
+</div>
+<!-- Modal Footer Action Buttons -->
+<div class="flex items-center justify-end gap-space-md pt-space-md">
+<button class="px-space-lg py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-high transition-colors" onclick="switchState('all')" type="button">
+          Cancel &amp; Discard
+        </button>
+<button class="px-space-xl py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary/90 transition-all shadow-md flex items-center gap-space-xs" type="submit">
+<span class="material-symbols-outlined text-lg">save</span>
+<span>Confirm &amp; Log Wastage (Deduct 145.0 L)</span>
+</button>
+</div>
+</form>
+</div>
+<!-- 6. Form Layer: Record Internal Milk Usage Sub-Form -->
+<div class="hidden mb-space-xl p-space-lg rounded-2xl bg-surface-container-lowest shadow-xl" id="view-usage-form">
+<div class="flex items-center justify-between pb-space-md mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="h-10 w-10 rounded-xl bg-secondary-container/60 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">local_cafe</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Log Internal Milk Usage Allocation</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Record volume diverted for calf feeding nursery, colostrum bank, or on-farm kitchen trials.</p>
+</div>
+</div>
+<button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" onclick="switchState('all')" type="button">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<form class="space-y-space-lg" onsubmit="event.preventDefault(); switchState('all');">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<div class="space-y-1.5">
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface">Usage Timestamp *</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md font-mono" type="text" value="Oct 23, 2024, 07:15">
+</div>
+<div class="space-y-1.5">
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface">Usage Purpose *</label>
+<select class="w-full h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md">
+<option selected="">Calf Nursery Feeding (Whole Milk)</option>
+<option>Colostrum Bank Deep Freeze Replenishment</option>
+<option>Farm Staff Rations / Dairy Kitchen Testing</option>
+<option>Veterinary Neonatal Recovery Rations</option>
+</select>
+</div>
+<div class="space-y-1.5">
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface">Allocated Volume (Litres) *</label>
+<div class="relative">
+<input class="w-full h-11 pl-3 pr-10 rounded-lg bg-surface-container-low text-on-surface font-headline-sm text-headline-sm font-bold font-mono" step="0.5" type="number" value="450.0">
+<span class="absolute right-3 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant font-bold">L</span>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface">Source Tank *</label>
+<select class="w-full h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md">
+<option selected="">Buffer Receiver Tank #03 (Morning Batch)</option>
+<option>Bulk Silo #02 (Grade A Whole)</option>
+<option>Nursery Fresh Chiller #01</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="space-y-1.5">
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface">Receiving Destination / Barn Department *</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md" type="text" value="Calf Nursery Pen 01 &amp; 02 (180 Head Weaned Group)">
+</div>
+<div class="space-y-1.5">
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface">Operator &amp; Handler Name</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md" type="text" value="Liam MacIntyre (Calf Health Supervisor - NUR-104)">
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md">
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-secondary">inventory_2</span>
+<span>Direct stock decrease logged under Internal Nutritional Transfers.</span>
+</div>
+<div class="flex items-center gap-space-md">
+<button class="px-space-lg py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-semibold" onclick="switchState('all')" type="button">
+            Cancel
+          </button>
+<button class="px-space-xl py-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md font-semibold hover:bg-secondary/90 transition-all shadow-md" type="submit">
+            Save Internal Allocation (450.0 L)
+          </button>
+</div>
+</div>
+</form>
+</div>
+<!-- 7. High-Density Combined Wastage & Internal Usage Ledger -->
+<div class="flex flex-col space-y-space-md mb-space-xl" id="view-main">
+<!-- Ledger Toolbar & Multi-Filters -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-sm flex-1">
+<!-- Search bar -->
+<div class="relative min-w-[240px] flex-1 max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+<input class="w-full h-10 pl-9 pr-4 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search Record ID, Reason, Pen ID, Tank..." type="text">
+</div>
+<!-- Type Filter Pills -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="px-3 py-1.5 rounded-md font-label-sm text-label-sm font-semibold bg-surface-container-lowest text-on-surface shadow-xs" type="button">
+            All Records (18)
+          </button>
+<button class="px-3 py-1.5 rounded-md font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+            Wastage / Discards (7)
+          </button>
+<button class="px-3 py-1.5 rounded-md font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+            Internal Usage (11)
+          </button>
+</div>
+<!-- Date Range Filter -->
+<div class="flex items-center gap-1.5 px-3 h-10 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-base text-on-surface-variant">calendar_today</span>
+<span>Last 30 Days (Oct 1 - Oct 31, 2024)</span>
+<span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_drop_down</span>
+</div>
+</div>
+<!-- Secondary Filters & Column Control -->
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-base">filter_list</span>
+<span>Reason Filter</span>
+</button>
+<button class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-base">file_download</span>
+<span>CSV Export</span>
+</button>
+</div>
+</div>
+<!-- Data Table Container -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/70 font-label-sm text-label-sm font-bold text-on-surface-variant uppercase tracking-wider">
+<th class="py-3.5 px-space-md w-12 text-center">
+<input class="rounded accent-primary h-4 w-4" type="checkbox">
+</th>
+<th class="py-3.5 px-space-md">Record ID</th>
+<th class="py-3.5 px-space-md">Timestamp</th>
+<th class="py-3.5 px-space-md">Record Type</th>
+<th class="py-3.5 px-space-md">Reason / Allocation Purpose</th>
+<th class="py-3.5 px-space-md text-right">Volume Delta</th>
+<th class="py-3.5 px-space-md">Deducted From</th>
+<th class="py-3.5 px-space-md">Audit &amp; Compliance Status</th>
+<th class="py-3.5 px-space-md">Operator &amp; Channel</th>
+<th class="py-3.5 px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-md text-body-md text-on-surface">
+<!-- Row 1: Wastage / Clinical Antibiotic Discard -->
+<tr class="hover:bg-surface-container-low/40 transition-colors" id="row-wst-041">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary h-4 w-4" onchange="toggleRowSelection('row-wst-041')" type="checkbox">
+</td>
+<td class="py-3.5 px-space-md font-mono font-bold text-primary">
+                WST-2024-041
+              </td>
+<td class="py-3.5 px-space-md text-on-surface-variant font-mono text-body-sm whitespace-nowrap">
+                Oct 23, 08:30
+              </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container/40 text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="h-1.5 w-1.5 rounded-full bg-error"></span>
+                  Wastage / Discard
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-semibold text-on-surface">Antibiotic Withholding - Cow #8711</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Cefquinome Lactation Treatment • Quarter L-Rear</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-bold text-error whitespace-nowrap">
+                -145.0 L
+              </td>
+<td class="py-3.5 px-space-md text-on-surface-variant whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container text-xs font-mono font-semibold">Parlor Diverter 01</span>
+</td>
+<td class="py-3.5 px-space-md"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-xs font-semibold"><span class="material-symbols-outlined text-[13px] text-secondary">task_alt</span>Deducted &amp; Logged</span></td>
+<td class="py-3.5 px-space-md text-on-surface-variant text-body-sm">
+<div>Elena Vance (Admin)</div>
+<div class="text-xs text-on-surface-variant/70">Bio-Digester Lagoon #02</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="View Incident Record" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Internal Usage / Calf Nursery Feeding -->
+<tr class="hover:bg-surface-container-low/40 transition-colors" id="row-usg-188">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary h-4 w-4" onchange="toggleRowSelection('row-usg-188')" type="checkbox">
+</td>
+<td class="py-3.5 px-space-md font-mono font-bold text-secondary">
+                USG-2024-188
+              </td>
+<td class="py-3.5 px-space-md text-on-surface-variant font-mono text-body-sm whitespace-nowrap">
+                Oct 23, 07:15
+              </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+                  Internal Usage
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-semibold text-on-surface">Calf Nursery Feeding (Whole Milk)</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Pen 01 &amp; 02 Morning Group Feed • 180 Weanlings</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-bold text-on-surface whitespace-nowrap">
+                -450.0 L
+              </td>
+<td class="py-3.5 px-space-md text-on-surface-variant whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container text-xs font-mono font-semibold">Buffer Tank #03</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary-container/40 text-on-secondary-container text-xs font-semibold">
+                  Internal Allocation
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant text-body-sm">
+<div>Liam MacIntyre</div>
+<div class="text-xs text-on-surface-variant/70">Nursery Distribution Cart</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="Inspect Allocation" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Wastage / CIP Line Washout Tail -->
+<tr class="hover:bg-surface-container-low/40 transition-colors" id="row-wst-040">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary h-4 w-4" onchange="toggleRowSelection('row-wst-040')" type="checkbox">
+</td>
+<td class="py-3.5 px-space-md font-mono font-bold text-primary">
+                WST-2024-040
+              </td>
+<td class="py-3.5 px-space-md text-on-surface-variant font-mono text-body-sm whitespace-nowrap">
+                Oct 22, 19:40
+              </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container/40 text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="h-1.5 w-1.5 rounded-full bg-error"></span>
+                  Wastage / Discard
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-semibold text-on-surface">CIP Equipment Wash Dilution</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Parlor line auto-rinse interlock bleed cycle</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-bold text-error whitespace-nowrap">
+                -210.0 L
+              </td>
+<td class="py-3.5 px-space-md text-on-surface-variant whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container text-xs font-mono font-semibold">Line Rinse Purge #01</span>
+</td>
+<td class="py-3.5 px-space-md"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-xs font-semibold"><span class="material-symbols-outlined text-[13px] text-secondary">task_alt</span>Deducted &amp; Logged</span></td>
+<td class="py-3.5 px-space-md text-on-surface-variant text-body-sm">
+<div>Marcus Vance (Tech)</div>
+<div class="text-xs text-on-surface-variant/70">Sanitary Clarifier Pit</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="View Incident Record" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Internal Usage / Colostrum Bank -->
+<tr class="hover:bg-surface-container-low/40 transition-colors" id="row-usg-187">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary h-4 w-4" onchange="toggleRowSelection('row-usg-187')" type="checkbox">
+</td>
+<td class="py-3.5 px-space-md font-mono font-bold text-secondary">
+                USG-2024-187
+              </td>
+<td class="py-3.5 px-space-md text-on-surface-variant font-mono text-body-sm whitespace-nowrap">
+                Oct 22, 14:10
+              </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+                  Internal Usage
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-semibold text-on-surface">Colostrum Bank Deep Freeze Replenish</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Brix Quality Score &gt; 24% • Frozen in 4L Cassettes</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-bold text-on-surface whitespace-nowrap">
+                -80.0 L
+              </td>
+<td class="py-3.5 px-space-md text-on-surface-variant whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container text-xs font-mono font-semibold">Maternity Chiller #01</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary-container/40 text-on-secondary-container text-xs font-semibold">
+                  Internal Allocation
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant text-body-sm">
+<div>Dr. Aris Thorne (Vet)</div>
+<div class="text-xs text-on-surface-variant/70">Bio-Storage Vault #01</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="Inspect Allocation" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: Wastage / Temperature Excursion -->
+<tr class="hover:bg-surface-container-low/40 transition-colors" id="row-wst-039">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary h-4 w-4" onchange="toggleRowSelection('row-wst-039')" type="checkbox">
+</td>
+<td class="py-3.5 px-space-md font-mono font-bold text-primary">
+                WST-2024-039
+              </td>
+<td class="py-3.5 px-space-md text-on-surface-variant font-mono text-body-sm whitespace-nowrap">
+                Oct 21, 23:15
+              </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container/40 text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="h-1.5 w-1.5 rounded-full bg-error"></span>
+                  Wastage / Discard
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-semibold text-on-surface">Temperature Excursion (Chiller Fault)</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Glycol loop failure: Bulk Tank #02 reached 9.4°C for 3.2h</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-bold text-error whitespace-nowrap">
+                -820.0 L
+              </td>
+<td class="py-3.5 px-space-md text-on-surface-variant whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container text-xs font-mono font-semibold">Bulk Tank #02</span>
+</td>
+<td class="py-3.5 px-space-md"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-xs font-semibold"><span class="material-symbols-outlined text-[13px] text-secondary">task_alt</span>Deducted &amp; Logged</span></td>
+<td class="py-3.5 px-space-md text-on-surface-variant text-body-sm">
+<div>Elena Vance (Admin)</div>
+<div class="text-xs text-on-surface-variant/70">Direct Digest Feed Line</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="View Incident Record" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 6: Internal Usage / Kitchen Trials -->
+<tr class="hover:bg-surface-container-low/40 transition-colors" id="row-usg-186">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary h-4 w-4" onchange="toggleRowSelection('row-usg-186')" type="checkbox">
+</td>
+<td class="py-3.5 px-space-md font-mono font-bold text-secondary">
+                USG-2024-186
+              </td>
+<td class="py-3.5 px-space-md text-on-surface-variant font-mono text-body-sm whitespace-nowrap">
+                Oct 21, 11:00
+              </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+                  Internal Usage
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-semibold text-on-surface">Estate Cheese Kitchen Pilot Batch</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Artisanal Cheddar Trial Batch #08 • Unpasteurized allocation</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-mono font-bold text-on-surface whitespace-nowrap">
+                -300.0 L
+              </td>
+<td class="py-3.5 px-space-md text-on-surface-variant whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container text-xs font-mono font-semibold">Jersey Silo 04</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary-container/40 text-on-secondary-container text-xs font-semibold">
+                  Internal Allocation
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant text-body-sm">
+<div>Claire Dupont (Creamery)</div>
+<div class="text-xs text-on-surface-variant/70">Artisan Vat Transfer</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="Inspect Allocation" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Record Count Footer -->
+<div class="p-space-md bg-surface-container-low/50 flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span>Showing <strong>6</strong> of <strong>18</strong> logged movements</span>
+<span class="h-3 w-px bg-outline-variant/60"></span>
+<span class="text-xs font-mono">Ledger Verification: OK (SHA-256 Valid)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-1.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface disabled:opacity-40" disabled="" type="button">
+<span class="material-symbols-outlined text-base">chevron_left</span>
+</button>
+<span class="px-3 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold">1</span>
+<button class="px-3 py-1 rounded hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold" type="button">2</button>
+<button class="px-3 py-1 rounded hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold" type="button">3</button>
+<button class="p-1.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-base">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. Zero Loss Ledger State (Simulation View) -->
+<div class="hidden mb-space-xl p-space-xl rounded-2xl bg-surface-container-lowest text-center space-y-space-md shadow-sm" id="view-empty">
+<div class="h-16 w-16 mx-auto rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+<div class="max-w-md mx-auto space-y-1">
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Zero Unreconciled Wastage Discards</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        No active discard records or unresolved stock leakages exist for this billing timeframe. Available bulk stock precisely matches milking parlor meters.
+      </p>
+</div>
+<div class="pt-2">
+<button class="px-space-md py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary/90" onclick="switchState('modal')" type="button">
+        + Log Sanitary Discard Incident
+      </button>
+</div>
+</div>
+<!-- 8. Stock Movement Reconciliation Matrix -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Matrix Reconciliation Flow Table (8 cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md mb-space-md border-b-0">
+<div>
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Stock Movement Reconciliation Matrix</h3>
+<span class="material-symbols-outlined text-secondary text-base">lock</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Audited volumetric flow for Workspace GF-042. Both internal usage allocations (-1,355.0 L) and recorded wastage dumps (-145.0 L) automatically deduct directly from physical bulk stock.</p>
+</div>
+<span class="px-space-sm py-1 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+            Zero Discrepancy
+          </span>
+</div>
+<!-- Movement Line Items -->
+<div class="space-y-space-sm font-mono text-body-md">
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm text-on-surface">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">flag</span>
+<span class="font-sans font-medium">Starting Balance (Period Open)</span>
+</div>
+<div class="font-bold text-on-surface">27,890.0 L</div>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm text-primary">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span class="font-sans font-medium text-on-surface">(+) Gross Parlor Milk Collection</span>
+</div>
+<div class="font-bold text-primary">+24,650.0 L</div>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">local_shipping</span>
+<span class="font-sans font-medium text-on-surface">(-) Commercial Bulk Sales Dispatched</span>
+</div>
+<div class="font-bold text-on-surface-variant">-18,200.0 L</div>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm text-secondary">
+<span class="material-symbols-outlined text-lg">baby_changing_station</span>
+<span class="font-sans font-medium text-on-surface">(-) Internal Calf Nursery Feeding &amp; Trials</span>
+</div>
+<div class="font-bold text-secondary">-1,355.0 L</div>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-error-container/20">
+<div class="flex items-center gap-space-sm text-error">
+<span class="material-symbols-outlined text-lg">remove_circle</span>
+<span class="font-sans font-medium text-on-surface">(-) Recorded Discards &amp; Wastage Dump</span>
+</div>
+<div class="font-bold text-error">-145.0 L</div>
+</div>
+</div>
+</div>
+<!-- Balance Equals Result -->
+<div class="mt-space-md pt-space-md p-space-md rounded-xl bg-surface-container-high flex items-center justify-between">
+<div>
+<div class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant">Calculated Current Available Stock</div>
+<div class="font-body-sm text-body-sm text-on-surface">Physical sensors: Silos 01, 02, 03, 04</div>
+</div>
+<div class="text-right">
+<div class="font-data-metric-lg text-data-metric-lg font-bold text-primary tracking-tight font-mono">32,840.0 L</div>
+<div class="font-label-sm text-label-sm text-secondary font-medium">Reconciled • 100% Balanced</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Regulatory Compliance & Bio-Sanitation Ledger (4 cols) -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-sm mb-space-md">
+<div class="h-9 w-9 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">gavel</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Compliance &amp; Bio-Sanitation</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">EPA State Permit #EP-902-MILK</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Disposal of antibiotic-treated or mastitic milk must strictly follow certified anaerobic digester channeling to eliminate environmental pathogen ingress and antibiotic runoff.
+        </p>
+<!-- Compliance List -->
+<div class="space-y-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<div class="text-xs">
+<div class="font-bold text-on-surface">Zero Direct Lagoon Discharge</div>
+<div class="text-on-surface-variant">100% routed through bio-digester heating chamber</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<div class="text-xs">
+<div class="font-bold text-on-surface">Traceability Lock Engaged</div>
+<div class="text-on-surface-variant">Incident records cannot be overwritten or reversed</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm"><span class="material-symbols-outlined text-secondary text-lg mt-0.5">lock_clock</span><div class="text-xs"><div class="font-bold text-on-surface">Physical Stock Depletion Locked</div><div class="text-on-surface-variant">All recorded usage and discards immediately reduce bulk inventory</div></div></div>
+</div>
+</div>
+<!-- Cryptographic Hash Verification Stamp -->
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container text-on-surface-variant font-mono text-[11px] space-y-1">
+<div class="flex items-center justify-between text-on-surface font-semibold">
+<span>Ledger Checksum</span>
+<span class="text-secondary">VALID</span>
+</div>
+<div class="truncate text-on-surface-variant/80">SHA256: 9b2d8e4f8812c377ea10cba483e0018f</div>
+<div class="text-[10px] text-on-surface-variant/60">Signed: 2024-10-23T08:30:19Z by ADM-9402</div>
+</div>
+</div>
+</div>
+</div></main></div>
+
+</body></html>

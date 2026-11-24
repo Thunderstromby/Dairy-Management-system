@@ -1,0 +1,987 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#f5f3ed", "tertiary": "#5e3007", "surface-bright": "#fbf9f3", "inverse-surface": "#30312d", "on-secondary-fixed": "#141f0a", "on-surface-variant": "#444840", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#bdcbac", "on-primary": "#ffffff", "on-secondary": "#ffffff", "tertiary-container": "#7a461c", "error": "#ba1a1a", "on-error-container": "#93000a", "secondary-fixed": "#d9e8c7", "primary-container": "#46583b", "primary-fixed": "#d4e9c3", "on-tertiary-fixed-variant": "#6c3a11", "inverse-on-surface": "#f3f1eb", "on-background": "#1b1c18", "outline-variant": "#c4c8bd", "error-container": "#ffdad6", "surface-tint": "#516446", "tertiary-fixed-dim": "#ffb784", "on-tertiary-container": "#ffb785", "on-tertiary-fixed": "#301400", "surface": "#fbf9f3", "secondary": "#556249", "primary": "#2f4126", "on-primary-fixed-variant": "#3a4c30", "on-error": "#ffffff", "background": "#fbf9f3", "surface-container-high": "#eae8e2", "on-primary-container": "#b8cda9", "primary-fixed-dim": "#b8cda8", "tertiary-fixed": "#ffdcc6", "outline": "#75786f", "surface-container-lowest": "#ffffff", "surface-container-highest": "#e4e2dd", "on-secondary-fixed-variant": "#3e4b32", "surface-container": "#f0eee8", "surface-variant": "#e4e2dd", "on-secondary-container": "#5b694e", "on-surface": "#1b1c18", "inverse-primary": "#b8cda8", "surface-dim": "#dcdad4", "on-primary-fixed": "#101f08", "secondary-container": "#d9e8c7" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "space-xs": "0.25rem", "space-md": "1rem", "space-sm": "0.5rem", "margin": "2rem", "margin-mobile": "1rem", "gutter-mobile": "0.75rem", "gutter": "1.5rem", "space-lg": "1.5rem" }, "fontFamily": { "body-sm": ["Inter"], "display-lg": ["Manrope"], "data-metric-md": ["Inter"], "display-lg-mobile": ["Manrope"], "headline-xl-mobile": ["Manrope"], "data-metric-lg": ["Manrope"], "body-lg": ["Inter"], "headline-lg": ["Manrope"], "headline-sm": ["Manrope"], "headline-md": ["Manrope"], "headline-xl": ["Manrope"], "body-md": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"] }, "fontSize": { "body-sm": ["0.75rem", { "lineHeight": "1rem", "fontWeight": "400" }], "display-lg": ["3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "data-metric-md": ["1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "display-lg-mobile": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "data-metric-lg": ["2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "400" }], "headline-lg": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "headline-md": ["1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" }], "headline-xl": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" }], "label-md": ["0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" }], "label-sm": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low z-50 flex flex-col justify-between overflow-y-auto shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-low"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[20px]">agriculture</span></div><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate">SmartFarm OS</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">GF-042 • Greenfield</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container flex items-center justify-between text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span><span class="font-label-sm text-label-sm">Barn Sector 4A</span></div><span class="w-2 h-2 rounded-full bg-primary"></span></div></div><nav class="flex flex-col px-space-sm py-space-xs gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md"><div class="px-space-sm pt-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Operations Core</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Dashboard</span></a><div class="px-space-sm pt-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Herd &amp; Livestock</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="animal-list" href="#"><span class="material-symbols-outlined text-[20px]">pets</span><span class="font-label-md text-label-md">Animal List</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="lifecycle-and-lineage-history" href="#"><span class="material-symbols-outlined text-[20px]">account_tree</span><span class="font-label-md text-label-md">Lifecycle &amp; Lineage</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="weight-history-and-growth-analytics" href="#"><span class="material-symbols-outlined text-[20px]">scale</span><span class="font-label-md text-label-md">Weight &amp; Growth</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="animal-health" href="#"><span class="material-symbols-outlined text-[20px]">stethoscope</span><span class="font-label-md text-label-md">Animal Health</span></a><div class="px-space-sm pt-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Production &amp; Parlor</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="milk-production" href="#"><span class="material-symbols-outlined text-[20px]">water_drop</span><span class="font-label-md text-label-md">Milk Production</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="milk-management" href="#"><span class="material-symbols-outlined text-[20px]">propane_tank</span><span class="font-label-md text-label-md">Milk Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="feeding" href="#"><span class="material-symbols-outlined text-[20px]">grass</span><span class="font-label-md text-label-md">Feeding &amp; Rations</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventory" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-md text-label-md">Inventory &amp; Silos</span></a><div class="px-space-sm pt-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Workforce &amp; Assets</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="workers" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-label-md text-label-md">Workers</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="attendance" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-label-md text-label-md">Attendance</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="payroll" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span class="font-label-md text-label-md">Payroll</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="finance" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span class="font-label-md text-label-md">Finance</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="equipment" href="#"><span class="material-symbols-outlined text-[20px]">precision_manufacturing</span><span class="font-label-md text-label-md">Equipment</span></a><div class="px-space-sm pt-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Governance</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="supervisor-access" href="#"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span><span class="font-label-md text-label-md">Supervisor Access</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">assessment</span><span class="font-label-md text-label-md">Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="data-management" href="#"><span class="material-symbols-outlined text-[20px]">database</span><span class="font-label-md text-label-md">Data Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-md text-label-md">Settings</span></a></nav></div><div class="p-space-md bg-surface-container-low"><div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-container">sensors</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface">Telemetry Feed</span><span class="font-body-sm text-body-sm text-on-surface-variant">98.4% uptime</span></div></div><span class="font-label-sm text-label-sm text-primary">Online</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant"><span class="hover:text-on-surface cursor-pointer">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="text-on-surface font-semibold">Workspace GF-042</span></div><div class="h-4 w-[1px] bg-outline-variant"></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant w-64 justify-between cursor-pointer hover:bg-surface-container transition-colors"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm">Search tag, pen, worker...</span></div><kbd class="px-1.5 py-0.5 rounded bg-surface font-label-sm text-label-sm text-outline border border-outline-variant">⌘K</kbd></div></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="h-6 w-[1px] bg-outline-variant"></div><div class="flex items-center gap-space-sm cursor-pointer"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-semibold">Elena Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant">Estate Farm Admin</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-gutter"><div class="flex flex-col w-full pb-space-xl">
+<!-- Subtle Top Decorative Ambiance (contained, agrarian tone) -->
+<div class="relative w-full overflow-hidden pointer-events-none -mt-4 mb-4 h-6">
+<div class="absolute inset-0 bg-gradient-to-r from-primary-fixed/20 via-secondary-fixed/30 to-transparent blur-md"></div>
+</div>
+<!-- SECTION 1: HEADER & ACTIONS -->
+<section class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg mb-space-xl">
+<div class="flex flex-col min-w-0">
+<!-- Monospaced Category Breadcrumb & Verification Badge -->
+<div class="flex items-center flex-wrap gap-2 mb-2 font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">
+<span class="hover:text-primary transition-colors cursor-pointer">Herd &amp; Livestock</span>
+<span class="text-outline-variant">/</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Animal Health</span>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-semibold">Vaccinations &amp; Prophylaxis</span>
+<span class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[11px] font-semibold tracking-normal">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          GF-042 BIO-SHIELD VERIFIED
+        </span>
+</div>
+<!-- Main Title -->
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Vaccinations &amp; Prophylaxis Ledger</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-1 max-w-3xl">
+        Mandatory statutory immunizations, herd prophylaxis campaigns, next due reminders, and state bio-security verification logs for Greenfield Dairy Estate.
+      </p>
+</div>
+<!-- Action Buttons Bar -->
+<div class="flex items-center flex-wrap gap-space-sm shrink-0"><button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors shadow-sm" onclick="exportCSV()" type="button"><span class="material-symbols-outlined text-[18px] text-secondary">file_download</span><span>Export CSV</span></button><button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors shadow-sm" id="btnPlanCampaign" onclick="openVaccinationModalForCohort()" type="button"><span class="material-symbols-outlined text-[18px] text-primary">calendar_add_on</span><span>+ Plan Campaign</span></button><button class="inline-flex items-center gap-2 px-space-lg py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md shadow-md transition-all transform active:scale-95" id="btnOpenModal" onclick="openVaccineModal()" type="button"><span class="material-symbols-outlined text-[20px]">add</span><span>+ Add Vaccination Record</span></button></div>
+</section>
+<!-- SECTION 2: VACCINATION SUMMARY & REMINDERS OVERVIEW -->
+<section class="flex flex-col gap-space-lg mb-space-xl">
+<!-- Asymmetric KPI Bento Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1: Overdue -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Overdue Immunizations</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-data-metric-lg text-data-metric-lg text-primary">0</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Head</span>
+</div>
+<div class="mt-2 flex items-center gap-1.5 font-body-sm text-body-sm text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>100% On-time compliance index</span>
+</div>
+</div>
+<!-- Card 2: Due within 7 Days -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-tertiary-container"></div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Due Within 7 Days</span>
+<span class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">notification_important</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-data-metric-lg text-data-metric-lg text-tertiary-container">124</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Animals</span>
+</div>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant truncate">
+          Brucellosis Booster S19 for Pen 02 replacement heifers
+        </p>
+</div>
+<!-- Card 3: Due within 30 Days -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Due Within 30 Days</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-data-metric-lg text-data-metric-lg text-on-surface">310</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Animals</span>
+</div>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant truncate">
+          Clostridial 7-Way semi-annual booster cohort
+        </p>
+</div>
+<!-- Card 4: Herd Fully Vaccinated Ratio -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Immunity Coverage</span>
+<span class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-data-metric-lg text-data-metric-lg text-primary">97.4%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(1,482/1,521)</span>
+</div>
+<!-- Progress mini visualizer -->
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-2.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-700" style="width: 97.4%;"></div>
+</div>
+<div class="mt-2 font-body-sm text-body-sm text-on-surface-variant">
+          Tier A Bio-Traceability Certified
+        </div>
+</div>
+</div>
+<!-- Due Reminders Alert Banner -->
+<div class="relative overflow-hidden rounded-xl p-space-md md:p-space-lg bg-surface-container-low shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<!-- Subtle side highlight bar using container tones -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div class="flex items-start gap-space-md pl-2 min-w-0">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0 text-tertiary mt-0.5">
+<span class="material-symbols-outlined text-[22px]">crisis_alert</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-bold">Upcoming Herd Immunization Event</span>
+<span class="px-2 py-0.5 rounded text-xs bg-tertiary-container text-on-tertiary font-medium">Scheduled for Oct 28, 2024</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">• In 4 Days</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+<strong>Brucellosis Booster S19</strong> is recorded due for <strong class="text-primary font-semibold">Pen 02 Replacement Heifers (124 Head)</strong>. Ensure cold-chain inspection is completed 2 hours prior to parlor run.
+          </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 italic">
+            Note: Notification lead times and repetition intervals are farm-configured; system tracks recorded due dates without algorithmic scheduling.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pl-2 md:pl-0 shrink-0">
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors shadow-sm" onclick="prepareBatchPen02()" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">checklist</span>
+<span>Prepare Pen 02 Checklist</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-colors shadow-sm" onclick="openVaccinationModalForCohort()" type="button">
+<span class="material-symbols-outlined text-[16px]">start</span>
+<span>Initiate Batch Log</span>
+</button>
+</div>
+</div>
+</section>
+<!-- SECTION 4: FILTER TOOLBAR & STATE PREVIEW CONTROLS -->
+<section class="flex flex-col gap-space-sm mb-space-md">
+<!-- View Switcher & Edge State Tabs -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest p-space-sm px-space-md rounded-xl shadow-sm">
+<div class="flex items-center gap-1 overflow-x-auto pb-1 md:pb-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mr-2 shrink-0">Preset Views:</span>
+
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container transition-all" id="tabDueSoon" onclick="switchLedgerState('dueSoon')" type="button">
+          Due Soon (1 Cohort)
+        </button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container transition-all" id="tabEmpty" onclick="switchLedgerState('empty')" type="button">
+          Zero State / Empty
+        </button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container transition-all" id="tabSimulation" onclick="switchLedgerState('simulation')" type="button">
+          Batch Simulator
+        </button>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm shrink-0">
+<span class="material-symbols-outlined text-[16px] text-secondary">cloud_done</span>
+<span>Ledger Hash: <code class="font-mono text-primary font-semibold">a8f2•99b1</code> (Synced)</span>
+</div>
+</div>
+<!-- Detailed Filters Bar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Search Input -->
+<div class="relative flex-1 min-w-[240px]">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span>
+<input class="w-full pl-9 pr-space-md py-2 bg-surface-container-low rounded-lg text-on-surface font-body-md text-body-md outline-none focus:bg-surface transition-colors placeholder:text-outline" id="inputSearch" onkeyup="filterLedgerTable()" placeholder="Search Ear-Tag, Animal Name, or Event ID (e.g. 8849, Bella)..." type="text">
+</div>
+<!-- Dropdown Selectors -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm shrink-0">
+<!-- Vaccine Type Filter -->
+<div class="flex flex-col">
+<select class="px-space-sm py-2 bg-surface-container-low rounded-lg text-on-surface font-label-md text-label-md outline-none cursor-pointer" id="filterVaccineType" onchange="filterLedgerTable()">
+<option value="ALL">All Antigens / Types</option>
+<option value="Brucella">Brucellosis (S19)</option>
+<option value="Clostridial">Clostridial Polyvalent</option>
+<option value="IBR">IBR / BVDV / PI3</option>
+<option value="Calfhood">Calfhood Primary</option>
+</select>
+</div>
+<!-- Target Pen Cohort -->
+<div class="flex flex-col">
+<select class="px-space-sm py-2 bg-surface-container-low rounded-lg text-on-surface font-label-md text-label-md outline-none cursor-pointer" id="filterCohort" onchange="filterLedgerTable()">
+<option value="ALL">All Pens &amp; Cohorts</option>
+<option value="Pen 01">Pen 01 - High Producers</option>
+<option value="Pen 02">Pen 02 - Heifer Replacements</option>
+<option value="Pen 04">Pen 04 - Dry Cows</option>
+<option value="Nursery">Nursery &amp; Calves</option>
+</select>
+</div>
+<!-- Compliance Status -->
+<div class="flex flex-col">
+<select class="px-space-sm py-2 bg-surface-container-low rounded-lg text-on-surface font-label-md text-label-md outline-none cursor-pointer" id="filterStatus" onchange="filterLedgerTable()">
+<option value="ALL">All Compliance Statuses</option>
+<option value="Valid">Up-to-Date (Valid)</option>
+<option value="Due Soon">Due Soon (&lt; 7 Days)</option>
+<option value="Due Later">Due Later (&gt; 30 Days)</option>
+</select>
+</div>
+<!-- Attending Vet -->
+<div class="flex flex-col">
+<select class="px-space-sm py-2 bg-surface-container-low rounded-lg text-on-surface font-label-md text-label-md outline-none cursor-pointer" id="filterClinician" onchange="filterLedgerTable()">
+<option value="ALL">All Attending Staff</option>
+<option value="Chen">Dr. Robert Chen DVM</option>
+<option value="Vance">Dr. Elena Vance</option>
+<option value="Gomez">Sarah Gomez LVT</option>
+</select>
+</div>
+</div>
+<!-- Reset Filter Button -->
+<button class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant transition-colors self-end lg:self-center" onclick="resetFilters()" title="Reset Filters" type="button">
+<span class="material-symbols-outlined text-[20px]">filter_alt_off</span>
+</button>
+</div>
+</section>
+<!-- SECTION 5: VACCINATION RECORD LEDGER TABLE -->
+<section class="flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden mb-space-lg">
+<!-- Visual Ledger Header Strip -->
+<div class="px-space-md py-3 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">assignment_turned_in</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Master Vaccination Ledger</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm" id="recordCountBadge">
+          4 Records Displayed
+        </span>
+</div>
+<div class="flex items-center gap-2">
+<button class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" onclick="exportCSV()" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export CSV</span>
+</button>
+</div>
+</div>
+<!-- Responsive Table Container -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse" id="vaccinationTable">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider"><th class="py-3 px-space-md font-semibold">Record ID</th><th class="py-3 px-space-md font-semibold">Animal / Cohort</th><th class="py-3 px-space-md font-semibold">Vaccine &amp; Batch Lot</th><th class="py-3 px-space-md font-semibold">Administered Date</th><th class="py-3 px-space-md font-semibold">Next Due Date</th><th class="py-3 px-space-md font-semibold">Route &amp; Dose</th><th class="py-3 px-space-md font-semibold">Administered By</th><th class="py-3 px-space-md font-semibold text-center">Reminder Status</th><th class="py-3 px-space-md font-semibold text-right">Actions</th></tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface" id="ledgerTableBody">
+<!-- Row 1: VAC-2024-411 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group" data-cohort="Pen 01" data-status="Valid" data-vaccine="IBR" data-vet="Chen">
+<td class="py-3.5 px-space-md font-mono text-primary font-semibold">
+              VAC-2024-411
+            </td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-md bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed text-xs font-mono font-bold">
+                  8849
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">ET-GF-8849</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bella Prime (Pen 01)</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">IBR / BVDV / PI3 Inactivated</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">Lot #ZX-9921 • Exp 2026-02</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span>Aug 15, 2024</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">74 days ago</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Aug 15, 2025</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-medium mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Valid (10 Mos)
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm">
+<span class="block text-on-surface font-medium">Subcutaneous 2.0 mL</span>
+<span class="text-on-surface-variant">Right lateral cervical</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Dr. Robert Chen DVM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">LIC #VET-99042</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center justify-center p-1 rounded-full bg-secondary-fixed text-primary" title="Cold Chain 3.9°C Verified">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" onclick="inspectRecord('VAC-2024-411', 'ET-GF-8849', 'Bella Prime', 'IBR / BVDV / PI3 Inactivated', 'Aug 15, 2024', 'Aug 15, 2025', 'Dr. Robert Chen DVM')" title="Inspect Record" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" onclick="generateCert('VAC-2024-411', 'ET-GF-8849')" title="Generate Bio-Security Certificate" type="button">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: VAC-2024-412 (Cohort due in 4 days) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-tertiary-fixed/10 group" data-cohort="Pen 02" data-status="Due Soon" data-vaccine="Brucella" data-vet="Vance">
+<td class="py-3.5 px-space-md font-mono text-tertiary font-semibold">
+              VAC-2024-412
+            </td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-md bg-tertiary-container text-on-tertiary flex items-center justify-center text-xs font-mono font-bold">
+                  B02
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-tertiary-container">Cohort Pen 02</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">124 Replacement Heifers</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Brucellosis S19 Booster</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">Lot #BR-5510 • Exp 2025-11</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span>Nov 01, 2023</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Prev. Campaign</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-semibold text-tertiary-container">Oct 28, 2024</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded bg-tertiary text-on-tertiary font-semibold mt-0.5 w-max">
+<span class="material-symbols-outlined text-[12px]">alarm</span>
+                  Due in 4 Days
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm">
+<span class="block text-on-surface font-medium">Subcutaneous 2.0 mL</span>
+<span class="text-on-surface-variant">Right neck prescapular</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Dr. Elena Vance</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">Scheduled Attending</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center justify-center p-1 rounded-full bg-secondary-fixed text-primary" title="Vaccine Stock Reserved &amp; Therm-Monitored">
+<span class="material-symbols-outlined text-[16px]">inventory</span>
+</span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" onclick="inspectRecord('VAC-2024-412', 'Cohort Pen 02', '124 Heifers', 'Brucellosis S19 Booster', 'Nov 01, 2023', 'Oct 28, 2024', 'Dr. Elena Vance')" title="Inspect Record" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-tertiary hover:bg-tertiary-fixed transition-colors" onclick="openVaccinationModalForCohort()" title="Log Completed Batch" type="button">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: VAC-2024-398 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group" data-cohort="Pen 04" data-status="Valid" data-vaccine="Clostridial" data-vet="Chen">
+<td class="py-3.5 px-space-md font-mono text-primary font-semibold">
+              VAC-2024-398
+            </td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-md bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed text-xs font-mono font-bold">
+                  8711
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">ET-GF-8711</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Rosie Clover (Pen 04)</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Clostridial 8-Way Polyvalent</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">Lot #CL-2091 • Exp 2025-10</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span>May 10, 2024</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">171 days ago</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">May 10, 2025</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-medium mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Valid (7 Mos)
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm">
+<span class="block text-on-surface font-medium">Subcutaneous 5.0 mL</span>
+<span class="text-on-surface-variant">Left mid-neck fold</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Dr. Robert Chen DVM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">LIC #VET-99042</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center justify-center p-1 rounded-full bg-secondary-fixed text-primary" title="Cold Chain 4.1°C Verified">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" onclick="inspectRecord('VAC-2024-398', 'ET-GF-8711', 'Rosie Clover', 'Clostridial 8-Way', 'May 10, 2024', 'May 10, 2025', 'Dr. Robert Chen DVM')" title="Inspect Record" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" onclick="generateCert('VAC-2024-398', 'ET-GF-8711')" title="Generate Bio-Security Certificate" type="button">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: VAC-2024-380 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group" data-cohort="Nursery" data-status="Valid" data-vaccine="Calfhood" data-vet="Vance">
+<td class="py-3.5 px-space-md font-mono text-primary font-semibold">
+              VAC-2024-380
+            </td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-md bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed text-xs font-mono font-bold">
+                  9240
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">ET-GF-9240</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nova Heifer (Nursery)</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Calfhood Brucellosis Primary</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">Lot #BR-5509 • Exp 2025-09</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span>Sep 20, 2024</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">38 days ago</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Sep 20, 2025</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-medium mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Valid (11 Mos)
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm">
+<span class="block text-on-surface font-medium">Subcutaneous 2.0 mL</span>
+<span class="text-on-surface-variant">Right shoulder prescapular</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Dr. Elena Vance</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">State USDA Accredited</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center justify-center p-1 rounded-full bg-secondary-fixed text-primary" title="Tattoo &amp; Shield Ear Notch Applied">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" onclick="inspectRecord('VAC-2024-380', 'ET-GF-9240', 'Nova Heifer', 'Calfhood Brucellosis Primary', 'Sep 20, 2024', 'Sep 20, 2025', 'Dr. Elena Vance')" title="Inspect Record" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" onclick="generateCert('VAC-2024-380', 'ET-GF-9240')" title="Generate Bio-Security Certificate" type="button">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Empty State Container (Hidden by default, triggered via Tab or Zero Filters) -->
+<div class="hidden flex-col items-center justify-center p-space-xl text-center" id="ledgerEmptyState">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-outline mb-space-md">
+<span class="material-symbols-outlined text-[32px]">folder_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">No Vaccination Records Found</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-1">
+          No medical logs match your active filter criteria, or this cohort does not have scheduled immunization entries in the ledger.
+        </p>
+<button class="mt-space-md inline-flex items-center gap-2 px-space-md py-2 rounded-lg bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-md text-label-md" onclick="resetFilters()" type="button">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Clear Filter Criteria</span>
+</button>
+</div>
+</div>
+<!-- Ledger Footer & Regulatory Statutory Disclaimer (Section 6 requirement) -->
+<div class="p-space-md bg-surface-container-low flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline">info</span>
+<span>
+<strong>Statutory Compliance Notice:</strong> Vaccination records support next due dates as recorded by farm administration. System does not invent vaccine intervals or automatic prescription rules.
+        </span>
+</div>
+<div class="shrink-0 font-label-sm text-label-sm">
+        State Board of Animal Health ID: <strong>US-DAIRY-GF042</strong>
+</div>
+</div>
+</section>
+<!-- SECTION 6: BIO-SECURITY VERIFICATION METADATA BAR & AUDIT FOOTPRINT -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-space-md"><div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-md"><div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-primary shrink-0"><span class="material-symbols-outlined text-[20px]">verified_user</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Attending Veterinary Protocol</span><div class="flex items-baseline gap-2 mt-0.5"><span class="font-headline-sm text-headline-sm text-on-surface font-bold">Dr. Robert Chen DVM</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mt-1">LIC #VET-99042 • Herd health records reviewed per farm standard operational schedule.</p></div></div><div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-md"><div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0"><span class="material-symbols-outlined text-[20px]">schedule</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Configured Reminder Policy</span><div class="flex items-baseline gap-2 mt-0.5"><span class="font-headline-sm text-headline-sm text-on-surface font-bold">Lead Time: 14 Days</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Notification lead times and alert recurrence intervals are customized by farm administration.</p></div></div><div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-md"><div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary shrink-0"><span class="material-symbols-outlined text-[20px]">description</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Statutory Regulatory Dossier</span><div class="flex items-baseline gap-2 mt-0.5"><span class="font-headline-sm text-headline-sm text-on-surface font-bold">State ID: GF042</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Vaccination and treatment ledgers maintained for statutory audit and movement documentation.</p></div></div></section>
+<!-- SECTION 3: ADD VACCINATION RECORD / BATCH CAMPAIGN MODAL (Interactive Dialog) -->
+<div class="fixed inset-0 z-50 hidden items-center justify-center bg-inverse-surface/40 backdrop-blur-sm p-space-sm md:p-space-lg overflow-y-auto" id="vaccineModal">
+<div class="relative w-full max-w-3xl rounded-xl bg-surface-container-lowest shadow-2xl overflow-hidden my-auto">
+<!-- Modal Header -->
+<div class="px-space-lg py-space-md bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">syringe</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold" id="modalTitle">Log Vaccination Event / Campaign</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Direct bio-security entry with verifiable cold-chain audit</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-colors" onclick="closeVaccineModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body / Form -->
+<form class="p-space-lg flex flex-col gap-space-md" id="formVaccineEntry" onsubmit="handleFormSubmit(event)">
+<!-- Target Animal or Batch Cohort Switch -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">
+            Target Head / Cohort Selection <span class="text-error">*</span>
+</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<label class="flex items-center gap-2 p-space-sm rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input checked="" class="text-primary focus:ring-0 cursor-pointer" name="targetMode" onchange="toggleTargetMode('individual')" type="radio" value="individual">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Individual Ear-Tag Lookup</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Single heifer or milk cow</span>
+</div>
+</label>
+<label class="flex items-center gap-2 p-space-sm rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input class="text-primary focus:ring-0 cursor-pointer" id="radioBatchCohort" name="targetMode" onchange="toggleTargetMode('batch')" type="radio" value="batch">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Batch Herd Cohort</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Entire pen or synchronized group</span>
+</div>
+</label>
+</div>
+<!-- Individual Lookup Input -->
+<div class="mt-2" id="containerIndividualSelect">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">sell</span>
+<input class="w-full pl-9 pr-space-md py-2 bg-surface-container-low rounded-lg text-on-surface font-body-md text-body-md outline-none focus:bg-surface transition-colors placeholder:text-outline" id="inputEarTag" placeholder="Scan RFID or enter Ear-Tag (e.g. ET-GF-8849, Bella Prime)..." type="text">
+</div>
+</div>
+<!-- Batch Cohort Select (hidden initially unless triggered) -->
+<div class="hidden mt-2" id="containerBatchSelect">
+<select class="w-full px-space-md py-2 bg-surface-container-low rounded-lg text-on-surface font-body-md text-body-md outline-none cursor-pointer" id="selectBatchCohort">
+<option value="Pen 02 Heifers (124 Head)">Cohort Pen 02 - Replacement Heifers (124 Head)</option>
+<option value="Pen 01 High Yield (88 Head)">Cohort Pen 01 - High Yield Lactation (88 Head)</option>
+<option value="Pen 04 Dry Cows (45 Head)">Cohort Pen 04 - Dry &amp; Transition Cows (45 Head)</option>
+<option value="Nursery Calves (32 Head)">Cohort Nursery - Weaned Calves (32 Head)</option>
+</select>
+</div>
+</div>
+<!-- Vaccine Details Row (2 Columns) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">
+              Vaccine Name &amp; Antigen Type <span class="text-error">*</span>
+</label>
+<input class="w-full px-space-md py-2 bg-surface-container-low rounded-lg text-on-surface font-body-md text-body-md outline-none focus:bg-surface transition-colors" id="inputVaccineName" placeholder="e.g. Brucella Abortus Strain 19 / Clostridial 7-Way" required="" type="text" value="Brucella Abortus Strain 19">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">
+              Manufacturer &amp; Batch / Lot # <span class="text-error">*</span>
+</label>
+<input class="w-full px-space-md py-2 bg-surface-container-low rounded-lg text-on-surface font-body-md text-body-md outline-none focus:bg-surface transition-colors font-mono" id="inputLotNumber" placeholder="e.g. Zoetis UltraChoice 7, Lot #VC-88291, Exp: 2025-08" required="" type="text" value="Zoetis Bio-Shield, Lot #BR-5510, Exp 2025-11">
+</div>
+</div>
+<!-- Administration & Next Due Dates -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">
+              Administered Date <span class="text-error">*</span>
+</label>
+<input class="w-full px-space-md py-2 bg-surface-container-low rounded-lg text-on-surface font-body-md text-body-md outline-none focus:bg-surface transition-colors cursor-pointer" id="inputAdminDate" required="" type="date" value="2024-10-24">
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">
+                Next Due Date (Configured) <span class="text-error">*</span>
+</label>
+<span class="text-xs text-secondary font-medium">Farm Configured</span>
+</div>
+<input class="w-full px-space-md py-2 bg-surface-container-low rounded-lg text-on-surface font-body-md text-body-md outline-none focus:bg-surface transition-colors cursor-pointer" id="inputNextDueDate" required="" type="date" value="2025-10-24">
+</div>
+</div>
+<!-- Route, Site, Dosage -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">
+              Route &amp; Anatomical Site
+            </label>
+<input class="w-full px-space-md py-2 bg-surface-container-low rounded-lg text-on-surface font-body-md text-body-md outline-none focus:bg-surface transition-colors" id="inputRouteSite" placeholder="e.g. Subcutaneous, right neck furrow" type="text" value="Subcutaneous, right neck prescapular">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">
+              Dosage Volume
+            </label>
+<input class="w-full px-space-md py-2 bg-surface-container-low rounded-lg text-on-surface font-body-md text-body-md outline-none focus:bg-surface transition-colors" id="inputDosage" placeholder="e.g. 2.0 mL per head" type="text" value="2.0 mL per head">
+</div>
+</div>
+<!-- Clinician & Cold-Chain Storage Check -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">
+              Administering Clinician <span class="text-error">*</span>
+</label>
+<select class="w-full px-space-md py-2 bg-surface-container-low rounded-lg text-on-surface font-body-md text-body-md outline-none cursor-pointer" id="selectClinician">
+<option value="Dr. Robert Chen DVM (Lic #VET-99042)">Dr. Robert Chen DVM (Lic #VET-99042)</option>
+<option selected="" value="Dr. Elena Vance (State USDA Accredited)">Dr. Elena Vance (State USDA Accredited)</option>
+<option value="Sarah Gomez LVT (Certification #LVT-3011)">Sarah Gomez LVT (Certification #LVT-3011)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">
+              Cold-Chain Storage Verification
+            </label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-primary text-[18px]">thermostat</span>
+<input class="w-full pl-9 pr-space-md py-2 bg-surface-container-low rounded-lg text-on-surface font-body-md text-body-md outline-none focus:bg-surface transition-colors" id="inputColdChain" type="text" value="Refrigerated 3.8°C verified (Log #CC-882)">
+</div>
+</div>
+</div>
+<!-- Statutory Note Notice -->
+<div class="p-space-sm rounded-lg bg-surface-container text-on-surface-variant font-body-sm text-body-sm flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">verified_user</span>
+<span>Saving this record will instantly write to the permanent bio-security audit log and arm next due date notifications according to your custom herd schedule parameters.</span>
+</div>
+<!-- Form Action Buttons -->
+<div class="flex items-center justify-end gap-space-sm pt-space-sm">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors" onclick="closeVaccineModal()" type="button">
+            Cancel
+          </button>
+<button class="inline-flex items-center gap-2 px-space-lg py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md shadow-md transition-all" type="submit">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save &amp; Dispatch Reminder Flag</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- INSPECTION RECORD DRAWER / MODAL -->
+<div class="fixed inset-0 z-50 hidden items-center justify-center bg-inverse-surface/40 backdrop-blur-sm p-space-sm md:p-space-lg" id="inspectModal">
+<div class="relative w-full max-w-lg rounded-xl bg-surface-container-lowest shadow-2xl p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-2 bg-surface-container-low -mx-space-lg -mt-space-lg p-space-lg rounded-t-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">assignment</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" id="inspectTitle">Inspection View</h3>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="closeInspectModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-2 font-body-md text-body-md" id="inspectContent">
+<!-- Injected via inspectRecord() -->
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md" onclick="closeInspectModal()" type="button">
+          Close Inspection
+        </button>
+</div>
+</div>
+</div>
+<!-- BATCH SIMULATION OVERLAY BANNER (when in simulation mode) -->
+
+</div>
+<script>
+  // Filter logic
+  function filterLedgerTable() {
+    const searchVal = (document.getElementById('inputSearch')?.value || '').toLowerCase();
+    const vaccineVal = document.getElementById('filterVaccineType')?.value || 'ALL';
+    const cohortVal = document.getElementById('filterCohort')?.value || 'ALL';
+    const statusVal = document.getElementById('filterStatus')?.value || 'ALL';
+    const clinicianVal = document.getElementById('filterClinician')?.value || 'ALL';
+
+    const rows = document.querySelectorAll('#ledgerTableBody tr');
+    let visibleCount = 0;
+
+    rows.forEach(row => {
+      const text = row.innerText.toLowerCase();
+      const rVaccine = row.getAttribute('data-vaccine') || '';
+      const rCohort = row.getAttribute('data-cohort') || '';
+      const rStatus = row.getAttribute('data-status') || '';
+      const rVet = row.getAttribute('data-vet') || '';
+
+      const matchSearch = !searchVal || text.includes(searchVal);
+      const matchVaccine = vaccineVal === 'ALL' || rVaccine.includes(vaccineVal);
+      const matchCohort = cohortVal === 'ALL' || rCohort.includes(cohortVal);
+      const matchStatus = statusVal === 'ALL' || rStatus.includes(statusVal);
+      const matchVet = clinicianVal === 'ALL' || rVet.includes(clinicianVal);
+
+      if (matchSearch && matchVaccine && matchCohort && matchStatus && matchVet) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    const badge = document.getElementById('recordCountBadge');
+    if (badge) badge.innerText = visibleCount + (visibleCount === 1 ? ' Record Displayed' : ' Records Displayed');
+
+    const emptyBox = document.getElementById('ledgerEmptyState');
+    if (emptyBox) {
+      if (visibleCount === 0) {
+        emptyBox.classList.remove('hidden');
+        emptyBox.classList.add('flex');
+      } else {
+        emptyBox.classList.add('hidden');
+        emptyBox.classList.remove('flex');
+      }
+    }
+  }
+
+  function resetFilters() {
+    if (document.getElementById('inputSearch')) document.getElementById('inputSearch').value = '';
+    if (document.getElementById('filterVaccineType')) document.getElementById('filterVaccineType').value = 'ALL';
+    if (document.getElementById('filterCohort')) document.getElementById('filterCohort').value = 'ALL';
+    if (document.getElementById('filterStatus')) document.getElementById('filterStatus').value = 'ALL';
+    if (document.getElementById('filterClinician')) document.getElementById('filterClinician').value = 'ALL';
+    filterLedgerTable();
+  }
+
+  // Interactive Switcher between Ledger States (Normal, Due Soon, Empty, Simulation)
+  function switchLedgerState(state) {
+    const tabs = ['tabNormal', 'tabDueSoon', 'tabEmpty', 'tabSimulation'];
+    tabs.forEach(t => {
+      const el = document.getElementById(t);
+      if (el) {
+        el.className = 'px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container transition-all';
+      }
+    });
+
+    const simBanner = document.getElementById('simulatedBanner');
+    if (simBanner) simBanner.classList.add('hidden');
+
+    if (state === 'normal') {
+      const el = document.getElementById('tabNormal');
+      if (el) el.className = 'px-space-md py-1.5 rounded-lg font-label-md text-label-md bg-primary text-on-primary transition-all';
+      resetFilters();
+    } else if (state === 'dueSoon') {
+      const el = document.getElementById('tabDueSoon');
+      if (el) el.className = 'px-space-md py-1.5 rounded-lg font-label-md text-label-md bg-tertiary-container text-on-tertiary transition-all';
+      if (document.getElementById('filterStatus')) document.getElementById('filterStatus').value = 'Due Soon';
+      filterLedgerTable();
+    } else if (state === 'empty') {
+      const el = document.getElementById('tabEmpty');
+      if (el) el.className = 'px-space-md py-1.5 rounded-lg font-label-md text-label-md bg-primary text-on-primary transition-all';
+      // force zero matches
+      const rows = document.querySelectorAll('#ledgerTableBody tr');
+      rows.forEach(r => r.style.display = 'none');
+      const badge = document.getElementById('recordCountBadge');
+      if (badge) badge.innerText = '0 Records Displayed';
+      const emptyBox = document.getElementById('ledgerEmptyState');
+      if (emptyBox) {
+        emptyBox.classList.remove('hidden');
+        emptyBox.classList.add('flex');
+      }
+    } else if (state === 'simulation') {
+      const el = document.getElementById('tabSimulation');
+      if (el) el.className = 'px-space-md py-1.5 rounded-lg font-label-md text-label-md bg-secondary text-on-secondary transition-all';
+      resetFilters();
+      if (simBanner) simBanner.classList.remove('hidden');
+    }
+  }
+
+  // Target Mode Toggling (Individual Ear-Tag vs Batch Cohort)
+  function toggleTargetMode(mode) {
+    const indContainer = document.getElementById('containerIndividualSelect');
+    const batchContainer = document.getElementById('containerBatchSelect');
+    if (mode === 'individual') {
+      indContainer?.classList.remove('hidden');
+      batchContainer?.classList.add('hidden');
+    } else {
+      indContainer?.classList.add('hidden');
+      batchContainer?.classList.remove('hidden');
+    }
+  }
+
+  // Modal open/close actions
+  function openVaccineModal() {
+    const modal = document.getElementById('vaccineModal');
+    if (modal) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+  }
+
+  function closeVaccineModal() {
+    const modal = document.getElementById('vaccineModal');
+    if (modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+
+  function openVaccinationModalForCohort() {
+    openVaccineModal();
+    const batchRadio = document.getElementById('radioBatchCohort');
+    if (batchRadio) {
+      batchRadio.checked = true;
+      toggleTargetMode('batch');
+    }
+    const title = document.getElementById('modalTitle');
+    if (title) title.innerText = 'Log Batch Campaign: Pen 02 Heifers';
+    const vaccineName = document.getElementById('inputVaccineName');
+    if (vaccineName) vaccineName.value = 'Brucella Abortus Strain 19 Booster';
+  }
+
+  function prepareBatchPen02() {
+    alert('Pen 02 Heifers (124 Head) RFID gate checklist generated and dispatched to parlor operator tablet.');
+  }
+
+  // Form submission: adds row dynamically to demonstrate reactivity
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const isBatch = document.getElementById('radioBatchCohort')?.checked;
+    const targetLabel = isBatch
+      ? (document.getElementById('selectBatchCohort')?.value || 'Cohort Pen 02')
+      : (document.getElementById('inputEarTag')?.value || 'ET-GF-9901 (New Arrival)');
+    const vaccine = document.getElementById('inputVaccineName')?.value || 'Custom Vaccine';
+    const lot = document.getElementById('inputLotNumber')?.value || 'Lot #NEW-001';
+    const adminDate = document.getElementById('inputAdminDate')?.value || 'Today';
+    const nextDate = document.getElementById('inputNextDueDate')?.value || 'Next Year';
+    const clinician = document.getElementById('selectClinician')?.value || 'Dr. Elena Vance';
+    const route = document.getElementById('inputRouteSite')?.value || 'Subcutaneous';
+    const dose = document.getElementById('inputDosage')?.value || '2.0 mL';
+
+    const newId = 'VAC-2024-' + Math.floor(413 + Math.random() * 80);
+
+    const tbody = document.getElementById('ledgerTableBody');
+    if (tbody) {
+      const tr = document.createElement('tr');
+      tr.className = 'hover:bg-surface-container-low/60 transition-colors bg-secondary-fixed/10 group';
+      tr.setAttribute('data-vaccine', vaccine);
+      tr.setAttribute('data-cohort', isBatch ? 'Pen 02' : 'Individual');
+      tr.setAttribute('data-status', 'Valid');
+      tr.setAttribute('data-vet', 'Vance');
+
+      tr.innerHTML = `
+        <td class="py-3.5 px-space-md font-mono text-primary font-semibold">${newId}</td>
+        <td class="py-3.5 px-space-md">
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-md bg-primary-fixed text-on-primary-fixed flex items-center justify-center text-xs font-mono font-bold">
+              NEW
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-md text-label-md font-semibold text-on-surface">${targetLabel}</span>
+              <span class="font-body-sm text-body-sm text-on-surface-variant">${isBatch ? 'Batch Prophylaxis' : 'Single Animal'}</span>
+            </div>
+          </div>
+        </td>
+        <td class="py-3.5 px-space-md">
+          <div class="flex flex-col">
+            <span class="font-semibold text-on-surface">${vaccine}</span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant font-mono">${lot}</span>
+          </div>
+        </td>
+        <td class="py-3.5 px-space-md whitespace-nowrap">
+          <span>${adminDate}</span>
+          <span class="block font-body-sm text-body-sm text-primary font-medium">Just logged</span>
+        </td>
+        <td class="py-3.5 px-space-md whitespace-nowrap">
+          <div class="flex flex-col">
+            <span class="font-semibold text-on-surface">${nextDate}</span>
+            <span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-medium mt-0.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              Valid (Configured)
+            </span>
+          </div>
+        </td>
+        <td class="py-3.5 px-space-md font-body-sm text-body-sm">
+          <span class="block text-on-surface font-medium">${route} • ${dose}</span>
+          <span class="text-on-surface-variant">Validated site</span>
+        </td>
+        <td class="py-3.5 px-space-md">
+          <div class="flex flex-col">
+            <span class="font-label-md text-label-md font-medium text-on-surface">${clinician.split('(')[0]}</span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant font-mono">Recorded</span>
+          </div>
+        </td>
+        <td class="py-3.5 px-space-md text-center">
+          <span class="inline-flex items-center justify-center p-1 rounded-full bg-secondary-fixed text-primary" title="Verified">
+            <span class="material-symbols-outlined text-[16px]">verified</span>
+          </span>
+        </td>
+        <td class="py-3.5 px-space-md text-right whitespace-nowrap">
+          <div class="flex items-center justify-end gap-1">
+            <button type="button" onclick="inspectRecord('${newId}', '${targetLabel}', 'New Entry', '${vaccine}', '${adminDate}', '${nextDate}', '${clinician}')" class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container" title="Inspect">
+              <span class="material-symbols-outlined text-[18px]">visibility</span>
+            </button>
+            <button type="button" onclick="generateCert('${newId}', '${targetLabel}')" class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary" title="Cert">
+              <span class="material-symbols-outlined text-[18px]">description</span>
+            </button>
+          </div>
+        </td>
+      `;
+      tbody.prepend(tr);
+    }
+
+    closeVaccineModal();
+    filterLedgerTable();
+  }
+
+  // Record Inspection Modal helper
+  function inspectRecord(id, tag, name, vaccine, admin, due, vet) {
+    const title = document.getElementById('inspectTitle');
+    const content = document.getElementById('inspectContent');
+    if (title) title.innerText = 'Record: ' + id;
+    if (content) {
+      content.innerHTML = `
+        <div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+          <div class="flex justify-between"><span class="text-outline">Animal / Cohort:</span><strong class="text-on-surface">${tag} (${name})</strong></div>
+          <div class="flex justify-between"><span class="text-outline">Antigen Product:</span><span class="font-semibold">${vaccine}</span></div>
+          <div class="flex justify-between"><span class="text-outline">Admin Date:</span><span>${admin}</span></div>
+          <div class="flex justify-between"><span class="text-outline">Next Due Date:</span><strong class="text-primary">${due}</strong></div>
+          <div class="flex justify-between"><span class="text-outline">Certifying Clinician:</span><span>${vet}</span></div>
+          <div class="flex justify-between"><span class="text-outline">Status Rule:</span><span class="italic text-on-surface-variant">Farm Configured Interval</span></div>
+        </div>
+        <p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+          State Bio-Traceability Hash generated and filed under Greenfield Dairy Estate Workspace GF-042.
+        </p>
+      `;
+    }
+    const modal = document.getElementById('inspectModal');
+    if (modal) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+  }
+
+  function closeInspectModal() {
+    const modal = document.getElementById('inspectModal');
+    if (modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+
+  function generateCert(id, tag) {
+    alert('Generating Official State Bio-Security Certificate for ' + id + ' (' + tag + '). Document downloaded as signed PDF.');
+  }
+
+  function exportCSV() {
+    alert('Exporting Prophylaxis Ledger as USDA-Compliant CSV format (GF-042-VACCINE-AUDIT.csv).');
+  }
+
+  // Initialize event bindings
+  document.addEventListener('DOMContentLoaded', () => {
+    const openBtn = document.getElementById('btnOpenModal');
+    if (openBtn) openBtn.addEventListener('click', openVaccineModal);
+
+    const planBtn = document.getElementById('btnPlanCampaign');
+    if (planBtn) planBtn.addEventListener('click', openVaccinationModalForCohort);
+
+    const complianceBtn = document.getElementById('btnStateCompliance');
+    if (complianceBtn) {
+      complianceBtn.addEventListener('click', () => {
+        alert('Compiling State Compliance Dossier for Greenfield Dairy Estate (GF-042). Includes all active animal records, cold-chain stamps, and veterinarian certifications.');
+      });
+    }
+  });
+</script></main></div>
+
+</body></html>

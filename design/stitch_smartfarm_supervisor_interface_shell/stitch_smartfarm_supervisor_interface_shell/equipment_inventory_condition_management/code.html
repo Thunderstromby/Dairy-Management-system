@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-high": "#eae8e2", "inverse-primary": "#b8cda8", "on-secondary-fixed": "#141f0a", "surface-container-highest": "#e4e2dd", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#bdcbac", "tertiary-fixed-dim": "#ffb784", "on-primary-fixed-variant": "#3a4c30", "secondary-container": "#d9e8c7", "on-primary": "#ffffff", "on-background": "#1b1c18", "surface": "#fbf9f3", "inverse-on-surface": "#f3f1eb", "on-tertiary-fixed": "#301400", "on-primary-fixed": "#101f08", "on-tertiary-fixed-variant": "#6c3a11", "error-container": "#ffdad6", "on-surface-variant": "#444840", "on-error": "#ffffff", "on-secondary-container": "#5b694e", "primary": "#2f4126", "primary-fixed-dim": "#b8cda8", "on-primary-container": "#b8cda9", "on-tertiary-container": "#ffb785", "tertiary-container": "#7a461c", "surface-container-lowest": "#ffffff", "surface-tint": "#516446", "primary-container": "#46583b", "surface-variant": "#e4e2dd", "outline-variant": "#c4c8bd", "background": "#fbf9f3", "on-surface": "#1b1c18", "tertiary": "#5e3007", "error": "#ba1a1a", "surface-bright": "#fbf9f3", "inverse-surface": "#30312d", "on-secondary": "#ffffff", "surface-dim": "#dcdad4", "tertiary-fixed": "#ffdcc6", "on-secondary-fixed-variant": "#3e4b32", "primary-fixed": "#d4e9c3", "surface-container": "#f0eee8", "outline": "#75786f", "surface-container-low": "#f5f3ed", "on-error-container": "#93000a", "secondary": "#556249", "secondary-fixed": "#d9e8c7" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-md": "1.5rem", "space-md": "0.75rem", "margin": "1rem", "space-lg": "1rem", "space-2xl": "2rem", "gutter": "1rem", "space-xl": "1.5rem", "margin-lg": "2rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter-md": "1.25rem", "gutter-lg": "1.5rem" }, "fontFamily": { "label-md": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"], "headline-lg-mobile": ["Manrope"], "headline-xl-mobile": ["Manrope"], "label-lg": ["Inter"], "headline-xl": ["Manrope"], "headline-lg": ["Manrope"], "body-md": ["Inter"], "headline-sm": ["Manrope"], "headline-md": ["Manrope"] }, "fontSize": { "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "400" }], "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "fontWeight": "400" }], "headline-lg-mobile": ["1.375rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "800" }], "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["0.875rem", { "lineHeight": "1.375rem", "fontWeight": "400" }], "headline-sm": ["1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "headline-md": ["1.25rem", { "lineHeight": "1.625rem", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-xl flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBYgTLzL4ixmW_u0Iuetl8cMytFAkTgo9j0OqmFpmR4ZdNIJA8TAM26gSRdozb0vdo_6xJy3scVi2laB3t23jDT5fSIe8Gnlt9IldNJ8j-8vQ9f0crSqtL97T814neAilUmvuxVi9XQNkQdm34ZBtCq3lRd3pGErjVhDlhDM1nNOW2QXZlG8cZB7Vpgu2pyG5oBekky3LdocMVoovOlsZt9zFE9JFdFVoDBX3w_DHLm0w"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none tracking-tight">SmartFarm</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-0.5">Supervisor Rail</span></div></div><button class="text-on-surface-variant hover:text-on-surface p-space-xs rounded-lg transition-colors" title="Toggle compact view" type="button"><span class="material-symbols-outlined text-lg leading-none">dock_to_right</span></button></div><div class="px-space-md py-space-sm"><div class="bg-surface-container px-space-md py-space-sm rounded-lg flex items-center justify-between"><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-on-surface-variant truncate">ESTATE CONTEXT</span><span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Greenfield Estate</span></div><span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-space-xs py-0.5 rounded font-mono">GF-042</span></div></div><nav class="flex-1 px-space-md py-space-xs space-y-0.5 overflow-y-auto" data-active-classes="bg-primary text-on-primary font-semibold shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-xl">dashboard</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#"><span class="material-symbols-outlined text-xl">pets</span><span class="font-label-lg text-label-lg">Animals</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#"><span class="material-symbols-outlined text-xl">healing</span><span class="font-label-lg text-label-lg">Animal Health</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#"><span class="material-symbols-outlined text-xl">water_drop</span><span class="font-label-lg text-label-lg">Milk Production</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding" href="#"><span class="material-symbols-outlined text-xl">grass</span><span class="font-label-lg text-label-lg">Feeding Plans</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#"><span class="material-symbols-outlined text-xl">inventory_2</span><span class="font-label-lg text-label-lg">Inventory Usage</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers-and-attendance" href="#"><span class="material-symbols-outlined text-xl">badge</span><span class="font-label-lg text-label-lg">Workers &amp; Attendance</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#"><span class="material-symbols-outlined text-xl">precision_manufacturing</span><span class="font-label-lg text-label-lg">Equipment</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notifications" href="#"><span class="material-symbols-outlined text-xl">notifications</span><span class="font-label-lg text-label-lg">Operational Alerts</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#"><span class="material-symbols-outlined text-xl">analytics</span><span class="font-label-lg text-label-lg">Shift Reports</span></a></nav><div class="p-space-md space-y-space-sm bg-surface-container-low"><div class="bg-surface-container px-space-md py-space-sm rounded-lg flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="inline-block w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Telemetry Live</span></div><span class="font-label-sm text-label-sm font-mono text-secondary">SYNCED</span></div><div class="px-space-xs py-space-xs flex items-center justify-between text-on-surface-variant"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm">lock</span><span class="font-label-sm text-label-sm tracking-wide uppercase">Supervisor Restricted</span></div><button class="hover:text-primary transition-colors" title="Operational Help" type="button"><span class="material-symbols-outlined text-base">help</span></button></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-md"><button class="md:hidden p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container" type="button"><span class="material-symbols-outlined text-xl">menu</span></button><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Greenfield Dairy Estate</span><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-space-xs py-0.5 rounded font-mono">GF-042</span></div><span class="text-outline-variant text-sm">/</span><div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-sm">fence</span><span>Barn Zone A</span></div></div><div class="flex items-center gap-space-lg"><div class="hidden sm:flex items-center gap-2 bg-secondary-container/60 px-space-md py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-secondary-fixed font-semibold tracking-wide uppercase">On Duty · Active</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Operational Notifications" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary-container ring-2 ring-surface"></span></button><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Theme Display" type="button"><span class="material-symbols-outlined text-xl">light_mode</span></button><div class="h-6 w-px bg-outline-variant/60"></div><div class="flex items-center gap-space-md pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKRfnvDtcXaA_3fouE5OFtLyyygvIskuxgsScuB3RWTNQvZ0TXW1jZMn6P1jecz8rtfhaoeatFRSlhGxosuymj0Z74Gb3NeY9k-HpkTV1gVECMz-aOx4ic5cbig5OeibpkMiehHyRDxNEqsS1DvY0suVPQHSm8HBgREiL03zsO3CyppQ6P6Lx7Kj2AY9MjJWACPCsVCG6YU3N1OMaaoQVLKC4LbU9ah5w1pjafjyse"/><div class="hidden lg:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface font-semibold leading-tight">Marcus Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant">Farm Supervisor</span></div><span class="material-symbols-outlined text-on-surface-variant text-base cursor-pointer">arrow_drop_down</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive View State Controller & Global Helpers -->
+<script>
+    function setEquipmentView(mode) {
+      const allRows = document.querySelectorAll('.equipment-item-row');
+      const emptyState = document.getElementById('empty-state-view');
+      const tableWrapper = document.getElementById('equipment-table-wrapper');
+      const drawer = document.getElementById('equipment-inspector-drawer');
+      const pillNormal = document.getElementById('filter-pill-normal');
+      const pillService = document.getElementById('filter-pill-service');
+      const pillDrawer = document.getElementById('filter-pill-drawer');
+      const pillEmpty = document.getElementById('filter-pill-empty');
+
+      // Reset pill styles
+      [pillNormal, pillService, pillDrawer, pillEmpty].forEach(p => {
+        if(p) {
+          p.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          p.classList.add('bg-surface-container', 'text-on-surface-variant');
+        }
+      });
+
+      if (mode === 'normal') {
+        pillNormal.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+        pillNormal.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        tableWrapper.classList.remove('hidden');
+        emptyState.classList.add('hidden');
+        allRows.forEach(row => row.classList.remove('hidden'));
+        drawer.classList.add('translate-x-full');
+      } else if (mode === 'service') {
+        pillService.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+        pillService.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        tableWrapper.classList.remove('hidden');
+        emptyState.classList.add('hidden');
+        allRows.forEach(row => {
+          if (row.getAttribute('data-condition') === 'service' || row.getAttribute('data-condition') === 'fair') {
+            row.classList.remove('hidden');
+          } else {
+            row.classList.add('hidden');
+          }
+        });
+        drawer.classList.add('translate-x-full');
+      } else if (mode === 'drawer') {
+        pillDrawer.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+        pillDrawer.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        tableWrapper.classList.remove('hidden');
+        emptyState.classList.add('hidden');
+        allRows.forEach(row => row.classList.remove('hidden'));
+        drawer.classList.remove('translate-x-full');
+      } else if (mode === 'empty') {
+        pillEmpty.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+        pillEmpty.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        tableWrapper.classList.add('hidden');
+        emptyState.classList.remove('hidden');
+        drawer.classList.add('translate-x-full');
+      }
+    }
+
+    function toggleConditionModal(open = true) {
+      const modal = document.getElementById('condition-update-modal');
+      if (open) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      } else {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function toggleInspectorDrawer(open = true) {
+      const drawer = document.getElementById('equipment-inspector-drawer');
+      if (open) {
+        drawer.classList.remove('translate-x-full');
+      } else {
+        drawer.classList.add('translate-x-full');
+      }
+    }
+
+    function filterBySearch() {
+      const query = document.getElementById('equipment-search-input').value.toLowerCase();
+      const rows = document.querySelectorAll('.equipment-item-row');
+      let visibleCount = 0;
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        if (text.includes(query)) {
+          row.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          row.classList.add('hidden');
+        }
+      });
+      const tableWrapper = document.getElementById('equipment-table-wrapper');
+      const emptyState = document.getElementById('empty-state-view');
+      if (visibleCount === 0) {
+        tableWrapper.classList.add('hidden');
+        emptyState.classList.remove('hidden');
+      } else {
+        tableWrapper.classList.remove('hidden');
+        emptyState.classList.add('hidden');
+      }
+    }
+
+    function resetFilters() {
+      document.getElementById('equipment-search-input').value = '';
+      document.getElementById('filter-type-select').value = 'all';
+      document.getElementById('filter-condition-select').value = 'all';
+      document.getElementById('filter-bay-select').value = 'all';
+      setEquipmentView('normal');
+    }
+  </script>
+<!-- Top Hero & Context Strip -->
+<div class="px-space-xl py-space-lg flex flex-col gap-space-lg">
+<!-- Breadcrumbs & Quick State Simulator Strip -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md flex-wrap">
+<span class="hover:text-primary transition-colors cursor-pointer font-medium">Workspace GF-042</span>
+<span class="text-outline-variant font-mono">/</span>
+<span class="hover:text-primary transition-colors cursor-pointer font-medium">Barn Zone A</span>
+<span class="text-outline-variant font-mono">/</span>
+<span class="hover:text-primary transition-colors cursor-pointer font-medium">Equipment &amp; Assets</span>
+<span class="text-outline-variant font-mono">/</span>
+<span class="text-primary font-semibold">Equipment Directory</span>
+</nav>
+<!-- Mode Simulator (Audit / Demo Utility) -->
+<div class="flex items-center gap-1.5 p-1 bg-surface-container-high rounded-lg self-start xl:self-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase px-2 py-1 font-semibold tracking-wider">Mode Simulator:</span>
+<button class="font-label-sm text-label-sm px-3 py-1.5 rounded-lg bg-primary text-on-primary transition-all font-semibold shadow-sm" id="filter-pill-normal" onclick="setEquipmentView('normal')">
+          Normal Inventory (24)
+        </button>
+<button class="font-label-sm text-label-sm px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface transition-all font-semibold" id="filter-pill-service" onclick="setEquipmentView('service')">
+          Service Required (4)
+        </button>
+<button class="font-label-sm text-label-sm px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface transition-all font-semibold" id="filter-pill-drawer" onclick="setEquipmentView('drawer')">
+          Inspector Drawer
+        </button>
+<button class="font-label-sm text-label-sm px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface transition-all font-semibold" id="filter-pill-empty" onclick="setEquipmentView('empty')">
+          Empty State
+        </button>
+</div>
+</div>
+<!-- Title Bar with Large Primary Touch Action Group -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="space-y-1">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">
+            Equipment Inventory &amp; Condition Management
+          </h1>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+          Operational tracking of barn machinery, parlor hardware, utility vehicles, and feeding apparatus for Workspace GF-042.
+        </p>
+</div>
+<!-- Action Buttons with 48px Touch Standard -->
+<div class="flex items-center gap-space-sm flex-wrap sm:flex-nowrap">
+<button class="min-h-[48px] px-space-lg rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg font-semibold hover:bg-surface-container-high transition-colors flex items-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-xl">print</span>
+<span>Print Equipment Sheet</span>
+</button>
+<button class="min-h-[48px] px-space-lg rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg font-semibold hover:bg-surface-container-high transition-colors flex items-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-xl">history_toggle_off</span>
+<span>Record Equipment Usage</span>
+</button>
+<button class="min-h-[48px] px-space-xl rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-semibold hover:bg-primary-container transition-all flex items-center gap-2 shadow-md hover:shadow-lg" onclick="toggleConditionModal(true)" type="button">
+<span class="material-symbols-outlined text-xl">build_circle</span>
+<span>Update Condition / Service</span>
+</button>
+</div>
+</div>
+<!-- Supervisor Operational Boundary Callout -->
+<div class="bg-surface-container-low rounded-xl p-space-md sm:p-space-lg flex items-start gap-space-md shadow-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed/30 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-2xl">shield_person</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-bold text-tertiary">Supervisor Operational Scope: Read &amp; Operational Condition Update Only</span>
+<span class="font-label-sm text-label-sm bg-tertiary-fixed-dim/40 text-on-tertiary-fixed-variant px-2 py-0.5 rounded font-mono font-bold">STRICT ACCESS</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Equipment master record creation (registration), master specification edits, asset disposal, capital depreciation, maintenance vendor contracts, and invoice costs are restricted to 
+          <span class="font-semibold text-primary">Farm Admin</span>. Supervisors track operational condition, log routine servicing, and record daily equipment run hours.
+        </p>
+</div>
+</div>
+<!-- Equipment Overview KPIs (4 metric cards with Manrope figures & visual depth) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Active Machinery</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-xl text-headline-xl font-extrabold text-on-surface tracking-tight">24</span>
+<span class="font-label-md text-label-md text-secondary font-medium">Units</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-secondary-container/50 text-on-secondary-container">
+<span class="material-symbols-outlined text-2xl">agriculture</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-secondary font-medium flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 100% operational coverage in Zone A
+          </span>
+<span class="font-label-sm text-label-sm font-mono text-on-surface-variant">BARN-A</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Operational Condition</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-xl text-headline-xl font-extrabold text-primary tracking-tight">20</span>
+<span class="font-label-md text-label-md text-secondary font-medium">Good / Optimal</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-2xl">verified</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-tertiary font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span> 4 Require Inspection/Service
+          </span>
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-1.5 py-0.5 rounded font-mono font-bold">ATTN</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Daily Equipment In-Use</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-xl text-headline-xl font-extrabold text-on-surface tracking-tight">9</span>
+<span class="font-label-md text-label-md text-secondary font-medium">Dispatched</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-secondary-container/50 text-on-secondary-container">
+<span class="material-symbols-outlined text-2xl">pending_actions</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between overflow-hidden">
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">
+            Tractor 02, Mixer #02, Chute B-1
+          </span>
+<span class="font-label-sm text-label-sm font-mono text-secondary shrink-0 font-medium">SHIFTS AM/PM</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Services This Month</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-xl text-headline-xl font-extrabold text-on-surface tracking-tight">14</span>
+<span class="font-label-md text-label-md text-secondary font-medium">Logged</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-2xl">published_with_changes</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+            Greasing, oil checks, belt tension
+          </span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">OCT 2024</span>
+</div>
+</div>
+</div>
+<!-- Search and Filter Bar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-md">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center gap-space-md">
+<!-- Search Field -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl">search</span>
+<input class="w-full min-h-[48px] pl-11 pr-4 bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-md text-body-md rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all" id="equipment-search-input" oninput="filterBySearch()" placeholder="Search equipment by name, code (e.g. TR-02), or storage bay..." type="text"/>
+</div>
+<!-- Filter Selectors -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm flex-shrink-0">
+<!-- Type Filter -->
+<div class="relative min-w-[180px]">
+<select class="w-full min-h-[48px] px-3.5 pr-8 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-xl focus:outline-none appearance-none cursor-pointer" id="filter-type-select">
+<option value="all">All Types</option>
+<option value="tractors">Tractors &amp; Loaders</option>
+<option value="parlor">Parlor Systems</option>
+<option value="feeding">Feeding Machinery</option>
+<option value="utilities">Barn Utilities</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-lg">expand_more</span>
+</div>
+<!-- Condition Filter -->
+<div class="relative min-w-[180px]">
+<select class="w-full min-h-[48px] px-3.5 pr-8 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-xl focus:outline-none appearance-none cursor-pointer" id="filter-condition-select">
+<option value="all">All Conditions</option>
+<option value="optimal">Optimal</option>
+<option value="good">Good</option>
+<option value="fair">Fair / Monitored</option>
+<option value="service">Needs Servicing</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-lg">expand_more</span>
+</div>
+<!-- Bay Filter -->
+<div class="relative min-w-[180px]">
+<select class="w-full min-h-[48px] px-3.5 pr-8 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-xl focus:outline-none appearance-none cursor-pointer" id="filter-bay-select">
+<option value="all">All Storage Bays</option>
+<option value="shed-a">Machinery Shed A</option>
+<option value="parlor-bay">Parlor Bay / Center</option>
+<option value="feed-silo">Feed Silo Pad</option>
+<option value="maint-bay">Maintenance Bay</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-lg">expand_more</span>
+</div>
+</div>
+<!-- Reset Button -->
+<button class="min-h-[48px] px-4 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1.5 shrink-0" onclick="resetFilters()" title="Reset all active filters" type="button">
+<span class="material-symbols-outlined text-lg">restart_alt</span>
+<span>Reset</span>
+</button>
+</div>
+</div>
+<!-- Main Table Container or Empty State Placeholder -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col" id="equipment-table-wrapper">
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface font-label-sm text-label-sm tracking-wider uppercase select-none">
+<th class="py-space-md px-space-md font-semibold" scope="col">Asset Tag</th>
+<th class="py-space-md px-space-md font-semibold min-w-[260px]" scope="col">Equipment Name &amp; Model</th>
+<th class="py-space-md px-space-md font-semibold" scope="col">Type</th>
+<th class="py-space-md px-space-md font-semibold" scope="col">Storage Location</th>
+<th class="py-space-md px-space-md font-semibold text-center" scope="col">Available Qty</th>
+<th class="py-space-md px-space-md font-semibold" scope="col">Current Condition</th>
+<th class="py-space-md px-space-md font-semibold" scope="col">Recent Usage / Run Hours</th>
+<th class="py-space-md px-space-md font-semibold text-right" scope="col">Permitted Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- ROW 1: TR-02 John Deere 6120M -->
+<tr class="equipment-item-row hover:bg-surface-container-low transition-colors" data-condition="good" data-type="tractors">
+<td class="py-space-md px-space-md font-mono font-bold text-primary font-label-md text-label-md">
+                TR-02
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl">agriculture</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">John Deere 6120M</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">120 HP Utility Tractor · PowrReverser™</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-md text-label-md text-on-surface font-medium">Tractors &amp; Loaders</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-sm text-secondary">warehouse</span>
+<span class="font-body-md text-body-md">Machinery Shed Bay 01</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-mono font-bold text-on-surface bg-surface-container px-2.5 py-1 rounded-md text-label-md">1</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-label-sm font-semibold bg-secondary-container text-on-secondary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Good — Operational
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">4.5 hrs today</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Feeder Morales · Barn Bunk Run</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" onclick="toggleInspectorDrawer(true)" title="View Inspector Details" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" onclick="toggleConditionModal(true)" title="Quick Update Condition" type="button">
+<span class="material-symbols-outlined text-xl">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 2: MW-02 Digi-Star Mixer Wagon (Drawer Target) -->
+<tr class="equipment-item-row bg-surface-container-high/30 hover:bg-surface-container-high/60 transition-colors" data-condition="fair" data-type="feeding">
+<td class="py-space-md px-space-md font-mono font-bold text-tertiary font-label-md text-label-md">
+                MW-02
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed/40 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-2xl">blender</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Digi-Star TMR Mixer Wagon #02</span>
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-mono px-1.5 py-0.2 rounded font-bold">MONITORED</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Vertical Twin Auger · 18 m³ Weigh Cells</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-md text-label-md text-on-surface font-medium">Feeding Machinery</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-sm text-secondary">domain</span>
+<span class="font-body-md text-body-md">Feed Prep Shed</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-mono font-bold text-on-surface bg-surface-container px-2.5 py-1 rounded-md text-label-md">1</span>
+</td>
+<td class="py-space-md px-space-md">
+<button class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-semibold bg-tertiary-fixed-dim/50 text-on-tertiary-fixed-variant hover:ring-2 hover:ring-tertiary/20 transition-all cursor-pointer" onclick="toggleInspectorDrawer(true)" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Fair — Minor Auger Squeal
+                </button>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">3.2 hrs today</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">TMR Feed Batches 1 - 4</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-2 text-primary font-semibold bg-surface-container hover:bg-surface-container-high rounded-lg transition-colors flex items-center gap-1" onclick="toggleInspectorDrawer(true)" title="Open Asset Drawer" type="button">
+<span class="material-symbols-outlined text-xl">open_in_new</span>
+<span class="font-label-sm text-label-sm hidden sm:inline">Inspect</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 3: RP-01 DeLaval Rotary Parlor Deck -->
+<tr class="equipment-item-row hover:bg-surface-container-low transition-colors" data-condition="optimal" data-type="parlor">
+<td class="py-space-md px-space-md font-mono font-bold text-primary font-label-md text-label-md">
+                RP-01
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl">published_with_changes</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">DeLaval 40-Stall Rotary Parlor Deck</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">E100 Continuous Motion Platform · Flow Sensors</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-md text-label-md text-on-surface font-medium">Parlor Systems</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-sm text-secondary">water_drop</span>
+<span class="font-body-md text-body-md">Parlor Center</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-mono font-bold text-on-surface bg-surface-container px-2.5 py-1 rounded-md text-label-md">1</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-label-sm font-semibold bg-secondary-container text-on-secondary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Optimal — Cleaned &amp; Calibrated
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Milking AM &amp; PM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">384 Cows Harvested (AM Session)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" onclick="toggleInspectorDrawer(true)" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" onclick="toggleConditionModal(true)" type="button">
+<span class="material-symbols-outlined text-xl">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 4: CS-01 Tru-Test Chute Scale -->
+<tr class="equipment-item-row hover:bg-surface-container-low transition-colors" data-condition="good" data-type="parlor">
+<td class="py-space-md px-space-md font-mono font-bold text-primary font-label-md text-label-md">
+                CS-01
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl">scale</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Tru-Test Chute Scale &amp; EID Ingress B-1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">XR5000 System · Dual Loadbar Array</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-md text-label-md text-on-surface font-medium">Parlor Systems</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-sm text-secondary">door_front</span>
+<span class="font-body-md text-body-md">Parlor Ingress Lane</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-mono font-bold text-on-surface bg-surface-container px-2.5 py-1 rounded-md text-label-md">1</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-label-sm font-semibold bg-secondary-container text-on-secondary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Good — Scale Calibrated
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Active Herd Ingress</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Continuous RFID capture</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" onclick="toggleInspectorDrawer(true)" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" onclick="toggleConditionModal(true)" type="button">
+<span class="material-symbols-outlined text-xl">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 5: HC-03 Heavy Duty Calf Milk Hand Cart -->
+<tr class="equipment-item-row hover:bg-surface-container-low transition-colors" data-condition="good" data-type="utilities">
+<td class="py-space-md px-space-md font-mono font-bold text-primary font-label-md text-label-md">
+                HC-03
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl">local_shipping</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Heavy Duty Calf Milk Hand Cart #03</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">200L Poly Vessel · Electric Metering Dispenser</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-md text-label-md text-on-surface font-medium">Barn Utilities</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-sm text-secondary">child_friendly</span>
+<span class="font-body-md text-body-md">Calf Nursery Bunk</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-mono font-bold text-on-surface bg-surface-container px-2.5 py-1 rounded-md text-label-md">2</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-label-sm font-semibold bg-secondary-container text-on-secondary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Good — Tires Checked
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Calf feeding run</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Morning colostrum distribution</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" onclick="toggleInspectorDrawer(true)" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" onclick="toggleConditionModal(true)" type="button">
+<span class="material-symbols-outlined text-xl">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 6: SS-04 Slurry Scraper Unit (NEEDS SERVICE) -->
+<tr class="equipment-item-row hover:bg-surface-container-low transition-colors" data-condition="service" data-type="utilities">
+<td class="py-space-md px-space-md font-mono font-bold text-error font-label-md text-label-md">
+                SS-04
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-error-container/60 flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-2xl">cleaning_services</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Alleyway Slurry Scraper Unit #04</span>
+<span class="font-label-sm text-label-sm bg-error-container text-on-error-container font-mono px-1.5 py-0.2 rounded font-bold">ATTENTION</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Continuous Hydraulic Cable Pull · 90m Runway</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-md text-label-md text-on-surface font-medium">Barn Utilities</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-sm text-secondary">explore</span>
+<span class="font-body-md text-body-md">Alleyway North (Pens 1-8)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-mono font-bold text-on-surface bg-surface-container px-2.5 py-1 rounded-md text-label-md">2</span>
+</td>
+<td class="py-space-md px-space-md">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-label-sm font-semibold bg-error-container text-on-error-container hover:bg-error-container/80 transition-colors cursor-pointer" onclick="toggleConditionModal(true)" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Needs Servicing — Cable Slack
+                </button>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-error font-medium">Paused / Idle</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Awaiting drive cable tensioning</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-2 text-error hover:bg-error-container/40 rounded-lg transition-colors font-semibold flex items-center gap-1" onclick="toggleConditionModal(true)" title="Log Service" type="button">
+<span class="material-symbols-outlined text-xl">build</span>
+<span class="font-label-sm text-label-sm hidden sm:inline">Fix Now</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 7: PB-02 PTO Silage Blower #02 -->
+<tr class="equipment-item-row hover:bg-surface-container-low transition-colors" data-condition="good" data-type="feeding">
+<td class="py-space-md px-space-md font-mono font-bold text-primary font-label-md text-label-md">
+                PB-02
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl">mode_fan</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">PTO Silage Blower #02</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Gehl High-Cap Silage Distributor · 540 PTO</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-md text-label-md text-on-surface font-medium">Feeding Machinery</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-sm text-secondary">terrain</span>
+<span class="font-body-md text-body-md">Silo Trench A</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-mono font-bold text-on-surface bg-surface-container px-2.5 py-1 rounded-md text-label-md">1</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-label-sm font-semibold bg-secondary-container text-on-secondary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Good
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">1.5 hrs yesterday</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Silo trench transfer complete</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" onclick="toggleInspectorDrawer(true)" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" onclick="toggleConditionModal(true)" type="button">
+<span class="material-symbols-outlined text-xl">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 8: WP-01 Kärcher Industrial High-Pressure Washer -->
+<tr class="equipment-item-row hover:bg-surface-container-low transition-colors" data-condition="optimal" data-type="utilities">
+<td class="py-space-md px-space-md font-mono font-bold text-primary font-label-md text-label-md">
+                WP-01
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl">sanitizer</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Kärcher Industrial High-Pressure Washer</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">HDS 10/20-4 M · Hot Water Sanitizer</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-md text-label-md text-on-surface font-medium">Barn Utilities</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-sm text-secondary">water</span>
+<span class="font-body-md text-body-md">Parlor CIP Room</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-mono font-bold text-on-surface bg-surface-container px-2.5 py-1 rounded-md text-label-md">2</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-label-sm font-semibold bg-secondary-container text-on-secondary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Optimal
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Post-milking washdown</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Daily chemical CIP protocol</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" onclick="toggleInspectorDrawer(true)" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" onclick="toggleConditionModal(true)" type="button">
+<span class="material-symbols-outlined text-xl">tune</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Footer -->
+<div class="p-space-md bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Showing <span class="font-semibold text-on-surface">1 - 8</span> of <span class="font-semibold text-on-surface">24</span> permitted equipment items</span>
+<span class="text-outline-variant font-mono text-xs">•</span>
+<span class="font-label-sm text-label-sm bg-surface-container-highest px-2 py-0.5 rounded font-mono text-on-surface-variant">PAGE 1 OF 3</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="min-h-[40px] px-3.5 rounded-lg bg-surface-container-highest text-on-surface-variant opacity-60 cursor-not-allowed font-label-md text-label-md flex items-center gap-1 font-semibold" disabled="" type="button">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+<span>Previous</span>
+</button>
+<button class="min-h-[40px] w-10 rounded-lg bg-primary text-on-primary font-mono text-label-md font-bold" type="button">1</button>
+<button class="min-h-[40px] w-10 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-mono text-label-md font-semibold transition-colors" type="button">2</button>
+<button class="min-h-[40px] w-10 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-mono text-label-md font-semibold transition-colors" type="button">3</button>
+<button class="min-h-[40px] px-3.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors font-semibold shadow-sm" type="button">
+<span>Next</span>
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Empty State View (Toggled via simulator or no search match) -->
+<div class="hidden bg-surface-container-lowest rounded-xl p-space-2xl text-center flex-col items-center justify-center gap-space-md shadow-sm" id="empty-state-view">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-4xl">search_off</span>
+</div>
+<div class="space-y-1 max-w-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">No Matching Equipment Records</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          No operational machinery in Barn Zone A matches your applied filter or search parameters. Try adjusting your search query or reset filters.
+        </p>
+</div>
+<button class="min-h-[48px] px-space-xl rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-semibold hover:bg-primary-container transition-all flex items-center gap-2 mt-space-sm" onclick="resetFilters()" type="button">
+<span class="material-symbols-outlined text-xl">restart_alt</span>
+<span>Clear All Filters</span>
+</button>
+</div>
+</div>
+<!-- Slide-Over Inspector Drawer: MW-02 Digi-Star Mixer Wagon (SRS Requirement 6) -->
+<aside class="fixed right-0 top-16 bottom-0 w-full max-w-md bg-surface-container-lowest shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between overflow-y-auto" id="equipment-inspector-drawer">
+<div class="flex flex-col">
+<!-- Drawer Header -->
+<div class="p-space-lg bg-surface-container-low flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed/40 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-3xl">blender</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">MW-02</span>
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-mono px-2 py-0.5 rounded font-bold">
+                FAIR · MONITORED
+              </span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium mt-0.5">Digi-Star TMR Mixer Wagon #02</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono mt-0.5">SN: DS-9941-K · Tag RFID: 840-003-882</span>
+</div>
+</div>
+<button class="p-2 text-on-surface-variant hover:text-on-surface rounded-lg hover:bg-surface-container transition-colors" onclick="toggleInspectorDrawer(false)" title="Close Drawer" type="button">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+</div>
+<!-- Drawer Content Sections -->
+<div class="p-space-lg space-y-space-lg">
+<!-- Condition & Notes Alert Box -->
+<div class="bg-surface-container-low rounded-xl p-space-md space-y-2">
+<div class="flex items-center gap-2 text-tertiary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-lg">warning</span>
+<span>Supervisor Condition Assessment</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            "Auger drive chain exhibits slight slack; minor friction noise noted during morning TMR mix. Lubricated and flagged for maintenance inspection on 28 Oct."
+          </p>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Assessed by: <strong>Marcus Vance</strong></span>
+<span>Shift: Today 06:45 AM</span>
+</div>
+</div>
+<!-- Equipment Attributes Bento -->
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant tracking-wider">Asset Specifications</span>
+<div class="grid grid-cols-2 gap-space-sm bg-surface-container-low p-space-md rounded-xl">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Equipment Type</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Feeding Machinery</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Capacity</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">18 m³ (12 Ton)</span>
+</div>
+<div class="flex flex-col pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Power Source</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">540 RPM PTO Shaft</span>
+</div>
+<div class="flex flex-col pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Station Assignment</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Barn Zone A Feed Pad</span>
+</div>
+</div>
+</div>
+<!-- Maintenance & Service Log Summary -->
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant tracking-wider">Maintenance Summary</span>
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">check_circle</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Last Routine Service</span>
+</div>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">18 Oct 2024</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-6">
+              Drive bearings greased; load cell zero-point re-calibrated by maintenance crew.
+            </p>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-lg">event</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Next Routine Check</span>
+</div>
+<span class="font-body-sm text-body-sm font-bold text-tertiary">28 Oct 2024</span>
+</div>
+</div>
+</div>
+<!-- Usage Telemetry Summary -->
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant tracking-wider">Operational Run Hours</span>
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-extrabold text-on-surface">142.5 hrs</span>
+<span class="font-label-sm text-label-sm text-secondary">Logged this month</span>
+</div>
+<div class="h-8 w-px bg-outline-variant"></div>
+<div class="flex flex-col text-right">
+<span class="font-headline-md text-headline-md font-extrabold text-on-surface">4.2 hrs</span>
+<span class="font-label-sm text-label-sm text-secondary">Daily run average</span>
+</div>
+</div>
+</div>
+<!-- Permitted Quick Actions (48px Touch Standard) -->
+<div class="space-y-space-sm pt-space-xs">
+<button class="w-full min-h-[48px] rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-semibold hover:bg-primary-container transition-colors flex items-center justify-center gap-2 shadow-sm" onclick="toggleConditionModal(true)" type="button">
+<span class="material-symbols-outlined text-xl">edit_note</span>
+<span>Update Condition</span>
+</button>
+<button class="w-full min-h-[48px] rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg font-semibold hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-xl">handyman</span>
+<span>Record Maintenance / Repair</span>
+</button>
+<button class="w-full min-h-[48px] rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg font-semibold hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-xl">timer</span>
+<span>Log Run Hours</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Clear Admin Restriction Footer -->
+<div class="p-space-md bg-surface-container text-center space-y-1">
+<div class="flex items-center justify-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-tertiary">lock</span>
+<span class="font-semibold uppercase tracking-wider">Admin Policy Barrier</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Asset decommissioning, capital replacement requests, and external repair invoices require Farm Admin credentials.
+      </p>
+</div>
+</aside>
+<!-- Condition / Service Modal (Interactive Dialog) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden items-center justify-center p-space-md" id="condition-update-modal">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+<!-- Modal Header -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">build_circle</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Update Equipment Condition</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">MW-02 · Digi-Star TMR Mixer Wagon</span>
+</div>
+</div>
+<button class="p-2 text-on-surface-variant hover:text-on-surface rounded-lg hover:bg-surface-container transition-colors" onclick="toggleConditionModal(false)" type="button">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<form class="p-space-lg space-y-space-md" onsubmit="event.preventDefault(); toggleConditionModal(false);">
+<!-- Status Level Selector -->
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Operational Status Level</label>
+<div class="grid grid-cols-2 gap-space-xs">
+<label class="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input class="text-primary focus:ring-primary h-4 w-4" name="condition-opt" type="radio" value="optimal"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Optimal</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Calibrated &amp; ready</span>
+</div>
+</label>
+<label class="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input class="text-primary focus:ring-primary h-4 w-4" name="condition-opt" type="radio" value="good"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Good</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Normal operational wear</span>
+</div>
+</label>
+<label class="flex items-center gap-2 p-3 rounded-xl bg-tertiary-fixed/30 cursor-pointer hover:bg-tertiary-fixed/50 transition-colors">
+<input checked="" class="text-primary focus:ring-primary h-4 w-4" name="condition-opt" type="radio" value="fair"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-tertiary">Fair / Monitored</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Needs watchful eyes</span>
+</div>
+</label>
+<label class="flex items-center gap-2 p-3 rounded-xl bg-error-container/40 cursor-pointer hover:bg-error-container/60 transition-colors">
+<input class="text-primary focus:ring-primary h-4 w-4" name="condition-opt" type="radio" value="service"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-error">Needs Service</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Action required</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Condition Notes -->
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Supervisor Observation Notes</label>
+<textarea class="w-full p-3 bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-md text-body-md rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/40 resize-none" placeholder="Document observed anomalies, greasing intervals, noise, or belt slack..." rows="3">Auger drive chain exhibits slight slack; minor friction noise noted during morning TMR mix. Lubricated and flagged for maintenance.</textarea>
+</div>
+<!-- Hours Logged -->
+<div class="grid grid-cols-2 gap-space-md">
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Current Run Hours</label>
+<input class="w-full min-h-[44px] px-3.5 bg-surface-container-low text-on-surface font-mono font-semibold rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/40" step="0.1" type="number" value="142.5"/>
+</div>
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Log Routine Grease / Check</label>
+<label class="flex items-center gap-2 min-h-[44px] px-3 bg-surface-container-low rounded-xl cursor-pointer">
+<input checked="" class="text-primary focus:ring-primary rounded h-4 w-4" type="checkbox"/>
+<span class="font-label-md text-label-md text-on-surface">Mark Check Done</span>
+</label>
+</div>
+</div>
+<!-- Modal Footer Actions -->
+<div class="pt-space-sm flex items-center justify-end gap-space-sm">
+<button class="min-h-[48px] px-space-lg rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg font-semibold hover:bg-surface-container-high transition-colors" onclick="toggleConditionModal(false)" type="button">
+            Cancel
+          </button>
+<button class="min-h-[48px] px-space-xl rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-semibold hover:bg-primary-container transition-all flex items-center gap-2 shadow-md" type="submit">
+<span class="material-symbols-outlined text-xl">save</span>
+<span>Save Operational Update</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,1189 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>SmartFarm — Intelligent Agriculture Platform</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container": "#e1f2e7", "primary-fixed": "#c1ecd6", "surface-container-low": "#e7f8ed", "on-error-container": "#93000a", "on-error": "#ffffff", "on-primary": "#ffffff", "tertiary": "#302000", "surface-bright": "#edfdf2", "on-secondary-container": "#2f704f", "on-secondary-fixed-variant": "#065233", "surface": "#edfdf2", "outline": "#717974", "inverse-primary": "#a6d0bb", "tertiary-container": "#4b3400", "primary-fixed-dim": "#a6d0bb", "inverse-on-surface": "#e4f5ea", "on-tertiary-container": "#c89a3f", "on-surface-variant": "#414844", "on-tertiary-fixed": "#271900", "secondary-fixed-dim": "#92d5ad", "on-background": "#111e18", "tertiary-fixed": "#ffdea6", "outline-variant": "#c1c8c2", "tertiary-fixed-dim": "#f1bf60", "on-secondary-fixed": "#002112", "secondary-fixed": "#adf2c8", "secondary": "#286a49", "surface-variant": "#d6e6dc", "on-tertiary-fixed-variant": "#5e4200", "surface-container-high": "#dcece1", "on-primary-fixed-variant": "#284e3e", "primary-container": "#183f30", "primary": "#00291b", "secondary-container": "#adf2c8", "surface-container-highest": "#d6e6dc", "error": "#ba1a1a", "on-primary-container": "#82aa97", "on-primary-fixed": "#002115", "background": "#edfdf2", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "surface-tint": "#406655", "surface-dim": "#ceded3", "on-secondary": "#ffffff", "surface-container-lowest": "#ffffff", "inverse-surface": "#25332c", "on-surface": "#111e18" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "1rem", "gutter-sm": "1rem", "space-lg": "1.5rem", "margin": "2rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "margin-sm": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem" }, "fontFamily": { "body-md": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Manrope"], "display-lg-mobile": ["Manrope"], "display-md-mobile": ["Manrope"], "display-lg": ["Manrope"], "body-lg": ["Inter"], "label-sm": ["Inter"], "body-sm": ["Inter"], "headline-md": ["Manrope"], "display-md": ["Manrope"], "label-lg": ["Inter"], "headline-sm": ["Manrope"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-md-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-md": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; } @keyframes marquee-rtl-ltr { 0% { transform: translateX(-50%); } 100% { transform: translateX(0%); } } .animate-marquee-continuous { display: flex; width: max-content; animation: marquee-rtl-ltr 28s linear infinite; } @media (prefers-reduced-motion: reduce) { .animate-marquee-continuous { animation: none; transform: translateX(0); } }</style></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin-sm lg:px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-secondary-fixed text-[20px]">agriculture</span></div><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary">SmartFarm</span></div><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg"><a class="px-space-sm py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="px-space-sm py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About</a><a class="px-space-sm py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="features" href="#">Features</a><a class="px-space-sm py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="how-it-works" href="#">How It Works</a><a class="px-space-sm py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><button aria-label="Toggle Light/Dark Theme" class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">light_mode</span></button><a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-sm rounded-lg bg-primary-container hover:bg-secondary text-on-primary font-label-lg text-label-lg transition-all active:scale-[0.99]" data-path="contact" href="#">Let's Talk</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- SECTION 1 — HERO -->
+<section class="w-full bg-surface py-space-xl lg:py-24">
+<div class="max-w-7xl mx-auto px-margin-sm lg:px-margin flex flex-col items-center text-center">
+<!-- Eyebrow Badge -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container text-secondary font-label-md text-label-md mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">potted_plant</span>
+<span class="tracking-wide uppercase">Explore the SmartFarm Platform</span>
+</div>
+<!-- Headline -->
+<h1 class="font-headline-lg text-display-md lg:text-display-lg font-bold text-primary max-w-4xl tracking-tight leading-tight">
+        A clearer view of your dairy farm management.
+      </h1>
+<!-- Supporting Subtitle -->
+<p class="mt-space-md font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+        Take a closer look at how SmartFarm organizes animal information, milk production, daily operations, people management, and reports.
+      </p>
+<!-- CTA Buttons -->
+<div class="mt-space-lg flex flex-wrap items-center justify-center gap-space-md">
+<a class="inline-flex items-center justify-center px-space-lg py-space-sm rounded bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface-container transition-all" href="#interactive-showcase">
+          Explore Features
+        </a>
+<a class="inline-flex items-center justify-center px-space-lg py-space-sm rounded bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:bg-secondary transition-all active:scale-[0.99]" data-path="contact" href="#">
+          Contact SmartFarm
+        </a>
+</div>
+<!-- Mockup Browser Container -->
+<div class="mt-space-xl w-full max-w-6xl rounded-xl shadow-xl overflow-hidden bg-surface-container-lowest">
+<!-- Browser Window Bar -->
+<div class="bg-surface-container-high px-space-md py-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-secondary inline-block"></span>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-1 rounded bg-surface-container-lowest text-on-surface-variant text-label-sm font-label-sm shadow-sm max-w-md w-full justify-center">
+<span class="material-symbols-outlined text-[14px] text-secondary">lock</span>
+<span class="font-mono text-body-sm">smartfarm.app/workspace/demo</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</div>
+</div>
+<!-- Demonstration Notice Banner -->
+<div class="w-full bg-tertiary-container/10 px-space-md py-2 flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">info</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider font-semibold">
+            Illustrative Product Preview • Demonstration Data Only — Not Connected to Live Farm
+          </span>
+</div>
+<!-- Simulated Workspace Top Bar -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">villa</span>
+<div class="text-left">
+<span class="font-headline-sm text-headline-sm font-bold text-primary block leading-none">Oakview Pastures</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">412 Cows Active</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px] ml-space-xs">expand_more</span>
+</div>
+<span class="hidden sm:inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm uppercase">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Morning Session Stable
+            </span>
+</div>
+<div class="flex items-center gap-space-lg">
+<div class="text-right">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Daily Milk</div>
+<div class="font-headline-sm text-headline-sm font-bold text-primary tabular-nums">11,480 L</div>
+</div>
+<div class="text-right hidden sm:block">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Somatic Cell</div>
+<div class="font-headline-sm text-headline-sm font-bold text-secondary tabular-nums">118k / mL</div>
+</div>
+<div class="text-right">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tank Temp</div>
+<div class="font-headline-sm text-headline-sm font-bold text-primary tabular-nums">3.6 °C</div>
+</div>
+</div>
+</div>
+<!-- Workspace Preview Canvas Graphic -->
+<div class="p-space-lg grid grid-cols-1 md:grid-cols-4 gap-space-md bg-surface-container-lowest text-left">
+<div class="p-space-md rounded bg-surface-container-low shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Lactating</span>
+<div class="mt-space-xs font-headline-lg text-headline-lg font-bold text-primary tabular-nums">362</div>
+<div class="mt-1 font-body-sm text-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 98.4% herd compliance
+            </div>
+</div>
+<div class="p-space-md rounded bg-surface-container-low shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Withholding Hold</span>
+<div class="mt-space-xs font-headline-lg text-headline-lg font-bold text-on-tertiary-container tabular-nums">4 Cows</div>
+<div class="mt-1 font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span> Parlor automated diversion
+            </div>
+</div>
+<div class="p-space-md rounded bg-surface-container-low shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Vat Capacity Used</span>
+<div class="mt-space-xs font-headline-lg text-headline-lg font-bold text-primary tabular-nums">76.5%</div>
+<div class="mt-1 font-body-sm text-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span> Scheduled collection: 14:30
+            </div>
+</div>
+<div class="p-space-md rounded bg-surface-container-low shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Feed Consumed</span>
+<div class="mt-space-xs font-headline-lg text-headline-lg font-bold text-primary tabular-nums">14.2 kg DM</div>
+<div class="mt-1 font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">grass</span> Paddock 14 rotation on target
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2 — INTERACTIVE DASHBOARD SHOWCASE -->
+<section class="w-full bg-surface-container-low py-space-xl lg:py-24" id="interactive-showcase">
+<div class="max-w-7xl mx-auto px-margin-sm lg:px-margin">
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<h2 class="font-headline-lg text-display-md font-bold text-primary tracking-tight">
+          Explore the platform's management areas.
+        </h2>
+<p class="mt-space-sm font-body-lg text-body-lg text-on-surface-variant">
+          Click any management domain below to explore the structure and interface workflows designed specifically for pastoral operations.
+        </p>
+</div>
+<!-- Watermark Bar -->
+<div class="mb-space-md p-space-sm rounded bg-surface-container text-center shadow-sm">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">
+          DEMONSTRATION ARCHITECTURE • ILLUSTRATIVE SAMPLE DATA ONLY • NO LIVE CONNECTION
+        </span>
+</div>
+<!-- Main Showcase Container -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter bg-surface-container-lowest rounded-xl shadow-lg p-space-md lg:p-space-lg">
+<!-- Left Sidebar Navigation (13 Modules) -->
+<div class="lg:col-span-3 flex flex-row lg:flex-col gap-1 overflow-x-auto lg:overflow-y-auto max-h-[620px] pb-2 lg:pb-0 pr-0 lg:pr-space-xs" id="interactive-tabs-container">
+<button class="tab-btn w-full text-left px-space-md py-space-sm rounded flex items-center justify-between bg-primary-container text-on-primary transition-all" data-tab="overview">
+<span class="flex items-center gap-space-xs font-label-lg text-label-lg"><span class="material-symbols-outlined text-[18px]">space_dashboard</span> 1. Overview</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+<button class="tab-btn w-full text-left px-space-md py-space-sm rounded flex items-center justify-between text-on-surface-variant hover:bg-surface-container-low transition-all" data-tab="animals">
+<span class="flex items-center gap-space-xs font-label-lg text-label-lg"><span class="material-symbols-outlined text-[18px]">pets</span> 2. Animals</span>
+</button>
+<button class="tab-btn w-full text-left px-space-md py-space-sm rounded flex items-center justify-between text-on-surface-variant hover:bg-surface-container-low transition-all" data-tab="health">
+<span class="flex items-center gap-space-xs font-label-lg text-label-lg"><span class="material-symbols-outlined text-[18px]">medical_services</span> 3. Health</span>
+</button>
+<button class="tab-btn w-full text-left px-space-md py-space-sm rounded flex items-center justify-between text-on-surface-variant hover:bg-surface-container-low transition-all" data-tab="milk">
+<span class="flex items-center gap-space-xs font-label-lg text-label-lg"><span class="material-symbols-outlined text-[18px]">water_drop</span> 4. Milk Production</span>
+</button>
+<button class="tab-btn w-full text-left px-space-md py-space-sm rounded flex items-center justify-between text-on-surface-variant hover:bg-surface-container-low transition-all" data-tab="inventory">
+<span class="flex items-center gap-space-xs font-label-lg text-label-lg"><span class="material-symbols-outlined text-[18px]">inventory_2</span> 5. Inventory</span>
+</button>
+<button class="tab-btn w-full text-left px-space-md py-space-sm rounded flex items-center justify-between text-on-surface-variant hover:bg-surface-container-low transition-all" data-tab="feeding">
+<span class="flex items-center gap-space-xs font-label-lg text-label-lg"><span class="material-symbols-outlined text-[18px]">grass</span> 6. Feeding</span>
+</button>
+<button class="tab-btn w-full text-left px-space-md py-space-sm rounded flex items-center justify-between text-on-surface-variant hover:bg-surface-container-low transition-all" data-tab="workers">
+<span class="flex items-center gap-space-xs font-label-lg text-label-lg"><span class="material-symbols-outlined text-[18px]">group</span> 7. Workers</span>
+</button>
+<button class="tab-btn w-full text-left px-space-md py-space-sm rounded flex items-center justify-between text-on-surface-variant hover:bg-surface-container-low transition-all" data-tab="attendance">
+<span class="flex items-center gap-space-xs font-label-lg text-label-lg"><span class="material-symbols-outlined text-[18px]">schedule</span> 8. Attendance</span>
+</button>
+<button class="tab-btn w-full text-left px-space-md py-space-sm rounded flex items-center justify-between text-on-surface-variant hover:bg-surface-container-low transition-all" data-tab="payroll">
+<span class="flex items-center gap-space-xs font-label-lg text-label-lg"><span class="material-symbols-outlined text-[18px]">payments</span> 9. Payroll</span>
+</button>
+<button class="tab-btn w-full text-left px-space-md py-space-sm rounded flex items-center justify-between text-on-surface-variant hover:bg-surface-container-low transition-all" data-tab="finance">
+<span class="flex items-center gap-space-xs font-label-lg text-label-lg"><span class="material-symbols-outlined text-[18px]">account_balance</span> 10. Finance</span>
+</button>
+<button class="tab-btn w-full text-left px-space-md py-space-sm rounded flex items-center justify-between text-on-surface-variant hover:bg-surface-container-low transition-all" data-tab="equipment">
+<span class="flex items-center gap-space-xs font-label-lg text-label-lg"><span class="material-symbols-outlined text-[18px]">precision_manufacturing</span> 11. Equipment</span>
+</button>
+<button class="tab-btn w-full text-left px-space-md py-space-sm rounded flex items-center justify-between text-on-surface-variant hover:bg-surface-container-low transition-all" data-tab="reports">
+<span class="flex items-center gap-space-xs font-label-lg text-label-lg"><span class="material-symbols-outlined text-[18px]">query_stats</span> 12. Reports</span>
+</button>
+<button class="tab-btn w-full text-left px-space-md py-space-sm rounded flex items-center justify-between text-on-surface-variant hover:bg-surface-container-low transition-all" data-tab="notifications">
+<span class="flex items-center gap-space-xs font-label-lg text-label-lg"><span class="material-symbols-outlined text-[18px]">notifications</span> 13. Notifications</span>
+</button>
+</div>
+<!-- Right Main Preview Area -->
+<div class="lg:col-span-9 bg-surface p-space-md lg:p-space-lg rounded-lg shadow-sm min-h-[520px]" id="tab-content-viewport">
+<!-- TAB 1: OVERVIEW -->
+<div class="tab-pane flex flex-col gap-space-md" id="tab-panel-overview">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Farm Daily Summary</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Paddock and parlor morning synchronizations</p>
+</div>
+<span class="px-space-sm py-1 rounded bg-surface-container text-secondary font-label-sm text-label-sm">Sample View</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md mt-space-xs">
+<div class="p-space-md bg-surface-container-lowest rounded shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Current Status</span>
+<div class="font-headline-md text-headline-md font-bold text-secondary mt-1">Milking Finished</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">Wash cycle cycle A completed at 07:15</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Bulk Vat Chiller</span>
+<div class="font-headline-md text-headline-md font-bold text-primary mt-1">3.6 °C</div>
+<div class="font-body-sm text-body-sm text-secondary mt-1">Target range: 2.0 °C - 4.0 °C</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Active Workforce</span>
+<div class="font-headline-md text-headline-md font-bold text-primary mt-1">6 On Duty</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">Next shift handover: 14:45</div>
+</div>
+</div>
+<!-- In-pane SVG chart -->
+<div class="p-space-md bg-surface-container-lowest rounded shadow-sm mt-space-xs">
+<div class="flex justify-between items-center mb-space-sm">
+<span class="font-label-lg text-label-lg font-semibold text-primary">24h Milk Production Rhythm (Litres)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">[Demonstration Metric]</span>
+</div>
+<svg class="w-full h-28 text-secondary" fill="none" preserveAspectRatio="none" viewBox="0 0 500 100">
+<path d="M0,80 Q70,85 100,20 T200,75 T320,15 T420,70 T500,60" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+<path d="M0,80 Q70,85 100,20 T200,75 T320,15 T420,70 T500,60 L500,100 L0,100 Z" fill="currentColor" fill-opacity="0.08"></path>
+</svg>
+<div class="flex justify-between text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span>00:00</span>
+<span>Morning Peak (06:00)</span>
+<span>Midday Rest</span>
+<span>Afternoon Peak (15:30)</span>
+<span>23:59</span>
+</div>
+</div>
+</div>
+<!-- TAB 2: ANIMALS -->
+<div class="tab-pane hidden flex-col gap-space-md" id="tab-panel-animals">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Animal Ledger &amp; Registrations</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Livestock census and stage records</p>
+</div>
+<span class="px-space-sm py-1 rounded bg-surface-container text-secondary font-label-sm text-label-sm">412 Head Registered</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left bg-surface-container-lowest rounded shadow-sm text-body-sm">
+<thead class="bg-surface-container-low text-on-surface-variant font-label-sm uppercase">
+<tr>
+<th class="p-space-sm">Tag ID</th>
+<th class="p-space-sm">RFID</th>
+<th class="p-space-sm">Breed</th>
+<th class="p-space-sm">Lactation</th>
+<th class="p-space-sm">DIM</th>
+<th class="p-space-sm">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr>
+<td class="p-space-sm font-semibold text-primary">#4028 Clover</td>
+<td class="p-space-sm text-on-surface-variant">982 000 184 209</td>
+<td class="p-space-sm">Holstein</td>
+<td class="p-space-sm">3rd</td>
+<td class="p-space-sm">114 Days</td>
+<td class="p-space-sm"><span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm">Lactating</span></td>
+</tr>
+<tr>
+<td class="p-space-sm font-semibold text-primary">#4029 Bessie</td>
+<td class="p-space-sm text-on-surface-variant">982 000 184 210</td>
+<td class="p-space-sm">Jersey Cross</td>
+<td class="p-space-sm">2nd</td>
+<td class="p-space-sm">189 Days</td>
+<td class="p-space-sm"><span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm">Lactating</span></td>
+</tr>
+<tr>
+<td class="p-space-sm font-semibold text-primary">#3981 Freckles</td>
+<td class="p-space-sm text-on-surface-variant">982 000 184 102</td>
+<td class="p-space-sm">Holstein</td>
+<td class="p-space-sm">4th</td>
+<td class="p-space-sm">—</td>
+<td class="p-space-sm"><span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm">Dry Off</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- TAB 3: HEALTH -->
+<div class="tab-pane hidden flex-col gap-space-md" id="tab-panel-health">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Clinical Ledger &amp; Withholdings</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Milk withholding compliance safeguards</p>
+</div>
+<span class="px-space-sm py-1 rounded bg-tertiary-fixed-dim/30 text-on-tertiary-container font-label-sm text-label-sm">4 Active Withholds</span>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-low">
+<div>
+<div class="font-semibold text-primary">Cow #4012 — Mastitis Intramammary Penicillin</div>
+<div class="text-body-sm text-on-surface-variant">Prescribed: Dr. H. Vance • Vet Reg #49281</div>
+</div>
+<div class="text-right">
+<div class="font-label-sm text-on-tertiary-container font-bold uppercase">38 Hours Withhold Remaining</div>
+<div class="text-body-sm text-on-surface-variant">Automatic parlor diverter armed</div>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-low">
+<div>
+<div class="font-semibold text-primary">Cow #3904 — Anti-inflammatory Routine</div>
+<div class="text-body-sm text-on-surface-variant">Prescribed: Dr. H. Vance • Vet Reg #49281</div>
+</div>
+<div class="text-right">
+<div class="font-label-sm text-secondary font-bold uppercase">Cleared for Collection 06:00 Tomorrow</div>
+<div class="text-body-sm text-on-surface-variant">Audit tag verified</div>
+</div>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant italic">Note: SmartFarm logs records and compliance timelines; it does not issue medical advice.</p>
+</div>
+<!-- TAB 4: MILK PRODUCTION -->
+<div class="tab-pane hidden flex-col gap-space-md" id="tab-panel-milk">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Vat &amp; Harvest Monitoring</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Litres logged per parlor session and temperature containment</p>
+</div>
+<span class="px-space-sm py-1 rounded bg-surface-container text-secondary font-label-sm text-label-sm">Primary Vat #1</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="p-space-md rounded bg-surface-container-lowest shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Morning Volume</span>
+<div class="font-headline-md text-headline-md font-bold text-primary mt-1">6,420 L</div>
+</div>
+<div class="p-space-md rounded bg-surface-container-lowest shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Evening Estimated</span>
+<div class="font-headline-md text-headline-md font-bold text-primary mt-1">5,060 L</div>
+</div>
+<div class="p-space-md rounded bg-surface-container-lowest shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Average Fat / Protein</span>
+<div class="font-headline-md text-headline-md font-bold text-primary mt-1">4.2% / 3.4%</div>
+</div>
+</div>
+</div>
+<!-- TAB 5: INVENTORY -->
+<div class="tab-pane hidden flex-col gap-space-md" id="tab-panel-inventory">
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">On-Farm Supplies &amp; Feed Reserves</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="p-space-md bg-surface-container-lowest rounded shadow-sm">
+<div class="flex justify-between items-center">
+<span class="font-semibold text-primary">Silo A — Dairy Meal Blend</span>
+<span class="font-label-sm text-secondary font-bold">14.8 Tons</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded mt-2 overflow-hidden">
+<div class="bg-secondary h-full" style="width: 65%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block">Optimal capacity. Next delivery scheduled in 10 days.</span>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded shadow-sm">
+<div class="flex justify-between items-center">
+<span class="font-semibold text-primary">Teat Disinfectant Sanitizer</span>
+<span class="font-label-sm text-on-tertiary-container font-bold">85 Litres (Reorder Threshold)</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded mt-2 overflow-hidden">
+<div class="bg-on-tertiary-container h-full" style="width: 25%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block">Low threshold warning flagged for purchase coordinator.</span>
+</div>
+</div>
+</div>
+<!-- TAB 6: FEEDING -->
+<div class="tab-pane hidden flex-col gap-space-md" id="tab-panel-feeding">
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Feed Allocation &amp; Grazing Breaks</h3>
+<div class="p-space-md bg-surface-container-lowest rounded shadow-sm">
+<div class="font-semibold text-primary mb-space-xs">Current Rotation: Paddock 12 South</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Target Cover Entry: 2,900 kg DM/ha • Target Residual: 1,550 kg DM/ha</p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs text-body-sm">
+<div class="p-2 bg-surface-container rounded text-center">Pasture Allocated: 12.0 kg DM/cow</div>
+<div class="p-2 bg-surface-container rounded text-center">Concentrate In-Parlor: 3.5 kg/cow</div>
+<div class="p-2 bg-surface-container rounded text-center">Silage Supplement: 2.0 kg DM/cow</div>
+</div>
+</div>
+</div>
+<!-- TAB 7: WORKERS -->
+<div class="tab-pane hidden flex-col gap-space-md" id="tab-panel-workers">
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Staff Rostering &amp; Qualifications</h3>
+<div class="p-space-md bg-surface-container-lowest rounded shadow-sm">
+<div class="flex items-center justify-between py-2 border-b border-surface-container">
+<div>
+<span class="font-semibold text-primary">Marcus Jensen</span>
+<span class="font-body-sm text-on-surface-variant block">Senior Parlor Operator • Chemical Safety Certified</span>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container text-secondary font-label-sm">Shift: 04:30 - 12:30</span>
+</div>
+<div class="flex items-center justify-between py-2">
+<div>
+<span class="font-semibold text-primary">Elena Rivera</span>
+<span class="font-body-sm text-on-surface-variant block">Assistant Herdsperson • AI Qualified</span>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container text-secondary font-label-sm">Shift: 11:30 - 19:30</span>
+</div>
+</div>
+</div>
+<!-- TAB 8: ATTENDANCE -->
+<div class="tab-pane hidden flex-col gap-space-md" id="tab-panel-attendance">
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Shift Logs &amp; Paddock Presence</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Simple supervisor check-in logs for field personnel.</p>
+<div class="p-space-md bg-surface-container-lowest rounded shadow-sm text-body-sm">
+<div class="flex justify-between items-center py-1">
+<span>Morning Milking Roster (4 crew)</span>
+<span class="text-secondary font-semibold">100% Attended</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span>Pasture Renovation Tractor Team</span>
+<span class="text-secondary font-semibold">Logged 07:00</span>
+</div>
+</div>
+</div>
+<!-- TAB 9: PAYROLL -->
+<div class="tab-pane hidden flex-col gap-space-md" id="tab-panel-payroll">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Payroll Export Verification</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Admin access only. Formatted for farm accountants.</p>
+</div>
+<button class="px-space-sm py-1 rounded bg-primary-container text-on-primary font-label-sm">Export CSV</button>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded shadow-sm text-body-sm">
+<p class="text-on-surface-variant mb-space-sm">Fortnight ending Sunday 22nd. 384 cumulative hours approved by Farm Owner.</p>
+<div class="flex justify-between items-center font-mono text-label-sm p-2 bg-surface-container-low rounded">
+<span>BATCH_REF_#88421_FARM_PAYROLL.CSV</span>
+<span class="text-secondary">Ready for Disbursement</span>
+</div>
+</div>
+</div>
+<!-- TAB 10: FINANCE -->
+<div class="tab-pane hidden flex-col gap-space-md" id="tab-panel-finance">
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Operational Cost Centers &amp; Margins</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="p-space-md bg-surface-container-lowest rounded shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Current Month Feed Expense</span>
+<div class="font-headline-md text-headline-md font-bold text-primary mt-1">$14,240</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tracking 2% under budget cap</span>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Milk Revenue Gross Margin</span>
+<div class="font-headline-md text-headline-md font-bold text-secondary mt-1">$0.58 / Litre</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Includes solid bonus premiums</span>
+</div>
+</div>
+</div>
+<!-- TAB 11: EQUIPMENT -->
+<div class="tab-pane hidden flex-col gap-space-md" id="tab-panel-equipment">
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Plant Telemetry &amp; Service Intervals</h3>
+<div class="p-space-md bg-surface-container-lowest rounded shadow-sm flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-semibold text-primary">Vacuum Pump #1 (Rotary Parlor)</span>
+<span class="font-label-sm text-secondary font-bold">2,410 / 3,000 hrs</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded overflow-hidden">
+<div class="bg-secondary h-full" style="width: 80%;"></div>
+</div>
+<div class="flex justify-between text-body-sm text-on-surface-variant">
+<span>Oil inspection logged on schedule</span>
+<span>Next major overhaul in 590 hrs</span>
+</div>
+</div>
+</div>
+<!-- TAB 12: REPORTS -->
+<div class="tab-pane hidden flex-col gap-space-md" id="tab-panel-reports">
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Farm Operational Statements</h3>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm text-center">
+<div class="p-space-md bg-surface-container-lowest rounded shadow-sm hover:shadow transition-all cursor-pointer">
+<span class="material-symbols-outlined text-[32px] text-secondary">description</span>
+<div class="font-semibold text-primary mt-1">Milk Quality Audit</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">30-day Somatic Cell &amp; Solids</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded shadow-sm hover:shadow transition-all cursor-pointer">
+<span class="material-symbols-outlined text-[32px] text-secondary">health_and_safety</span>
+<div class="font-semibold text-primary mt-1">Withholding Clearance</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Regulatory audit archive</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded shadow-sm hover:shadow transition-all cursor-pointer">
+<span class="material-symbols-outlined text-[32px] text-secondary">agriculture</span>
+<div class="font-semibold text-primary mt-1">Pasture Yield vs Feed</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Dry matter conversion ratio</div>
+</div>
+</div>
+</div>
+<!-- TAB 13: NOTIFICATIONS -->
+<div class="tab-pane hidden flex-col gap-space-md" id="tab-panel-notifications">
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Platform Dispatch &amp; Logs</h3>
+<div class="p-space-md bg-surface-container-lowest rounded shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span>
+<div>
+<div class="font-semibold text-primary">Daily Bulk Tank Milk Temp Logged Compliant (3.6°C)</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">08:00 AM • Certified for pickup</div>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5">schedule</span>
+<div>
+<div class="font-semibold text-primary">Cow #4012 Withholding Expiry in 38 Hours</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Automatic notification to Parlor lead</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3 — OVERVIEW PREVIEW -->
+<section class="w-full bg-surface py-space-xl lg:py-24">
+<div class="max-w-7xl mx-auto px-margin-sm lg:px-margin">
+<div class="max-w-3xl mb-space-xl">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Morning Starting Point</span>
+<h2 class="font-headline-lg text-display-md font-bold text-primary tracking-tight mt-space-xs">
+          An organized starting point for farm management.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm">
+          Dairy farms run on tight schedules. SmartFarm synthesizes dawn checklists, parlor tank temperatures, and herd health status into an uncluttered dashboard for your first coffee of the day.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Left: Herd Snapshot Card -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Herd Register Snapshot</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">[Demonstration]</span>
+</div>
+<div class="mt-space-md flex flex-col gap-space-sm">
+<div class="flex justify-between items-center">
+<span class="font-body-md text-on-surface-variant">Total Active Cows</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">412</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-on-surface-variant">Currently In Parlor</span>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">34</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-on-surface-variant">Planned Dry Off</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">12</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-on-tertiary-container font-semibold">Treatment Withholding</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-tertiary-container">4</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-surface-container flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Calving rate this season</span>
+<span class="font-semibold text-secondary">94.2%</span>
+</div>
+</div>
+<!-- Center: Operational Checklist -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Operational Checklist</h3>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Today's Protocol</span>
+</div>
+<div class="mt-space-md flex flex-col gap-space-sm">
+<div class="flex items-start gap-space-xs p-space-xs rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_box</span>
+<div>
+<div class="font-semibold text-body-md text-primary">Pasture Residual Logged</div>
+<div class="font-body-sm text-on-surface-variant">Paddock 12 measured post-grazing (1,550 kg DM)</div>
+</div>
+</div>
+<div class="flex items-start gap-space-xs p-space-xs rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_box</span>
+<div>
+<div class="font-semibold text-body-md text-primary">Parlor Wash Cycle Verified</div>
+<div class="font-body-sm text-on-surface-variant">Sanitizer rinse confirmed at 82 °C</div>
+</div>
+</div>
+<div class="flex items-start gap-space-xs p-space-xs rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_box</span>
+<div>
+<div class="font-semibold text-body-md text-primary">Bulk Chiller Verified Stable</div>
+<div class="font-body-sm text-on-surface-variant">Constant 3.6 °C through whole batch load</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container text-body-sm text-on-surface-variant">
+<span>All 3 morning milestones validated by Supervisor</span>
+</div>
+</div>
+<!-- Right: Recent Alerts Log -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Audited Event Log</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">[Sample Metric]</span>
+</div>
+<div class="mt-space-md flex flex-col gap-space-sm">
+<div class="p-space-sm rounded bg-surface-container-high/40">
+<span class="font-label-sm text-label-sm text-on-surface-variant">06:45 AM • Audited Sensor</span>
+<p class="font-body-sm text-body-sm text-primary font-medium mt-0.5">Tank Temp Threshold verified safe within 2.0–4.0°C corridor.</p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high/40">
+<span class="font-label-sm text-label-sm text-on-surface-variant">05:15 AM • Parlor Gate Automation</span>
+<p class="font-body-sm text-body-sm text-primary font-medium mt-0.5">RFID #4012 diverted to quarantine pen for observation.</p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high/40">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Yesterday • Vet Clearance</span>
+<p class="font-body-sm text-body-sm text-primary font-medium mt-0.5">Withholding protocol concluded for Cow #3882.</p>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container text-body-sm text-on-surface-variant">
+<span>Automated immutable audit trail</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4 — ANIMAL AND HEALTH PREVIEW -->
+<section class="w-full bg-surface-container-low py-space-xl lg:py-24">
+<div class="max-w-7xl mx-auto px-margin-sm lg:px-margin">
+<div class="max-w-3xl mb-space-xl">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Livestock Records</span>
+<h2 class="font-headline-lg text-display-md font-bold text-primary tracking-tight mt-space-xs">
+          Animal information at a glance.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm">
+          Keep complete life-cycle histories, genetic lineage, and treatment status organized without messy paper notebooks or fragmented spreadsheets.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left: Detailed Profile Card (Cow #4028) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-space-lg shadow-md">
+<div class="flex items-center gap-space-md mb-space-md">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[32px]">pets</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-md text-headline-md font-bold text-primary">Cow #4028 “Clover”</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm uppercase font-semibold">Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Holstein Friesian • Tag #4028 • RFID 982 000 184 209</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm text-body-sm border-t border-b border-surface-container py-space-md">
+<div>
+<span class="text-on-surface-variant block font-label-sm">Sire Lineage</span>
+<span class="font-semibold text-primary">Superstition ET (NZ)</span>
+</div>
+<div>
+<span class="text-on-surface-variant block font-label-sm">Dam Lineage</span>
+<span class="font-semibold text-primary">Oakview Clover II (#2910)</span>
+</div>
+<div>
+<span class="text-on-surface-variant block font-label-sm">Current Lactation</span>
+<span class="font-semibold text-primary">3rd Lactation (DIM: 114)</span>
+</div>
+<div>
+<span class="text-on-surface-variant block font-label-sm">Latest Yield</span>
+<span class="font-semibold text-primary">31.4 Litres / Day</span>
+</div>
+</div>
+<!-- Vaccination Timeline -->
+<div class="mt-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold block mb-space-xs">Vaccination &amp; Health Milestones</span>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between text-body-sm p-2 rounded bg-surface-container-low">
+<span>Leptospirosis Booster</span>
+<span class="text-secondary font-semibold">Logged 12 Nov • Current</span>
+</div>
+<div class="flex items-center justify-between text-body-sm p-2 rounded bg-surface-container-low">
+<span>Rotavirus Inoculation</span>
+<span class="text-secondary font-semibold">Logged 04 Aug • Current</span>
+</div>
+<div class="flex items-center justify-between text-body-sm p-2 rounded bg-surface-container-low">
+<span>Annual Hoof Inspection</span>
+<span class="text-on-surface-variant font-semibold">Due in 45 Days</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Health & Treatment Ledger -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Clinical Ledger &amp; Withholding Safeguards</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Immutable logging of pharmaceutical administrations</span>
+</div>
+<span class="px-space-sm py-1 rounded bg-surface-container text-secondary font-label-sm text-label-sm">Audit Compliant</span>
+</div>
+<div class="mt-space-md flex flex-col gap-space-sm">
+<!-- Item 1 -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-semibold text-primary text-body-md">Mastitis Intramammary Penicillin</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed-dim/30 text-on-tertiary-container font-label-sm uppercase">Active Hold</span>
+</div>
+<div class="text-body-sm text-on-surface-variant mt-0.5">Applied to Cow #4012 • Vet Auth: Dr. H. Vance (Reg #49281)</div>
+</div>
+<div class="sm:text-right">
+<div class="font-bold text-on-tertiary-container text-body-md">38h Withholding Left</div>
+<div class="text-body-sm text-on-surface-variant">Milk diverted from bulk chiller</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-semibold text-primary text-body-md">Calcium Borogluconate Infusion</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm uppercase">Cleared</span>
+</div>
+<div class="text-body-sm text-on-surface-variant mt-0.5">Applied to Cow #3988 • Vet Auth: Farm Supervisor (Protocol B)</div>
+</div>
+<div class="sm:text-right">
+<div class="font-bold text-secondary text-body-md">Zero Hold Period</div>
+<div class="text-body-sm text-on-surface-variant">Cleared for standard collection</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg p-space-md rounded bg-surface-container flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">gavel</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong>Regulatory Notice:</strong> Illustrative record model. SmartFarm provides structured data management and does not issue medical diagnosis or veterinary advice. All treatments must be supervised by qualified veterinary personnel.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5 — MILK AND OPERATIONS PREVIEW -->
+<section class="w-full bg-surface py-space-xl lg:py-24">
+<div class="max-w-7xl mx-auto px-margin-sm lg:px-margin">
+<div class="max-w-3xl mb-space-xl">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Field Operations</span>
+<h2 class="font-headline-lg text-display-md font-bold text-primary tracking-tight mt-space-xs">
+          Production and operations in one place.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm">
+          Keep the pulse of your harvest, silo inventories, pasture allocations, and heavy plant equipment synchronized in a clean operational grid.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Box 1: Milk Production Records -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-secondary mb-space-sm">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Milk Production</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Continuous vat monitoring and pickup compliance tracking.</p>
+<div class="mt-space-md p-space-sm rounded bg-surface-container-low">
+<div class="flex justify-between items-center text-body-sm">
+<span>Vat Temp</span>
+<span class="font-bold text-secondary">3.6 °C</span>
+</div>
+<div class="text-label-sm text-on-surface-variant mt-0.5">Target: 2.0 °C – 4.0 °C compliant</div>
+<div class="mt-space-sm pt-space-xs border-t border-surface-container flex justify-between items-center text-body-sm">
+<span>Total Stored</span>
+<span class="font-bold text-primary">11,480 L</span>
+</div>
+</div>
+</div>
+<span class="mt-space-md font-label-sm text-label-sm text-on-surface-variant uppercase">[Illustrative Interface]</span>
+</div>
+<!-- Box 2: Inventory Interface -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-secondary mb-space-sm">
+<span class="material-symbols-outlined">inventory_2</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Inventory &amp; Silos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Concentrate reserves and automatic reorder thresholds.</p>
+<div class="mt-space-md p-space-sm rounded bg-surface-container-low flex flex-col gap-2">
+<div>
+<div class="flex justify-between text-body-sm">
+<span>Grain Silo #1</span>
+<span class="font-bold text-primary">14.8 T</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded mt-1 overflow-hidden">
+<div class="bg-secondary h-full" style="width: 70%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-body-sm">
+<span>Silage Pit A</span>
+<span class="font-bold text-primary">120 T DM</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded mt-1 overflow-hidden">
+<div class="bg-secondary h-full" style="width: 85%;"></div>
+</div>
+</div>
+</div>
+</div>
+<span class="mt-space-md font-label-sm text-label-sm text-on-surface-variant uppercase">[Illustrative Interface]</span>
+</div>
+<!-- Box 3: Feeding & Pasture -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-secondary mb-space-sm">
+<span class="material-symbols-outlined">grass</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Pasture Allocation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Dry matter targets and systematic mob rotational grazing.</p>
+<div class="mt-space-md p-space-sm rounded bg-surface-container-low">
+<div class="font-semibold text-body-sm text-primary">Mob Rotation Active</div>
+<div class="font-body-sm text-secondary font-bold mt-1">Paddock 12 South</div>
+<div class="mt-2 text-body-sm text-on-surface-variant">Allocated: 12.0 kg DM / cow / day across 412 head</div>
+</div>
+</div>
+<span class="mt-space-md font-label-sm text-label-sm text-on-surface-variant uppercase">[Illustrative Interface]</span>
+</div>
+<!-- Box 4: Equipment Records -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-secondary mb-space-sm">
+<span class="material-symbols-outlined">precision_manufacturing</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Plant Telemetry</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Service hour logs for milking pumps and back-up dynamos.</p>
+<div class="mt-space-md p-space-sm rounded bg-surface-container-low flex flex-col gap-1 text-body-sm">
+<div class="flex justify-between">
+<span>Vacuum Plant</span>
+<span class="text-secondary font-semibold">2,410 hrs (OK)</span>
+</div>
+<div class="flex justify-between">
+<span>Backup Diesel</span>
+<span class="text-secondary font-semibold">Tested Mon (OK)</span>
+</div>
+</div>
+</div>
+<span class="mt-space-md font-label-sm text-label-sm text-on-surface-variant uppercase">[Illustrative Interface]</span>
+</div>
+</div>
+<!-- Architectural Disclaimer -->
+<div class="mt-space-lg text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Strictly notes: Illustrative interfaces shown for operational workflow demonstration. No automated proprietary hardware or sensor integration claims.
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 6 — PEOPLE AND FINANCIAL PREVIEW -->
+<section class="w-full bg-surface-container-low py-space-xl lg:py-24">
+<div class="max-w-7xl mx-auto px-margin-sm lg:px-margin">
+<div class="max-w-3xl mb-space-xl">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Administration</span>
+<h2 class="font-headline-lg text-display-md font-bold text-primary tracking-tight mt-space-xs">
+          Organized information for people and management.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm">
+          Keep staffing, shift verifications, and financial cost centers organized in an interface built around farm privacy and governance.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left: People & Rostering -->
+<div class="lg:col-span-6 bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Rostering &amp; Shift Logs</h3>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Field-Ready Logs</span>
+</div>
+<div class="mt-space-md flex flex-col gap-space-sm">
+<div class="p-space-sm rounded bg-surface-container-low flex justify-between items-center">
+<div>
+<span class="font-semibold text-primary block">Early Morning Milking (04:30)</span>
+<span class="font-body-sm text-on-surface-variant">3 Operators • Rotary Parlor</span>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container text-secondary font-label-sm font-semibold">Completed</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex justify-between items-center">
+<div>
+<span class="font-semibold text-primary block">Afternoon Milking (15:00)</span>
+<span class="font-body-sm text-on-surface-variant">3 Operators • Washdown Lead</span>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm font-semibold">Scheduled</span>
+</div>
+</div>
+<div class="mt-space-md p-space-md rounded bg-surface-container text-body-sm">
+<span class="font-semibold text-primary block mb-1">Accountant Export Ready</span>
+<p class="text-on-surface-variant">Attendance hours seamlessly compile into standard CSV format for off-farm accountants or payroll providers.</p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container font-label-sm text-label-sm text-on-surface-variant">
+            Zero individual seat fees required for relief milkers or temporary staff.
+          </div>
+</div>
+<!-- Right: Financial Cost Centers & Security Scope -->
+<div class="lg:col-span-6 bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Cost Center Breakdown &amp; Margin</h3>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-bold uppercase">Admin Scoped</span>
+</div>
+<div class="mt-space-md grid grid-cols-2 gap-space-sm text-body-sm">
+<div class="p-space-md bg-surface-container-low rounded">
+<span class="text-on-surface-variant font-label-sm">Feed Concentrates</span>
+<div class="font-headline-sm text-headline-sm font-bold text-primary mt-1">$14,240</div>
+<span class="text-on-surface-variant text-label-sm">Current month total</span>
+</div>
+<div class="p-space-md bg-surface-container-low rounded">
+<span class="text-on-surface-variant font-label-sm">Veterinary &amp; Meds</span>
+<div class="font-headline-sm text-headline-sm font-bold text-primary mt-1">$2,180</div>
+<span class="text-on-surface-variant text-label-sm">Within planned margin</span>
+</div>
+<div class="p-space-md bg-surface-container-low rounded">
+<span class="text-on-surface-variant font-label-sm">Pasture Maintenance</span>
+<div class="font-headline-sm text-headline-sm font-bold text-primary mt-1">$3,850</div>
+<span class="text-on-surface-variant text-label-sm">Fertilizer &amp; seed drill</span>
+</div>
+<div class="p-space-md bg-surface-container-low rounded">
+<span class="text-on-surface-variant font-label-sm">Gross Milk Margin</span>
+<div class="font-headline-sm text-headline-sm font-bold text-secondary mt-1">$0.58 / L</div>
+<span class="text-on-surface-variant text-label-sm">Quality bonus factored</span>
+</div>
+</div>
+</div>
+<!-- Strict Security Callout -->
+<div class="mt-space-lg p-space-md rounded bg-primary-container text-on-primary">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide font-bold text-secondary-fixed">Role-Restricted Architecture</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-container leading-relaxed">
+              Sensitive financial cost ledgers, profit margins, and payroll wages are strictly restricted to Farm Administrators. Farm Supervisors and operators view only physical tallies and operational workflows.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7 — REPORTS PREVIEW -->
+<section class="w-full bg-surface py-space-xl lg:py-24">
+<div class="max-w-7xl mx-auto px-margin-sm lg:px-margin">
+<div class="max-w-3xl mb-space-xl">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Auditing &amp; Compliance</span>
+<h2 class="font-headline-lg text-display-md font-bold text-primary tracking-tight mt-space-xs">
+          Review organized farm information.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm">
+          Export factual historical records for dairy processor inspections, veterinary audits, and environmental compliance review.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Report 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase block mb-1">[Sample Data • Non-Predictive]</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Monthly Milk Quality Audit</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              30-day Somatic Cell Count (SCC) compliance log, temperature corridor validation, and bacterial plate audits.
+            </p>
+<div class="mt-space-md p-space-md rounded bg-surface-container-low text-body-sm flex flex-col gap-1">
+<div class="flex justify-between">
+<span>SCC Average</span>
+<span class="font-bold text-secondary">118k / mL (Tier 1)</span>
+</div>
+<div class="flex justify-between">
+<span>Vat Temp Compliance</span>
+<span class="font-bold text-secondary">100% compliant</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg">
+<button class="w-full py-space-xs rounded bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors">
+              Preview Audit PDF
+            </button>
+</div>
+</div>
+<!-- Report 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase block mb-1">[Sample Data • Non-Predictive]</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Withholding Compliance Log</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              Immutable register of prescribed pharmaceutical treatments, vet sign-offs, and vat protection safeguards.
+            </p>
+<div class="mt-space-md p-space-md rounded bg-surface-container-low text-body-sm flex flex-col gap-1">
+<div class="flex justify-between">
+<span>Audit Period</span>
+<span class="font-semibold text-primary">Last 90 Days</span>
+</div>
+<div class="flex justify-between">
+<span>Regulatory Deviations</span>
+<span class="font-bold text-secondary">0 Detected</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg">
+<button class="w-full py-space-xs rounded bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors">
+              Preview Vet Ledger
+            </button>
+</div>
+</div>
+<!-- Report 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase block mb-1">[Sample Data • Non-Predictive]</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Feed vs Solids Efficiency</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              Factual conversion metrics comparing kg Dry Matter consumed against recorded milk solids output.
+            </p>
+<div class="mt-space-md p-space-md rounded bg-surface-container-low text-body-sm flex flex-col gap-1">
+<div class="flex justify-between">
+<span>Conversion Ratio</span>
+<span class="font-bold text-primary">1.38 kg MS / Cow</span>
+</div>
+<div class="flex justify-between">
+<span>Pasture Utilization</span>
+<span class="font-bold text-secondary">82% of Target</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg">
+<button class="w-full py-space-xs rounded bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors">
+              Preview Feed Analysis
+            </button>
+</div>
+</div>
+</div>
+<div class="mt-space-lg text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          SmartFarm organizes historical operational records without artificial predictive claims or automated financial guarantees.
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 8 — ROLE-BASED EXPERIENCE -->
+<section class="w-full bg-surface-container-low py-space-xl lg:py-24">
+<div class="max-w-7xl mx-auto px-margin-sm lg:px-margin">
+<div class="max-w-3xl mb-space-xl">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Access Governance</span>
+<h2 class="font-headline-lg text-display-md font-bold text-primary tracking-tight mt-space-xs">
+          Access shaped around responsibility.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm">
+          Keep sensitive financial margins secure while giving your team in the parlor exactly what they need to execute morning tasks cleanly.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Card A: Farm Admin Workspace -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Role A • Full Authority</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary mt-1">Farm Admin Workspace</h3>
+</div>
+<div class="w-10 h-10 rounded bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">admin_panel_settings</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-md">
+              Complete administrative authority over the pastoral tenant, financial accounts, and team compliance settings.
+            </p>
+<ul class="mt-space-md flex flex-col gap-space-xs font-body-sm text-body-sm text-primary">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Full workspace configuration &amp; herd census setup</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Financial ledgers, feed cost centers, &amp; milk margin views</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Payroll disbursement exports &amp; wage reports</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Staff permission scoping &amp; tenant security settings</span>
+</li>
+</ul>
+</div>
+<div class="mt-space-lg p-space-sm rounded bg-surface-container font-label-sm text-label-sm text-secondary font-semibold text-center">
+            Optimized for Farm Owners, Sharemilkers, &amp; Agronomic Partners
+          </div>
+</div>
+<!-- Card B: Farm Supervisor Console -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Role B • Operational Focus</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary mt-1">Farm Supervisor Console</h3>
+</div>
+<div class="w-10 h-10 rounded bg-surface-container text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">agriculture</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-md">
+              Streamlined operational console designed for paddock mobility, parlor checks, and animal welfare tasks.
+            </p>
+<ul class="mt-space-md flex flex-col gap-space-xs font-body-sm text-body-sm text-primary">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Daily herd check-ins, DIM logging, &amp; lactation stages</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Milking volume entry &amp; bulk vat temperature verification</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Pasture cover entry &amp; rotational mob allocations</span>
+</li>
+<li class="flex items-center gap-space-xs text-on-surface-variant/70">
+<span class="material-symbols-outlined text-outline text-[18px]">lock</span>
+<span>Financial ledgers, wages, and margins hidden &amp; disabled</span>
+</li>
+</ul>
+</div>
+<div class="mt-space-lg p-space-sm rounded bg-surface-container font-label-sm text-label-sm text-secondary font-semibold text-center">
+            Optimized for Herd Managers, Parlor Leads, &amp; Field Staff
+          </div>
+</div>
+</div>
+<div class="mt-space-lg p-space-md rounded bg-surface-container text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong>Architectural Note:</strong> Field laborers and relief milkers are tracked in roster logs without requiring individual user software seats or platform accounts.
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 9 — PRODUCT CTA -->
+<section class="w-full bg-surface-bright py-space-xl lg:py-28">
+<div class="max-w-4xl mx-auto px-margin-sm lg:px-margin text-center">
+<div class="w-12 h-12 rounded-full bg-surface-container text-secondary flex items-center justify-center mx-auto mb-space-md">
+<span class="material-symbols-outlined text-[24px]">potted_plant</span>
+</div>
+<h2 class="font-headline-lg text-display-md lg:text-display-lg font-bold text-primary tracking-tight">
+        Want to see how SmartFarm fits your farm?
+      </h2>
+<p class="mt-space-md font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto">
+        Talk with the SmartFarm team to learn more about the platform, operational scoping, and workspace setup for your herd.
+      </p>
+<div class="mt-space-xl flex flex-wrap items-center justify-center gap-space-md">
+<a class="inline-flex items-center justify-center px-space-xl py-space-sm rounded bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:bg-secondary transition-all active:scale-[0.99]" data-path="contact" href="#">
+          Contact SmartFarm
+        </a>
+</div>
+<div class="mt-space-lg flex items-center justify-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">check</span> No Long-Term Lock-in</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">check</span> Clean Data Stewardship</span>
+</div>
+</div>
+</section>
+<!-- Vanilla JS Interactive Tab Switcher Script -->
+<script>
+    (function() {
+      const tabButtons = document.querySelectorAll('#interactive-tabs-container .tab-btn');
+      const tabPanels = document.querySelectorAll('#tab-content-viewport .tab-pane');
+
+      tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const tabId = btn.getAttribute('data-tab');
+
+          // Reset buttons
+          tabButtons.forEach(b => {
+            b.classList.remove('bg-primary-container', 'text-on-primary');
+            b.classList.add('text-on-surface-variant');
+            const chev = b.querySelector('.material-symbols-outlined:last-child');
+            if (chev && chev.textContent === 'chevron_right') {
+              chev.remove();
+            }
+          });
+
+          // Activate clicked button
+          btn.classList.add('bg-primary-container', 'text-on-primary');
+          btn.classList.remove('text-on-surface-variant');
+          
+          if (!btn.querySelector('.material-symbols-outlined:last-child[data-chevron]')) {
+            const chevSpan = document.createElement('span');
+            chevSpan.className = 'material-symbols-outlined text-[16px]';
+            chevSpan.setAttribute('data-chevron', 'true');
+            chevSpan.textContent = 'chevron_right';
+            btn.appendChild(chevSpan);
+          }
+
+          // Toggle Panels
+          tabPanels.forEach(panel => {
+            panel.classList.add('hidden');
+            panel.classList.remove('flex');
+          });
+
+          const activePanel = document.getElementById('tab-panel-' + tabId);
+          if (activePanel) {
+            activePanel.classList.remove('hidden');
+            activePanel.classList.add('flex');
+          }
+        });
+      });
+    })();
+  </script>
+</div></main><footer class="w-full bg-primary-container text-on-primary"><div class="max-w-7xl mx-auto px-margin-sm lg:px-margin pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-3 gap-gutter"><div class="flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center"><span class="material-symbols-outlined text-secondary-fixed text-[18px]">eco</span></div><span class="font-headline-sm text-headline-sm font-bold text-on-primary">SmartFarm</span></div><p class="font-body-md text-body-md text-on-primary-container max-w-sm">High-performance precision agronomy and livestock intelligence engineered for dependable pastoral stewardship and field longevity.</p><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-on-primary-container text-[18px]">shield_with_heart</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary-container">Enterprise Field Instrumentation</span></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-headline-sm text-headline-sm font-semibold text-secondary-fixed mb-space-xs">Navigation</h3><ul class="flex flex-col gap-space-xs"><li class="flex"><a class="font-body-md text-body-md text-on-primary-container hover:text-on-primary transition-colors" data-path="home" href="#">Home</a></li><li class="flex"><a class="font-body-md text-body-md text-on-primary-container hover:text-on-primary transition-colors" data-path="about" href="#">About</a></li><li class="flex"><a class="font-body-md text-body-md text-on-primary-container hover:text-on-primary transition-colors" data-path="features" href="#">Features</a></li><li class="flex"><a class="font-body-md text-body-md text-on-primary-container hover:text-on-primary transition-colors" data-path="how-it-works" href="#">How It Works</a></li><li class="flex"><a class="font-body-md text-body-md text-on-primary-container hover:text-on-primary transition-colors" data-path="benefits" href="#">Benefits</a></li><li class="flex"><a class="font-body-md text-body-md text-on-primary-container hover:text-on-primary transition-colors" data-path="dashboard-preview" href="#">Dashboard Preview</a></li><li class="flex"><a class="font-body-md text-body-md text-on-primary-container hover:text-on-primary transition-colors" data-path="contact" href="#">Contact</a></li></ul></div><div class="flex flex-col gap-space-sm"><h3 class="font-headline-sm text-headline-sm font-semibold text-secondary-fixed mb-space-xs">Operational Telemetry</h3><p class="font-body-md text-body-md text-on-primary-container">Connected across 14,000+ active hectares with automated livestock welfare and soil chemistry sensor grids.</p><div class="mt-space-sm p-space-md rounded-lg bg-surface-variant/10"><div class="flex items-center gap-space-xs mb-space-xs"><span class="w-2 h-2 rounded-full bg-secondary-fixed"></span><span class="font-label-sm text-label-sm uppercase tracking-wide text-secondary-fixed">Sensors Operating Live</span></div><span class="font-headline-md text-headline-md font-bold text-on-primary">99.98%</span><span class="font-body-sm text-body-sm text-on-primary-container block mt-space-xs">Network telemetry uptime across all regional quadrants</span></div></div></div><div class="mt-space-xl pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-primary-container"><p>Copyright © 2026 SmartFarm. All rights reserved.</p><p class="font-label-sm text-label-sm text-on-primary-container">Precision Agriculture • Field Autonomy • Stewardship</p></div></div></footer><section aria-label="Brand Strip" class="w-full bg-[#FFFFFF] overflow-hidden py-space-sm select-none"><div class="animate-marquee-continuous flex items-center whitespace-nowrap"><div class="flex items-center shrink-0"><span class="mx-space-md font-headline-sm text-headline-sm font-bold tracking-widest text-[#245C45]">SMART FARM •</span><span class="mx-space-md font-headline-sm text-headline-sm font-bold tracking-widest text-[#245C45]">SMART FARM •</span><span class="mx-space-md font-headline-sm text-headline-sm font-bold tracking-widest text-[#245C45]">SMART FARM •</span><span class="mx-space-md font-headline-sm text-headline-sm font-bold tracking-widest text-[#245C45]">SMART FARM •</span><span class="mx-space-md font-headline-sm text-headline-sm font-bold tracking-widest text-[#245C45]">SMART FARM •</span><span class="mx-space-md font-headline-sm text-headline-sm font-bold tracking-widest text-[#245C45]">SMART FARM •</span><span class="mx-space-md font-headline-sm text-headline-sm font-bold tracking-widest text-[#245C45]">SMART FARM •</span><span class="mx-space-md font-headline-sm text-headline-sm font-bold tracking-widest text-[#245C45]">SMART FARM •</span></div><div class="flex items-center shrink-0"><span class="mx-space-md font-headline-sm text-headline-sm font-bold tracking-widest text-[#245C45]">SMART FARM •</span><span class="mx-space-md font-headline-sm text-headline-sm font-bold tracking-widest text-[#245C45]">SMART FARM •</span><span class="mx-space-md font-headline-sm text-headline-sm font-bold tracking-widest text-[#245C45]">SMART FARM •</span><span class="mx-space-md font-headline-sm text-headline-sm font-bold tracking-widest text-[#245C45]">SMART FARM •</span><span class="mx-space-md font-headline-sm text-headline-sm font-bold tracking-widest text-[#245C45]">SMART FARM •</span><span class="mx-space-md font-headline-sm text-headline-sm font-bold tracking-widest text-[#245C45]">SMART FARM •</span><span class="mx-space-md font-headline-sm text-headline-sm font-bold tracking-widest text-[#245C45]">SMART FARM •</span><span class="mx-space-md font-headline-sm text-headline-sm font-bold tracking-widest text-[#245C45]">SMART FARM •</span></div></div></section></body></html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#30312d", "on-background": "#1b1c18", "secondary": "#556249", "tertiary-fixed-dim": "#ffb784", "surface-container-low": "#f5f3ed", "on-tertiary": "#ffffff", "surface-dim": "#dcdad4", "on-primary-container": "#b8cda9", "on-primary-fixed": "#101f08", "inverse-on-surface": "#f3f1eb", "outline": "#75786f", "background": "#fbf9f3", "on-tertiary-fixed": "#301400", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#3e4b32", "surface": "#fbf9f3", "outline-variant": "#c4c8bd", "surface-container": "#f0eee8", "surface-container-high": "#eae8e2", "surface-tint": "#516446", "surface-bright": "#fbf9f3", "on-surface-variant": "#444840", "primary-container": "#46583b", "primary": "#2f4126", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffdcc6", "on-primary-fixed-variant": "#3a4c30", "secondary-container": "#d9e8c7", "on-surface": "#1b1c18", "error": "#ba1a1a", "secondary-fixed-dim": "#bdcbac", "on-tertiary-container": "#ffb785", "on-secondary-container": "#5b694e", "on-error": "#ffffff", "primary-fixed": "#d4e9c3", "on-tertiary-fixed-variant": "#6c3a11", "tertiary": "#5e3007", "primary-fixed-dim": "#b8cda8", "on-error-container": "#93000a", "secondary-fixed": "#d9e8c7", "tertiary-container": "#7a461c", "on-secondary-fixed": "#141f0a", "on-primary": "#ffffff", "surface-variant": "#e4e2dd", "inverse-primary": "#b8cda8", "surface-container-highest": "#e4e2dd", "on-secondary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "gutter-mobile": "0.75rem", "margin": "2rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter": "1.5rem", "margin-mobile": "1rem" }, "fontFamily": { "data-metric-md": [ "Inter" ], "body-lg": [ "Inter" ], "display-lg-mobile": [ "Manrope" ], "body-sm": [ "Inter" ], "headline-md": [ "Manrope" ], "label-sm": [ "Inter" ], "headline-sm": [ "Manrope" ], "headline-xl": [ "Manrope" ], "body-md": [ "Inter" ], "headline-xl-mobile": [ "Manrope" ], "display-lg": [ "Manrope" ], "headline-lg": [ "Manrope" ], "data-metric-lg": [ "Manrope" ], "label-md": [ "Inter" ] }, "fontSize": { "data-metric-md": [ "1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "display-lg-mobile": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ], "headline-md": [ "1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" } ], "label-sm": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "headline-xl": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "headline-xl-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-lg": [ "3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "data-metric-lg": [ "2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZuhXF_IhBdGhJ4eix1oqj3wBimwP9kKeGGChH_b2ax1lMLHMcXPmCVu9b3MJqlJ3XUJHZyp_ietndJCcoi5tapKDT0swhF14GEZxUKYZjg6g5LvxUeQzsGptFXM8XbwZz0B0M4Kbg8tH48Ys1NpBq3q3ceaJWAzrxO8XU7fzOrfQL6K9wOMESU_VEMnfcbKwhEtKD90-MYyU8fO7yBiUm20ljVe33W-rRqQJED0H"><div><div class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight truncate">SmartFarm</div><div class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Dairy Management</div></div></div><span class="font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold px-space-xs py-0.5 rounded">Admin</span></div><div class="px-space-md py-space-sm bg-surface-container-low/80 flex items-center justify-between"><div class="truncate"><div class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Greenfield Dairy Estate</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">Workspace: GF-042</div></div><span class="h-2 w-2 rounded-full bg-primary-container ring-2 ring-primary-fixed flex-shrink-0"></span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Overview</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="font-body-md text-body-md flex-1">Dashboard</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Herd Management</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#"><span class="font-body-md text-body-md flex-1">Animals</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#"><span class="font-body-md text-body-md flex-1">Animal Health</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Feeding Management</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding-plans" href="#"><span class="font-body-md text-body-md flex-1">Feeding Plans</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding-schedule" href="#"><span class="font-body-md text-body-md flex-1">Feeding Schedule</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="actual-feeding-records" href="#"><span class="font-body-md text-body-md flex-1">Actual Feeding Records</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Operations &amp; Assets</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#"><span class="font-body-md text-body-md flex-1">Milk Production</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-management" href="#"><span class="font-body-md text-body-md flex-1">Milk Management</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#"><span class="font-body-md text-body-md flex-1">Inventory</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#"><span class="font-body-md text-body-md flex-1">Equipment</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Reports &amp; Analytics</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-reports" href="#"><span class="font-body-md text-body-md flex-1">Milk Reports</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="financial-reports" href="#"><span class="font-body-md text-body-md flex-1">Financial Reports</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="data-exports" href="#"><span class="font-body-md text-body-md flex-1">Data Exports</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Workforce &amp; Finance</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers" href="#"><span class="font-body-md text-body-md flex-1">Workers</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="attendance" href="#"><span class="font-body-md text-body-md flex-1">Attendance</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="payroll" href="#"><span class="font-body-md text-body-md flex-1">Payroll</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="finance" href="#"><span class="font-body-md text-body-md flex-1">Finance</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">System &amp; Alerts</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notification-center" href="#"><span class="font-body-md text-body-md flex-1">Notification Center</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notification-history" href="#"><span class="font-body-md text-body-md flex-1">Notification History</span></a></div><div class="space-y-space-xs pt-space-xs"><div class="px-space-sm flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Settings &amp; Configuration</span><span class="font-label-sm text-[0.625rem] bg-error-container text-on-error-container font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">Admin Only</span></div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farm_profile" href="#"><span class="font-body-md text-body-md flex-1">Farm Profile</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="units" href="#"><span class="font-body-md text-body-md flex-1">Units of Measurement</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="currency" href="#"><span class="font-body-md text-body-md flex-1">Currency Settings</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="timezone" href="#"><span class="font-body-md text-body-md flex-1">Timezone Settings</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="preferences" href="#"><span class="font-body-md text-body-md flex-1">Interface Preferences</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notification_settings" href="#"><span class="font-body-md text-body-md flex-1">Notification Settings</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="configuration" href="#"><span class="font-body-md text-body-md flex-1">Module Configuration</span></a></div></nav><div class="p-space-sm bg-surface-container-low/60"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex justify-between items-center mb-1"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Storage Quota</span><span class="font-label-sm text-label-sm text-primary font-bold">42%</span></div><div class="w-full bg-surface-container rounded-full h-1.5 mb-2"><div class="bg-primary-container h-1.5 rounded-full w-[42%]"></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-body-sm text-body-sm">1,280 Active Head</span><span class="material-symbols-outlined text-sm text-tertiary-container">sensors</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><button class="p-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-xl">menu_open</span></button><nav class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="font-semibold text-on-surface">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface-variant">Workspace: GF-042</span></nav><div class="relative flex-1 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full h-10 pl-9 pr-14 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search Animal ID, Batch, Record..." type="text"><span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded shadow-sm">⌘K</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm"><span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span><span>Connected • Live</span></div><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Mode" type="button"><span class="material-symbols-outlined text-xl">routine</span></button><div class="relative"><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative flex items-center justify-center" href="#" title="Alerts &amp; Notifications"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 h-4 min-w-[1rem] px-1 bg-error text-on-error font-label-sm text-[0.625rem] rounded-full flex items-center justify-center font-bold">3</span></a></div><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#" title="Docs &amp; Support"><span class="material-symbols-outlined text-xl">help</span></a><div class="h-6 w-[1px] bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHGkwzAmXeAWZgoliBfM3J0Dk3rRvKbrFcaSDXWTFXvp7mK8JZlIDpaM_-PKsE2e-9DSWj_thQxg7ZvMO7_J2wdBeJdNp3xHQNrTkReCH1iwd77yI5cACPrn8AVBGbsgSIRzl_r1aNrbkvrI3tTJT7qFPLASAjAk_cx85172_N3qz8dJ2RbazkMZxrYU4--z2VriyTURPXkRqv4-UUhJWONTqJq0P8IWMmPKFhLYX7"><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></div><div class="hidden lg:block text-left"><div class="flex items-center gap-1.5"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</span><span class="font-label-sm text-[0.625rem] bg-primary-container text-on-primary font-bold px-1 rounded">Farm Admin Only</span></div><div class="font-label-sm text-label-sm text-on-surface-variant leading-none">Farm Administrator</div></div><button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-lg">expand_more</span></button></div></div></header><main class="relative pt-16 w-full px-space-lg py-space-lg bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- QA State Switcher Toolbar -->
+
+<!-- Breadcrumbs & Administrative Verification Stamp -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>Settings &amp; Configuration</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-on-surface font-semibold">Units of Measurement</span>
+<span class="mx-1.5 text-outline-variant">•</span>
+<span class="bg-surface-container-high px-2 py-0.5 rounded text-on-surface font-mono text-[0.6875rem]">REF: SRS-MSR-004</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+        Workspace GF-042 • System Precision L4
+      </span>
+<span class="bg-error-container text-on-error-container px-2 py-0.5 rounded font-label-sm text-[0.6875rem] font-bold tracking-wide uppercase">
+        Farm Admin Only
+      </span>
+</div>
+</div>
+<!-- Page Header -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm mb-space-lg relative overflow-hidden">
+<div class="absolute right-0 top-0 w-80 h-full opacity-5 pointer-events-none flex items-center justify-center">
+<span class="material-symbols-outlined text-[14rem] text-primary">square_foot</span>
+</div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="max-w-3xl">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-xl">straighten</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Standard Metrology Profile</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mb-2">
+          Units of Measurement &amp; Dimension Standards
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Configured dimensions govern sensory telemetry, TMR ration calculations, pasture acreage calculations, and parlor vacuum thresholds.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold transition-colors flex items-center gap-1.5 shadow-sm" onclick="resetFormToDefaults()" type="button">
+<span class="material-symbols-outlined text-base">restart_alt</span>
+          Reset to Defaults
+        </button>
+<button class="px-space-lg py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all flex items-center gap-2 shadow-sm focus:ring-2 focus:ring-tertiary" onclick="showConfirmationModal()" type="button">
+<span class="material-symbols-outlined text-base">save</span>
+          Save Measurement Units
+        </button>
+</div>
+</div>
+</div>
+<!-- SRS Strict Policy Alert Banner -->
+<div class="bg-surface-container-low rounded-xl p-space-lg mb-space-xl shadow-sm relative overflow-hidden"><div class="flex items-start gap-space-md"><div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center flex-shrink-0 shadow-sm mt-0.5"><span class="material-symbols-outlined text-xl">info</span></div><div class="flex-1"><div class="flex flex-wrap items-center gap-2 mb-1"><h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">System-Wide Measurement Notice</h2><span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-mono font-semibold text-[0.6875rem]">SRS STANDARD</span></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Configured units govern system-wide display. Automatic silent conversion is not performed on historical logs. Modifying active standards establishes the reporting and entry baseline for all subsequent herd records, pasture metrics, and logistics entries without altering past stamped records.</p></div></div></div>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column: Core Measurement Domain Options (8 Cols) -->
+<div class="lg:col-span-8 space-y-space-lg">
+<!-- 1. MILK PRODUCTION: MANDATORY IMMUTABLE (LITRES) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm relative overflow-hidden"><div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md mb-space-md bg-surface-container-low/40 -mx-space-lg -mt-space-lg p-space-lg"><div><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">water_drop</span><h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">1. Milk Production &amp; Yield Unit</h2></div><p class="font-body-sm text-body-sm text-on-surface-variant">Core agricultural ledger and commercial dispatch metric</p></div><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shadow-sm"><span class="material-symbols-outlined text-sm">lock</span>Fixed SRS Standard</span></div><div class="p-space-md rounded-lg bg-surface-container-low relative flex flex-col md:flex-row md:items-center justify-between gap-space-md"><div class="flex items-start gap-space-md"><div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0 shadow-inner"><span class="material-symbols-outlined text-2xl">lock</span></div><div><div class="flex items-center gap-2"><span class="font-headline-md text-headline-md text-primary font-bold">Litres (L)</span><span class="px-2 py-0.5 rounded bg-primary text-on-primary text-[0.6875rem] font-bold font-mono">MANDATORY</span></div><p class="font-body-md text-body-md text-on-surface-variant mt-1">Litres (L) - Mandatory standard for bulk tank, parlor collection, and sales across Workspace GF-042.</p></div></div><div class="flex-shrink-0 bg-surface-container-lowest px-space-md py-space-sm rounded-lg shadow-sm text-right"><span class="block font-label-sm text-label-sm text-on-surface-variant">Standard Unit</span><span class="font-data-metric-md text-data-metric-md text-primary font-bold">Litres (L)</span></div></div></section>
+<!-- 2. WEIGHT & MASS UNITS (Kg, Lbs, Maunds) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs mb-space-md">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">scale</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">2. Animal Weight &amp; Forage Feed Mass</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Applied to RFID weigh scales, TMR mixer formulations, and veterinary dosages</p>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2.5 py-1 rounded text-on-surface-variant font-mono">Scope: Herd &amp; Silo</span>
+</div>
+<div aria-label="Weight and Mass Options" class="grid grid-cols-1 md:grid-cols-3 gap-space-md" role="radiogroup">
+<!-- Kilograms -->
+<label class="relative flex flex-col p-space-md rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-all group shadow-sm has-[:checked]:bg-surface-container-lowest has-[:checked]:shadow-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">Kilograms (kg)</span>
+<input checked="" class="w-4 h-4 text-primary focus:ring-tertiary accent-primary" name="mass_unit" onchange="updatePreviews()" type="radio" value="kg">
+</div>
+<span class="inline-block px-1.5 py-0.5 rounded text-[0.6875rem] font-bold bg-secondary-container text-on-secondary-container w-fit mb-2">Current Farm Active</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex-1">
+              Metric standard for individual animal body scores, TMR batch formulation, and dry matter intake (DMI).
+            </p>
+<div class="mt-space-md pt-space-xs bg-surface-container-high/40 p-2 rounded text-[0.6875rem] font-mono text-on-surface-variant">
+              1 kg = 2.20462 lbs
+            </div>
+</label>
+<!-- Pounds -->
+<label class="relative flex flex-col p-space-md rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-all group shadow-sm has-[:checked]:bg-surface-container-lowest has-[:checked]:shadow-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">Pounds (lbs)</span>
+<input class="w-4 h-4 text-primary focus:ring-tertiary accent-primary" name="mass_unit" onchange="updatePreviews()" type="radio" value="lbs">
+</div>
+<span class="inline-block px-1.5 py-0.5 rounded text-[0.6875rem] font-bold bg-surface-container-high text-on-surface-variant w-fit mb-2">Imperial Standard</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex-1">
+              Used in North American commercial feeding management systems and genetic Sire catalogs.
+            </p>
+<div class="mt-space-md pt-space-xs bg-surface-container-high/40 p-2 rounded text-[0.6875rem] font-mono text-on-surface-variant">
+              1 lb = 0.453592 kg
+            </div>
+</label>
+<!-- Maunds -->
+<label class="relative flex flex-col p-space-md rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-all group shadow-sm has-[:checked]:bg-surface-container-lowest has-[:checked]:shadow-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">Maunds (mnd)</span>
+<input class="w-4 h-4 text-primary focus:ring-tertiary accent-primary" name="mass_unit" onchange="updatePreviews()" type="radio" value="maunds">
+</div>
+<span class="inline-block px-1.5 py-0.5 rounded text-[0.6875rem] font-bold bg-surface-container-high text-on-surface-variant w-fit mb-2">Regional Agrarian</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex-1">
+              South Asian traditional bulk grain, silage bundles, and dry straw procurement metric (~40.0 kg).
+            </p>
+<div class="mt-space-md pt-space-xs bg-surface-container-high/40 p-2 rounded text-[0.6875rem] font-mono text-on-surface-variant">
+              1 Maund = ~40.00 kg
+            </div>
+</label>
+</div>
+<!-- Live Calculation Preview Snippet -->
+
+</section>
+<!-- 3. LAND AREA UNITS (Ha, Ac, Kanals) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs mb-space-md">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">crop_free</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">3. Pasture, Paddock &amp; Facility Area</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rotational grazing stocking densities, slurry spraying zones, and paddock boundaries</p>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2.5 py-1 rounded text-on-surface-variant font-mono">Scope: Agronomy</span>
+</div>
+<div aria-label="Land Area Options" class="grid grid-cols-1 md:grid-cols-3 gap-space-md" role="radiogroup">
+<!-- Hectares -->
+<label class="relative flex flex-col p-space-md rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-all group shadow-sm has-[:checked]:bg-surface-container-lowest has-[:checked]:shadow-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">Hectares (ha)</span>
+<input checked="" class="w-4 h-4 text-primary focus:ring-tertiary accent-primary" name="area_unit" onchange="updatePreviews()" type="radio" value="ha">
+</div>
+<span class="inline-block px-1.5 py-0.5 rounded text-[0.6875rem] font-bold bg-secondary-container text-on-secondary-container w-fit mb-2">Current Active</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex-1">
+              Metric standard. Defined as 10,000 m². Standard for national nitrate compliance and satellite vegetation indexes.
+            </p>
+<div class="mt-space-md pt-space-xs bg-surface-container-high/40 p-2 rounded text-[0.6875rem] font-mono text-on-surface-variant">
+              1 ha = 2.47105 acres
+            </div>
+</label>
+<!-- Acres -->
+<label class="relative flex flex-col p-space-md rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-all group shadow-sm has-[:checked]:bg-surface-container-lowest has-[:checked]:shadow-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">Acres (ac)</span>
+<input class="w-4 h-4 text-primary focus:ring-tertiary accent-primary" name="area_unit" onchange="updatePreviews()" type="radio" value="ac">
+</div>
+<span class="inline-block px-1.5 py-0.5 rounded text-[0.6875rem] font-bold bg-surface-container-high text-on-surface-variant w-fit mb-2">Imperial Agrarian</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex-1">
+              Standard imperial land measure (43,560 sq ft). Widely referenced across UK, Irish, and US pasture grazing regimes.
+            </p>
+<div class="mt-space-md pt-space-xs bg-surface-container-high/40 p-2 rounded text-[0.6875rem] font-mono text-on-surface-variant">
+              1 ac = 0.404686 ha
+            </div>
+</label>
+<!-- Kanals & Marlas -->
+<label class="relative flex flex-col p-space-md rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-all group shadow-sm has-[:checked]:bg-surface-container-lowest has-[:checked]:shadow-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">Kanals / Marlas</span>
+<input class="w-4 h-4 text-primary focus:ring-tertiary accent-primary" name="area_unit" onchange="updatePreviews()" type="radio" value="kanals">
+</div>
+<span class="inline-block px-1.5 py-0.5 rounded text-[0.6875rem] font-bold bg-surface-container-high text-on-surface-variant w-fit mb-2">Regional Custom</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex-1">
+              South Asian cadastral standard. 1 Acre = 8 Kanals = 160 Marlas. Utilized for parcel boundaries &amp; lease deeds.
+            </p>
+<div class="mt-space-md pt-space-xs bg-surface-container-high/40 p-2 rounded text-[0.6875rem] font-mono text-on-surface-variant">
+              1 Acre = 8 Kanals (1 Kanal ≈ 505 m²)
+            </div>
+</label>
+</div>
+
+</section>
+<!-- 4. TEMPERATURE & PRESSURE SPLIT GRID -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg"><section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between"><div><div class="flex items-center justify-between mb-space-sm"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">thermostat</span><h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">4. Temperature Reference</h2></div><span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant font-mono">Herd &amp; Storage</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Bulk tank storage, pasteurization records, and herd health clinical monitoring.</p><div aria-label="Temperature Options" class="space-y-space-sm" role="radiogroup"><label class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-all shadow-sm has-[:checked]:bg-surface-container-lowest has-[:checked]:shadow-md"><div class="flex items-center gap-3"><input checked="" class="w-4 h-4 text-primary accent-primary" name="temp_unit" onchange="updatePreviews()" type="radio" value="c"><div><span class="font-label-md text-label-md font-bold text-on-surface block">Celsius (°C)</span><span class="font-body-sm text-body-sm text-on-surface-variant">Metric agronomic standard for dairy storage &amp; health</span></div></div><span class="px-2 py-0.5 rounded text-[0.6875rem] font-bold bg-secondary-container text-on-secondary-container">Active</span></label><label class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-all shadow-sm has-[:checked]:bg-surface-container-lowest has-[:checked]:shadow-md"><div class="flex items-center gap-3"><input class="w-4 h-4 text-primary accent-primary" name="temp_unit" onchange="updatePreviews()" type="radio" value="f"><div><span class="font-label-md text-label-md font-bold text-on-surface block">Fahrenheit (°F)</span><span class="font-body-sm text-body-sm text-on-surface-variant">Imperial standard for dairy herd management</span></div></div><span class="px-2 py-0.5 rounded text-[0.6875rem] font-bold bg-surface-container-high text-on-surface-variant">Alternative</span></label></div></div></section><section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between"><div><div class="flex items-center justify-between mb-space-sm"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">pin</span><h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">5. Numerical Precision Display</h2></div><span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant font-mono">Display Decimals</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Decimal point rounding configurations across daily records and reporting.</p><div class="space-y-space-sm"><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low"><div class="flex flex-col"><span class="font-label-md text-label-md font-bold text-on-surface">Milk Yield Precision</span><span class="font-body-sm text-body-sm text-on-surface-variant">Configured for daily intake and parlor collection</span></div><div class="flex items-center gap-1.5"><label class="inline-flex items-center gap-1 cursor-pointer text-xs font-semibold px-2 py-1 rounded bg-surface-container has-[:checked]:bg-primary has-[:checked]:text-on-primary"><input checked="" class="hidden" name="precision_milk" onchange="updatePrecision()" type="radio" value="1"><span>1 dec (0.0)</span></label><label class="inline-flex items-center gap-1 cursor-pointer text-xs font-semibold px-2 py-1 rounded bg-surface-container has-[:checked]:bg-primary has-[:checked]:text-on-primary"><input class="hidden" name="precision_milk" onchange="updatePrecision()" type="radio" value="2"><span>2 dec (0.00)</span></label></div></div><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low"><div class="flex flex-col"><span class="font-label-md text-label-md font-bold text-on-surface">Feed &amp; Silage Precision</span><span class="font-body-sm text-body-sm text-on-surface-variant">Batch rations and TMR dry matter</span></div><div class="flex items-center gap-1.5"><label class="inline-flex items-center gap-1 cursor-pointer text-xs font-semibold px-2 py-1 rounded bg-surface-container has-[:checked]:bg-primary has-[:checked]:text-on-primary"><input checked="" class="hidden" name="precision_feed" onchange="updatePrecision()" type="radio" value="0"><span>0 dec (0)</span></label><label class="inline-flex items-center gap-1 cursor-pointer text-xs font-semibold px-2 py-1 rounded bg-surface-container has-[:checked]:bg-primary has-[:checked]:text-on-primary"><input class="hidden" name="precision_feed" onchange="updatePrecision()" type="radio" value="1"><span>1 dec (0.0)</span></label></div></div><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low"><div class="flex flex-col"><span class="font-label-md text-label-md font-bold text-on-surface">Financials &amp; Settlements</span><span class="font-body-sm text-body-sm text-on-surface-variant">Accounting &amp; payroll currency standard</span></div><span class="font-mono text-xs font-bold px-2 py-1 rounded bg-surface-container-high text-on-surface">2 dec (0.00)</span></div></div></div></section></div>
+</div>
+<!-- Right Column: Audit Integrity Callout, Telemetry Visuals, Logs (4 Cols) -->
+<div class="lg:col-span-4 space-y-space-lg">
+<!-- Historical Record Integrity Callout -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center gap-2 mb-space-sm text-primary">
+<span class="material-symbols-outlined text-lg">history_edu</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Historical Integrity</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          How historical records display under modified dimension standards without algorithmic conversion errors.
+        </p>
+<!-- Stamped Ledger Record Mockup -->
+<div class="bg-surface-container-low rounded-xl p-space-md space-y-space-sm font-mono text-xs">
+<div class="flex items-center justify-between pb-2 bg-surface-container-high/30 -mx-space-md -mt-space-md px-space-md pt-2 rounded-t-xl text-[0.6875rem]">
+<span class="text-on-surface font-bold">AUDIT RECORD #8491-FEED</span>
+<span class="text-on-surface-variant">Oct 14, 2023</span>
+</div>
+<div class="space-y-1.5 pt-1">
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-sans">Forage Weight:</span>
+<span class="bg-surface-container-high px-2 py-0.5 rounded font-bold text-on-surface">6,420 kg</span>
+</div>
+<div class="flex justify-between items-center text-[0.6875rem] text-outline">
+<span class="font-sans">Unit Stamp At Entry:</span>
+<span class="bg-secondary-fixed/50 text-on-secondary-fixed px-1.5 rounded">ORIGIN: KG</span>
+</div>
+</div>
+<div class="p-2 rounded bg-surface-container-highest/60 text-[0.6875rem] text-on-surface-variant font-sans">
+<span class="font-bold text-primary flex items-center gap-1 mb-0.5">
+<span class="material-symbols-outlined text-xs">info</span>
+              Zero-Assumption Guarantee:
+            </span>
+            If standard is switched to lbs tomorrow, this record will <strong class="text-on-surface">never</strong> become 14,153 lbs silently. It remains stamped as 6,420 kg with historical integrity.
+          </div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Compliance Hash:</span>
+<span class="font-mono text-xs font-semibold text-primary">SHA-256 Validated</span>
+</div>
+</section>
+<!-- Farm Overview Metric Summary Card -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-sm">Dimension Summary</h3>
+<ul class="divide-y-0 space-y-2.5 font-body-sm text-body-sm"><li class="flex items-center justify-between p-2 rounded bg-surface-container-low"><span class="text-on-surface-variant">Milk Production Yield:</span><span class="font-mono font-bold text-primary flex items-center gap-1"><span class="material-symbols-outlined text-xs">lock</span>Litres (L)</span></li><li class="flex items-center justify-between p-2 rounded bg-surface-container-low"><span class="text-on-surface-variant">Live Weight &amp; Feed:</span><span class="font-mono font-bold text-on-surface" id="summary-weight">Kilograms (kg)</span></li><li class="flex items-center justify-between p-2 rounded bg-surface-container-low"><span class="text-on-surface-variant">Pasture &amp; Facility Area:</span><span class="font-mono font-bold text-on-surface" id="summary-area">Hectares (ha)</span></li><li class="flex items-center justify-between p-2 rounded bg-surface-container-low"><span class="text-on-surface-variant">Temperature Reference:</span><span class="font-mono font-bold text-on-surface" id="summary-temp">Celsius (°C)</span></li><li class="flex items-center justify-between p-2 rounded bg-surface-container-low"><span class="text-on-surface-variant">Milk Yield Precision:</span><span class="font-mono font-bold text-on-surface" id="summary-precision-milk">1 Decimal Place</span></li><li class="flex items-center justify-between p-2 rounded bg-surface-container-low"><span class="text-on-surface-variant">Feed / Silage Precision:</span><span class="font-mono font-bold text-on-surface" id="summary-precision-feed">Integer (0 Decimals)</span></li></ul>
+<div class="mt-space-lg p-space-sm rounded-lg bg-surface-container-low text-xs text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-primary">history</span>
+<div>
+<div class="font-semibold text-on-surface">Last Configuration Mod:</div>
+<div>Elena Vance (ADM-9402) on 12-Nov-2023</div>
+</div>
+</div>
+</section>
+<!-- Facility Operational Telemetry Mock -->
+
+</div>
+</div>
+<!-- Interactive Modal Dialog: Unit Modification Policy Confirmation -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-inverse-surface/40 backdrop-blur-sm" id="unit-confirm-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-space-lg shadow-xl relative overflow-hidden">
+<div class="flex items-start gap-space-md mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">warning</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase font-bold text-error tracking-wider block">Strict Farm Policy Acknowledgment</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-0.5">Confirm Unit Dimension Shift</h3>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg mb-space-md space-y-2 text-body-sm font-body-sm text-on-surface-variant">
+<p class="text-on-surface font-semibold">
+          You are changing the unit configuration for Greenfield Dairy Estate.
+        </p>
+<p>
+          In accordance with the <strong class="text-on-surface">SRS Non-Retroactive Integrity Rule</strong>:
+        </p>
+<ul class="list-disc pl-5 space-y-1 text-xs">
+<li>Existing records will retain original units. No automated silent calculations will be applied retroactively.</li>
+<li>All new entries, weighbridge inputs, and connected IoT telemetry will adopt the newly chosen dimension standards.</li>
+<li>Milk production remains locked in metric Litres (L).</li>
+</ul>
+</div>
+<div class="mb-space-lg">
+<label class="flex items-start gap-2.5 cursor-pointer">
+<input class="mt-1 w-4 h-4 text-primary rounded focus:ring-tertiary accent-primary" id="modal-policy-agree" onchange="toggleConfirmButton()" type="checkbox">
+<span class="font-body-sm text-body-sm text-on-surface">
+            I, <strong class="text-primary font-semibold">Elena Vance (ADM-9402)</strong>, acknowledge that historical records will remain un-converted to prevent systemic volumetric and inventory drift.
+          </span>
+</label>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-sm bg-surface-container-low/50 -mx-space-lg -mb-space-lg p-space-md">
+<button class="px-space-md py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-high transition-colors" onclick="hideConfirmationModal()" type="button">
+          Cancel
+        </button>
+<button class="px-space-lg py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold opacity-50 cursor-not-allowed transition-all" disabled="" id="modal-confirm-btn" onclick="executeSaveUnits()" type="button">
+          Authorize &amp; Apply Standard
+        </button>
+</div>
+</div>
+</div>
+<!-- Notification Toast: Save Success -->
+<div class="hidden fixed bottom-6 right-6 z-50 max-w-md bg-inverse-surface text-inverse-on-surface rounded-xl p-space-md shadow-xl flex items-start gap-3 transform transition-all duration-300" id="save-success-toast">
+<span class="material-symbols-outlined text-primary-fixed-dim text-xl mt-0.5">check_circle</span>
+<div class="flex-1">
+<div class="font-label-md text-label-md font-bold text-inverse-on-surface">Measurement Standards Updated</div>
+<div class="font-body-sm text-body-sm text-inverse-on-surface/80 mt-0.5">
+        Dimension rules successfully deployed across Workspace GF-042. Historical records locked with timestamped legacy labels.
+      </div>
+</div>
+<button class="text-inverse-on-surface/60 hover:text-inverse-on-surface" onclick="dismissToast()" type="button">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<!-- Client-Side Vanilla JS for States & Interactive Previews -->
+<script>
+    function updatePreviews() {
+      // Mass
+      const massUnit = document.querySelector('input[name="mass_unit"]:checked').value;
+      const previewMass = document.getElementById('preview-mass-text');
+      const summaryWeight = document.getElementById('summary-weight');
+      if (massUnit === 'kg') {
+        previewMass.textContent = "Cow Weight: 640 kg | Feed Batch: 6,850 kg";
+        summaryWeight.textContent = "Kilograms (kg)";
+      } else if (massUnit === 'lbs') {
+        previewMass.textContent = "Cow Weight: 1,411 lbs | Feed Batch: 15,101 lbs";
+        summaryWeight.textContent = "Pounds (lbs)";
+      } else if (massUnit === 'maunds') {
+        previewMass.textContent = "Cow Weight: 16.0 mnd | Feed Batch: 171.25 mnd";
+        summaryWeight.textContent = "Maunds (~40kg)";
+      }
+
+      // Area
+      const areaUnit = document.querySelector('input[name="area_unit"]:checked').value;
+      const previewArea = document.getElementById('preview-area-text');
+      const summaryArea = document.getElementById('summary-area');
+      if (areaUnit === 'ha') {
+        previewArea.textContent = "Total Farm Holding: 120 Hectares | Grazing Paddock #03: 15 Hectares";
+        summaryArea.textContent = "Hectares (ha)";
+      } else if (areaUnit === 'ac') {
+        previewArea.textContent = "Total Farm Holding: 296.5 Acres | Grazing Paddock #03: 37.1 Acres";
+        summaryArea.textContent = "Acres (ac)";
+      } else if (areaUnit === 'kanals') {
+        previewArea.textContent = "Total Farm Holding: 2,372 Kanals | Grazing Paddock #03: 296 Kanals";
+        summaryArea.textContent = "Kanals / Marlas";
+      }
+
+      // Temp
+      const tempUnit = document.querySelector('input[name="temp_unit"]:checked').value;
+      const previewTemp = document.getElementById('preview-temp-text');
+      const summaryTemp = document.getElementById('summary-temp');
+      if (tempUnit === 'c') {
+        previewTemp.textContent = "3.4 °C (Nominal)";
+        summaryTemp.textContent = "Celsius (°C)";
+      } else {
+        previewTemp.textContent = "38.1 °F (Nominal)";
+        summaryTemp.textContent = "Fahrenheit (°F)";
+      }
+
+      // Pressure
+      const pressureUnit = document.querySelector('input[name="pressure_unit"]:checked').value;
+      const previewPressure = document.getElementById('preview-pressure-text');
+      const summaryPressure = document.getElementById('summary-pressure');
+      if (pressureUnit === 'kpa') {
+        previewPressure.textContent = "42.2 kPa (Stable)";
+        summaryPressure.textContent = "Kilopascals (kPa)";
+      } else {
+        previewPressure.textContent = "12.4 inHg (Stable)";
+        summaryPressure.textContent = "Inches of Mercury (inHg)";
+      }
+    }
+
+    function resetFormToDefaults() {
+      document.querySelector('input[name="mass_unit"][value="kg"]').checked = true;
+      document.querySelector('input[name="area_unit"][value="ha"]').checked = true;
+      document.querySelector('input[name="temp_unit"][value="c"]').checked = true;
+      document.querySelector('input[name="pressure_unit"][value="kpa"]').checked = true;
+      updatePreviews();
+    }
+
+    function showConfirmationModal() {
+      const modal = document.getElementById('unit-confirm-modal');
+      const checkbox = document.getElementById('modal-policy-agree');
+      const btn = document.getElementById('modal-confirm-btn');
+      checkbox.checked = false;
+      btn.disabled = true;
+      btn.classList.add('opacity-50', 'cursor-not-allowed');
+      modal.classList.remove('hidden');
+    }
+
+    function hideConfirmationModal() {
+      const modal = document.getElementById('unit-confirm-modal');
+      modal.classList.add('hidden');
+    }
+
+    function toggleConfirmButton() {
+      const checkbox = document.getElementById('modal-policy-agree');
+      const btn = document.getElementById('modal-confirm-btn');
+      if (checkbox.checked) {
+        btn.disabled = false;
+        btn.classList.remove('opacity-50', 'cursor-not-allowed');
+      } else {
+        btn.disabled = true;
+        btn.classList.add('opacity-50', 'cursor-not-allowed');
+      }
+    }
+
+    function executeSaveUnits() {
+      hideConfirmationModal();
+      showSuccessToast();
+    }
+
+    function showSuccessToast() {
+      const toast = document.getElementById('save-success-toast');
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        dismissToast();
+      }, 5000);
+    }
+
+    function dismissToast() {
+      const toast = document.getElementById('save-success-toast');
+      toast.classList.add('hidden');
+    }
+
+    // QA State Management
+    function switchQaState(state) {
+      const btnStandard = document.getElementById('qa-btn-standard');
+      const btnConfirm = document.getElementById('qa-btn-confirm');
+      const btnToast = document.getElementById('qa-btn-toast');
+
+      // Reset buttons style
+      [btnStandard, btnConfirm, btnToast].forEach(b => {
+        b.className = "px-space-sm py-1 rounded text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all";
+      });
+
+      if (state === 'standard') {
+        btnStandard.className = "px-space-sm py-1 rounded text-label-sm font-label-sm bg-primary text-on-primary font-semibold transition-all";
+        hideConfirmationModal();
+        dismissToast();
+        resetFormToDefaults();
+      } else if (state === 'confirm') {
+        btnConfirm.className = "px-space-sm py-1 rounded text-label-sm font-label-sm bg-primary text-on-primary font-semibold transition-all";
+        dismissToast();
+        showConfirmationModal();
+      } else if (state === 'toast') {
+        btnToast.className = "px-space-sm py-1 rounded text-label-sm font-label-sm bg-primary text-on-primary font-semibold transition-all";
+        hideConfirmationModal();
+        showSuccessToast();
+      }
+    }
+  </script>
+</div></main></div>
+
+</body></html>

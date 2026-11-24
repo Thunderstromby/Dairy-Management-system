@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SmartFarm — How It Works</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Inter:wght@300;400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-dim": "#ceded3",
+            "on-primary-container": "#82aa97",
+            "surface-bright": "#edfdf2",
+            "background": "#edfdf2",
+            "primary-container": "#183f30",
+            "on-primary-fixed": "#002115",
+            "secondary-fixed": "#adf2c8",
+            "on-error-container": "#93000a",
+            "outline-variant": "#c1c8c2",
+            "on-background": "#111e18",
+            "on-tertiary": "#ffffff",
+            "primary": "#00291b",
+            "on-surface": "#111e18",
+            "surface-container-lowest": "#ffffff",
+            "surface-variant": "#d6e6dc",
+            "inverse-surface": "#25332c",
+            "inverse-on-surface": "#e4f5ea",
+            "on-error": "#ffffff",
+            "on-surface-variant": "#414844",
+            "surface-container-highest": "#d6e6dc",
+            "secondary-container": "#adf2c8",
+            "primary-fixed": "#c1ecd6",
+            "surface-container-high": "#dcece1",
+            "tertiary-fixed": "#ffdea6",
+            "tertiary": "#302000",
+            "tertiary-container": "#4b3400",
+            "on-tertiary-fixed-variant": "#5e4200",
+            "on-primary-fixed-variant": "#284e3e",
+            "error-container": "#ffdad6",
+            "secondary-fixed-dim": "#92d5ad",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed-variant": "#065233",
+            "surface-container-low": "#e7f8ed",
+            "error": "#ba1a1a",
+            "surface-tint": "#406655",
+            "surface-container": "#e1f2e7",
+            "tertiary-fixed-dim": "#f1bf60",
+            "on-secondary-fixed": "#002112",
+            "on-tertiary-fixed": "#271900",
+            "surface": "#edfdf2",
+            "outline": "#717974",
+            "secondary": "#286a49",
+            "primary-fixed-dim": "#a6d0bb",
+            "on-tertiary-container": "#c89a3f",
+            "on-primary": "#ffffff",
+            "on-secondary-container": "#2f704f",
+            "inverse-primary": "#a6d0bb",
+            /* Editorial Palette mappings */
+            "forest": "#183f30",
+            "pasture": "#397a58",
+            "ivory": "#f7f7f1",
+            "gold": "#d5a64a",
+            "charcoal": "#25332c",
+            "muted-text": "#58675d",
+            "faint-border": "#dce3da",
+            "sage-mist": "#e9efe5"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          fontFamily: {
+            "serif-display": ['"DM Serif Display"', 'Georgia', 'serif'],
+            "sans": ['Inter', 'Manrope', 'sans-serif'],
+            "manrope": ['Manrope', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: 200%;
+      animation: marquee 35s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#f7f7f1] text-[#25332c] antialiased selection:bg-[#397a58] selection:text-white" style="font-family: 'Inter', sans-serif;">
+<!-- TOP APP BAR -->
+<header class="sticky top-0 z-50 bg-[#f7f7f1]/90 backdrop-blur-md border-b border-[#dce3da]">
+<div class="max-w-[1240px] mx-auto px-6 h-20 flex items-center justify-between">
+<a class="flex items-center gap-3 text-[#183f30]" href="#">
+<div class="w-8 h-8 rounded bg-[#183f30] text-[#f7f7f1] flex items-center justify-center font-serif-display text-xl font-bold">
+          S
+        </div>
+<span class="text-xl font-bold font-manrope tracking-tight text-[#183f30]">SmartFarm</span>
+</a>
+<nav class="hidden md:flex items-center gap-8 text-sm font-medium text-[#25332c]">
+<a class="hover:text-[#397a58] transition-colors" href="#">Platform</a>
+<a class="hover:text-[#397a58] transition-colors" href="#">Features</a>
+<a class="text-[#183f30] font-semibold border-b-2 border-[#183f30] pb-1" href="#process-overview">How It Works</a>
+<a class="hover:text-[#397a58] transition-colors" href="#">Pricing</a>
+<a class="hover:text-[#397a58] transition-colors" href="#">About</a>
+</nav>
+<div class="flex items-center gap-3">
+<a class="hidden sm:inline-flex items-center px-4 py-2.5 text-xs font-semibold tracking-wider uppercase text-[#183f30] border border-[#dce3da] rounded hover:bg-[#e9efe5] transition" href="#">
+          Sign In
+        </a>
+<a class="inline-flex items-center px-4 py-2.5 text-xs font-semibold tracking-wider uppercase bg-[#183f30] text-[#f7f7f1] rounded hover:bg-[#25332c] transition shadow-sm" href="#contact">
+          Contact SmartFarm
+        </a>
+</div>
+</div>
+</header>
+<main>
+<!-- SECTION 1 — HERO -->
+<section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden border-b border-[#dce3da]">
+<div class="max-w-[1240px] mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#e9efe5] border border-[#dce3da] text-xs font-bold tracking-widest uppercase text-[#183f30]">
+<span class="w-2 h-2 rounded-full bg-[#397a58]"></span>
+              A clearer way to manage your farm
+            </div>
+<h1 class="font-serif-display text-4xl sm:text-5xl lg:text-6xl text-[#183f30] leading-[1.12] tracking-tight">
+              From farm setup to everyday management.
+            </h1>
+<p class="text-base sm:text-lg text-[#58675d] leading-relaxed max-w-xl">
+              SmartFarm brings your dairy farm's management activities into one organized platform, with a setup process supported by the SmartFarm team.
+            </p>
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center justify-center px-6 py-3.5 bg-[#183f30] text-[#f7f7f1] text-sm font-semibold rounded hover:bg-[#286a49] transition duration-200" href="#process-overview">
+                Explore the Process
+                <span class="material-symbols-outlined ml-2 text-base">arrow_downward</span>
+</a>
+<a class="inline-flex items-center justify-center px-6 py-3.5 bg-[#ffffff] text-[#183f30] text-sm font-semibold rounded border border-[#dce3da] hover:bg-[#e9efe5] transition duration-200" href="#contact">
+                Contact SmartFarm
+              </a>
+</div>
+<div class="pt-6 border-t border-[#dce3da] flex items-center gap-8 text-xs font-medium text-[#58675d]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#397a58] text-sm">verified</span>
+                White-Glove Provisioning
+              </div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#397a58] text-sm">lock</span>
+                Strict Access Governance
+              </div>
+</div>
+</div>
+<!-- Hero Image & UI Overlay -->
+<div class="lg:col-span-6 relative">
+<div class="relative rounded-lg overflow-hidden border border-[#dce3da] shadow-xl bg-white aspect-[4/3] group">
+<img class="w-full h-full object-cover" data-alt="Cinematic wide-angle shot of a lush, fertile dairy pasture during early morning mist with Dutch Holstein cows grazing calmly along rolling green hills. Warm golden morning sunlight strikes dew-covered grass with clean atmospheric lighting in high dynamic range, conveying agricultural precision, modern pastoral elegance, and tranquil enterprise scale." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJgvQBqYBVzV7hBNHDIPXZoVMzHp1c8xV84D0Z8ehMzMRdh3C6SnqvbZJKdAXBJVTuQJbXSWQl_PKaGR0wQbXN3mHsTOE7yDFw-RhW_bGjlq5V1Bm3FM50WbvXZQqd35O_aE7vIEcb_-tksfvdW-RIjEXer7z8IBEC_FTa3uYVLo0ZoghdR3oO0nBDyWXgFGbozQv9ezCmWmWAHF2toh1c_8Td7dRfK9Bsuh2dbwA"/>
+<!-- Subtle vignette overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#183f30]/70 via-transparent to-black/20"></div>
+<!-- Product Interface Overlay Badge -->
+<div class="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-md p-4 rounded border border-[#dce3da] shadow-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded bg-[#183f30] flex items-center justify-center text-[#f7f7f1]">
+<span class="material-symbols-outlined text-lg">domain</span>
+</div>
+<div>
+<div class="text-[10px] font-bold uppercase tracking-wider text-[#397a58]">Dedicated Workspace Provisioned</div>
+<div class="text-sm font-bold text-[#183f30]">High-Integrity Dairy Architecture</div>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-[#e9efe5] text-[11px] font-semibold text-[#183f30] border border-[#dce3da]">
+                    Online • Verified
+                  </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2 — THE PROCESS OVERVIEW -->
+<section class="py-24 bg-[#ffffff] border-b border-[#dce3da]" id="process-overview">
+<div class="max-w-[1240px] mx-auto px-6">
+<div class="max-w-2xl mb-16">
+<span class="text-xs font-bold tracking-widest uppercase text-[#397a58]">System Architecture</span>
+<h2 class="font-serif-display text-3xl sm:text-4xl text-[#183f30] mt-2 mb-4 leading-tight">
+            A straightforward path to connected farm management.
+          </h2>
+<p class="text-base text-[#58675d]">
+            A clear, guided journey designed around real dairy operations.
+          </p>
+</div>
+<!-- 3-Stage Timeline -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+<!-- Connector line for desktop -->
+<div class="hidden md:block absolute top-7 left-12 right-12 h-[2px] bg-[#dce3da] z-0"></div>
+<!-- Stage 1 -->
+<div class="relative z-10 bg-[#f7f7f1] p-6 rounded border border-[#dce3da] flex flex-col justify-between hover:border-[#397a58] transition group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded bg-[#183f30] text-[#f7f7f1] flex items-center justify-center font-bold text-sm shadow">
+                  01
+                </div>
+<span class="text-[11px] font-semibold tracking-wider uppercase text-[#397a58] bg-[#e9efe5] px-2 py-0.5 rounded border border-[#dce3da]">Step One</span>
+</div>
+<h3 class="font-serif-display text-xl text-[#183f30] mb-2">Set Up Your Workspace</h3>
+<p class="text-sm text-[#58675d] leading-relaxed">
+                Guided provisioning and administrative baseline configuration handled in tandem with the SmartFarm technical deployment team.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#dce3da]/60 text-xs font-semibold text-[#183f30] flex items-center gap-1 group-hover:text-[#397a58]">
+              Read Stage Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Stage 2 -->
+<div class="relative z-10 bg-[#f7f7f1] p-6 rounded border border-[#dce3da] flex flex-col justify-between hover:border-[#397a58] transition group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded bg-[#183f30] text-[#f7f7f1] flex items-center justify-center font-bold text-sm shadow">
+                  02
+                </div>
+<span class="text-[11px] font-semibold tracking-wider uppercase text-[#397a58] bg-[#e9efe5] px-2 py-0.5 rounded border border-[#dce3da]">Step Two</span>
+</div>
+<h3 class="font-serif-display text-xl text-[#183f30] mb-2">Organize Farm Operations</h3>
+<p class="text-sm text-[#58675d] leading-relaxed">
+                Centralizing livestock herd registers, daily bulk tank yields, feeding allocations, veterinary treatments, and parlor equipment logs.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#dce3da]/60 text-xs font-semibold text-[#183f30] flex items-center gap-1 group-hover:text-[#397a58]">
+              Read Stage Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Stage 3 -->
+<div class="relative z-10 bg-[#f7f7f1] p-6 rounded border border-[#dce3da] flex flex-col justify-between hover:border-[#397a58] transition group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded bg-[#183f30] text-[#f7f7f1] flex items-center justify-center font-bold text-sm shadow">
+                  03
+                </div>
+<span class="text-[11px] font-semibold tracking-wider uppercase text-[#397a58] bg-[#e9efe5] px-2 py-0.5 rounded border border-[#dce3da]">Step Three</span>
+</div>
+<h3 class="font-serif-display text-xl text-[#183f30] mb-2">Manage with Greater Clarity</h3>
+<p class="text-sm text-[#58675d] leading-relaxed">
+                Role-based operational clarity and auditable oversight without guesswork, automated decisions, or unsubstantiated projections.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#dce3da]/60 text-xs font-semibold text-[#183f30] flex items-center gap-1 group-hover:text-[#397a58]">
+              Read Stage Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3 — STEP 1: WORKSPACE SETUP -->
+<section class="py-24 bg-[#f7f7f1] border-b border-[#dce3da]">
+<div class="max-w-[1240px] mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 space-y-6">
+<div class="text-xs font-bold tracking-widest uppercase text-[#397a58]">
+              STAGE 01 // ONBOARDING &amp; SETUP
+            </div>
+<h2 class="font-serif-display text-3xl sm:text-4xl text-[#183f30] leading-tight">
+              Start with your farm workspace.
+            </h2>
+<p class="text-base text-[#58675d] leading-relaxed">
+              Every dairy enterprise has unique grazing boundaries, herd numbers, milking shifts, and tank capacities. Rather than leaving you to generic self-service menus, our deployment specialists personally establish your production instance.
+            </p>
+<!-- Detailed Steps -->
+<ul class="space-y-4 pt-2">
+<li class="flex items-start gap-3">
+<span class="w-6 h-6 rounded-full bg-[#183f30] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</span>
+<div>
+<h4 class="text-sm font-semibold text-[#183f30]">Direct Specialist Consultation</h4>
+<p class="text-xs text-[#58675d]">A prospective customer contacts the SmartFarm team to map out physical infrastructure and dairy requirements.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="w-6 h-6 rounded-full bg-[#183f30] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</span>
+<div>
+<h4 class="text-sm font-semibold text-[#183f30]">Tenant Isolation &amp; Baseline Provisioning</h4>
+<p class="text-xs text-[#58675d]">The SmartFarm technical team handles enterprise registration, data isolation, and farm geometry configuration.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="w-6 h-6 rounded-full bg-[#183f30] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</span>
+<div>
+<h4 class="text-sm font-semibold text-[#183f30]">Farm Admin Issuance</h4>
+<p class="text-xs text-[#58675d]">A primary Farm Admin account is provisioned by the Super Admin with verified credentials and cryptographic tokens.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="w-6 h-6 rounded-full bg-[#183f30] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">4</span>
+<div>
+<h4 class="text-sm font-semibold text-[#183f30]">Workspace Handover</h4>
+<p class="text-xs text-[#58675d]">The designated Farm Admin receives immediate direct access to their isolated, fully configured dairy instance.</p>
+</div>
+</li>
+</ul>
+<!-- Explicit System Note Box -->
+<div class="p-4 rounded bg-[#ffffff] border-l-4 border-[#d5a64a] border-t border-r border-b border-[#dce3da]">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[#d5a64a] text-lg shrink-0">info</span>
+<p class="text-xs font-medium text-[#25332c] leading-relaxed">
+<span class="font-bold text-[#183f30]">Operational Policy:</span> There is NO public self-registration, automated card checkout, unverified trial provisioning, or automated tenant generation. Every instance undergoes strict tenant verification.
+                </p>
+</div>
+</div>
+</div>
+<!-- Visual UI Illustration: Super Admin Workspace Provisioning Modal -->
+<div class="lg:col-span-6">
+<div class="bg-white rounded-lg border border-[#dce3da] shadow-lg overflow-hidden">
+<div class="bg-[#183f30] px-5 py-3 flex items-center justify-between text-white text-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-[#adf2c8]">shield</span>
+<span class="font-semibold tracking-wide">Super Admin Console // Tenant Provisioning</span>
+</div>
+<span class="text-[10px] bg-white/20 px-2 py-0.5 rounded">ENV: PRODUCTION-US-EAST</span>
+</div>
+<div class="p-6 space-y-6">
+<!-- Modal Header -->
+<div class="border-b border-[#dce3da] pb-4">
+<div class="text-xs font-bold text-[#397a58] uppercase">New Farm Tenant Registration</div>
+<div class="text-lg font-bold text-[#183f30] mt-1">Highland Pastures Dairy Ltd.</div>
+<div class="text-xs text-[#58675d]">ID: SF-TENANT-8942-NY • Assigned Cluster: 04</div>
+</div>
+<!-- Boundary & Herd Params -->
+<div class="grid grid-cols-2 gap-4 text-xs">
+<div class="p-3 bg-[#f7f7f1] rounded border border-[#dce3da]">
+<div class="text-[#849087] font-medium">Herd Capacity Quota</div>
+<div class="font-bold text-[#183f30] text-sm mt-1">850 Head (Milking + Heifers)</div>
+</div>
+<div class="p-3 bg-[#f7f7f1] rounded border border-[#dce3da]">
+<div class="text-[#849087] font-medium">Bulk Storage Profile</div>
+<div class="font-bold text-[#183f30] text-sm mt-1">Twin 15,000L Silo Monitoring</div>
+</div>
+</div>
+<!-- Credential Provisioning Card -->
+<div class="p-4 bg-[#e9efe5] rounded border border-[#397a58]/30 space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold text-[#183f30] uppercase flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[#397a58] text-base">key</span>
+                      Farm Admin Credential Package
+                    </span>
+<span class="text-[10px] font-mono text-[#397a58] bg-white px-2 py-0.5 rounded border border-[#dce3da]">TLS-256 ISSUED</span>
+</div>
+<div class="space-y-1.5 font-mono text-xs">
+<div class="text-[#25332c] flex justify-between">
+<span class="text-[#58675d]">Designated Owner:</span>
+<span class="font-semibold">m.holst@highlandpastures.com</span>
+</div>
+<div class="text-[#25332c] flex justify-between">
+<span class="text-[#58675d]">Initial Token:</span>
+<span class="text-[#397a58] tracking-widest">•••••••••••••••• (Encrypted)</span>
+</div>
+<div class="text-[#25332c] flex justify-between">
+<span class="text-[#58675d]">Permissions Granted:</span>
+<span class="font-semibold text-[#183f30]">ROLE_FARM_ADMIN (All Sub-ledgers)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-xs pt-2">
+<span class="text-[#58675d] flex items-center gap-1">
+<span class="material-symbols-outlined text-[#397a58] text-sm">check_circle</span>
+                    Workspace initialized &amp; ready for handover
+                  </span>
+<button class="px-4 py-2 bg-[#183f30] text-white font-semibold rounded text-xs">
+                    Dispatch Access Dossier
+                  </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4 — STEP 2: ORGANIZE FARM INFORMATION -->
+<section class="py-24 bg-[#ffffff] border-b border-[#dce3da]">
+<div class="max-w-[1240px] mx-auto px-6">
+<div class="max-w-2xl mb-16">
+<div class="text-xs font-bold tracking-widest uppercase text-[#397a58]">STAGE 02 // DATA CONSOLIDATION</div>
+<h2 class="font-serif-display text-3xl sm:text-4xl text-[#183f30] mt-2 mb-4 leading-tight">
+            Bring your farm information together.
+          </h2>
+<p class="text-base text-[#58675d]">
+            Authorized users systematically consolidate vital dairy data into organized operational modules, replacing disconnected notebooks and siloed spreadsheets.
+          </p>
+</div>
+<!-- 7 Modular Data Pillars Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Pillar 1 -->
+<div class="p-5 rounded bg-[#f7f7f1] border border-[#dce3da] hover:border-[#397a58] transition">
+<div class="w-10 h-10 rounded bg-[#e9efe5] text-[#183f30] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">pets</span>
+</div>
+<h3 class="font-serif-display text-lg text-[#183f30] mb-1">Animal Records</h3>
+<p class="text-xs text-[#58675d] leading-relaxed">
+              RFID &amp; visual tag numbers, breed pedigree, lactation cycle stage, calving history, and pen allocations.
+            </p>
+<div class="mt-4 pt-3 border-t border-[#dce3da] text-[11px] font-semibold text-[#397a58]">
+              RFID Cross-Indexing
+            </div>
+</div>
+<!-- Pillar 2 -->
+<div class="p-5 rounded bg-[#f7f7f1] border border-[#dce3da] hover:border-[#397a58] transition">
+<div class="w-10 h-10 rounded bg-[#e9efe5] text-[#183f30] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">medication</span>
+</div>
+<h3 class="font-serif-display text-lg text-[#183f30] mb-1">Health Information</h3>
+<p class="text-xs text-[#58675d] leading-relaxed">
+              Antibiotic treatments, strict milk withholding periods, hoof checks, mastitis logs, and veterinary schedules.
+            </p>
+<div class="mt-4 pt-3 border-t border-[#dce3da] text-[11px] font-semibold text-[#397a58]">
+              Withholding Compliance
+            </div>
+</div>
+<!-- Pillar 3 -->
+<div class="p-5 rounded bg-[#f7f7f1] border border-[#dce3da] hover:border-[#397a58] transition">
+<div class="w-10 h-10 rounded bg-[#e9efe5] text-[#183f30] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<h3 class="font-serif-display text-lg text-[#183f30] mb-1">Milk Production</h3>
+<p class="text-xs text-[#58675d] leading-relaxed">
+              Morning &amp; evening milking vat volumes, bulk tank temperature recordings, fat/protein percentages, and pickup logs.
+            </p>
+<div class="mt-4 pt-3 border-t border-[#dce3da] text-[11px] font-semibold text-[#397a58]">
+              Vat Temperature Logging
+            </div>
+</div>
+<!-- Pillar 4 -->
+<div class="p-5 rounded bg-[#f7f7f1] border border-[#dce3da] hover:border-[#397a58] transition">
+<div class="w-10 h-10 rounded bg-[#e9efe5] text-[#183f30] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">grain</span>
+</div>
+<h3 class="font-serif-display text-lg text-[#183f30] mb-1">Inventory &amp; Feeding</h3>
+<p class="text-xs text-[#58675d] leading-relaxed">
+              Grain silo tonnages, silage bunker reserves, mineral supplements, and daily pasture Dry Matter (DM) allocations.
+            </p>
+<div class="mt-4 pt-3 border-t border-[#dce3da] text-[11px] font-semibold text-[#397a58]">
+              Pasture DM Tracking
+            </div>
+</div>
+<!-- Pillar 5 -->
+<div class="p-5 rounded bg-[#f7f7f1] border border-[#dce3da] hover:border-[#397a58] transition">
+<div class="w-10 h-10 rounded bg-[#e9efe5] text-[#183f30] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">badge</span>
+</div>
+<h3 class="font-serif-display text-lg text-[#183f30] mb-1">Worker Attendance</h3>
+<p class="text-xs text-[#58675d] leading-relaxed">
+              Milking parlor rosters, shift transition checklists, certification compliance, and task assignment logs.
+            </p>
+<div class="mt-4 pt-3 border-t border-[#dce3da] text-[11px] font-semibold text-[#397a58]">
+              Parlor Shift Rostering
+            </div>
+</div>
+<!-- Pillar 6 -->
+<div class="p-5 rounded bg-[#f7f7f1] border border-[#dce3da] hover:border-[#397a58] transition">
+<div class="w-10 h-10 rounded bg-[#e9efe5] text-[#183f30] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">precision_manufacturing</span>
+</div>
+<h3 class="font-serif-display text-lg text-[#183f30] mb-1">Equipment Records</h3>
+<p class="text-xs text-[#58675d] leading-relaxed">
+              Vacuum pump running hours, plate cooler cleaning cycles, bulk tank compressor services, and generator tests.
+            </p>
+<div class="mt-4 pt-3 border-t border-[#dce3da] text-[11px] font-semibold text-[#397a58]">
+              Maintenance Schedules
+            </div>
+</div>
+<!-- Pillar 7 (Spans 2 columns on lg screens) -->
+<div class="p-5 rounded bg-[#f7f7f1] border border-[#dce3da] hover:border-[#397a58] transition lg:col-span-2">
+<div class="w-10 h-10 rounded bg-[#e9efe5] text-[#183f30] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<h3 class="font-serif-display text-lg text-[#183f30] mb-1">Financial Ledgers</h3>
+<p class="text-xs text-[#58675d] leading-relaxed">
+              Direct operating cost allocation, veterinary medicine invoices, concentrate feed expenditures, processor delivery receipts, and gross milk margin calculation. Restricted strictly to Farm Admin access.
+            </p>
+<div class="mt-4 pt-3 border-t border-[#dce3da] text-[11px] font-semibold text-[#397a58]">
+              Restricted to Administrative Clearance
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5 — STEP 3: MANAGE DAILY OPERATIONS -->
+<section class="py-24 bg-[#f7f7f1] border-b border-[#dce3da]">
+<div class="max-w-[1240px] mx-auto px-6">
+<div class="max-w-2xl mb-16">
+<div class="text-xs font-bold tracking-widest uppercase text-[#397a58]">STAGE 03 // ROLE-BASED WORKFLOWS</div>
+<h2 class="font-serif-display text-3xl sm:text-4xl text-[#183f30] mt-2 mb-4 leading-tight">
+            Work with the information your team needs.
+          </h2>
+<p class="text-base text-[#58675d]">
+            Clean operational boundaries prevent errors. Farm Admins orchestrate business governance while Farm Supervisors execute daily herd and parlor routines under precise role-based boundaries.
+          </p>
+</div>
+<!-- Dual-Pane View Comparison -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- View 1: Farm Admin Console View -->
+<div class="bg-white rounded-lg border border-[#dce3da] overflow-hidden shadow-sm">
+<div class="bg-[#183f30] text-white p-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-[#adf2c8]">admin_panel_settings</span>
+<span class="font-bold text-sm">Farm Admin Console View</span>
+</div>
+<span class="text-[10px] bg-white/20 px-2 py-0.5 rounded font-mono">FULL CLEARANCE</span>
+</div>
+<div class="p-6 space-y-5">
+<p class="text-xs text-[#58675d]">
+                Unrestricted visibility across cost centers, payroll rosters, supplier contacts, and tenant-level configurations.
+              </p>
+<!-- Mockup UI Lines -->
+<div class="space-y-3 font-mono text-xs">
+<div class="p-3 bg-[#f7f7f1] rounded border border-[#dce3da] flex items-center justify-between">
+<span class="text-[#25332c] flex items-center gap-2">
+<span class="material-symbols-outlined text-[#397a58] text-base">payments</span>
+                    Feed Margin Ledger (May 2024)
+                  </span>
+<span class="font-bold text-[#183f30]">$41,820.00 Net</span>
+</div>
+<div class="p-3 bg-[#f7f7f1] rounded border border-[#dce3da] flex items-center justify-between">
+<span class="text-[#25332c] flex items-center gap-2">
+<span class="material-symbols-outlined text-[#397a58] text-base">manage_accounts</span>
+                    Access Permissions &amp; Shift Rosters
+                  </span>
+<span class="text-[#397a58] font-bold">14 Active Staff</span>
+</div>
+<div class="p-3 bg-[#f7f7f1] rounded border border-[#dce3da] flex items-center justify-between">
+<span class="text-[#25332c] flex items-center gap-2">
+<span class="material-symbols-outlined text-[#397a58] text-base">inventory</span>
+                    Full Herd Lifecycle Archive
+                  </span>
+<span class="text-[#183f30] font-bold">Audit Mode Ready</span>
+</div>
+</div>
+<div class="pt-2 border-t border-[#dce3da] text-xs text-[#58675d] flex items-center gap-2">
+<span class="material-symbols-outlined text-[#397a58] text-sm">lock_open</span>
+                Farm Admin manages sensitive ledgers, user invitations, and compliance reports.
+              </div>
+</div>
+</div>
+<!-- View 2: Farm Supervisor View -->
+<div class="bg-white rounded-lg border border-[#dce3da] overflow-hidden shadow-sm">
+<div class="bg-[#397a58] text-white p-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-[#adf2c8]">assignment_ind</span>
+<span class="font-bold text-sm">Farm Supervisor View</span>
+</div>
+<span class="text-[10px] bg-white/20 px-2 py-0.5 rounded font-mono">OPERATIONAL ONLY</span>
+</div>
+<div class="p-6 space-y-5">
+<p class="text-xs text-[#58675d]">
+                Streamlined focus for parlor shifts, herd health checks, and feed drops. Zero financial exposure.
+              </p>
+<!-- Mockup UI Lines -->
+<div class="space-y-3 font-mono text-xs">
+<div class="p-3 bg-[#f7f7f1] rounded border border-[#dce3da] flex items-center justify-between">
+<span class="text-[#25332c] flex items-center gap-2">
+<span class="material-symbols-outlined text-[#397a58] text-base">vaccines</span>
+                    Active Pen 3 Treatment Checklist
+                  </span>
+<span class="font-bold text-[#ba1a1a]">4 Cows Withholding</span>
+</div>
+<div class="p-3 bg-[#f7f7f1] rounded border border-[#dce3da] flex items-center justify-between">
+<span class="text-[#25332c] flex items-center gap-2">
+<span class="material-symbols-outlined text-[#397a58] text-base">speed</span>
+                    Evening Milking Batch Volume Log
+                  </span>
+<span class="text-[#397a58] font-bold">Entry In Progress</span>
+</div>
+<div class="p-3 bg-[#e9efe5] rounded border border-[#dce3da] flex items-center justify-between text-[#849087]">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#849087] text-base">lock</span>
+                    Financial Accounting &amp; Direct Costs
+                  </span>
+<span class="text-[11px] uppercase font-bold text-[#849087]">Restricted Access</span>
+</div>
+</div>
+<div class="pt-2 border-t border-[#dce3da] text-xs text-[#58675d] flex items-center gap-2">
+<span class="material-symbols-outlined text-[#397a58] text-sm">check_circle</span>
+                Farm Supervisor focuses cleanly on herd welfare, milking records, and daily task execution.
+              </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6 — STEP 4: REVIEW AND UNDERSTAND -->
+<section class="py-24 bg-[#ffffff] border-b border-[#dce3da]">
+<div class="max-w-[1240px] mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 space-y-6">
+<div class="text-xs font-bold tracking-widest uppercase text-[#397a58]">
+              STAGE 04 // OPERATIONAL CLARITY
+            </div>
+<h2 class="font-serif-display text-3xl sm:text-4xl text-[#183f30] leading-tight">
+              Turn organized records into clearer visibility.
+            </h2>
+<p class="text-base text-[#58675d] leading-relaxed">
+              Review dairy performance through clear structured reports, timely operational notifications, and verifiable inspection records.
+            </p>
+<div class="p-4 rounded bg-[#e9efe5] border border-[#dce3da] space-y-2">
+<div class="text-xs font-bold text-[#183f30] uppercase">Engineering Principles</div>
+<p class="text-xs text-[#58675d] leading-relaxed">
+                SmartFarm is founded on dependable record hygiene. We provide verifiable data ledgers and rule-based threshold warnings—free of speculative AI claims, automated decision-making, or unrealistic yield guarantees.
+              </p>
+</div>
+<ul class="space-y-3 pt-2 text-xs font-medium text-[#25332c]">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#397a58] text-base">notifications_active</span>
+                Automated Bulk Tank Temperature Threshold Alerts
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#397a58] text-base">timer</span>
+                Active Milk Withholding Time-Lock Countdowns
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#397a58] text-base">download</span>
+                Instant One-Click Regulatory Herd Traceability Exports
+              </li>
+</ul>
+</div>
+<!-- Reports & Alert Ledger Interface Preview -->
+<div class="lg:col-span-7">
+<div class="bg-[#f7f7f1] rounded-lg border border-[#dce3da] p-6 shadow-md space-y-6">
+<div class="flex items-center justify-between border-b border-[#dce3da] pb-4">
+<div>
+<span class="text-[10px] font-bold text-[#397a58] uppercase">Audit Ledger &amp; Alert Center</span>
+<div class="text-base font-bold text-[#183f30]">Live Facility Threshold Status</div>
+</div>
+<span class="text-xs font-mono text-[#58675d]">SYSTEM SYNC: 2 MIN AGO</span>
+</div>
+<!-- Critical Alert Card -->
+<div class="p-4 bg-white rounded border-l-4 border-[#ba1a1a] border-[#dce3da] shadow-sm flex items-start justify-between">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded bg-[#ffdad6] text-[#ba1a1a] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-base">warning</span>
+</div>
+<div>
+<div class="text-xs font-bold text-[#ba1a1a] uppercase">Withholding Compliance Alarm</div>
+<div class="text-sm font-semibold text-[#183f30]">Cow #8412 (Pen 2) — Active Penicillin G Withholding</div>
+<div class="text-xs text-[#58675d] mt-1">42 hours remaining. Automated flag dispatched to parlor stall scanner.</div>
+</div>
+</div>
+<span class="text-xs font-bold text-[#ba1a1a] bg-[#ffdad6] px-2 py-1 rounded">DO NOT MILK</span>
+</div>
+<!-- Metric Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="p-4 bg-white rounded border border-[#dce3da]">
+<div class="text-[11px] font-medium text-[#58675d]">Vat 1 Chill Temp</div>
+<div class="text-xl font-bold text-[#183f30] mt-1">3.4°C</div>
+<div class="text-[10px] text-[#397a58] font-semibold mt-1">Target 3.0°C - 4.0°C ✓</div>
+</div>
+<div class="p-4 bg-white rounded border border-[#dce3da]">
+<div class="text-[11px] font-medium text-[#58675d]">Bulk Tank SCC</div>
+<div class="text-xl font-bold text-[#183f30] mt-1">142,000</div>
+<div class="text-[10px] text-[#397a58] font-semibold mt-1">Premium Grade Band</div>
+</div>
+<div class="p-4 bg-white rounded border border-[#dce3da]">
+<div class="text-[11px] font-medium text-[#58675d]">24h Volume Collected</div>
+<div class="text-xl font-bold text-[#183f30] mt-1">18,420 L</div>
+<div class="text-[10px] text-[#58675d] mt-1">Pickup Scheduled 05:30</div>
+</div>
+</div>
+<!-- Export Bar -->
+<div class="p-3 bg-white rounded border border-[#dce3da] flex items-center justify-between text-xs">
+<div class="flex items-center gap-2 text-[#183f30]">
+<span class="material-symbols-outlined text-base text-[#397a58]">description</span>
+<span class="font-semibold">Veterinary &amp; Traceability Export (USDA/State Ready)</span>
+</div>
+<button class="px-3 py-1.5 bg-[#e9efe5] text-[#183f30] font-bold rounded border border-[#dce3da] hover:bg-[#dce3da] transition">
+                  Generate PDF
+                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7 — WHO DOES WHAT (ROLE HIERARCHY) -->
+<section class="py-24 bg-[#f7f7f1] border-b border-[#dce3da]">
+<div class="max-w-[1240px] mx-auto px-6">
+<div class="max-w-2xl mb-16">
+<div class="text-xs font-bold tracking-widest uppercase text-[#397a58]">GOVERNANCE &amp; RESPONSIBILITY</div>
+<h2 class="font-serif-display text-3xl sm:text-4xl text-[#183f30] mt-2 mb-4 leading-tight">
+            The right access for each responsibility.
+          </h2>
+<p class="text-base text-[#58675d]">
+            A transparent four-tier access hierarchy designed for high-accountability farm governance.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Role 1: Super Admin -->
+<div class="bg-white rounded-lg border border-[#dce3da] p-6 flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-10 h-10 rounded bg-[#183f30] text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">shield_person</span>
+</div>
+<span class="text-[10px] font-bold tracking-wider uppercase px-2 py-1 rounded bg-[#e9efe5] text-[#183f30]">Tier 01</span>
+</div>
+<h3 class="font-serif-display text-xl text-[#183f30] mb-2">Super Admin</h3>
+<p class="text-xs text-[#58675d] leading-relaxed mb-4">
+                SmartFarm infrastructure team member handling backend tenant hosting and governance.
+              </p>
+<div class="space-y-2 text-xs border-t border-[#dce3da] pt-4">
+<div class="font-semibold text-[#183f30]">Responsibilities:</div>
+<div class="flex items-start gap-1.5 text-[#58675d]">
+<span class="material-symbols-outlined text-sm text-[#397a58]">check</span>
+                  Workspace creation
+                </div>
+<div class="flex items-start gap-1.5 text-[#58675d]">
+<span class="material-symbols-outlined text-sm text-[#397a58]">check</span>
+                  Customer registration
+                </div>
+<div class="flex items-start gap-1.5 text-[#58675d]">
+<span class="material-symbols-outlined text-sm text-[#397a58]">check</span>
+                  Farm Admin provisioning
+                </div>
+</div>
+</div>
+</div>
+<!-- Role 2: Farm Admin -->
+<div class="bg-white rounded-lg border border-[#dce3da] p-6 flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-10 h-10 rounded bg-[#397a58] text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">manage_accounts</span>
+</div>
+<span class="text-[10px] font-bold tracking-wider uppercase px-2 py-1 rounded bg-[#e9efe5] text-[#397a58]">Tier 02</span>
+</div>
+<h3 class="font-serif-display text-xl text-[#183f30] mb-2">Farm Admin</h3>
+<p class="text-xs text-[#58675d] leading-relaxed mb-4">
+                Farm principal or general manager possessing comprehensive authority over the dairy tenant.
+              </p>
+<div class="space-y-2 text-xs border-t border-[#dce3da] pt-4">
+<div class="font-semibold text-[#183f30]">Responsibilities:</div>
+<div class="flex items-start gap-1.5 text-[#58675d]">
+<span class="material-symbols-outlined text-sm text-[#397a58]">check</span>
+                  Financial ledger access
+                </div>
+<div class="flex items-start gap-1.5 text-[#58675d]">
+<span class="material-symbols-outlined text-sm text-[#397a58]">check</span>
+                  User permission grants
+                </div>
+<div class="flex items-start gap-1.5 text-[#58675d]">
+<span class="material-symbols-outlined text-sm text-[#397a58]">check</span>
+                  Regulatory compliance files
+                </div>
+</div>
+</div>
+</div>
+<!-- Role 3: Farm Supervisor -->
+<div class="bg-white rounded-lg border border-[#dce3da] p-6 flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-10 h-10 rounded bg-[#e9efe5] text-[#183f30] flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">assignment_turned_in</span>
+</div>
+<span class="text-[10px] font-bold tracking-wider uppercase px-2 py-1 rounded bg-[#e9efe5] text-[#183f30]">Tier 03</span>
+</div>
+<h3 class="font-serif-display text-xl text-[#183f30] mb-2">Farm Supervisor</h3>
+<p class="text-xs text-[#58675d] leading-relaxed mb-4">
+                Herd manager or parlor lead operating on specific daily activity workflows.
+              </p>
+<div class="space-y-2 text-xs border-t border-[#dce3da] pt-4">
+<div class="font-semibold text-[#183f30]">Responsibilities:</div>
+<div class="flex items-start gap-1.5 text-[#58675d]">
+<span class="material-symbols-outlined text-sm text-[#397a58]">check</span>
+                  Milking log entries
+                </div>
+<div class="flex items-start gap-1.5 text-[#58675d]">
+<span class="material-symbols-outlined text-sm text-[#397a58]">check</span>
+                  Veterinary health flags
+                </div>
+<div class="flex items-start gap-1.5 text-[#58675d]">
+<span class="material-symbols-outlined text-sm text-[#397a58]">check</span>
+                  Pasture shift execution
+                </div>
+</div>
+</div>
+</div>
+<!-- Role 4: Worker -->
+<div class="bg-white rounded-lg border border-[#dce3da] p-6 flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-10 h-10 rounded bg-[#dce3da] text-[#58675d] flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">groups</span>
+</div>
+<span class="text-[10px] font-bold tracking-wider uppercase px-2 py-1 rounded bg-[#f7f7f1] text-[#58675d]">Tier 04</span>
+</div>
+<h3 class="font-serif-display text-xl text-[#183f30] mb-2">Farm Worker</h3>
+<p class="text-xs text-[#58675d] leading-relaxed mb-4">
+                Managed operational record within the roster. No direct system credentials or platform login.
+              </p>
+<div class="space-y-2 text-xs border-t border-[#dce3da] pt-4">
+<div class="font-semibold text-[#183f30]">System Status:</div>
+<div class="flex items-start gap-1.5 text-[#58675d]">
+<span class="material-symbols-outlined text-sm text-[#849087]">radio_button_checked</span>
+                  Shift attendance logged
+                </div>
+<div class="flex items-start gap-1.5 text-[#58675d]">
+<span class="material-symbols-outlined text-sm text-[#849087]">radio_button_checked</span>
+                  Task assignment profile
+                </div>
+<div class="flex items-start gap-1.5 text-[#58675d]">
+<span class="material-symbols-outlined text-sm text-[#ba1a1a]">block</span>
+                  Zero login rights implied
+                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8 — PRODUCT PREVIEW -->
+<section class="py-24 bg-[#ffffff] border-b border-[#dce3da]">
+<div class="max-w-[1240px] mx-auto px-6">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-bold tracking-widest uppercase text-[#397a58]">Interactive Demonstration</span>
+<h2 class="font-serif-display text-3xl sm:text-4xl text-[#183f30] mt-2 mb-4 leading-tight">
+            See the platform in action.
+          </h2>
+<p class="text-base text-[#58675d]">
+            A single, coherent interface designed for the physical demands of dairy enterprise management.
+          </p>
+</div>
+<!-- Polished SmartFarm Console Preview -->
+<div class="rounded-xl border border-[#dce3da] bg-[#f7f7f1] p-4 sm:p-8 shadow-xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-6 border-b border-[#dce3da] gap-4">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-[#ba1a1a]"></span>
+<span class="w-3 h-3 rounded-full bg-[#d5a64a]"></span>
+<span class="w-3 h-3 rounded-full bg-[#397a58]"></span>
+<span class="text-xs font-mono font-bold text-[#183f30] ml-2">SmartFarm Console v4.2.0</span>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#e9efe5] border border-[#dce3da] text-[11px] font-bold text-[#183f30]">
+<span class="w-2 h-2 rounded-full bg-[#397a58]"></span>
+              SAMPLE INTERFACE — ILLUSTRATIVE DAIRY ARCHITECTURE
+            </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 rounded-lg overflow-hidden border border-[#dce3da] relative group">
+<img class="w-full h-80 sm:h-96 object-cover" data-alt="Modern dairy facility milking parlor interior with clean stainless steel rotary or parallel stalls, pristine epoxy flooring, subtle LED strip lighting, and Holstein dairy cows walking calmly in an organized batch sequence. Highly authentic agricultural photography with neutral, balanced color tones and sharp detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaa4YARdzQDF3VCb_bUfZKldGnRXFGM0xFiQgL0Pq_7tXZl-iwd7FukO8aqVJ_mKiIVAD5uoCiO55URd_g7_zXg1zdC2iCvZBnPgVByFG_jqsc__tqhxqAmQ_HNZDRM_1va9dberyWDLpckr2P67IGcdCd8iqo0T_FkL4TB5zyMQFRO0GkGdePM8ympXihX9CYRjX5fMR0mx-M5kpBQ0fRu-AOYOxUQpnG7y_WRDg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#183f30]/80 via-transparent to-transparent flex items-end p-6">
+<div class="text-white">
+<div class="text-xs font-mono uppercase tracking-widest text-[#adf2c8]">Live Milking Station Telemetry</div>
+<div class="text-lg font-bold">Parlor Alpha — Evening Batch Running (68% Complete)</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 space-y-4">
+<div class="p-4 bg-white rounded border border-[#dce3da]">
+<div class="text-xs font-bold text-[#397a58] uppercase">Consolidated Status Feed</div>
+<div class="text-sm font-bold text-[#183f30] mt-1">426 Milked • 0 Contaminations Logged</div>
+<div class="text-xs text-[#58675d] mt-1">Plate cooler heat-exchange operating at optimal delta 4.1°C.</div>
+</div>
+<div class="p-4 bg-white rounded border border-[#dce3da]">
+<div class="text-xs font-bold text-[#397a58] uppercase">Feed Bunker Status</div>
+<div class="text-sm font-bold text-[#183f30] mt-1">Silage Bunker B: 18 Days Reserve</div>
+<div class="text-xs text-[#58675d] mt-1">Dry Matter intake on target: 21.4 kg DM/cow/day.</div>
+</div>
+<div class="pt-4">
+<a class="inline-flex items-center justify-center w-full px-6 py-3.5 bg-[#183f30] text-white text-sm font-semibold rounded hover:bg-[#397a58] transition" href="#">
+                  Explore Features
+                  <span class="material-symbols-outlined ml-2 text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 9 — CLOSING CONTACT CTA -->
+<section class="py-24 bg-[#f7f7f1] border-b border-[#dce3da]" id="contact">
+<div class="max-w-[1240px] mx-auto px-6">
+<div class="bg-white rounded-xl border border-[#dce3da] p-8 sm:p-14 text-center max-w-3xl mx-auto shadow-sm">
+<span class="text-xs font-bold tracking-widest uppercase text-[#397a58]">Begin Onboarding</span>
+<h2 class="font-serif-display text-3xl sm:text-4xl text-[#183f30] mt-2 mb-4 leading-tight">
+            Let's discuss your farm management needs.
+          </h2>
+<p class="text-base text-[#58675d] mb-8 max-w-xl mx-auto leading-relaxed">
+            Contact the SmartFarm team to learn about workspace setup and how our structured deployment can be tailored to your dairy operations.
+          </p>
+<form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="event.preventDefault();">
+<input class="flex-1 px-4 py-3 text-sm rounded border border-[#dce3da] focus:outline-none focus:ring-2 focus:ring-[#397a58] focus:border-transparent bg-[#f7f7f1]" placeholder="Enter your dairy enterprise email" required="" type="email"/>
+<button class="px-6 py-3 bg-[#397a58] text-white text-sm font-semibold rounded hover:bg-[#183f30] transition shrink-0 shadow-sm" type="submit">
+              Contact SmartFarm
+            </button>
+</form>
+<div class="flex items-center justify-center gap-6 mt-6 text-xs text-[#58675d]">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-[#397a58]">check</span>
+              Direct specialist consultation
+            </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-[#397a58]">check</span>
+              Tailored workspace configuration
+            </span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 10: MARQUEE STRIP -->
+<div class="w-full bg-[#ffffff] border-b border-[#dce3da] py-4 overflow-hidden select-none">
+<div class="animate-marquee whitespace-nowrap flex items-center text-xs font-bold tracking-[0.25em] text-[#183f30] uppercase">
+<span class="mx-6">SMART FARM</span>
+<span class="mx-6 text-[#397a58]">✦</span>
+<span class="mx-6">HERD INTELLIGENCE</span>
+<span class="mx-6 text-[#397a58]">✦</span>
+<span class="mx-6">WITHHOLDING GOVERNANCE</span>
+<span class="mx-6 text-[#397a58]">✦</span>
+<span class="mx-6">MILK PRODUCTION CONTROL</span>
+<span class="mx-6 text-[#397a58]">✦</span>
+<span class="mx-6">HIGH-INTEGRITY DAIRY ARCHITECTURE</span>
+<span class="mx-6 text-[#397a58]">✦</span>
+<span class="mx-6">SMART FARM</span>
+<span class="mx-6 text-[#397a58]">✦</span>
+<span class="mx-6">HERD INTELLIGENCE</span>
+<span class="mx-6 text-[#397a58]">✦</span>
+<span class="mx-6">WITHHOLDING GOVERNANCE</span>
+<span class="mx-6 text-[#397a58]">✦</span>
+<span class="mx-6">MILK PRODUCTION CONTROL</span>
+<span class="mx-6 text-[#397a58]">✦</span>
+<span class="mx-6">HIGH-INTEGRITY DAIRY ARCHITECTURE</span>
+<span class="mx-6 text-[#397a58]">✦</span>
+</div>
+</div>
+</main>
+<!-- SECTION 11: FOOTER (Deep Forest Shell Integration) -->
+<footer class="bg-[#183f30] text-[#f7f7f1] pt-16 pb-12 border-t border-[#25332c]">
+<div class="max-w-[1240px] mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+<div class="md:col-span-4 space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-[#f7f7f1] text-[#183f30] flex items-center justify-center font-serif-display text-xl font-bold">
+              S
+            </div>
+<span class="text-xl font-bold font-manrope tracking-tight text-white">SmartFarm</span>
+</div>
+<p class="text-xs text-[#ceded3] leading-relaxed max-w-sm">
+            High-integrity digital architecture engineered specifically for contemporary dairy farm operations, production transparency, and regulatory precision.
+          </p>
+<div class="text-[11px] font-mono text-[#adf2c8]">
+            DEPLOYMENT: PROVISIONED TENANCY MODEL
+          </div>
+</div>
+<div class="md:col-span-2 space-y-3">
+<div class="text-xs font-bold uppercase tracking-widest text-[#adf2c8]">Platform</div>
+<ul class="space-y-2 text-xs text-[#ceded3]">
+<li><a class="hover:text-white transition" href="#">Workspace Setup</a></li>
+<li><a class="hover:text-white transition" href="#">Herd Records</a></li>
+<li><a class="hover:text-white transition" href="#">Vat Telemetry</a></li>
+<li><a class="hover:text-white transition" href="#">Health Protocols</a></li>
+</ul>
+</div>
+<div class="md:col-span-2 space-y-3">
+<div class="text-xs font-bold uppercase tracking-widest text-[#adf2c8]">Governance</div>
+<ul class="space-y-2 text-xs text-[#ceded3]">
+<li><a class="hover:text-white transition" href="#">Role Permissions</a></li>
+<li><a class="hover:text-white transition" href="#">Audit Ledgers</a></li>
+<li><a class="hover:text-white transition" href="#">Traceability Export</a></li>
+<li><a class="hover:text-white transition" href="#">Security Controls</a></li>
+</ul>
+</div>
+<div class="md:col-span-4 space-y-3">
+<div class="text-xs font-bold uppercase tracking-widest text-[#adf2c8]">Inquiries &amp; Consultation</div>
+<p class="text-xs text-[#ceded3]">
+            Speak directly with our technical implementation leads to schedule an organizational review.
+          </p>
+<div class="pt-1">
+<a class="inline-flex items-center px-4 py-2 bg-[#397a58] hover:bg-[#286a49] text-white text-xs font-semibold rounded transition" href="#contact">
+              Request Deployment Briefing
+            </a>
+</div>
+</div>
+</div>
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#ceded3]/70 gap-4">
+<div>
+          © 2024 SmartFarm Systems Inc. All rights reserved. No algorithmic yield promises or predictive automation implied.
+        </div>
+<div class="flex items-center gap-6">
+<a class="hover:text-white transition" href="#">Privacy Notice</a>
+<a class="hover:text-white transition" href="#">Terms of Architecture</a>
+<a class="hover:text-white transition" href="#">Security Overview</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

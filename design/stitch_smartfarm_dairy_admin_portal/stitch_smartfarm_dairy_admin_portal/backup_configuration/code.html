@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#30312d", "on-background": "#1b1c18", "secondary": "#556249", "tertiary-fixed-dim": "#ffb784", "surface-container-low": "#f5f3ed", "on-tertiary": "#ffffff", "surface-dim": "#dcdad4", "on-primary-container": "#b8cda9", "on-primary-fixed": "#101f08", "inverse-on-surface": "#f3f1eb", "outline": "#75786f", "background": "#fbf9f3", "on-tertiary-fixed": "#301400", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#3e4b32", "surface": "#fbf9f3", "outline-variant": "#c4c8bd", "surface-container": "#f0eee8", "surface-container-high": "#eae8e2", "surface-tint": "#516446", "surface-bright": "#fbf9f3", "on-surface-variant": "#444840", "primary-container": "#46583b", "primary": "#2f4126", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffdcc6", "on-primary-fixed-variant": "#3a4c30", "secondary-container": "#d9e8c7", "on-surface": "#1b1c18", "error": "#ba1a1a", "secondary-fixed-dim": "#bdcbac", "on-tertiary-container": "#ffb785", "on-secondary-container": "#5b694e", "on-error": "#ffffff", "primary-fixed": "#d4e9c3", "on-tertiary-fixed-variant": "#6c3a11", "tertiary": "#5e3007", "primary-fixed-dim": "#b8cda8", "on-error-container": "#93000a", "secondary-fixed": "#d9e8c7", "tertiary-container": "#7a461c", "on-secondary-fixed": "#141f0a", "on-primary": "#ffffff", "surface-variant": "#e4e2dd", "inverse-primary": "#b8cda8", "surface-container-highest": "#e4e2dd", "on-secondary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "gutter-mobile": "0.75rem", "margin": "2rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter": "1.5rem", "margin-mobile": "1rem" }, "fontFamily": { "data-metric-md": [ "Inter" ], "body-lg": [ "Inter" ], "display-lg-mobile": [ "Manrope" ], "body-sm": [ "Inter" ], "headline-md": [ "Manrope" ], "label-sm": [ "Inter" ], "headline-sm": [ "Manrope" ], "headline-xl": [ "Manrope" ], "body-md": [ "Inter" ], "headline-xl-mobile": [ "Manrope" ], "display-lg": [ "Manrope" ], "headline-lg": [ "Manrope" ], "data-metric-lg": [ "Manrope" ], "label-md": [ "Inter" ] }, "fontSize": { "data-metric-md": [ "1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "display-lg-mobile": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ], "headline-md": [ "1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" } ], "label-sm": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "headline-xl": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "headline-xl-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-lg": [ "3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "data-metric-lg": [ "2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZuhXF_IhBdGhJ4eix1oqj3wBimwP9kKeGGChH_b2ax1lMLHMcXPmCVu9b3MJqlJ3XUJHZyp_ietndJCcoi5tapKDT0swhF14GEZxUKYZjg6g5LvxUeQzsGptFXM8XbwZz0B0M4Kbg8tH48Ys1NpBq3q3ceaJWAzrxO8XU7fzOrfQL6K9wOMESU_VEMnfcbKwhEtKD90-MYyU8fO7yBiUm20ljVe33W-rRqQJED0H"/><div><div class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight truncate">SmartFarm</div><div class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Dairy Management</div></div></div><span class="font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold px-space-xs py-0.5 rounded">Admin</span></div><div class="px-space-md py-space-sm bg-surface-container-low/80 flex items-center justify-between"><div class="truncate"><div class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Greenfield Dairy Estate</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">Workspace: GF-042</div></div><span class="h-2 w-2 rounded-full bg-primary-container ring-2 ring-primary-fixed flex-shrink-0"></span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Overview</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="font-body-md text-body-md flex-1">Dashboard</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Herd Management</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#"><span class="font-body-md text-body-md flex-1">Animals</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#"><span class="font-body-md text-body-md flex-1">Animal Health</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Feeding Management</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding-plans" href="#"><span class="font-body-md text-body-md flex-1">Feeding Plans</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding-schedule" href="#"><span class="font-body-md text-body-md flex-1">Feeding Schedule</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="actual-feeding-records" href="#"><span class="font-body-md text-body-md flex-1">Actual Feeding Records</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Operations &amp; Assets</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#"><span class="font-body-md text-body-md flex-1">Milk Production</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-management" href="#"><span class="font-body-md text-body-md flex-1">Milk Management</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#"><span class="font-body-md text-body-md flex-1">Inventory</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#"><span class="font-body-md text-body-md flex-1">Equipment</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Reports &amp; Analytics</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-reports" href="#"><span class="font-body-md text-body-md flex-1">Milk Reports</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="financial-reports" href="#"><span class="font-body-md text-body-md flex-1">Financial Reports</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="data-exports" href="#"><span class="font-body-md text-body-md flex-1">Data Exports</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Workforce &amp; Finance</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers" href="#"><span class="font-body-md text-body-md flex-1">Workers</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="attendance" href="#"><span class="font-body-md text-body-md flex-1">Attendance</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="payroll" href="#"><span class="font-body-md text-body-md flex-1">Payroll</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="finance" href="#"><span class="font-body-md text-body-md flex-1">Finance</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">System &amp; Alerts</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notification-center" href="#"><span class="font-body-md text-body-md flex-1">Notification Center</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notification-history" href="#"><span class="font-body-md text-body-md flex-1">Notification History</span></a></div><div class="space-y-space-xs pt-space-xs"><div class="px-space-sm flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Data Management</span><span class="font-label-sm text-[0.625rem] bg-error-container text-on-error-container font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">Farm Admin Only</span></div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="import-data" href="#"><span class="font-body-md text-body-md flex-1">Import Data</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="export-data" href="#"><span class="font-body-md text-body-md flex-1">Export Data</span></a><a aria-current="page" class="flex items-center px-space-sm py-space-xs transition-all bg-primary-container text-on-primary font-semibold rounded-lg" data-path="backup-configuration" href="#"><span class="font-body-md text-body-md flex-1">Backup Configuration</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="activity-logs" href="#"><span class="font-body-md text-body-md flex-1">Activity Logs</span></a></div><div class="space-y-space-xs pt-space-xs"><div class="px-space-sm flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Settings &amp; Configuration</span><span class="font-label-sm text-[0.625rem] bg-error-container text-on-error-container font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">Admin Only</span></div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farm_profile" href="#"><span class="font-body-md text-body-md flex-1">Farm Profile</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="units" href="#"><span class="font-body-md text-body-md flex-1">Units of Measurement</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="currency" href="#"><span class="font-body-md text-body-md flex-1">Currency Settings</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="timezone" href="#"><span class="font-body-md text-body-md flex-1">Timezone Settings</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="preferences" href="#"><span class="font-body-md text-body-md flex-1">Interface Preferences</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notification_settings" href="#"><span class="font-body-md text-body-md flex-1">Notification Settings</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="configuration" href="#"><span class="font-body-md text-body-md flex-1">Module Configuration</span></a></div></nav><div class="p-space-sm bg-surface-container-low/60"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex justify-between items-center mb-1"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Storage Quota</span><span class="font-label-sm text-label-sm text-primary font-bold">42%</span></div><div class="w-full bg-surface-container rounded-full h-1.5 mb-2"><div class="bg-primary-container h-1.5 rounded-full w-[42%]"></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-body-sm text-body-sm">1,280 Active Head</span><span class="material-symbols-outlined text-sm text-tertiary-container">sensors</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><button class="p-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-xl">menu_open</span></button><nav class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="font-semibold text-on-surface">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface-variant">Workspace: GF-042</span></nav><div class="relative flex-1 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full h-10 pl-9 pr-14 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search Animal ID, Batch, Record..." type="text"/><span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded shadow-sm">⌘K</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm"><span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span><span>Connected • Live</span></div><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Mode" type="button"><span class="material-symbols-outlined text-xl">routine</span></button><div class="relative"><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative flex items-center justify-center" href="#" title="Alerts &amp; Notifications"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 h-4 min-w-[1rem] px-1 bg-error text-on-error font-label-sm text-[0.625rem] rounded-full flex items-center justify-center font-bold">3</span></a></div><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#" title="Docs &amp; Support"><span class="material-symbols-outlined text-xl">help</span></a><div class="h-6 w-[1px] bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHGkwzAmXeAWZgoliBfM3J0Dk3rRvKbrFcaSDXWTFXvp7mK8JZlIDpaM_-PKsE2e-9DSWj_thQxg7ZvMO7_J2wdBeJdNp3xHQNrTkReCH1iwd77yI5cACPrn8AVBGbsgSIRzl_r1aNrbkvrI3tTJT7qFPLASAjAk_cx85172_N3qz8dJ2RbazkMZxrYU4--z2VriyTURPXkRqv4-UUhJWONTqJq0P8IWMmPKFhLYX7"/><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></div><div class="hidden lg:block text-left"><div class="flex items-center gap-1.5"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</span><span class="font-label-sm text-[0.625rem] bg-primary-container text-on-primary font-bold px-1 rounded">Farm Admin Only</span></div><div class="font-label-sm text-label-sm text-on-surface-variant leading-none">Farm Administrator</div></div><button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-lg">expand_more</span></button></div></div></header><main class="relative pt-16 w-full px-space-lg py-space-lg bg-background min-h-screen"><div class="flex flex-col w-full pb-16">
+<!-- 1. Backup Configuration Heading -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider mb-1">
+<span>Data Management</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary font-bold">Backup Configuration</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+          Backup Configuration
+        </h1>
+<span class="font-label-sm text-[0.6875rem] bg-error-container text-on-error-container font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+          Farm Admin Only
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+        Greenfield Dairy Estate (Workspace GF-042) • Farm Admin: Elena Vance
+      </p>
+</div>
+</div>
+<!-- Explicit SRS v1.0 Scope & Unconfirmed Policy Notice -->
+<div class="bg-surface-container-low rounded-xl p-space-md border border-outline-variant/30 mb-space-lg">
+<div class="flex items-start gap-space-md">
+<div class="p-space-xs rounded-lg bg-tertiary-container/15 text-tertiary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">info</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="font-label-sm text-label-sm font-bold text-tertiary uppercase tracking-wider mb-1">
+          SmartFarm SRS v1.0 Alignment Notice
+        </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          This screen presents available workspace backup preferences. Exact automatic backup frequency, retention periods, archive download rights, and restore authority remain unconfirmed in the system specification. Actions on this page are simulated for frontend prototype review; no real backup or restore operation is executed.
+        </p>
+</div>
+</div>
+</div>
+<!-- 2. Available Backup Configuration Summary -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mb-space-xl">
+<!-- Backup Status Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border border-outline-variant/20 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Backup Status</span>
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">
+          Configured
+        </div>
+</div>
+<div class="mt-space-sm pt-space-xs border-t border-outline-variant/15 text-on-surface-variant font-body-sm text-body-sm">
+        Preferences staged for Workspace GF-042
+      </div>
+</div>
+<!-- Last Recorded Backup Date Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border border-outline-variant/20 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Last Recorded Backup Date</span>
+<span class="material-symbols-outlined text-secondary text-lg">history</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1" id="summary-last-backup">
+          Oct 24, 2024 • 04:00 AM
+        </div>
+</div>
+<div class="mt-space-sm pt-space-xs border-t border-outline-variant/15 text-on-surface-variant font-body-sm text-body-sm">
+        Illustrative record • Pending SRS confirmation
+      </div>
+</div>
+<!-- Storage Preference Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border border-outline-variant/20 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Storage Preference</span>
+<span class="material-symbols-outlined text-tertiary text-lg">storage</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1" id="summary-storage-pref">
+          Local Storage Option
+        </div>
+</div>
+<div class="mt-space-sm pt-space-xs border-t border-outline-variant/15 text-on-surface-variant font-body-sm text-body-sm">
+        Selectable between Local or Cloud
+      </div>
+</div>
+</div>
+<!-- 3 & 4. Automatic Backup Capability, Storage Options & Manual Actions -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Left Column: Automatic Capability & Storage Option Presentation (8 cols) -->
+<div class="lg:col-span-8 space-y-space-lg">
+<!-- Automatic Backup Capability Toggle -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm border border-outline-variant/20">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Automatic Backup Capability</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Enable or disable automatic workspace backup preference. Exact schedule and retention intervals are pending confirmation in SmartFarm SRS v1.0.
+            </p>
+</div>
+<label class="inline-flex items-center gap-space-sm cursor-pointer select-none flex-shrink-0">
+<div class="relative">
+<input checked="" class="sr-only peer" id="toggle-auto-backup" onchange="handleAutoBackupToggle(this.checked)" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary" id="auto-backup-label">Enabled</span>
+</label>
+</div>
+</div>
+<!-- Storage Option Presentation -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm border border-outline-variant/20">
+<div class="mb-space-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Storage Option Presentation</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Select preferred destination type for workspace backups.
+          </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Local Storage Option -->
+<label class="group relative flex items-start gap-space-sm p-space-md rounded-xl cursor-pointer transition-all bg-surface-container-low/60 hover:bg-surface-container-low border-2 border-transparent has-[:checked]:bg-surface-container-low has-[:checked]:border-primary-container">
+<input checked="" class="mt-1 h-4 w-4 text-primary focus:ring-primary accent-primary" name="storage-option" onchange="handleStorageOptionChange('Local Storage Option')" type="radio" value="local"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-bold text-on-surface">
+<span class="material-symbols-outlined text-secondary text-lg">hard_drive</span>
+<span>Local Storage Option</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Store workspace backups on designated local farm infrastructure.
+              </p>
+</div>
+</label>
+<!-- Cloud Storage Option -->
+<label class="group relative flex items-start gap-space-sm p-space-md rounded-xl cursor-pointer transition-all bg-surface-container-low/60 hover:bg-surface-container-low border-2 border-transparent has-[:checked]:bg-surface-container-low has-[:checked]:border-primary-container">
+<input class="mt-1 h-4 w-4 text-primary focus:ring-primary accent-primary" name="storage-option" onchange="handleStorageOptionChange('Cloud Storage Option')" type="radio" value="cloud"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-bold text-on-surface">
+<span class="material-symbols-outlined text-secondary text-lg">cloud</span>
+<span>Cloud Storage Option</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Store workspace backups in a designated off-site cloud environment.
+              </p>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- Right Column: Manual Backup Action & Save Configuration (4 cols) -->
+<div class="lg:col-span-4">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm border border-outline-variant/20 space-y-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Backup Actions</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Simulated controls for frontend prototype verification.
+          </p>
+</div>
+<!-- Prominent Manual Backup Button -->
+<button class="w-full flex items-center justify-center gap-space-sm px-space-md py-3 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md font-bold transition-colors shadow-sm" onclick="initiateSimulatedManualBackup()" type="button">
+<span class="material-symbols-outlined text-lg">backup</span>
+<span>Initiate Manual Backup (Simulated)</span>
+</button>
+<!-- Save & Discard Buttons -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 py-2.5 px-space-sm rounded-lg bg-secondary hover:bg-primary-container text-on-secondary font-label-md text-label-md font-semibold text-center transition-colors shadow-sm" onclick="saveBackupConfiguration()" type="button">
+            Save Configuration
+          </button>
+<button class="py-2.5 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-medium text-center transition-colors" onclick="discardBackupConfiguration()" type="button">
+            Discard
+          </button>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg text-on-surface-variant font-body-sm text-[0.75rem] flex items-start gap-2">
+<span class="material-symbols-outlined text-sm text-tertiary flex-shrink-0 mt-0.5">info</span>
+<span>No real backup is executed in this frontend prototype.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. Existing Backup Status / History -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/20 overflow-hidden">
+<div class="p-space-lg border-b border-outline-variant/20 flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Existing Backup Status &amp; History</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Illustrative past backup records for Workspace GF-042. Download and restore actions are not available.
+        </p>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-2.5 py-1 rounded-full font-semibold self-start sm:self-auto" id="history-count-badge">
+        4 Records
+      </span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="py-3 px-space-lg font-semibold" scope="col">Backup ID</th>
+<th class="py-3 px-space-md font-semibold" scope="col">Date / Time</th>
+<th class="py-3 px-space-md font-semibold" scope="col">Type</th>
+<th class="py-3 px-space-md font-semibold" scope="col">Storage Target</th>
+<th class="py-3 px-space-lg font-semibold text-right" scope="col">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20" id="backup-history-tbody">
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-space-lg font-mono font-semibold text-on-surface">BKP-2024-1024-01</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">Oct 24, 2024 • 04:00 AM</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container">
+                Automatic
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">Local</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container/70 text-on-secondary-container font-label-sm text-xs font-bold">
+                Recorded
+              </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-space-lg font-mono font-semibold text-on-surface">BKP-2024-1023-01</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">Oct 23, 2024 • 04:00 AM</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container">
+                Automatic
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">Local</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container/70 text-on-secondary-container font-label-sm text-xs font-bold">
+                Recorded
+              </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-space-lg font-mono font-semibold text-on-surface">BKP-2024-1020-MAN</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">Oct 20, 2024 • 04:30 PM</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-surface-container-highest text-on-surface-variant">
+                Manual
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">Cloud</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container/70 text-on-secondary-container font-label-sm text-xs font-bold">
+                Recorded
+              </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-space-lg font-mono font-semibold text-on-surface">BKP-2024-1017-01</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">Oct 17, 2024 • 04:00 AM</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container">
+                Automatic
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">Local</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container/70 text-on-secondary-container font-label-sm text-xs font-bold">
+                Recorded
+              </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Simulated Toast Notification Hub -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none" id="toast-hub"></div>
+</div>
+<script>
+  function showToast(message, type = 'info', icon = 'info') {
+    const hub = document.getElementById('toast-hub');
+    const toast = document.createElement('div');
+
+    let bgClasses = 'bg-surface-container-lowest border border-outline-variant/30 text-on-surface';
+    let iconClass = 'text-primary';
+
+    if (type === 'success') {
+      bgClasses = 'bg-surface-container-lowest border-l-4 border-primary-container text-on-surface shadow-lg';
+      iconClass = 'text-primary';
+    } else if (type === 'warning') {
+      bgClasses = 'bg-surface-container-lowest border-l-4 border-tertiary-container text-on-surface shadow-lg';
+      iconClass = 'text-tertiary';
+    }
+
+    toast.className = `flex items-center gap-space-sm p-space-md rounded-xl shadow-md pointer-events-auto transition-all transform duration-300 ease-out translate-y-2 opacity-0 max-w-md ${bgClasses}`;
+    toast.innerHTML = `
+      <span class="material-symbols-outlined ${iconClass} text-xl flex-shrink-0">${icon}</span>
+      <div class="font-body-sm text-body-sm font-medium flex-1">${message}</div>
+      <button type="button" class="text-on-surface-variant hover:text-on-surface ml-2" onclick="this.parentElement.remove()">
+        <span class="material-symbols-outlined text-sm">close</span>
+      </button>
+    `;
+
+    hub.appendChild(toast);
+    requestAnimationFrame(() => {
+      toast.classList.remove('translate-y-2', 'opacity-0');
+    });
+
+    setTimeout(() => {
+      if (toast.parentElement) {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }
+    }, 4500);
+  }
+
+  function handleAutoBackupToggle(enabled) {
+    const label = document.getElementById('auto-backup-label');
+    if (enabled) {
+      label.textContent = 'Enabled';
+      label.className = 'font-label-sm text-label-sm font-bold text-primary';
+      showToast('Automatic backup capability preference enabled (simulated; no real schedule active).', 'info', 'toggle_on');
+    } else {
+      label.textContent = 'Disabled';
+      label.className = 'font-label-sm text-label-sm font-bold text-on-surface-variant';
+      showToast('Automatic backup capability preference disabled (simulated).', 'info', 'toggle_off');
+    }
+  }
+
+  function handleStorageOptionChange(optionLabel) {
+    document.getElementById('summary-storage-pref').textContent = optionLabel;
+    showToast(`Storage preference updated to ${optionLabel} (unsaved).`, 'info', 'storage');
+  }
+
+  function initiateSimulatedManualBackup() {
+    const selectedStorage = document.querySelector('input[name="storage-option"]:checked').value === 'local' ? 'Local' : 'Cloud';
+    const tbody = document.getElementById('backup-history-tbody');
+    const newRow = document.createElement('tr');
+    newRow.className = 'hover:bg-surface-container-low/40 transition-colors';
+    newRow.innerHTML = `
+      <td class="py-3.5 px-space-lg font-mono font-semibold text-on-surface">BKP-SIM-MANUAL</td>
+      <td class="py-3.5 px-space-md text-on-surface-variant">Just now • Simulated</td>
+      <td class="py-3.5 px-space-md">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-surface-container-highest text-on-surface-variant">
+          Manual
+        </span>
+      </td>
+      <td class="py-3.5 px-space-md text-on-surface-variant">${selectedStorage}</td>
+      <td class="py-3.5 px-space-lg text-right">
+        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container/70 text-on-secondary-container font-label-sm text-xs font-bold">
+          Simulated
+        </span>
+      </td>
+    `;
+    tbody.insertBefore(newRow, tbody.firstChild);
+    document.getElementById('history-count-badge').textContent = `${tbody.children.length} Records`;
+    document.getElementById('summary-last-backup').textContent = 'Just now (Simulated)';
+    showToast('Simulated manual backup recorded. No real backup was executed in this frontend prototype.', 'success', 'check_circle');
+  }
+
+  function saveBackupConfiguration() {
+    showToast('Backup configuration saved (simulated). No real backend persistence is executed in this frontend prototype.', 'success', 'task_alt');
+  }
+
+  function discardBackupConfiguration() {
+    document.getElementById('toggle-auto-backup').checked = true;
+    handleAutoBackupToggle(true);
+    const localRadio = document.querySelector('input[name="storage-option"][value="local"]');
+    localRadio.checked = true;
+    document.getElementById('summary-storage-pref').textContent = 'Local Storage Option';
+    showToast('Unsaved configuration changes discarded.', 'info', 'restart_alt');
+  }
+</script></main></div></body></html>

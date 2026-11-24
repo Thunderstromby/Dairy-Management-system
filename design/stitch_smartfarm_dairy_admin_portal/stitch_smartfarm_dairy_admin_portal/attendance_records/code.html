@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "on-tertiary-fixed": "#301400", "surface": "#fbf9f3", "surface-container-low": "#f5f3ed", "secondary-container": "#d9e8c7", "surface-container-highest": "#e4e2dd", "on-secondary-fixed": "#141f0a", "outline-variant": "#c4c8bd", "on-secondary-fixed-variant": "#3e4b32", "secondary-fixed-dim": "#bdcbac", "on-tertiary": "#ffffff", "on-tertiary-container": "#ffb785", "primary-fixed": "#d4e9c3", "on-primary-fixed-variant": "#3a4c30", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "tertiary": "#5e3007", "tertiary-container": "#7a461c", "inverse-surface": "#30312d", "primary-fixed-dim": "#b8cda8", "on-primary-fixed": "#101f08", "secondary": "#556249", "surface-container-high": "#eae8e2", "primary-container": "#46583b", "tertiary-fixed-dim": "#ffb784", "on-surface": "#1b1c18", "surface-container": "#f0eee8", "secondary-fixed": "#d9e8c7", "outline": "#75786f", "surface-bright": "#fbf9f3", "tertiary-fixed": "#ffdcc6", "on-tertiary-fixed-variant": "#6c3a11", "on-primary-container": "#b8cda9", "inverse-on-surface": "#f3f1eb", "background": "#fbf9f3", "error-container": "#ffdad6", "surface-variant": "#e4e2dd", "on-error-container": "#93000a", "on-error": "#ffffff", "inverse-primary": "#b8cda8", "on-background": "#1b1c18", "primary": "#2f4126", "surface-dim": "#dcdad4", "on-surface-variant": "#444840", "on-secondary": "#ffffff", "surface-tint": "#516446", "on-secondary-container": "#5b694e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-xl": "2.5rem", "margin": "2rem", "margin-mobile": "1rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "headline-md": [ "Manrope" ], "body-lg": [ "Inter" ], "label-md": [ "Inter" ], "display-lg-mobile": [ "Manrope" ], "headline-sm": [ "Manrope" ], "data-metric-md": [ "Inter" ], "body-md": [ "Inter" ], "label-sm": [ "Inter" ], "data-metric-lg": [ "Manrope" ], "headline-xl": [ "Manrope" ], "headline-lg": [ "Manrope" ], "headline-xl-mobile": [ "Manrope" ], "display-lg": [ "Manrope" ], "body-sm": [ "Inter" ] }, "fontSize": { "headline-md": [ "1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "label-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" } ], "display-lg-mobile": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "data-metric-md": [ "1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "label-sm": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" } ], "data-metric-lg": [ "2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-xl": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-xl-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-lg": [ "3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZuhXF_IhBdGhJ4eix1oqj3wBimwP9kKeGGChH_b2ax1lMLHMcXPmCVu9b3MJqlJ3XUJHZyp_ietndJCcoi5tapKDT0swhF14GEZxUKYZjg6g5LvxUeQzsGptFXM8XbwZz0B0M4Kbg8tH48Ys1NpBq3q3ceaJWAzrxO8XU7fzOrfQL6K9wOMESU_VEMnfcbKwhEtKD90-MYyU8fO7yBiUm20ljVe33W-rRqQJED0H"/><div><div class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight truncate">SmartFarm</div><div class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Dairy Management</div></div></div><span class="font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold px-space-xs py-0.5 rounded">Admin</span></div><div class="px-space-md py-space-sm bg-surface-container-low/80 flex items-center justify-between"><div class="truncate"><div class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Greenfield Dairy Estate</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">Workspace: GF-042</div></div><span class="h-2 w-2 rounded-full bg-primary-container ring-2 ring-primary-fixed flex-shrink-0"></span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Overview</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#">Dashboard</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Herd Management</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#">Animals</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#">Animal Health</a><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface font-semibold">Feeding Management</div><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="feeding-plans" href="#">Feeding Plans</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="feeding-schedule" href="#">Feeding Schedule</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="actual-feeding-records" href="#">Actual Feeding Records</a></div></div></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Operations &amp; Assets</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#">Milk Production</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-management" href="#">Milk Management</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#">Inventory</a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="inventory-list" href="#">Inventory List</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="item-details" href="#">Item Details</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="purchases-and-inbound-invoices" href="#">Purchases &amp; Inbound Invoices</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="stock-additions" href="#">Stock Additions</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="stock-adjustments" href="#">Stock Adjustments</a></div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#">Equipment</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Workforce &amp; Finance</div><div class="space-y-space-xs"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers" href="#">Workers</a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="worker-directory" href="#">Worker Directory</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="add-worker" href="#">Add Worker</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="worker-profile" href="#">Worker Profile</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="worker-documents" href="#">Worker Documents</a></div></div><div class="space-y-space-xs"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs transition-all bg-primary-container text-on-primary font-semibold rounded-lg" data-path="attendance-records" href="#">Attendance</a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a aria-current="page" class="flex items-center px-space-sm py-1 transition-all bg-primary-container text-on-primary font-semibold rounded-lg" data-path="attendance-records" href="#">Attendance Records</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="manual-check-in-check-out-overtime" href="#">Manual Check-in/Check-out &amp; Overtime</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="leave-management" href="#">Leave Management</a></div></div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="payroll" href="#">Payroll</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="finance" href="#">Finance</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Governance &amp; Core</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="supervisor-access" href="#">Supervisor Access</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#">Reports</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="data-management" href="#">Data Management</a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#">Settings</a></div></nav><div class="p-space-sm bg-surface-container-low/60"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex justify-between items-center mb-1"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Storage Quota</span><span class="font-label-sm text-label-sm text-primary font-bold">42%</span></div><div class="w-full bg-surface-container rounded-full h-1.5 mb-2"><div class="bg-primary-container h-1.5 rounded-full w-[42%]"></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-body-sm text-body-sm">1,280 Active Head</span><span class="material-symbols-outlined text-sm text-tertiary-container">sensors</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><button class="p-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-xl">menu_open</span></button><nav class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="text-on-surface-variant">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface-variant">Workforce &amp; Finance</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="font-semibold text-on-surface">Attendance</span></nav><div class="relative flex-1 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full h-10 pl-9 pr-14 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search herd, rations, schedules, inventory..." type="text"/><span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded shadow-sm">⌘K</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm"><span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span><span>Connected • Live</span></div><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Mode" type="button"><span class="material-symbols-outlined text-xl">routine</span></button><div class="relative"><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" title="Alerts" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 h-4 min-w-[1rem] px-1 bg-error text-on-error font-label-sm text-[0.625rem] rounded-full flex items-center justify-center font-bold">3</span></button></div><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#" title="Docs &amp; Support"><span class="material-symbols-outlined text-xl">help</span></a><div class="h-6 w-[1px] bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative flex items-center"><img alt="Elena Vance" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHGkwzAmXeAWZgoliBfM3J0Dk3rRvKbrFcaSDXWTFXvp7mK8JZlIDpaM_-PKsE2e-9DSWj_thQxg7ZvMO7_J2wdBeJdNp3xHQNrTkReCH1iwd77yI5cACPrn8AVBGbsgSIRzl_r1aNrbkvrI3tTJT7qFPLASAjAk_cx85172_N3qz8dJ2RbazkMZxrYU4--z2VriyTURPXkRqv4-UUhJWONTqJq0P8IWMmPKFhLYX7"/><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></div><div class="hidden lg:block text-left"><div class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-none">Farm Administrator</div></div><button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-lg">expand_more</span></button></div></div></header><main class="relative pt-16 w-full px-space-lg py-space-lg bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Operational Breadcrumbs & Page Header Section -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm mb-1.5">
+<span class="inline-flex items-center gap-1 text-primary font-semibold">
+<span class="material-symbols-outlined text-sm">badge</span>
+          Workforce &amp; Finance
+        </span>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface-variant">Attendance</span>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-bold">Attendance Records</span>
+<span class="ml-2 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono text-[10px] tracking-wide">WORKSPACE: GF-042</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Farm Workforce Attendance Records &amp; Corrections</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-3xl">
+        Daily biometric station sync, manual attendance audit trail, and Farm Admin attendance correction controls for Workspace GF-042.
+      </p>
+</div>
+<!-- Top Action Toolbar -->
+<div class="flex flex-wrap items-center gap-space-sm self-start lg:self-center">
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container hover:shadow-sm transition-all font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-lg text-primary">print</span>
+<span>Print Daily Sheet</span>
+</button>
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container hover:shadow-sm transition-all font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-lg text-secondary">file_download</span>
+<span>Export CSV</span>
+</button>
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-primary text-on-primary shadow-sm hover:bg-primary-container transition-all font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-lg">more_time</span>
+<span>Manual Attendance &amp; Overtime</span>
+</button>
+</div>
+</div>
+<!-- Operational & Architecture Governance Banner -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md mb-space-lg shadow-sm">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex items-start gap-space-md pl-1">
+<div class="p-2 rounded-lg bg-surface-container-highest text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">shield_person</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 flex-wrap mb-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">Farm Admin Attendance Correction Governance</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-primary-fixed text-on-primary-fixed uppercase tracking-wider">Authorized Protocol</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Farm Admin <strong class="text-on-surface font-semibold">Elena Vance (ADM-9402)</strong> is authorized to correct recorded attendance (biometric punch delays or status adjustments). Per SRS guidelines, advanced lateness penalty deductions, multiple daily shift entries, and automated payroll deductions remain unresolved and are strictly unautomated. Every manual intervention commits previous vs. adjusted values to the tamper-evident activity log.
+        </p>
+</div>
+<div class="hidden xl:flex flex-col items-end gap-1 flex-shrink-0 bg-surface-container-lowest px-3 py-2 rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Admin Session</span>
+<span class="font-mono text-xs font-semibold text-primary">ADM-9402 • Verified</span>
+</div>
+</div>
+</div>
+<!-- KPI Metrics Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Card 1 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md text-on-surface-variant">Total Workforce Roster</span>
+<div class="w-9 h-9 rounded-lg bg-secondary-container/60 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">groups</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-data-metric-lg text-data-metric-lg text-on-surface">38</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Assigned Workers</span>
+</div>
+<div class="flex items-center gap-2 text-[12px] font-label-sm text-on-surface-variant flex-wrap mt-2 pt-2 bg-surface-container-low/40 rounded px-2">
+<span class="text-primary font-medium">32 Present</span>
+<span>•</span>
+<span class="text-tertiary font-medium">1 Late</span>
+<span>•</span>
+<span class="text-error font-medium">1 Absent</span>
+<span>•</span>
+<span class="text-secondary font-medium">4 Leave</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md text-on-surface-variant">Attendance Rate Today</span>
+<div class="w-9 h-9 rounded-lg bg-primary-fixed/50 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">monitoring</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2 mb-2">
+<span class="font-data-metric-lg text-data-metric-lg text-primary">94.7%</span>
+<span class="inline-flex items-center text-xs font-semibold text-primary gap-0.5">
+<span class="material-symbols-outlined text-sm">trending_up</span> +1.4%
+          </span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 mb-2 overflow-hidden">
+<div class="bg-primary h-2 rounded-full" style="width: 94.7%;"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Optimal coverage across parlor runs</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md text-on-surface-variant">Late Arrivals</span>
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed/60 text-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">alarm_on</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-data-metric-lg text-data-metric-lg text-tertiary-container">1</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">Worker Flagged</span>
+</div>
+<div class="p-2 mt-2 rounded bg-surface-container-low text-xs text-on-surface-variant">
+<div class="font-semibold text-on-surface truncate">Carlos Mendez (WKR-042-19)</div>
+<div class="flex items-center justify-between mt-0.5 text-[11px]">
+<span>In: 06:12 AM</span>
+<span class="text-tertiary-container font-medium">+12m delay</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md text-on-surface-variant">Approved Leaves</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">event_available</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-data-metric-lg text-data-metric-lg text-on-surface">4</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Staff Members</span>
+</div>
+<div class="flex items-center justify-between text-xs text-on-surface-variant mt-2 pt-2 bg-surface-container-low/40 rounded px-2">
+<span>Medical: <strong>3</strong></span>
+<span>Annual: <strong>1</strong></span>
+<span class="text-primary font-medium">Coverage 100%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive State Simulator Demonstration Bar -->
+<div class="bg-surface-container-high/60 rounded-xl p-space-sm mb-space-lg flex flex-wrap items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-2 pl-2">
+<span class="material-symbols-outlined text-primary text-base">science</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">State Simulator:</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5" id="state-simulator-bar">
+<button class="state-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-primary text-on-primary shadow-sm transition-all" id="btn-state-standard" onclick="setState('standard')" type="button">
+        Standard Shift View (Active)
+      </button>
+<button class="state-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-all" id="btn-state-modal" onclick="setState('modal')" type="button">
+        Pending Correction Drawer Open
+      </button>
+<button class="state-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-all" id="btn-state-filtered" onclick="setState('filtered')" type="button">
+        Late &amp; Absent Filtered (2)
+      </button>
+<button class="state-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-all" id="btn-state-empty" onclick="setState('empty')" type="button">
+        Zero Records / Empty State
+      </button>
+<button class="state-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-surface-container-lowest text-error hover:bg-error-container transition-all flex items-center gap-1" id="btn-state-sync-error" onclick="setState('sync-error')" type="button">
+<span class="material-symbols-outlined text-xs">sync_problem</span>
+        Biometric Sync Error
+      </button>
+</div>
+</div>
+<!-- Biometric Alert Simulation Container -->
+<div class="hidden mb-space-lg p-space-md rounded-xl bg-error-container text-on-error-container flex items-start justify-between gap-space-md shadow-sm" id="sync-error-banner">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-error text-2xl flex-shrink-0 mt-0.5">electrical_services</span>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-error-container">Biometric Station Offline: Parlor Gate Alpha (HW-RFID-09)</div>
+<p class="font-body-sm text-body-sm text-on-error-container/90 mt-0.5">
+          Connection timed out at 05:40 AM. 4 morning parlor check-ins were captured in offline local memory cache and are pending gateway sync.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-error font-label-sm text-label-sm font-semibold shadow-sm hover:bg-surface-container-high transition-all" onclick="alert('Attempting secure socket reconnection to station HW-RFID-09...')" type="button">
+        Retry Socket Sync
+      </button>
+</div>
+</div>
+<!-- Main Content Layout Grid (Table + Side Drawer Simulator) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Table & Filters Section -->
+<div class="xl:col-span-8 flex flex-col gap-space-md transition-all duration-300" id="table-container-col">
+<!-- Filters Panel -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm space-y-space-md">
+<!-- Date & Quick Selectors -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-lg">calendar_today</span>
+<input class="h-10 pl-9 pr-4 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface font-medium focus:outline-none cursor-default" readonly="" type="text" value="Wednesday, Oct 23, 2024"/>
+</div>
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="px-3 py-1 rounded text-xs font-semibold bg-surface-container-lowest text-on-surface shadow-sm" type="button">Today</button>
+<button class="px-3 py-1 rounded text-xs text-on-surface-variant hover:text-on-surface" type="button">Yesterday</button>
+<button class="px-2 py-1 rounded text-on-surface-variant hover:text-on-surface flex items-center" type="button">
+<span class="material-symbols-outlined text-sm">history</span>
+</button>
+</div>
+</div>
+<!-- Department Selector -->
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">Department:</span>
+<select class="h-10 px-3 py-1 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container transition-all" id="department-filter" onchange="filterRecords()">
+<option value="all">All Departments (4)</option>
+<option value="milking">Milking Parlor</option>
+<option value="feeding">Feeding &amp; Nutrition</option>
+<option value="veterinary">Dairy Herd Health &amp; Vet</option>
+<option value="machinery">TMR Wagon &amp; Machinery</option>
+</select>
+</div>
+</div>
+<!-- Search & Filter Badges -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pt-space-xs">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+<input class="w-full h-10 pl-9 pr-4 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:bg-surface-container transition-all" id="worker-search" oninput="filterRecords()" placeholder="Search worker by name, tag ID (e.g., WKR-042-19) or designation..." type="text"/>
+</div>
+<!-- Status Filter Tabs -->
+<div class="flex items-center gap-1 overflow-x-auto pb-1 md:pb-0" id="status-chips">
+<button class="status-tab px-3 py-1.5 rounded-lg text-xs font-semibold bg-primary text-on-primary transition-all whitespace-nowrap" data-status="all" onclick="filterByStatus('all')" type="button">
+              All (38)
+            </button>
+<button class="status-tab px-3 py-1.5 rounded-lg text-xs font-semibold bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-all whitespace-nowrap" data-status="present" onclick="filterByStatus('present')" type="button">
+              Present (32)
+            </button>
+<button class="status-tab px-3 py-1.5 rounded-lg text-xs font-semibold bg-surface-container-low text-tertiary-container hover:text-on-surface transition-all whitespace-nowrap" data-status="late" onclick="filterByStatus('late')" type="button">
+              Late (1)
+            </button>
+<button class="status-tab px-3 py-1.5 rounded-lg text-xs font-semibold bg-surface-container-low text-error hover:text-on-surface transition-all whitespace-nowrap" data-status="absent" onclick="filterByStatus('absent')" type="button">
+              Absent (1)
+            </button>
+<button class="status-tab px-3 py-1.5 rounded-lg text-xs font-semibold bg-surface-container-low text-secondary hover:text-on-surface transition-all whitespace-nowrap" data-status="leave" onclick="filterByStatus('leave')" type="button">
+              Leave (4)
+            </button>
+</div>
+</div>
+</div>
+<!-- Empty State Simulator (Hidden by Default) -->
+<div class="hidden rounded-xl bg-surface-container-lowest p-space-xl text-center shadow-sm" id="empty-state-view">
+<div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mx-auto mb-space-md text-on-surface-variant">
+<span class="material-symbols-outlined text-3xl">event_busy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">No Attendance Records Found</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto mt-1 mb-space-lg">
+          No clock-in stamps or manual adjustments match the selected criteria for this workspace date.
+        </p>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm" onclick="setState('standard')" type="button">
+          Reset Filters to Today
+        </button>
+</div>
+<!-- Records Table Container -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden" id="table-card">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse" id="attendance-table">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4">Worker Profile &amp; ID</th>
+<th class="py-3 px-4">Date</th>
+<th class="py-3 px-4 text-center">Check-In</th>
+<th class="py-3 px-4 text-center">Check-Out</th>
+<th class="py-3 px-4">Attendance Status</th>
+<th class="py-3 px-4 text-right">Work Duration</th>
+<th class="py-3 px-4 text-center">Admin Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1: Marcus Brody -->
+<tr class="hover:bg-surface-container-low/40 transition-colors record-row" data-department="milking" data-status="present" data-worker="Marcus Brody WKR-042-01">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold text-xs flex-shrink-0">
+                      MB
+                    </div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-on-surface font-bold truncate">Marcus Brody</div>
+<div class="flex items-center gap-1.5 text-xs text-on-surface-variant font-mono">
+<span class="material-symbols-outlined text-xs">pin</span>
+<span>WKR-042-01</span>
+<span>•</span>
+<span class="font-sans text-[11px] text-on-surface-variant">Milking Lead</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface whitespace-nowrap">
+                  Oct 23, 2024
+                </td>
+<td class="py-3.5 px-4 text-center font-mono text-xs font-semibold text-on-surface">
+<span class="px-2 py-1 rounded bg-surface-container-low">04:28 AM</span>
+</td>
+<td class="py-3.5 px-4 text-center font-mono text-xs font-semibold text-on-surface">
+<span class="px-2 py-1 rounded bg-surface-container-low">12:35 PM</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Present
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right font-mono text-xs font-bold text-on-surface">
+                  8.1 <span class="font-sans font-normal text-on-surface-variant">hrs</span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface text-xs font-medium transition-all" onclick="openCorrectionDrawer('Marcus Brody', 'WKR-042-01', '04:28 AM', '12:35 PM', 'Present', 'Parlor Supervisor Early Briefing')" type="button">
+<span class="material-symbols-outlined text-sm text-primary">edit_note</span>
+<span>Correct</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Tomas Ruiz -->
+<tr class="hover:bg-surface-container-low/40 transition-colors record-row" data-department="feeding" data-status="present" data-worker="Tomas Ruiz WKR-042-04">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface font-bold text-xs flex-shrink-0">
+                      TR
+                    </div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-on-surface font-bold truncate">Tomas Ruiz</div>
+<div class="flex items-center gap-1.5 text-xs text-on-surface-variant font-mono">
+<span class="material-symbols-outlined text-xs">pin</span>
+<span>WKR-042-04</span>
+<span>•</span>
+<span class="font-sans text-[11px] text-on-surface-variant">Feeding &amp; Bunk</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface whitespace-nowrap">
+                  Oct 23, 2024
+                </td>
+<td class="py-3.5 px-4 text-center font-mono text-xs font-semibold text-on-surface">
+<span class="px-2 py-1 rounded bg-surface-container-low">05:22 AM</span>
+</td>
+<td class="py-3.5 px-4 text-center font-mono text-xs font-semibold text-on-surface">
+<span class="px-2 py-1 rounded bg-surface-container-low">01:30 PM</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Present
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right font-mono text-xs font-bold text-on-surface">
+                  8.1 <span class="font-sans font-normal text-on-surface-variant">hrs</span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface text-xs font-medium transition-all" onclick="openCorrectionDrawer('Tomas Ruiz', 'WKR-042-04', '05:22 AM', '01:30 PM', 'Present', 'Shift completed on bunk delivery track')" type="button">
+<span class="material-symbols-outlined text-sm text-primary">edit_note</span>
+<span>Correct</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Carlos Mendez (LATE - Primary Focus) -->
+<tr class="bg-tertiary-fixed/20 hover:bg-tertiary-fixed/30 transition-colors record-row" data-department="machinery" data-status="late" data-worker="Carlos Mendez WKR-042-19">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed text-tertiary-container flex items-center justify-center font-bold text-xs flex-shrink-0">
+                      CM
+                    </div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-on-surface font-bold truncate">Carlos Mendez</div>
+<div class="flex items-center gap-1.5 text-xs text-on-surface-variant font-mono">
+<span class="material-symbols-outlined text-xs">pin</span>
+<span>WKR-042-19</span>
+<span>•</span>
+<span class="font-sans text-[11px] text-tertiary-container font-semibold">TMR &amp; Machinery</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface whitespace-nowrap">
+                  Oct 23, 2024
+                </td>
+<td class="py-3.5 px-4 text-center font-mono text-xs font-bold text-tertiary-container">
+<span class="px-2 py-1 rounded bg-tertiary-fixed/60">06:12 AM</span>
+</td>
+<td class="py-3.5 px-4 text-center font-mono text-xs font-semibold text-on-surface">
+<span class="px-2 py-1 rounded bg-surface-container-low">02:15 PM</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-tertiary-fixed text-on-tertiary-fixed-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    Late (+12m)
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right font-mono text-xs font-bold text-on-surface">
+                  8.0 <span class="font-sans font-normal text-on-surface-variant">hrs</span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-primary text-on-primary text-xs font-semibold shadow-sm hover:bg-primary-container transition-all" onclick="openCorrectionDrawer('Carlos Mendez', 'WKR-042-19', '06:12 AM', '02:15 PM', 'Late', 'Biometric reader fingerprint scan delay at Gate-Parlor-01 confirmed by supervisor Marcus Brody')" type="button">
+<span class="material-symbols-outlined text-sm">edit</span>
+<span>Correct Record</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Sofia Al-Mansoor (ON LEAVE) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors record-row" data-department="veterinary" data-status="leave" data-worker="Sofia Al-Mansoor WKR-042-12">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-bold text-xs flex-shrink-0">
+                      SA
+                    </div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-on-surface font-bold truncate">Sofia Al-Mansoor</div>
+<div class="flex items-center gap-1.5 text-xs text-on-surface-variant font-mono">
+<span class="material-symbols-outlined text-xs">pin</span>
+<span>WKR-042-12</span>
+<span>•</span>
+<span class="font-sans text-[11px] text-on-surface-variant">Dairy Herd Health</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface whitespace-nowrap">
+                  Oct 23, 2024
+                </td>
+<td class="py-3.5 px-4 text-center font-mono text-xs text-on-surface-variant">
+                  --:--
+                </td>
+<td class="py-3.5 px-4 text-center font-mono text-xs text-on-surface-variant">
+                  --:--
+                </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-surface-container-high text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    On Leave (Medical)
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right font-mono text-xs text-on-surface-variant">
+                  0.0 <span class="font-sans font-normal text-on-surface-variant">hrs</span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container text-secondary text-xs font-medium transition-all" onclick="alert('Viewing Leave Document #MED-2024-918 for Sofia Al-Mansoor. Status: Approved by Operations Lead.')" type="button">
+<span class="material-symbols-outlined text-sm">visibility</span>
+<span>View Leave</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: Johnathan Wu -->
+<tr class="hover:bg-surface-container-low/40 transition-colors record-row" data-department="milking" data-status="present" data-worker="Johnathan Wu WKR-042-08">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface font-bold text-xs flex-shrink-0">
+                      JW
+                    </div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-on-surface font-bold truncate">Johnathan Wu</div>
+<div class="flex items-center gap-1.5 text-xs text-on-surface-variant font-mono">
+<span class="material-symbols-outlined text-xs">pin</span>
+<span>WKR-042-08</span>
+<span>•</span>
+<span class="font-sans text-[11px] text-on-surface-variant">Parlor Technician</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface whitespace-nowrap">
+                  Oct 23, 2024
+                </td>
+<td class="py-3.5 px-4 text-center font-mono text-xs font-semibold text-on-surface">
+<span class="px-2 py-1 rounded bg-surface-container-low">04:31 AM</span>
+</td>
+<td class="py-3.5 px-4 text-center font-mono text-xs font-semibold text-on-surface">
+<span class="px-2 py-1 rounded bg-surface-container-low">12:30 PM</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Present
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right font-mono text-xs font-bold text-on-surface">
+                  8.0 <span class="font-sans font-normal text-on-surface-variant">hrs</span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface text-xs font-medium transition-all" onclick="openCorrectionDrawer('Johnathan Wu', 'WKR-042-08', '04:31 AM', '12:30 PM', 'Present', 'Standard station check-in verified')" type="button">
+<span class="material-symbols-outlined text-sm text-primary">edit_note</span>
+<span>Correct</span>
+</button>
+</td>
+</tr>
+<!-- Row 6: Aris Thorne (ABSENT) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors record-row" data-department="feeding" data-status="absent" data-worker="Aris Thorne WKR-042-15">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-error-container text-on-error-container flex items-center justify-center font-bold text-xs flex-shrink-0">
+                      AT
+                    </div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-on-surface font-bold truncate">Aris Thorne</div>
+<div class="flex items-center gap-1.5 text-xs text-on-surface-variant font-mono">
+<span class="material-symbols-outlined text-xs">pin</span>
+<span>WKR-042-15</span>
+<span>•</span>
+<span class="font-sans text-[11px] text-on-surface-variant">Calf Nursery Feeder</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface whitespace-nowrap">
+                  Oct 23, 2024
+                </td>
+<td class="py-3.5 px-4 text-center font-mono text-xs text-on-surface-variant">
+                  --:--
+                </td>
+<td class="py-3.5 px-4 text-center font-mono text-xs text-on-surface-variant">
+                  --:--
+                </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-error-container text-on-error-container">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                    Unexcused Absent
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right font-mono text-xs font-bold text-error">
+                  0.0 <span class="font-sans font-normal text-on-surface-variant">hrs</span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface text-xs font-medium transition-all" onclick="openCorrectionDrawer('Aris Thorne', 'WKR-042-15', '00:00', '00:00', 'Absent', 'Worker did not show for morning calf feed rotation.')" type="button">
+<span class="material-symbols-outlined text-sm text-primary">edit_note</span>
+<span>Correct</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Footer -->
+<div class="px-4 py-3 bg-surface-container-low/60 flex items-center justify-between text-xs text-on-surface-variant">
+<div>
+            Showing <span class="font-bold text-on-surface">6</span> of <span class="font-bold text-on-surface">38</span> active shift entries
+          </div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant disabled:opacity-40" disabled="" type="button">
+<span class="material-symbols-outlined text-base">chevron_left</span>
+</button>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-semibold text-on-surface shadow-sm">1</span>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-base">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Biometric Hardware Station Audit Card -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="rounded-xl bg-surface-container-lowest p-space-sm flex items-center gap-3 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-base">fingerprint</span>
+</div>
+<div class="min-w-0">
+<div class="text-xs font-bold text-on-surface truncate">Gate-Parlor-01 (BioScan)</div>
+<div class="text-[11px] text-on-surface-variant font-mono">Sync: 12m ago • 22 Punches</div>
+</div>
+</div>
+<div class="rounded-xl bg-surface-container-lowest p-space-sm flex items-center gap-3 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-base">sensors</span>
+</div>
+<div class="min-w-0">
+<div class="text-xs font-bold text-on-surface truncate">Bunk-Feed-Terminal (RFID)</div>
+<div class="text-[11px] text-on-surface-variant font-mono">Sync: 4m ago • 11 Punches</div>
+</div>
+</div>
+<div class="rounded-xl bg-surface-container-lowest p-space-sm flex items-center gap-3 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-base">verified_user</span>
+</div>
+<div class="min-w-0">
+<div class="text-xs font-bold text-on-surface truncate">Admin Manual Override Port</div>
+<div class="text-[11px] text-primary font-mono font-semibold">Active: Elena Vance</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Farm Admin Attendance Correction Protocol Side Drawer / Inspector -->
+<div class="xl:col-span-4 flex flex-col gap-space-md" id="correction-inspector-col">
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm border-2 border-primary/20 sticky top-20">
+<!-- Drawer Header -->
+<div class="flex items-start justify-between gap-space-sm pb-space-sm mb-space-sm bg-surface-container-low/40 -mx-space-lg -mt-space-lg p-space-lg rounded-t-xl">
+<div>
+<div class="flex items-center gap-1.5 text-primary font-label-sm text-label-sm font-bold uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-base">edit_calendar</span>
+<span>Correction Protocol</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Attendance Record Audit</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-mono text-[11px] font-semibold">
+            ADM-9402
+          </span>
+</div>
+<!-- Target Worker Subject Header -->
+<div class="p-space-sm rounded-lg bg-surface-container-low mb-space-md">
+<div class="flex items-center justify-between mb-1">
+<span class="text-xs text-on-surface-variant font-medium">Selected Worker</span>
+<span class="font-mono text-xs font-bold text-primary" id="target-worker-id">WKR-042-19</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold" id="target-worker-name">Carlos Mendez</div>
+<div class="text-xs text-on-surface-variant">TMR Wagon &amp; Machinery Operations • Shift 06:00 AM</div>
+</div>
+<!-- Audit Comparison Table (Before vs Proposed Adjustment) -->
+<div class="mb-space-md">
+<div class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-2 flex items-center justify-between">
+<span>Audit Trail Comparison</span>
+<span class="text-[10px] text-tertiary font-mono">Oct 23, 2024</span>
+</div>
+<div class="grid grid-cols-2 gap-2 text-xs">
+<div class="p-2.5 rounded-lg bg-surface-container-low/80">
+<span class="text-on-surface-variant block font-medium mb-1">Biometric Capture:</span>
+<div class="font-mono text-xs text-on-surface font-semibold">In: <span class="text-tertiary-container font-bold" id="audit-prev-in">06:12 AM</span></div>
+<div class="font-mono text-xs text-on-surface font-semibold">Out: <span id="audit-prev-out">02:15 PM</span></div>
+<div class="mt-1.5">
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-semibold text-[10px]" id="audit-prev-status">LATE (+12m)</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-primary-fixed/30">
+<span class="text-primary block font-medium mb-1">Admin Adjusted:</span>
+<div class="font-mono text-xs text-on-surface font-semibold">In: <span class="text-primary font-bold" id="audit-new-in">06:00 AM</span></div>
+<div class="font-mono text-xs text-on-surface font-semibold">Out: <span id="audit-new-out">02:15 PM</span></div>
+<div class="mt-1.5">
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-semibold text-[10px]" id="audit-new-status">PRESENT</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Editable Correction Form -->
+<form class="space-y-space-md" onsubmit="confirmCorrection(event)">
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold mb-1">Adjusted Check-in</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low font-mono text-body-sm text-on-surface focus:outline-none focus:bg-surface-container font-semibold" id="input-check-in" type="text" value="06:00 AM"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold mb-1">Adjusted Check-out</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low font-mono text-body-sm text-on-surface focus:outline-none focus:bg-surface-container font-semibold" id="input-check-out" type="text" value="02:15 PM"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold mb-1">Adjusted Attendance Status</label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container font-medium" id="select-status">
+<option selected="" value="Present">Present (Standard Shift Verified)</option>
+<option value="Late">Late (Verified delay)</option>
+<option value="Absent">Absent (Unexcused)</option>
+<option value="Leave">On Leave (Medical/Annual)</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold mb-1">
+              Administrative Justification <span class="text-error">*</span>
+</label>
+<textarea class="w-full p-2.5 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container" id="correction-justification" placeholder="Reason for manual adjustment (e.g. Biometric scanner latency at Parlor Gate-01 confirmed by supervisor Marcus Brody)..." rows="3">Biometric reader fingerprint scan delay at Gate-Parlor-01 confirmed by supervisor Marcus Brody.</textarea>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-1">This text is permanently recorded in the system audit log.</p>
+</div>
+<!-- Basic Activity Log Trail Snippet -->
+<div class="p-2.5 rounded bg-surface-container-low text-[11px] text-on-surface-variant space-y-1 font-mono">
+<div class="flex items-center justify-between">
+<span>Station: Gate-Parlor-01</span>
+<span>Orig: 06:12:44 AM</span>
+</div>
+<div class="text-primary font-semibold truncate">
+              Admin Session: Elena Vance (GF-042)
+            </div>
+</div>
+<!-- Form Buttons -->
+<div class="pt-2 flex items-center justify-end gap-space-sm">
+<button class="px-4 py-2.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-all font-label-md text-label-md" onclick="cancelCorrection()" type="button">
+              Cancel
+            </button>
+<button class="px-4 py-2.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md font-semibold shadow-sm transition-all flex items-center gap-1.5" type="submit">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span>Confirm Attendance Correction</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Open Questions & Architecture Safeguards Footer Notice -->
+<div class="mt-space-xl p-space-md rounded-xl bg-surface-container-low text-on-surface-variant flex flex-col sm:flex-row sm:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-lg bg-surface-container-highest text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-xl">policy</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface font-semibold">SRS Safeguards &amp; Open Scope Boundary:</strong> Late-arrival deduction thresholds, uncompleted parlor check-out reconciliation, overnight milking shift spans, and public holiday rates remain policy-defined without automated salary derivations. All changes must be manually confirmed by authorized farm administrators.
+      </p>
+</div>
+<div class="flex items-center gap-3 flex-shrink-0 self-end sm:self-center">
+<span class="font-mono text-xs font-semibold text-primary">v2.4-Core</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest font-mono text-[11px] text-on-surface">GF-042 SECURE</span>
+</div>
+</div>
+</div>
+<!-- Inline Interactive Script for State Simulator and Filters -->
+<script>
+  let currentStatusFilter = 'all';
+
+  function filterByStatus(status) {
+    currentStatusFilter = status;
+    
+    // Update active tab visual
+    document.querySelectorAll('.status-tab').forEach(tab => {
+      if (tab.getAttribute('data-status') === status) {
+        tab.className = 'status-tab px-3 py-1.5 rounded-lg text-xs font-semibold bg-primary text-on-primary transition-all whitespace-nowrap';
+      } else {
+        tab.className = 'status-tab px-3 py-1.5 rounded-lg text-xs font-semibold bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-all whitespace-nowrap';
+      }
+    });
+
+    filterRecords();
+  }
+
+  function filterRecords() {
+    const searchValue = document.getElementById('worker-search').value.toLowerCase();
+    const deptValue = document.getElementById('department-filter').value;
+    const rows = document.querySelectorAll('.record-row');
+    let visibleCount = 0;
+
+    rows.forEach(row => {
+      const rowStatus = row.getAttribute('data-status');
+      const rowDept = row.getAttribute('data-department');
+      const rowWorker = row.getAttribute('data-worker').toLowerCase();
+
+      const matchesStatus = (currentStatusFilter === 'all' || rowStatus === currentStatusFilter);
+      const matchesDept = (deptValue === 'all' || rowDept === deptValue);
+      const matchesSearch = rowWorker.includes(searchValue);
+
+      if (matchesStatus && matchesDept && matchesSearch) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    // Toggle empty state if zero matches
+    const emptyView = document.getElementById('empty-state-view');
+    const tableCard = document.getElementById('table-card');
+    if (visibleCount === 0) {
+      emptyView.classList.remove('hidden');
+      tableCard.classList.add('hidden');
+    } else {
+      emptyView.classList.add('hidden');
+      tableCard.classList.remove('hidden');
+    }
+  }
+
+  function setState(state) {
+    // Reset all simulator pills
+    document.querySelectorAll('.state-pill').forEach(btn => {
+      btn.className = 'state-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-all';
+    });
+
+    const activeBtn = document.getElementById('btn-state-' + state);
+    if (activeBtn) {
+      activeBtn.className = 'state-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-primary text-on-primary shadow-sm transition-all';
+    }
+
+    const syncErrorBanner = document.getElementById('sync-error-banner');
+    const inspector = document.getElementById('correction-inspector-col');
+    const tableCol = document.getElementById('table-container-col');
+    const emptyView = document.getElementById('empty-state-view');
+    const tableCard = document.getElementById('table-card');
+
+    // Reset default visibilities
+    syncErrorBanner.classList.add('hidden');
+    emptyView.classList.add('hidden');
+    tableCard.classList.remove('hidden');
+
+    if (state === 'standard') {
+      inspector.classList.remove('hidden');
+      tableCol.className = 'xl:col-span-8 flex flex-col gap-space-md transition-all duration-300';
+      filterByStatus('all');
+      document.getElementById('department-filter').value = 'all';
+      document.getElementById('worker-search').value = '';
+    } else if (state === 'modal') {
+      inspector.classList.remove('hidden');
+      tableCol.className = 'xl:col-span-8 flex flex-col gap-space-md transition-all duration-300';
+      openCorrectionDrawer('Carlos Mendez', 'WKR-042-19', '06:12 AM', '02:15 PM', 'Late', 'Biometric reader fingerprint scan delay at Gate-Parlor-01 confirmed by supervisor Marcus Brody');
+      inspector.scrollIntoView({ behavior: 'smooth' });
+    } else if (state === 'filtered') {
+      inspector.classList.remove('hidden');
+      tableCol.className = 'xl:col-span-8 flex flex-col gap-space-md transition-all duration-300';
+      // filter only late and absent
+      const rows = document.querySelectorAll('.record-row');
+      rows.forEach(r => {
+        const s = r.getAttribute('data-status');
+        if (s === 'late' || s === 'absent') {
+          r.style.display = '';
+        } else {
+          r.style.display = 'none';
+        }
+      });
+    } else if (state === 'empty') {
+      tableCard.classList.add('hidden');
+      emptyView.classList.remove('hidden');
+    } else if (state === 'sync-error') {
+      syncErrorBanner.classList.remove('hidden');
+      syncErrorBanner.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  function openCorrectionDrawer(name, id, inTime, outTime, status, justification) {
+    document.getElementById('target-worker-name').textContent = name;
+    document.getElementById('target-worker-id').textContent = id;
+    document.getElementById('audit-prev-in').textContent = inTime;
+    document.getElementById('audit-prev-out').textContent = outTime;
+    document.getElementById('audit-prev-status').textContent = status.toUpperCase();
+
+    // Proposed adjustment defaults
+    document.getElementById('input-check-in').value = (status === 'Late' ? '06:00 AM' : inTime);
+    document.getElementById('input-check-out').value = outTime;
+    document.getElementById('select-status').value = (status === 'Late' ? 'Present' : status);
+    document.getElementById('audit-new-in').textContent = (status === 'Late' ? '06:00 AM' : inTime);
+    document.getElementById('audit-new-out').textContent = outTime;
+    document.getElementById('audit-new-status').textContent = (status === 'Late' ? 'PRESENT' : status.toUpperCase());
+    document.getElementById('correction-justification').value = justification;
+
+    const inspector = document.getElementById('correction-inspector-col');
+    inspector.classList.remove('hidden');
+  }
+
+  function cancelCorrection() {
+    alert('Correction cancelled. No adjustments were committed to the audit ledger.');
+  }
+
+  function confirmCorrection(e) {
+    e.preventDefault();
+    const worker = document.getElementById('target-worker-name').textContent;
+    const workerId = document.getElementById('target-worker-id').textContent;
+    const adjustedIn = document.getElementById('input-check-in').value;
+    const status = document.getElementById('select-status').value;
+    const justification = document.getElementById('correction-justification').value;
+
+    alert(
+      'Attendance Record Correction Confirmed!\n\n' +
+      'Admin ID: ADM-9402 (Elena Vance)\n' +
+      'Worker: ' + worker + ' (' + workerId + ')\n' +
+      'Adjusted Check-in: ' + adjustedIn + '\n' +
+      'Updated Status: ' + status + '\n' +
+      'Audit Justification: ' + justification + '\n\n' +
+      'Tamper-evident activity log entry committed. Payroll calculation unautomated per SRS safeguards.'
+    );
+  }
+</script></main></div></body></html>

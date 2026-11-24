@@ -1,0 +1,614 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#30312d", "on-background": "#1b1c18", "secondary": "#556249", "tertiary-fixed-dim": "#ffb784", "surface-container-low": "#f5f3ed", "on-tertiary": "#ffffff", "surface-dim": "#dcdad4", "on-primary-container": "#b8cda9", "on-primary-fixed": "#101f08", "inverse-on-surface": "#f3f1eb", "outline": "#75786f", "background": "#fbf9f3", "on-tertiary-fixed": "#301400", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#3e4b32", "surface": "#fbf9f3", "outline-variant": "#c4c8bd", "surface-container": "#f0eee8", "surface-container-high": "#eae8e2", "surface-tint": "#516446", "surface-bright": "#fbf9f3", "on-surface-variant": "#444840", "primary-container": "#46583b", "primary": "#2f4126", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffdcc6", "on-primary-fixed-variant": "#3a4c30", "secondary-container": "#d9e8c7", "on-surface": "#1b1c18", "error": "#ba1a1a", "secondary-fixed-dim": "#bdcbac", "on-tertiary-container": "#ffb785", "on-secondary-container": "#5b694e", "on-error": "#ffffff", "primary-fixed": "#d4e9c3", "on-tertiary-fixed-variant": "#6c3a11", "tertiary": "#5e3007", "primary-fixed-dim": "#b8cda8", "on-error-container": "#93000a", "secondary-fixed": "#d9e8c7", "tertiary-container": "#7a461c", "on-secondary-fixed": "#141f0a", "on-primary": "#ffffff", "surface-variant": "#e4e2dd", "inverse-primary": "#b8cda8", "surface-container-highest": "#e4e2dd", "on-secondary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "gutter-mobile": "0.75rem", "margin": "2rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter": "1.5rem", "margin-mobile": "1rem" }, "fontFamily": { "data-metric-md": [ "Inter" ], "body-lg": [ "Inter" ], "display-lg-mobile": [ "Manrope" ], "body-sm": [ "Inter" ], "headline-md": [ "Manrope" ], "label-sm": [ "Inter" ], "headline-sm": [ "Manrope" ], "headline-xl": [ "Manrope" ], "body-md": [ "Inter" ], "headline-xl-mobile": [ "Manrope" ], "display-lg": [ "Manrope" ], "headline-lg": [ "Manrope" ], "data-metric-lg": [ "Manrope" ], "label-md": [ "Inter" ] }, "fontSize": { "data-metric-md": [ "1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "display-lg-mobile": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ], "headline-md": [ "1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" } ], "label-sm": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "headline-xl": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "headline-xl-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-lg": [ "3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "data-metric-lg": [ "2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZuhXF_IhBdGhJ4eix1oqj3wBimwP9kKeGGChH_b2ax1lMLHMcXPmCVu9b3MJqlJ3XUJHZyp_ietndJCcoi5tapKDT0swhF14GEZxUKYZjg6g5LvxUeQzsGptFXM8XbwZz0B0M4Kbg8tH48Ys1NpBq3q3ceaJWAzrxO8XU7fzOrfQL6K9wOMESU_VEMnfcbKwhEtKD90-MYyU8fO7yBiUm20ljVe33W-rRqQJED0H"><div><div class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight truncate">SmartFarm</div><div class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Dairy Management</div></div></div><span class="font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold px-space-xs py-0.5 rounded">Admin</span></div><div class="px-space-md py-space-sm bg-surface-container-low/80 flex items-center justify-between"><div class="truncate"><div class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Greenfield Dairy Estate</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">Workspace: GF-042</div></div><span class="h-2 w-2 rounded-full bg-primary-container ring-2 ring-primary-fixed flex-shrink-0"></span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Overview</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="font-body-md text-body-md flex-1">Dashboard</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Herd Management</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#"><span class="font-body-md text-body-md flex-1">Animals</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#"><span class="font-body-md text-body-md flex-1">Animal Health</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Feeding Management</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding-plans" href="#"><span class="font-body-md text-body-md flex-1">Feeding Plans</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding-schedule" href="#"><span class="font-body-md text-body-md flex-1">Feeding Schedule</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="actual-feeding-records" href="#"><span class="font-body-md text-body-md flex-1">Actual Feeding Records</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Operations &amp; Assets</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#"><span class="font-body-md text-body-md flex-1">Milk Production</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-management" href="#"><span class="font-body-md text-body-md flex-1">Milk Management</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#"><span class="font-body-md text-body-md flex-1">Inventory</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#"><span class="font-body-md text-body-md flex-1">Equipment</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Reports &amp; Analytics</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-reports" href="#"><span class="font-body-md text-body-md flex-1">Milk Reports</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="financial-reports" href="#"><span class="font-body-md text-body-md flex-1">Financial Reports</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="data-exports" href="#"><span class="font-body-md text-body-md flex-1">Data Exports</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Workforce &amp; Finance</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers" href="#"><span class="font-body-md text-body-md flex-1">Workers</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="attendance" href="#"><span class="font-body-md text-body-md flex-1">Attendance</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="payroll" href="#"><span class="font-body-md text-body-md flex-1">Payroll</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="finance" href="#"><span class="font-body-md text-body-md flex-1">Finance</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">System &amp; Alerts</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notification-center" href="#"><span class="font-body-md text-body-md flex-1">Notification Center</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notification-history" href="#"><span class="font-body-md text-body-md flex-1">Notification History</span></a></div><div class="space-y-space-xs pt-space-xs"><div class="px-space-sm flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Settings &amp; Configuration</span><span class="font-label-sm text-[0.625rem] bg-error-container text-on-error-container font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">Admin Only</span></div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farm_profile" href="#"><span class="font-body-md text-body-md flex-1">Farm Profile</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="units" href="#"><span class="font-body-md text-body-md flex-1">Units of Measurement</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="currency" href="#"><span class="font-body-md text-body-md flex-1">Currency Settings</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="timezone" href="#"><span class="font-body-md text-body-md flex-1">Timezone Settings</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="preferences" href="#"><span class="font-body-md text-body-md flex-1">Interface Preferences</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notification_settings" href="#"><span class="font-body-md text-body-md flex-1">Notification Settings</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="configuration" href="#"><span class="font-body-md text-body-md flex-1">Module Configuration</span></a></div></nav><div class="p-space-sm bg-surface-container-low/60"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex justify-between items-center mb-1"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Storage Quota</span><span class="font-label-sm text-label-sm text-primary font-bold">42%</span></div><div class="w-full bg-surface-container rounded-full h-1.5 mb-2"><div class="bg-primary-container h-1.5 rounded-full w-[42%]"></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-body-sm text-body-sm">1,280 Active Head</span><span class="material-symbols-outlined text-sm text-tertiary-container">sensors</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><button class="p-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-xl">menu_open</span></button><nav class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="font-semibold text-on-surface">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface-variant">Workspace: GF-042</span></nav><div class="relative flex-1 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full h-10 pl-9 pr-14 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search Animal ID, Batch, Record..." type="text"><span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded shadow-sm">⌘K</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm"><span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span><span>Connected • Live</span></div><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Mode" type="button"><span class="material-symbols-outlined text-xl">routine</span></button><div class="relative"><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative flex items-center justify-center" href="#" title="Alerts &amp; Notifications"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 h-4 min-w-[1rem] px-1 bg-error text-on-error font-label-sm text-[0.625rem] rounded-full flex items-center justify-center font-bold">3</span></a></div><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#" title="Docs &amp; Support"><span class="material-symbols-outlined text-xl">help</span></a><div class="h-6 w-[1px] bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHGkwzAmXeAWZgoliBfM3J0Dk3rRvKbrFcaSDXWTFXvp7mK8JZlIDpaM_-PKsE2e-9DSWj_thQxg7ZvMO7_J2wdBeJdNp3xHQNrTkReCH1iwd77yI5cACPrn8AVBGbsgSIRzl_r1aNrbkvrI3tTJT7qFPLASAjAk_cx85172_N3qz8dJ2RbazkMZxrYU4--z2VriyTURPXkRqv4-UUhJWONTqJq0P8IWMmPKFhLYX7"><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></div><div class="hidden lg:block text-left"><div class="flex items-center gap-1.5"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</span><span class="font-label-sm text-[0.625rem] bg-primary-container text-on-primary font-bold px-1 rounded">Farm Admin Only</span></div><div class="font-label-sm text-label-sm text-on-surface-variant leading-none">Farm Administrator</div></div><button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-lg">expand_more</span></button></div></div></header><main class="relative pt-16 w-full px-space-lg py-space-lg bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Toast Notification Container -->
+<div class="fixed bottom-6 right-8 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 bg-inverse-surface text-inverse-on-surface px-5 py-3.5 rounded-xl shadow-xl" id="saveToast">
+<span class="material-symbols-outlined text-secondary-fixed text-xl">check_circle</span>
+<div>
+<div class="font-label-md text-label-md font-semibold text-white">Currency Configuration Saved</div>
+<div class="font-body-sm text-body-sm text-surface-variant/80">Workspace GF-042 financial formatting updated across all modules.</div>
+</div>
+</div>
+<!-- Breadcrumbs & Screen Meta -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span>Settings &amp; Configuration</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-on-surface font-semibold">Currency Settings</span>
+</div>
+<div class="flex items-center gap-3">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Farm Currency &amp; Monetary Presentation</h1>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[0.6875rem] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-xs">lock</span>
+          Farm Admin Sole Authority
+        </span>
+</div>
+</div>
+<!-- Action Bar -->
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1.5" onclick="resetCurrencyConfig()" type="button">
+<span class="material-symbols-outlined text-sm">restart_alt</span>
+        Cancel &amp; Reset
+      </button>
+<button class="px-5 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md font-semibold transition-all shadow-sm flex items-center gap-2" onclick="triggerSaveToast()" type="button">
+<span class="material-symbols-outlined text-base">save</span>
+        Save Currency Configuration
+      </button>
+</div>
+</div>
+<!-- Unsaved Changes Alert Banner (Dynamic) -->
+<div class="hidden mb-6 p-4 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-start sm:items-center justify-between gap-4 shadow-sm animate-pulse" id="unsavedBanner">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-2xl">pending_actions</span>
+<div>
+<span class="font-label-md text-label-md font-bold">Unsaved Monetary Preferences</span>
+<p class="font-body-sm text-body-sm text-on-tertiary-fixed-variant">You have adjusted currency display rules. Click "Save Currency Configuration" to apply changes uniformly across Workspace GF-042.</p>
+</div>
+</div>
+<div class="flex items-center gap-2 flex-shrink-0">
+<button class="px-3 py-1 bg-tertiary text-on-tertiary rounded-lg font-label-sm text-label-sm font-semibold hover:bg-tertiary-container transition-colors" onclick="triggerSaveToast()">Save Now</button>
+<button class="p-1 hover:text-tertiary transition-colors" onclick="hideUnsavedBanner()"><span class="material-symbols-outlined text-lg">close</span></button>
+</div>
+</div>
+<!-- SRS Governance Policy Banner -->
+<div class="mb-8 p-5 rounded-xl bg-surface-container-low shadow-sm flex flex-col md:flex-row items-start md:items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-xl">policy</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-0.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">SRS Governance Compliance • Architecture Rule SEC-CUR-01</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zero Foreign Exchange Overhead</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"><strong class="text-on-surface font-semibold">Policy Notice:</strong> The SmartFarm platform confirms farm-configured currency. No universal default is approved. Currency conversion is not performed; figures represent direct ledger receipts and transactions in the selected sovereign unit.</p>
+</div>
+<div class="hidden lg:flex flex-col items-end text-right px-3 py-1.5 rounded-lg bg-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Target Scope</span>
+<span class="font-label-md text-label-md text-primary font-bold">GF-042 Master Ledger</span>
+</div>
+</div>
+<!-- Scenario Quick-Switcher Toolbar -->
+
+<!-- Primary Configuration & Preview Split Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Controls & Configuration (7 cols) -->
+<div class="xl:col-span-7 flex flex-col gap-6">
+<!-- Section 1: Active Operational Currency Selector -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">1. Farm Operational Currency</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Select the sovereign monetary unit used for all transactional records at this installation.</p>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">Required</span>
+</div>
+<!-- Currency Radio Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="currencyGrid">
+<!-- USD Option -->
+<label class="currency-card relative flex items-start gap-3 p-3.5 rounded-xl cursor-pointer bg-surface-container-low hover:bg-secondary-container/30 transition-all">
+<input checked="" class="mt-1 text-primary focus:ring-tertiary" data-code="USD" data-name="United States Dollar" data-symbol="$" name="farm_currency" onchange="handleCurrencyChange(this)" type="radio" value="USD">
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">USD ($)</span>
+<span class="font-label-sm text-[0.6875rem] font-semibold text-primary bg-primary-fixed px-1.5 py-0.2 rounded">GF-042 Active</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">United States Dollar</div>
+</div>
+</label>
+<!-- PKR Option -->
+<label class="currency-card relative flex items-start gap-3 p-3.5 rounded-xl cursor-pointer bg-surface-container-low hover:bg-secondary-container/30 transition-all">
+<input class="mt-1 text-primary focus:ring-tertiary" data-code="PKR" data-name="Pakistani Rupee" data-symbol="₨" name="farm_currency" onchange="handleCurrencyChange(this)" type="radio" value="PKR">
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">PKR (Rs / ₨)</span>
+<span class="font-label-sm text-[0.6875rem] font-semibold text-on-surface-variant bg-surface-container px-1.5 py-0.2 rounded">Regional Ag</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">Pakistani Rupee</div>
+</div>
+</label>
+<!-- EUR Option -->
+<label class="currency-card relative flex items-start gap-3 p-3.5 rounded-xl cursor-pointer bg-surface-container-low hover:bg-secondary-container/30 transition-all">
+<input class="mt-1 text-primary focus:ring-tertiary" data-code="EUR" data-name="Euro" data-symbol="€" name="farm_currency" onchange="handleCurrencyChange(this)" type="radio" value="EUR">
+<div class="flex-1 min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface">EUR (€)</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">European Union Euro</div>
+</div>
+</label>
+<!-- GBP Option -->
+<label class="currency-card relative flex items-start gap-3 p-3.5 rounded-xl cursor-pointer bg-surface-container-low hover:bg-secondary-container/30 transition-all">
+<input class="mt-1 text-primary focus:ring-tertiary" data-code="GBP" data-name="British Pound" data-symbol="£" name="farm_currency" onchange="handleCurrencyChange(this)" type="radio" value="GBP">
+<div class="flex-1 min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface">GBP (£)</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">British Pound Sterling</div>
+</div>
+</label>
+<!-- INR Option -->
+<label class="currency-card relative flex items-start gap-3 p-3.5 rounded-xl cursor-pointer bg-surface-container-low hover:bg-secondary-container/30 transition-all">
+<input class="mt-1 text-primary focus:ring-tertiary" data-code="INR" data-name="Indian Rupee" data-symbol="₹" name="farm_currency" onchange="handleCurrencyChange(this)" type="radio" value="INR">
+<div class="flex-1 min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface">INR (₹)</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">Indian Rupee</div>
+</div>
+</label>
+<!-- KES Option -->
+<label class="currency-card relative flex items-start gap-3 p-3.5 rounded-xl cursor-pointer bg-surface-container-low hover:bg-secondary-container/30 transition-all">
+<input class="mt-1 text-primary focus:ring-tertiary" data-code="KES" data-name="Kenyan Shilling" data-symbol="KSh" name="farm_currency" onchange="handleCurrencyChange(this)" type="radio" value="KES">
+<div class="flex-1 min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface">KES (KSh)</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">Kenyan Shilling</div>
+</div>
+</label>
+</div>
+<!-- Custom Farm Token / Currency Sub-Section -->
+<div class="mt-4 pt-4 border-t-0 bg-surface-container-low p-4 rounded-xl">
+<div class="flex items-center gap-2 mb-2">
+<input class="text-primary focus:ring-tertiary" id="customTokenRadio" name="farm_currency" onchange="handleCurrencyChange(this)" type="radio" value="CUSTOM">
+<label class="font-label-md text-label-md font-semibold text-on-surface cursor-pointer" for="customTokenRadio">Custom Farm Token / Specialized Currency Code</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3 pl-6">For internal farm cooperative tokens, proprietary bartering units, or unlisted state tenders.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pl-6">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">Currency Code (3-4 Letters)</label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-primary/20 disabled:opacity-50" disabled="" id="customCodeInput" maxlength="5" oninput="updateCustomCurrency()" placeholder="e.g. AGRI, CAD, AUD" type="text">
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">Display Symbol</label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-primary/20 disabled:opacity-50" disabled="" id="customSymbolInput" maxlength="4" oninput="updateCustomCurrency()" placeholder="e.g. ₳, $, Kr" type="text">
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Display & Formatting Rules -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">2. Notation &amp; Formatting Preferences</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Define numerical separators, symbol alignment, and precision parameters.</p>
+<div class="space-y-6">
+<!-- Symbol Placement -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider mb-2">Symbol &amp; Code Placement</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+<label class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="text-primary focus:ring-tertiary" name="symbol_placement" onchange="updateFormatting()" type="radio" value="before">
+<div>
+<span class="block font-label-md text-label-md text-on-surface font-medium">Before Amount</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="samplePlacementBefore">$1,250.00</span>
+</div>
+</label>
+<label class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="text-primary focus:ring-tertiary" name="symbol_placement" onchange="updateFormatting()" type="radio" value="after">
+<div>
+<span class="block font-label-md text-label-md text-on-surface font-medium">After Amount</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="samplePlacementAfter">1,250.00 $</span>
+</div>
+</label>
+<label class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="text-primary focus:ring-tertiary" name="symbol_placement" onchange="updateFormatting()" type="radio" value="iso">
+<div>
+<span class="block font-label-md text-label-md text-on-surface font-medium">ISO Prefix</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="samplePlacementIso">USD 1,250.00</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Number Formatting: Thousands & Decimal Separators -->
+<div><label class="block font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider mb-2">Numeric Digit Grouping Style</label><div class="grid grid-cols-1 sm:grid-cols-2 gap-3"><label class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors"><input checked="" class="mt-0.5 text-primary focus:ring-tertiary" name="grouping_style" onchange="updateFormatting()" type="radio" value="western"><div><span class="font-label-md text-label-md font-semibold text-on-surface">Standard International (Millions)</span><p class="font-body-sm text-body-sm text-on-surface-variant">Three-digit intervals (e.g. 1,000,000 / 10,000,000).</p></div></label><label class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors"><input class="mt-0.5 text-primary focus:ring-tertiary" name="grouping_style" onchange="updateFormatting()" type="radio" value="south_asian"><div><span class="font-label-md text-label-md font-semibold text-on-surface">South Asian / Pakistani (Lakh &amp; Crore)</span><p class="font-body-sm text-body-sm text-on-surface-variant">Progressive two-digit intervals (e.g. 10,00,000 / 1,00,00,000).</p></div></label></div></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Thousands Separator -->
+<div class="p-4 rounded-xl bg-surface-container-low">
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider mb-2">Thousands Separator</label>
+<div class="space-y-2">
+<label class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-lowest cursor-pointer transition-colors">
+<div class="flex items-center gap-2">
+<input checked="" class="text-primary focus:ring-tertiary" name="thousand_sep" onchange="updateFormatting()" type="radio" value=",">
+<span class="font-label-md text-label-md text-on-surface">Comma ( , )</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1,000,000</span>
+</label>
+<label class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-lowest cursor-pointer transition-colors">
+<div class="flex items-center gap-2">
+<input class="text-primary focus:ring-tertiary" name="thousand_sep" onchange="updateFormatting()" type="radio" value=".">
+<span class="font-label-md text-label-md text-on-surface">Dot ( . )</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1.000.000</span>
+</label>
+<label class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-lowest cursor-pointer transition-colors">
+<div class="flex items-center gap-2">
+<input class="text-primary focus:ring-tertiary" name="thousand_sep" onchange="updateFormatting()" type="radio" value=" ">
+<span class="font-label-md text-label-md text-on-surface">Space ( ⎵ )</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1 000 000</span>
+</label>
+</div>
+</div>
+<!-- Decimal Separator -->
+<div class="p-4 rounded-xl bg-surface-container-low">
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider mb-2">Decimal Separator</label>
+<div class="space-y-2">
+<label class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-lowest cursor-pointer transition-colors">
+<div class="flex items-center gap-2">
+<input checked="" class="text-primary focus:ring-tertiary" name="decimal_sep" onchange="updateFormatting()" type="radio" value=".">
+<span class="font-label-md text-label-md text-on-surface">Dot ( . )</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">0.00</span>
+</label>
+<label class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-lowest cursor-pointer transition-colors">
+<div class="flex items-center gap-2">
+<input class="text-primary focus:ring-tertiary" name="decimal_sep" onchange="updateFormatting()" type="radio" value=",">
+<span class="font-label-md text-label-md text-on-surface">Comma ( , )</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">0,00</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Decimal Precision / Digits -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider mb-2">Decimal Precision</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<label class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="mt-0.5 text-primary focus:ring-tertiary" name="decimal_digits" onchange="updateFormatting()" type="radio" value="2">
+<div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">2 Decimals (Standard)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Captures fractional unit pricing (e.g. bulk milk volume @ $0.48/Liter).</p>
+</div>
+</label>
+<label class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="mt-0.5 text-primary focus:ring-tertiary" name="decimal_digits" onchange="updateFormatting()" type="radio" value="0">
+<div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">0 Decimals (Whole Units)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Common for high-denomination currencies such as PKR, INR, or JPY.</p>
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Critical Confirmation Disclaimer -->
+<div class="p-5 rounded-2xl bg-surface-container-low shadow-sm flex items-start gap-3.5">
+<span class="material-symbols-outlined text-secondary text-2xl flex-shrink-0">info</span>
+<div>
+<h3 class="font-label-md text-label-md font-bold text-on-surface">Monetary Re-Labeling Safety Disclaimer</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+            Changing the currency symbol or notation updates the visual token shown across all financial ledgers, livestock dispatch vouchers, and worker records in <strong class="text-on-surface">Workspace GF-042</strong>. Existing numerical ledger records are <em>never recalculated, multiplied, or divided</em> by automated foreign exchange rates.
+          </p>
+</div>
+</div>
+</div>
+<!-- Right Column: Live Multi-Module Financial Preview (5 cols) -->
+<div class="xl:col-span-5 flex flex-col gap-6 sticky top-20">
+<!-- Live Preview Container -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-md">
+<div class="flex items-center justify-between pb-4 border-b-0 bg-surface-container-low -mx-6 -mt-6 p-6 rounded-t-2xl mb-6">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-xl">visibility</span>
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Multi-Module Live Preview</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Real-time rendering across dairy software modules</div>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+            Dynamic
+          </span>
+</div>
+<!-- Metric Highlight Badge -->
+<div class="p-4 rounded-xl bg-surface-container-low mb-6">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">Selected Format Expression</div>
+<div class="font-data-metric-lg text-data-metric-lg text-primary font-bold mt-1 tracking-tight" id="heroPreview">$42,650.00</div>
+<div class="flex items-center justify-between mt-2 pt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span>Currency: <strong class="text-on-surface" id="previewCurrencyName">United States Dollar</strong></span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest" id="previewIsoCode">USD</span>
+</div>
+</div>
+<!-- Simulated Modules Stack -->
+<div class="space-y-4">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Simulated Platform Records</div>
+<!-- Module 1: Milk Sales Dispatch -->
+<div class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">local_shipping</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Milk Dispatch Voucher</span>
+</div>
+<span class="font-label-sm text-[0.6875rem] px-2 py-0.2 rounded-full bg-primary-fixed text-on-primary-fixed font-medium">DISP-2024-889</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface" id="milkDispatchVal">$31,200.00</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant">62,400 Liters Grade-A Raw Milk</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="milkUnitRate">@ $0.50 / L</span>
+</div>
+</div>
+<!-- Module 2: Feed Inventory Expense -->
+<div class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-lg">inventory_2</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Feed &amp; Rations Purchase</span>
+</div>
+<span class="font-label-sm text-[0.6875rem] px-2 py-0.2 rounded-full bg-surface-container text-on-surface-variant font-medium">EXP-FD-0412</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface" id="feedExpenseVal">$14,200.00</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Alfalfa Hay &amp; Silage Concentrate (28 Tons)</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Vendor: AgroAg Ltd</span>
+</div>
+</div>
+<!-- Module 3: Workforce Payroll Voucher -->
+<div class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">badge</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Worker Bi-Weekly Payslip</span>
+</div>
+<span class="font-label-sm text-[0.6875rem] px-2 py-0.2 rounded-full bg-secondary-fixed text-on-secondary-fixed font-medium">#WKR-042-01</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface" id="payrollVal">$1,339.88</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Senior Herdsman (Marcus Brody) • Net Payable</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">80 Reg + 4 OT</span>
+</div>
+</div>
+<!-- Module 4: Farm Operating Cash Surplus -->
+<div class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">account_balance_wallet</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Monthly Operating Net Surplus</span>
+</div>
+<span class="font-label-sm text-[0.6875rem] px-2 py-0.2 rounded-full bg-primary-container text-on-primary font-medium">Oct 2024</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary" id="netSurplusVal">+$14,240.00</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Revenue less Feed &amp; Veterinary Direct Costs</div>
+</div>
+<span class="material-symbols-outlined text-primary text-lg">trending_up</span>
+</div>
+</div>
+</div>
+<!-- Ledger Audit Micro-Note -->
+<div class="mt-6 pt-4 border-t-0 bg-surface-container-low p-4 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-base">verified</span>
+<span class="font-body-sm text-body-sm">Format string verification: <code class="font-mono text-on-surface font-semibold bg-surface-container px-1 py-0.5 rounded" id="formatStringRef">$#,##0.00</code></span>
+</div>
+<span class="font-label-sm text-[0.6875rem] text-primary font-bold">Passed</span>
+</div>
+</div>
+<!-- Quick Guidance Card -->
+<div class="p-5 rounded-2xl bg-surface-container-low shadow-sm">
+<h4 class="font-label-md text-label-md font-bold text-on-surface mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-lg">help_outline</span>
+          Regional Dairy Best Practices
+        </h4>
+<ul class="font-body-sm text-body-sm text-on-surface-variant space-y-2 list-disc list-inside"><li><strong>Farm-Configured Sovereignty:</strong> SmartFarm executes no automatic exchange rate conversions; figures represent direct ledger transactions.</li><li><strong>South Asian / Pakistani (PKR / INR):</strong> Supports standard Lakh &amp; Crore progressive grouping (e.g. ₨ 12,80,000) for fodder invoices and milk batches.</li><li><strong>US/EU Export Notation:</strong> Standard 2-decimal notation ensures export compliance with commercial dairy processors.</li><li><strong>East Africa (KES):</strong> Currency prefix <code>KSh</code> formatted for regional dairy accounts and feeds.</li></ul>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // State Engine
+  const state = {
+    symbol: "$",
+    code: "USD",
+    name: "United States Dollar",
+    placement: "before", // 'before', 'after', 'iso'
+    thousandSep: ",",
+    decimalSep: ".",
+    precision: 2,
+    isDirty: false
+  };
+
+  function formatNumber(num, precision, thousandSep, decimalSep) {
+    const fixed = num.toFixed(precision);
+    const parts = fixed.split('.');
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, thousandSep);
+    return precision > 0 ? parts.join(decimalSep) : parts[0];
+  }
+
+  function renderFormatted(amount) {
+    const formattedNum = formatNumber(Math.abs(amount), state.precision, state.thousandSep, state.decimalSep);
+    const sign = amount < 0 ? "-" : "";
+    
+    if (state.placement === "before") {
+      return `${sign}${state.symbol}${formattedNum}`;
+    } else if (state.placement === "after") {
+      return `${sign}${formattedNum} ${state.symbol}`;
+    } else if (state.placement === "iso") {
+      return `${sign}${state.code} ${formattedNum}`;
+    }
+    return `${sign}${state.symbol}${formattedNum}`;
+  }
+
+  function updateFormatting() {
+    // Read Placement
+    const placementInput = document.querySelector('input[name="symbol_placement"]:checked');
+    if (placementInput) state.placement = placementInput.value;
+
+    // Read Thousand Separator
+    const thousandInput = document.querySelector('input[name="thousand_sep"]:checked');
+    if (thousandInput) state.thousandSep = thousandInput.value;
+
+    // Read Decimal Separator
+    const decimalInput = document.querySelector('input[name="decimal_sep"]:checked');
+    if (decimalInput) state.decimalSep = decimalInput.value;
+
+    // Read Precision
+    const precisionInput = document.querySelector('input[name="decimal_digits"]:checked');
+    if (precisionInput) state.precision = parseInt(precisionInput.value, 10);
+
+    // Conflict Guard: If thousand & decimal separator match, adjust decimal automatically
+    if (state.thousandSep === state.decimalSep) {
+      if (state.thousandSep === '.') {
+        state.decimalSep = ',';
+        const dRadio = document.querySelector('input[name="decimal_sep"][value=","]');
+        if (dRadio) dRadio.checked = true;
+      } else {
+        state.decimalSep = '.';
+        const dRadio = document.querySelector('input[name="decimal_sep"][value="."]');
+        if (dRadio) dRadio.checked = true;
+      }
+    }
+
+    renderAllViews();
+    showUnsavedBanner();
+  }
+
+  function handleCurrencyChange(radio) {
+    const customCode = document.getElementById('customCodeInput');
+    const customSymbol = document.getElementById('customSymbolInput');
+
+    if (radio.value === 'CUSTOM') {
+      customCode.disabled = false;
+      customSymbol.disabled = false;
+      customCode.focus();
+      state.code = customCode.value.trim().toUpperCase() || 'CUSTOM';
+      state.symbol = customSymbol.value.trim() || '¤';
+      state.name = "Custom Enterprise Token";
+    } else {
+      customCode.disabled = true;
+      customSymbol.disabled = true;
+      state.code = radio.dataset.code;
+      state.symbol = radio.dataset.symbol;
+      state.name = radio.dataset.name;
+    }
+
+    renderAllViews();
+    showUnsavedBanner();
+  }
+
+  function updateCustomCurrency() {
+    const customCode = document.getElementById('customCodeInput');
+    const customSymbol = document.getElementById('customSymbolInput');
+    state.code = customCode.value.trim().toUpperCase() || 'CUSTOM';
+    state.symbol = customSymbol.value.trim() || '¤';
+    renderAllViews();
+    showUnsavedBanner();
+  }
+
+  function renderAllViews() {
+    // 1. Placement Radio Samples
+    const sampleVal = 1250;
+    const sampleFormatted = formatNumber(sampleVal, state.precision, state.thousandSep, state.decimalSep);
+    document.getElementById('samplePlacementBefore').textContent = `${state.symbol}${sampleFormatted}`;
+    document.getElementById('samplePlacementAfter').textContent = `${sampleFormatted} ${state.symbol}`;
+    document.getElementById('samplePlacementIso').textContent = `${state.code} ${sampleFormatted}`;
+
+    // 2. Hero Big Metric
+    document.getElementById('heroPreview').textContent = renderFormatted(42650);
+    document.getElementById('previewCurrencyName').textContent = state.name;
+    document.getElementById('previewIsoCode').textContent = state.code;
+
+    // 3. Simulated Modules
+    document.getElementById('milkDispatchVal').textContent = renderFormatted(31200);
+    document.getElementById('milkUnitRate').textContent = `@ ${renderFormatted(0.50)} / L`;
+    document.getElementById('feedExpenseVal').textContent = renderFormatted(14200);
+    document.getElementById('payrollVal').textContent = renderFormatted(1339.88);
+    document.getElementById('netSurplusVal').textContent = `+${renderFormatted(14240)}`;
+
+    // 4. Code Pattern String
+    let pattern = "";
+    const numPart = `#,##0${state.precision > 0 ? state.decimalSep + '0'.repeat(state.precision) : ''}`;
+    if (state.placement === "before") pattern = `${state.symbol}${numPart}`;
+    else if (state.placement === "after") pattern = `${numPart} ${state.symbol}`;
+    else pattern = `${state.code} ${numPart}`;
+    document.getElementById('formatStringRef').textContent = pattern;
+  }
+
+  function applyPreset(type) {
+    if (type === 'usd') {
+      selectRadio('farm_currency', 'USD');
+      selectRadio('symbol_placement', 'before');
+      selectRadio('thousand_sep', ',');
+      selectRadio('decimal_sep', '.');
+      selectRadio('decimal_digits', '2');
+      state.symbol = '$';
+      state.code = 'USD';
+      state.name = 'United States Dollar';
+    } else if (type === 'pkr') {
+      selectRadio('farm_currency', 'PKR');
+      selectRadio('symbol_placement', 'before');
+      selectRadio('thousand_sep', ',');
+      selectRadio('decimal_sep', '.');
+      selectRadio('decimal_digits', '0'); // Rupee often configured whole for farm records
+      state.symbol = '₨';
+      state.code = 'PKR';
+      state.name = 'Pakistani Rupee';
+    } else if (type === 'eur') {
+      selectRadio('farm_currency', 'EUR');
+      selectRadio('symbol_placement', 'after');
+      selectRadio('thousand_sep', '.');
+      selectRadio('decimal_sep', ',');
+      selectRadio('decimal_digits', '2');
+      state.symbol = '€';
+      state.code = 'EUR';
+      state.name = 'Euro';
+    } else if (type === 'kes') {
+      selectRadio('farm_currency', 'KES');
+      selectRadio('symbol_placement', 'before');
+      selectRadio('thousand_sep', ',');
+      selectRadio('decimal_sep', '.');
+      selectRadio('decimal_digits', '2');
+      state.symbol = 'KSh';
+      state.code = 'KES';
+      state.name = 'Kenyan Shilling';
+    }
+
+    const customCode = document.getElementById('customCodeInput');
+    const customSymbol = document.getElementById('customSymbolInput');
+    customCode.disabled = true;
+    customSymbol.disabled = true;
+
+    updateFormatting();
+    showUnsavedBanner();
+  }
+
+  function selectRadio(name, val) {
+    const radio = document.querySelector(`input[name="${name}"][value="${val}"]`);
+    if (radio) radio.checked = true;
+  }
+
+  function showUnsavedBanner() {
+    const banner = document.getElementById('unsavedBanner');
+    banner.classList.remove('hidden');
+    banner.classList.add('flex');
+    state.isDirty = true;
+  }
+
+  function hideUnsavedBanner() {
+    const banner = document.getElementById('unsavedBanner');
+    banner.classList.add('hidden');
+    banner.classList.remove('flex');
+  }
+
+  function triggerSaveToast() {
+    hideUnsavedBanner();
+    state.isDirty = false;
+    const toast = document.getElementById('saveToast');
+    toast.classList.remove('translate-y-24', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+      toast.classList.add('translate-y-24', 'opacity-0');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 3800);
+  }
+
+  function resetCurrencyConfig() {
+    applyPreset('usd');
+    hideUnsavedBanner();
+  }
+
+  // Initial Run
+  document.addEventListener('DOMContentLoaded', () => {
+    renderAllViews();
+  });
+</script></main></div>
+
+</body></html>

@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#30312d", "on-background": "#1b1c18", "secondary": "#556249", "tertiary-fixed-dim": "#ffb784", "surface-container-low": "#f5f3ed", "on-tertiary": "#ffffff", "surface-dim": "#dcdad4", "on-primary-container": "#b8cda9", "on-primary-fixed": "#101f08", "inverse-on-surface": "#f3f1eb", "outline": "#75786f", "background": "#fbf9f3", "on-tertiary-fixed": "#301400", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#3e4b32", "surface": "#fbf9f3", "outline-variant": "#c4c8bd", "surface-container": "#f0eee8", "surface-container-high": "#eae8e2", "surface-tint": "#516446", "surface-bright": "#fbf9f3", "on-surface-variant": "#444840", "primary-container": "#46583b", "primary": "#2f4126", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffdcc6", "on-primary-fixed-variant": "#3a4c30", "secondary-container": "#d9e8c7", "on-surface": "#1b1c18", "error": "#ba1a1a", "secondary-fixed-dim": "#bdcbac", "on-tertiary-container": "#ffb785", "on-secondary-container": "#5b694e", "on-error": "#ffffff", "primary-fixed": "#d4e9c3", "on-tertiary-fixed-variant": "#6c3a11", "tertiary": "#5e3007", "primary-fixed-dim": "#b8cda8", "on-error-container": "#93000a", "secondary-fixed": "#d9e8c7", "tertiary-container": "#7a461c", "on-secondary-fixed": "#141f0a", "on-primary": "#ffffff", "surface-variant": "#e4e2dd", "inverse-primary": "#b8cda8", "surface-container-highest": "#e4e2dd", "on-secondary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "gutter-mobile": "0.75rem", "margin": "2rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter": "1.5rem", "margin-mobile": "1rem" }, "fontFamily": { "data-metric-md": [ "Inter" ], "body-lg": [ "Inter" ], "display-lg-mobile": [ "Manrope" ], "body-sm": [ "Inter" ], "headline-md": [ "Manrope" ], "label-sm": [ "Inter" ], "headline-sm": [ "Manrope" ], "headline-xl": [ "Manrope" ], "body-md": [ "Inter" ], "headline-xl-mobile": [ "Manrope" ], "display-lg": [ "Manrope" ], "headline-lg": [ "Manrope" ], "data-metric-lg": [ "Manrope" ], "label-md": [ "Inter" ] }, "fontSize": { "data-metric-md": [ "1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "display-lg-mobile": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ], "headline-md": [ "1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" } ], "label-sm": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "headline-xl": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "headline-xl-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-lg": [ "3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "data-metric-lg": [ "2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZuhXF_IhBdGhJ4eix1oqj3wBimwP9kKeGGChH_b2ax1lMLHMcXPmCVu9b3MJqlJ3XUJHZyp_ietndJCcoi5tapKDT0swhF14GEZxUKYZjg6g5LvxUeQzsGptFXM8XbwZz0B0M4Kbg8tH48Ys1NpBq3q3ceaJWAzrxO8XU7fzOrfQL6K9wOMESU_VEMnfcbKwhEtKD90-MYyU8fO7yBiUm20ljVe33W-rRqQJED0H"/><div><div class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight truncate">SmartFarm</div><div class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Dairy Management</div></div></div><span class="font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold px-space-xs py-0.5 rounded">Admin</span></div><div class="px-space-md py-space-sm bg-surface-container-low/80 flex items-center justify-between"><div class="truncate"><div class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Greenfield Dairy Estate</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">Workspace: GF-042</div></div><span class="h-2 w-2 rounded-full bg-primary-container ring-2 ring-primary-fixed flex-shrink-0"></span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Overview</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="font-body-md text-body-md flex-1">Dashboard</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Herd Management</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#"><span class="font-body-md text-body-md flex-1">Animals</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#"><span class="font-body-md text-body-md flex-1">Animal Health</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Feeding Management</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding-plans" href="#"><span class="font-body-md text-body-md flex-1">Feeding Plans</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding-schedule" href="#"><span class="font-body-md text-body-md flex-1">Feeding Schedule</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="actual-feeding-records" href="#"><span class="font-body-md text-body-md flex-1">Actual Feeding Records</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Operations &amp; Assets</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#"><span class="font-body-md text-body-md flex-1">Milk Production</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-management" href="#"><span class="font-body-md text-body-md flex-1">Milk Management</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#"><span class="font-body-md text-body-md flex-1">Inventory</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#"><span class="font-body-md text-body-md flex-1">Equipment</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Reports &amp; Analytics</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-reports" href="#"><span class="font-body-md text-body-md flex-1">Milk Reports</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="financial-reports" href="#"><span class="font-body-md text-body-md flex-1">Financial Reports</span></a><a aria-current="page" class="flex items-center px-space-sm py-space-xs transition-all bg-primary-container text-on-primary font-semibold rounded-lg" data-path="data-exports" href="#"><span class="font-body-md text-body-md flex-1">Data Exports</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Workforce &amp; Finance</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers" href="#"><span class="font-body-md text-body-md flex-1">Workers</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="attendance" href="#"><span class="font-body-md text-body-md flex-1">Attendance</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="payroll" href="#"><span class="font-body-md text-body-md flex-1">Payroll</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="finance" href="#"><span class="font-body-md text-body-md flex-1">Finance</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">System &amp; Alerts</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notification-center" href="#"><span class="font-body-md text-body-md flex-1">Notification Center</span></a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notification-history" href="#"><span class="font-body-md text-body-md flex-1">Notification History</span></a></div></nav><div class="p-space-sm bg-surface-container-low/60"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex justify-between items-center mb-1"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Storage Quota</span><span class="font-label-sm text-label-sm text-primary font-bold">42%</span></div><div class="w-full bg-surface-container rounded-full h-1.5 mb-2"><div class="bg-primary-container h-1.5 rounded-full w-[42%]"></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-body-sm text-body-sm">1,280 Active Head</span><span class="material-symbols-outlined text-sm text-tertiary-container">sensors</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><button class="p-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-xl">menu_open</span></button><nav class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="font-semibold text-on-surface">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface-variant">Operations</span></nav><div class="relative flex-1 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full h-10 pl-9 pr-14 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search Animal ID, Batch, Record..." type="text"/><span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded shadow-sm">⌘K</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm"><span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span><span>Connected • Live</span></div><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Mode" type="button"><span class="material-symbols-outlined text-xl">routine</span></button><div class="relative"><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative flex items-center justify-center" href="#" title="Alerts &amp; Notifications"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 h-4 min-w-[1rem] px-1 bg-error text-on-error font-label-sm text-[0.625rem] rounded-full flex items-center justify-center font-bold">3</span></a></div><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#" title="Docs &amp; Support"><span class="material-symbols-outlined text-xl">help</span></a><div class="h-6 w-[1px] bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHGkwzAmXeAWZgoliBfM3J0Dk3rRvKbrFcaSDXWTFXvp7mK8JZlIDpaM_-PKsE2e-9DSWj_thQxg7ZvMO7_J2wdBeJdNp3xHQNrTkReCH1iwd77yI5cACPrn8AVBGbsgSIRzl_r1aNrbkvrI3tTJT7qFPLASAjAk_cx85172_N3qz8dJ2RbazkMZxrYU4--z2VriyTURPXkRqv4-UUhJWONTqJq0P8IWMmPKFhLYX7"/><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></div><div class="hidden lg:block text-left"><div class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-none">Farm Administrator</div></div><button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-lg">expand_more</span></button></div></div></header><main class="relative pt-16 w-full px-space-lg py-space-lg bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Prototype State Controller Dock -->
+<div class="mb-space-lg p-space-sm bg-surface-container-high rounded-xl shadow-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">tune</span>
+<div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface uppercase tracking-wider">Prototype State Simulation:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant ml-1">Test edge states &amp; real-time system responses</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="px-space-sm py-1.5 rounded-lg font-label-sm text-label-sm bg-primary text-on-primary transition-all shadow-sm" id="btn-state-idle" onclick="setSimState('idle')">
+        Standard Idle
+      </button>
+<button class="px-space-sm py-1.5 rounded-lg font-label-sm text-label-sm bg-surface-container text-on-surface hover:bg-surface-container-highest transition-all" id="btn-state-generating" onclick="setSimState('generating')">
+        Simulate In-Progress Gen
+      </button>
+<button class="px-space-sm py-1.5 rounded-lg font-label-sm text-label-sm bg-surface-container text-on-surface hover:bg-surface-container-highest transition-all" id="btn-state-success" onclick="setSimState('success')">
+        Simulate Success Toast
+      </button>
+<button class="px-space-sm py-1.5 rounded-lg font-label-sm text-label-sm bg-surface-container text-on-surface hover:bg-surface-container-highest transition-all" id="btn-state-nodata" onclick="setSimState('nodata')">
+        Simulate No Data in Range
+      </button>
+</div>
+</div>
+<!-- Dynamic Feedback Banner / Alerts Slot -->
+<div class="hidden mb-space-lg p-space-md rounded-xl bg-secondary-container text-on-secondary-container shadow-md flex items-center justify-between transition-all" id="sim-toast">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-2xl text-primary">check_circle</span>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-primary">Export Archive Successfully Generated</div>
+<div class="font-body-sm text-body-sm text-on-secondary-container/90">Package <code class="font-mono font-bold">EXP-2024-1024-11 (.xlsx)</code> (1,280 Rows, 2.14 MB) is verified against GF-042 workspace scope and ready for instant retrieval.</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<a class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary-container shadow-sm flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-base">download</span> Direct Save
+      </a>
+<button class="p-1 rounded text-on-secondary-container hover:bg-secondary-fixed" onclick="dismissToast()">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+</div>
+<div class="hidden mb-space-lg p-space-md rounded-xl bg-error-container text-on-error-container shadow-md flex items-center justify-between transition-all" id="sim-error-alert">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-2xl text-error">warning</span>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-error-container">Data Query Null (Zero Records Found)</div>
+<div class="font-body-sm text-body-sm text-on-error-container/90">The specified parameter date range contains zero valid events for Pen 4 divert milk streams. Export aborted per SRS-EXP-042 data integrity protocol.</div>
+</div>
+</div>
+<button class="p-1 rounded text-on-error-container hover:bg-error/10" onclick="dismissErrorAlert()">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<!-- Workspace Header & Security Quarantine Boundary -->
+<div class="mb-space-lg">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md pb-space-md">
+<div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant mb-1">
+<span>Reports &amp; Analytics</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-semibold">Available Data Exports</span>
+<span class="ml-2 px-2 py-0.5 rounded-full bg-secondary-container font-mono text-[0.6875rem] font-bold text-on-secondary-container">SRS-EXP-042 ENFORCED</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">Farm Workspace Data Export Center</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl mt-0.5">
+          Generate, serialize, and download cryptographically verified operational, biological, and administrative dataset exports strictly bounded to Greenfield Dairy Estate.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<div class="px-space-md py-space-sm rounded-xl bg-surface-container flex items-center gap-space-sm shadow-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-sm">
+            EV
+          </div>
+<div class="text-left">
+<div class="font-label-md text-label-md font-bold text-on-surface leading-tight">Elena Vance</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-primary-container"></span>
+              Admin • Token Active
+            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Security Isolation Notice Callout Banner -->
+<div class="p-space-md rounded-xl bg-surface-container-high shadow-sm">
+<div class="flex items-start gap-space-md">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest text-tertiary-container shadow-sm flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-2xl">shield_person</span>
+</div>
+<div class="flex-1">
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Workspace Security &amp; Scope Boundary Protocol (SRS-EXP-042)</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold tracking-wider px-2 py-0.5 rounded bg-tertiary-fixed">ISOLATION ACTIVE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Exports are strictly confined to <strong>Workspace GF-042 (Greenfield Dairy Estate)</strong>. Cross-workspace data aggregation, multi-tenant extraction, automated outbound cloud triggers, and unauthorized supervisor bulk dumps are explicitly blocked by system infrastructure policy. Confirmed supported tabular export formats are strictly <strong>Microsoft Excel (.xlsx)</strong> and <strong>Comma-Separated Values (.csv)</strong>.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Format Capabilities Matrix Banner -->
+<div class="mb-space-xl p-space-lg rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-sm gap-2">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Workspace Format Capability Matrix</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Validated engine serialization constraints per SmartFarm SRS architecture</p>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base text-secondary">verified_user</span>
+<span>Standard ISO-compliant engine exports</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs">
+<!-- General System Datasets -->
+<div class="p-space-md rounded-xl bg-surface-container-low transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm font-bold text-primary uppercase tracking-wider">Operations &amp; Biological</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container font-label-sm text-[0.6875rem] font-bold text-on-secondary-container">Standard</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">General System Datasets</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+          Herd Registry, Milk Parlor Logs, Clinical Treatments, Inventory Adjustments, and Work Attendance.
+        </p>
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-1 rounded bg-surface-container-lowest font-mono font-bold text-xs text-primary shadow-sm">.XLSX</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest font-mono font-bold text-xs text-on-surface-variant shadow-sm">.CSV</span>
+<span class="ml-auto font-label-sm text-label-sm text-secondary flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-sm">check</span> Supported
+          </span>
+</div>
+</div>
+<!-- Financial & Tax Reports -->
+<div class="p-space-md rounded-xl bg-surface-container-low transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm font-bold text-tertiary uppercase tracking-wider">Accounting &amp; Tax</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed font-label-sm text-[0.6875rem] font-bold text-on-tertiary-fixed-variant">Audited</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Financial &amp; Tax Reports</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+          Commercial milk dispatch revenues, operating vouchers, and gross-to-net tax depreciation ledgers.
+        </p>
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-1 rounded bg-surface-container-lowest font-mono font-bold text-xs text-tertiary shadow-sm">PDF</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest font-mono font-bold text-xs text-tertiary shadow-sm">.XLSX</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest font-mono font-bold text-xs text-on-surface-variant shadow-sm">Print</span>
+</div>
+</div>
+<!-- Workforce Payslips -->
+<div class="p-space-md rounded-xl bg-surface-container-low transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm font-bold text-secondary uppercase tracking-wider">Workforce &amp; Legal</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-[0.6875rem] font-bold text-on-surface-variant">Confidential</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Workforce Payslips</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+          Worker biometric deductions, overtime distribution sheets, and statutory remuneration certificates.
+        </p>
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-1 rounded bg-surface-container-lowest font-mono font-bold text-xs text-secondary shadow-sm">PDF</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest font-mono font-bold text-xs text-on-surface-variant shadow-sm">Print</span>
+<span class="ml-auto font-label-sm text-label-sm text-on-surface-variant/70 italic text-[0.6875rem]">Tabular Disallowed</span>
+</div>
+</div>
+</div>
+<!-- Exclusion Boundary Warning Bar -->
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-tertiary">info</span>
+<span><strong>Scope Boundary Notice:</strong> Custom report designer, scheduled email auto-dispatch, and third-party cloud webhooks are deliberately excluded from this hub.</span>
+</div>
+<span class="font-mono text-xs text-outline px-2 py-0.5 rounded bg-surface-container-lowest">SRS §4.2.1</span>
+</div>
+</div>
+<!-- Primary Interactive Split Workspace Layout -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg mb-space-xl items-start">
+<!-- LEFT COLUMN: Approved Exportable Datasets Selection (7 Cols) -->
+<div class="xl:col-span-7 flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Approved Exportable Datasets</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Select an auditable stream to load custom range filters and formatting profiles</p>
+</div>
+<span class="font-label-sm text-label-sm font-mono text-on-surface-variant bg-surface-container-high px-2.5 py-1 rounded-lg">6 Stream Registries</span>
+</div>
+<!-- Categories Container -->
+<div class="space-y-space-sm" id="dataset-cards-group">
+<!-- Category 1: Herd Registry -->
+<div class="group p-space-md rounded-xl bg-surface-container-lowest cursor-pointer transition-all shadow-sm hover:shadow-md" id="card-dataset-herd" onclick="selectDataset('herd')">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/60 text-primary flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">pets</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors">Herd Registry &amp; Lineage Data</span>
+<span class="radio-indicator w-4 h-4 rounded-full bg-surface-container-high flex items-center justify-center"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+                  Complete active animal directory, RFID ear tags, breed, parity, sire/dam pedigree lineage, and lifecycle status records.
+                </p>
+<div class="flex flex-wrap items-center gap-space-sm mt-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1 font-semibold text-primary">
+<span class="material-symbols-outlined text-base">pin</span> 1,280 Head Active
+                  </span>
+<span>•</span>
+<span>Scope: All-time Pedigree</span>
+<span>•</span>
+<span class="font-mono text-xs bg-surface-container-high px-1.5 py-0.5 rounded">.XLSX, .CSV</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary group-hover:translate-x-0.5 transition-all">chevron_right</span>
+</div>
+</div>
+<!-- Category 2: Milk Production (Selected by default) -->
+<div class="group p-space-md rounded-xl bg-surface-container-lowest cursor-pointer transition-all shadow-md ring-2 ring-primary" id="card-dataset-milk" onclick="selectDataset('milk')">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">water_drop</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">Milk Production &amp; Parlor Weigh-in Logs</span>
+<span class="radio-indicator w-4 h-4 rounded-full bg-primary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container font-label-sm text-[0.625rem] font-bold text-on-secondary-container uppercase">Target Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+                  Shift-by-shift morning and evening collection logs, individual cow yields, bulk tank intake, and parlor wastage/divert records.
+                </p>
+<div class="flex flex-wrap items-center gap-space-sm mt-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1 font-semibold text-primary">
+<span class="material-symbols-outlined text-base">analytics</span> 8,420 Records (MTD 78,420 L)
+                  </span>
+<span>•</span>
+<span>Automated Milking Stalls 1-16</span>
+<span>•</span>
+<span class="font-mono text-xs bg-secondary-container text-on-secondary-container px-1.5 py-0.5 rounded font-bold">.XLSX, .CSV</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-0.5 transition-all">chevron_right</span>
+</div>
+</div>
+<!-- Category 3: Animal Health & Clinical -->
+<div class="group p-space-md rounded-xl bg-surface-container-lowest cursor-pointer transition-all shadow-sm hover:shadow-md" id="card-dataset-health" onclick="selectDataset('health')">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container text-tertiary flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">medical_services</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors">Animal Health, Treatments &amp; Vaccinations</span>
+<span class="radio-indicator w-4 h-4 rounded-full bg-surface-container-high flex items-center justify-center"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+                  Clinical diagnoses, veterinary prescriptions, compulsory milk withdrawal periods, vaccination ledgers, and quarantine status.
+                </p>
+<div class="flex flex-wrap items-center gap-space-sm mt-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1 font-semibold text-tertiary">
+<span class="material-symbols-outlined text-base">assignment</span> 486 Clinical Events
+                  </span>
+<span>•</span>
+<span>Bio-Security Level 2</span>
+<span>•</span>
+<span class="font-mono text-xs bg-surface-container-high px-1.5 py-0.5 rounded">.XLSX, .CSV</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary group-hover:translate-x-0.5 transition-all">chevron_right</span>
+</div>
+</div>
+<!-- Category 4: Inventory & Stock -->
+<div class="group p-space-md rounded-xl bg-surface-container-lowest cursor-pointer transition-all shadow-sm hover:shadow-md" id="card-dataset-inventory" onclick="selectDataset('inventory')">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container text-secondary flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">inventory_2</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors">Inventory, Stock Adjustments &amp; Feed Inbound</span>
+<span class="radio-indicator w-4 h-4 rounded-full bg-surface-container-high flex items-center justify-center"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+                  Silage, grain concentrate, veterinary pharmaceuticals, reorder thresholds, warehouse receipts, and physical stock variance records.
+                </p>
+<div class="flex flex-wrap items-center gap-space-sm mt-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1 font-semibold text-secondary">
+<span class="material-symbols-outlined text-base">warehouse</span> 312 Item Batches
+                  </span>
+<span>•</span>
+<span>Silos 1-4 &amp; Cold Storage</span>
+<span>•</span>
+<span class="font-mono text-xs bg-surface-container-high px-1.5 py-0.5 rounded">.XLSX, .CSV</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary group-hover:translate-x-0.5 transition-all">chevron_right</span>
+</div>
+</div>
+<!-- Category 5: Workforce Attendance -->
+<div class="group p-space-md rounded-xl bg-surface-container-lowest cursor-pointer transition-all shadow-sm hover:shadow-md" id="card-dataset-workforce" onclick="selectDataset('workforce')">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container text-on-surface-variant flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">badge</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors">Workforce Attendance &amp; Overtime Ledgers</span>
+<span class="radio-indicator w-4 h-4 rounded-full bg-surface-container-high flex items-center justify-center"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+                  Biometric clock logs, daily shift attendances, supervisor manual audits, and verified parlor overtime hours.
+                </p>
+<div class="flex flex-wrap items-center gap-space-sm mt-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-base">schedule</span> 1,140 Shifts (October)
+                  </span>
+<span>•</span>
+<span>24 Agronomists &amp; Parlor Staff</span>
+<span>•</span>
+<span class="font-mono text-xs bg-surface-container-high px-1.5 py-0.5 rounded">.XLSX, .CSV</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary group-hover:translate-x-0.5 transition-all">chevron_right</span>
+</div>
+</div>
+<!-- Category 6: Farm Finance -->
+<div class="group p-space-md rounded-xl bg-surface-container-lowest cursor-pointer transition-all shadow-sm hover:shadow-md" id="card-dataset-finance" onclick="selectDataset('finance')">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">account_balance</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors">Farm Finance: Income &amp; Expense Ledgers</span>
+<span class="radio-indicator w-4 h-4 rounded-full bg-surface-container-high flex items-center justify-center"></span>
+<span class="px-2 py-0.5 rounded bg-error-container font-label-sm text-[0.625rem] font-bold text-on-error-container uppercase">Admin Restrict</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+                  Audited commercial revenue dispatches, verified operational equipment expense vouchers, and direct-sum ledger entries.
+                </p>
+<div class="flex flex-wrap items-center gap-space-sm mt-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1 font-semibold text-tertiary">
+<span class="material-symbols-outlined text-base">payments</span> 284 Financial Entries
+                  </span>
+<span>•</span>
+<span>Admin Clearance: Vance (GF-042)</span>
+<span>•</span>
+<span class="font-mono text-xs bg-surface-container-high px-1.5 py-0.5 rounded">.XLSX, .CSV</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary group-hover:translate-x-0.5 transition-all">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Dedicated Export Configuration & Action Panel (5 Cols) -->
+<div class="xl:col-span-5 sticky top-20 flex flex-col gap-space-md">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-md">
+<!-- Panel Header -->
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">dataset</span>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Export Configuration</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono bg-surface-container px-2 py-0.5 rounded">MOD: LIVE-DISPATCH</span>
+</div>
+<!-- Selected Stream Summary Pill -->
+<div class="mb-space-md p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs overflow-hidden">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<div class="truncate">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Selected Dataset</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface truncate" id="cfg-dataset-title">Milk Production Logs</span>
+</div>
+</div>
+<span class="font-mono text-xs font-semibold px-2 py-1 rounded bg-surface-container-lowest text-primary shadow-sm flex-shrink-0" id="cfg-dataset-count">
+            8,420 Items
+          </span>
+</div>
+<!-- Filter 1: Date Scope Range -->
+<div class="mb-space-md">
+<label class="block font-label-md text-label-md font-bold text-on-surface mb-1.5">
+            Temporal Date Scope
+          </label>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="date-chip px-space-sm py-2 rounded-lg font-label-sm text-label-sm font-semibold bg-primary text-on-primary shadow-sm transition-all text-left flex items-center justify-between" onclick="setDateRange('mtd', this)" type="button">
+<span>Current Month (Oct 2024)</span>
+<span class="material-symbols-outlined text-sm">done</span>
+</button>
+<button class="date-chip px-space-sm py-2 rounded-lg font-label-sm text-label-sm font-semibold bg-surface-container text-on-surface hover:bg-surface-container-high transition-all text-left flex items-center justify-between" onclick="setDateRange('90d', this)" type="button">
+<span>Past 90 Days</span>
+</button>
+<button class="date-chip px-space-sm py-2 rounded-lg font-label-sm text-label-sm font-semibold bg-surface-container text-on-surface hover:bg-surface-container-high transition-all text-left flex items-center justify-between" onclick="setDateRange('ytd', this)" type="button">
+<span>Current Year (YTD 2024)</span>
+</button>
+<button class="date-chip px-space-sm py-2 rounded-lg font-label-sm text-label-sm font-semibold bg-surface-container text-on-surface hover:bg-surface-container-high transition-all text-left flex items-center justify-between" onclick="setDateRange('custom', this)" type="button">
+<span>Custom Date Range...</span>
+</button>
+</div>
+</div>
+<!-- Filter 2: Dataset Specific Operational Sub-filters -->
+<div class="mb-space-md p-space-md rounded-xl bg-surface-container-low space-y-space-sm">
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant uppercase tracking-wider block">Operational Parameters</span>
+<!-- Subfilter Checkbox 1 -->
+<label class="flex items-center gap-space-sm cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+<div class="flex-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface block leading-tight">All Milking Shifts</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Include 04:00 Morning + 16:30 Evening milking carousels</span>
+</div>
+</label>
+<!-- Subfilter Checkbox 2 -->
+<label class="flex items-center gap-space-sm cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+<div class="flex-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface block leading-tight">Include Withdrawn / Diverted Batches</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pen 4 antibiotic withholdings &amp; mastitis reject lines</span>
+</div>
+</label>
+<!-- Subfilter Checkbox 3 -->
+<label class="flex items-center gap-space-sm cursor-pointer select-none">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+<div class="flex-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface block leading-tight">Attach RFID Sensor Diagnostic Metadata</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Inline electrical conductivity, fat %, protein indices</span>
+</div>
+</label>
+</div>
+<!-- Filter 3: Export Format Selection Radios -->
+<div class="mb-space-lg">
+<label class="block font-label-md text-label-md font-bold text-on-surface mb-2">
+            Target Serialization Format
+          </label>
+<div class="space-y-space-xs">
+<!-- Excel Option -->
+<label class="format-card flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container cursor-pointer transition-all shadow-sm ring-2 ring-primary" onclick="setFormat('xlsx')">
+<input checked="" class="mt-1 text-primary accent-primary" name="export-format" type="radio" value="xlsx"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Microsoft Excel Workbook (.xlsx)</span>
+<span class="font-mono text-[0.6875rem] font-bold bg-primary-container text-on-primary px-1.5 py-0.5 rounded">RECOMMENDED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Styled spreadsheet with frozen headers, automatic column widths, data formatting, and calculated summary totals.
+                </p>
+</div>
+</label>
+<!-- CSV Option -->
+<label class="format-card flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low cursor-pointer transition-all hover:bg-surface-container" onclick="setFormat('csv')">
+<input class="mt-1 text-primary accent-primary" name="export-format" type="radio" value="csv"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Comma-Separated Values (.csv)</span>
+<span class="font-mono text-[0.6875rem] font-semibold bg-surface-container-high text-on-surface-variant px-1.5 py-0.5 rounded">RFC 4180</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Raw plain-text tabular stream with UTF-8 encoding. Built for fast ingestion into external ERPs, dairy nutrition software, and R/Python.
+                </p>
+</div>
+</label>
+</div>
+</div>
+<!-- Action Execution Button -->
+<button class="w-full py-space-sm px-space-md rounded-xl bg-primary text-on-primary font-headline-sm text-headline-sm font-bold hover:bg-primary-container shadow-md flex items-center justify-center gap-space-xs transition-all" id="btn-generate-export" onclick="triggerExportAction()">
+<span class="material-symbols-outlined text-xl" id="btn-icon">file_download</span>
+<span id="btn-label">Generate &amp; Download Export (.xlsx)</span>
+<span class="hidden animate-spin material-symbols-outlined text-xl" id="btn-spinner">progress_activity</span>
+</button>
+<!-- Generation Constraints Footnote -->
+<div class="mt-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">verified</span> SHA-256 Checksum Included
+          </span>
+<span class="font-mono text-xs">GF042-EXP-AUTH</span>
+</div>
+</div>
+<!-- Quick Metrics Summary Card -->
+<div class="p-space-md rounded-xl bg-surface-container shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold block">Current MTD Export Quota</span>
+<div class="font-headline-sm text-headline-sm font-bold text-primary mt-0.5">428.6 MB / 5.0 GB Utilized</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Retention Period</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">30 Days Auto-Purge</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Historical Export Logs Section -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">history</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Workspace Export Audit Log</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Archived exports generated within Workspace GF-042 over the past 30 days</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container font-label-sm text-label-sm font-semibold text-on-surface hover:bg-surface-container-high transition-all flex items-center gap-1" onclick="refreshHistoryTable()">
+<span class="material-symbols-outlined text-base">refresh</span> Refresh Log
+        </button>
+</div>
+</div>
+<!-- Audited History Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<th class="py-space-sm px-space-md rounded-l-lg">Export ID</th>
+<th class="py-space-sm px-space-md">Dataset Name</th>
+<th class="py-space-sm px-space-md">Format</th>
+<th class="py-space-sm px-space-md text-right">Records / Size</th>
+<th class="py-space-sm px-space-md">Requested By</th>
+<th class="py-space-sm px-space-md">Timestamp</th>
+<th class="py-space-sm px-space-md">Status</th>
+<th class="py-space-sm px-space-md text-right rounded-r-lg">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm" id="export-history-tbody">
+<!-- Row 1: Ready -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md font-mono font-bold text-primary">EXP-2024-1024-08</td>
+<td class="py-space-md px-space-md">
+<div class="font-semibold text-on-surface">Milk Production Shift Logs (Oct 2024)</div>
+<div class="text-on-surface-variant text-xs">Full Carousel 1-16, AM &amp; PM Shifts</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded bg-primary-container font-mono text-[0.6875rem] font-bold text-on-primary">.XLSX</span>
+</td>
+<td class="py-space-md px-space-md text-right font-mono">
+<span class="font-semibold text-on-surface">8,420 rows</span>
+<span class="text-on-surface-variant block text-xs">1.84 MB</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-medium text-on-surface">Elena Vance</div>
+<div class="text-on-surface-variant text-xs">Farm Admin</div>
+</td>
+<td class="py-space-md px-space-md font-mono text-xs text-on-surface-variant">
+              Oct 24, 2024<br/>08:45:12 AM
+            </td>
+<td class="py-space-md px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container font-label-sm text-[0.6875rem] font-bold text-on-secondary-container flex items-center gap-1 w-max">
+<span class="h-1.5 w-1.5 rounded-full bg-primary-container"></span> Ready for Download
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<a class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary font-label-sm text-label-sm text-on-surface font-semibold transition-all" href="#">
+<span class="material-symbols-outlined text-base">download</span> Download
+              </a>
+</td>
+</tr>
+<!-- Row 2: In-Progress Simulation -->
+<tr class="hover:bg-surface-container-low/50 transition-colors" id="row-dynamic-processing">
+<td class="py-space-md px-space-md font-mono font-bold text-primary">EXP-2024-1024-09</td>
+<td class="py-space-md px-space-md">
+<div class="font-semibold text-on-surface">Herd Complete Pedigree Lineage</div>
+<div class="text-on-surface-variant text-xs">1,280 Head Active • RFID Serialization</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-mono text-[0.6875rem] font-bold text-on-surface-variant">.CSV</span>
+</td>
+<td class="py-space-md px-space-md text-right font-mono">
+<span class="font-semibold text-on-surface">Calculating...</span>
+<span class="text-on-surface-variant block text-xs">--</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-medium text-on-surface">Elena Vance</div>
+<div class="text-on-surface-variant text-xs">Farm Admin</div>
+</td>
+<td class="py-space-md px-space-md font-mono text-xs text-on-surface-variant">
+              Oct 24, 2024<br/>09:12:04 AM
+            </td>
+<td class="py-space-md px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-tertiary-fixed font-label-sm text-[0.6875rem] font-bold text-on-tertiary-fixed-variant flex items-center gap-1 w-max">
+<span class="material-symbols-outlined text-xs animate-spin">progress_activity</span> Processing
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container/50 font-label-sm text-label-sm text-outline-variant cursor-not-allowed">
+<span class="material-symbols-outlined text-base">sync</span> Compiling
+              </span>
+</td>
+</tr>
+<!-- Row 3: Ready -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md font-mono font-bold text-primary">EXP-2024-1023-04</td>
+<td class="py-space-md px-space-md">
+<div class="font-semibold text-on-surface">Animal Health &amp; Mastitis Treatments</div>
+<div class="text-on-surface-variant text-xs">Withdrawal periods &amp; antibiotic prescription log</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded bg-primary-container font-mono text-[0.6875rem] font-bold text-on-primary">.XLSX</span>
+</td>
+<td class="py-space-md px-space-md text-right font-mono">
+<span class="font-semibold text-on-surface">486 events</span>
+<span class="text-on-surface-variant block text-xs">420 KB</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-medium text-on-surface">Dr. Marcus Webb</div>
+<div class="text-on-surface-variant text-xs">Lead Veterinarian</div>
+</td>
+<td class="py-space-md px-space-md font-mono text-xs text-on-surface-variant">
+              Oct 23, 2024<br/>04:15:30 PM
+            </td>
+<td class="py-space-md px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container font-label-sm text-[0.6875rem] font-bold text-on-secondary-container flex items-center gap-1 w-max">
+<span class="h-1.5 w-1.5 rounded-full bg-primary-container"></span> Ready for Download
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<a class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary font-label-sm text-label-sm text-on-surface font-semibold transition-all" href="#">
+<span class="material-symbols-outlined text-base">download</span> Download
+              </a>
+</td>
+</tr>
+<!-- Row 4: Error Simulation -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md font-mono font-bold text-primary">EXP-2024-1022-01</td>
+<td class="py-space-md px-space-md">
+<div class="font-semibold text-on-surface">Physical Feed Variance Audit</div>
+<div class="text-on-surface-variant text-xs">Warehouse Silo 3 Discrepancy Stream</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-mono text-[0.6875rem] font-bold text-on-surface-variant">.CSV</span>
+</td>
+<td class="py-space-md px-space-md text-right font-mono">
+<span class="font-semibold text-error">0 records</span>
+<span class="text-on-surface-variant block text-xs">0 KB</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-medium text-on-surface">Elena Vance</div>
+<div class="text-on-surface-variant text-xs">Farm Admin</div>
+</td>
+<td class="py-space-md px-space-md font-mono text-xs text-on-surface-variant">
+              Oct 22, 2024<br/>11:02:18 AM
+            </td>
+<td class="py-space-md px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-error-container font-label-sm text-[0.6875rem] font-bold text-on-error-container flex items-center gap-1 w-max">
+<span class="material-symbols-outlined text-xs">error</span> Error / No Data
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high font-label-sm text-label-sm text-on-surface font-semibold transition-all" onclick="retryExport('EXP-2024-1022-01')">
+<span class="material-symbols-outlined text-base">replay</span> Re-run
+              </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Log Table Pagination & Security Note -->
+<div class="mt-space-md pt-space-sm flex flex-col sm:flex-row sm:items-center justify-between text-on-surface-variant font-body-sm text-body-sm gap-2">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base text-secondary">lock</span>
+<span>All export payloads are encrypted with AES-256 at rest and signed by Workspace GF-042 Authority.</span>
+</div>
+<div class="flex items-center gap-space-xs font-mono text-xs">
+<span>Showing 4 of 28 historical exports</span>
+</div>
+</div>
+</div>
+<!-- Inline Prototype State Scripting -->
+<script>
+    let currentSelectedFormat = 'xlsx';
+    let currentDatasetKey = 'milk';
+    let currentRangeKey = 'mtd';
+
+    const datasetsMeta = {
+      herd: {
+        title: "Herd Registry & Lineage Data",
+        count: "1,280 Head Active",
+        defaultDesc: "RFID serialization and dams pedigree included."
+      },
+      milk: {
+        title: "Milk Production & Parlor Weigh-in Logs",
+        count: "8,420 Items (78,420 L)",
+        defaultDesc: "Morning & evening stalls 1-16 collection records."
+      },
+      health: {
+        title: "Animal Health, Treatments & Vaccinations",
+        count: "486 Clinical Events",
+        defaultDesc: "Prescription dosing & active withdrawal periods."
+      },
+      inventory: {
+        title: "Inventory & Stock Adjustments",
+        count: "312 Item Batches",
+        defaultDesc: "Feed silos, chemical supplies, and intake variance."
+      },
+      workforce: {
+        title: "Workforce Attendance & Overtime Ledgers",
+        count: "1,140 Shifts (October)",
+        defaultDesc: "Time-clock verification with biometric integrity."
+      },
+      finance: {
+        title: "Farm Finance: Income & Expense Ledgers",
+        count: "284 Entries (Restricted)",
+        defaultDesc: "Audited vouchers and commercial revenues."
+      }
+    };
+
+    function selectDataset(key) {
+      currentDatasetKey = key;
+      const meta = datasetsMeta[key];
+      
+      // Update config panel texts
+      document.getElementById('cfg-dataset-title').innerText = meta.title;
+      document.getElementById('cfg-dataset-count').innerText = meta.count;
+
+      // Update card active classes
+      const allCards = document.querySelectorAll('#dataset-cards-group > div');
+      allCards.forEach(c => {
+        c.classList.remove('ring-2', 'ring-primary', 'shadow-md');
+        c.classList.add('shadow-sm');
+        const indicator = c.querySelector('.radio-indicator');
+        if (indicator) {
+          indicator.className = "radio-indicator w-4 h-4 rounded-full bg-surface-container-high flex items-center justify-center";
+          indicator.innerHTML = "";
+        }
+      });
+
+      const selectedCard = document.getElementById('card-dataset-' + key);
+      if (selectedCard) {
+        selectedCard.classList.add('ring-2', 'ring-primary', 'shadow-md');
+        selectedCard.classList.remove('shadow-sm');
+        const indicator = selectedCard.querySelector('.radio-indicator');
+        if (indicator) {
+          indicator.className = "radio-indicator w-4 h-4 rounded-full bg-primary flex items-center justify-center";
+          indicator.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>';
+        }
+      }
+
+      updateButtonLabel();
+    }
+
+    function setDateRange(range, el) {
+      currentRangeKey = range;
+      document.querySelectorAll('.date-chip').forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        btn.classList.add('bg-surface-container', 'text-on-surface');
+        const check = btn.querySelector('.material-symbols-outlined');
+        if (check) check.remove();
+      });
+
+      el.classList.remove('bg-surface-container', 'text-on-surface');
+      el.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+      const span = document.createElement('span');
+      span.className = "material-symbols-outlined text-sm";
+      span.innerText = "done";
+      el.appendChild(span);
+    }
+
+    function setFormat(fmt) {
+      currentSelectedFormat = fmt;
+      updateButtonLabel();
+    }
+
+    function updateButtonLabel() {
+      const ext = currentSelectedFormat === 'xlsx' ? '.xlsx' : '.csv';
+      document.getElementById('btn-label').innerText = 'Generate & Download Export (' + ext + ')';
+    }
+
+    function triggerExportAction() {
+      // Simulate click trigger
+      setSimState('generating');
+      setTimeout(() => {
+        setSimState('success');
+      }, 1600);
+    }
+
+    function setSimState(state) {
+      const toast = document.getElementById('sim-toast');
+      const err = document.getElementById('sim-error-alert');
+      const btn = document.getElementById('btn-generate-export');
+      const btnLabel = document.getElementById('btn-label');
+      const btnIcon = document.getElementById('btn-icon');
+      const btnSpinner = document.getElementById('btn-spinner');
+
+      // Update prototype switcher styles
+      ['idle', 'generating', 'success', 'nodata'].forEach(s => {
+        const b = document.getElementById('btn-state-' + s);
+        if (s === state) {
+          b.className = "px-space-sm py-1.5 rounded-lg font-label-sm text-label-sm bg-primary text-on-primary transition-all shadow-sm";
+        } else {
+          b.className = "px-space-sm py-1.5 rounded-lg font-label-sm text-label-sm bg-surface-container text-on-surface hover:bg-surface-container-highest transition-all";
+        }
+      });
+
+      if (state === 'idle') {
+        toast.classList.add('hidden');
+        err.classList.add('hidden');
+        btn.disabled = false;
+        btnIcon.classList.remove('hidden');
+        btnSpinner.classList.add('hidden');
+        updateButtonLabel();
+      } else if (state === 'generating') {
+        toast.classList.add('hidden');
+        err.classList.add('hidden');
+        btn.disabled = true;
+        btnIcon.classList.add('hidden');
+        btnSpinner.classList.remove('hidden');
+        btnLabel.innerText = 'Extracting & Serializing Dataset...';
+      } else if (state === 'success') {
+        toast.classList.remove('hidden');
+        err.classList.add('hidden');
+        btn.disabled = false;
+        btnIcon.classList.remove('hidden');
+        btnSpinner.classList.add('hidden');
+        updateButtonLabel();
+      } else if (state === 'nodata') {
+        toast.classList.add('hidden');
+        err.classList.remove('hidden');
+        btn.disabled = false;
+        btnIcon.classList.remove('hidden');
+        btnSpinner.classList.add('hidden');
+        updateButtonLabel();
+      }
+    }
+
+    function dismissToast() {
+      document.getElementById('sim-toast').classList.add('hidden');
+    }
+
+    function dismissErrorAlert() {
+      document.getElementById('sim-error-alert').classList.add('hidden');
+    }
+
+    function refreshHistoryTable() {
+      const row = document.getElementById('row-dynamic-processing');
+      if (row) {
+        row.querySelector('td:nth-child(7)').innerHTML = `
+          <span class="px-2.5 py-1 rounded-full bg-secondary-container font-label-sm text-[0.6875rem] font-bold text-on-secondary-container flex items-center gap-1 w-max">
+            <span class="h-1.5 w-1.5 rounded-full bg-primary-container"></span> Ready for Download
+          </span>
+        `;
+        row.querySelector('td:nth-child(4)').innerHTML = `
+          <span class="font-semibold text-on-surface">1,280 rows</span>
+          <span class="text-on-surface-variant block text-xs">842 KB</span>
+        `;
+        row.querySelector('td:nth-child(8)').innerHTML = `
+          <a href="#" class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary font-label-sm text-label-sm text-on-surface font-semibold transition-all">
+            <span class="material-symbols-outlined text-base">download</span> Download
+          </a>
+        `;
+      }
+    }
+
+    function retryExport(id) {
+      alert("Re-executing query pipeline for " + id + " with verified fallback date boundaries.");
+    }
+  </script>
+</div></main></div></body></html>

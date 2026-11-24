@@ -1,0 +1,1019 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "on-tertiary-fixed": "#301400", "surface": "#fbf9f3", "surface-container-low": "#f5f3ed", "secondary-container": "#d9e8c7", "surface-container-highest": "#e4e2dd", "on-secondary-fixed": "#141f0a", "outline-variant": "#c4c8bd", "on-secondary-fixed-variant": "#3e4b32", "secondary-fixed-dim": "#bdcbac", "on-tertiary": "#ffffff", "on-tertiary-container": "#ffb785", "primary-fixed": "#d4e9c3", "on-primary-fixed-variant": "#3a4c30", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "tertiary": "#5e3007", "tertiary-container": "#7a461c", "inverse-surface": "#30312d", "primary-fixed-dim": "#b8cda8", "on-primary-fixed": "#101f08", "secondary": "#556249", "surface-container-high": "#eae8e2", "primary-container": "#46583b", "tertiary-fixed-dim": "#ffb784", "on-surface": "#1b1c18", "surface-container": "#f0eee8", "secondary-fixed": "#d9e8c7", "outline": "#75786f", "surface-bright": "#fbf9f3", "tertiary-fixed": "#ffdcc6", "on-tertiary-fixed-variant": "#6c3a11", "on-primary-container": "#b8cda9", "inverse-on-surface": "#f3f1eb", "background": "#fbf9f3", "error-container": "#ffdad6", "surface-variant": "#e4e2dd", "on-error-container": "#93000a", "on-error": "#ffffff", "inverse-primary": "#b8cda8", "on-background": "#1b1c18", "primary": "#2f4126", "surface-dim": "#dcdad4", "on-surface-variant": "#444840", "on-secondary": "#ffffff", "surface-tint": "#516446", "on-secondary-container": "#5b694e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-xl": "2.5rem", "margin": "2rem", "margin-mobile": "1rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "headline-md": [ "Manrope" ], "body-lg": [ "Inter" ], "label-md": [ "Inter" ], "display-lg-mobile": [ "Manrope" ], "headline-sm": [ "Manrope" ], "data-metric-md": [ "Inter" ], "body-md": [ "Inter" ], "label-sm": [ "Inter" ], "data-metric-lg": [ "Manrope" ], "headline-xl": [ "Manrope" ], "headline-lg": [ "Manrope" ], "headline-xl-mobile": [ "Manrope" ], "display-lg": [ "Manrope" ], "body-sm": [ "Inter" ] }, "fontSize": { "headline-md": [ "1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "label-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" } ], "display-lg-mobile": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "data-metric-md": [ "1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "label-sm": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" } ], "data-metric-lg": [ "2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-xl": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-xl-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-lg": [ "3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZuhXF_IhBdGhJ4eix1oqj3wBimwP9kKeGGChH_b2ax1lMLHMcXPmCVu9b3MJqlJ3XUJHZyp_ietndJCcoi5tapKDT0swhF14GEZxUKYZjg6g5LvxUeQzsGptFXM8XbwZz0B0M4Kbg8tH48Ys1NpBq3q3ceaJWAzrxO8XU7fzOrfQL6K9wOMESU_VEMnfcbKwhEtKD90-MYyU8fO7yBiUm20ljVe33W-rRqQJED0H"><div><div class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight truncate">SmartFarm</div><div class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Dairy Management</div></div></div><span class="font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold px-space-xs py-0.5 rounded">Farm Admin Only</span></div><div class="px-space-md py-space-sm bg-surface-container-low/80 flex items-center justify-between"><div class="truncate"><div class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Greenfield Dairy Estate</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">Workspace: GF-042</div></div><span class="h-2 w-2 rounded-full bg-primary-container ring-2 ring-primary-fixed flex-shrink-0"></span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Overview</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#">Dashboard</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Herd Management</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#">Animals</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#">Animal Health</a><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface font-semibold">Feeding Management</div><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="feeding-plans" href="#">Feeding Plans</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="feeding-schedule" href="#">Feeding Schedule</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="actual-feeding-records" href="#">Actual Feeding Records</a></div></div></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Operations &amp; Assets</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#">Milk Production</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-management" href="#">Milk Management</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#">Inventory</a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="inventory-list" href="#">Inventory List</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="item-details" href="#">Item Details</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="purchases-and-inbound-invoices" href="#">Purchases &amp; Inbound Invoices</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="stock-additions" href="#">Stock Additions</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="stock-adjustments" href="#">Stock Adjustments</a></div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#">Equipment</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Workforce &amp; Finance</div><div class="space-y-space-xs"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers" href="#">Workers</a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="worker-directory" href="#">Worker Directory</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="add-worker" href="#">Add Worker</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="worker-profile" href="#">Worker Profile</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="worker-documents" href="#">Worker Documents</a></div></div><div class="space-y-space-xs"><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="attendance" href="#">Attendance</a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="attendance-records" href="#">Attendance Records</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="manual-check-in-check-out-overtime" href="#">Manual Check-in/Check-out &amp; Overtime</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="leave-management" href="#">Leave Management</a></div></div><div class="space-y-space-xs"><div class="flex items-center justify-between px-space-sm py-1"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Payroll Management</span><span class="font-label-sm text-[0.625rem] bg-surface-container-high text-on-surface-variant px-1.5 py-0.5 rounded font-medium">Admin</span></div><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="salary-management" href="#">Salary Management</a><a aria-current="page" class="flex items-center px-space-sm py-1 transition-all bg-primary-container text-on-primary font-semibold rounded-lg" data-path="payroll-records" href="#">Payroll Records</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="salary-advances" href="#">Salary Advances</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="payroll-deductions" href="#">Payroll Deductions</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="payslips" href="#">Payslips</a></div></div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="finance" href="#">Finance</a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Governance &amp; Core</div><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="supervisor-access" href="#">Supervisor Access</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#">Reports</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="data-management" href="#">Data Management</a><a class="flex items-center px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#">Settings</a></div></nav><div class="p-space-sm bg-surface-container-low/60"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex justify-between items-center mb-1"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Storage Quota</span><span class="font-label-sm text-label-sm text-primary font-bold">42%</span></div><div class="w-full bg-surface-container rounded-full h-1.5 mb-2"><div class="bg-primary-container h-1.5 rounded-full w-[42%]"></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-body-sm text-body-sm">1,280 Active Head</span><span class="material-symbols-outlined text-sm text-tertiary-container">sensors</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><button class="p-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-xl">menu_open</span></button><nav class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="text-on-surface-variant">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface-variant">Workforce &amp; Finance</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="font-semibold text-on-surface">Payroll Management</span></nav><div class="relative flex-1 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full h-10 pl-9 pr-14 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search herd, rations, schedules, inventory..." type="text"><span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded shadow-sm">⌘K</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm"><span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span><span>Connected • Live</span></div><div class="flex items-center gap-1 px-2.5 py-1 rounded-md bg-primary-container/10 border border-primary/20 text-primary font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-sm">verified_user</span><span>Farm Admin Only</span></div><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Mode" type="button"><span class="material-symbols-outlined text-xl">routine</span></button><div class="relative"><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" title="Alerts" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 h-4 min-w-[1rem] px-1 bg-error text-on-error font-label-sm text-[0.625rem] rounded-full flex items-center justify-center font-bold">3</span></button></div><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#" title="Docs &amp; Support"><span class="material-symbols-outlined text-xl">help</span></a><div class="h-6 w-[1px] bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative flex items-center"><img alt="Elena Vance" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHGkwzAmXeAWZgoliBfM3J0Dk3rRvKbrFcaSDXWTFXvp7mK8JZlIDpaM_-PKsE2e-9DSWj_thQxg7ZvMO7_J2wdBeJdNp3xHQNrTkReCH1iwd77yI5cACPrn8AVBGbsgSIRzl_r1aNrbkvrI3tTJT7qFPLASAjAk_cx85172_N3qz8dJ2RbazkMZxrYU4--z2VriyTURPXkRqv4-UUhJWONTqJq0P8IWMmPKFhLYX7"><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></div><div class="hidden lg:block text-left"><div class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-none">Farm Administrator</div></div><button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-lg">expand_more</span></button></div></div></header><main class="relative pt-16 w-full px-space-lg py-space-lg bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive State Bar (Administrative Preview Simulator) -->
+
+<!-- Breadcrumbs & Administrative Title Section -->
+<section class="mb-space-lg flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-space-xs">
+<span>Workforce &amp; Finance</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span>Payroll</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary font-semibold">Payroll Records</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">
+Payroll Records
+</h1>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold tracking-wide">
+<span class="material-symbols-outlined text-sm">lock</span>
+FARM ADMIN ONLY • Confidential Workforce Ledger
+</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 max-w-3xl">
+Greenfield Dairy Estate • Workspace GF-042. Audited administrative ledger of recorded base wages, attendance summaries, permitted adjustments, and verified payment disbursement status.
+</p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-end flex-wrap">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-medium transition-colors shadow-sm flex items-center gap-1.5" onclick="downloadLedgerMock()">
+<span class="material-symbols-outlined text-base">receipt_long</span>
+<span>Export Audit CSV</span>
+</button>
+<button class="px-space-md py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all shadow-sm flex items-center gap-1.5" onclick="openAdjustmentModal()">
+<span class="material-symbols-outlined text-base">add</span>
+<span>+ Add Permitted Adjustment</span>
+</button>
+</div>
+</section>
+<!-- Prominent Mandatory Policy Notice -->
+<section class="mb-space-lg rounded-xl bg-surface-container-low p-space-md shadow-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary"></div>
+<div class="flex items-start gap-space-md pl-space-xs">
+<div class="w-9 h-9 rounded-lg bg-tertiary/10 text-tertiary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">policy</span>
+</div>
+<div class="flex-1">
+<div class="flex flex-wrap items-center gap-space-sm mb-1">
+<span class="font-label-sm text-label-sm font-bold tracking-wider text-tertiary uppercase">
+NOTE ON PAYROLL CALCULATIONS &amp; ADMINISTRATIVE ENTRIES
+</span>
+<span class="font-label-sm text-[0.6875rem] text-on-surface-variant bg-surface-container px-2 py-0.5 rounded font-semibold">SRS Compliance</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+Historical payroll values and manual permitted adjustments are recorded as approved administrative entries. Absence, leave, and advance recovery calculations follow Farm Admin authorized records without automated mathematical deductions, statutory tax/pension withholding schemes, disciplinary fines, or algorithmic derivations. All disbursements are reconciled through manual physical or confirmed electronic receipt verification.
+</p>
+</div>
+</div>
+</section>
+<!-- Payroll Period Selector & Summary KPIs Grid -->
+<section class="mb-space-lg flex flex-col gap-space-md">
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/50 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">calendar_month</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Active Payroll Period</div>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold" id="current-period-label">
+October 01 – October 15, 2024 (Bi-Weekly Cycle #20)
+</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[0.6875rem] font-bold">
+AUDITED CYCLE
+</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="px-space-sm py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1" onclick="shiftPeriod(-1)">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+<span>Previous Period</span>
+</button>
+<div class="relative">
+<select class="appearance-none pl-3 pr-8 py-2 bg-surface-container-low rounded-lg font-label-sm text-label-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 cursor-pointer" id="period-dropdown" onchange="handlePeriodChange(this.value)">
+<option value="current">October 01 – October 15, 2024 (Bi-Weekly #20)</option>
+<option value="prev1">September 16 – September 30, 2024 (Bi-Weekly #19)</option>
+<option value="prev2">September 01 – September 15, 2024 (Bi-Weekly #18)</option>
+<option value="all_cycles">All Cycles (Consolidated Ledger)</option>
+</select>
+<span class="material-symbols-outlined text-sm text-on-surface-variant absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none">expand_more</span>
+</div>
+<button class="px-space-sm py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1" onclick="shiftPeriod(1)">
+<span>Next Period</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Total Gross Payroll</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-base">account_balance_wallet</span>
+</span>
+</div>
+<div>
+<div class="font-data-metric-lg text-data-metric-lg text-primary font-bold tracking-tight" id="kpi-total-payroll">
+$18,450.00
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-sm text-primary">groups</span>
+<span>38 Active Workforce Personnel</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-label-sm text-[0.6875rem] text-on-surface-variant bg-surface-container-low px-2 py-1 rounded">
+<span>Schedule Basis</span>
+<span class="font-semibold text-primary">Monthly &amp; Daily Structures</span>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Recorded Paid Disbursements</span>
+<span class="p-1.5 rounded-lg bg-secondary-container/60 text-on-secondary-container">
+<span class="material-symbols-outlined text-base">check_circle</span>
+</span>
+</div>
+<div>
+<div class="font-data-metric-lg text-data-metric-lg text-on-surface font-bold tracking-tight" id="kpi-paid-disbursed">
+$14,250.00
+</div>
+<div class="flex items-center gap-1 mt-1 text-secondary font-body-sm text-body-sm font-semibold">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span>28 workers paid (73.7%)</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-space-sm">
+<div class="bg-primary-container h-1.5 rounded-full" style="width: 73.7%"></div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Pending Salary Balance</span>
+<span class="p-1.5 rounded-lg bg-error-container/50 text-error">
+<span class="material-symbols-outlined text-base">pending_actions</span>
+</span>
+</div>
+<div>
+<div class="font-data-metric-lg text-data-metric-lg text-error font-bold tracking-tight" id="kpi-pending-salary">
+$4,200.00
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-sm text-error">priority_high</span>
+<span class="font-medium text-error">10 workers awaiting payout</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-space-sm">
+<div class="bg-error h-1.5 rounded-full" style="width: 26.3%"></div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Permitted Adjustments Net</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-tertiary">
+<span class="material-symbols-outlined text-base">price_change</span>
+</span>
+</div>
+<div>
+<div class="font-data-metric-lg text-data-metric-lg text-tertiary font-bold tracking-tight" id="kpi-adjustments-net">
+-$680.00
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>Salary Advances: -$550 | Deductions: -$130</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-label-sm text-[0.6875rem] text-on-surface-variant bg-surface-container-low px-2 py-1 rounded">
+<span>Authorized Entries</span>
+<span class="font-semibold text-tertiary">6 Active Workers</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Table Filter & Search Controls Bar -->
+<section class="mb-space-sm flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-sm bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
+<div class="flex items-center gap-space-sm flex-1 max-w-lg">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-base">filter_alt</span>
+<input class="w-full h-9 pl-9 pr-4 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" id="worker-table-filter" oninput="filterPayrollTable()" placeholder="Filter by worker name, ID (e.g. WKR-042), or wage type..." type="text">
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg">
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-on-surface font-semibold shadow-sm transition-all" id="filter-all-btn" onclick="applyStatusFilter('all')">
+          All (38)
+        </button>
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all" id="filter-paid-btn" onclick="applyStatusFilter('paid')">
+          Paid (28)
+        </button>
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all" id="filter-pending-btn" onclick="applyStatusFilter('pending')">
+          Pending (10)
+        </button>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end sm:self-auto text-on-surface-variant font-label-sm text-label-sm">
+<span class="hidden md:inline">Payment Method:</span>
+<select class="h-9 px-2 bg-surface-container-low rounded-lg font-label-sm text-label-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" id="method-filter-select" onchange="filterPayrollTable()">
+<option value="all">All Methods</option>
+<option value="bank">Bank Transfer</option>
+<option value="cash">Cash Ledger</option>
+<option value="mobile">Mobile Wallet</option>
+</select>
+<span class="text-outline-variant/60">|</span>
+<span class="font-medium text-on-surface" id="visible-record-count">5 records rendered</span>
+</div>
+</section>
+<!-- Master Payroll Records Table Container -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden mb-space-xl">
+<div class="overflow-x-auto">
+<table class="w-full text-left text-body-sm" id="master-payroll-table">
+<thead class="bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<tr>
+<th class="px-space-md py-3.5 font-semibold">Worker ID &amp; Name</th>
+<th class="px-space-md py-3.5 font-semibold">Wage Structure</th>
+<th class="px-space-md py-3.5 font-semibold">Attendance Summary</th>
+<th class="px-space-md py-3.5 font-semibold text-right">Recorded Base</th>
+<th class="px-space-md py-3.5 font-semibold text-right">Permitted Adjustments</th>
+<th class="px-space-md py-3.5 font-semibold text-right">Net Payable</th>
+<th class="px-space-md py-3.5 font-semibold">Confirmed Method</th>
+<th class="px-space-md py-3.5 font-semibold">Payment Status</th>
+<th class="px-space-md py-3.5 font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container" id="payroll-table-body">
+<!-- Row 1: Marcus Brody (Paid) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group" data-method="bank" data-status="paid" data-worker-id="WKR-042-01">
+<td class="px-space-md py-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container font-headline-sm text-xs font-bold flex items-center justify-center flex-shrink-0">
+MB
+</div>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface">Marcus Brody</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant font-mono">
+<span class="material-symbols-outlined text-xs text-outline">badge</span>
+<span>WKR-042-01</span>
+<span class="text-outline-variant/60">•</span>
+<span class="text-[0.6875rem]">Senior Herdsman</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-space-md py-4">
+<div class="font-semibold text-on-surface">Monthly Salary</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">$2,800.00 / mo (Bi-Weekly Cycle)</div>
+</td>
+<td class="px-space-md py-4">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-xs text-primary">event_available</span>
+<span>14 Days Present</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary">schedule</span>
+<span>112 Logged Hours</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-4 text-right font-medium text-on-surface">
+$1,400.00
+</td>
+<td class="px-space-md py-4 text-right">
+<div class="font-semibold text-tertiary">-$150.00</div>
+<div class="font-body-sm text-[0.6875rem] text-on-surface-variant">Advance: -$150.00 | Ded: $0</div>
+</td>
+<td class="px-space-md py-4 text-right">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">
+$1,250.00
+</div>
+</td>
+<td class="px-space-md py-4">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs text-outline">account_balance</span>
+<span>Bank Transfer</span>
+</div>
+</td>
+<td class="px-space-md py-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/70 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">check_circle</span>
+<span>Paid</span>
+</span>
+</td>
+<td class="px-space-md py-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2 py-1 rounded-md bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium transition-colors flex items-center gap-1" onclick="openPaymentDrawer('WKR-042-01', 'Marcus Brody', 'Bank Transfer', '1,250.00', 'Monthly Salary ($2,800/mo)', '1,400.00', '-150.00', '0.00', 'paid')" title="View Record Details">
+<span class="material-symbols-outlined text-xs">visibility</span>
+<span>Details</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="viewPayslipMock('WKR-042-01', 'Marcus Brody')" title="Link to Payslip">
+<span class="material-symbols-outlined text-base">receipt</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Tomas Ruiz (Paid) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group" data-method="cash" data-status="paid" data-worker-id="WKR-042-04">
+<td class="px-space-md py-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface font-headline-sm text-xs font-bold flex items-center justify-center flex-shrink-0">
+TR
+</div>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface">Tomas Ruiz</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant font-mono">
+<span class="material-symbols-outlined text-xs text-outline">badge</span>
+<span>WKR-042-04</span>
+<span class="text-outline-variant/60">•</span>
+<span class="text-[0.6875rem]">Milking Operator</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-space-md py-4">
+<div class="font-semibold text-on-surface">Daily Wage</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">$75.00 / day (Daily Structure)</div>
+</td>
+<td class="px-space-md py-4">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-xs text-primary">event_available</span>
+<span>12 Days Present</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary">schedule</span>
+<span>96 Logged Hours</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-4 text-right font-medium text-on-surface">
+$900.00
+</td>
+<td class="px-space-md py-4 text-right">
+<span class="text-on-surface-variant font-body-sm text-body-sm">$0.00</span>
+<div class="font-body-sm text-[0.6875rem] text-on-surface-variant">Advance: $0 | Ded: $0</div>
+</td>
+<td class="px-space-md py-4 text-right">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">
+$900.00
+</div>
+</td>
+<td class="px-space-md py-4">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs text-outline">payments</span>
+<span>Cash</span>
+</div>
+</td>
+<td class="px-space-md py-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/70 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">check_circle</span>
+<span>Paid</span>
+</span>
+</td>
+<td class="px-space-md py-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2 py-1 rounded-md bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium transition-colors flex items-center gap-1" onclick="openPaymentDrawer('WKR-042-04', 'Tomas Ruiz', 'Cash', '900.00', 'Daily Wage ($75.00/day)', '900.00', '0.00', '0.00', 'paid')" title="View Record Details">
+<span class="material-symbols-outlined text-xs">visibility</span>
+<span>Details</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="viewPayslipMock('WKR-042-04', 'Tomas Ruiz')" title="Link to Payslip">
+<span class="material-symbols-outlined text-base">receipt</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Carlos Mendez (Pending) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group bg-surface-container-low/20" data-method="mobile" data-status="pending" data-worker-id="WKR-042-19">
+<td class="px-space-md py-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary font-headline-sm text-xs font-bold flex items-center justify-center flex-shrink-0">
+CM
+</div>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1.5">
+<span>Carlos Mendez</span>
+<span class="w-2 h-2 rounded-full bg-error" title="Awaiting Disbursement"></span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant font-mono">
+<span class="material-symbols-outlined text-xs text-outline">badge</span>
+<span>WKR-042-19</span>
+<span class="text-outline-variant/60">•</span>
+<span class="text-[0.6875rem]">Feed Systems Tech</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-space-md py-4">
+<div class="font-semibold text-on-surface">Monthly Salary</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">$2,200.00 / mo (Bi-Weekly Cycle)</div>
+</td>
+<td class="px-space-md py-4">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-xs text-primary">event_available</span>
+<span>13 Days Present</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary">schedule</span>
+<span>104 Logged Hours</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-4 text-right font-medium text-on-surface">
+$1,100.00
+</td>
+<td class="px-space-md py-4 text-right">
+<div class="font-semibold text-tertiary">-$80.00</div>
+<div class="font-body-sm text-[0.6875rem] text-on-surface-variant">Advance: $0 | Ded: -$80.00</div>
+</td>
+<td class="px-space-md py-4 text-right">
+<div class="font-headline-sm text-headline-sm font-bold text-error">
+$1,020.00
+</div>
+</td>
+<td class="px-space-md py-4">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs text-outline">phone_android</span>
+<span>Mobile Wallet</span>
+</div>
+</td>
+<td class="px-space-md py-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">pending</span>
+<span>Pending</span>
+</span>
+</td>
+<td class="px-space-md py-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2 py-1 rounded-md bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium transition-colors flex items-center gap-1" onclick="openPaymentDrawer('WKR-042-19', 'Carlos Mendez', 'Mobile Wallet', '1,020.00', 'Monthly Salary ($2,200/mo)', '1,100.00', '0.00', '-80.00', 'pending')" title="View Record Details">
+<span class="material-symbols-outlined text-xs">visibility</span>
+<span>Details</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="viewPayslipMock('WKR-042-19', 'Carlos Mendez')" title="Link to Payslip">
+<span class="material-symbols-outlined text-base">receipt</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Sofia Al-Mansoor (Paid) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group" data-method="bank" data-status="paid" data-worker-id="WKR-042-12">
+<td class="px-space-md py-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed font-headline-sm text-xs font-bold flex items-center justify-center flex-shrink-0">
+SM
+</div>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface">Sofia Al-Mansoor</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant font-mono">
+<span class="material-symbols-outlined text-xs text-outline">badge</span>
+<span>WKR-042-12</span>
+<span class="text-outline-variant/60">•</span>
+<span class="text-[0.6875rem]">Veterinary Assistant</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-space-md py-4">
+<div class="font-semibold text-on-surface">Monthly Salary</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">$2,500.00 / mo (Bi-Weekly Cycle)</div>
+</td>
+<td class="px-space-md py-4">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-xs text-primary">event_available</span>
+<span>11 Days Present</span>
+</div>
+<div class="font-body-sm text-body-sm text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">beach_access</span>
+<span>3 Days Approved Leave</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-4 text-right font-medium text-on-surface">
+$1,250.00
+</td>
+<td class="px-space-md py-4 text-right">
+<span class="text-on-surface-variant font-body-sm text-body-sm">$0.00</span>
+<div class="font-body-sm text-[0.6875rem] text-on-surface-variant">Advance: $0 | Ded: $0</div>
+</td>
+<td class="px-space-md py-4 text-right">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">
+$1,250.00
+</div>
+</td>
+<td class="px-space-md py-4">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs text-outline">account_balance</span>
+<span>Bank Transfer</span>
+</div>
+</td>
+<td class="px-space-md py-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/70 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">check_circle</span>
+<span>Paid</span>
+</span>
+</td>
+<td class="px-space-md py-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2 py-1 rounded-md bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium transition-colors flex items-center gap-1" onclick="openPaymentDrawer('WKR-042-12', 'Sofia Al-Mansoor', 'Bank Transfer', '1,250.00', 'Monthly Salary ($2,500/mo)', '1,250.00', '0.00', '0.00', 'paid')" title="View Record Details">
+<span class="material-symbols-outlined text-xs">visibility</span>
+<span>Details</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="viewPayslipMock('WKR-042-12', 'Sofia Al-Mansoor')" title="Link to Payslip">
+<span class="material-symbols-outlined text-base">receipt</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Johnathan Wu (Pending) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group bg-surface-container-low/20" data-method="cash" data-status="pending" data-worker-id="WKR-042-08">
+<td class="px-space-md py-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface font-headline-sm text-xs font-bold flex items-center justify-center flex-shrink-0">
+JW
+</div>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1.5">
+<span>Johnathan Wu</span>
+<span class="w-2 h-2 rounded-full bg-error" title="Awaiting Disbursement"></span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant font-mono">
+<span class="material-symbols-outlined text-xs text-outline">badge</span>
+<span>WKR-042-08</span>
+<span class="text-outline-variant/60">•</span>
+<span class="text-[0.6875rem]">Barn Technician</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-space-md py-4">
+<div class="font-semibold text-on-surface">Daily Wage</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">$65.00 / day (Daily Structure)</div>
+</td>
+<td class="px-space-md py-4">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-xs text-primary">event_available</span>
+<span>14 Days Present</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary">schedule</span>
+<span>112 Logged Hours</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-4 text-right font-medium text-on-surface">
+$910.00
+</td>
+<td class="px-space-md py-4 text-right">
+<div class="font-semibold text-tertiary">-$100.00</div>
+<div class="font-body-sm text-[0.6875rem] text-on-surface-variant">Advance: -$100.00 | Ded: $0</div>
+</td>
+<td class="px-space-md py-4 text-right">
+<div class="font-headline-sm text-headline-sm font-bold text-error">
+$810.00
+</div>
+</td>
+<td class="px-space-md py-4">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs text-outline">payments</span>
+<span>Cash</span>
+</div>
+</td>
+<td class="px-space-md py-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">pending</span>
+<span>Pending</span>
+</span>
+</td>
+<td class="px-space-md py-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2 py-1 rounded-md bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium transition-colors flex items-center gap-1" onclick="openPaymentDrawer('WKR-042-08', 'Johnathan Wu', 'Cash', '810.00', 'Daily Wage ($65.00/day)', '910.00', '-100.00', '0.00', 'pending')" title="View Record Details">
+<span class="material-symbols-outlined text-xs">visibility</span>
+<span>Details</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="viewPayslipMock('WKR-042-08', 'Johnathan Wu')" title="Link to Payslip">
+<span class="material-symbols-outlined text-base">receipt</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Empty State View Container (Hidden in standard state) -->
+<div class="hidden p-space-xl flex-col items-center justify-center text-center" id="table-empty-state">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant mb-space-sm">
+<span class="material-symbols-outlined text-3xl">receipt_long</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">No Payroll Records For Selected Period</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-1 mb-space-md">
+        The chosen cycle has not been populated with worker timesheets or base calculations yet. Switch to Bi-Weekly Cycle #20 to view active disbursements.
+      </p>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-sm" onclick="setScreenState('standard')">
+        Return to Current Period
+      </button>
+</div>
+<!-- Table Footer / Summary Bar -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-primary">verified_user</span>
+<span>All records timestamped &amp; tied to Admin Elena Vance (ID: ADM-042-E)</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span>Displaying 1–5 of 38 Records</span>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface disabled:opacity-40 flex items-center justify-center" disabled="">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="w-7 h-7 rounded bg-primary text-on-primary font-bold flex items-center justify-center">1</button>
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container flex items-center justify-center">2</button>
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container flex items-center justify-center">3</button>
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Slide-Over Drawer: Record Salary Payment (Item 5) -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 hidden transition-opacity" id="payment-drawer-backdrop" onclick="closePaymentDrawer()"></div>
+<aside class="fixed top-0 right-0 h-full w-full max-w-md bg-surface-container-lowest shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col" id="payment-drawer">
+<!-- Drawer Header -->
+<div class="h-16 px-space-lg flex items-center justify-between bg-surface-container-low border-b border-outline-variant/40">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">assignment</span>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">Payroll Record Details</div>
+<div class="font-label-sm text-[0.6875rem] text-on-surface-variant uppercase tracking-wider">SRS Confidential Ledger Inspection</div>
+</div>
+</div>
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" onclick="closePaymentDrawer()">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<!-- Drawer Body -->
+<div class="flex-1 overflow-y-auto p-space-lg space-y-space-md">
+<!-- Worker Identification Card -->
+<div class="p-space-sm bg-surface-container-low rounded-xl">
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-1 font-semibold uppercase tracking-wider">Worker Identification</div>
+<div class="flex items-center justify-between">
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface" id="drawer-worker-name">Carlos Mendez</div>
+<div class="font-body-sm text-body-sm font-mono text-on-surface-variant" id="drawer-worker-id">WKR-042-19 • Feed Systems Tech</div>
+</div>
+<span class="px-2 py-0.5 rounded font-label-sm text-[0.6875rem] font-bold" id="drawer-status-badge">
+Pending
+</span>
+</div>
+<div class="mt-2 pt-2 border-t border-outline-variant/40 flex justify-between items-center text-body-sm text-on-surface-variant">
+<span>Wage Structure:</span>
+<span class="font-semibold text-on-surface" id="drawer-wage-structure">Monthly Salary ($2,200/mo)</span>
+</div>
+</div>
+<!-- Base Pay & Adjustments Breakdown -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm space-y-space-xs border border-outline-variant/40">
+<div class="font-label-sm text-label-sm font-bold text-on-surface mb-2 uppercase tracking-wider">Cycle Earnings Breakdown</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-on-surface-variant">Recorded Base Earnings:</span>
+<span class="font-mono font-medium text-on-surface" id="drawer-base-amt">$1,100.00</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-on-surface-variant">Manual Salary Advances:</span>
+<span class="font-mono text-tertiary" id="drawer-advances-amt">$0.00</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-on-surface-variant">Manual Authorized Deductions:</span>
+<span class="font-mono text-error" id="drawer-deductions-amt">-$80.00</span>
+</div>
+<div class="pt-2 border-t border-outline-variant/40 flex justify-between items-center">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Net Payable Balance:</span>
+<span class="font-headline-md text-headline-md font-bold text-primary" id="drawer-pending-amount">$1,020.00</span>
+</div>
+</div>
+<!-- Confirmed Payment Parameters -->
+<div class="p-space-md bg-surface-container-low rounded-xl space-y-space-xs">
+<div class="font-label-sm text-label-sm font-bold text-on-surface mb-1 uppercase tracking-wider">Payment Parameters</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-on-surface-variant">Disbursement Channel:</span>
+<span class="font-semibold text-on-surface" id="drawer-payment-method">Mobile Wallet</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-on-surface-variant">Frequency:</span>
+<span class="font-semibold text-on-surface">Bi-Weekly (Cycle #20)</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-on-surface-variant">Authorization Rule:</span>
+<span class="text-on-surface font-body-sm">Farm Admin Verified Record</span>
+</div>
+</div>
+<!-- Recent Payment History Context -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/40 space-y-2">
+<div class="font-label-sm text-label-sm font-bold text-on-surface uppercase tracking-wider">Recent Historical Ledger Records</div>
+<div class="text-body-sm space-y-1.5">
+<div class="flex justify-between items-center text-on-surface-variant pb-1 border-b border-surface-container">
+<span>Cycle #19 (Sep 16 - Sep 30):</span>
+<span class="font-semibold text-secondary">$1,100.00 • Paid (Bank Transfer)</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant pb-1 border-b border-surface-container">
+<span>Cycle #18 (Sep 01 - Sep 15):</span>
+<span class="font-semibold text-secondary">$1,100.00 • Paid (Bank Transfer)</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Cycle #17 (Aug 16 - Aug 31):</span>
+<span class="font-semibold text-secondary">$1,050.00 • Paid (Bank Transfer)</span>
+</div>
+</div>
+</div>
+<!-- Administrative Actions -->
+<div class="pt-space-sm space-y-2">
+<button class="w-full py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all shadow-sm flex items-center justify-center gap-1.5" id="drawer-print-payslip-btn" onclick="generateAndPrintPayslip()">
+<span class="material-symbols-outlined text-base">print</span>
+<span>Generate &amp; Print Payslip</span>
+</button>
+<button class="w-full py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-medium transition-colors" onclick="closePaymentDrawer()">
+Close Details
+</button>
+</div>
+</div>
+</aside>
+<!-- Interactive Modal: Add Permitted Adjustment -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-space-md" id="adjustment-modal-backdrop" onclick="closeAdjustmentModal()">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-2xl shadow-2xl overflow-hidden" onclick="event.stopPropagation()">
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between border-b border-outline-variant/40">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">add_circle</span>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">Add Permitted Payroll Adjustment</div>
+<div class="font-label-sm text-[0.6875rem] text-on-surface-variant uppercase tracking-wider">Farm Admin Authorized Entry</div>
+</div>
+</div>
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container" onclick="closeAdjustmentModal()">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<form class="p-space-lg space-y-space-md" onsubmit="handleAdjustmentSubmit(event)">
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Select Worker</label>
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" id="modal-worker-select">
+<option value="WKR-042-19">Carlos Mendez (WKR-042-19) - Feed Systems Tech</option>
+<option value="WKR-042-01">Marcus Brody (WKR-042-01) - Senior Herdsman</option>
+<option value="WKR-042-04">Tomas Ruiz (WKR-042-04) - Milking Operator</option>
+<option value="WKR-042-08">Johnathan Wu (WKR-042-08) - Barn Technician</option>
+<option value="WKR-042-12">Sofia Al-Mansoor (WKR-042-12) - Veterinary Assistant</option>
+</select>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Adjustment Type</label>
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" id="modal-adj-type">
+<option value="advance">Salary Advance (-)</option>
+<option value="deduction">Authorized Deduction (-)</option>
+<option value="other">Other Permitted Adjustment (+/-)</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Amount ($ USD)</label>
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" min="1" required="" step="1" type="number" value="50.00">
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Applicable Payroll Cycle</label>
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20">
+<option value="cycle_20">October 01 – October 15, 2024 (Bi-Weekly #20) - Current</option>
+<option value="cycle_21">October 16 – October 31, 2024 (Bi-Weekly #21)</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Operational Justification</label>
+<textarea class="w-full p-2.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="e.g. Authorized mid-cycle cash advance approved by Farm Administrator." required="" rows="2"></textarea>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg font-body-sm text-[0.6875rem] text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">verified</span>
+<span>Permitted adjustments are recorded as approved administrative entries without automated mathematical derivation.</span>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md" onclick="closeAdjustmentModal()" type="button">
+Cancel
+</button>
+<button class="px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all shadow-sm" type="submit">
+Save Adjustment
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Interactive Toast Notification Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none" id="toast-notification">
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-xl flex items-center gap-space-sm max-w-md pointer-events-auto">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0" id="toast-icon-wrapper">
+<span class="material-symbols-outlined text-lg" id="toast-icon">check</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface" id="toast-title">Disbursement Confirmed</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant" id="toast-desc">Transaction recorded for Carlos Mendez ($1,020.00).</div>
+</div>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface ml-2" onclick="dismissToast()">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  let currentFilter = 'all';
+
+  function setScreenState(state) {
+    // Reset buttons
+    ['btn-state-standard', 'btn-state-pending', 'btn-state-empty'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.className = "px-space-sm py-1 rounded bg-transparent hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm transition-all";
+      }
+    });
+
+    const tableBody = document.getElementById('payroll-table-body');
+    const emptyState = document.getElementById('table-empty-state');
+    const tableEl = document.getElementById('master-payroll-table');
+
+    if (state === 'standard') {
+      document.getElementById('btn-state-standard').className = "px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm transition-all font-semibold";
+      emptyState.classList.add('hidden');
+      tableEl.classList.remove('hidden');
+      applyStatusFilter('all');
+      document.getElementById('current-period-label').innerText = "October 01 – October 15, 2024 (Bi-Weekly Cycle #20)";
+      document.getElementById('period-dropdown').value = "current";
+    } else if (state === 'pending') {
+      document.getElementById('btn-state-pending').className = "px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm transition-all font-semibold";
+      emptyState.classList.add('hidden');
+      tableEl.classList.remove('hidden');
+      applyStatusFilter('pending');
+    } else if (state === 'empty') {
+      document.getElementById('btn-state-empty').className = "px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm transition-all font-semibold";
+      tableEl.classList.add('hidden');
+      emptyState.classList.remove('hidden');
+      emptyState.classList.add('flex');
+      document.getElementById('visible-record-count').innerText = "0 records rendered";
+      document.getElementById('current-period-label').innerText = "November 01 – November 15, 2024 (Cycle #22 - Unlocked)";
+    }
+  }
+
+  function applyStatusFilter(status) {
+    currentFilter = status;
+    const rows = document.querySelectorAll('#payroll-table-body tr');
+    let visibleCount = 0;
+
+    // Toggle button visuals
+    const allBtn = document.getElementById('filter-all-btn');
+    const paidBtn = document.getElementById('filter-paid-btn');
+    const pendingBtn = document.getElementById('filter-pending-btn');
+
+    [allBtn, paidBtn, pendingBtn].forEach(b => {
+      b.className = "px-2.5 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all";
+    });
+
+    if (status === 'all') {
+      allBtn.className = "px-2.5 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-on-surface font-semibold shadow-sm transition-all";
+    } else if (status === 'paid') {
+      paidBtn.className = "px-2.5 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-on-surface font-semibold shadow-sm transition-all";
+    } else if (status === 'pending') {
+      pendingBtn.className = "px-2.5 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-on-surface font-semibold shadow-sm transition-all";
+    }
+
+    const searchTerm = (document.getElementById('worker-table-filter').value || '').toLowerCase();
+    const methodTerm = document.getElementById('method-filter-select').value;
+
+    rows.forEach(row => {
+      const rowStatus = row.getAttribute('data-status');
+      const rowMethod = row.getAttribute('data-method');
+      const text = row.innerText.toLowerCase();
+
+      const matchStatus = (status === 'all' || rowStatus === status);
+      const matchSearch = text.includes(searchTerm);
+      const matchMethod = (methodTerm === 'all' || rowMethod === methodTerm);
+
+      if (matchStatus && matchSearch && matchMethod) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    document.getElementById('visible-record-count').innerText = `${visibleCount} records rendered`;
+  }
+
+  function filterPayrollTable() {
+    applyStatusFilter(currentFilter);
+  }
+
+  function handlePeriodChange(val) {
+    if (val === 'empty_test') {
+      setScreenState('empty');
+    } else {
+      setScreenState('standard');
+      if (val === 'prev1') {
+        document.getElementById('current-period-label').innerText = "September 16 – September 30, 2024 (Cycle #19)";
+      } else if (val === 'prev2') {
+        document.getElementById('current-period-label').innerText = "September 01 – September 15, 2024 (Cycle #18)";
+      }
+    }
+  }
+
+  function shiftPeriod(delta) {
+    const sel = document.getElementById('period-dropdown');
+    if (delta > 0 && sel.selectedIndex < sel.options.length - 1) {
+      sel.selectedIndex++;
+      handlePeriodChange(sel.value);
+    } else if (delta < 0 && sel.selectedIndex > 0) {
+      sel.selectedIndex--;
+      handlePeriodChange(sel.value);
+    }
+  }
+
+  function openPaymentDrawer(wkrId, wkrName, method, amt) {
+    document.getElementById('drawer-worker-id').innerText = `${wkrId} • Verified Farm Personnel`;
+    document.getElementById('drawer-worker-name').innerText = wkrName;
+    document.getElementById('drawer-pending-amount').innerText = `$${amt}`;
+    
+    const backdrop = document.getElementById('payment-drawer-backdrop');
+    const drawer = document.getElementById('payment-drawer');
+    backdrop.classList.remove('hidden');
+    drawer.classList.remove('translate-x-full');
+  }
+
+  function closePaymentDrawer() {
+    const backdrop = document.getElementById('payment-drawer-backdrop');
+    const drawer = document.getElementById('payment-drawer');
+    drawer.classList.add('translate-x-full');
+    setTimeout(() => {
+      backdrop.classList.add('hidden');
+    }, 200);
+  }
+
+  function handlePaymentSubmit(e) {
+    e.preventDefault();
+    closePaymentDrawer();
+    
+    // Simulate Row Update to Paid
+    const row = document.querySelector('tr[data-worker-id="WKR-042-19"]');
+    if (row) {
+      row.setAttribute('data-status', 'paid');
+      const statusCell = row.children[7];
+      statusCell.innerHTML = `
+        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/70 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+          <span class="material-symbols-outlined text-xs">check_circle</span>
+          <span>Paid</span>
+        </span>
+      `;
+      row.children[5].firstElementChild.classList.remove('text-error');
+      row.children[5].firstElementChild.classList.add('text-primary');
+    }
+
+    // Update KPIs
+    document.getElementById('kpi-paid-disbursed').innerText = "$15,270.00";
+    document.getElementById('kpi-pending-salary').innerText = "$3,180.00";
+
+    showToast("Disbursement Verified & Logged", "Carlos Mendez marked as PAID via Mobile Wallet (TRX-EASYPAISA-88192).", "verified");
+  }
+
+  function openAdjustmentModal(wkrId, wkrName) {
+    if (wkrId) {
+      const sel = document.getElementById('modal-worker-select');
+      if (sel) sel.value = wkrId;
+    }
+    document.getElementById('adjustment-modal-backdrop').classList.remove('hidden');
+  }
+
+  function closeAdjustmentModal() {
+    document.getElementById('adjustment-modal-backdrop').classList.add('hidden');
+  }
+
+  function handleAdjustmentSubmit(e) {
+    e.preventDefault();
+    closeAdjustmentModal();
+    triggerAdjustmentFeedback();
+  }
+
+  function triggerAdjustmentFeedback() {
+    showToast("Permitted Adjustment Logged", "Adjustment recorded for Workspace GF-042 ledger. Base recalculated.", "edit_note");
+  }
+
+  function viewPayslipMock(wkrId, wkrName) {
+    showToast(`Payslip Voucher: ${wkrId}`, `Generating printable PDF voucher for ${wkrName}.`, "receipt");
+  }
+
+  function downloadLedgerMock() {
+    showToast("Exporting Audit CSV", "Master bi-weekly disbursement ledger downloaded for local farm records.", "download");
+  }
+
+  let toastTimeout;
+  function showToast(title, desc, icon = "check") {
+    clearTimeout(toastTimeout);
+    const toast = document.getElementById('toast-notification');
+    document.getElementById('toast-title').innerText = title;
+    document.getElementById('toast-desc').innerText = desc;
+    document.getElementById('toast-icon').innerText = icon;
+
+    toast.classList.remove('translate-y-20', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    toastTimeout = setTimeout(() => {
+      dismissToast();
+    }, 4000);
+  }
+
+  function dismissToast() {
+    const toast = document.getElementById('toast-notification');
+    toast.classList.remove('translate-y-0', 'opacity-100');
+    toast.classList.add('translate-y-20', 'opacity-0');
+  }
+</script></main></div>
+
+</body></html>

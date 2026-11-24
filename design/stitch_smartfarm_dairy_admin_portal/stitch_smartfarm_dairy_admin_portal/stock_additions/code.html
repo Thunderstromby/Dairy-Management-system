@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#30312d", "on-background": "#1b1c18", "secondary": "#556249", "tertiary-fixed-dim": "#ffb784", "surface-container-low": "#f5f3ed", "on-tertiary": "#ffffff", "surface-dim": "#dcdad4", "on-primary-container": "#b8cda9", "on-primary-fixed": "#101f08", "inverse-on-surface": "#f3f1eb", "outline": "#75786f", "background": "#fbf9f3", "on-tertiary-fixed": "#301400", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#3e4b32", "surface": "#fbf9f3", "outline-variant": "#c4c8bd", "surface-container": "#f0eee8", "surface-container-high": "#eae8e2", "surface-tint": "#516446", "surface-bright": "#fbf9f3", "on-surface-variant": "#444840", "primary-container": "#46583b", "primary": "#2f4126", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffdcc6", "on-primary-fixed-variant": "#3a4c30", "secondary-container": "#d9e8c7", "on-surface": "#1b1c18", "error": "#ba1a1a", "secondary-fixed-dim": "#bdcbac", "on-tertiary-container": "#ffb785", "on-secondary-container": "#5b694e", "on-error": "#ffffff", "primary-fixed": "#d4e9c3", "on-tertiary-fixed-variant": "#6c3a11", "tertiary": "#5e3007", "primary-fixed-dim": "#b8cda8", "on-error-container": "#93000a", "secondary-fixed": "#d9e8c7", "tertiary-container": "#7a461c", "on-secondary-fixed": "#141f0a", "on-primary": "#ffffff", "surface-variant": "#e4e2dd", "inverse-primary": "#b8cda8", "surface-container-highest": "#e4e2dd", "on-secondary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "gutter-mobile": "0.75rem", "margin": "2rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter": "1.5rem", "margin-mobile": "1rem" }, "fontFamily": { "data-metric-md": [ "Inter" ], "body-lg": [ "Inter" ], "display-lg-mobile": [ "Manrope" ], "body-sm": [ "Inter" ], "headline-md": [ "Manrope" ], "label-sm": [ "Inter" ], "headline-sm": [ "Manrope" ], "headline-xl": [ "Manrope" ], "body-md": [ "Inter" ], "headline-xl-mobile": [ "Manrope" ], "display-lg": [ "Manrope" ], "headline-lg": [ "Manrope" ], "data-metric-lg": [ "Manrope" ], "label-md": [ "Inter" ] }, "fontSize": { "data-metric-md": [ "1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "display-lg-mobile": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ], "headline-md": [ "1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" } ], "label-sm": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" } ], "headline-xl": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "headline-xl-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-lg": [ "3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "data-metric-lg": [ "2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZuhXF_IhBdGhJ4eix1oqj3wBimwP9kKeGGChH_b2ax1lMLHMcXPmCVu9b3MJqlJ3XUJHZyp_ietndJCcoi5tapKDT0swhF14GEZxUKYZjg6g5LvxUeQzsGptFXM8XbwZz0B0M4Kbg8tH48Ys1NpBq3q3ceaJWAzrxO8XU7fzOrfQL6K9wOMESU_VEMnfcbKwhEtKD90-MYyU8fO7yBiUm20ljVe33W-rRqQJED0H"/><div><div class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight truncate">SmartFarm</div><div class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Dairy Management</div></div></div><span class="font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold px-space-xs py-0.5 rounded">Admin</span></div><div class="px-space-md py-space-sm bg-surface-container-low/80 flex items-center justify-between"><div class="truncate"><div class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Greenfield Dairy Estate</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">Workspace: GF-042</div></div><span class="h-2 w-2 rounded-full bg-primary-container ring-2 ring-primary-fixed flex-shrink-0"></span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Overview</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="font-body-md text-body-md flex-1">Dashboard</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Herd Management</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#"><span class="font-body-md text-body-md flex-1">Animals</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#"><span class="font-body-md text-body-md flex-1">Animal Health</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding" href="#"><span class="font-body-md text-body-md flex-1">Feeding Plans</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Operations &amp; Assets</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#"><span class="font-body-md text-body-md flex-1">Milk Production</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-management" href="#"><span class="font-body-md text-body-md flex-1">Milk Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#"><span class="font-body-md text-body-md flex-1">Inventory</span></a><div class="ml-space-md pl-space-xs border-l border-outline-variant/40 space-y-space-xs"><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="inventory-list" href="#">Inventory List</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="item-details" href="#">Item Details</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="purchases-and-inbound-invoices" href="#">Purchases &amp; Inbound Invoices</a><a aria-current="page" class="flex items-center px-space-sm py-1 transition-all bg-primary-container text-on-primary font-semibold rounded-lg" data-path="stock-additions" href="#">Stock Additions</a><a class="flex items-center px-space-sm py-1 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="stock-adjustments" href="#">Stock Adjustments</a></div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#"><span class="font-body-md text-body-md flex-1">Equipment</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Workforce &amp; Finance</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers" href="#"><span class="font-body-md text-body-md flex-1">Workers</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="attendance" href="#"><span class="font-body-md text-body-md flex-1">Attendance</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="payroll" href="#"><span class="font-body-md text-body-md flex-1">Payroll</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="finance" href="#"><span class="font-body-md text-body-md flex-1">Finance</span></a></div><div class="space-y-space-xs"><div class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Governance &amp; Core</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="supervisor-access" href="#"><span class="font-body-md text-body-md flex-1">Supervisor Access</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#"><span class="font-body-md text-body-md flex-1">Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="data-management" href="#"><span class="font-body-md text-body-md flex-1">Data Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="font-body-md text-body-md flex-1">Settings</span></a></div></nav><div class="p-space-sm bg-surface-container-low/60"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex justify-between items-center mb-1"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Storage Quota</span><span class="font-label-sm text-label-sm text-primary font-bold">42%</span></div><div class="w-full bg-surface-container rounded-full h-1.5 mb-2"><div class="bg-primary-container h-1.5 rounded-full w-[42%]"></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-body-sm text-body-sm">1,280 Active Head</span><span class="material-symbols-outlined text-sm text-tertiary-container">sensors</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><button class="p-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-xl">menu_open</span></button><nav class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="text-on-surface-variant">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface-variant">Operations &amp; Assets</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="font-semibold text-on-surface">Inventory</span></nav><div class="relative flex-1 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full h-10 pl-9 pr-14 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search Inventory, SKU, Batch, PO..." type="text"/><span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded shadow-sm">⌘K</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm"><span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span><span>Connected • Live</span></div><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Mode" type="button"><span class="material-symbols-outlined text-xl">routine</span></button><div class="relative"><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" title="Alerts" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 h-4 min-w-[1rem] px-1 bg-error text-on-error font-label-sm text-[0.625rem] rounded-full flex items-center justify-center font-bold">3</span></button></div><a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#" title="Docs &amp; Support"><span class="material-symbols-outlined text-xl">help</span></a><div class="h-6 w-[1px] bg-outline-variant/40 mx-space-xs"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHGkwzAmXeAWZgoliBfM3J0Dk3rRvKbrFcaSDXWTFXvp7mK8JZlIDpaM_-PKsE2e-9DSWj_thQxg7ZvMO7_J2wdBeJdNp3xHQNrTkReCH1iwd77yI5cACPrn8AVBGbsgSIRzl_r1aNrbkvrI3tTJT7qFPLASAjAk_cx85172_N3qz8dJ2RbazkMZxrYU4--z2VriyTURPXkRqv4-UUhJWONTqJq0P8IWMmPKFhLYX7"/><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></div><div class="hidden lg:block text-left"><div class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</div><div class="font-label-sm text-label-sm text-on-surface-variant leading-none">Farm Administrator</div></div><button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-lg">expand_more</span></button></div></div></header><main class="relative pt-16 w-full px-space-lg py-space-lg bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Context Header Area -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg pb-space-lg">
+<div class="space-y-space-xs max-w-3xl">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span>Operations</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span>Inventory</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-bold">Stock Additions</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Inventory Stock Additions</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Authorized manual stock top-ups, harvested on-farm feed intake, and un-invoiced inventory increments for Workspace GF-042.
+      </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm flex-shrink-0">
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors shadow-sm font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-lg">folder_open</span>
+<span>View Inventory Directory</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-colors shadow-sm font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-lg">file_download</span>
+<span>Export Additions Log</span>
+</button>
+</div>
+</div>
+<!-- Interactive Validation States Preview Bar -->
+<div class="mb-space-lg p-space-sm bg-surface-container rounded-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm pl-space-xs">
+<span class="material-symbols-outlined text-secondary">tune</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">Form State Simulator</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm hidden sm:inline">• Test operational ledger verification &amp; safeguards</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs w-full md:w-auto">
+<button class="px-space-sm py-1.5 rounded-lg text-label-sm font-label-sm bg-primary text-on-primary transition-all" id="btn-state-standard" onclick="setFormState('standard')" type="button">
+        Standard Ready
+      </button>
+<button class="px-space-sm py-1.5 rounded-lg text-label-sm font-label-sm bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-all" id="btn-state-zero" onclick="setFormState('zero')" type="button">
+        Zero Input Error
+      </button>
+<button class="px-space-sm py-1.5 rounded-lg text-label-sm font-label-sm bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-all" id="btn-state-negative" onclick="setFormState('negative')" type="button">
+        Negative Disallowed
+      </button>
+<button class="px-space-sm py-1.5 rounded-lg text-label-sm font-label-sm bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-all" id="btn-state-success" onclick="setFormState('success')" type="button">
+        Calculated Total Preview
+      </button>
+</div>
+</div>
+<!-- Dynamic State Notification Banner -->
+<div class="hidden mb-space-lg transition-all duration-300" id="state-banner-container"></div>
+<!-- Operational Grid: Form & Realtime Telemetry -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Left: Stock Addition Operational Form (7 Cols) -->
+<div class="xl:col-span-7 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-xl">inventory_2</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Quick Stock Addition</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Manual intake posting with immediate ledger synchronization</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container/70 text-on-secondary-container font-label-sm text-label-sm font-semibold tracking-wide flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>
+            Ledger Active
+          </span>
+</div>
+<form class="space-y-space-md" id="stock-addition-form" onsubmit="event.preventDefault(); handleAdditionSubmit();">
+<!-- Item Selector -->
+<div class="space-y-space-xs">
+<label class="block font-label-md text-label-md text-on-surface font-semibold" for="item-select">
+              Select Inventory Item <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-11 pl-space-md pr-10 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer" id="item-select" onchange="updateSelectedMaster(this.value)">
+<option selected="" value="feed-soy">High-Protein Soy Concentrate [Feed: Protein Supplements]</option>
+<option value="feed-alfalfa">Alfalfa Haylage Bale-Pack [Feed: Roughage &amp; Forage]</option>
+<option value="supp-iodine">Iodine Teat Barrier Ultra-Guard [Sanitation &amp; Health]</option>
+<option value="med-electrolytes">Calf Electrolyte Hydro-Balance [Veterinary Medical]</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<!-- Live Card of Selected Master Item -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-2xl" id="item-icon">grain</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold" id="selected-item-title">High-Protein Soy Concentrate</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm" id="selected-item-tag">FEED-8821</span>
+</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm flex items-center gap-space-sm mt-0.5">
+<span>Bin: Tower Silo Alpha</span>
+<span>•</span>
+<span class="text-error font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">warning</span> Low Stock Threshold Met
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-lg w-full md:w-auto justify-between md:justify-end bg-surface-container-lowest md:bg-transparent p-space-sm md:p-0 rounded-lg">
+<div class="text-left md:text-right">
+<span class="block font-label-sm text-label-sm text-on-surface-variant uppercase">Current Stock</span>
+<span class="font-data-metric-md text-data-metric-md text-on-surface font-bold" id="display-current-stock">1,400</span>
+<span class="text-on-surface-variant text-body-sm" id="display-stock-unit-1">kg</span>
+</div>
+<div class="text-left md:text-right">
+<span class="block font-label-sm text-label-sm text-on-surface-variant uppercase">Minimum Level</span>
+<span class="font-data-metric-md text-data-metric-md text-on-surface-variant font-semibold" id="display-min-stock">1,400</span>
+<span class="text-on-surface-variant text-body-sm" id="display-stock-unit-2">kg</span>
+</div>
+</div>
+</div>
+<!-- Quantity & Unit Row -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<div class="md:col-span-8 space-y-space-xs">
+<label class="block font-label-md text-label-md text-on-surface font-semibold" for="addition-qty-input">
+                Addition Quantity <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-11 px-space-md bg-surface-container-low rounded-lg font-data-metric-md text-data-metric-md text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary" id="addition-qty-input" oninput="calculateProjectedStock()" placeholder="e.g. 2500" step="any" type="number" value="2500"/>
+<button class="absolute right-12 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface" onclick="setQuickQty(500)" type="button">+500</button>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface" onclick="setQuickQty(1000)" type="button">+1k</button>
+</div>
+<p class="hidden text-error font-body-sm text-body-sm pt-0.5" id="qty-field-error"></p>
+</div>
+<div class="md:col-span-4 space-y-space-xs">
+<label class="block font-label-md text-label-md text-on-surface font-semibold">
+                Configured Unit
+              </label>
+<div class="h-11 px-space-md bg-surface-container flex items-center justify-between rounded-lg">
+<span class="font-headline-sm text-headline-sm text-primary font-bold" id="display-badge-unit">kg</span>
+<span class="material-symbols-outlined text-sm text-on-surface-variant" title="Locked by Master Catalog">lock</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                Locked to master definition.
+              </p>
+</div>
+</div>
+<!-- Reason & Storage Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="space-y-space-xs">
+<label class="block font-label-md text-label-md text-on-surface font-semibold" for="addition-reason-select">
+                Addition Source / Reason <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-11 pl-space-md pr-10 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer" id="addition-reason-select">
+<option selected="" value="harvest">Farm-Grown Harvest Ingestion</option>
+<option value="emergency">Emergency Direct Purchase Top-up</option>
+<option value="sample">Supplier Sample / Promotional Stock</option>
+<option value="internal">Re-allocated Internal Bin Batch</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div class="space-y-space-xs">
+<label class="block font-label-md text-label-md text-on-surface font-semibold" for="destination-storage-select">
+                Destination Storage <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-11 pl-space-md pr-10 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer" id="destination-storage-select">
+<option selected="" value="silo-03">Silo Tower 03 (High Capacity Dry)</option>
+<option value="bunker-01">Bunker 01 (Covered Forage)</option>
+<option value="chiller-01">Veterinary Chiller 01 (Cold Chain 4°C)</option>
+<option value="shed-b">Main Chemical Shed - Bay 02</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Optional Batch & Operator Metadata -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="space-y-space-xs">
+<label class="block font-label-md text-label-md text-on-surface font-semibold" for="lot-identifier-input">
+                Batch / Lot Identifier <span class="text-on-surface-variant font-normal">(Optional)</span>
+</label>
+<input class="w-full h-11 px-space-md bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary" id="lot-identifier-input" placeholder="LOT-YYYY-XXX-00" type="text" value="LOT-2024-ADD-04"/>
+</div>
+<div class="space-y-space-xs">
+<label class="block font-label-md text-label-md text-on-surface font-semibold">
+                Authorized Farm Operator
+              </label>
+<div class="h-11 px-space-md bg-surface-container-low rounded-lg flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-xs">EV</div>
+<span class="font-body-md text-body-md font-medium">Elena Vance (Admin)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">ID: 042-ADM</span>
+</div>
+</div>
+</div>
+<!-- Form Buttons -->
+<div class="pt-space-md flex flex-wrap items-center justify-end gap-space-sm">
+<button class="px-space-lg py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" onclick="resetForm()" type="button">
+              Cancel / Reset
+            </button>
+<button class="px-space-xl py-2.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-colors shadow-sm font-label-md text-label-md font-semibold flex items-center gap-space-xs" type="submit">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+<span>Save Stock Addition</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Right: Calculation & Biological Context Bento (5 Cols) -->
+<div class="xl:col-span-5 flex flex-col gap-space-lg">
+<!-- Live Calculation Projection Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Live Inventory Impact</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Preview Algorithm</span>
+</div>
+<!-- Impact Metrics Comparison Box -->
+<div class="p-space-md bg-surface-container-low rounded-xl space-y-space-md">
+<div class="flex items-center justify-between text-body-md font-body-md">
+<span class="text-on-surface-variant">Prior Baseline Stock</span>
+<span class="font-medium text-on-surface" id="proj-baseline">1,400 kg</span>
+</div>
+<div class="flex items-center justify-between text-body-md font-body-md text-primary font-semibold">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">add_circle</span> Manual Addition
+              </span>
+<span id="proj-addition">+2,500 kg</span>
+</div>
+<div class="h-px bg-surface-container-highest my-space-xs"></div>
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface block">New Projected Stock</span>
+<span class="inline-flex items-center gap-1 mt-1 px-2 py-0.5 rounded text-xs font-semibold bg-secondary-container text-on-secondary-container" id="threshold-status-pill">
+<span class="material-symbols-outlined text-xs">verified</span> Healthy Stock Level (+178% Over Min)
+                </span>
+</div>
+<div class="text-right">
+<span class="font-data-metric-lg text-data-metric-lg text-primary font-bold" id="proj-total">3,900</span>
+<span class="text-on-surface-variant font-label-md" id="proj-unit">kg</span>
+</div>
+</div>
+</div>
+<!-- Capacity Visualizer Bar -->
+<div class="space-y-space-xs">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Silo Tower 03 Operational Capacity (6,000 kg max)</span>
+<span class="font-semibold text-primary" id="capacity-percentage">65% Filled</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden flex">
+<div class="bg-outline-variant h-full" id="capacity-bar-prior" style="width: 23%;"></div>
+<div class="bg-primary h-full transition-all duration-500" id="capacity-bar-added" style="width: 42%;"></div>
+</div>
+<div class="flex justify-between text-[11px] text-on-surface-variant">
+<span>0 kg</span>
+<span>Min Safe: 1,400 kg</span>
+<span>6,000 kg</span>
+</div>
+</div>
+</div>
+<!-- Verification Guarantee Footnote -->
+<div class="mt-space-md pt-space-md flex items-start gap-space-sm bg-surface-container p-space-sm rounded-lg text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary flex-shrink-0">shield</span>
+<span>Each manually ingested parcel is cryptographically stamped with SHA-256 ledger checksum and linked to technician Elena Vance.</span>
+</div>
+</div>
+<!-- Quick Storage Pen & Harvest Context Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-tertiary-container flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">agriculture</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Field Silo 04 Incoming</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Harvester Batch #411 in transit from South Pasture</p>
+</div>
+</div>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors" onclick="loadHarvestPreset()" type="button">
+<span>Pre-fill</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Operational Integrity Callout -->
+<div class="mb-space-xl p-space-lg bg-surface-container-low rounded-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-start gap-space-md max-w-4xl">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">sync_alt</span>
+</div>
+<div class="space-y-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Automated Re-Evaluation Protocol</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Confirmed stock additions immediately increment real-time balances and trigger immediate status re-evaluation. If an item was previously flagged under the <strong class="text-on-surface">Low Stock Alert</strong> threshold, registering a quantity that elevates total volume above master minimum automatically clears quarantine and dispatch warnings across all feeding modules.
+        </p>
+</div>
+</div>
+<div class="flex-shrink-0 flex items-center gap-space-xs text-primary font-label-md text-label-md font-semibold bg-surface-container-lowest px-space-md py-2 rounded-lg">
+<span class="material-symbols-outlined text-lg">verified_user</span>
+<span>ISO 22000 Feed Compliant</span>
+</div>
+</div>
+<!-- Stock Additions History Table Section -->
+<div class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="space-y-0.5">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Stock Additions History</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Complete immutable audit trail of manual adjustments and receipts in Workspace GF-042</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-space-sm py-1 rounded">Showing Last 4 Registered Batches</span>
+</div>
+</div>
+<!-- High-Density Data Grid Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md font-semibold">Addition ID</th>
+<th class="py-3 px-space-md font-semibold">Timestamp</th>
+<th class="py-3 px-space-md font-semibold">Item &amp; Category</th>
+<th class="py-3 px-space-md font-semibold text-right">Quantity Added</th>
+<th class="py-3 px-space-md font-semibold">Destination Bin / Room</th>
+<th class="py-3 px-space-md font-semibold">Authorized Operator</th>
+<th class="py-3 px-space-md font-semibold">Source / Reason</th>
+<th class="py-3 px-space-md font-semibold text-center">Audit Checksum</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 font-body-md text-body-md text-on-surface">
+<!-- Row 1: High-Protein Soy -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-label-sm text-label-sm font-bold text-primary">
+                ADD-2024-0982
+              </td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">
+                Today, 08:42 AM
+              </td>
+<td class="py-3.5 px-space-md">
+<div class="font-medium text-on-surface">High-Protein Soy Concentrate</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Feed: Protein Supplements</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<span class="inline-flex items-center gap-0.5 px-2.5 py-1 rounded bg-secondary-container/80 text-on-secondary-container font-headline-sm text-headline-sm font-bold">
+                  +2,500 <span class="text-label-sm font-medium ml-1">kg</span>
+</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="flex items-center gap-1 font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-sm text-on-surface-variant">warehouse</span> Silo Tower 03
+                </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center font-label-sm text-xs text-primary font-bold">EV</div>
+<span class="text-body-sm font-medium">Elena Vance</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-on-surface-variant">
+                  Farm-Grown Harvest Ingestion
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<code class="px-2 py-0.5 rounded bg-surface-container text-label-sm font-mono text-on-surface-variant cursor-pointer hover:text-on-surface" title="Verify SHA-256 0a89f...b231">0a89f...b231</code>
+</td>
+</tr>
+<!-- Row 2: Alfalfa Haylage -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-label-sm text-label-sm font-bold text-primary">
+                ADD-2024-0981
+              </td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">
+                Yesterday, 16:15 PM
+              </td>
+<td class="py-3.5 px-space-md">
+<div class="font-medium text-on-surface">Alfalfa Haylage Bale-Pack</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Feed: Roughage &amp; Forage</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<span class="inline-flex items-center gap-0.5 px-2.5 py-1 rounded bg-secondary-container/80 text-on-secondary-container font-headline-sm text-headline-sm font-bold">
+                  +4,200 <span class="text-label-sm font-medium ml-1">kg</span>
+</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="flex items-center gap-1 font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-sm text-on-surface-variant">foundation</span> Bunker 01
+                </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center font-label-sm text-xs text-primary font-bold">MK</div>
+<span class="text-body-sm font-medium">Marcus Kane (Ops)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-on-surface-variant">
+                  Farm-Grown Harvest Ingestion
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<code class="px-2 py-0.5 rounded bg-surface-container text-label-sm font-mono text-on-surface-variant cursor-pointer hover:text-on-surface" title="Verify SHA-256 c712e...390a">c712e...390a</code>
+</td>
+</tr>
+<!-- Row 3: Iodine Teat Barrier -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-label-sm text-label-sm font-bold text-primary">
+                ADD-2024-0980
+              </td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">
+                Oct 28, 11:30 AM
+              </td>
+<td class="py-3.5 px-space-md">
+<div class="font-medium text-on-surface">Iodine Teat Barrier Ultra-Guard</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Sanitation &amp; Health</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<span class="inline-flex items-center gap-0.5 px-2.5 py-1 rounded bg-secondary-container/80 text-on-secondary-container font-headline-sm text-headline-sm font-bold">
+                  +800 <span class="text-label-sm font-medium ml-1">Litres</span>
+</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="flex items-center gap-1 font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-sm text-on-surface-variant">science</span> Chemical Shed 02
+                </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center font-label-sm text-xs text-primary font-bold">EV</div>
+<span class="text-body-sm font-medium">Elena Vance</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-tertiary-fixed text-on-tertiary-fixed-variant">
+                  Emergency Direct Purchase
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<code class="px-2 py-0.5 rounded bg-surface-container text-label-sm font-mono text-on-surface-variant cursor-pointer hover:text-on-surface" title="Verify SHA-256 e4801...7f19">e4801...7f19</code>
+</td>
+</tr>
+<!-- Row 4: Calf Electrolyte -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-label-sm text-label-sm font-bold text-primary">
+                ADD-2024-0979
+              </td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">
+                Oct 27, 09:12 AM
+              </td>
+<td class="py-3.5 px-space-md">
+<div class="font-medium text-on-surface">Calf Electrolyte Hydro-Balance</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Veterinary Medical</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<span class="inline-flex items-center gap-0.5 px-2.5 py-1 rounded bg-secondary-container/80 text-on-secondary-container font-headline-sm text-headline-sm font-bold">
+                  +10 <span class="text-label-sm font-medium ml-1">Vials</span>
+</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="flex items-center gap-1 font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-sm text-on-surface-variant">ac_unit</span> Veterinary Chiller 01
+                </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center font-label-sm text-xs text-secondary font-bold">DR</div>
+<span class="text-body-sm font-medium">Dr. Rebecca Chen</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-on-surface-variant">
+                  Supplier Sample / Promo
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-center">
+<code class="px-2 py-0.5 rounded bg-surface-container text-label-sm font-mono text-on-surface-variant cursor-pointer hover:text-on-surface" title="Verify SHA-256 99ac4...04d2">99ac4...04d2</code>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination / Footer Summary -->
+<div class="px-space-md py-3 bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm text-body-sm text-on-surface-variant font-body-sm">
+<span>Verified cryptographic audit records under farm license GF-042-ISO.</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface disabled:opacity-50" disabled="" type="button">Previous</button>
+<span class="px-2 text-on-surface font-medium">1 of 18</span>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface" type="button">Next</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Master Catalog Definitions
+  const catalog = {
+    'feed-soy': {
+      title: 'High-Protein Soy Concentrate',
+      tag: 'FEED-8821',
+      unit: 'kg',
+      currentStock: 1400,
+      minStock: 1400,
+      icon: 'grain',
+      destination: 'silo-03',
+      maxCapacity: 6000
+    },
+    'feed-alfalfa': {
+      title: 'Alfalfa Haylage Bale-Pack',
+      tag: 'FEED-1090',
+      unit: 'kg',
+      currentStock: 3200,
+      minStock: 2500,
+      icon: 'grass',
+      destination: 'bunker-01',
+      maxCapacity: 12000
+    },
+    'supp-iodine': {
+      title: 'Iodine Teat Barrier Ultra-Guard',
+      tag: 'SAN-4402',
+      unit: 'Litres',
+      currentStock: 450,
+      minStock: 500,
+      icon: 'sanitizer',
+      destination: 'shed-b',
+      maxCapacity: 2000
+    },
+    'med-electrolytes': {
+      title: 'Calf Electrolyte Hydro-Balance',
+      tag: 'MED-9011',
+      unit: 'Vials',
+      currentStock: 15,
+      minStock: 20,
+      icon: 'medication',
+      destination: 'chiller-01',
+      maxCapacity: 100
+    }
+  };
+
+  let currentItemKey = 'feed-soy';
+
+  function updateSelectedMaster(key) {
+    currentItemKey = key;
+    const item = catalog[key];
+    if (!item) return;
+
+    document.getElementById('selected-item-title').innerText = item.title;
+    document.getElementById('selected-item-tag').innerText = item.tag;
+    document.getElementById('item-icon').innerText = item.icon;
+    document.getElementById('display-current-stock').innerText = item.currentStock.toLocaleString();
+    document.getElementById('display-min-stock').innerText = item.minStock.toLocaleString();
+    
+    document.getElementById('display-stock-unit-1').innerText = item.unit;
+    document.getElementById('display-stock-unit-2').innerText = item.unit;
+    document.getElementById('display-badge-unit').innerText = item.unit;
+    document.getElementById('proj-unit').innerText = item.unit;
+
+    // Adjust destination dropdown suggestion
+    document.getElementById('destination-storage-select').value = item.destination;
+
+    calculateProjectedStock();
+  }
+
+  function setQuickQty(amount) {
+    const input = document.getElementById('addition-qty-input');
+    const currentVal = parseFloat(input.value) || 0;
+    input.value = currentVal + amount;
+    calculateProjectedStock();
+  }
+
+  function calculateProjectedStock() {
+    const item = catalog[currentItemKey];
+    const qtyInput = document.getElementById('addition-qty-input');
+    const errorMsg = document.getElementById('qty-field-error');
+    const val = parseFloat(qtyInput.value);
+
+    // Reset error styling
+    errorMsg.classList.add('hidden');
+    qtyInput.classList.remove('ring-2', 'ring-error');
+
+    if (isNaN(val) || val <= 0) {
+      document.getElementById('proj-baseline').innerText = item.currentStock.toLocaleString() + ' ' + item.unit;
+      document.getElementById('proj-addition').innerText = '+0 ' + item.unit;
+      document.getElementById('proj-total').innerText = item.currentStock.toLocaleString();
+      return;
+    }
+
+    const newTotal = item.currentStock + val;
+    document.getElementById('proj-baseline').innerText = item.currentStock.toLocaleString() + ' ' + item.unit;
+    document.getElementById('proj-addition').innerText = '+' + val.toLocaleString() + ' ' + item.unit;
+    document.getElementById('proj-total').innerText = newTotal.toLocaleString();
+
+    // Capacity bar logic
+    const priorPct = Math.min(100, Math.round((item.currentStock / item.maxCapacity) * 100));
+    const addedPct = Math.min(100 - priorPct, Math.round((val / item.maxCapacity) * 100));
+    const totalPct = Math.min(100, Math.round((newTotal / item.maxCapacity) * 100));
+
+    document.getElementById('capacity-bar-prior').style.width = priorPct + '%';
+    document.getElementById('capacity-bar-added').style.width = addedPct + '%';
+    document.getElementById('capacity-percentage').innerText = totalPct + '% Filled';
+
+    // Threshold pill logic
+    const pill = document.getElementById('threshold-status-pill');
+    if (newTotal > item.minStock) {
+      const overPct = Math.round(((newTotal - item.minStock) / item.minStock) * 100);
+      pill.className = 'inline-flex items-center gap-1 mt-1 px-2 py-0.5 rounded text-xs font-semibold bg-secondary-container text-on-secondary-container';
+      pill.innerHTML = '<span class="material-symbols-outlined text-xs">verified</span> Healthy Stock Level (+' + overPct + '% Over Min)';
+    } else {
+      pill.className = 'inline-flex items-center gap-1 mt-1 px-2 py-0.5 rounded text-xs font-semibold bg-error-container text-on-error-container';
+      pill.innerHTML = '<span class="material-symbols-outlined text-xs">warning</span> Still Below Safe Minimum';
+    }
+  }
+
+  function handleAdditionSubmit() {
+    const qtyInput = document.getElementById('addition-qty-input');
+    const val = parseFloat(qtyInput.value);
+
+    if (isNaN(val) || val === 0) {
+      setFormState('zero');
+      return;
+    }
+    if (val < 0) {
+      setFormState('negative');
+      return;
+    }
+
+    setFormState('success');
+  }
+
+  function resetForm() {
+    document.getElementById('item-select').value = 'feed-soy';
+    document.getElementById('addition-qty-input').value = '2500';
+    document.getElementById('addition-reason-select').value = 'harvest';
+    document.getElementById('destination-storage-select').value = 'silo-03';
+    document.getElementById('lot-identifier-input').value = 'LOT-2024-ADD-04';
+    updateSelectedMaster('feed-soy');
+    setFormState('standard');
+  }
+
+  function loadHarvestPreset() {
+    document.getElementById('item-select').value = 'feed-alfalfa';
+    updateSelectedMaster('feed-alfalfa');
+    document.getElementById('addition-qty-input').value = '4200';
+    document.getElementById('addition-reason-select').value = 'harvest';
+    document.getElementById('destination-storage-select').value = 'bunker-01';
+    document.getElementById('lot-identifier-input').value = 'HARV-SOUTH-411';
+    calculateProjectedStock();
+  }
+
+  function setFormState(state) {
+    const banner = document.getElementById('state-banner-container');
+    const qtyInput = document.getElementById('addition-qty-input');
+    const errorMsg = document.getElementById('qty-field-error');
+
+    // Button active tab styles
+    const btnIds = ['btn-state-standard', 'btn-state-zero', 'btn-state-negative', 'btn-state-success'];
+    btnIds.forEach(id => {
+      const b = document.getElementById(id);
+      b.className = 'px-space-sm py-1.5 rounded-lg text-label-sm font-label-sm bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-all';
+    });
+
+    if (state === 'standard') {
+      document.getElementById('btn-state-standard').className = 'px-space-sm py-1.5 rounded-lg text-label-sm font-label-sm bg-primary text-on-primary transition-all';
+      banner.classList.add('hidden');
+      errorMsg.classList.add('hidden');
+      qtyInput.classList.remove('ring-2', 'ring-error');
+      qtyInput.value = '2500';
+      calculateProjectedStock();
+    } else if (state === 'zero') {
+      document.getElementById('btn-state-zero').className = 'px-space-sm py-1.5 rounded-lg text-label-sm font-label-sm bg-error text-on-error transition-all';
+      qtyInput.value = '0';
+      qtyInput.classList.add('ring-2', 'ring-error');
+      errorMsg.innerText = 'Validation Error: Stock addition quantity must be strictly greater than 0.00.';
+      errorMsg.classList.remove('hidden');
+
+      banner.className = 'mb-space-lg p-space-md rounded-xl bg-error-container text-on-error-container flex items-center justify-between gap-space-md shadow-sm';
+      banner.innerHTML = `
+        <div class="flex items-center gap-space-sm">
+          <span class="material-symbols-outlined text-2xl text-error">error</span>
+          <div>
+            <div class="font-headline-sm text-headline-sm font-bold">Zero Quantity Disallowed</div>
+            <div class="font-body-sm text-body-sm">A stock addition entry cannot carry a value of 0. Please supply a valid positive measurement.</div>
+          </div>
+        </div>
+        <button type="button" onclick="setFormState('standard')" class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold">Dismiss</button>
+      `;
+      calculateProjectedStock();
+    } else if (state === 'negative') {
+      document.getElementById('btn-state-negative').className = 'px-space-sm py-1.5 rounded-lg text-label-sm font-label-sm bg-error text-on-error transition-all';
+      qtyInput.value = '-450';
+      qtyInput.classList.add('ring-2', 'ring-error');
+      errorMsg.innerText = 'Disallowed Operation: Stock Additions accept positive values only. Use Stock Adjustments for downward reconciliation.';
+      errorMsg.classList.remove('hidden');
+
+      banner.className = 'mb-space-lg p-space-md rounded-xl bg-error-container text-on-error-container flex items-center justify-between gap-space-md shadow-sm';
+      banner.innerHTML = `
+        <div class="flex items-center gap-space-sm">
+          <span class="material-symbols-outlined text-2xl text-error">block</span>
+          <div>
+            <div class="font-headline-sm text-headline-sm font-bold">Negative Quantity Prohibited</div>
+            <div class="font-body-sm text-body-sm">Negative values are blocked in Stock Additions. For spoilage, consumption, or shrinkage, navigate to <strong>Stock Adjustments</strong>.</div>
+          </div>
+        </div>
+        <button type="button" onclick="setFormState('standard')" class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold">Dismiss</button>
+      `;
+      calculateProjectedStock();
+    } else if (state === 'success') {
+      document.getElementById('btn-state-success').className = 'px-space-sm py-1.5 rounded-lg text-label-sm font-label-sm bg-primary text-on-primary transition-all';
+      qtyInput.value = '2500';
+      qtyInput.classList.remove('ring-2', 'ring-error');
+      errorMsg.classList.add('hidden');
+
+      banner.className = 'mb-space-lg p-space-md rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-between gap-space-md shadow-sm';
+      banner.innerHTML = `
+        <div class="flex items-center gap-space-sm">
+          <span class="material-symbols-outlined text-2xl text-primary">task_alt</span>
+          <div>
+            <div class="font-headline-sm text-headline-sm font-bold">Stock Ingestion Ready for Ledger Post</div>
+            <div class="font-body-sm text-body-sm">High-Protein Soy Concentrate will increment by <strong>+2,500 kg</strong> resulting in <strong>3,900 kg</strong> new active inventory. Low stock flag will be successfully lifted.</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <button type="button" onclick="setFormState('standard')" class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm">Confirm Post</button>
+        </div>
+      `;
+      calculateProjectedStock();
+    }
+  }
+
+  // Initial calculation on load
+  calculateProjectedStock();
+</script></main></div></body></html>

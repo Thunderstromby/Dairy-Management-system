@@ -1,0 +1,782 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-high": "#eae8e2", "inverse-primary": "#b8cda8", "on-secondary-fixed": "#141f0a", "surface-container-highest": "#e4e2dd", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#bdcbac", "tertiary-fixed-dim": "#ffb784", "on-primary-fixed-variant": "#3a4c30", "secondary-container": "#d9e8c7", "on-primary": "#ffffff", "on-background": "#1b1c18", "surface": "#fbf9f3", "inverse-on-surface": "#f3f1eb", "on-tertiary-fixed": "#301400", "on-primary-fixed": "#101f08", "on-tertiary-fixed-variant": "#6c3a11", "error-container": "#ffdad6", "on-surface-variant": "#444840", "on-error": "#ffffff", "on-secondary-container": "#5b694e", "primary": "#2f4126", "primary-fixed-dim": "#b8cda8", "on-primary-container": "#b8cda9", "on-tertiary-container": "#ffb785", "tertiary-container": "#7a461c", "surface-container-lowest": "#ffffff", "surface-tint": "#516446", "primary-container": "#46583b", "surface-variant": "#e4e2dd", "outline-variant": "#c4c8bd", "background": "#fbf9f3", "on-surface": "#1b1c18", "tertiary": "#5e3007", "error": "#ba1a1a", "surface-bright": "#fbf9f3", "inverse-surface": "#30312d", "on-secondary": "#ffffff", "surface-dim": "#dcdad4", "tertiary-fixed": "#ffdcc6", "on-secondary-fixed-variant": "#3e4b32", "primary-fixed": "#d4e9c3", "surface-container": "#f0eee8", "outline": "#75786f", "surface-container-low": "#f5f3ed", "on-error-container": "#93000a", "secondary": "#556249", "secondary-fixed": "#d9e8c7" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-md": "1.5rem", "space-md": "0.75rem", "margin": "1rem", "space-lg": "1rem", "space-2xl": "2rem", "gutter": "1rem", "space-xl": "1.5rem", "margin-lg": "2rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter-md": "1.25rem", "gutter-lg": "1.5rem" }, "fontFamily": { "label-md": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"], "headline-lg-mobile": ["Manrope"], "headline-xl-mobile": ["Manrope"], "label-lg": ["Inter"], "headline-xl": ["Manrope"], "headline-lg": ["Manrope"], "body-md": ["Inter"], "headline-sm": ["Manrope"], "headline-md": ["Manrope"] }, "fontSize": { "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "400" }], "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "fontWeight": "400" }], "headline-lg-mobile": ["1.375rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "800" }], "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["0.875rem", { "lineHeight": "1.375rem", "fontWeight": "400" }], "headline-sm": ["1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "headline-md": ["1.25rem", { "lineHeight": "1.625rem", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-xl flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBYgTLzL4ixmW_u0Iuetl8cMytFAkTgo9j0OqmFpmR4ZdNIJA8TAM26gSRdozb0vdo_6xJy3scVi2laB3t23jDT5fSIe8Gnlt9IldNJ8j-8vQ9f0crSqtL97T814neAilUmvuxVi9XQNkQdm34ZBtCq3lRd3pGErjVhDlhDM1nNOW2QXZlG8cZB7Vpgu2pyG5oBekky3LdocMVoovOlsZt9zFE9JFdFVoDBX3w_DHLm0w"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none tracking-tight">SmartFarm</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-0.5">Supervisor Rail</span></div></div><button class="text-on-surface-variant hover:text-on-surface p-space-xs rounded-lg transition-colors" title="Toggle compact view" type="button"><span class="material-symbols-outlined text-lg leading-none">dock_to_right</span></button></div><div class="px-space-md py-space-sm"><div class="bg-surface-container px-space-md py-space-sm rounded-lg flex items-center justify-between"><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-on-surface-variant truncate">ESTATE CONTEXT</span><span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Greenfield Estate</span></div><span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-space-xs py-0.5 rounded font-mono">GF-042</span></div></div><nav class="flex-1 px-space-md py-space-xs space-y-0.5 overflow-y-auto" data-active-classes="bg-primary text-on-primary font-semibold shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-xl">dashboard</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#"><span class="material-symbols-outlined text-xl">pets</span><span class="font-label-lg text-label-lg">Animals</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#"><span class="material-symbols-outlined text-xl">healing</span><span class="font-label-lg text-label-lg">Animal Health</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#"><span class="material-symbols-outlined text-xl">water_drop</span><span class="font-label-lg text-label-lg">Milk Production</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding" href="#"><span class="material-symbols-outlined text-xl">grass</span><span class="font-label-lg text-label-lg">Feeding Plans</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#"><span class="material-symbols-outlined text-xl">inventory_2</span><span class="font-label-lg text-label-lg">Inventory Usage</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers-and-attendance" href="#"><span class="material-symbols-outlined text-xl">badge</span><span class="font-label-lg text-label-lg">Workers &amp; Attendance</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#"><span class="material-symbols-outlined text-xl">precision_manufacturing</span><span class="font-label-lg text-label-lg">Equipment</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notifications" href="#"><span class="material-symbols-outlined text-xl">notifications</span><span class="font-label-lg text-label-lg">Operational Alerts</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#"><span class="material-symbols-outlined text-xl">analytics</span><span class="font-label-lg text-label-lg">Shift Reports</span></a></nav></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-md"><button class="md:hidden p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container" type="button"><span class="material-symbols-outlined text-xl">menu</span></button><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Greenfield Dairy Estate</span><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-space-xs py-0.5 rounded font-mono">GF-042</span></div><span class="text-outline-variant text-sm">/</span><div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-sm">fence</span><span>Barn Zone A</span></div></div><div class="flex items-center gap-space-lg"><div class="hidden sm:flex items-center gap-2 bg-secondary-container/60 px-space-md py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-secondary-fixed font-semibold tracking-wide uppercase">On Duty · Active</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Operational Notifications" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary-container ring-2 ring-surface"></span></button><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Theme Display" type="button"><span class="material-symbols-outlined text-xl">light_mode</span></button><div class="h-6 w-px bg-outline-variant/60"></div><div class="flex items-center gap-space-md pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKRfnvDtcXaA_3fouE5OFtLyyygvIskuxgsScuB3RWTNQvZ0TXW1jZMn6P1jecz8rtfhaoeatFRSlhGxosuymj0Z74Gb3NeY9k-HpkTV1gVECMz-aOx4ic5cbig5OeibpkMiehHyRDxNEqsS1DvY0suVPQHSm8HBgREiL03zsO3CyppQ6P6Lx7Kj2AY9MjJWACPCsVCG6YU3N1OMaaoQVLKC4LbU9ah5w1pjafjyse"><div class="hidden lg:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface font-semibold leading-tight">Marcus Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant">Farm Supervisor</span></div><span class="material-symbols-outlined text-on-surface-variant text-base cursor-pointer">arrow_drop_down</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Toast Notification Feedback -->
+<div class="fixed bottom-6 right-6 z-50 flex items-center gap-space-md bg-inverse-surface text-inverse-on-surface px-space-lg py-space-md rounded-xl shadow-xl transition-all duration-300 opacity-0 pointer-events-none translate-y-3" id="system-toast">
+<span class="material-symbols-outlined text-primary-fixed-dim text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-inverse-on-surface" id="toast-title">Telemetry Ledger Updated</span>
+<span class="font-body-sm text-body-sm text-surface-container-high" id="toast-msg">Notice marked as read.</span>
+</div>
+<button class="text-surface-container-high hover:text-inverse-on-surface ml-space-sm p-1" onclick="dismissToast()">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<div class="px-space-xl py-space-lg max-w-[1600px] mx-auto w-full space-y-space-xl">
+<!-- Section 1: Breadcrumbs & Header -->
+<div class="flex flex-col gap-space-md">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="hover:text-primary transition-colors cursor-pointer">Workspace GF-042</span>
+<span class="text-outline-variant">/</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Barn Zone A</span>
+<span class="text-outline-variant">/</span>
+<span class="text-secondary font-semibold">Operational Alerts</span>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-semibold">Notification Center</span>
+</nav>
+<!-- Page Title & Actions -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-lg bg-surface-container-lowest p-space-xl rounded-xl shadow-sm">
+<div class="flex flex-col space-y-1">
+<div class="flex items-center gap-space-sm">
+<span class="p-2 bg-secondary-container rounded-lg text-on-secondary-fixed">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+              Operational Notifications &amp; Alert Center
+            </h1>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl pl-11">
+            Authorized operational notices, shift reminders, equipment maintenance intervals, and daily farm activity updates for Workspace GF-042.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm pl-11 xl:pl-0">
+<button class="h-11 px-space-lg rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg flex items-center gap-2 transition-colors" onclick="markAllAsRead()">
+<span class="material-symbols-outlined text-lg">done_all</span>
+<span>Mark All as Read</span>
+</button>
+<button class="h-11 px-space-lg rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg flex items-center gap-2 transition-colors" onclick="openPreferencesModal()">
+<span class="material-symbols-outlined text-lg">tune</span>
+<span>Preferences (Read-Only)</span>
+</button>
+<button class="h-11 px-space-lg rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center gap-2 transition-all shadow-sm" id="toggle-unread-filter-btn" onclick="toggleUnreadOnly()">
+<span class="material-symbols-outlined text-lg">filter_alt</span>
+<span id="unread-filter-label">Filter Unread Only</span>
+</button>
+</div>
+</div>
+<!-- Mode Selector Bar -->
+
+</div>
+<!-- Section 2: Absolute Supervisor Notification Boundary Callout -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm relative overflow-hidden"><div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div><div class="flex items-start gap-space-lg"><div class="p-2.5 bg-secondary-container/60 text-secondary rounded-lg shrink-0 mt-0.5"><span class="material-symbols-outlined text-2xl">info</span></div><div class="flex flex-col space-y-1 flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm font-bold text-on-surface">Supervisor Notification Scope</span></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Displaying daily barn chores, shift attendance verification, equipment maintenance intervals, and routine feed delivery updates for Barn Zone A.</p></div></div></div>
+<!-- Section 3: Notification Overview KPIs -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant tracking-wider uppercase">Total Notifications</span>
+<span class="p-2 bg-secondary-container/60 text-secondary rounded-lg">
+<span class="material-symbols-outlined text-lg">fact_check</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold">16</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-sm text-secondary">today</span>
+<span>Recorded Today · Barn Zone A</span>
+</div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container-low transition-colors relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-tertiary-fixed/20 rounded-bl-full pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-tertiary-container tracking-wider uppercase">Unread Notices</span>
+<span class="p-2 bg-tertiary-fixed text-on-tertiary-fixed rounded-lg font-bold">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">mark_email_unread</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-xl text-headline-xl text-tertiary-container font-extrabold flex items-baseline gap-2">
+<span>4</span>
+<span class="font-label-md text-label-md font-semibold text-tertiary-container uppercase tracking-wide">Action Required</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span>Awaiting supervisor review</span>
+</div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant tracking-wider uppercase">Shift &amp; Task Reminders</span>
+<span class="p-2 bg-surface-container text-primary rounded-lg">
+<span class="material-symbols-outlined text-lg">event_available</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold">7</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-secondary font-semibold">Active:</span>
+<span>Shift handover &amp; bunk scoring</span>
+</div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant tracking-wider uppercase">Equipment &amp; Facility</span>
+<span class="p-2 bg-surface-container text-secondary rounded-lg">
+<span class="material-symbols-outlined text-lg">precision_manufacturing</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold">5</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-tertiary font-semibold">1 Lube Due:</span>
+<span>Mixer #02 &amp; wash cycle check</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN VIEW CONTAINER: Center (default) -->
+<div class="space-y-space-xl block" id="view-notification-center">
+<!-- Section 4: Filters & Search Toolbar -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Filter Tabs -->
+<div class="flex flex-wrap items-center gap-1.5" id="category-filter-bar">
+<button class="filter-tab px-3.5 py-2 rounded-lg font-label-sm text-label-sm font-semibold bg-primary text-on-primary transition-all" onclick="setCategoryFilter('all', this)">
+              All Permitted (16)
+            </button>
+<button class="filter-tab px-3.5 py-2 rounded-lg font-label-sm text-label-sm font-semibold bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-all" onclick="setCategoryFilter('unread', this)">
+              Unread Only (4)
+            </button>
+<button class="filter-tab px-3.5 py-2 rounded-lg font-label-sm text-label-sm font-semibold bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-all" onclick="setCategoryFilter('equipment', this)">
+              Equipment &amp; Machinery (5)
+            </button>
+<button class="filter-tab px-3.5 py-2 rounded-lg font-label-sm text-label-sm font-semibold bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-all" onclick="setCategoryFilter('feeding', this)">
+              Feeding &amp; Operations (4)
+            </button>
+<button class="filter-tab px-3.5 py-2 rounded-lg font-label-sm text-label-sm font-semibold bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-all" onclick="setCategoryFilter('shift', this)">
+              Shift &amp; Workers (4)
+            </button>
+<button class="filter-tab px-3.5 py-2 rounded-lg font-label-sm text-label-sm font-semibold bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-all" onclick="setCategoryFilter('routine', this)">
+              Routine Herd (3)
+            </button>
+</div>
+<!-- Date Selector -->
+<div class="flex items-center gap-1 bg-surface-container p-1 rounded-lg shrink-0">
+<button class="px-3 py-1.5 rounded font-label-sm text-label-sm font-semibold bg-surface-container-lowest text-primary shadow-xs">Today</button>
+<button class="px-3 py-1.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">Yesterday</button>
+<button class="px-3 py-1.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">Last 7 Days</button>
+</div>
+</div>
+<!-- Search Bar with Live Filter -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline-variant text-xl">search</span>
+<input class="w-full h-11 pl-11 pr-4 bg-surface-container-low focus:bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none transition-all shadow-inner" id="notification-search" onkeyup="searchNotifications(this.value)" placeholder="Search operational notifications by keyword, machinery code (e.g. MW-02, SS-04), or team member..." type="text">
+</div>
+</div>
+<!-- Section 5 & 6: Interactive Notifications Split View (List + Inspector Panel) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left: Notification List (7 columns on desktop) -->
+<div class="lg:col-span-7 space-y-space-md" id="notifications-list-container">
+<!-- Item 1: Unread · Equipment -->
+<div class="notification-item active-selected p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:bg-surface-container-low transition-all cursor-pointer relative overflow-hidden group" data-category="equipment" data-id="N-884" data-status="unread" onclick="selectNotification('N-884')">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="mt-1 w-2.5 h-2.5 rounded-full bg-tertiary-container shrink-0 unread-dot" title="Unread Notice"></span>
+<div class="flex flex-col space-y-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed uppercase">Equipment Service</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">MW-02</span>
+<span class="text-outline-variant text-xs">·</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">15 mins ago · 14:15 PM</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors">
+                    Service Due: Digi-Star TMR Mixer Wagon #02
+                  </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                    Mixer Wagon #02 has reached 1,480 operating hours. Routine auger drive chain tensioning and PTO universal joint greasing is due prior to the 16:30 PM evening feed delivery.
+                  </p>
+<div class="flex items-center gap-2 pt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">agriculture</span>
+<span>Asset: MW-02 (Digi-Star Mixer Wagon) · Barn Zone A Feed Pad</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2 shrink-0">
+<button class="h-9 px-3 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1.5 transition-colors" onclick="event.stopPropagation(); logMaintenance('MW-02');">
+<span class="material-symbols-outlined text-base">build</span>
+<span>Log Service</span>
+</button>
+<button class="read-toggle-btn text-on-surface-variant hover:text-primary font-label-sm text-label-sm flex items-center gap-1 transition-colors" onclick="event.stopPropagation(); toggleReadState('N-884');">
+<span class="material-symbols-outlined text-sm">mark_email_read</span>
+<span>Mark Read</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2: Unread · Shift Attendance -->
+<div class="notification-item p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:bg-surface-container-low transition-all cursor-pointer relative overflow-hidden group" data-category="shift" data-id="N-883" data-status="unread" onclick="selectNotification('N-883')">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="mt-1 w-2.5 h-2.5 rounded-full bg-tertiary-container shrink-0 unread-dot" title="Unread Notice"></span>
+<div class="flex flex-col space-y-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-secondary-container text-on-secondary-fixed uppercase">Shift Attendance</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">PARLOR-AM</span>
+<span class="text-outline-variant text-xs">·</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">42 mins ago · 13:48 PM</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors">
+                    Unrecorded Check-Out Reminder: Afternoon Milking Shift
+                  </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                    3 barn crew members from AM Rotary Shift have unrecorded departure timestamps past the scheduled 13:30 cutoff. Please verify attendance in the Worker Console.
+                  </p>
+<div class="flex items-center gap-2 pt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">badge</span>
+<span>Area: Rotary Parlor Stalls 01-40 · Supervisor M. Vance</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2 shrink-0">
+<button class="h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors" onclick="event.stopPropagation(); triggerAttendanceCheck();">
+<span class="material-symbols-outlined text-base">checklist</span>
+<span>Review Roster</span>
+</button>
+<button class="read-toggle-btn text-on-surface-variant hover:text-primary font-label-sm text-label-sm flex items-center gap-1 transition-colors" onclick="event.stopPropagation(); toggleReadState('N-883');">
+<span class="material-symbols-outlined text-sm">mark_email_read</span>
+<span>Mark Read</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 3: Unread · Feeding & Operations -->
+<div class="notification-item p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:bg-surface-container-low transition-all cursor-pointer relative overflow-hidden group" data-category="feeding" data-id="N-882" data-status="unread" onclick="selectNotification('N-882')">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="mt-1 w-2.5 h-2.5 rounded-full bg-tertiary-container shrink-0 unread-dot" title="Unread Notice"></span>
+<div class="flex flex-col space-y-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-surface-container-high text-on-surface-variant uppercase">Feeding Schedule</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">TMR-01</span>
+<span class="text-outline-variant text-xs">·</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1 hour ago · 13:30 PM</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors">
+                    Evening Feed Bunk Delivery Scheduled: Pen 01–03
+                  </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                    Upcoming TMR-01 High Lactation ration batch (2,200 kg) scheduled for 16:30 PM bunk delivery. Tractor Unit #02 pre-check required.
+                  </p>
+<div class="flex items-center gap-2 pt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">flatware</span>
+<span>Target: Bunk Lines 01, 02 &amp; 03 (High Producers)</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2 shrink-0">
+<button class="h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors" onclick="event.stopPropagation(); viewFeedingPlan();">
+<span class="material-symbols-outlined text-base">grass</span>
+<span>View Plan</span>
+</button>
+<button class="read-toggle-btn text-on-surface-variant hover:text-primary font-label-sm text-label-sm flex items-center gap-1 transition-colors" onclick="event.stopPropagation(); toggleReadState('N-882');">
+<span class="material-symbols-outlined text-sm">mark_email_read</span>
+<span>Mark Read</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 4: Unread · Routine Herd Check -->
+<div class="notification-item p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:bg-surface-container-low transition-all cursor-pointer relative overflow-hidden group" data-category="routine" data-id="N-881" data-status="unread" onclick="selectNotification('N-881')">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="mt-1 w-2.5 h-2.5 rounded-full bg-tertiary-container shrink-0 unread-dot" title="Unread Notice"></span>
+<div class="flex flex-col space-y-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-secondary-container text-on-secondary-container uppercase">Routine Chores</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">PEN-01</span>
+<span class="text-outline-variant text-xs">·</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 hours ago · 12:30 PM</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors">
+                    Routine Fresh Cow Vitality Inspection Completed
+                  </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                    Shift A completed routine check on 6 fresh cows in Pen 01. All locomotion scores optimal (Score 1). 1 routine dipstick verified negative.
+                  </p>
+<div class="flex items-center gap-2 pt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">pets</span>
+<span>Reporter: Lead Milker E. Rostova · Pen 01 Fresh Bunk</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2 shrink-0">
+<button class="h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors" onclick="event.stopPropagation(); viewHerdChoreLog();">
+<span class="material-symbols-outlined text-base">fact_check</span>
+<span>View Log</span>
+</button>
+<button class="read-toggle-btn text-on-surface-variant hover:text-primary font-label-sm text-label-sm flex items-center gap-1 transition-colors" onclick="event.stopPropagation(); toggleReadState('N-881');">
+<span class="material-symbols-outlined text-sm">mark_email_read</span>
+<span>Mark Read</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 5: Read · Equipment -->
+<div class="notification-item p-space-lg rounded-xl bg-surface-container-low shadow-xs hover:bg-surface-container transition-all cursor-pointer relative overflow-hidden group opacity-85" data-category="equipment" data-id="N-880" data-status="read" onclick="selectNotification('N-880')"><div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div><div class="flex items-start gap-space-lg"><div class="p-2.5 bg-secondary-container/60 text-secondary rounded-lg shrink-0 mt-0.5"><span class="material-symbols-outlined text-2xl">info</span></div><div class="flex flex-col space-y-1 flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm font-bold text-on-surface">Supervisor Notification Scope</span></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Displaying daily barn chores, shift attendance verification, equipment maintenance intervals, and routine feed delivery updates for Barn Zone A.</p></div></div></div>
+<!-- Item 6: Read · Feeding -->
+<div class="notification-item p-space-lg rounded-xl bg-surface-container-low shadow-xs hover:bg-surface-container transition-all cursor-pointer relative overflow-hidden group opacity-85" data-category="feeding" data-id="N-879" data-status="read" onclick="selectNotification('N-879')"><div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div><div class="flex items-start gap-space-lg"><div class="p-2.5 bg-secondary-container/60 text-secondary rounded-lg shrink-0 mt-0.5"><span class="material-symbols-outlined text-2xl">info</span></div><div class="flex flex-col space-y-1 flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm font-bold text-on-surface">Supervisor Notification Scope</span></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Displaying daily barn chores, shift attendance verification, equipment maintenance intervals, and routine feed delivery updates for Barn Zone A.</p></div></div></div>
+<!-- Item 7: Read · Inventory Usage -->
+<div class="notification-item p-space-lg rounded-xl bg-surface-container-low shadow-xs hover:bg-surface-container transition-all cursor-pointer relative overflow-hidden group opacity-85" data-category="equipment" data-id="N-878" data-status="read" onclick="selectNotification('N-878')"><div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div><div class="flex items-start gap-space-lg"><div class="p-2.5 bg-secondary-container/60 text-secondary rounded-lg shrink-0 mt-0.5"><span class="material-symbols-outlined text-2xl">info</span></div><div class="flex flex-col space-y-1 flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm font-bold text-on-surface">Supervisor Notification Scope</span></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Displaying daily barn chores, shift attendance verification, equipment maintenance intervals, and routine feed delivery updates for Barn Zone A.</p></div></div></div>
+</div>
+<!-- Right: Selected Notification Deep View Inspector (5 columns on desktop) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-xl rounded-xl shadow-sm sticky top-20 space-y-space-lg" id="notification-inspector-panel">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface tracking-wider uppercase">Active Notice Inspector</span>
+</div>
+<span class="font-label-sm text-label-sm font-mono text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">ID: N-884</span>
+</div>
+<!-- Deep View Content -->
+<div class="space-y-space-md">
+<div>
+<span class="px-2.5 py-1 rounded font-label-sm text-label-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed uppercase">Equipment Service Interval</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface mt-2">
+                Service Due: Digi-Star TMR Mixer Wagon #02
+              </h2>
+<div class="flex items-center gap-2 mt-1 text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-base">schedule</span><span>Logged 15 mins ago (14:15 PM) · Shift Handover Schedule</span></div>
+</div>
+<!-- Meta attributes -->
+<div class="grid grid-cols-2 gap-space-sm bg-surface-container-low p-space-md rounded-lg">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Severity Level</span>
+<span class="font-label-lg text-label-lg font-semibold text-tertiary-container flex items-center gap-1 mt-0.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+                  Operational (Standard)
+                </span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Channel Dispatch</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-sm text-secondary">database</span>
+                  In-App Farm Ledger
+                </span>
+</div>
+<div class="col-span-2 pt-2 border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Physical Location / Station</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Feed Pad Shed 02 · Equipment Bay 3</span>
+</div>
+</div>
+<!-- Operational Procedure Snippet -->
+<div class="space-y-1.5">
+<span class="font-label-sm text-label-sm font-bold text-on-surface tracking-wider uppercase">Standard Maintenance Protocol</span>
+<div class="bg-surface-container-lowest p-space-md rounded-lg text-on-surface-variant font-body-sm text-body-sm space-y-2 border border-surface-container">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-base shrink-0 mt-0.5">check_circle</span>
+<span>Inspect drive chain slack across main planetary reduction box; tension if deflection exceeds 12mm.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-base shrink-0 mt-0.5">check_circle</span>
+<span>Grease twin PTO cross bearings using NLGI Grade 2 lithium soap lubricant (4 strokes per grease nipple).</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-base shrink-0 mt-0.5">check_circle</span>
+<span>Verify electronic load cell cable pins under scale frame for moisture barrier integrity.</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Status Box -->
+<div class="bg-secondary-container/40 p-space-md rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">speed</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-secondary-fixed-variant block">Total Logged Operating Run</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-secondary-fixed">1,480.4 Engine Hours</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded font-mono font-label-sm text-label-sm bg-secondary-container text-on-secondary-fixed font-semibold">NEXT: 1,750h</span>
+</div>
+<!-- Action Buttons -->
+<div class="pt-space-sm space-y-2">
+<button class="w-full h-11 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 transition-all shadow-sm" onclick="logMaintenance('MW-02')">
+<span class="material-symbols-outlined text-lg">edit_note</span>
+<span>Open Maintenance Logger (MW-02)</span>
+</button>
+<div class="grid grid-cols-2 gap-2">
+<button class="h-10 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" onclick="toggleReadState('N-884')">
+<span class="material-symbols-outlined text-base">check</span>
+<span>Acknowledge Notice</span>
+</button>
+<button class="h-10 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" onclick="reassignChore()">
+<span class="material-symbols-outlined text-base">assignment_ind</span>
+<span>Assign to Crew</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-2"><span>Logged by: Equipment Bay Station</span><span class="font-mono">STATUS: PENDING</span></div>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN VIEW CONTAINER: History (30 Days) -->
+<div class="space-y-space-lg hidden" id="view-notification-history">
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm space-y-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pb-space-md border-b border-surface-container">
+<div>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">30-Day Operational Alert Archive</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Audit-ready log of past routine reminders, tractor intervals, and completed feeding chore notifications.
+            </p>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-10 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors" onclick="exportAuditLedger()">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Export Audit Ledger</span>
+</button>
+</div>
+</div>
+<!-- History Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface font-label-sm text-label-sm border-b border-surface-container-high">
+<th class="py-3 px-4 font-semibold uppercase tracking-wider">Date &amp; Time</th>
+<th class="py-3 px-4 font-semibold uppercase tracking-wider">Event Category</th>
+<th class="py-3 px-4 font-semibold uppercase tracking-wider">Asset / Station</th>
+<th class="py-3 px-4 font-semibold uppercase tracking-wider">Operational Summary</th>
+<th class="py-3 px-4 font-semibold uppercase tracking-wider">Resolution Status</th>
+<th class="py-3 px-4 font-semibold uppercase tracking-wider">Supervisor</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 font-mono">2025-05-18 11:10</td>
+<td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-on-surface font-semibold">FEEDING</span></td>
+<td class="py-3.5 px-4 font-semibold">Bunk 01-04</td>
+<td class="py-3.5 px-4 text-on-surface-variant">Morning ration pusher battery swap completed. Voltage verified 48.2V.</td>
+<td class="py-3.5 px-4"><span class="text-secondary font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">verified</span> Resolved</span></td>
+<td class="py-3.5 px-4 font-medium">M. Vance</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 font-mono">2025-05-17 18:40</td>
+<td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-on-surface font-semibold">EQUIPMENT</span></td>
+<td class="py-3.5 px-4 font-semibold">SS-02 Scraper</td>
+<td class="py-3.5 px-4 text-on-surface-variant">Drive pulley obstacle stall cleared. Guide rails cleared of solid gravel build-up.</td>
+<td class="py-3.5 px-4"><span class="text-secondary font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">verified</span> Resolved</span></td>
+<td class="py-3.5 px-4 font-medium">M. Vance</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 font-mono">2025-05-17 06:15</td>
+<td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-on-surface font-semibold">SHIFT</span></td>
+<td class="py-3.5 px-4 font-semibold">Rotary Parlor</td>
+<td class="py-3.5 px-4 text-on-surface-variant">Pre-milking teat sanitize wash cycle time recorded: 14 mins duration.</td>
+<td class="py-3.5 px-4"><span class="text-secondary font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">verified</span> Resolved</span></td>
+<td class="py-3.5 px-4 font-medium">M. Vance</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 font-mono">2025-05-16 14:00</td>
+<td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-on-surface font-semibold">HERD ROUTINE</span></td>
+<td class="py-3.5 px-4 font-semibold">Pen 04 Dry Lot</td>
+<td class="py-3.5 px-4 text-on-surface-variant">Fly deterrent dispenser tank refill completed (15 Litres Permethrin mix).</td>
+<td class="py-3.5 px-4"><span class="text-secondary font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">verified</span> Resolved</span></td>
+<td class="py-3.5 px-4 font-medium">M. Vance</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 font-mono">2025-05-15 09:30</td>
+<td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-on-surface font-semibold">EQUIPMENT</span></td>
+<td class="py-3.5 px-4 font-semibold">MW-01 Mixer</td>
+<td class="py-3.5 px-4 text-on-surface-variant">Scheduled 500-hour planetary oil renewal and hydraulic hose pressure check.</td>
+<td class="py-3.5 px-4"><span class="text-secondary font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">verified</span> Resolved</span></td>
+<td class="py-3.5 px-4 font-medium">M. Vance</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- MAIN VIEW CONTAINER: Empty State -->
+<div class="space-y-space-lg hidden" id="view-notification-empty">
+<div class="bg-surface-container-lowest p- space-2xl rounded-xl shadow-sm text-center py-16 px-6 max-w-2xl mx-auto flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-fixed mb-space-md">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">No Unread Operational Notifications</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-md">
+          All shift tasks, equipment maintenance intervals, and chore reminders are up to date for Workspace GF-042 (Barn Zone A).
+        </p>
+<div class="mt-space-lg flex items-center gap-space-sm">
+<button class="h-10 px-space-lg rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" onclick="switchMainView('history')">
+            View 30-Day Archive
+          </button>
+<button class="h-10 px-space-lg rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-colors" onclick="switchMainView('center')">
+            Return to Active List
+          </button>
+</div>
+</div>
+</div>
+<!-- MAIN VIEW CONTAINER: Loading / Polling State -->
+<div class="space-y-space-lg hidden" id="view-notification-loading">
+<div class="bg-surface-container-lowest p-space-2xl rounded-xl shadow-sm text-center py-16 px-6 max-w-xl mx-auto flex flex-col items-center">
+<div class="relative w-12 h-12 mb-space-md">
+<div class="absolute inset-0 rounded-full border-2 border-surface-container"></div>
+<div class="absolute inset-0 rounded-full border-2 border-primary border-t-transparent animate-spin"></div>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Polling Barn Telemetry Hub...</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Synchronizing shift rosters, hour-meters, and feed dispenser logs for Barn Zone A.
+        </p>
+<div class="mt-space-md font-mono font-label-sm text-label-sm bg-surface-container px-3 py-1 rounded text-secondary">
+          STREAM: LIVE · PROTOCOL: MQTT/TLS
+        </div>
+</div>
+</div>
+</div>
+<!-- Read-Only Preferences Modal Simulation -->
+<div class="fixed inset-0 z-50 bg-on-background/40 backdrop-blur-xs flex items-center justify-center p-4 hidden" id="preferences-modal">
+<div class="bg-surface-container-lowest max-w-xl w-full rounded-xl shadow-xl overflow-hidden p-space-xl space-y-space-lg">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">settings_suggest</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Supervisor Alert Preferences</h3>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1" onclick="closePreferencesModal()">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">lock</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+          Alert subscriptions are provisioned centrally by Farm Ops Administration (GF-ADMIN). Local supervisor toggles are set to read-only.
+        </span>
+</div>
+<div class="space-y-space-md font-body-sm text-body-sm">
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container">
+<div>
+<span class="font-semibold text-on-surface block">Equipment Maintenance Limits</span>
+<span class="text-on-surface-variant">Notify when within 50 hours of service requirement</span>
+</div>
+<span class="font-mono font-bold text-secondary font-label-sm text-label-sm">ENABLED</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container">
+<div>
+<span class="font-semibold text-on-surface block">Shift Check-Out Cutoff</span>
+<span class="text-on-surface-variant">Notify when barn workers exceed +15m past shift end</span>
+</div>
+<span class="font-mono font-bold text-secondary font-label-sm text-label-sm">ENABLED</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container">
+<div>
+<span class="font-semibold text-on-surface block">External SMS / Cellular Push</span>
+<span class="text-on-surface-variant">Direct mobile dispatch for supervisor personal handsets</span>
+</div>
+<span class="font-mono font-bold text-outline font-label-sm text-label-sm">DISABLED</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container">
+<div>
+<span class="font-semibold text-on-surface block">Clinical Veterinary Escalation</span>
+<span class="text-on-surface-variant">Routed strictly to attending Vet (Dr. Aris Thorne)</span>
+</div>
+<span class="font-mono font-bold text-tertiary font-label-sm text-label-sm">RESTRICTED</span>
+</div>
+</div>
+<div class="flex justify-end pt-2">
+<button class="h-10 px-space-lg rounded-lg bg-primary text-on-primary font-label-md text-label-md" onclick="closePreferencesModal()">
+          Acknowledge &amp; Close
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let unreadFilterActive = false;
+
+  function showToast(title, msg) {
+    const toast = document.getElementById('system-toast');
+    document.getElementById('toast-title').textContent = title;
+    document.getElementById('toast-msg').textContent = msg;
+    toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+    toast.classList.add('opacity-100', 'translate-y-0');
+    setTimeout(() => {
+      dismissToast();
+    }, 3800);
+  }
+
+  function dismissToast() {
+    const toast = document.getElementById('system-toast');
+    toast.classList.remove('opacity-100', 'translate-y-0');
+    toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+  }
+
+  function switchMainView(viewName) {
+    const views = ['center', 'history', 'empty', 'loading'];
+    views.forEach(v => {
+      const el = document.getElementById(`view-notification-${v}`);
+      const tab = document.getElementById(`tab-${v}`);
+      if (el) el.classList.add('hidden');
+      if (tab) {
+        tab.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        tab.classList.add('text-on-surface-variant');
+      }
+    });
+
+    const activeEl = document.getElementById(`view-notification-${viewName}`);
+    const activeTab = document.getElementById(`tab-${viewName}`);
+    if (activeEl) activeEl.classList.remove('hidden');
+    if (activeTab) {
+      activeTab.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      activeTab.classList.remove('text-on-surface-variant');
+    }
+  }
+
+  function toggleReadState(notificationId) {
+    const item = document.querySelector(`[data-id="${notificationId}"]`);
+    if (!item) return;
+
+    const isUnread = item.getAttribute('data-status') === 'unread';
+    const toggleBtn = item.querySelector('.read-toggle-btn');
+    const dot = item.querySelector('.unread-dot');
+
+    if (isUnread) {
+      // Switch to read
+      item.setAttribute('data-status', 'read');
+      item.classList.remove('bg-surface-container-lowest', 'shadow-sm');
+      item.classList.add('bg-surface-container-low', 'shadow-xs', 'opacity-85');
+      if (dot) dot.classList.replace('bg-tertiary-container', 'bg-outline-variant');
+      if (toggleBtn) {
+        toggleBtn.innerHTML = '<span class="material-symbols-outlined text-sm">mark_email_unread</span><span>Mark Unread</span>';
+      }
+      showToast('Notification Updated', `Notice #${notificationId} marked as read.`);
+    } else {
+      // Switch to unread
+      item.setAttribute('data-status', 'unread');
+      item.classList.add('bg-surface-container-lowest', 'shadow-sm');
+      item.classList.remove('bg-surface-container-low', 'shadow-xs', 'opacity-85');
+      if (dot) dot.classList.replace('bg-outline-variant', 'bg-tertiary-container');
+      if (toggleBtn) {
+        toggleBtn.innerHTML = '<span class="material-symbols-outlined text-sm">mark_email_read</span><span>Mark Read</span>';
+      }
+      showToast('Notification Flagged', `Notice #${notificationId} returned to unread queue.`);
+    }
+  }
+
+  function markAllAsRead() {
+    const unreadItems = document.querySelectorAll('.notification-item[data-status="unread"]');
+    unreadItems.forEach(item => {
+      const id = item.getAttribute('data-id');
+      toggleReadState(id);
+    });
+    showToast('Shift Notifications Cleared', 'All pending operational notices set to read state.');
+  }
+
+  function toggleUnreadOnly() {
+    unreadFilterActive = !unreadFilterActive;
+    const btn = document.getElementById('toggle-unread-filter-btn');
+    const label = document.getElementById('unread-filter-label');
+    const items = document.querySelectorAll('.notification-item');
+
+    if (unreadFilterActive) {
+      btn.classList.add('bg-tertiary-container', 'text-on-tertiary');
+      btn.classList.remove('bg-primary');
+      label.textContent = 'Showing Unread (4)';
+      items.forEach(el => {
+        if (el.getAttribute('data-status') !== 'unread') {
+          el.style.display = 'none';
+        }
+      });
+      showToast('Queue Filtered', 'Showing only active unread operational alerts.');
+    } else {
+      btn.classList.remove('bg-tertiary-container', 'text-on-tertiary');
+      btn.classList.add('bg-primary');
+      label.textContent = 'Filter Unread Only';
+      items.forEach(el => {
+        el.style.display = 'block';
+      });
+      showToast('Queue Reset', 'Displaying all permitted alerts for Barn Zone A.');
+    }
+  }
+
+  function setCategoryFilter(category, btnElement) {
+    const buttons = document.querySelectorAll('.filter-tab');
+    buttons.forEach(b => {
+      b.classList.remove('bg-primary', 'text-on-primary');
+      b.classList.add('bg-surface-container', 'text-on-surface-variant');
+    });
+    btnElement.classList.add('bg-primary', 'text-on-primary');
+    btnElement.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+    const items = document.querySelectorAll('.notification-item');
+    items.forEach(item => {
+      const itemCat = item.getAttribute('data-category');
+      const itemStatus = item.getAttribute('data-status');
+
+      if (category === 'all') {
+        item.style.display = 'block';
+      } else if (category === 'unread') {
+        item.style.display = itemStatus === 'unread' ? 'block' : 'none';
+      } else {
+        item.style.display = itemCat === category ? 'block' : 'none';
+      }
+    });
+  }
+
+  function searchNotifications(keyword) {
+    const query = keyword.toLowerCase().trim();
+    const items = document.querySelectorAll('.notification-item');
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = text.includes(query) ? 'block' : 'none';
+    });
+  }
+
+  function selectNotification(id) {
+    document.querySelectorAll('.notification-item').forEach(i => {
+      i.classList.remove('border-primary', 'ring-1', 'ring-primary');
+    });
+    const selected = document.querySelector(`[data-id="${id}"]`);
+    if (selected) {
+      selected.classList.add('ring-1', 'ring-primary');
+    }
+    showToast('Notice Loaded', `Displaying inspector detail for ${id}`);
+  }
+
+  function logMaintenance(code) {
+    showToast('Equipment Module Linked', `Directing to maintenance ledger for Asset: ${code}`);
+  }
+
+  function triggerAttendanceCheck() {
+    showToast('Roster Verified', 'Worker check-out times cross-referenced with RFID gate.');
+  }
+
+  function viewFeedingPlan() {
+    showToast('Feeding Plan Active', 'Ration recipe TMR-01 High Lactation verified in bunker mixer.');
+  }
+
+  function viewHerdChoreLog() {
+    showToast('Health Log Opened', 'Displaying Pen 01 daily checklist records.');
+  }
+
+  function openPreferencesModal() {
+    document.getElementById('preferences-modal').classList.remove('hidden');
+  }
+
+  function closePreferencesModal() {
+    document.getElementById('preferences-modal').classList.add('hidden');
+  }
+
+  function exportAuditLedger() {
+    showToast('Ledger Exported', '30-Day Operational Alert report compiled as CSV.');
+  }
+
+  function reassignChore() {
+    showToast('Chore Dispatched', 'Service task assigned to Shift B Mechanical Assistant.');
+  }
+</script></main></div>
+
+</body></html>

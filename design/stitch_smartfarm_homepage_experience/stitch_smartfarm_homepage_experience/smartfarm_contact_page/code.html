@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SmartFarm — Connected Dairy Farm Management</title>
+<!-- Google Fonts: Inter, Manrope, DM Serif Display -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Inter:wght@300;400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 CDN with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed-variant": "#065233",
+          "inverse-on-surface": "#e4f5ea",
+          "on-primary-fixed-variant": "#284e3e",
+          "error-container": "#ffdad6",
+          "background": "#edfdf2",
+          "on-secondary": "#ffffff",
+          "on-primary-container": "#82aa97",
+          "tertiary-fixed": "#ffdea6",
+          "on-tertiary-fixed": "#271900",
+          "surface-variant": "#d6e6dc",
+          "secondary-fixed-dim": "#92d5ad",
+          "outline": "#717974",
+          "on-error-container": "#93000a",
+          "surface-bright": "#edfdf2",
+          "secondary-container": "#adf2c8",
+          "primary-fixed-dim": "#a6d0bb",
+          "surface-dim": "#ceded3",
+          "surface-container-highest": "#d6e6dc",
+          "surface-container": "#e1f2e7",
+          "on-background": "#111e18",
+          "primary": "#00291b",
+          "surface-container-high": "#dcece1",
+          "tertiary-container": "#4b3400",
+          "on-tertiary": "#ffffff",
+          "on-tertiary-fixed-variant": "#5e4200",
+          "on-secondary-fixed": "#002112",
+          "secondary": "#286a49",
+          "on-primary-fixed": "#002115",
+          "on-surface-variant": "#414844",
+          "surface-container-low": "#e7f8ed",
+          "surface": "#edfdf2",
+          "inverse-surface": "#25332c",
+          "secondary-fixed": "#adf2c8",
+          "outline-variant": "#c1c8c2",
+          "inverse-primary": "#a6d0bb",
+          "surface-tint": "#406655",
+          "on-secondary-container": "#2f704f",
+          "on-tertiary-container": "#c89a3f",
+          "error": "#ba1a1a",
+          "on-primary": "#ffffff",
+          "on-surface": "#111e18",
+          "primary-fixed": "#c1ecd6",
+          "tertiary": "#302000",
+          "primary-container": "#183f30",
+          "on-error": "#ffffff",
+          "tertiary-fixed-dim": "#f1bf60",
+          "brand": {
+            "forest": "#183F30",
+            "forestDark": "#133327",
+            "pasture": "#397A58",
+            "pastureHover": "#2E6347",
+            "ivory": "#F7F7F1",
+            "surface": "#FFFFFF",
+            "gold": "#D5A64A",
+            "goldLight": "#FDF6E9",
+            "charcoal": "#25332C",
+            "muted": "#58675D",
+            "border": "#DCE3DA",
+            "softGreen": "#E9EFE5",
+            "marqueeText": "#245C45"
+          }
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-xl": "2.5rem",
+          "space-md": "1rem",
+          "space-xs": "0.25rem",
+          "margin": "2rem",
+          "space-lg": "1.5rem",
+          "space-sm": "0.5rem",
+          "gutter-sm": "1rem",
+          "margin-sm": "1rem",
+          "gutter": "1.5rem"
+        },
+        "fontFamily": {
+          "display-lg-mobile": ["Manrope"],
+          "headline-lg": ["Manrope"],
+          "label-sm": ["Inter"],
+          "display-md": ["Manrope"],
+          "headline-md": ["Manrope"],
+          "label-lg": ["Inter"],
+          "headline-sm": ["Manrope"],
+          "body-md": ["Inter"],
+          "body-sm": ["Inter"],
+          "label-md": ["Inter"],
+          "body-lg": ["Inter"],
+          "display-lg": ["Manrope"],
+          "display-md-mobile": ["Manrope"],
+          "serif": ['"DM Serif Display"', 'serif'],
+          "sans": ['"Inter"', 'sans-serif'],
+          "heading": ['"Manrope"', 'sans-serif']
+        },
+        "fontSize": {
+          "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+          "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+          "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+          "display-md": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+          "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+          "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+          "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+          "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+          "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+          "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+          "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+          "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+          "display-md-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+        },
+        "boxShadow": {
+          'editorial': '0 20px 40px -15px rgba(24, 63, 48, 0.07)',
+          'floating': '0 25px 50px -12px rgba(24, 63, 48, 0.12)',
+          'subtle': '0 2px 10px rgba(0, 0, 0, 0.04)'
+        }
+      }
+    }
+  };
+</script>
+<style type="text/tailwindcss">
+    @layer base {
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        overscroll-behavior-y: none;
+        font-family: 'Inter', sans-serif;
+        color: #25332C;
+        background-color: #F7F7F1;
+      }
+    }
+</style>
+<!-- Keyframe Animations & Marquee -->
+<style data-purpose="animations">
+    @keyframes marqueeRight {
+      0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+
+    .animate-marquee-right {
+      display: flex;
+      width: 200%;
+      animation: marqueeRight 32s linear infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animate-marquee-right {
+        animation: none;
+        width: 100%;
+        overflow-x: auto;
+      }
+    }
+  </style>
+<meta content="web_standard" name="shell-type"/></head>
+<body class="selection:bg-brand-pasture selection:text-white">
+<!-- BEGIN: StickyGlobalNavigation -->
+<header class="sticky top-0 z-50 bg-[#F7F7F1]/90 backdrop-blur-md border-b border-brand-border transition-all duration-300" id="site-header">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Brand Logo & Wordmark -->
+<a aria-label="SmartFarm Homepage" class="flex items-center gap-3 group" data-path="home" href="#">
+<div class="w-10 h-10 rounded-xl bg-brand-forest flex items-center justify-center text-brand-gold shadow-sm group-hover:bg-brand-pasture transition-colors">
+<svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-.778.099-1.533.284-2.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="font-brand-heading font-extrabold text-xl tracking-tight text-brand-forest">SmartFarm</span>
+<span class="text-[10px] tracking-widest uppercase text-brand-pasture font-semibold -mt-1">Connected Dairy</span>
+</div>
+</a>
+<!-- Desktop Nav Items -->
+<nav aria-label="Main Navigation" class="hidden md:flex items-center space-x-1 lg:space-x-2" data-active-classes="text-brand-forest bg-brand-softGreen font-semibold">
+<a class="px-3.5 py-2 text-sm font-medium text-brand-charcoal/80 hover:text-brand-forest rounded-lg hover:bg-black/5 transition-colors" data-path="home" href="#">Home</a>
+<a class="px-3.5 py-2 text-sm font-medium text-brand-charcoal/80 hover:text-brand-forest rounded-lg hover:bg-black/5 transition-colors" data-path="about" href="#about">About</a>
+<a class="px-3.5 py-2 text-sm font-medium text-brand-charcoal/80 hover:text-brand-forest rounded-lg hover:bg-black/5 transition-colors" data-path="features" href="#features">Features</a>
+<a class="px-3.5 py-2 text-sm font-medium text-brand-charcoal/80 hover:text-brand-forest rounded-lg hover:bg-black/5 transition-colors" data-path="how-it-works" href="#how-it-works">How It Works</a>
+<a aria-current="page" class="px-3.5 py-2 rounded-lg transition-colors text-brand-forest bg-brand-softGreen font-semibold" data-path="contact" href="#contact">Contact</a>
+</nav>
+<!-- Right Header Actions: Theme & Contact CTA -->
+<div class="hidden sm:flex items-center gap-3">
+<!-- Theme Toggle Dummy Pill -->
+<button class="p-2 text-brand-muted hover:text-brand-forest rounded-lg hover:bg-black/5 transition-colors" title="Toggle Theme (System/Light/Dark)" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 3v1m0 16v1m9-9h-1M4 9h-1m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-brand-forest hover:bg-brand-pasture rounded-lg shadow-sm hover:shadow transition-all duration-200" data-path="contact" href="#contact">
+<span>Let's Talk</span>
+<svg class="w-4 h-4 ml-1.5 -mr-0.5 text-brand-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+<!-- Mobile Hamburger Button -->
+<div class="flex sm:hidden">
+<button aria-label="Open mobile menu" class="p-2 text-brand-charcoal hover:text-brand-forest focus:outline-none" id="mobile-menu-toggle" type="button">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Mobile Nav Drawer -->
+<div class="hidden sm:hidden border-b border-brand-border bg-brand-ivory px-4 pt-2 pb-6 space-y-3" id="mobile-menu">
+<a class="block px-3 py-2 rounded-md text-base font-medium text-brand-charcoal hover:bg-black/5" data-path="home" href="#">Home</a>
+<a class="block px-3 py-2 rounded-md text-base font-medium text-brand-charcoal hover:bg-black/5" data-path="about" href="#about">About</a>
+<a class="block px-3 py-2 rounded-md text-base font-medium text-brand-charcoal hover:bg-black/5" data-path="features" href="#features">Features</a>
+<a class="block px-3 py-2 rounded-md text-base font-medium text-brand-charcoal hover:bg-black/5" data-path="how-it-works" href="#how-it-works">How It Works</a>
+<a class="block px-3 py-2 rounded-md text-base font-semibold text-brand-forest bg-brand-softGreen" data-path="contact" href="#contact">Contact</a>
+<div class="pt-2">
+<a class="w-full text-center block px-4 py-2.5 text-sm font-semibold text-white bg-brand-forest rounded-lg" data-path="contact" href="#contact">Let's Talk</a>
+</div>
+</div>
+</header>
+<!-- END: StickyGlobalNavigation -->
+<main class="pt-20"><div class="flex flex-col w-full">
+<!-- SECTION 1 — CONTACT HERO -->
+<section class="relative w-full overflow-hidden bg-brand-ivory pt-8 pb-16 lg:pb-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+<!-- Hero Text Content -->
+<div class="lg:col-span-7 flex flex-col items-start space-y-6">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-softGreen text-brand-forest shadow-sm">
+<span class="w-2 h-2 rounded-full bg-brand-pasture"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-brand-pasture">Let's Talk SmartFarm</span>
+</div>
+<h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-brand-forest leading-[1.12] tracking-tight">
+            Let's talk about better-connected dairy farm management.
+          </h1>
+<p class="font-body-lg text-body-lg text-brand-muted max-w-xl leading-relaxed">
+            Have questions about SmartFarm? Contact our team to discuss the platform, its capabilities, and how workspace setup works.
+          </p>
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center justify-center px-6 py-3 rounded text-sm font-semibold text-white bg-brand-pasture hover:bg-brand-pastureHover transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-pasture focus:ring-offset-2" href="#contact-form">
+<span>Go to Inquiry Form</span>
+<span class="material-symbols-outlined ml-2 text-lg">arrow_downward</span>
+</a>
+<a class="inline-flex items-center justify-center px-6 py-3 rounded text-sm font-semibold text-brand-charcoal bg-white border border-brand-border hover:bg-brand-softGreen transition-colors shadow-sm" href="#workspace-setup">
+<span>Setup Information</span>
+<span class="material-symbols-outlined ml-2 text-lg">info</span>
+</a>
+</div>
+<!-- Subtle Metric / Operational Stamp -->
+<div class="pt-4 flex items-center gap-6 text-xs text-brand-muted">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-pasture text-base">verified_user</span>
+<span>Enterprise Super Admin Scoping</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-gold text-base">lock</span>
+<span>Controlled Workspace Provisioning</span>
+</div>
+</div>
+</div>
+<!-- Hero Documentary Visual -->
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-2xl overflow-hidden shadow-floating bg-white border border-brand-border">
+<div class="aspect-[4/3] sm:aspect-[16/11] relative overflow-hidden bg-brand-softGreen">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.02]" data-alt="A documentary style photograph of a modern open-air dairy barn during soft morning light. A woman farm specialist in a beanie and blue vest writes observational data on a field notepad while an experienced herd manager in a flat cap holds a ruggedized digital farm management tablet displaying herd curves. Holstein cows feed tranquilly in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ7Tx26MAwuATJpxlIBGFjdOAVc3SSpIGkmBIyZDpKd84kncJfp_m3AiDgJBF5kz9bAgcaTWK1OzNbyz8KARccTKrUhT9UsckzoJ8LZo9CxLTdn8qQpotaAGSrvpdudUepNmCEyA1ZRXa6OLLcEKFZ5i-8r1yVYLL7yxBM3C1_ptQqJZ8QfYZqNMpnct4Ub7R7WBDIUIHqGTWMxBDBq2fMh6AKDCxjjpZHnExRCds"/>
+<div class="absolute inset-0 bg-gradient-to-t from-brand-forest/60 via-transparent to-transparent pointer-events-none"></div>
+<div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-brand-border text-brand-charcoal">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-brand-pasture animate-pulse"></span>
+<span class="font-headline-sm text-headline-sm text-brand-forest">Paddock &amp; Parlor Synced</span>
+</div>
+<span class="font-label-sm text-label-sm text-brand-muted">IRL Deployment</span>
+</div>
+<p class="font-body-sm text-body-sm text-brand-muted mt-1">
+                  Purpose-built for operational clarity across herd registers, milk monitors, and field staff.
+                </p>
+</div>
+</div>
+</div>
+<!-- Decorative Stamp Backdrop -->
+<div class="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl bg-brand-softGreen/60 -z-10 pointer-events-none"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2 & 3 — CONTACT INTRODUCTION & INQUIRY FORM -->
+<section class="w-full py-16 lg:py-24 bg-white border-t border-brand-border" id="inquiry-section">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header -->
+<div class="max-w-3xl mb-12 lg:mb-16">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-brand-ivory text-brand-forest border border-brand-border mb-3">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-brand-pasture">Inquiry Intake</span>
+</div>
+<h2 class="font-serif text-3xl sm:text-4xl text-brand-forest tracking-tight">
+          Tell us what you need.
+        </h2>
+<p class="font-body-lg text-body-lg text-brand-muted mt-3 max-w-2xl">
+          Share a little about your farm and what you would like to learn about SmartFarm. Our team can use your inquiry to understand how to assist you.
+        </p>
+</div>
+<!-- Two-Column Grid: Form + Framed Photograph -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+<!-- Left Column: Form -->
+<div class="lg:col-span-7 bg-brand-ivory/60 p-6 sm:p-8 lg:p-10 rounded-2xl border border-brand-border shadow-sm">
+<form class="space-y-6" id="contact-form" novalidate="">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Full Name -->
+<div class="flex flex-col">
+<label class="font-label-md text-label-md text-brand-charcoal mb-1.5 flex items-center justify-between" for="fullName">
+<span>Full Name <span aria-hidden="true" class="text-error font-bold">*</span></span>
+<span class="font-body-sm text-body-sm text-brand-muted">Required</span>
+</label>
+<input class="w-full h-10 px-3.5 rounded bg-white border border-brand-border font-body-md text-body-md text-brand-charcoal placeholder:text-brand-muted/70 focus:outline-none focus:border-brand-pasture focus:ring-2 focus:ring-brand-pasture/20 transition-all" id="fullName" name="fullName" placeholder="e.g. Eleanor Vance" required="" type="text"/>
+<span class="hidden text-xs text-error mt-1.5 font-medium" id="nameError">Please provide your full name.</span>
+</div>
+<!-- Farm / Organization Name -->
+<div class="flex flex-col">
+<label class="font-label-md text-label-md text-brand-charcoal mb-1.5 flex items-center justify-between" for="orgName">
+<span>Organization / Farm Name</span>
+<span class="font-body-sm text-body-sm text-brand-muted">Optional</span>
+</label>
+<input class="w-full h-10 px-3.5 rounded bg-white border border-brand-border font-body-md text-body-md text-brand-charcoal placeholder:text-brand-muted/70 focus:outline-none focus:border-brand-pasture focus:ring-2 focus:ring-brand-pasture/20 transition-all" id="orgName" name="orgName" placeholder="e.g. Green Pastures Dairy Co." type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Email Address -->
+<div class="flex flex-col">
+<label class="font-label-md text-label-md text-brand-charcoal mb-1.5 flex items-center justify-between" for="email">
+<span>Email Address <span aria-hidden="true" class="text-error font-bold">*</span></span>
+<span class="font-body-sm text-body-sm text-brand-muted">Required</span>
+</label>
+<input class="w-full h-10 px-3.5 rounded bg-white border border-brand-border font-body-md text-body-md text-brand-charcoal placeholder:text-brand-muted/70 focus:outline-none focus:border-brand-pasture focus:ring-2 focus:ring-brand-pasture/20 transition-all" id="email" name="email" placeholder="name@dairyfarm.com" required="" type="email"/>
+<span class="hidden text-xs text-error mt-1.5 font-medium" id="emailError">Please enter a valid email address.</span>
+</div>
+<!-- Phone Number -->
+<div class="flex flex-col">
+<label class="font-label-md text-label-md text-brand-charcoal mb-1.5 flex items-center justify-between" for="phone">
+<span>Phone Number</span>
+<span class="font-body-sm text-body-sm text-brand-muted">Optional</span>
+</label>
+<input class="w-full h-10 px-3.5 rounded bg-white border border-brand-border font-body-md text-body-md text-brand-charcoal placeholder:text-brand-muted/70 focus:outline-none focus:border-brand-pasture focus:ring-2 focus:ring-brand-pasture/20 transition-all" id="phone" name="phone" placeholder="Direct farm line" type="tel"/>
+</div>
+</div>
+<!-- Subject Dropdown -->
+<div class="flex flex-col">
+<label class="font-label-md text-label-md text-brand-charcoal mb-1.5 flex items-center justify-between" for="subject">
+<span>Subject <span aria-hidden="true" class="text-error font-bold">*</span></span>
+<span class="font-body-sm text-body-sm text-brand-muted">Select inquiry focus</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3.5 pr-10 rounded bg-white border border-brand-border font-body-md text-body-md text-brand-charcoal appearance-none focus:outline-none focus:border-brand-pasture focus:ring-2 focus:ring-brand-pasture/20 transition-all cursor-pointer" id="subject" name="subject" required="">
+<option disabled="" selected="" value="">Select an inquiry category</option>
+<option value="general">General Inquiry</option>
+<option value="product">Product Information</option>
+<option value="features">Platform Features</option>
+<option value="workspace">Workspace Setup</option>
+<option value="other">Other</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-brand-muted">
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</div>
+</div>
+<span class="hidden text-xs text-error mt-1.5 font-medium" id="subjectError">Please select a subject category.</span>
+</div>
+<!-- Message Field -->
+<div class="flex flex-col">
+<label class="font-label-md text-label-md text-brand-charcoal mb-1.5 flex items-center justify-between" for="message">
+<span>Message <span aria-hidden="true" class="text-error font-bold">*</span></span>
+<span class="font-body-sm text-body-sm text-brand-muted">Tell us about your herd &amp; questions</span>
+</label>
+<textarea class="w-full p-3.5 rounded bg-white border border-brand-border font-body-md text-body-md text-brand-charcoal placeholder:text-brand-muted/70 focus:outline-none focus:border-brand-pasture focus:ring-2 focus:ring-brand-pasture/20 transition-all" id="message" name="message" placeholder="Share your herd size, current parlor configuration, or specific telemetry questions..." required="" rows="5"></textarea>
+<span class="hidden text-xs text-error mt-1.5 font-medium" id="messageError">Please enter your message before submitting.</span>
+</div>
+<!-- Submit Button & Disclaimer -->
+<div class="pt-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<button class="inline-flex items-center justify-center px-6 py-3 rounded text-sm font-semibold text-white bg-brand-pasture hover:bg-brand-pastureHover active:scale-[0.99] transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-pasture focus:ring-offset-2" id="submitBtn" type="submit">
+<span>Send Inquiry</span>
+<span class="material-symbols-outlined ml-2 text-lg">send</span>
+</button>
+<p class="font-body-sm text-body-sm text-brand-muted">
+                Direct Agronomic Scoping • No Spam Bots
+              </p>
+</div>
+<!-- Demonstration State Notification (Hidden initially) -->
+<div class="hidden mt-6 p-4 rounded-xl bg-brand-softGreen border border-brand-pasture/30 text-brand-forest transition-all" id="demoFeedback">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-brand-pasture text-xl mt-0.5">check_circle</span>
+<div class="space-y-1">
+<h4 class="font-headline-sm text-headline-sm text-brand-forest">Inquiry preview captured</h4>
+<p class="font-body-md text-body-md text-brand-charcoal">
+                    Thank you for exploring the SmartFarm demonstration form. This preview confirms proper validation and field composition.
+                  </p>
+<p class="font-body-sm text-body-sm text-brand-muted italic">
+                    Note: This is a frontend architectural preview; no live email dispatch was triggered.
+                  </p>
+</div>
+</div>
+</div>
+</form>
+</div>
+<!-- Right Column: Framed Editorial Photo & Scoping Details -->
+<div class="lg:col-span-5 flex flex-col space-y-6">
+<div class="rounded-2xl overflow-hidden bg-white border border-brand-border shadow-sm p-4 sm:p-5">
+<div class="aspect-[4/3] rounded-xl overflow-hidden relative mb-5 bg-brand-softGreen">
+<img class="w-full h-full object-cover" data-alt="Authentic dairy farm team in a clean, high-roof industrial milking barn reviewing telemetry data together. The herd manager in a gilet holds a rugged industrial tablet pointing out pasture rotation timelines, while an assistant notes health updates with pen and board. Soft natural ambient lighting illuminates the barn alley." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOpDYkn_flhv9RM7ON9CIA6fQWjiaAoubXrKs9p8xG4eMPgTCs-ZuR95HSd7yee556iZJHjPnsyYsSNyf_kT_90xVpbKDZDwSgfIg9F-nU4PtnvQkPq0joN2mOk_qakgM0xR_3VVk2PQmzELQP-ImF8wLCPQ7uXzVyVXdTbcCYb89yrjpLZB3eqqxVxiacmkN06ii6rBXCorHel2bgxz1zjBZgBKADA6FQyEux2f0"/>
+<div class="absolute top-3 right-3 bg-brand-forest/90 backdrop-blur-md px-3 py-1 rounded text-white text-[11px] font-semibold tracking-wider uppercase">
+                Field Operations
+              </div>
+</div>
+<!-- Operational Badge -->
+<div class="p-4 rounded-xl bg-brand-softGreen/50 border border-brand-border/80">
+<div class="flex items-center gap-2 text-brand-forest mb-1.5">
+<span class="w-2 h-2 rounded-full bg-brand-pasture"></span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-brand-forest font-bold">
+                  Direct Team Engagement • Guided Workspace Scoping
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-brand-muted leading-relaxed">
+                SmartFarm is implemented purposefully. Our software specialists collaborate with your operational leads to map paddock boundaries, vat hardware interfaces, and herd access hierarchy.
+              </p>
+</div>
+<!-- Operational Parameters List -->
+<div class="mt-5 space-y-3 pt-4 border-t border-brand-border/60">
+<div class="flex items-start gap-3 text-xs text-brand-charcoal">
+<span class="material-symbols-outlined text-brand-pasture text-base mt-0.5">tune</span>
+<div>
+<span class="font-semibold text-brand-forest">Tailored Paddock Mapping:</span> Sensor boundaries calibrated to your pasture hectares.
+                </div>
+</div>
+<div class="flex items-start gap-3 text-xs text-brand-charcoal">
+<span class="material-symbols-outlined text-brand-pasture text-base mt-0.5">sensors</span>
+<div>
+<span class="font-semibold text-brand-forest">Telemetry Verification:</span> Direct vat thermal probe &amp; RFID gate compatibility test.
+                </div>
+</div>
+<div class="flex items-start gap-3 text-xs text-brand-charcoal">
+<span class="material-symbols-outlined text-brand-pasture text-base mt-0.5">admin_panel_settings</span>
+<div>
+<span class="font-semibold text-brand-forest">Super Admin Provisioning:</span> Dedicated security keys issued exclusively per farm instance.
+                </div>
+</div>
+</div>
+</div>
+<!-- Quick Quote / Grounded Note -->
+<div class="p-5 rounded-2xl bg-brand-ivory border border-brand-border flex items-start gap-3.5">
+<span class="material-symbols-outlined text-brand-gold text-2xl shrink-0 mt-0.5">agriculture</span>
+<div>
+<p class="font-serif italic text-sm text-brand-forest leading-relaxed">
+                "Precision dairy is about practical reliability when 400 cows enter the shed at dawn. Every inquiry is handled with operational gravity."
+              </p>
+<span class="block mt-2 font-label-sm text-label-sm uppercase tracking-wider text-brand-muted">
+                SmartFarm Agronomic Deployment Standards
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4 — WHAT TO EXPECT -->
+<section class="w-full py-16 lg:py-24 bg-brand-ivory border-t border-brand-border">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-14">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-brand-softGreen text-brand-forest mb-3">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-brand-pasture">Process Transparency</span>
+</div>
+<h2 class="font-serif text-3xl sm:text-4xl text-brand-forest tracking-tight">
+          What happens after you contact us?
+        </h2>
+<p class="font-body-md text-body-md text-brand-muted mt-2">
+          An honest, transparent pathway from your initial conversation to scoped platform access.
+        </p>
+</div>
+<!-- 3-Step Process Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+<!-- Step 1 -->
+<div class="relative bg-white p-7 rounded-2xl border border-brand-border shadow-sm flex flex-col justify-between group hover:shadow-editorial transition-all">
+<div>
+<div class="flex items-center justify-between mb-5">
+<span class="w-10 h-10 rounded-xl bg-brand-ivory flex items-center justify-center font-headline-md text-headline-md font-bold text-brand-forest border border-brand-border">
+                01
+              </span>
+<span class="material-symbols-outlined text-brand-pasture text-2xl">mail</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-brand-forest mb-2">
+              Share Your Inquiry
+            </h3>
+<p class="font-body-md text-body-md text-brand-muted leading-relaxed">
+              Tell us about your farm and what you want to know. Provide any current herd management practices or hardware setups you hope to connect.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-brand-border/60 text-xs font-medium text-brand-pasture flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">check</span>
+<span>Intake questionnaire logged</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative bg-white p-7 rounded-2xl border border-brand-border shadow-sm flex flex-col justify-between group hover:shadow-editorial transition-all">
+<div>
+<div class="flex items-center justify-between mb-5">
+<span class="w-10 h-10 rounded-xl bg-brand-ivory flex items-center justify-center font-headline-md text-headline-md font-bold text-brand-forest border border-brand-border">
+                02
+              </span>
+<span class="material-symbols-outlined text-brand-pasture text-2xl">manage_accounts</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-brand-forest mb-2">
+              Team Review
+            </h3>
+<p class="font-body-md text-body-md text-brand-muted leading-relaxed">
+              The SmartFarm team reviews the inquiry directly. We inspect your operational scale, hardware prerequisites, and pastoral layout requirements.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-brand-border/60 text-xs font-medium text-brand-pasture flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">groups</span>
+<span>Reviewed by agronomic specialists</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative bg-white p-7 rounded-2xl border border-brand-border shadow-sm flex flex-col justify-between group hover:shadow-editorial transition-all">
+<div>
+<div class="flex items-center justify-between mb-5">
+<span class="w-10 h-10 rounded-xl bg-brand-ivory flex items-center justify-center font-headline-md text-headline-md font-bold text-brand-forest border border-brand-border">
+                03
+              </span>
+<span class="material-symbols-outlined text-brand-gold text-2xl">handshake</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-brand-forest mb-2">
+              Discuss Next Steps
+            </h3>
+<p class="font-body-md text-body-md text-brand-muted leading-relaxed">
+              The team can discuss relevant platform information and workspace setup with your designated farm administrator.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-brand-border/60 text-xs font-medium text-brand-gold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">login</span>
+<span>Guided provisioning walkthrough</span>
+</div>
+</div>
+</div>
+<!-- Human Consultation Assurance Note (Explicit constraint) -->
+<div class="mt-10 p-5 rounded-xl bg-brand-softGreen/70 border border-brand-border flex items-center gap-4 text-xs sm:text-sm text-brand-charcoal max-w-3xl mx-auto">
+<span class="material-symbols-outlined text-brand-forest text-xl shrink-0">policy</span>
+<p class="leading-relaxed">
+<strong class="text-brand-forest">Direct Agronomic Review:</strong> SmartFarm operates with zero automated spam bots or unsolicited marketing chains. Inquiries are reviewed directly by the agronomic operations team with complete confidentiality.
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 5 — WORKSPACE SETUP INFORMATION -->
+<section class="w-full py-16 lg:py-24 bg-white border-t border-brand-border" id="workspace-setup">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Left: Explanatory Breakdown -->
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-brand-ivory text-brand-forest border border-brand-border">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-brand-pasture">Security &amp; Architecture</span>
+</div>
+<h2 class="font-serif text-3xl sm:text-4xl text-brand-forest tracking-tight">
+            How SmartFarm access is arranged.
+          </h2>
+<p class="font-body-lg text-body-lg text-brand-muted max-w-xl leading-relaxed">
+            To ensure data integrity, biometric isolation, and uninterrupted sensor telemetry across milking parlors, SmartFarm maintains a strict, managed onboarding protocol.
+          </p>
+<!-- 4 Critical Facts -->
+<div class="space-y-4 pt-2">
+<div class="flex items-start gap-4 p-4 rounded-xl bg-brand-ivory border border-brand-border">
+<div class="w-8 h-8 rounded-lg bg-brand-softGreen text-brand-forest flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-lg">contact_mail</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-brand-forest text-base">Prospective customers contact the SmartFarm team.</h4>
+<p class="font-body-sm text-body-sm text-brand-muted mt-0.5">All engagements start with an operational conversation to establish pasture boundaries and hardware interfaces.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl bg-brand-ivory border border-brand-border">
+<div class="w-8 h-8 rounded-lg bg-brand-softGreen text-brand-forest flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-lg">admin_panel_settings</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-brand-forest text-base">Customer registration and workspace creation are handled by the Super Admin.</h4>
+<p class="font-body-sm text-body-sm text-brand-muted mt-0.5">Our central deployment architects securely provision the dedicated instance, telemetry endpoints, and paddock schemas.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl bg-brand-ivory border border-brand-border">
+<div class="w-8 h-8 rounded-lg bg-brand-softGreen text-brand-forest flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-lg">badge</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-brand-forest text-base">A Farm Admin account is provisioned for the customer.</h4>
+<p class="font-body-sm text-body-sm text-brand-muted mt-0.5">The primary farm owner or operations director receives master credentials to manage staff roles, RFID tags, and vat alerts.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl bg-brand-ivory border border-brand-border">
+<div class="w-8 h-8 rounded-lg bg-brand-goldLight text-brand-charcoal flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-lg text-brand-gold">block</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-brand-forest text-base">There is no public self-registration or automatic online purchase.</h4>
+<p class="font-body-sm text-body-sm text-brand-muted mt-0.5">Protected agrarian infrastructure requires authenticated configuration to guarantee reliable field performance.</p>
+</div>
+</div>
+</div>
+<div class="pt-4">
+<a class="inline-flex items-center justify-center px-6 py-3 rounded text-sm font-semibold text-white bg-brand-forest hover:bg-brand-pasture transition-colors shadow-sm" data-path="how-it-works" href="#how-it-works">
+<span>See How It Works</span>
+<span class="material-symbols-outlined ml-2 text-lg">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Right: Architectural Representation / Visual Illustration -->
+<div class="lg:col-span-5">
+<div class="p-8 rounded-2xl bg-brand-forest text-brand-ivory shadow-xl relative overflow-hidden">
+<div class="relative z-10 space-y-6">
+<div class="flex items-center justify-between pb-4 border-b border-white/10">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-brand-gold"></span>
+<span class="font-label-sm text-label-sm tracking-widest uppercase text-brand-gold">Architecture Overview</span>
+</div>
+<span class="text-xs text-brand-ivory/60 font-mono">v4.8 INSTANCE</span>
+</div>
+<!-- Visual Flow Graphic -->
+<div class="space-y-4">
+<div class="p-3.5 rounded-lg bg-white/5 border border-white/10 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-gold text-lg">person</span>
+<span class="text-sm font-medium">1. Farm Lead Inquiry</span>
+</div>
+<span class="text-xs text-brand-ivory/50">Verified Input</span>
+</div>
+<div class="flex justify-center text-brand-gold">
+<span class="material-symbols-outlined">south</span>
+</div>
+<div class="p-3.5 rounded-lg bg-white/10 border border-brand-pasture flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-pasture text-lg">security</span>
+<span class="text-sm font-medium">2. Super Admin Authorization</span>
+</div>
+<span class="text-xs bg-brand-pasture text-white px-2 py-0.5 rounded">Isolated Tenant</span>
+</div>
+<div class="flex justify-center text-brand-gold">
+<span class="material-symbols-outlined">south</span>
+</div>
+<div class="p-3.5 rounded-lg bg-white/5 border border-white/10 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-gold text-lg">admin_panel_settings</span>
+<span class="text-sm font-medium">3. Farm Admin Credentials</span>
+</div>
+<span class="text-xs text-brand-ivory/50">Encrypted Token</span>
+</div>
+</div>
+<div class="pt-4 border-t border-white/10 text-xs text-brand-ivory/70 flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-gold text-base">lock</span>
+<span>Single-tenant database separation per farm client.</span>
+</div>
+</div>
+<!-- Ambient Glow -->
+<div class="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-brand-pasture/20 filter blur-3xl pointer-events-none"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6 — EXPLORE SMARTFARM -->
+<section class="w-full py-16 lg:py-24 bg-brand-ivory border-t border-brand-border">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mb-12">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-brand-softGreen text-brand-forest mb-3">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-brand-pasture">Platform Context</span>
+</div>
+<h2 class="font-serif text-3xl sm:text-4xl text-brand-forest tracking-tight">
+          Explore the platform before getting in touch.
+        </h2>
+<p class="font-body-md text-body-md text-brand-muted mt-2">
+          Discover how our pastoral intelligence ecosystem works across herd tracking, milking telemetry, and pasture rotation.
+        </p>
+</div>
+<!-- 3 Compact Navigation Preview Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1: About SmartFarm -->
+<a class="group flex flex-col justify-between p-7 rounded-2xl bg-white border border-brand-border shadow-sm hover:shadow-editorial hover:border-brand-pasture transition-all" data-path="about" href="#about">
+<div>
+<div class="w-12 h-12 rounded-xl bg-brand-softGreen text-brand-forest flex items-center justify-center mb-6 group-hover:bg-brand-forest group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">menu_book</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-brand-forest mb-2 group-hover:text-brand-pasture transition-colors">
+              About SmartFarm
+            </h3>
+<p class="font-body-md text-body-md text-brand-muted leading-relaxed">
+              Understand the philosophy and team background behind unified pastoral management, rooted in agricultural science and software engineering.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-brand-border flex items-center text-sm font-semibold text-brand-forest group-hover:text-brand-pasture">
+<span>Read Our Background</span>
+<span class="material-symbols-outlined ml-2 text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+</div>
+</a>
+<!-- Card 2: Explore Features -->
+<a class="group flex flex-col justify-between p-7 rounded-2xl bg-white border border-brand-border shadow-sm hover:shadow-editorial hover:border-brand-pasture transition-all" data-path="features" href="#features">
+<div>
+<div class="w-12 h-12 rounded-xl bg-brand-softGreen text-brand-forest flex items-center justify-center mb-6 group-hover:bg-brand-forest group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">grid_view</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-brand-forest mb-2 group-hover:text-brand-pasture transition-colors">
+              Explore Features
+            </h3>
+<p class="font-body-md text-body-md text-brand-muted leading-relaxed">
+              Discover all 12 operational modules from RFID herd registries, milk vat thermal telemetry, to dynamic paddock rotation planners.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-brand-border flex items-center text-sm font-semibold text-brand-forest group-hover:text-brand-pasture">
+<span>Inspect All Modules</span>
+<span class="material-symbols-outlined ml-2 text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+</div>
+</a>
+<!-- Card 3: Dashboard Preview -->
+<a class="group flex flex-col justify-between p-7 rounded-2xl bg-white border border-brand-border shadow-sm hover:shadow-editorial hover:border-brand-pasture transition-all" data-path="dashboard-preview" href="#dashboard-preview">
+<div>
+<div class="w-12 h-12 rounded-xl bg-brand-softGreen text-brand-forest flex items-center justify-center mb-6 group-hover:bg-brand-forest group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">monitoring</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-brand-forest mb-2 group-hover:text-brand-pasture transition-colors">
+              Dashboard Preview
+            </h3>
+<p class="font-body-md text-body-md text-brand-muted leading-relaxed">
+              Tour illustrative interface screens for herd managers and farm admins, designed for outdoor daylight and high-throughput parlors.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-brand-border flex items-center text-sm font-semibold text-brand-forest group-hover:text-brand-pasture">
+<span>View Interface Screens</span>
+<span class="material-symbols-outlined ml-2 text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- SECTION 7 — CLOSING CTA -->
+<section class="w-full py-20 lg:py-28 bg-white border-t border-brand-border">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-softGreen text-brand-forest mb-6">
+<span class="w-2 h-2 rounded-full bg-brand-pasture"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-brand-pasture">Direct Consultation</span>
+</div>
+<h2 class="font-serif text-3xl sm:text-5xl text-brand-forest tracking-tight max-w-3xl mx-auto leading-tight">
+        Start a conversation with SmartFarm.
+      </h2>
+<p class="font-body-lg text-body-lg text-brand-muted mt-4 max-w-xl mx-auto leading-relaxed">
+        Tell us what your dairy farm needs and what you would like to explore.
+      </p>
+<div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded text-sm font-semibold text-white bg-brand-pasture hover:bg-brand-pastureHover active:scale-[0.99] transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-pasture focus:ring-offset-2" href="#contact-form">
+<span>Send an Inquiry</span>
+<span class="material-symbols-outlined ml-2 text-lg">arrow_upward</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded text-sm font-semibold text-brand-charcoal bg-brand-ivory border border-brand-border hover:bg-brand-softGreen transition-colors" data-path="how-it-works" href="#how-it-works">
+<span>Review Deployment Steps</span>
+</a>
+</div>
+<div class="mt-12 pt-8 border-t border-brand-border/60 flex flex-wrap items-center justify-center gap-8 text-xs text-brand-muted">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-brand-pasture text-base">check</span>
+<span>No Unsolicited Automated Sequences</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-brand-pasture text-base">check</span>
+<span>Grounded Field Telemetry Integration</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-brand-pasture text-base">check</span>
+<span>Enterprise Super Admin Safeguards</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const contactForm = document.getElementById('contact-form');
+    const demoFeedback = document.getElementById('demoFeedback');
+    const submitBtn = document.getElementById('submitBtn');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Validation elements
+        const nameInput = document.getElementById('fullName');
+        const emailInput = document.getElementById('email');
+        const subjectInput = document.getElementById('subject');
+        const messageInput = document.getElementById('message');
+
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+        const subjectError = document.getElementById('subjectError');
+        const messageError = document.getElementById('messageError');
+
+        let isValid = true;
+
+        // Reset errors
+        nameError.classList.add('hidden');
+        emailError.classList.add('hidden');
+        subjectError.classList.add('hidden');
+        messageError.classList.add('hidden');
+
+        // Name check
+        if (!nameInput.value.trim()) {
+          nameError.classList.remove('hidden');
+          nameInput.focus();
+          isValid = false;
+        }
+
+        // Email format check
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailInput.value.trim() || !emailPattern.test(emailInput.value.trim())) {
+          emailError.classList.remove('hidden');
+          if (isValid) emailInput.focus();
+          isValid = false;
+        }
+
+        // Subject check
+        if (!subjectInput.value) {
+          subjectError.classList.remove('hidden');
+          if (isValid) subjectInput.focus();
+          isValid = false;
+        }
+
+        // Message check
+        if (!messageInput.value.trim()) {
+          messageError.classList.remove('hidden');
+          if (isValid) messageInput.focus();
+          isValid = false;
+        }
+
+        if (isValid) {
+          // Provide honest illustrative response without live email dispatch
+          submitBtn.disabled = true;
+          submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+          
+          demoFeedback.classList.remove('hidden');
+          demoFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+          // Reset button state after brief display
+          setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+          }, 4000);
+        }
+      });
+    }
+  });
+</script></main>
+<!-- BEGIN: Section8Footer -->
+<footer class="bg-brand-forest text-brand-ivory pt-16 pb-12 border-t border-brand-forestDark" data-purpose="site-footer" id="contact">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-14 border-b border-white/10">
+<!-- Column 1: Brand & Bio -->
+<div class="md:col-span-5 space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-brand-gold">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-.778.099-1.533.284-2.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<span class="font-brand-heading font-extrabold text-2xl tracking-tight text-white">SmartFarm</span>
+</div>
+<p class="text-sm text-brand-ivory/80 leading-relaxed max-w-sm">
+            SmartFarm is the unified operating platform for progressive dairy farming. Connecting livestock registration, milking vats, staff rosters, and herd intelligence into one purposeful workflow.
+          </p>
+<div class="text-xs text-brand-gold pt-2 flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+<span>Operating for modern dairy producers worldwide • Live telemetry &amp; sensor sync active</span>
+</div>
+</div>
+<!-- Column 2: Explore Links -->
+<div class="md:col-span-3 space-y-3">
+<h4 class="font-brand-heading font-bold text-sm tracking-wider uppercase text-white/90">Explore</h4>
+<ul class="space-y-2.5 text-sm text-brand-ivory/70">
+<li><a class="hover:text-white transition-colors" data-path="home" href="#">Home</a></li>
+<li><a class="hover:text-white transition-colors" data-path="about" href="#about">About</a></li>
+<li><a class="hover:text-white transition-colors" data-path="features" href="#features">Features</a></li>
+<li><a class="hover:text-white transition-colors" data-path="how-it-works" href="#how-it-works">How It Works</a></li>
+<li><a class="hover:text-white transition-colors" data-path="benefits" href="#benefits">Benefits</a></li>
+<li><a class="hover:text-white transition-colors" data-path="dashboard-preview" href="#dashboard-preview">Dashboard Preview</a></li>
+<li><a class="hover:text-white transition-colors text-white font-medium" data-path="contact" href="#contact">Contact</a></li>
+</ul>
+</div>
+<!-- Column 3: Contact & Consultations -->
+<div class="md:col-span-4 space-y-4">
+<h4 class="font-brand-heading font-bold text-sm tracking-wider uppercase text-white/90">Inquiries</h4>
+<p class="text-sm text-brand-ivory/80 leading-relaxed">
+            Schedule an operational consultation with our agricultural software engineering team.
+          </p>
+<div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-2 text-xs">
+<div class="flex items-center gap-2 text-brand-ivory/90">
+<svg class="w-4 h-4 text-brand-gold shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>support@smartfarm-platform.com</span>
+</div>
+<div class="flex items-center gap-2 text-brand-ivory/90">
+<svg class="w-4 h-4 text-brand-gold shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Dairy Tech Innovation Center, Hamilton / Dublin</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Sub-bar -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-ivory/60">
+<div>
+          Copyright © 2026 SmartFarm Platform. All rights reserved.
+        </div>
+<div class="flex items-center space-x-6">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Security Architecture</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: Section8Footer -->
+<!-- BEGIN: Section9AnimatedBrandStrip -->
+<section aria-label="Brand statement marquee" class="w-full bg-[#FFFFFF] py-7 overflow-hidden border-t border-brand-border" data-purpose="animated-brand-strip">
+<div class="relative w-full overflow-hidden select-none">
+<div class="animate-marquee-right whitespace-nowrap flex items-center">
+<!-- Marquee Set 1 -->
+<div class="flex items-center shrink-0 space-x-6 pr-6 text-xl sm:text-2xl md:text-3xl font-brand-heading font-extrabold tracking-wider uppercase text-[#245C45]">
+<span>SMART FARM</span>
+<span class="text-brand-gold text-lg">•</span>
+<span>SMART FARM</span>
+<span class="text-brand-gold text-lg">•</span>
+<span>SMART FARM</span>
+<span class="text-brand-gold text-lg">•</span>
+<span>SMART FARM</span>
+<span class="text-brand-gold text-lg">•</span>
+<span>SMART FARM</span>
+<span class="text-brand-gold text-lg">•</span>
+<span>SMART FARM</span>
+<span class="text-brand-gold text-lg">•</span>
+</div>
+<!-- Marquee Set 2 (for seamless loop) -->
+<div aria-hidden="true" class="flex items-center shrink-0 space-x-6 pr-6 text-xl sm:text-2xl md:text-3xl font-brand-heading font-extrabold tracking-wider uppercase text-[#245C45]">
+<span>SMART FARM</span>
+<span class="text-brand-gold text-lg">•</span>
+<span>SMART FARM</span>
+<span class="text-brand-gold text-lg">•</span>
+<span>SMART FARM</span>
+<span class="text-brand-gold text-lg">•</span>
+<span>SMART FARM</span>
+<span class="text-brand-gold text-lg">•</span>
+<span>SMART FARM</span>
+<span class="text-brand-gold text-lg">•</span>
+<span>SMART FARM</span>
+<span class="text-brand-gold text-lg">•</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Section9AnimatedBrandStrip -->
+<!-- Interactive JavaScript: Mobile Menu Toggle -->
+<script data-purpose="interactive-nav">
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileToggle = document.getElementById('mobile-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileToggle && mobileMenu) {
+        mobileToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+</body></html>

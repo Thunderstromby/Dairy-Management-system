@@ -1,0 +1,624 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-high": "#eae8e2", "inverse-primary": "#b8cda8", "on-secondary-fixed": "#141f0a", "surface-container-highest": "#e4e2dd", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#bdcbac", "tertiary-fixed-dim": "#ffb784", "on-primary-fixed-variant": "#3a4c30", "secondary-container": "#d9e8c7", "on-primary": "#ffffff", "on-background": "#1b1c18", "surface": "#fbf9f3", "inverse-on-surface": "#f3f1eb", "on-tertiary-fixed": "#301400", "on-primary-fixed": "#101f08", "on-tertiary-fixed-variant": "#6c3a11", "error-container": "#ffdad6", "on-surface-variant": "#444840", "on-error": "#ffffff", "on-secondary-container": "#5b694e", "primary": "#2f4126", "primary-fixed-dim": "#b8cda8", "on-primary-container": "#b8cda9", "on-tertiary-container": "#ffb785", "tertiary-container": "#7a461c", "surface-container-lowest": "#ffffff", "surface-tint": "#516446", "primary-container": "#46583b", "surface-variant": "#e4e2dd", "outline-variant": "#c4c8bd", "background": "#fbf9f3", "on-surface": "#1b1c18", "tertiary": "#5e3007", "error": "#ba1a1a", "surface-bright": "#fbf9f3", "inverse-surface": "#30312d", "on-secondary": "#ffffff", "surface-dim": "#dcdad4", "tertiary-fixed": "#ffdcc6", "on-secondary-fixed-variant": "#3e4b32", "primary-fixed": "#d4e9c3", "surface-container": "#f0eee8", "outline": "#75786f", "surface-container-low": "#f5f3ed", "on-error-container": "#93000a", "secondary": "#556249", "secondary-fixed": "#d9e8c7" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-md": "1.5rem", "space-md": "0.75rem", "margin": "1rem", "space-lg": "1rem", "space-2xl": "2rem", "gutter": "1rem", "space-xl": "1.5rem", "margin-lg": "2rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter-md": "1.25rem", "gutter-lg": "1.5rem" }, "fontFamily": { "label-md": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"], "headline-lg-mobile": ["Manrope"], "headline-xl-mobile": ["Manrope"], "label-lg": ["Inter"], "headline-xl": ["Manrope"], "headline-lg": ["Manrope"], "body-md": ["Inter"], "headline-sm": ["Manrope"], "headline-md": ["Manrope"] }, "fontSize": { "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "400" }], "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "fontWeight": "400" }], "headline-lg-mobile": ["1.375rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "800" }], "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["0.875rem", { "lineHeight": "1.375rem", "fontWeight": "400" }], "headline-sm": ["1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "headline-md": ["1.25rem", { "lineHeight": "1.625rem", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-xl flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBYgTLzL4ixmW_u0Iuetl8cMytFAkTgo9j0OqmFpmR4ZdNIJA8TAM26gSRdozb0vdo_6xJy3scVi2laB3t23jDT5fSIe8Gnlt9IldNJ8j-8vQ9f0crSqtL97T814neAilUmvuxVi9XQNkQdm34ZBtCq3lRd3pGErjVhDlhDM1nNOW2QXZlG8cZB7Vpgu2pyG5oBekky3LdocMVoovOlsZt9zFE9JFdFVoDBX3w_DHLm0w"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none tracking-tight">SmartFarm</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-0.5">Supervisor Rail</span></div></div><button class="text-on-surface-variant hover:text-on-surface p-space-xs rounded-lg transition-colors" title="Toggle compact view" type="button"><span class="material-symbols-outlined text-lg leading-none">dock_to_right</span></button></div><div class="px-space-md py-space-sm"><div class="bg-surface-container px-space-md py-space-sm rounded-lg flex items-center justify-between"><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-on-surface-variant truncate">ESTATE CONTEXT</span><span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Greenfield Estate</span></div><span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-space-xs py-0.5 rounded font-mono">GF-042</span></div></div><nav class="flex-1 px-space-md py-space-xs space-y-0.5 overflow-y-auto" data-active-classes="bg-primary text-on-primary font-semibold shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-xl">dashboard</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#"><span class="material-symbols-outlined text-xl">pets</span><span class="font-label-lg text-label-lg">Animals</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#"><span class="material-symbols-outlined text-xl">healing</span><span class="font-label-lg text-label-lg">Animal Health</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#"><span class="material-symbols-outlined text-xl">water_drop</span><span class="font-label-lg text-label-lg">Milk Production</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding" href="#"><span class="material-symbols-outlined text-xl">grass</span><span class="font-label-lg text-label-lg">Feeding Plans</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#"><span class="material-symbols-outlined text-xl">inventory_2</span><span class="font-label-lg text-label-lg">Inventory Usage</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers-and-attendance" href="#"><span class="material-symbols-outlined text-xl">badge</span><span class="font-label-lg text-label-lg">Workers &amp; Attendance</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#"><span class="material-symbols-outlined text-xl">precision_manufacturing</span><span class="font-label-lg text-label-lg">Equipment</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notifications" href="#"><span class="material-symbols-outlined text-xl">notifications</span><span class="font-label-lg text-label-lg">Operational Alerts</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#"><span class="material-symbols-outlined text-xl">analytics</span><span class="font-label-lg text-label-lg">Shift Reports</span></a></nav></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-md"><button class="md:hidden p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container" type="button"><span class="material-symbols-outlined text-xl">menu</span></button><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Greenfield Dairy Estate</span><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-space-xs py-0.5 rounded font-mono">GF-042</span></div><span class="text-outline-variant text-sm">/</span><div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-sm">fence</span><span>Barn Zone A</span></div></div><div class="flex items-center gap-space-lg"><div class="hidden sm:flex items-center gap-2 bg-secondary-container/60 px-space-md py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-secondary-fixed font-semibold tracking-wide uppercase">On Duty · Active</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Operational Notifications" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary-container ring-2 ring-surface"></span></button><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Theme Display" type="button"><span class="material-symbols-outlined text-xl">light_mode</span></button><div class="h-6 w-px bg-outline-variant/60"></div><div class="flex items-center gap-space-md pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKRfnvDtcXaA_3fouE5OFtLyyygvIskuxgsScuB3RWTNQvZ0TXW1jZMn6P1jecz8rtfhaoeatFRSlhGxosuymj0Z74Gb3NeY9k-HpkTV1gVECMz-aOx4ic5cbig5OeibpkMiehHyRDxNEqsS1DvY0suVPQHSm8HBgREiL03zsO3CyppQ6P6Lx7Kj2AY9MjJWACPCsVCG6YU3N1OMaaoQVLKC4LbU9ah5w1pjafjyse"><div class="hidden lg:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface font-semibold leading-tight">Marcus Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant">Farm Supervisor</span></div><span class="material-symbols-outlined text-on-surface-variant text-base cursor-pointer">arrow_drop_down</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Context Navigation & Hero Section -->
+<div class="px-space-xl pt-space-lg pb-space-md flex flex-col gap-space-md">
+<!-- Breadcrumb & Back Link -->
+<div class="flex items-center justify-between">
+<nav class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Animals</a>
+<span class="text-outline-variant font-mono">/</span>
+<a class="hover:text-primary transition-colors" href="#">Bella Vista 420 (NL-84920-A)</a>
+<span class="text-outline-variant font-mono">/</span>
+<span class="text-on-surface font-semibold">Permitted Weight History</span>
+</nav>
+
+</div>
+<!-- Animal Selector & Identity Header -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-lg">
+<div class="flex items-center gap-space-lg min-w-0">
+<div class="relative shrink-0">
+<img class="w-16 h-16 rounded-xl object-cover ring-2 ring-surface-container-high" data-alt="Close portrait of a prime Holstein dairy cow in a clean barn stall with brass ear tag reading 420, natural warm morning sunlight casting soft shadows, crisp agricultural documentary style with earth tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzfIPZnkj5u6PzFN_wOLNw2kdTaR055ZjiRb-3xoEccRB2z_xvdZpRjQnrxMhTnajJ0qJb-nqRCh8F1xuu_MZPhuxupbRITNt7zGrzANaUOtZab_6vSyjlPO_pe1UxQ3P4lBn7IhcJPNa7-MkH3h1n4j1D7yYCgl9tcfyHNueG9QBz_Q8orny6gmBhOQ85svpWwYDdFP1Cim-YmZtxyHIJwANF4L1FicgpO27j0RFj">
+<span class="absolute -bottom-1 -right-1 bg-primary text-on-primary text-[10px] font-mono px-1.5 py-0.5 rounded font-bold uppercase">Lact 3</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Bella Vista 420</span>
+<span class="font-mono font-label-md text-label-md bg-surface-container-high text-on-surface-variant px-space-sm py-0.5 rounded">NL-84920-A</span>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-space-sm py-0.5 rounded font-semibold uppercase tracking-wider">Pen 02 · Lactating Peak</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-md text-label-md mt-1">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-secondary">fingerprint</span><span>ID: 0942</span></span>
+<span class="text-outline-variant">·</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-secondary">scale</span><span>Primary Station: Chute Scale B-1</span></span>
+<span class="text-outline-variant">·</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary">calendar_today</span>
+<span>Calved: Jul 12, 2024</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Quick Switcher Dropdown (Supervisor Rapid Lookup) -->
+<div class="relative shrink-0 flex items-center gap-space-md">
+<div class="relative">
+<button class="flex items-center justify-between gap-space-md w-72 px-space-md py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all shadow-sm" id="quick-switcher-btn" type="button">
+<div class="flex items-center gap-2 truncate">
+<span class="w-2 h-2 rounded-full bg-primary shrink-0"></span>
+<span class="truncate font-semibold font-mono">NL-84920-A · Bella Vista 420</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-base">unfold_more</span>
+</button>
+</div>
+<button class="p-2.5 rounded-lg bg-surface-container text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors shadow-sm" title="Sync live scale weight" type="button">
+<span class="material-symbols-outlined text-lg">sync</span>
+</button>
+</div>
+</div>
+<!-- Vital Stats Ribbon Strip -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-lg bg-secondary-container/70 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-xl">monitor_weight</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Current Weight</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface font-bold font-mono">642.0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">kg</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center">
+<span class="material-symbols-outlined text-xs">trending_up</span>+3.5
+            </span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-xl">tune</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Target Range</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold font-mono">620 – 660</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">kg</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-lg bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-xl">health_and_safety</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Body Condition (BCS)</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-bold font-mono">3.25</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 bg-secondary-container text-on-secondary-container rounded font-medium">Optimal</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-xl">speed</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Last Calibrated Stamp</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold font-mono">Today, 07:15</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Chute Scale B-1 Auto</span>
+</div>
+</div>
+</div>
+<!-- Explicit Operational Scope & Restriction Banner -->
+<div class="bg-surface-container-high/60 rounded-xl p-space-md shadow-sm flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container/30 text-tertiary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-lg">admin_panel_settings</span>
+</div>
+<div class="flex-1 flex flex-col md:flex-row md:items-center md:justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Read-Only Operational Weight Audit</span>
+<span class="font-label-sm text-label-sm bg-surface-container-highest text-on-surface-variant px-1.5 py-0.5 rounded font-mono">AUTH LVL 2: SUPERVISOR</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5 max-w-4xl">
+            Under your current supervisor credentials, weights are captured automatically via parlor scale telemetry or authorized clinical entries. Direct weight overrides, baseline restatements, or retro-edits require Level 3 Farm Administrator or Veterinarian PIN override.
+          </p>
+</div>
+<button class="shrink-0 inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-base text-secondary">key</span>
+<span>Request Admin Override</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Controls Bar: Time Range & Measurement Unit -->
+<div class="px-space-xl py-space-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-center bg-surface-container-lowest p-1 rounded-xl shadow-sm">
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">30 Days</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">90 Days</button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-semibold font-label-md text-label-md shadow-sm transition-all" type="button">Lactation Cycle (Current)</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">Lifetime History</button>
+</div>
+<div class="flex items-center gap-space-md">
+<!-- Unit Toggle -->
+<div class="flex items-center gap-2 bg-surface-container-lowest px-2 py-1 rounded-xl shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant pl-2">Display Unit:</span>
+<div class="inline-flex p-0.5 rounded-lg bg-surface-container">
+<button class="px-3 py-1 rounded-lg bg-surface-container-lowest font-mono font-semibold text-primary text-label-sm shadow-sm" type="button">kg (Metric)</button>
+<button class="px-3 py-1 rounded-lg text-on-surface-variant hover:text-on-surface font-mono text-label-sm" type="button">lbs (Imperial)</button>
+</div>
+</div>
+<!-- Export & Print Actions -->
+<div class="flex items-center gap-1.5">
+<button class="p-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant hover:text-on-surface shadow-sm transition-colors" title="Export Weight Ledger CSV" type="button">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant hover:text-on-surface shadow-sm transition-colors" title="Print Animal Weight Passport" type="button">
+<span class="material-symbols-outlined text-lg">print</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Historical Weight Trajectory Chart Section -->
+<div class="px-space-xl py-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">12-Month Lactation Weight Trajectory</span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Calibrated daily dynamic weight readings, illustrating pre-calving peak, standard post-calving energy deficit, and rebound under TMR-01 High Lactation.
+          </p>
+</div>
+<div class="flex items-center gap-space-lg font-label-sm text-label-sm flex-wrap">
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-sm bg-secondary-container/60"></span>
+<span class="text-on-surface-variant">Recommended Band (620 – 655 kg)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-4 h-0.5 bg-primary"></span>
+<span class="text-on-surface font-semibold">Scale Trajectory</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="text-on-surface-variant">Calving Event (Jul 12)</span>
+</div>
+</div>
+</div>
+<!-- Vector SVG Chart Container -->
+<div class="relative w-full bg-surface-container-low/50 rounded-xl p-space-lg overflow-x-auto">
+<svg class="w-full h-72 select-none" viewBox="0 0 1000 360" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Target Range Gradient Fill -->
+<linearGradient id="targetBandGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#b8cda8" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#b8cda8" stop-opacity="0.1"></stop>
+</linearGradient>
+<!-- Cow Weight Curve Shadow Area -->
+<linearGradient id="weightLineFill" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#46583b" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#46583b" stop-opacity="0.0"></stop>
+</linearGradient>
+</defs>
+<!-- Horizontal Reference Gridlines & Y-Axis Labels -->
+<!-- 660 kg (Y=50) -->
+<line stroke="#DFDED5" stroke-dasharray="3,3" stroke-width="1" x1="70" x2="960" y1="50" y2="50"></line>
+<text fill="#75786f" font-family="Inter" font-size="11" font-weight="500" text-anchor="end" x="60" y="54">660 kg</text>
+<!-- 640 kg (Y=110) -->
+<line stroke="#DFDED5" stroke-dasharray="3,3" stroke-width="1" x1="70" x2="960" y1="110" y2="110"></line>
+<text fill="#75786f" font-family="Inter" font-size="11" font-weight="500" text-anchor="end" x="60" y="114">640 kg</text>
+<!-- 620 kg (Y=170) -->
+<line stroke="#DFDED5" stroke-dasharray="3,3" stroke-width="1" x1="70" x2="960" y1="170" y2="170"></line>
+<text fill="#75786f" font-family="Inter" font-size="11" font-weight="500" text-anchor="end" x="60" y="174">620 kg</text>
+<!-- 600 kg (Y=230) -->
+<line stroke="#DFDED5" stroke-dasharray="3,3" stroke-width="1" x1="70" x2="960" y1="230" y2="230"></line>
+<text fill="#75786f" font-family="Inter" font-size="11" font-weight="500" text-anchor="end" x="60" y="234">600 kg</text>
+<!-- 580 kg (Y=290) -->
+<line stroke="#DFDED5" stroke-dasharray="3,3" stroke-width="1" x1="70" x2="960" y1="290" y2="290"></line>
+<text fill="#75786f" font-family="Inter" font-size="11" font-weight="500" text-anchor="end" x="60" y="294">580 kg</text>
+<!-- Target Range Shaded Band (620 kg [Y=170] to 655 kg [Y=65]) -->
+<rect fill="url(#targetBandGradient)" height="105" rx="4" width="890" x="70" y="65"></rect>
+<text fill="#556249" font-family="Inter" font-size="10" font-weight="600" text-anchor="end" x="955" y="80">Optimal Target Zone</text>
+<!-- Vertical Timeline Dividers (X-Axis) -->
+<!-- Nov 23: 100 -->
+<line stroke="#eae8e2" stroke-width="1" x1="100" x2="100" y1="50" y2="290"></line>
+<text fill="#444840" font-family="Inter" font-size="11" font-weight="500" text-anchor="middle" x="100" y="315">Nov 23</text>
+<!-- Jan 24: 240 -->
+<line stroke="#eae8e2" stroke-width="1" x1="240" x2="240" y1="50" y2="290"></line>
+<text fill="#444840" font-family="Inter" font-size="11" font-weight="500" text-anchor="middle" x="240" y="315">Jan 24</text>
+<!-- Mar 24: 380 -->
+<line stroke="#eae8e2" stroke-width="1" x1="380" x2="380" y1="50" y2="290"></line>
+<text fill="#444840" font-family="Inter" font-size="11" font-weight="500" text-anchor="middle" x="380" y="315">Mar 24</text>
+<!-- May 24: 520 -->
+<line stroke="#eae8e2" stroke-width="1" x1="520" x2="520" y1="50" y2="290"></line>
+<text fill="#444840" font-family="Inter" font-size="11" font-weight="500" text-anchor="middle" x="520" y="315">May 24</text>
+<!-- Jul 24 (Calving): 660 -->
+<line stroke="#ffb785" stroke-dasharray="4,2" stroke-width="1.5" x1="660" x2="660" y1="50" y2="290"></line>
+<text fill="#7a461c" font-family="Inter" font-size="11" font-weight="700" text-anchor="middle" x="660" y="315">Jul 24 (Calving)</text>
+<!-- Sep 24: 800 -->
+<line stroke="#eae8e2" stroke-width="1" x1="800" x2="800" y1="50" y2="290"></line>
+<text fill="#444840" font-family="Inter" font-size="11" font-weight="500" text-anchor="middle" x="800" y="315">Sep 24</text>
+<!-- Oct 24: 930 -->
+<line stroke="#eae8e2" stroke-width="1" x1="930" x2="930" y1="50" y2="290"></line>
+<text fill="#444840" font-family="Inter" font-size="11" font-weight="700" text-anchor="middle" x="930" y="315">Oct 24</text>
+<!-- Gradient Area Under Curve -->
+<path d="M 100 134 Q 170 120, 240 108 T 380 85 T 520 62 C 580 56, 640 56, 655 58 L 665 176 C 710 168, 750 148, 800 130 C 850 118, 890 108, 930 104 L 930 290 L 100 290 Z" fill="url(#weightLineFill)"></path>
+<!-- Realistic Weight Curve Path -->
+<!-- Points:
+               Nov 23: 632 kg (Y=134)
+               Jan 24: 641 kg (Y=107)
+               Mar 24: 649 kg (Y=83)
+               May 24: 657 kg (Y=59)
+               Early Jul (Pre-Calving Peak): 658 kg (Y=56)
+               Mid Jul (Calving Dip): 618 kg (Y=176)
+               Aug: 626 kg (Y=152)
+               Sep: 635 kg (Y=125)
+               Oct: 642 kg (Y=104)
+          -->
+<path d="M 100 134 C 170 125, 200 115, 240 107 C 310 95, 340 90, 380 83 C 450 72, 480 64, 520 59 C 560 55, 620 54, 655 56 L 665 176 C 710 165, 750 145, 800 125 C 850 112, 890 106, 930 104" fill="none" stroke="#2f4126" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+<!-- Plotted Points -->
+<circle cx="100" cy="134" fill="#fbf9f3" r="4.5" stroke="#2f4126" stroke-width="2.5"></circle>
+<circle cx="240" cy="107" fill="#fbf9f3" r="4.5" stroke="#2f4126" stroke-width="2.5"></circle>
+<circle cx="380" cy="83" fill="#fbf9f3" r="4.5" stroke="#2f4126" stroke-width="2.5"></circle>
+<circle cx="520" cy="59" fill="#fbf9f3" r="4.5" stroke="#2f4126" stroke-width="2.5"></circle>
+<!-- Peak Dry Period -->
+<circle cx="655" cy="56" fill="#46583b" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<!-- Calving Dip Point -->
+<circle cx="665" cy="176" fill="#7a461c" r="6" stroke="#ffffff" stroke-width="2.5"></circle>
+<circle cx="800" cy="125" fill="#fbf9f3" r="4.5" stroke="#2f4126" stroke-width="2.5"></circle>
+<!-- Current Reading Point (Oct 24) -->
+<circle cx="930" cy="104" fill="#2f4126" r="7" stroke="#d4e9c3" stroke-width="3"></circle>
+<!-- Calving Annotation Callout -->
+<g transform="translate(620, 195)">
+<rect fill="#f0eee8" height="28" rx="6" stroke="#DFDED5" stroke-width="0.5" width="110"></rect>
+<text fill="#5e3007" font-family="Inter" font-size="10" font-weight="700" text-anchor="middle" x="55" y="18">Calving Nadir: 618 kg</text>
+</g>
+<!-- Current Weight Tooltip Callout -->
+<g transform="translate(810, 35)">
+<rect fill="#1b1c18" height="52" rx="8" width="140"></rect>
+<text fill="#eae8e2" font-family="Inter" font-size="10" font-weight="500" x="12" y="20">Oct 18, 2024 · 07:15 AM</text>
+<text fill="#ffffff" font-family="Manrope" font-size="14" font-weight="800" x="12" y="40">642.0 kg</text>
+<text fill="#b8cda8" font-family="Inter" font-size="10" font-weight="600" x="74" y="40">Chute Scale B-1</text>
+<!-- Tooltip pointer -->
+<polygon fill="#1b1c18" points="120,52 125,58 130,52"></polygon>
+</g>
+</svg>
+</div>
+<!-- Quick Trajectory Insight Ribbon -->
+<div class="flex flex-wrap items-center justify-between gap-space-md p-space-md rounded-xl bg-surface-container-low text-on-surface">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-primary text-xl">insights</span>
+<span class="font-body-md text-body-md">
+<strong>Trajectory Analysis:</strong> Cow has recovered <strong>+24.0 kg</strong> (+3.88%) since post-calving dip (618 kg on Jul 14), maintaining an optimal BCS of 3.25. Milk energy conversion rate matches Pen 02 benchmarks.
+          </span>
+</div>
+
+</div>
+</div>
+</div>
+<!-- Dual Split: Recorded Weights Table & Nutritional Diagnostic Context -->
+<div class="px-space-xl py-space-md grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Recorded Weights Data Table (8 Columns) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-lg flex items-center justify-between border-b border-surface-container-high/40">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Permitted Weigh Ledger</span>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-2 py-0.5 rounded font-mono">14 Logs / Cycle</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-base">filter_list</span>
+<span>Filter Station</span>
+</button>
+</div>
+</div>
+<!-- High Readability Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-lg">Date &amp; Time</th>
+<th class="py-3 px-space-md">Recorded Weight</th>
+<th class="py-3 px-space-md">Delta</th>
+<th class="py-3 px-space-md">Scale Station</th>
+<th class="py-3 px-space-md">Recorded By</th>
+<th class="py-3 px-space-md">BCS / Status</th>
+<th class="py-3 px-space-lg text-right">Audit Flag</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1: Today -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-space-lg font-mono text-label-md font-semibold text-on-surface">
+                  Oct 18, 2024 · <span class="text-on-surface-variant font-normal">07:15 AM</span>
+</td>
+<td class="py-3.5 px-space-md font-mono text-on-surface font-bold">
+                  642.0 kg
+                </td>
+<td class="py-3.5 px-space-md font-mono text-label-sm text-primary font-semibold">
+                  +3.5 kg
+                </td>
+<td class="py-3.5 px-space-md text-label-md text-on-surface-variant flex items-center gap-1.5"><span>Chute Scale B-1</span></td>
+<td class="py-3.5 px-space-md text-label-sm text-on-surface">
+<span class="font-medium">Marcus Vance</span>
+<span class="block text-[11px] text-on-surface-variant">[Verified Shift A]</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-semibold bg-secondary-container text-on-secondary-container">
+                    3.25 Optimal
+                  </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="material-symbols-outlined text-secondary text-base" title="System Auto-Matched with RFID">verified</span>
+</td>
+</tr>
+<!-- Row 2: 7 Days ago -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-space-lg font-mono text-label-md font-semibold text-on-surface">
+                  Oct 11, 2024 · <span class="text-on-surface-variant font-normal">06:50 AM</span>
+</td>
+<td class="py-3.5 px-space-md font-mono text-on-surface font-bold">
+                  638.5 kg
+                </td>
+<td class="py-3.5 px-space-md font-mono text-label-sm text-primary font-semibold">
+                  +1.0 kg
+                </td>
+<td class="py-3.5 px-space-md text-label-md text-on-surface-variant flex items-center gap-1.5"><span>Rotary Platform Ingress</span></td>
+<td class="py-3.5 px-space-md text-label-sm text-on-surface">
+<span class="font-mono text-on-surface-variant">RS-485 Telemetry</span>
+<span class="block text-[11px] text-on-surface-variant">[Automated Capture]</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-medium bg-surface-container text-on-surface">
+                    3.25 Optimal
+                  </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="material-symbols-outlined text-secondary text-base" title="Telemetry Verified">check_circle</span>
+</td>
+</tr>
+<!-- Row 3: 14 Days ago -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-space-lg font-mono text-label-md font-semibold text-on-surface">
+                  Oct 04, 2024 · <span class="text-on-surface-variant font-normal">07:22 AM</span>
+</td>
+<td class="py-3.5 px-space-md font-mono text-on-surface font-bold">
+                  637.5 kg
+                </td>
+<td class="py-3.5 px-space-md font-mono text-label-sm text-primary font-semibold">
+                  +2.5 kg
+                </td>
+<td class="py-3.5 px-space-md text-label-md text-on-surface-variant flex items-center gap-1.5"><span>Chute Scale B-1</span></td>
+<td class="py-3.5 px-space-md text-label-sm text-on-surface">
+<span class="font-medium">Marcus Vance</span>
+<span class="block text-[11px] text-on-surface-variant">[Verified Shift A]</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-medium bg-surface-container text-on-surface">
+                    3.20 Normal
+                  </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+</td>
+</tr>
+<!-- Row 4: Monthly Vet Intake -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-space-lg font-mono text-label-md font-semibold text-on-surface">
+                  Sep 20, 2024 · <span class="text-on-surface-variant font-normal">10:14 AM</span>
+</td>
+<td class="py-3.5 px-space-md font-mono text-on-surface font-bold">
+                  635.0 kg
+                </td>
+<td class="py-3.5 px-space-md font-mono text-label-sm text-primary font-semibold">
+                  +4.0 kg
+                </td>
+<td class="py-3.5 px-space-md text-label-md text-on-surface-variant flex items-center gap-1.5"><span>Vet Intake Station</span></td>
+<td class="py-3.5 px-space-md text-label-sm text-on-surface">
+<span class="font-medium">Dr. Jenkins, DVM</span>
+<span class="block text-[11px] text-on-surface-variant">[Clinical Routine]</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-medium bg-surface-container text-on-surface">
+                    3.20 Normal
+                  </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="material-symbols-outlined text-primary text-base" title="Clinically Signed">verified_user</span>
+</td>
+</tr>
+<!-- Row 5: August Recovery -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-space-lg font-mono text-label-md font-semibold text-on-surface">
+                  Aug 15, 2024 · <span class="text-on-surface-variant font-normal">06:40 AM</span>
+</td>
+<td class="py-3.5 px-space-md font-mono text-on-surface font-bold">
+                  626.0 kg
+                </td>
+<td class="py-3.5 px-space-md font-mono text-label-sm text-primary font-semibold">
+                  +8.0 kg
+                </td>
+<td class="py-3.5 px-space-md text-label-md text-on-surface-variant flex items-center gap-1.5"><span>Rotary Platform Ingress</span></td>
+<td class="py-3.5 px-space-md text-label-sm text-on-surface">
+<span class="font-mono text-on-surface-variant">RS-485 Telemetry</span>
+<span class="block text-[11px] text-on-surface-variant">[Automated Capture]</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-medium bg-surface-container text-on-surface">
+                    3.00 Recovery
+                  </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+</td>
+</tr>
+<!-- Row 6: Calving Event Nadir -->
+<tr class="bg-tertiary-container/10 hover:bg-tertiary-container/20 transition-colors">
+<td class="py-3.5 px-space-lg font-mono text-label-md font-semibold text-tertiary">
+                  Jul 14, 2024 · <span class="text-on-surface-variant font-normal">02:30 PM</span>
+</td>
+<td class="py-3.5 px-space-md font-mono text-tertiary font-bold">
+                  618.0 kg
+                </td>
+<td class="py-3.5 px-space-md font-mono text-label-sm text-error font-semibold">
+                  -40.0 kg
+                </td>
+<td class="py-3.5 px-space-md text-label-md text-on-surface-variant flex items-center gap-1.5"><span>Maternity Barn Scale M-2</span></td>
+<td class="py-3.5 px-space-md text-label-sm text-on-surface">
+<span class="font-medium">Sarah Jenkins</span>
+<span class="block text-[11px] text-tertiary font-semibold">[Post-Calving Nadir]</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed">
+                    2.85 Post-Calv
+                  </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="material-symbols-outlined text-tertiary text-base" title="Flagged Post-Partum">priority_high</span>
+</td>
+</tr>
+<!-- Row 7: Pre-Calving Peak -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-space-lg font-mono text-label-md font-semibold text-on-surface">
+                  Jun 28, 2024 · <span class="text-on-surface-variant font-normal">08:00 AM</span>
+</td>
+<td class="py-3.5 px-space-md font-mono text-on-surface font-bold">
+                  658.0 kg
+                </td>
+<td class="py-3.5 px-space-md font-mono text-label-sm text-primary font-semibold">
+                  +1.0 kg
+                </td>
+<td class="py-3.5 px-space-md text-label-md text-on-surface-variant flex items-center gap-1.5"><span>Chute Scale B-1</span></td>
+<td class="py-3.5 px-space-md text-label-sm text-on-surface">
+<span class="font-medium">Marcus Vance</span>
+<span class="block text-[11px] text-on-surface-variant">[Dry Period Exit]</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-medium bg-surface-container text-on-surface">
+                    3.50 Pre-dry
+                  </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-md bg-surface-container-low/50 flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<span>Showing 7 of 14 recordings in cycle</span>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high transition-colors font-mono text-xs" type="button">Prev</button>
+<span class="font-mono text-xs text-on-surface font-bold">1 / 2</span>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high transition-colors font-mono text-xs" type="button">Next</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Weight Analysis & Nutritional Context (4 Columns) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Benchmark Analytics Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Cycle Thresholds</span>
+<span class="material-symbols-outlined text-secondary text-xl">query_stats</span>
+</div>
+<div class="flex flex-col gap-space-sm divide-y divide-surface-container">
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Peak Weight (Pre-Calv):</span>
+<span class="font-mono font-bold text-on-surface text-label-lg">658.0 kg</span>
+</div>
+<div class="pt-space-sm flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Lowest Nadir (Calving):</span>
+<span class="font-mono font-bold text-tertiary text-label-lg">618.0 kg</span>
+</div>
+<div class="pt-space-sm flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Average Lactation Weight:</span>
+<span class="font-mono font-bold text-on-surface text-label-lg">638.5 kg</span>
+</div>
+<div class="pt-space-sm flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Herd Pen 02 Cohort Mean:</span>
+<span class="font-mono font-bold text-secondary text-label-lg">640.2 kg</span>
+</div>
+<div class="pt-space-sm flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Dry Matter Intake Index:</span>
+<span class="font-mono font-bold text-primary text-label-lg">24.2 kg DMI / day</span>
+</div>
+</div>
+</div>
+<!-- Feed Cross-Reference Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-lg">grass</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Active Ration Match</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">Bunk TMR-01 High Lactation</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Current weight trend correlates directly with Bunk TMR-01 feeding plan assigned to Pen 02. Fiber-to-energy ratio maintains rumen stability without excessive fat deposit.
+        </p>
+<!-- Composition breakdown visual bar -->
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-semibold">TMR Composition</span>
+<span class="text-on-surface-variant font-mono">100% Total Mixed</span>
+</div>
+<div class="h-3 w-full rounded-full overflow-hidden flex bg-surface-container">
+<div class="h-full bg-primary" style="width: 52%" title="52% Corn Silage"></div>
+<div class="h-full bg-secondary" style="width: 24%" title="24% Alfalfa Hay"></div>
+<div class="h-full bg-tertiary-container" style="width: 24%" title="24% Protein Premix"></div>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-1 font-label-sm text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary shrink-0"></span>
+<span>52% Silage</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+<span>24% Alfalfa</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary-container shrink-0"></span>
+<span>24% Premix</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Station Telemetry Health Tile -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-2xl">scale</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Chute Scale B-1 Status</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Calibration Validated · Zero Drift &lt;0.05%</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-mono font-bold">ONLINE</span>
+</div>
+</div>
+</div>
+<!-- Operational Audit Footer Banner -->
+<div class="px-space-xl py-space-lg mt-space-md mb-space-2xl">
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant font-label-md text-label-md"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-primary text-xl">fact_check</span><span>Recorded weight history verified for <strong>Bella Vista 420</strong> (Barn Zone A).</span></div><div class="flex items-center gap-space-md font-mono text-label-sm"><span>Supervisor ID: SV-042-MV</span></div></div>
+</div>
+</div>
+<!-- Interactive Client-side Script for Cow Switcher & Interactions -->
+<script>
+  (function initWeightViewInteractions() {
+    const switcherBtn = document.getElementById('quick-switcher-btn');
+    if (switcherBtn) {
+      switcherBtn.addEventListener('click', () => {
+        // Subtle haptic ripple / visual response for rapid switching in barn setting
+        switcherBtn.classList.toggle('ring-2');
+        switcherBtn.classList.toggle('ring-primary');
+      });
+    }
+  })();
+</script></main></div>
+
+</body></html>

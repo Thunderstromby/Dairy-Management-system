@@ -1,0 +1,624 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#f5f3ed", "tertiary": "#5e3007", "surface-bright": "#fbf9f3", "inverse-surface": "#30312d", "on-secondary-fixed": "#141f0a", "on-surface-variant": "#444840", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#bdcbac", "on-primary": "#ffffff", "on-secondary": "#ffffff", "tertiary-container": "#7a461c", "error": "#ba1a1a", "on-error-container": "#93000a", "secondary-fixed": "#d9e8c7", "primary-container": "#46583b", "primary-fixed": "#d4e9c3", "on-tertiary-fixed-variant": "#6c3a11", "inverse-on-surface": "#f3f1eb", "on-background": "#1b1c18", "outline-variant": "#c4c8bd", "error-container": "#ffdad6", "surface-tint": "#516446", "tertiary-fixed-dim": "#ffb784", "on-tertiary-container": "#ffb785", "on-tertiary-fixed": "#301400", "surface": "#fbf9f3", "secondary": "#556249", "primary": "#2f4126", "on-primary-fixed-variant": "#3a4c30", "on-error": "#ffffff", "background": "#fbf9f3", "surface-container-high": "#eae8e2", "on-primary-container": "#b8cda9", "primary-fixed-dim": "#b8cda8", "tertiary-fixed": "#ffdcc6", "outline": "#75786f", "surface-container-lowest": "#ffffff", "surface-container-highest": "#e4e2dd", "on-secondary-fixed-variant": "#3e4b32", "surface-container": "#f0eee8", "surface-variant": "#e4e2dd", "on-secondary-container": "#5b694e", "on-surface": "#1b1c18", "inverse-primary": "#b8cda8", "surface-dim": "#dcdad4", "on-primary-fixed": "#101f08", "secondary-container": "#d9e8c7" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "space-xs": "0.25rem", "space-md": "1rem", "space-sm": "0.5rem", "margin": "2rem", "margin-mobile": "1rem", "gutter-mobile": "0.75rem", "gutter": "1.5rem", "space-lg": "1.5rem" }, "fontFamily": { "body-sm": ["Inter"], "display-lg": ["Manrope"], "data-metric-md": ["Inter"], "display-lg-mobile": ["Manrope"], "headline-xl-mobile": ["Manrope"], "data-metric-lg": ["Manrope"], "body-lg": ["Inter"], "headline-lg": ["Manrope"], "headline-sm": ["Manrope"], "headline-md": ["Manrope"], "headline-xl": ["Manrope"], "body-md": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"] }, "fontSize": { "body-sm": ["0.75rem", { "lineHeight": "1rem", "fontWeight": "400" }], "display-lg": ["3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "data-metric-md": ["1.25rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "display-lg-mobile": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "data-metric-lg": ["2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "400" }], "headline-lg": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "headline-md": ["1.375rem", { "lineHeight": "1.75rem", "fontWeight": "600" }], "headline-xl": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" }], "label-md": ["0.875rem", { "lineHeight": "1.25rem", "fontWeight": "500" }], "label-sm": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low z-50 flex flex-col justify-between overflow-y-auto shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-low"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[20px]">agriculture</span></div><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate">SmartFarm OS</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">GF-042 • Greenfield</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container flex items-center justify-between text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span><span class="font-label-sm text-label-sm">Barn Sector 4A</span></div><span class="w-2 h-2 rounded-full bg-primary"></span></div></div><nav class="flex flex-col px-space-sm py-space-xs gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md"><div class="px-space-sm pt-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Operations Core</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Dashboard</span></a><div class="px-space-sm pt-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Herd &amp; Livestock</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="animal-list" href="#"><span class="material-symbols-outlined text-[20px]">pets</span><span class="font-label-md text-label-md">Animal List</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="lifecycle-and-lineage-history" href="#"><span class="material-symbols-outlined text-[20px]">account_tree</span><span class="font-label-md text-label-md">Lifecycle &amp; Lineage</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="weight-history-and-growth-analytics" href="#"><span class="material-symbols-outlined text-[20px]">scale</span><span class="font-label-md text-label-md">Weight &amp; Growth</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="animal-health" href="#"><span class="material-symbols-outlined text-[20px]">stethoscope</span><span class="font-label-md text-label-md">Animal Health</span></a><div class="px-space-sm pt-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Production &amp; Parlor</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="milk-production" href="#"><span class="material-symbols-outlined text-[20px]">water_drop</span><span class="font-label-md text-label-md">Milk Production</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="milk-management" href="#"><span class="material-symbols-outlined text-[20px]">propane_tank</span><span class="font-label-md text-label-md">Milk Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="feeding" href="#"><span class="material-symbols-outlined text-[20px]">grass</span><span class="font-label-md text-label-md">Feeding &amp; Rations</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventory" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-md text-label-md">Inventory &amp; Silos</span></a><div class="px-space-sm pt-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Workforce &amp; Assets</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="workers" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-label-md text-label-md">Workers</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="attendance" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-label-md text-label-md">Attendance</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="payroll" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span class="font-label-md text-label-md">Payroll</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="finance" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span class="font-label-md text-label-md">Finance</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="equipment" href="#"><span class="material-symbols-outlined text-[20px]">precision_manufacturing</span><span class="font-label-md text-label-md">Equipment</span></a><div class="px-space-sm pt-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Governance</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="supervisor-access" href="#"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span><span class="font-label-md text-label-md">Supervisor Access</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">assessment</span><span class="font-label-md text-label-md">Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="data-management" href="#"><span class="material-symbols-outlined text-[20px]">database</span><span class="font-label-md text-label-md">Data Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-md text-label-md">Settings</span></a></nav></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant"><span class="hover:text-on-surface cursor-pointer">Greenfield Dairy Estate</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="text-on-surface font-semibold">Workspace GF-042</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant w-64 justify-between cursor-pointer hover:bg-surface-container transition-colors"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm">Search tag, pen, worker...</span></div><kbd class="px-1.5 py-0.5 rounded bg-surface font-label-sm text-label-sm text-outline border border-outline-variant">⌘K</kbd></div></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="h-6 w-[1px] bg-outline-variant"></div><div class="flex items-center gap-space-sm cursor-pointer"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-semibold">Elena Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant">Estate Farm Admin</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-gutter"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Breadcrumb & Title Block -->
+<div class="flex flex-col gap-space-xs pt-space-md mb-space-lg">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<span>Herd &amp; Livestock</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Animal Health</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Veterinary Appointments</span>
+</div>
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md mt-space-xs">
+<div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">
+          Veterinary Appointments &amp; Clinical Schedule
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl mt-1">
+          Coordinated on-site veterinary visits, routine herd health audits, emergency triage callouts, and clinical consultation logs for Greenfield Dairy Estate (GF-042).
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors shadow-sm" id="btnOpenExport" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+<span>Sync Calendar / Export</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-tertiary-container hover:bg-surface-container font-label-md text-label-md transition-colors shadow-sm" id="btnEmergencyCallout" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">emergency</span>
+<span class="font-semibold text-tertiary">Emergency Vet Callout</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-colors shadow-md" id="btnScheduleModalOpen" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="font-semibold">Schedule Appointment</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Operational KPI Strip (Bento cards without borders, elevated tone shifts) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Upcoming Visits -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-3 -top-3 w-20 h-20 rounded-full bg-surface-container opacity-60 pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Upcoming Visits</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[20px]">event_available</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-data-metric-lg text-data-metric-lg text-on-surface font-bold">3</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Scheduled</span>
+</div>
+<div class="flex items-center gap-space-xs mt-2 text-primary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Next: Tomorrow, Oct 25 @ 08:30 AM</span>
+</div>
+</div>
+</div>
+<!-- Routine Herd Check Cadence -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Routine Check Cadence</span>
+<span class="p-1.5 rounded-lg bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]">published_with_changes</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-data-metric-lg text-data-metric-lg text-on-surface font-bold">Bi-Weekly</span>
+</div>
+<div class="flex items-center gap-space-xs mt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">update</span>
+<span>14-day protocol: Day 4 of current interval</span>
+</div>
+</div>
+</div>
+<!-- Attending Practice -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Primary Practice</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">medical_services</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">
+          Valley Veterinary Services
+        </div>
+<div class="text-on-surface-variant font-body-sm text-body-sm mt-1 truncate">
+          Dr. Robert Chen, DVM • Dr. Sarah Jenkins, BVSc
+        </div>
+</div>
+</div>
+<!-- Animals Flagged for Consult -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Awaiting Examination</span>
+<span class="p-1.5 rounded-lg bg-error-container text-on-error-container">
+<span class="material-symbols-outlined text-[20px]">flag</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-data-metric-lg text-data-metric-lg text-error font-bold">9</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Head Triage Queued</span>
+</div>
+<div class="flex items-center gap-space-xs mt-2 text-tertiary font-label-sm text-label-sm">
+<span>2 Mastitis Isolation • 7 Fresh Calvers</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Clinical Notice & Quick Filter Bar -->
+<div class="p-space-md rounded-xl bg-surface-container-low mb-space-md flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Filter options -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">filter_list</span>
+<span class="font-label-sm text-label-sm font-semibold">Status:</span>
+<select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer" id="filterStatus">
+<option value="all">All Visits (18)</option>
+<option selected="" value="upcoming">Upcoming / Active (3)</option>
+<option value="completed">Completed (12)</option>
+<option value="emergency">Emergency / Urgent (1)</option>
+</select>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">category</span>
+<span class="font-label-sm text-label-sm font-semibold">Type:</span>
+<select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option value="all">All Types</option>
+<option value="routine">Routine Herd Check</option>
+<option value="pregnancy">Pregnancy Ultrasound</option>
+<option value="emergency">Emergency Callout</option>
+<option value="statutory">Statutory Bio-Audit</option>
+</select>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">stethoscope</span>
+<span class="font-label-sm text-label-sm font-semibold">Veterinarian:</span>
+<select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option value="all">All Attending Vets</option>
+<option value="chen">Dr. Robert Chen, DVM</option>
+<option value="jenkins">Dr. Sarah Jenkins, BVSc</option>
+</select>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">date_range</span>
+<span class="font-body-sm text-body-sm">Oct 01 - Oct 31, 2024</span>
+</div>
+</div>
+<!-- Right mini-tools -->
+<div class="flex items-center gap-space-xs self-end lg:self-auto">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Showing 4 major recent &amp; queued records</span>
+<button class="p-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant" title="Refresh Table">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- Main Appointments Master Table & Timeline Block -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden mb-space-lg">
+<div class="p-space-md px-space-lg flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary">assignment</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Master Clinical Schedule &amp; Consult Log</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Digital V-Form 2.4 Validated</span>
+</div>
+</div>
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md font-semibold">Appointment ID</th>
+<th class="py-3 px-space-md font-semibold">Date &amp; Shift</th>
+<th class="py-3 px-space-md font-semibold">Clinical Purpose &amp; Scope</th>
+<th class="py-3 px-space-md font-semibold">Attending Vet</th>
+<th class="py-3 px-space-md font-semibold">Target Animals / Pens</th>
+<th class="py-3 px-space-md font-semibold text-center">Status</th>
+<th class="py-3 px-space-md font-semibold">Consultation Notes / Findings</th>
+<th class="py-3 px-space-md font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-md text-body-md">
+<!-- Row 1: APT-2024-102 (Tomorrow Upcoming) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors cursor-pointer group" onclick="openDetailsDrawer('APT-2024-102')">
+<td class="py-4 px-space-md align-top">
+<div class="font-mono text-body-sm font-semibold text-primary">APT-2024-102</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Routine Bi-Weekly</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="font-semibold text-on-surface">Oct 25, 2024</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">08:30 - 11:30 AM</div>
+</td>
+<td class="py-4 px-space-md align-top max-w-xs">
+<div class="font-semibold text-on-surface">Fresh Cow Metabolic &amp; Udder Follow-up</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Post-calving subclinical ketosis and colostrum quality testing.</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="font-medium text-on-surface">Dr. Robert Chen, DVM</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Valley Vet Services</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-wrap gap-1 mb-1">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded font-mono text-body-sm bg-surface-container text-on-surface">ET-GF-8711</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded font-mono text-body-sm bg-surface-container text-on-surface">ET-GF-8849</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded font-mono text-body-sm bg-surface-container text-on-surface">+2 more</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Barn Sector 4A • Pen 04 &amp; H-1</div>
+</td>
+<td class="py-4 px-space-md align-top text-center">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-label-sm font-label-sm font-semibold bg-secondary-container text-on-secondary-container">
+                Scheduled (Confirmed)
+              </span>
+</td>
+<td class="py-4 px-space-md align-top max-w-xs">
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+                Headlocks to be secured by 08:15. Blood ketone strips and ultrasound probe prepped in cart.
+              </p>
+</td>
+<td class="py-4 px-space-md align-top text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-space-xs">
+<button class="px-2 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm" onclick="event.stopPropagation(); openDetailsDrawer('APT-2024-102')">
+                  Details
+                </button>
+<button class="px-2 py-1 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm" onclick="event.stopPropagation(); alert('Staging examination roster for APT-2024-102...')">
+                  Pre-Check
+                </button>
+</div>
+</td>
+</tr>
+<!-- Row 2: APT-2024-101 (Upcoming Cohort) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors cursor-pointer group bg-surface-container-lowest" onclick="openDetailsDrawer('APT-2024-101')">
+<td class="py-4 px-space-md align-top">
+<div class="font-mono text-body-sm font-semibold text-primary">APT-2024-101</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Statutory Prophylaxis</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="font-semibold text-on-surface">Oct 28, 2024</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">13:00 - 16:00 PM</div>
+</td>
+<td class="py-4 px-space-md align-top max-w-xs">
+<div class="font-semibold text-on-surface">Semi-Annual Heifer Prophylaxis &amp; Brucellosis</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Statutory calfhood vaccination &amp; ear notch tagging protocol.</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="font-medium text-on-surface">Dr. Sarah Jenkins, BVSc</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Valley Vet Services</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-on-surface font-semibold">
+                Cohort Pen 02 (124 Head)
+              </span>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Heifer Development Unit</div>
+</td>
+<td class="py-4 px-space-md align-top text-center">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-label-sm font-label-sm font-semibold bg-surface-container text-on-surface-variant">
+                Scheduled
+              </span>
+</td>
+<td class="py-4 px-space-md align-top max-w-xs">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                State health forms pre-printed. Tag batch #BR-2024 verified with regional agricultural dept.
+              </p>
+</td>
+<td class="py-4 px-space-md align-top text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-space-xs">
+<button class="px-2 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm" onclick="event.stopPropagation(); openDetailsDrawer('APT-2024-101')">
+                  Details
+                </button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-on-surface-variant" onclick="event.stopPropagation();" title="Edit Schedule">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: APT-2024-099 (Completed Emergency Callout - Highlighted with interactive detail) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors cursor-pointer bg-surface-container-low/30" onclick="openDetailsDrawer('APT-2024-099')">
+<td class="py-4 px-space-md align-top">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">priority_high</span>
+<span class="font-mono text-body-sm font-bold text-on-surface">APT-2024-099</span>
+</div>
+<div class="font-body-sm text-body-sm text-tertiary font-semibold">Emergency Callout</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="font-semibold text-on-surface">Oct 21, 2024</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">09:15 AM (Triage)</div>
+</td>
+<td class="py-4 px-space-md align-top max-w-xs">
+<div class="font-semibold text-on-surface">Acute Mastitis Evaluation &amp; Culture</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Right rear quarter systemic pyrexia (40.8°C). Intramammary therapy prescribed.</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="font-medium text-on-surface">Dr. Robert Chen, DVM</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Emergency Triage Unit</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-mono text-body-sm bg-error-container text-on-error-container font-semibold">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span>ET-GF-8711</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Isolation Pen H-1</div>
+</td>
+<td class="py-4 px-space-md align-top text-center">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-label-sm font-label-sm font-semibold bg-primary-fixed text-on-primary-fixed">
+                Completed
+              </span>
+</td>
+<td class="py-4 px-space-md align-top max-w-xs">
+<div class="font-body-sm text-body-sm text-on-surface">
+                Rx Prescribed: Ceftiofur sodium + Flunixin meglumine.
+                <span class="text-error font-medium">Withholding: 48h active milk discard.</span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-space-xs">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium" onclick="event.stopPropagation(); openDetailsDrawer('APT-2024-099')">
+                  Audit Log
+                </button>
+<button class="px-2 py-1 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high" onclick="event.stopPropagation(); alert('Exporting signed prescription V-FORM-TX-2024-089...')" title="Print Veterinary Prescription">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: APT-2024-095 (Completed Ultrasound) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors cursor-pointer bg-surface-container-lowest" onclick="openDetailsDrawer('APT-2024-095')">
+<td class="py-4 px-space-md align-top">
+<div class="font-mono text-body-sm font-semibold text-primary">APT-2024-095</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Repro Management</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="font-semibold text-on-surface">Oct 14, 2024</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">10:00 - 12:45 PM</div>
+</td>
+<td class="py-4 px-space-md align-top max-w-xs">
+<div class="font-semibold text-on-surface">35-Day Pregnancy Transrectal Ultrasound</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Artificial Insemination cohort cycle confirmation.</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="font-medium text-on-surface">Dr. Robert Chen, DVM</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Valley Vet Services</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-on-surface">
+                18 Cows (Pen 03)
+              </span>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Milking Lactation Group 2</div>
+</td>
+<td class="py-4 px-space-md align-top text-center">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-label-sm font-label-sm font-semibold bg-primary-fixed text-on-primary-fixed">
+                Completed
+              </span>
+</td>
+<td class="py-4 px-space-md align-top max-w-xs">
+<div class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-primary">16 Confirmed Pregnant (88.8% conception).</span>
+                2 Open marked for synchronized resynch protocol.
+              </div>
+</td>
+<td class="py-4 px-space-md align-top text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-space-xs">
+<button class="px-2 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm" onclick="event.stopPropagation(); openDetailsDrawer('APT-2024-095')">
+                  Details
+                </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span>Displaying rows 1 through 4 of 18 records</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface disabled:opacity-40" disabled="">Previous</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-semibold">1</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container">2</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container">3</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container">Next</button>
+</div>
+</div>
+</div>
+<!-- Expandable Schedule Appointment Form (High-Fidelity Slide-in / Collapsible Section) -->
+<div class="hidden bg-surface-container-lowest rounded-xl shadow-lg p-space-lg mb-space-lg transition-all" id="appointmentFormSection">
+<div class="flex items-start justify-between pb-space-md mb-space-md border-b-0">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="p-1.5 rounded-lg bg-primary text-on-primary">
+<span class="material-symbols-outlined text-[18px]">add_task</span>
+</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">Schedule Clinical Visit / Veterinary Audit</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Issue a clinical requisition, notify the attending veterinary clinic, and queue barn technicians for cattle restraint.
+        </p>
+</div>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant" id="btnCloseForm" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-md" id="newAppointmentForm" onsubmit="event.preventDefault(); submitScheduleForm();">
+<!-- Purpose & Subject -->
+<div class="col-span-1 md:col-span-2 flex flex-col gap-1">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface">Appointment Subject / Clinical Purpose *</label>
+<input class="w-full px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface focus:outline-none" placeholder="e.g. Semi-Annual Hoof Trim Triage, Fresh Cow Protocol..." required="" type="text" value="Post-Calving Metritis Screening &amp; Fresh Cow Audit">
+</div>
+<!-- Appointment Type -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface">Appointment Classification *</label>
+<select class="w-full px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface focus:outline-none">
+<option>Routine Herd Check</option>
+<option>Emergency Callout</option>
+<option>Calving Assistance / Dystocia</option>
+<option>Pregnancy Diagnosis / Ultrasound</option>
+<option>Statutory Bio-Inspection</option>
+</select>
+</div>
+<!-- Attending Veterinarian -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface">Attending Veterinarian / Practice *</label>
+<select class="w-full px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface focus:outline-none">
+<option>Dr. Robert Chen, DVM (Valley Veterinary Services)</option>
+<option>Dr. Sarah Jenkins, BVSc (Valley Veterinary Services)</option>
+<option>County Large Animal State Inspector (Statutory)</option>
+</select>
+</div>
+<!-- Date & Window -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface">Scheduled Date &amp; Shift Window *</label>
+<div class="grid grid-cols-2 gap-2">
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none" type="date" value="2024-10-25">
+<select class="w-full px-2 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none">
+<option>08:30 - 11:30 AM</option>
+<option>12:00 - 15:00 PM</option>
+<option>16:00 - 19:00 PM</option>
+<option>Immediate Triage</option>
+</select>
+</div>
+</div>
+<!-- Target Animals / Ear Tags -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface">Target Ear Tags / Animals *</label>
+<input class="w-full px-space-md py-2 rounded-lg bg-surface-container-low font-mono text-body-md text-on-surface focus:bg-surface focus:outline-none" placeholder="Comma separated ear tags" type="text" value="ET-GF-8711, ET-GF-8849, ET-GF-8852">
+</div>
+<!-- Barn Location -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface">Barn Sector &amp; Pens *</label>
+<input class="w-full px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface focus:outline-none" type="text" value="Barn Sector 4A - Pen 04 &amp; Isolation Pen H-1">
+</div>
+<!-- Estimated Consultation Fee -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface">Estimated Consultation Fee ($)</label>
+<div class="relative">
+<span class="absolute left-3 top-2 text-on-surface-variant font-label-md">$</span>
+<input class="w-full pl-7 pr-space-md py-2 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface focus:outline-none" step="0.01" type="number" value="180.00">
+</div>
+</div>
+<!-- Pre-visit preparation instructions -->
+<div class="col-span-1 md:col-span-2 xl:col-span-3 flex flex-col gap-1">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface">Clinical Reason &amp; Preparation Instructions *</label>
+<textarea class="w-full px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface focus:outline-none" placeholder="Provide notes for farm hands: restraining protocol, medication staging, prior history..." rows="3">Headlocks engaged by 08:15 AM; have CMT paddle and rectal probe ready at head of aisle. Technicians Lopez and Garza assigned for cattle restraint.</textarea>
+</div>
+<!-- Form Actions -->
+<div class="col-span-1 md:col-span-2 xl:col-span-3 flex items-center justify-end gap-space-sm pt-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md" onclick="document.getElementById('appointmentFormSection').classList.add('hidden')" type="button">
+          Cancel
+        </button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md" onclick="alert('Draft clinical visit saved to local queue.')" type="button">
+          Save Draft
+        </button>
+<button class="px-space-lg py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-md" type="submit">
+          Confirm &amp; Schedule Appointment
+        </button>
+</div>
+</form>
+</div>
+<!-- Interactive Slide-Out / Drawer: Detail View for Selected Appointment (APT-2024-099 default visible) -->
+<div class="p-space-lg rounded-xl bg-surface-container-low mb-space-lg" id="drawerAPT099">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between pb-space-md gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">assignment_turned_in</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Consultation Audit Log: APT-2024-099</span>
+<span class="px-2 py-0.5 rounded font-mono text-label-sm bg-primary-fixed text-on-primary-fixed font-semibold">Verified Electronic Rx</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Emergency Triage record logged on Oct 21, 2024 • Attending: Dr. Robert Chen, DVM (State Lic #VET-9942)
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Linked Treatment TX:</span>
+<span class="font-mono text-label-sm font-bold px-2 py-1 bg-surface-container-lowest text-primary rounded shadow-sm">TX-2024-089</span>
+</div>
+</div>
+<!-- Clinical Details Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-md">
+<!-- Subject Cow & Condition -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Patient Identification</span>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-mono text-headline-sm font-bold text-on-surface">ET-GF-8711</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(Holstein 3rd Lact.)</span>
+</div>
+<div class="mt-space-sm space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between"><span>Current Pen:</span> <span class="font-medium text-on-surface">Isolation Pen H-1</span></div>
+<div class="flex justify-between"><span>Body Temp:</span> <span class="font-semibold text-error">40.8°C (Febrile)</span></div>
+<div class="flex justify-between"><span>Milk Yield Drop:</span> <span class="font-medium text-error">-14.2 L / 24h</span></div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant border-t border-outline-variant/30 pt-2"><span>Clinical Status:</span><span class="font-semibold text-secondary">Under Active Observation</span></div>
+</div>
+<!-- Clinical Findings & Prescriptions -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Diagnostic Findings &amp; Rx</span>
+<div class="font-body-md text-body-md font-semibold text-on-surface mt-1">
+            Severe Right-Rear Clinical Mastitis (E. coli suspect)
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Rapid California Mastitis Test (CMT): Score 3 (Gel formation). Swab sent for lab sensitivity plate.
+          </p>
+<div class="mt-space-xs p-2 rounded bg-surface-container-low font-body-sm text-body-sm text-on-surface space-y-0.5">
+<div>• Ceftiofur Sodium 2.2mg/kg IM (5 Days)</div>
+<div>• Flunixin Meglumine 1.1mg/kg IV (Anti-inflammatory)</div>
+</div>
+</div>
+<div class="mt-space-sm font-label-sm text-label-sm text-on-surface-variant">
+          Milk Withholding: <strong class="text-on-surface">48 Hours post-treatment completion</strong>
+</div>
+</div>
+<!-- Billing, Status & Signature -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Clinical Fiscal &amp; Sign-off</span>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-data-metric-md text-data-metric-md font-bold text-on-surface">$145.00</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Invoice #VET-INV-8119</span>
+</div>
+<div class="mt-space-sm space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between"><span>Audit Timestamp:</span> <span>2024-10-21 10:14 UTC</span></div>
+<div class="flex justify-between"><span>Follow-Up Visit:</span> <span class="font-semibold text-primary">Oct 25 (APT-2024-102)</span></div>
+<div class="flex justify-between"><span>Digital Key:</span> <span class="font-mono text-body-sm">SHA-256: d83f...a291</span></div>
+</div>
+</div>
+<div class="mt-space-md pt-2 flex items-center justify-between">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Digitally Authenticated</span>
+</div>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-semibold" onclick="alert('Downloading signed veterinary medical record PDF...')">
+            Download PDF
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Workspace Isolation & Governance Notice -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-primary">verified_user</span><span>Workspace <strong>GF-042 (Greenfield Dairy Estate)</strong>: Certified veterinary consultation audit log. Clinical records and prescriptions conform to livestock welfare compliance standards.</span></div><div class="flex items-center gap-space-xs font-mono text-body-sm shrink-0 text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span><span>Audit Log Synced</span></div></div>
+</div>
+<script>
+  // Micro-interaction behaviors for scheduling and drawer inspection
+  const scheduleBtn = document.getElementById('btnScheduleModalOpen');
+  const formSection = document.getElementById('appointmentFormSection');
+  const closeFormBtn = document.getElementById('btnCloseForm');
+
+  if (scheduleBtn && formSection) {
+    scheduleBtn.addEventListener('click', () => {
+      formSection.classList.remove('hidden');
+      formSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+
+  if (closeFormBtn && formSection) {
+    closeFormBtn.addEventListener('click', () => {
+      formSection.classList.add('hidden');
+    });
+  }
+
+  const emergencyBtn = document.getElementById('btnEmergencyCallout');
+  if (emergencyBtn) {
+    emergencyBtn.addEventListener('click', () => {
+      const confirmCall = confirm("EMERGENCY CALLOUT PROTOCOL:\nInitiate high-priority veterinary dispatch for Greenfield Dairy Estate (GF-042)? This will send instant SMS/Pager alerts to Valley Vet Services triage.");
+      if (confirmCall) {
+        alert("Emergency triage dispatched to Dr. Robert Chen DVM. Estimated response time: 25 minutes. Ear tag triage isolation alert logged.");
+      }
+    });
+  }
+
+  function submitScheduleForm() {
+    alert("Appointment successfully scheduled. Synchronized with Valley Veterinary Services cloud calendar.");
+    formSection.classList.add('hidden');
+  }
+
+  function openDetailsDrawer(appointmentId) {
+    const drawer = document.getElementById('drawerAPT099');
+    if (drawer) {
+      drawer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Visual feedback pulse
+      drawer.classList.add('ring-2', 'ring-primary/20');
+      setTimeout(() => drawer.classList.remove('ring-2', 'ring-primary/20'), 1200);
+    }
+  }
+
+  const exportBtn = document.getElementById('btnOpenExport');
+  if (exportBtn) {
+    exportBtn.addEventListener('click', () => {
+      alert("iCal/Google Calendar link generated: webcal://smartfarm.gf042.vet/clinical-schedule.ics\n\nSynchronizing herd check schedule.");
+    });
+  }
+</script></main></div>
+
+</body></html>

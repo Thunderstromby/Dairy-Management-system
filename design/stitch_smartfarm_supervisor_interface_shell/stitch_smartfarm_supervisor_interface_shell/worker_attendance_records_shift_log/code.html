@@ -1,0 +1,939 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-high": "#eae8e2", "inverse-primary": "#b8cda8", "on-secondary-fixed": "#141f0a", "surface-container-highest": "#e4e2dd", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#bdcbac", "tertiary-fixed-dim": "#ffb784", "on-primary-fixed-variant": "#3a4c30", "secondary-container": "#d9e8c7", "on-primary": "#ffffff", "on-background": "#1b1c18", "surface": "#fbf9f3", "inverse-on-surface": "#f3f1eb", "on-tertiary-fixed": "#301400", "on-primary-fixed": "#101f08", "on-tertiary-fixed-variant": "#6c3a11", "error-container": "#ffdad6", "on-surface-variant": "#444840", "on-error": "#ffffff", "on-secondary-container": "#5b694e", "primary": "#2f4126", "primary-fixed-dim": "#b8cda8", "on-primary-container": "#b8cda9", "on-tertiary-container": "#ffb785", "tertiary-container": "#7a461c", "surface-container-lowest": "#ffffff", "surface-tint": "#516446", "primary-container": "#46583b", "surface-variant": "#e4e2dd", "outline-variant": "#c4c8bd", "background": "#fbf9f3", "on-surface": "#1b1c18", "tertiary": "#5e3007", "error": "#ba1a1a", "surface-bright": "#fbf9f3", "inverse-surface": "#30312d", "on-secondary": "#ffffff", "surface-dim": "#dcdad4", "tertiary-fixed": "#ffdcc6", "on-secondary-fixed-variant": "#3e4b32", "primary-fixed": "#d4e9c3", "surface-container": "#f0eee8", "outline": "#75786f", "surface-container-low": "#f5f3ed", "on-error-container": "#93000a", "secondary": "#556249", "secondary-fixed": "#d9e8c7" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-md": "1.5rem", "space-md": "0.75rem", "margin": "1rem", "space-lg": "1rem", "space-2xl": "2rem", "gutter": "1rem", "space-xl": "1.5rem", "margin-lg": "2rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter-md": "1.25rem", "gutter-lg": "1.5rem" }, "fontFamily": { "label-md": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"], "headline-lg-mobile": ["Manrope"], "headline-xl-mobile": ["Manrope"], "label-lg": ["Inter"], "headline-xl": ["Manrope"], "headline-lg": ["Manrope"], "body-md": ["Inter"], "headline-sm": ["Manrope"], "headline-md": ["Manrope"] }, "fontSize": { "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "400" }], "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "fontWeight": "400" }], "headline-lg-mobile": ["1.375rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "800" }], "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["0.875rem", { "lineHeight": "1.375rem", "fontWeight": "400" }], "headline-sm": ["1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "headline-md": ["1.25rem", { "lineHeight": "1.625rem", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-xl flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><img alt="SmartFarm Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBYgTLzL4ixmW_u0Iuetl8cMytFAkTgo9j0OqmFpmR4ZdNIJA8TAM26gSRdozb0vdo_6xJy3scVi2laB3t23jDT5fSIe8Gnlt9IldNJ8j-8vQ9f0crSqtL97T814neAilUmvuxVi9XQNkQdm34ZBtCq3lRd3pGErjVhDlhDM1nNOW2QXZlG8cZB7Vpgu2pyG5oBekky3LdocMVoovOlsZt9zFE9JFdFVoDBX3w_DHLm0w"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none tracking-tight">SmartFarm</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-0.5">Supervisor Rail</span></div></div><button class="text-on-surface-variant hover:text-on-surface p-space-xs rounded-lg transition-colors" title="Toggle compact view" type="button"><span class="material-symbols-outlined text-lg leading-none">dock_to_right</span></button></div><div class="px-space-md py-space-sm"><div class="bg-surface-container px-space-md py-space-sm rounded-lg flex items-center justify-between"><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-on-surface-variant truncate">ESTATE CONTEXT</span><span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Greenfield Estate</span></div><span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-space-xs py-0.5 rounded font-mono">GF-042</span></div></div><nav class="flex-1 px-space-md py-space-xs space-y-0.5 overflow-y-auto" data-active-classes="bg-primary text-on-primary font-semibold shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-xl">dashboard</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animals" href="#"><span class="material-symbols-outlined text-xl">pets</span><span class="font-label-lg text-label-lg">Animals</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="animal-health" href="#"><span class="material-symbols-outlined text-xl">healing</span><span class="font-label-lg text-label-lg">Animal Health</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="milk-production" href="#"><span class="material-symbols-outlined text-xl">water_drop</span><span class="font-label-lg text-label-lg">Milk Production</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="feeding" href="#"><span class="material-symbols-outlined text-xl">grass</span><span class="font-label-lg text-label-lg">Feeding Plans</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#"><span class="material-symbols-outlined text-xl">inventory_2</span><span class="font-label-lg text-label-lg">Inventory Usage</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="workers-and-attendance" href="#"><span class="material-symbols-outlined text-xl">badge</span><span class="font-label-lg text-label-lg">Workers &amp; Attendance</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="equipment" href="#"><span class="material-symbols-outlined text-xl">precision_manufacturing</span><span class="font-label-lg text-label-lg">Equipment</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notifications" href="#"><span class="material-symbols-outlined text-xl">notifications</span><span class="font-label-lg text-label-lg">Operational Alerts</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#"><span class="material-symbols-outlined text-xl">analytics</span><span class="font-label-lg text-label-lg">Shift Reports</span></a></nav></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-md"><button class="md:hidden p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container" type="button"><span class="material-symbols-outlined text-xl">menu</span></button><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Greenfield Dairy Estate</span><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-space-xs py-0.5 rounded font-mono">GF-042</span></div><span class="text-outline-variant text-sm">/</span><div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-sm">fence</span><span>Barn Zone A</span></div></div><div class="flex items-center gap-space-lg"><div class="hidden sm:flex items-center gap-2 bg-secondary-container/60 px-space-md py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-secondary-fixed font-semibold tracking-wide uppercase">On Duty · Active</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Operational Notifications" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary-container ring-2 ring-surface"></span></button><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Toggle Theme Display" type="button"><span class="material-symbols-outlined text-xl">light_mode</span></button><div class="h-6 w-px bg-outline-variant/60"></div><div class="flex items-center gap-space-md pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKRfnvDtcXaA_3fouE5OFtLyyygvIskuxgsScuB3RWTNQvZ0TXW1jZMn6P1jecz8rtfhaoeatFRSlhGxosuymj0Z74Gb3NeY9k-HpkTV1gVECMz-aOx4ic5cbig5OeibpkMiehHyRDxNEqsS1DvY0suVPQHSm8HBgREiL03zsO3CyppQ6P6Lx7Kj2AY9MjJWACPCsVCG6YU3N1OMaaoQVLKC4LbU9ah5w1pjafjyse"><div class="hidden lg:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface font-semibold leading-tight">Marcus Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant">Farm Supervisor</span></div><span class="material-symbols-outlined text-on-surface-variant text-base cursor-pointer">arrow_drop_down</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Toast Notification (Rendered & visible by default, dismissible) -->
+<div class="sticky top-20 z-30 mx-space-xl mb-space-md p-space-md bg-secondary-container text-on-secondary-fixed rounded-lg shadow-md flex items-center justify-between gap-space-md transition-all duration-300" id="simulationToast">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0">
+<span class="material-symbols-outlined text-base">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-semibold truncate">Check-Out Recorded: Chloe Bennett (WK-0914)</span>
+<span class="font-body-sm text-body-sm text-on-secondary-fixed-variant">Shift logged at 13:30 PM. Handover verification recorded to Daily Barn Log.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-label-sm text-label-sm bg-surface-container-lowest/80 text-on-surface px-space-sm py-0.5 rounded font-mono">AUDIT-STAMP #4882</span>
+<button class="p-1 rounded hover:bg-surface-container-highest/60 text-on-surface-variant transition-colors" onclick="document.getElementById('simulationToast').classList.add('hidden')" title="Dismiss notification">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+</div>
+<!-- Simulation & Feedback State Toolbar -->
+
+<!-- 1. Workspace Context & Role Scope Boundary -->
+<section class="mx-space-xl mb-space-xl">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-space-sm">
+<span class="hover:text-primary cursor-pointer">Workspace GF-042</span>
+<span>/</span>
+<span class="hover:text-primary cursor-pointer">Barn Zone A</span>
+<span>/</span>
+<span class="hover:text-primary cursor-pointer">Workers &amp; Attendance</span>
+<span>/</span>
+<span class="text-on-surface font-semibold">Attendance Records</span>
+</nav>
+<!-- Header & Action Row -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-md">
+<div class="flex flex-col max-w-3xl">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Worker Attendance Records &amp; Daily Shift Roster</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Operational recording of barn crew check-in, check-out, active shift status, and permitted daily operational presence.</p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="h-12 px-space-lg rounded-lg bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface-container-low transition-colors flex items-center gap-space-xs" onclick="alert('Print Shift Roster: Generating shift operational sheet for Zone A.')">
+<span class="material-symbols-outlined text-base">print</span>
+<span>Print Shift Roster</span>
+</button>
+<button class="h-12 px-space-xl rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all flex items-center gap-space-xs" onclick="openDrawer('WK-0842')">
+<span class="material-symbols-outlined text-base">how_to_reg</span>
+<span>Record Attendance</span>
+</button>
+</div>
+</div>
+<!-- RBAC Boundary Callout -->
+<div class="bg-surface-container-low p-space-md rounded-lg shadow-sm flex items-start gap-space-md">
+<div class="w-9 h-9 rounded-lg bg-tertiary/10 text-tertiary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">admin_panel_settings</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-bold">Supervisor Operational Scope</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Read / Daily Logging Protocol</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+<span class="font-semibold text-on-surface">Daily Attendance Logging Only.</span> Wage calculation, hourly pay rates, overtime compensation approval, leave authorization/rejections, and retroactive attendance ledger corrections are restricted enterprise functions requiring Farm Admin or HR elevation.
+        </p>
+</div>
+</div>
+</section>
+<!-- 2. Permitted Daily Attendance Overview (KPI Cards) -->
+<section class="mx-space-xl mb-space-xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Active Crew On-Duty -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Active Crew On-Duty</span>
+<span class="w-7 h-7 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">group</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight">14</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-semibold">/ 16</span>
+</div>
+<div class="mt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-medium">87.5% Coverage Required</span>
+<span class="font-label-sm text-label-sm bg-secondary-container/60 text-on-secondary-fixed px-1.5 py-0.5 rounded font-mono">PARLOR + NURSERY</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 87.5%"></div>
+</div>
+</div>
+<!-- Status Breakdown -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Status Breakdown</span>
+<span class="w-7 h-7 rounded-lg bg-surface-container text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">pie_chart</span>
+</span>
+</div>
+<div class="grid grid-cols-4 gap-1 py-1">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">13</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Present</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">1</span>
+<span class="font-label-sm text-label-sm text-tertiary">Late (+15m)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-error font-bold">1</span>
+<span class="font-label-sm text-label-sm text-error">Absent</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">1</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Leave</span>
+</div>
+</div>
+<div class="mt-space-xs text-on-surface-variant font-label-sm text-label-sm truncate">
+        Late: Thomas Cole (Stall 08) · Absent: Mateo Rossi
+      </div>
+</div>
+<!-- Unrecorded Check-Outs -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Unrecorded Check-Outs</span>
+<span class="w-7 h-7 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">alarm_on</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-tertiary font-extrabold tracking-tight">12</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-semibold">Pending</span>
+</div>
+<div class="mt-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Shift End Targets:</span>
+<span class="font-mono font-semibold text-on-surface">13:30 AM / 21:00 PM</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<!-- Permitted Overtime Observation -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Overtime Observation</span>
+<span class="w-7 h-7 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">schedule</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">4.5</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-semibold">Hrs Logged</span>
+</div>
+<div class="mt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Shift Handover Tally</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Read-Only</span>
+</div>
+<div class="mt-2 text-[10px] text-on-surface-variant/80 font-mono leading-tight">
+        *Excludes rate/payroll calculation. Logged strictly for relief coverage.
+      </div>
+</div>
+</section>
+<!-- 3. Date & Worker Filter Controls -->
+<section class="mx-space-xl mb-space-md flex flex-col gap-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<!-- Row 1: Date Navigation & Search Field -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md">
+<!-- Date Picker Bar -->
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded-lg">
+<button class="w-9 h-9 rounded-lg hover:bg-surface-container text-on-surface flex items-center justify-center transition-colors" onclick="changeDay(-1)" title="Previous Day">
+<span class="material-symbols-outlined text-base">chevron_left</span>
+</button>
+<div class="flex items-center gap-space-xs px-space-sm">
+<span class="material-symbols-outlined text-primary text-base">calendar_today</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface whitespace-nowrap" id="currentDateDisplay">Thursday, 24 Oct 2024</span>
+</div>
+<button class="w-9 h-9 rounded-lg hover:bg-surface-container text-on-surface flex items-center justify-center transition-colors" onclick="changeDay(1)" title="Next Day">
+<span class="material-symbols-outlined text-base">chevron_right</span>
+</button>
+<button class="h-9 px-space-sm rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors" onclick="resetToday()">Today</button>
+</div>
+<!-- Search Input -->
+<div class="relative flex-1 max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-base">search</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container-low rounded-lg text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest transition-colors placeholder:text-outline" id="workerSearchInput" oninput="filterWorkers()" placeholder="Search worker name, ID (e.g. WK-0842), or station..." type="text">
+</div>
+</div>
+<!-- Row 2: Status Pills & Station Selectors -->
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md pt-space-xs">
+<!-- Status Pills -->
+<div class="flex flex-wrap items-center gap-space-xs" id="statusFilterPills">
+<button class="status-pill px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm transition-all" onclick="filterByStatus('all', this)">All Statuses (16)</button>
+<button class="status-pill px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-all" onclick="filterByStatus('Present', this)">Present (13)</button>
+<button class="status-pill px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-all" onclick="filterByStatus('Late', this)">Late (1)</button>
+<button class="status-pill px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-all" onclick="filterByStatus('Absent', this)">Absent (1)</button>
+<button class="status-pill px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-all" onclick="filterByStatus('Leave', this)">Leave (1)</button>
+</div>
+<!-- Station / Pen Filter Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto w-full lg:w-auto pb-1 lg:pb-0" id="stationFilterPills">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider shrink-0 mr-1">Station:</span>
+<button class="station-pill px-space-sm py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm shrink-0 font-medium" onclick="filterByStation('all', this)">All Stations</button>
+<button class="station-pill px-space-sm py-1 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container shrink-0" onclick="filterByStation('Rotary Parlor', this)">Rotary Parlor</button>
+<button class="station-pill px-space-sm py-1 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container shrink-0" onclick="filterByStation('Feed Bunk', this)">Feed Bunk</button>
+<button class="station-pill px-space-sm py-1 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container shrink-0" onclick="filterByStation('Calf Nursery', this)">Calf Nursery</button>
+<button class="station-pill px-space-sm py-1 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container shrink-0" onclick="filterByStation('Maintenance', this)">Maintenance</button>
+</div>
+</div>
+</section>
+<!-- 4. Main Content Area: Attendance Table + Side Record Details Drawer -->
+<div class="mx-space-xl mb-space-2xl grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Attendance Records Table Container (Col 8 or 12) -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col" id="tableContainer">
+<!-- Dynamic State: Loading Skeleton (Hidden by default) -->
+<div class="hidden p-space-xl space-y-4 animate-pulse" id="skeletonView">
+<div class="h-8 bg-surface-container rounded w-1/3"></div>
+<div class="h-12 bg-surface-container rounded"></div>
+<div class="h-12 bg-surface-container rounded"></div>
+<div class="h-12 bg-surface-container rounded"></div>
+<div class="h-12 bg-surface-container rounded"></div>
+</div>
+<!-- Dynamic State: Empty State (Hidden by default) -->
+<div class="hidden p-space-2xl flex-col items-center justify-center text-center" id="emptyView">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant mb-space-md">
+<span class="material-symbols-outlined text-3xl">event_busy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">No Attendance Records Found</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mt-1">There are no barn crew members matching the selected date or filter query for Zone A.</p>
+<button class="mt-space-md px-space-md py-2 bg-primary text-on-primary rounded-lg font-label-md text-label-md" onclick="resetFilters()">Reset Roster Filters</button>
+</div>
+<!-- Live Roster Table -->
+<div class="overflow-x-auto" id="tableView">
+<table class="w-full text-left text-on-surface">
+<thead class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="py-3 px-space-md" scope="col">Worker &amp; Station</th>
+<th class="py-3 px-space-sm" scope="col">Date</th>
+<th class="py-3 px-space-sm" scope="col">Check-In</th>
+<th class="py-3 px-space-sm" scope="col">Check-Out</th>
+<th class="py-3 px-space-sm" scope="col">Status</th>
+<th class="py-3 px-space-sm" scope="col">Overtime (Hrs)</th>
+<th class="py-3 px-space-md text-right" scope="col">Supervisor Action</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md" id="workerTableBody">
+<!-- Row 1: David Morales -->
+<tr class="worker-row hover:bg-surface-container-low/60 transition-colors cursor-pointer" data-station="Feed Bunk" data-status="Present" data-worker="WK-0842" onclick="openDrawer('WK-0842')">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-bold flex items-center justify-center shrink-0">DM</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface leading-tight">David Morales</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Feeder &amp; Mixer Operator</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-label-sm text-label-sm bg-surface-container-high px-1 rounded font-mono text-on-surface-variant">WK-0842</span>
+<span class="text-xs text-outline">•</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Feed Bunk 01-04</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-mono text-body-sm whitespace-nowrap text-on-surface-variant">24 Oct 2024</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="font-mono text-body-sm font-semibold text-primary">05:15 AM</span>
+<span class="block text-[11px] text-secondary font-sans">On Time</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="font-mono text-body-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+                  Active / On-Floor
+                </span>
+<span class="block text-[11px] text-on-surface-variant font-sans">Shift ends 13:30</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-secondary-container text-on-secondary-fixed">
+                  Present
+                </span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap font-mono text-body-sm">
+<span class="font-semibold text-on-surface">0.75 hrs</span>
+<span class="block text-[10px] text-on-surface-variant font-sans">Audited duration</span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="px-space-sm py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-all" onclick="recordQuickCheckOut('WK-0842', 'David Morales')">Check-Out</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" onclick="openDrawer('WK-0842')" title="View Shift Audit">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Thomas Cole (Late) -->
+<tr class="worker-row hover:bg-surface-container-low/60 transition-colors cursor-pointer" data-station="Rotary Parlor" data-status="Late" data-worker="WK-0711" onclick="openDrawer('WK-0711')">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-headline-sm text-headline-sm font-bold flex items-center justify-center shrink-0">TC</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface leading-tight">Thomas Cole</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Rotary Parlor Lead</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-label-sm text-label-sm bg-surface-container-high px-1 rounded font-mono text-on-surface-variant">WK-0711</span>
+<span class="text-xs text-outline">•</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Rotary Parlor Stall 01-24</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-mono text-body-sm whitespace-nowrap text-on-surface-variant">24 Oct 2024</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="font-mono text-body-sm font-semibold text-tertiary">05:05 AM</span>
+<span class="block text-[11px] text-tertiary font-sans font-medium">+15m vs 04:50 Sched</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="font-mono text-body-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+                  Active / On-Floor
+                </span>
+<span class="block text-[11px] text-on-surface-variant font-sans">Shift ends 13:00</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed">
+                  Late (+15m)
+                </span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap font-mono text-body-sm text-outline">—</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="px-space-sm py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-all" onclick="recordQuickCheckOut('WK-0711', 'Thomas Cole')">Check-Out</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" onclick="openDrawer('WK-0711')" title="View Shift Audit">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Sarah Jenkins -->
+<tr class="worker-row hover:bg-surface-container-low/60 transition-colors cursor-pointer" data-station="Maintenance" data-status="Present" data-worker="WK-0529" onclick="openDrawer('WK-0529')">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-bold flex items-center justify-center shrink-0">SJ</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface leading-tight">Sarah Jenkins</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">CIP Sanitation Tech</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-label-sm text-label-sm bg-surface-container-high px-1 rounded font-mono text-on-surface-variant">WK-0529</span>
+<span class="text-xs text-outline">•</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">CIP Wash Room &amp; Lines</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-mono text-body-sm whitespace-nowrap text-on-surface-variant">24 Oct 2024</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="font-mono text-body-sm font-semibold text-primary">05:00 AM</span>
+<span class="block text-[11px] text-secondary font-sans">On Time</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="font-mono text-body-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+                  Active / On-Floor
+                </span>
+<span class="block text-[11px] text-on-surface-variant font-sans">Shift ends 13:30</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-secondary-container text-on-secondary-fixed">
+                  Present
+                </span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap font-mono text-body-sm text-outline">—</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="px-space-sm py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-all" onclick="recordQuickCheckOut('WK-0529', 'Sarah Jenkins')">Check-Out</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" onclick="openDrawer('WK-0529')" title="View Shift Audit">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Marcus Vance -->
+<tr class="worker-row hover:bg-surface-container-low/60 transition-colors cursor-pointer" data-station="Maintenance" data-status="Present" data-worker="WK-0102" onclick="openDrawer('WK-0102')">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed font-headline-sm text-headline-sm font-bold flex items-center justify-center shrink-0">MV</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface leading-tight">Marcus Vance</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Shift Supervisor</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-label-sm text-label-sm bg-surface-container-high px-1 rounded font-mono text-on-surface-variant">WK-0102</span>
+<span class="text-xs text-outline">•</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Barn Zone A Hub</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-mono text-body-sm whitespace-nowrap text-on-surface-variant">24 Oct 2024</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="font-mono text-body-sm font-semibold text-primary">04:30 AM</span>
+<span class="block text-[11px] text-secondary font-sans">Early (+30m)</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="font-mono text-body-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+                  Active / On-Floor
+                </span>
+<span class="block text-[11px] text-on-surface-variant font-sans">Shift ends 14:00</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-secondary-container text-on-secondary-fixed">
+                  Present
+                </span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap font-mono text-body-sm">
+<span class="font-semibold text-on-surface">1.25 hrs</span>
+<span class="block text-[10px] text-on-surface-variant font-sans">Audited duration</span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="px-space-sm py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-all" onclick="recordQuickCheckOut('WK-0102', 'Marcus Vance')">Check-Out</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" onclick="openDrawer('WK-0102')" title="View Shift Audit">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Elena Vance (Leave - Read Only) -->
+<tr class="worker-row bg-surface-container-low/30 hover:bg-surface-container-low/60 transition-colors cursor-pointer" data-station="Calf Nursery" data-status="Leave" data-worker="WK-0319" onclick="openDrawer('WK-0319')">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant font-headline-sm text-headline-sm font-bold flex items-center justify-center shrink-0">EV</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface leading-tight">Elena Vance</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Nursery Specialist</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-label-sm text-label-sm bg-surface-container-high px-1 rounded font-mono text-on-surface-variant">WK-0319</span>
+<span class="text-xs text-outline">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Calf Nursery Pens</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-mono text-body-sm whitespace-nowrap text-on-surface-variant">24 Oct 2024</td>
+<td class="py-3 px-space-sm whitespace-nowrap font-mono text-body-sm text-outline">— Scheduled Off</td>
+<td class="py-3 px-space-sm whitespace-nowrap font-mono text-body-sm text-outline">—</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-surface-container-high text-on-surface-variant">
+                  Approved Leave
+                </span>
+<span class="block text-[10px] text-on-surface-variant font-medium">Admin Approved · Read Only</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap font-mono text-body-sm text-outline">—</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-1 rounded">Roster Locked</span>
+</div>
+</td>
+</tr>
+<!-- Row 6: Liam Brody -->
+<tr class="worker-row hover:bg-surface-container-low/60 transition-colors cursor-pointer" data-station="Calf Nursery" data-status="Present" data-worker="WK-0677" onclick="openDrawer('WK-0677')">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-bold flex items-center justify-center shrink-0">LB</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface leading-tight">Liam Brody</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Maternity Pen Assistant</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-label-sm text-label-sm bg-surface-container-high px-1 rounded font-mono text-on-surface-variant">WK-0677</span>
+<span class="text-xs text-outline">•</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Maternity Barn M-02</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-mono text-body-sm whitespace-nowrap text-on-surface-variant">24 Oct 2024</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="font-mono text-body-sm font-semibold text-primary">05:30 AM</span>
+<span class="block text-[11px] text-secondary font-sans">On Time</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="font-mono text-body-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+                  Active / On-Floor
+                </span>
+<span class="block text-[11px] text-on-surface-variant font-sans">Shift ends 14:00</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-secondary-container text-on-secondary-fixed">
+                  Present
+                </span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap font-mono text-body-sm text-outline">—</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="px-space-sm py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-all" onclick="recordQuickCheckOut('WK-0677', 'Liam Brody')">Check-Out</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" onclick="openDrawer('WK-0677')" title="View Shift Audit">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Mateo Rossi (Absent) -->
+<tr class="worker-row bg-error-container/20 hover:bg-error-container/30 transition-colors cursor-pointer" data-station="Feed Bunk" data-status="Absent" data-worker="WK-0442" onclick="openDrawer('WK-0442')">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-error-container text-on-error-container font-headline-sm text-headline-sm font-bold flex items-center justify-center shrink-0">MR</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface leading-tight">Mateo Rossi</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Feed Logistics Specialist</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-label-sm text-label-sm bg-surface-container-high px-1 rounded font-mono text-on-surface-variant">WK-0442</span>
+<span class="text-xs text-outline">•</span>
+<span class="font-label-sm text-label-sm text-error font-medium">Bunk Delivery Unit</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-mono text-body-sm whitespace-nowrap text-on-surface-variant">24 Oct 2024</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="font-mono text-body-sm font-bold text-error">NO CHECK-IN</span>
+<span class="block text-[11px] text-error font-sans font-medium">Flagged 05:30 Cutoff</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap font-mono text-body-sm text-outline">—</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-error-container text-on-error-container">
+                  Absent
+                </span>
+<span class="block text-[10px] text-error font-medium">Pending Handover Note</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap font-mono text-body-sm text-outline">—</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="px-space-sm py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm hover:bg-error hover:text-on-error transition-all" onclick="flagAbsentWorker('WK-0442', 'Mateo Rossi')">Flag Shift Lead</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" onclick="openDrawer('WK-0442')" title="View Shift Audit">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8: Chloe Bennett (Completed) -->
+<tr class="worker-row hover:bg-surface-container-low/60 transition-colors cursor-pointer" data-station="Rotary Parlor" data-status="Present" data-worker="WK-0914" onclick="openDrawer('WK-0914')">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-bold flex items-center justify-center shrink-0">CB</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface leading-tight">Chloe Bennett</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Rotary Unit Technician</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-label-sm text-label-sm bg-surface-container-high px-1 rounded font-mono text-on-surface-variant">WK-0914</span>
+<span class="text-xs text-outline">•</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Rotary Parlor Stall 25-48</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-mono text-body-sm whitespace-nowrap text-on-surface-variant">24 Oct 2024</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="font-mono text-body-sm font-semibold text-primary">05:00 AM</span>
+<span class="block text-[11px] text-secondary font-sans">On Time</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="font-mono text-body-sm font-semibold text-on-surface">13:30 PM</span>
+<span class="block text-[11px] text-secondary font-sans font-medium">Logged &amp; Verified</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-secondary-container text-on-secondary-fixed">
+                  Shift Completed
+                </span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap font-mono text-body-sm">
+<span class="font-semibold text-on-surface">0.5 hrs</span>
+<span class="block text-[10px] text-on-surface-variant font-sans">Audited duration</span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/50 px-2 py-1 rounded">Archived</span>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" onclick="openDrawer('WK-0914')" title="View Shift Audit">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination / Roster Summary Footer -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Showing <strong class="text-on-surface font-semibold">8 of 16</strong> permitted daily crew members assigned to Barn Zone A.</span>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant mr-1">Roster Page</span>
+<button class="w-8 h-8 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">1</button>
+<button class="w-8 h-8 rounded hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">2</button>
+</div>
+</div>
+</div>
+<!-- 5. Record Details Drawer / Panel (Detailed view of selected record) -->
+<aside class="lg:col-span-4 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-lg" id="recordDrawer">
+<!-- Drawer Header -->
+<div class="flex items-start justify-between pb-space-sm border-b border-surface-container-high">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">Shift Audit Inspector</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-0.5" id="inspectorWorkerName">David Morales</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono" id="inspectorWorkerID">WK-0842 · Feeder &amp; Mixer Operator</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-secondary-container text-on-secondary-fixed" id="inspectorStatusBadge">
+          Active On-Duty
+        </span>
+</div>
+<!-- Station & Shift Metrics -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider">Assigned Station</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface mt-1 block" id="inspectorStation">Feed Bunk 01-04</span>
+<span class="font-body-sm text-body-sm text-secondary">TMR Daily Rations</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider">Shift Duration</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary mt-1 block font-mono" id="inspectorDuration">7h 45m</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Elapsed active duty</span>
+</div>
+</div>
+<!-- Check-In / Check-Out Timestamp Log -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Supervisor Timestamp Verification</span>
+<div class="flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xs">login</span>
+</div>
+<div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface font-bold">Check-In Verified: 05:15:22 AM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Station check-in verified at East Pen Gate (05:15 AM)</span></div>
+</div>
+<div class="h-px bg-surface-container-high"></div>
+<div class="flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xs">logout</span>
+</div>
+<div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface font-bold">Check-In Verified: 05:15:22 AM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Station check-in verified at East Pen Gate (05:15 AM)</span></div>
+</div>
+</div>
+<!-- Supervisor Shift Notes -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Operational Barn Notes</label>
+<span class="font-label-sm text-label-sm text-secondary">Logged at 09:15 AM</span>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg text-on-surface font-body-sm text-body-sm">
+          "Completed morning TMR mix for Pens 01-03 without moisture variation. Re-routed silage feeder due to auger clearance maintenance."
+        </div>
+</div>
+<!-- Read-Only Overtime Indicator -->
+<div class="p-space-md rounded-lg bg-surface-container flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-lg shrink-0 mt-0.5">more_time</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Operational Overtime: 45 min</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pending shift turnover review. Rate and dollar calculations are strictly excluded per supervisor scope.</span>
+</div>
+</div>
+<!-- Admin Lockout Notice & Drawer Actions -->
+<div class="mt-auto pt-space-md border-t border-surface-container-high flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-secondary">lock</span>
+<span>Record Corrections locked. To request a timestamp adjustment, contact Farm Admin or HR.</span>
+</div>
+<div class="flex items-center gap-space-sm mt-space-xs">
+<button class="flex-1 h-11 px-space-md rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container transition-all" onclick="recordQuickCheckOut('WK-0842', 'David Morales')">
+            Record Check-Out (13:30)
+          </button>
+<button class="h-11 px-space-md rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" onclick="alert('Audit Note dialog opened for David Morales')">
+            Audit Note
+          </button>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  // State management variables
+  let currentFilterStatus = 'all';
+  let currentFilterStation = 'all';
+  let daysOffset = 0;
+
+  // Change date simulation
+  function changeDay(delta) {
+    daysOffset += delta;
+    const baseDate = new Date(2024, 9, 24); // 24 Oct 2024
+    baseDate.setDate(baseDate.getDate() + daysOffset);
+    const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+    document.getElementById('currentDateDisplay').innerText = baseDate.toLocaleDateString('en-US', options);
+    showToast('Displaying attendance records for ' + baseDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }));
+  }
+
+  function resetToday() {
+    daysOffset = 0;
+    document.getElementById('currentDateDisplay').innerText = 'Thursday, 24 Oct 2024';
+    showToast('Reset view to Today (24 Oct 2024)');
+  }
+
+  // Filter handlers
+  function filterByStatus(status, el) {
+    currentFilterStatus = status;
+    document.querySelectorAll('.status-pill').forEach(b => {
+      b.className = 'status-pill px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-all';
+    });
+    el.className = 'status-pill px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm transition-all';
+    applyFilters();
+  }
+
+  function filterByStation(station, el) {
+    currentFilterStation = station;
+    document.querySelectorAll('.station-pill').forEach(b => {
+      b.className = 'station-pill px-space-sm py-1 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container shrink-0';
+    });
+    el.className = 'station-pill px-space-sm py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm shrink-0 font-medium';
+    applyFilters();
+  }
+
+  function filterWorkers() {
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const query = (document.getElementById('workerSearchInput').value || '').toLowerCase();
+    const rows = document.querySelectorAll('.worker-row');
+    let visibleCount = 0;
+
+    rows.forEach(row => {
+      const rowStatus = row.getAttribute('data-status');
+      const rowStation = row.getAttribute('data-station');
+      const text = row.innerText.toLowerCase();
+
+      const matchesStatus = (currentFilterStatus === 'all' || rowStatus === currentFilterStatus);
+      const matchesStation = (currentFilterStation === 'all' || rowStation.includes(currentFilterStation));
+      const matchesQuery = (!query || text.includes(query));
+
+      if (matchesStatus && matchesStation && matchesQuery) {
+        row.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        row.classList.add('hidden');
+      }
+    });
+
+    const emptyView = document.getElementById('emptyView');
+    const tableView = document.getElementById('tableView');
+
+    if (visibleCount === 0) {
+      emptyView.classList.remove('hidden');
+      emptyView.classList.add('flex');
+      tableView.classList.add('hidden');
+    } else {
+      emptyView.classList.add('hidden');
+      emptyView.classList.remove('flex');
+      tableView.classList.remove('hidden');
+    }
+  }
+
+  function resetFilters() {
+    document.getElementById('workerSearchInput').value = '';
+    filterByStatus('all', document.querySelector('.status-pill'));
+    filterByStation('all', document.querySelector('.station-pill'));
+  }
+
+  // Record Inspector Drawer Data Sync
+  const workerDatabase = {
+    'WK-0842': {
+      name: 'David Morales',
+      role: 'Feeder & Mixer Operator',
+      station: 'Feed Bunk 01-04',
+      status: 'Present',
+      badgeClass: 'bg-secondary-container text-on-secondary-fixed',
+      duration: '7h 45m',
+      checkIn: '05:15:22 AM',
+      terminal: 'Badge Scan Terminal #02 (East Pen Gate)',
+      checkOut: 'Pending Shift Completion',
+      notes: '"Completed morning TMR mix for Pens 01-03 without moisture variation. Re-routed silage feeder due to auger clearance maintenance."',
+      ot: 'Operational Overtime: 45 min'
+    },
+    'WK-0711': {
+      name: 'Thomas Cole',
+      role: 'Rotary Parlor Lead',
+      station: 'Rotary Parlor Stall 01-24',
+      status: 'Late (+15m)',
+      badgeClass: 'bg-tertiary-fixed text-on-tertiary-fixed',
+      duration: '7h 55m',
+      checkIn: '05:05:10 AM',
+      terminal: 'Parlor Entry Turnstile #01',
+      checkOut: 'Active Milking Session #02',
+      notes: '"Delay due to perimeter road tractor congestion. Commenced teat dip calibration immediately upon parlor arrival."',
+      ot: 'Operational Overtime: 0 min (Standard Shift)'
+    },
+    'WK-0529': {
+      name: 'Sarah Jenkins',
+      role: 'CIP Sanitation Tech',
+      station: 'CIP Wash Room & Lines',
+      status: 'Present',
+      badgeClass: 'bg-secondary-container text-on-secondary-fixed',
+      duration: '8h 00m',
+      checkIn: '05:00:04 AM',
+      terminal: 'Bulk Tank Room Keypad #04',
+      checkOut: 'Scheduled Wash Run 13:30',
+      notes: '"Acid wash cycle #03 completed within target parameters. Somatic bulk line rinse approved."',
+      ot: 'Operational Overtime: 0 min'
+    },
+    'WK-0102': {
+      name: 'Marcus Vance',
+      role: 'Farm Supervisor',
+      station: 'Barn Zone A Hub',
+      status: 'Present',
+      badgeClass: 'bg-secondary-container text-on-secondary-fixed',
+      duration: '8h 30m',
+      checkIn: '04:30:11 AM',
+      terminal: 'Supervisor Office Keycard',
+      checkOut: 'Active Duty Shift Overseer',
+      notes: '"Conducted 04:45 AM pre-milking safety briefing with stall crews. Verified bulk tank temperature setpoint at 3.4°C."',
+      ot: 'Operational Overtime: 1.25 hrs (Zone handover)'
+    },
+    'WK-0319': {
+      name: 'Elena Vance',
+      role: 'Nursery Specialist',
+      station: 'Calf Nursery Pens',
+      status: 'Approved Leave',
+      badgeClass: 'bg-surface-container-high text-on-surface-variant',
+      duration: '0h 00m',
+      checkIn: '— Scheduled Leave',
+      terminal: 'System Flag (Admin Approved)',
+      checkOut: '—',
+      notes: '"Scheduled Medical Leave signed off by Farm Admin. Relief feeder designated to Liam Brody."',
+      ot: 'Operational Overtime: Excluded'
+    },
+    'WK-0677': {
+      name: 'Liam Brody',
+      role: 'Maternity Pen Assistant',
+      station: 'Maternity Barn M-02',
+      status: 'Present',
+      badgeClass: 'bg-secondary-container text-on-secondary-fixed',
+      duration: '7h 30m',
+      checkIn: '05:30:00 AM',
+      terminal: 'Maternity Gate Biometric Tag',
+      checkOut: 'Active Monitoring Calf Pens',
+      notes: '"Monitored Cow #1142 calving in Stall M-04. Assisted nursery transfer at 08:30 AM."',
+      ot: 'Operational Overtime: 0 min'
+    },
+    'WK-0442': {
+      name: 'Mateo Rossi',
+      role: 'Feed Logistics Specialist',
+      station: 'Bunk Delivery Unit',
+      status: 'Absent',
+      badgeClass: 'bg-error-container text-on-error-container',
+      duration: '0h 00m',
+      checkIn: 'UNCONFIRMED',
+      terminal: 'No Terminal Signal Registered',
+      checkOut: '—',
+      notes: '"Unconfirmed morning attendance. Flagged for shift supervisor follow-up. Replacement loader reassigned."',
+      ot: 'Operational Overtime: 0 min'
+    },
+    'WK-0914': {
+      name: 'Chloe Bennett',
+      role: 'Rotary Unit Technician',
+      station: 'Rotary Parlor Stall 25-48',
+      status: 'Shift Completed',
+      badgeClass: 'bg-secondary-container text-on-secondary-fixed',
+      duration: '8h 30m',
+      checkIn: '05:00:15 AM',
+      terminal: 'Parlor Entry Turnstile #01',
+      checkOut: '13:30:00 PM (Verified by Marcus Vance)',
+      notes: '"Completed all 3 morning rotary batch milkings. Station sanitization log signed off."',
+      ot: 'Operational Overtime: 0.5 hrs (Wash cycle turnover)'
+    }
+  };
+
+  function openDrawer(workerId) {
+    const data = workerDatabase[workerId];
+    if (!data) return;
+
+    document.getElementById('inspectorWorkerName').innerText = data.name;
+    document.getElementById('inspectorWorkerID').innerText = workerId + ' · ' + data.role;
+    document.getElementById('inspectorStation').innerText = data.station;
+    document.getElementById('inspectorDuration').innerText = data.duration;
+    
+    const badge = document.getElementById('inspectorStatusBadge');
+    badge.innerText = data.status;
+    badge.className = 'inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold ' + data.badgeClass;
+
+    showToast('Inspecting: ' + data.name + ' (' + workerId + ')');
+  }
+
+  // Action handlers
+  function recordQuickCheckOut(workerId, workerName) {
+    showToast('✓ Check-Out Recorded: ' + workerName + ' (' + workerId + ') checked out at 13:30 PM. Shift logged successfully.');
+  }
+
+  function flagAbsentWorker(workerId, workerName) {
+    showToast('⚠ Shift Alert: Absent notification transmitted to Zone A Lead for ' + workerName);
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById('simulationToast');
+    toast.querySelector('.truncate').innerText = message;
+    toast.classList.remove('hidden');
+  }
+
+  // Simulation State Switcher
+  function setSimulationState(state) {
+    const emptyView = document.getElementById('emptyView');
+    const skeletonView = document.getElementById('skeletonView');
+    const tableView = document.getElementById('tableView');
+
+    emptyView.classList.add('hidden');
+    emptyView.classList.remove('flex');
+    skeletonView.classList.add('hidden');
+    tableView.classList.remove('hidden');
+
+    if (state === 'normal') {
+      resetFilters();
+      showToast('State: Normal Roster active (16 workers registered)');
+    } else if (state === 'empty') {
+      tableView.classList.add('hidden');
+      emptyView.classList.remove('hidden');
+      emptyView.classList.add('flex');
+      showToast('State: Simulated empty attendance state');
+    } else if (state === 'error') {
+      openDrawer('WK-0442');
+      showToast('State: Flagged Missing Worker Alert (Mateo Rossi - WK-0442)');
+    } else if (state === 'unrecorded') {
+      showToast('State: 12 Active Crew Members Pending Check-Out before 13:30 PM');
+    } else if (state === 'loading') {
+      tableView.classList.add('hidden');
+      skeletonView.classList.remove('hidden');
+      setTimeout(() => {
+        skeletonView.classList.add('hidden');
+        tableView.classList.remove('hidden');
+        showToast('Telemetry refreshed from Greenfield Dairy Estate nodes.');
+      }, 1200);
+    }
+  }
+</script></main></div>
+
+</body></html>
