@@ -7,6 +7,8 @@
 > Never change the framework, backend, database, authentication architecture, or deployment architecture without **explicit human approval**.
 > If an architectural problem is discovered, **stop**, explain the conflict and its impact, and create an **Architecture Change Request**. Never silently change the system.
 
+**Architecture rules:** The canonical system map, ownership registry, allowed dependencies and forbidden paths, critical data flows, invariants and stop-and-report rule are in `docs/architecture-rules.md`. That file restates approved decisions; it does not add new ones.
+
 ## 1. Project purpose
 
 SmartFarm is a multi-tenant, web-based dairy farm management and analytics platform. It serves three surfaces:

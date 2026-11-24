@@ -3,8 +3,8 @@
 **Document:** `docs/ARCHITECTURE_STATUS.md`  
 **Version:** 1.0  
 **Date:** 24 November 2026  
-**Status:** Audit record created with owner approval; findings and corrections remain open  
-**Audited artifact:** `docs/architecture.md` v1.2, 24 November 2026 ("Architecture candidate — human approval required")  
+**Status:** LOCKED — architecture approved by the project owner on 24 November 2026; audit findings remain open  
+**Audited artifact:** `docs/architecture.md` v1.2, LOCKED 24 November 2026  
 **Purpose:** Confirm whether each required topic is an **explicit topic** in the architecture document, not merely implied by a technology choice.
 
 ## 1. Audit method and verdict definitions
@@ -25,7 +25,7 @@ Every topic below carries a status and a reason; no topic is left unaddressed. S
 - The repository is documentation-led: SRS, scope, role/permission matrix, business rules, data requirements, design documents, Stitch visual exports, and a candidate PostgreSQL baseline (`database/schema.sql`, `database/seed.sql`, `database/database.md`).
 - `smartfram/` exists only as an empty directory tree (`apps/web`, `apps/api`, `apps/worker`, `packages/*`, `infrastructure/*`, `tests/*`). `backend/`, `frontend/` and `.github/workflows/` contain only `.gitkeep`. No application code, migrations or tests are implemented. Root-level `package.json`, `vite.config.ts`, `vitest.config.ts`, `tsconfig.json`, ESLint and Prettier configs are scaffold tooling only. This matches `AGENTS.md` ("scaffold project structure only").
 - `docs/api-spec.md`, `docs/qa.md`, `docs/deployment.md` and `docs/stitch-prompts.md` are 0-byte placeholders. `docs/database.md` is **not** empty: it contains the v1.0 candidate database design; `database/erd.md` and `database/schema.sql` are also populated. A previous version of this status file incorrectly listed `docs/database.md` as empty and named a non-existent `database/database.md`; corrected after full documentation audit.
-- Status conflict: `docs/architecture.md` §1 header and §16 call the architecture a candidate requiring human approval, while `AGENTS.md` and `README.md` describe the core stack as approved/locked and §16 is titled "APPROVED ARCHITECTURE CANDIDATE". This does not change the audit verdicts but should be reconciled.
+- Status conflict **resolved 24 November 2026**: `docs/architecture.md` §1 header and §16 previously called the architecture a candidate requiring human approval, while `AGENTS.md` and `README.md` describe it as approved/locked. The project owner approved and LOCKED the architecture on 24 November 2026; the header, §16 title, decision table and this status file now record the approver and date. Conditional items (3D, production hosting, email, storage, backups) remain conditional by decision, not by unresolved approval. Audit verdicts are unchanged.
 
 ## 3. 15-topic coverage register
 
@@ -79,7 +79,7 @@ The owner supplied the following content specification for "System architecture 
 4. **Scaling approach:** add a dedicated section recording the current blocked state, the capacity inputs required from §8.2, the vertical-first single-host baseline, and the conditional scale-out triggers from §4.23 and §12 (AR-001).
 5. **Section 13a:** add the missing content to `architecture.md` — a single-owner responsibility registry, an explicit allowed-dependency table with named forbidden paths, at least one more end-to-end flow, a consolidated invariants list, and the agent stop rule. Supply the correct document/section reference for "Section 13a".
 6. **System design:** consolidate §2, §3, §5 and §8.1 into one explicit overall-shape topic.
-7. **Status conflict:** reconcile the "candidate / human approval required" language in `architecture.md` §1 and §6 with `AGENTS.md`, `README.md` and the §16 title "APPROVED ARCHITECTURE CANDIDATE".
+7. **Status conflict — RESOLVED 24 November 2026:** the "candidate / human approval required" language in `architecture.md` §1 and §16 was reconciled with `AGENTS.md` and `README.md`. Architecture is LOCKED, approved by the project owner on 24 November 2026.
 8. **Placeholder documents:** backfill `docs/api-spec.md`, `docs/qa.md`, `docs/deployment.md` and `docs/stitch-prompts.md` only when their contents are approved. `docs/database.md`, `database/erd.md` and `database/schema.sql` already contain the candidate database design and must not be treated as placeholders.
 
 ## 7. Approval record
@@ -90,6 +90,6 @@ The owner supplied the following content specification for "System architecture 
 | 15-topic audit | Completed 24 November 2026 |
 | Section 13a six-item audit | Completed 24 November 2026 against owner-supplied specification |
 | Owner approval to create this file | Granted 24 November 2026 |
-| Corrections in §6 | Pending |
+| Corrections in §6 | Correction 7 resolved; corrections 1–6 and 8 pending |
 | Correct reference for "Section 13a" | Pending from owner |
-| Architecture approval itself | Not granted by this document; `architecture.md` remains a candidate |
+| Architecture approval itself | Granted by project owner 24 November 2026; `architecture.md` LOCKED |

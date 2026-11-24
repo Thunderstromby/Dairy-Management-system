@@ -3,14 +3,14 @@
 **Document:** `docs/architecture.md`  
 **Version:** 1.2  
 **Date:** 24 November 2026  
-**Status:** Architecture candidate — human approval required  
+**Status:** LOCKED — approved by the project owner on 24 November 2026  
 **Project:** SmartFarm Dairy Management System  
 **Cost constraint:** Zero recurring service charges; production feasibility conditional  
 **Payment constraint:** COD/manual handling only; no online gateways
 
 ## 1. Authority and scope
 
-This document supersedes the earlier architecture candidates, not the approved product requirements. The locked stack is React.js + Tailwind CSS, Node.js + Express.js, and PostgreSQL. No supporting decision may replace these technologies.
+This document supersedes the earlier architecture drafts, not the approved product requirements. The locked stack is React.js + Tailwind CSS, Node.js + Express.js, and PostgreSQL. No supporting decision may replace these technologies.
 
 | Source | Authority |
 |---|---|
@@ -598,11 +598,11 @@ Official documentation for provider limits and integration; verify again before 
 - [React Three Fiber MIT license](https://github.com/pmndrs/react-three-fiber)
 - [Three.js](https://threejs.org/)
 
-## 16. APPROVED ARCHITECTURE CANDIDATE
+## 16. APPROVED ARCHITECTURE (LOCKED)
 
-**Human approval required. Core stack is locked; supporting technologies are recommended; production services and limited 3D scope remain conditional.**
+**Approved and LOCKED by the project owner on 24 November 2026. The core stack and supporting architecture are locked; production services and limited 3D scope remain conditional as recorded below.**
 
-| Category | Candidate |
+| Category | Decision |
 |---|---|
 | Frontend | **React.js + Tailwind CSS** (LOCKED) |
 | Backend | **Node.js + Express.js** (LOCKED) |
@@ -633,12 +633,12 @@ Official documentation for provider limits and integration; verify again before 
 | SEO / accessibility | Static pre-render, semantic HTML, proposed WCAG 2.2 AA |
 | Excluded | Payment gateways, Redis initially, microservices, Kubernetes, operational 3D, IoT, offline sync, unapproved AI predictions, paid API tiers |
 
-**Approval recommendation:** Approve the locked-stack application architecture and supporting open-source technology selections. Confirm the small public-only decorative 3D enhancement explicitly against the SRS and design baseline. Keep production hosting, email, storage and independent backups conditional until verified capacity, costs, availability and recovery requirements are satisfied. Guaranteed zero ongoing production cost is not established by the current requirements.
+**Approval record:** The locked-stack application architecture and supporting open-source selections were approved and LOCKED by the project owner on 24 November 2026. Limited 3D remains conditional pending written scope/design approval. Production hosting, email, storage and independent backups remain conditional until verified capacity, costs, availability and recovery requirements are satisfied. Guaranteed zero ongoing production cost is not established by the current requirements.
 
 | Human decision | Status |
 |---|---|
-| Locked core stack | Confirmed by project owner |
-| Supporting architecture | Pending approval |
-| Limited 3D change | Requested; formal scope/design approval pending |
-| Free infrastructure and recovery | Pending capacity and operational acceptance |
-| Approved by / date | TBD |
+| Locked core stack | LOCKED — confirmed by project owner |
+| Supporting architecture | LOCKED — approved as scaffold baseline |
+| Limited 3D change | Conditional; written scope/design approval still required |
+| Free infrastructure and recovery | Conditional; pending capacity and operational acceptance |
+| Approved by / date | Project owner — 24 November 2026 |

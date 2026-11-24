@@ -145,7 +145,7 @@ smartfarm/
 │   ├── e2e/                      ← Playwright E2E journeys
 │   └── performance/                ← k6 load tests
 ├── docs/
-│   ├── architecture.md             ← Locked architecture candidate
+│   ├── architecture.md             ← Locked architecture
 │   ├── database.md                 ← DB design with RLS, UUIDs
 │   ├── srs.md                      ← Software Requirements Spec
 │   ├── design.md                   ← UI design blueprint
