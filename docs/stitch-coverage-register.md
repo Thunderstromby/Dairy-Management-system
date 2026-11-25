@@ -14,7 +14,7 @@ Every row remains **PENDING** until both reviews are recorded in `docs/visual-re
 
 | Stitch export | Implementation disposition | Boundary applied | Visual | Functional |
 |---|---|---|---|---|
-| `smartfarm_public_website_homepage` | `public.home` | ACR-002 CSS/static hero motif only; critical content remains HTML | PENDING | PENDING |
+| `smartfarm_public_website_homepage` | `public.home` | Owner-approved Stitch hero composition, ACR-002 CSS/static motif only, no unlicensed image; critical content remains HTML | PENDING | PENDING |
 | `smartfarm_about_page` | `public.about` | No unapproved claims or imagery treated as licensed | PENDING | PENDING |
 | `smartfarm_features_page` | `public.features` | Eight approved capability areas only | PENDING | PENDING |
 | `smartfarm_how_it_works_page` | `public.how-it-works` | Pricing link excluded; no checkout or subscription | PENDING | PENDING |

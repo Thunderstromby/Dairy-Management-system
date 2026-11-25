@@ -9,14 +9,17 @@ HOME
 - Sticky navigation on scroll.
 - Mobile: collapsible navigation drawer.
 - Motion: subtle menu and scroll-state transitions.
-2. Hero
-- Main headline introducing SmartFarm.
-- Supporting text explaining dairy farm management.
-- Primary CTA: Contact Us.
-- Secondary CTA: Explore Features.
-- Authentic dairy farm photography.
+2. Hero (owner-approved Stitch override, 25 November 2026)
+- Eyebrow: “SMARTER DAIRY FARM MANAGEMENT”.
+- Main headline: “The intelligence behind better dairy farming.”
+- Supporting text: “Bring animal care, milk production, daily operations, and farm management together with one connected platform built for modern dairy farms.”
+- Primary CTA: Explore SmartFarm.
+- Secondary CTA: See How It Works.
+- Navbar CTA remains Contact Us under §1 Navbar.
+- Authentic dairy farm photography when licensed and supplied; until then, the ACR-002 CSS/static decorative motif on a deep-forest gradient.
 - 2D visual area: restrained organic shapes and green gradient accents.
-- Motion: subtle entrance animation and restrained image reveal.
+- Lower edge: neutral illustrative label and Scroll to explore cue; no live-status, quota, sync or fictional farm-name cue.
+- Motion: restrained entrance only; reduced motion shows the final state.
 3. About SmartFarm
 - Product introduction.
 - What SmartFarm helps farm owners manage.

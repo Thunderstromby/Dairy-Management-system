@@ -486,36 +486,21 @@ Only these Super Admin navigation groups are included:
 - Customer Access Management.
 - Workspace Suspension.
 8.5 Hero patterns
-Public homepage hero
-Smart dairy management
-Manage your dairy farm with clarity.
-Organize animals, milk production, inventory and daily operations.
-Contact Us
+Public homepage hero — owner-approved Stitch override (25 November 2026)
 
-Explore Features
+The project owner approved adopting the Stitch Home hero composition and copy on 25 November 2026. This is the canonical Home hero and supersedes the earlier two-column layout reference. It does not authorize Stitch code, unlicensed Googleusercontent imagery, video, WebGL, canvas, GLB/GLTF, livestock models, simulations, new routes or any 3D in private surfaces. The ACR-002 CSS/static motif remains the only decorative treatment until authentic licensed dairy photography is supplied.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Layout reference — not final website copy or approved product photography
-- Two-column layout, 52% text / 48% image.
-- Left: eyebrow, H1, description, CTAs.
-- Right: large authentic dairy photograph.
-- Organic sage background shape behind image.
-- Minimum desktop height: 560px.
-- Mobile: text first, image second.
-- No video background.
+- Full-viewport deep-forest editorial composition with the critical content in ordinary HTML.
+- Eyebrow: short gold rule followed by "SMARTER DAIRY FARM MANAGEMENT".
+- H1: "The intelligence behind better dairy farming."
+- Supporting copy: "Bring animal care, milk production, daily operations, and farm management together with one connected platform built for modern dairy farms."
+- Primary CTA: "Explore SmartFarm" → Features. Secondary CTA: "See How It Works" → How It Works.
+- Public navigation CTA remains "Contact Us" under sitemap §1.1; it is not a hero CTA.
+- Lower edge: neutral "Illustrative design preview — not live farm data" label and "Scroll to explore" cue. Never show a fictional farm name, live-status dot, quota or sync indicator.
+- Background: semantic deep-forest gradient plus the approved CSS/static pasture/leaf/milk-drop motif. Authentic licensed dairy photography may replace the gradient when supplied; no external Stitch asset is copied.
+- Public-site editorial display face exception: Georgia/local serif fallback for this H1 only, approved under docs/stitch-visual-handoff.md §4. Manrope remains the heading default everywhere else; Inter remains body text.
+- Motion: restrained 150–250 ms reveal only; reduced motion shows the final state immediately. No continuous pan, autoplay or simulated activity.
+- Mobile: eyebrow, H1, copy and stacked CTAs remain first in DOM and reading order; decorative motif follows.
 Inner public-page hero
 - Full-width warm ivory surface.
 - Centered title and short supporting text.
