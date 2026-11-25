@@ -1,9 +1,20 @@
-import { Check } from 'lucide-react';
 import { useState, type ReactNode } from 'react';
 import { PublicHomeHero } from './PublicHomeHero';
 import { InquiryForm } from './InquiryForm';
 import { scrollToSection } from './scrollToSection';
-import './stitch-home.css';
+import { STITCH_ASSETS } from './stitchAssets';
+
+function Tick() {
+  return (
+    <svg className="h-5 w-5 text-pasture-green" fill="currentColor" viewBox="0 0 20 20">
+      <path
+        fillRule="evenodd"
+        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+}
 
 type FeatureTab = {
   id: string;
@@ -12,226 +23,426 @@ type FeatureTab = {
   title: string;
   body: string;
   bullets: readonly string[];
-  preview: () => ReactNode;
+  panel: ReactNode;
 };
 
-const ANIMAL_TAB: FeatureTab = {
-  id: 'animals',
-  label: '01. Animal Management',
-  badge: 'Feature 01 · Livestock Care',
-  title: 'Animal Records, Profiles & Health History',
-  body: 'Track individual cattle identity, lactation stages, veterinary treatments, vaccination timelines, and breeding pedigrees in a single clean ledger.',
-  bullets: [
-    'Animal records and visual identification',
-    'Health profiles, treatments and vaccination records',
-    'Lifecycle and lactation history',
-  ],
-  preview: () => (
-    <div className="sh-preview">
-      <div className="sh-preview__bar">
-        <div className="sh-preview__dots" aria-hidden="true">
-          <span />
-          <span />
-          <span />
+const FEATURE_TABS: readonly FeatureTab[] = [
+  {
+    id: 'tab-0',
+    label: '01. Animal Management',
+    badge: 'Feature 01 · Livestock Care',
+    title: 'Animal Records, Profiles & Health History',
+    body: 'Track individual cattle identity, lactation stages, veterinary treatments, vaccination timelines, and breeding pedigrees in a single clean ledger.',
+    bullets: [
+      'Animal records and identification',
+      'Health profiles, treatments and vaccination records',
+      'Calving timeline and lactation cycle history',
+    ],
+    panel: (
+      <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
+        <div className="space-y-6 lg:col-span-5">
+          <div className="inline-flex items-center rounded-full bg-sage-mist px-3 py-1 text-xs font-bold tracking-wide text-deep-forest">
+            Feature 01 · Livestock Care
+          </div>
+          <h3 className="font-heading text-2xl font-extrabold text-deep-forest sm:text-3xl">
+            Animal Records, Profiles &amp; Health History
+          </h3>
+          <p className="text-base leading-relaxed text-secondary-text">
+            Track individual cattle identity, lactation stages, veterinary treatments, vaccination
+            timelines, and breeding pedigrees in a single clean ledger.
+          </p>
+          <ul className="space-y-3 pt-2 text-sm font-medium text-deep-charcoal">
+            <li className="flex items-center gap-3">
+              <Tick />
+              Animal records and identification
+            </li>
+            <li className="flex items-center gap-3">
+              <Tick />
+              Health profiles, treatments and vaccination records
+            </li>
+            <li className="flex items-center gap-3">
+              <Tick />
+              Calving timeline and lactation cycle history
+            </li>
+          </ul>
         </div>
-        <span>smartfarm.app / livestock / herd-04</span>
-        <span className="sh-preview__chip">Illustrative herd</span>
-      </div>
-      <div className="sh-preview__rows">
-        {['Animal record A', 'Animal record B', 'Animal record C'].map((name, index) => (
-          <div className="sh-preview__row" key={name}>
-            <span className="sh-preview__avatar">{`A-${index + 1}`}</span>
-            <div>
-              <strong>{name}</strong>
-              <span>Identity and lifecycle record — illustrative</span>
+        <div className="rounded-2xl border border-border-subtle bg-warm-ivory p-5 shadow-inner sm:p-6 lg:col-span-7">
+          <div className="mb-4 flex items-center justify-between border-b border-border-subtle pb-4">
+            <div className="flex items-center gap-2">
+              <span className="h-3 w-3 rounded-full bg-[#E57373]" />
+              <span className="h-3 w-3 rounded-full bg-[#FFD54F]" />
+              <span className="h-3 w-3 rounded-full bg-[#81C784]" />
+              <span className="ml-2 font-mono text-xs text-muted-text">
+                smartfarm.app / livestock / herd-04
+              </span>
             </div>
-            <span className="sh-preview__status">Illustrative</span>
+            <span className="rounded border border-border-subtle bg-white px-2.5 py-1 text-xs font-medium text-deep-forest">
+              Illustrative herd
+            </span>
           </div>
-        ))}
-      </div>
-    </div>
-  ),
-};
-
-const MILK_TAB: FeatureTab = {
-  id: 'milk',
-  label: '02. Milk Production',
-  badge: 'Feature 02 · Yield & Quality',
-  title: 'Milk Production Records & Bulk Tank Tracking',
-  body: 'Log morning and evening parlor sessions, daily totals and milk storage records in one structured workflow.',
-  bullets: [
-    'Morning and evening session entries',
-    'Daily totals and animal production history',
-    'Storage and production reports',
-  ],
-  preview: () => (
-    <div className="sh-preview">
-      <div className="sh-preview__bar">
-        <strong>Bulk Tank 1 · Illustrative capacity</strong>
-        <span className="sh-preview__chip">Design preview</span>
-      </div>
-      <div className="sh-preview__tiles">
-        {["Today's Total", 'Butterfat', 'Protein'].map((label) => (
-          <div key={label}>
-            <span>{label}</span>
-            <strong>—</strong>
+          <div className="space-y-3">
+            {['Animal record A', 'Animal record B', 'Animal record C'].map((name) => (
+              <div
+                key={name}
+                className="flex items-center justify-between rounded-xl border border-border-subtle bg-white p-3.5"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-sage-mist text-xs font-bold text-deep-forest">
+                    —
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-deep-forest">{name}</div>
+                    <div className="text-xs text-muted-text">Identity and lifecycle record</div>
+                  </div>
+                </div>
+                <span className="rounded border border-pasture-green/20 bg-green-50 px-2 py-0.5 text-[11px] font-semibold text-pasture-green">
+                  Illustrative
+                </span>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      <div className="sh-preview__meter">
-        <div>
-          <span>Illustrative progress</span>
-          <strong>—</strong>
-        </div>
-        <div className="sh-preview__meter-track">
-          <span />
         </div>
       </div>
-    </div>
-  ),
-};
-
-const OPERATIONS_TAB: FeatureTab = {
-  id: 'operations',
-  label: '03. Farm Operations',
-  badge: 'Feature 03 · Ground Operations',
-  title: 'Feed Rations, Pasture Rotations & Equipment',
-  body: 'Coordinate feeding plans, inventory records and equipment maintenance in one operational view.',
-  bullets: [
-    'Feeding plans and actual feeding records',
-    'Inventory and stock records',
-    'Equipment condition and maintenance history',
-  ],
-  preview: () => (
-    <div className="sh-preview">
-      <div className="sh-preview__bar">
-        <strong>Operational task overview</strong>
-        <span className="sh-preview__chip">Illustrative</span>
-      </div>
-      <div className="sh-preview__rows">
-        {['Feeding plan', 'Inventory item', 'Equipment service'].map((name) => (
-          <div className="sh-preview__row" key={name}>
-            <div>
-              <strong>{name}</strong>
-              <span>Approved record type — illustrative</span>
+    ),
+  },
+  {
+    id: 'tab-1',
+    label: '02. Milk Production',
+    badge: 'Feature 02 · Yield & Quality',
+    title: 'Milk Production Records & Bulk Tank Tracking',
+    body: 'Log morning and evening parlor sessions, milk temperature, fat & protein percentages, and somatic cell counts in structured dairy records.',
+    bullets: [
+      'Morning and afternoon collection session tracking',
+      'Vat temperature, butterfat and protein analysis logs',
+      'Delivery batch receipts and quality certificates',
+    ],
+    panel: (
+      <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
+        <div className="space-y-6 lg:col-span-5">
+          <div className="inline-flex items-center rounded-full bg-sage-mist px-3 py-1 text-xs font-bold tracking-wide text-deep-forest">
+            Feature 02 · Yield &amp; Quality
+          </div>
+          <h3 className="font-heading text-2xl font-extrabold text-deep-forest sm:text-3xl">
+            Milk Production Records &amp; Bulk Tank Tracking
+          </h3>
+          <p className="text-base leading-relaxed text-secondary-text">
+            Log morning and evening parlor sessions, milk temperature, fat &amp; protein
+            percentages, and somatic cell counts in structured dairy records.
+          </p>
+          <ul className="space-y-3 pt-2 text-sm font-medium text-deep-charcoal">
+            <li className="flex items-center gap-3">
+              <Tick />
+              Morning and afternoon collection session tracking
+            </li>
+            <li className="flex items-center gap-3">
+              <Tick />
+              Vat temperature, butterfat and protein analysis logs
+            </li>
+            <li className="flex items-center gap-3">
+              <Tick />
+              Delivery batch receipts and quality certificates
+            </li>
+          </ul>
+        </div>
+        <div className="rounded-2xl border border-border-subtle bg-warm-ivory p-5 shadow-inner sm:p-6 lg:col-span-7">
+          <div className="mb-4 flex items-center justify-between border-b border-border-subtle pb-4">
+            <span className="font-heading text-sm font-bold text-deep-forest">
+              Bulk Tank 1 · Illustrative capacity
+            </span>
+            <span className="rounded border border-border-subtle bg-white px-2 py-0.5 text-xs font-semibold text-pasture-green">
+              Pending values
+            </span>
+          </div>
+          <div className="mb-4 grid grid-cols-3 gap-3">
+            {["Today's Total", 'Butterfat', 'Protein'].map((label) => (
+              <div
+                key={label}
+                className="rounded-xl border border-border-subtle bg-white p-3 text-center"
+              >
+                <div className="text-xs font-semibold uppercase text-muted-text">{label}</div>
+                <div className="mt-1 text-xl font-bold text-deep-forest">—</div>
+              </div>
+            ))}
+          </div>
+          <div className="rounded-xl border border-border-subtle bg-white p-4">
+            <div className="mb-2 flex justify-between text-xs text-secondary-text">
+              <span>Illustrative delivery target</span>
+              <span className="font-bold text-deep-forest">—</span>
             </div>
-            <span className="sh-preview__status">—</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  ),
-};
-
-const PEOPLE_TAB: FeatureTab = {
-  id: 'people',
-  label: '04. People Management',
-  badge: 'Feature 04 · Farm Team',
-  title: 'Worker Rosters, Milking Shifts & Safety',
-  body: 'Keep worker records, attendance and leave information organized for the farm team.',
-  bullets: ['Worker records and directory', 'Attendance and shift records', 'Leave information'],
-  preview: () => (
-    <div className="sh-preview">
-      <div className="sh-preview__bar">
-        <strong>Daily staff duty roster</strong>
-        <span className="sh-preview__chip">Illustrative</span>
-      </div>
-      <div className="sh-preview__rows">
-        {['Worker record A', 'Worker record B'].map((name) => (
-          <div className="sh-preview__row" key={name}>
-            <span className="sh-preview__avatar">—</span>
-            <div>
-              <strong>{name}</strong>
-              <span>Attendance record — illustrative</span>
+            <div className="h-2.5 w-full overflow-hidden rounded-full bg-warm-ivory">
+              <div className="h-2.5 w-3/5 rounded-full bg-pasture-green" />
             </div>
-            <span className="sh-preview__status">—</span>
           </div>
-        ))}
-      </div>
-    </div>
-  ),
-};
-
-const INTELLIGENCE_TAB: FeatureTab = {
-  id: 'intelligence',
-  label: '05. Farm Intelligence',
-  badge: 'Feature 05 · Decision Support',
-  title: 'Operational Reports, Margins & Compliance',
-  body: 'Review approved operational reports and export-ready records with role-aware access.',
-  bullets: [
-    'Approved operational reports',
-    'Role-aware summaries and exports',
-    'Structured record history',
-  ],
-  preview: () => (
-    <div className="sh-preview">
-      <div className="sh-preview__bar">
-        <strong>Quarterly performance ledger</strong>
-        <span className="sh-preview__chip">Illustrative</span>
-      </div>
-      <div className="sh-preview__tiles">
-        {['Feed cost', 'Milk margin'].map((label) => (
-          <div key={label}>
-            <span>{label}</span>
-            <strong>—</strong>
-          </div>
-        ))}
-      </div>
-      <div className="sh-preview__rows">
-        <div className="sh-preview__row">
-          <div>
-            <strong>Operational reporting</strong>
-            <span>Awaiting approved values</span>
-          </div>
-          <span className="sh-preview__status">—</span>
         </div>
       </div>
-    </div>
-  ),
-};
+    ),
+  },
+  {
+    id: 'tab-2',
+    label: '03. Farm Operations',
+    badge: 'Feature 03 · Ground Operations',
+    title: 'Feed Rations, Pasture Rotations & Equipment',
+    body: 'Coordinate daily feed mix batches, track silage pit reserves, log tractor maintenance, and allocate paddock grazing intervals seamlessly.',
+    bullets: [
+      'TMR (Total Mixed Ration) feed recipe formulations',
+      'Paddock grazing rotation and rest calendar',
+      'Machinery service logs and parlor wash cycles',
+    ],
+    panel: (
+      <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
+        <div className="space-y-6 lg:col-span-5">
+          <div className="inline-flex items-center rounded-full bg-sage-mist px-3 py-1 text-xs font-bold tracking-wide text-deep-forest">
+            Feature 03 · Ground Operations
+          </div>
+          <h3 className="font-heading text-2xl font-extrabold text-deep-forest sm:text-3xl">
+            Feed Rations, Pasture Rotations &amp; Equipment
+          </h3>
+          <p className="text-base leading-relaxed text-secondary-text">
+            Coordinate daily feed mix batches, track silage pit reserves, log tractor maintenance,
+            and allocate paddock grazing intervals seamlessly.
+          </p>
+          <ul className="space-y-3 pt-2 text-sm font-medium text-deep-charcoal">
+            <li className="flex items-center gap-3">
+              <Tick />
+              TMR (Total Mixed Ration) feed recipe formulations
+            </li>
+            <li className="flex items-center gap-3">
+              <Tick />
+              Paddock grazing rotation and rest calendar
+            </li>
+            <li className="flex items-center gap-3">
+              <Tick />
+              Machinery service logs and parlor wash cycles
+            </li>
+          </ul>
+        </div>
+        <div className="rounded-2xl border border-border-subtle bg-warm-ivory p-5 shadow-inner sm:p-6 lg:col-span-7">
+          <div className="mb-3 flex items-center justify-between border-b border-border-subtle pb-3">
+            <span className="font-heading text-sm font-bold text-deep-forest">
+              Active Paddock Management
+            </span>
+            <span className="text-xs text-secondary-text">Illustrative cycle</span>
+          </div>
+          <div className="space-y-3">
+            {['Paddock record A', 'Paddock record B', 'Equipment service record'].map((name) => (
+              <div
+                key={name}
+                className="flex items-center justify-between rounded-xl border border-border-subtle bg-white p-3"
+              >
+                <div>
+                  <div className="text-sm font-semibold text-deep-forest">{name}</div>
+                  <div className="text-xs text-muted-text">Approved record type</div>
+                </div>
+                <span className="rounded bg-green-50 px-2.5 py-1 text-xs font-semibold text-pasture-green">
+                  Illustrative
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: 'tab-3',
+    label: '04. People Management',
+    badge: 'Feature 04 · Farm Team',
+    title: 'Worker Rosters, Milking Shifts & Safety',
+    body: 'Keep the farm crew aligned with clear shift assignments, livestock task completions, and agricultural safety compliance records.',
+    bullets: [
+      'Morning & evening milking team rosters',
+      'Chemical handling, machinery certs, and safety logs',
+      'Clear task delegation and handover notes',
+    ],
+    panel: (
+      <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
+        <div className="space-y-6 lg:col-span-5">
+          <div className="inline-flex items-center rounded-full bg-sage-mist px-3 py-1 text-xs font-bold tracking-wide text-deep-forest">
+            Feature 04 · Farm Team
+          </div>
+          <h3 className="font-heading text-2xl font-extrabold text-deep-forest sm:text-3xl">
+            Worker Rosters, Milking Shifts &amp; Safety
+          </h3>
+          <p className="text-base leading-relaxed text-secondary-text">
+            Keep the farm crew aligned with clear shift assignments, livestock task completions, and
+            agricultural safety compliance records.
+          </p>
+          <ul className="space-y-3 pt-2 text-sm font-medium text-deep-charcoal">
+            <li className="flex items-center gap-3">
+              <Tick />
+              Morning &amp; evening milking team rosters
+            </li>
+            <li className="flex items-center gap-3">
+              <Tick />
+              Chemical handling, machinery certs, and safety logs
+            </li>
+            <li className="flex items-center gap-3">
+              <Tick />
+              Clear task delegation and handover notes
+            </li>
+          </ul>
+        </div>
+        <div className="rounded-2xl border border-border-subtle bg-warm-ivory p-5 shadow-inner sm:p-6 lg:col-span-7">
+          <div className="mb-3 flex items-center justify-between border-b border-border-subtle pb-3">
+            <span className="font-heading text-sm font-bold text-deep-forest">
+              Daily Staff Duty Roster
+            </span>
+            <span className="rounded border border-border-subtle bg-white px-2 py-0.5 text-xs text-secondary-text">
+              Illustrative roster
+            </span>
+          </div>
+          <div className="space-y-3">
+            {['Worker record A', 'Worker record B'].map((name) => (
+              <div
+                key={name}
+                className="flex items-center justify-between rounded-xl border border-border-subtle bg-white p-3"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-deep-forest text-xs font-bold text-white">
+                    —
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold text-deep-forest">{name}</div>
+                    <div className="text-xs text-muted-text">Attendance record</div>
+                  </div>
+                </div>
+                <span className="text-xs font-semibold text-pasture-green">Illustrative</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: 'tab-4',
+    label: '05. Farm Intelligence',
+    badge: 'Feature 05 · Decision Support',
+    title: 'Operational Reports, Margins & Compliance',
+    body: 'Connect milk records, feed costs, veterinary expenses and reporting into structured, auditable farm summaries.',
+    bullets: [
+      'Approved operational reports',
+      'Role-aware summaries and exports',
+      'Structured record history',
+    ],
+    panel: (
+      <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
+        <div className="space-y-6 lg:col-span-5">
+          <div className="inline-flex items-center rounded-full bg-sage-mist px-3 py-1 text-xs font-bold tracking-wide text-deep-forest">
+            Feature 05 · Decision Support
+          </div>
+          <h3 className="font-heading text-2xl font-extrabold text-deep-forest sm:text-3xl">
+            Operational Reports, Margins &amp; Compliance
+          </h3>
+          <p className="text-base leading-relaxed text-secondary-text">
+            Connect milk records, feed costs, veterinary expenses and reporting into structured,
+            auditable farm summaries.
+          </p>
+          <ul className="space-y-3 pt-2 text-sm font-medium text-deep-charcoal">
+            <li className="flex items-center gap-3">
+              <Tick />
+              Approved operational reports
+            </li>
+            <li className="flex items-center gap-3">
+              <Tick />
+              Role-aware summaries and exports
+            </li>
+            <li className="flex items-center gap-3">
+              <Tick />
+              Structured record history
+            </li>
+          </ul>
+        </div>
+        <div className="rounded-2xl border border-border-subtle bg-warm-ivory p-5 shadow-inner sm:p-6 lg:col-span-7">
+          <div className="mb-3 flex items-center justify-between border-b border-border-subtle pb-3">
+            <span className="font-heading text-sm font-bold text-deep-forest">
+              Quarterly Performance Ledger
+            </span>
+            <span className="rounded border border-border-subtle bg-white px-2 py-0.5 text-xs font-medium text-deep-forest">
+              Illustrative
+            </span>
+          </div>
+          <div className="mb-3 grid grid-cols-2 gap-3">
+            {['Feed cost', 'Milk margin'].map((label) => (
+              <div key={label} className="rounded-xl border border-border-subtle bg-white p-3">
+                <div className="text-xs text-muted-text">{label}</div>
+                <div className="mt-1 text-lg font-bold text-deep-forest">—</div>
+              </div>
+            ))}
+          </div>
+          <div className="rounded-xl border border-border-subtle bg-white p-3 text-xs text-secondary-text">
+            <div className="mb-1 flex items-center justify-between">
+              <span>Compliance summary</span>
+              <span className="font-bold text-pasture-green">Approved values pending</span>
+            </div>
+            <p className="text-[11px] text-muted-text">Awaiting approved reporting values.</p>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+];
 
-const FEATURE_TABS = [ANIMAL_TAB, MILK_TAB, OPERATIONS_TAB, PEOPLE_TAB, INTELLIGENCE_TAB] as const;
-
-function StitchAboutSection() {
+function AboutSection() {
   return (
-    <section id="about" className="sh-section sh-section--ivory sh-about">
-      <div className="sh-container sh-about__grid">
-        <div className="sh-about__copy">
-          <p className="sh-kicker">
-            <span aria-hidden="true" /> The Connected Dairy
-          </p>
-          <h2>Better farm management starts with better-connected information.</h2>
-          <p>
-            From animal records and milk production to people and daily operations, SmartFarm brings
-            essential dairy-farm management activities together in one organized platform.
-          </p>
-          <div className="sh-about__facts">
-            <div>
-              <strong>Unified</strong>
-              <span>Single Farm Data Source</span>
+    <section
+      id="about"
+      className="relative border-b border-border-subtle bg-warm-ivory py-28 lg:py-36"
+    >
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="flex flex-col justify-center lg:col-span-5">
+            <div className="mb-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-pasture-green">
+              <span className="h-2 w-2 rounded-full bg-pasture-green" />
+              The Connected Dairy
             </div>
-            <div>
-              <strong>Organized</strong>
-              <span>Operational Records</span>
+            <h2 className="mb-6 font-heading text-3xl font-extrabold leading-tight tracking-tight text-deep-forest sm:text-4xl lg:text-5xl">
+              Better farm management starts with better-connected information.
+            </h2>
+            <p className="mb-8 text-base leading-relaxed text-secondary-text sm:text-lg">
+              From animal records and milk production to people and daily operations, SmartFarm
+              brings essential dairy-farm management activities together in one organized platform.
+            </p>
+            <div className="grid grid-cols-2 gap-6 border-t border-border-subtle pt-6">
+              <div>
+                <div className="font-heading text-2xl font-bold text-deep-forest sm:text-3xl">
+                  Unified
+                </div>
+                <div className="mt-1 text-xs uppercase tracking-wider text-muted-text">
+                  Single Farm Data Source
+                </div>
+              </div>
+              <div>
+                <div className="font-heading text-2xl font-bold text-deep-forest sm:text-3xl">
+                  Organized
+                </div>
+                <div className="mt-1 text-xs uppercase tracking-wider text-muted-text">
+                  Operational Records
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="sh-about__media">
-          <div
-            className="sh-about__frame"
-            role="img"
-            aria-label="Illustrative dairy pasture visual. Licensed photography pending."
-          >
-            <span className="sh-about__frame-mark">SmartFarm</span>
-          </div>
-          <div className="sh-about__caption">
-            <div>
-              <span>Daily Field Context</span>
-              <p>Morning herd movement recorded and integrated directly with milking schedules.</p>
-            </div>
-            <div className="sh-about__caption-tag">
-              <strong>Illustrative</strong>
-              <span>Design preview</span>
+          <div className="relative lg:col-span-7">
+            <div className="relative overflow-hidden rounded-2xl border border-border-subtle bg-white shadow-xl">
+              <img
+                src={STITCH_ASSETS.aboutPasture}
+                alt="Healthy dairy cows walking out to pasture past modern agricultural barn"
+                className="h-[420px] w-full object-cover object-center sm:h-[500px]"
+              />
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-xl border border-border-subtle/80 bg-white/95 p-4 backdrop-blur-sm sm:bottom-6 sm:left-6 sm:right-6 sm:p-5">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-pasture-green">
+                    Daily Field Context
+                  </p>
+                  <p className="mt-0.5 text-sm font-medium text-deep-charcoal">
+                    Morning herd movement recorded and integrated directly with milking schedules.
+                  </p>
+                </div>
+                <div className="hidden border-l border-border-subtle pl-4 text-right sm:block">
+                  <span className="text-xs font-bold text-deep-forest">Illustrative</span>
+                  <span className="block text-[11px] text-muted-text">Design preview</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -240,153 +451,211 @@ function StitchAboutSection() {
   );
 }
 
-function StitchFeaturesSection() {
+function FeaturesSection() {
   const [active, setActive] = useState(0);
-  const tab = FEATURE_TABS[active];
-  const preview = tab.preview();
 
   return (
-    <section id="features" className="sh-section sh-section--mist sh-features">
-      <div className="sh-container">
-        <div className="sh-section-heading">
-          <p className="sh-kicker sh-kicker--block">Platform Capability</p>
-          <h2>Every part of your farm. Better connected.</h2>
-          <p>Explore the tools that support the everyday work of managing a dairy farm.</p>
+    <section id="features" className="relative bg-sage-mist/40 py-28 lg:py-36">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <div className="mb-14 max-w-3xl">
+          <span className="mb-3 block text-xs font-bold uppercase tracking-[0.2em] text-pasture-green">
+            Platform Capability
+          </span>
+          <h2 className="mb-4 font-heading text-3xl font-extrabold tracking-tight text-deep-forest sm:text-4xl lg:text-5xl">
+            Every part of your farm. Better connected.
+          </h2>
+          <p className="font-inter text-lg text-secondary-text">
+            Explore the tools that support the everyday work of managing a dairy farm.
+          </p>
         </div>
 
-        <div className="sh-tabs" role="tablist" aria-label="Platform capabilities">
+        <div
+          className="no-scrollbar mb-8 flex items-center gap-2 overflow-x-auto pb-4 sm:gap-3"
+          role="tablist"
+          aria-label="Platform capabilities"
+        >
           {FEATURE_TABS.map((item, index) => (
             <button
+              key={item.id}
               type="button"
               role="tab"
-              id={`feature-tab-${item.id}`}
               aria-selected={active === index}
-              aria-controls={`feature-panel-${item.id}`}
-              className={active === index ? 'sh-tab sh-tab--active' : 'sh-tab'}
-              key={item.id}
+              aria-controls={item.id}
+              id={`${item.id}-button`}
               onClick={() => setActive(index)}
+              className={`tab-btn whitespace-nowrap rounded-xl border border-border-subtle px-5 py-3 font-manrope text-sm font-semibold shadow-sm hover:border-pasture-green ${
+                active === index
+                  ? 'active bg-white text-deep-forest'
+                  : 'bg-white text-secondary-text'
+              }`}
             >
               {item.label}
             </button>
           ))}
         </div>
 
-        <div className="sh-feature-card">
-          <div
-            className="sh-feature-panel"
-            role="tabpanel"
-            id={`feature-panel-${tab.id}`}
-            aria-labelledby={`feature-tab-${tab.id}`}
-          >
-            <div className="sh-feature-panel__copy">
-              <span className="sh-badge">{tab.badge}</span>
-              <h3>{tab.title}</h3>
-              <p>{tab.body}</p>
-              <ul>
-                {tab.bullets.map((bullet) => (
-                  <li key={bullet}>
-                    <Check size={18} aria-hidden="true" />
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
+        <div className="rounded-3xl border border-border-subtle bg-white p-6 shadow-xl sm:p-10 lg:p-12">
+          {FEATURE_TABS.map((item, index) => (
+            <div
+              key={item.id}
+              id={item.id}
+              role="tabpanel"
+              aria-labelledby={`${item.id}-button`}
+              className={`tab-pane ${active === index ? 'active' : ''}`}
+            >
+              {index === active ? item.panel : null}
             </div>
-            <div className="sh-feature-panel__visual">{preview}</div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-function StitchProductRevealSection() {
+function ProductRevealSection() {
   return (
-    <section id="dashboard-preview" className="sh-section sh-section--ivory sh-product">
-      <div className="sh-container">
-        <div className="sh-section-heading sh-section-heading--center">
-          <p className="sh-kicker">The Platform Interface</p>
-          <h2>Meet the platform behind smarter dairy management.</h2>
-          <p>
+    <section className="relative border-b border-border-subtle bg-warm-ivory py-28 lg:py-36">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <div className="mx-auto mb-16 max-w-3xl text-center">
+          <span className="mb-3 inline-block text-xs font-bold uppercase tracking-[0.2em] text-pasture-green">
+            The Platform Interface
+          </span>
+          <h2 className="mb-5 font-heading text-3xl font-extrabold tracking-tight text-deep-forest sm:text-4xl lg:text-5xl">
+            Meet the platform behind smarter dairy management.
+          </h2>
+          <p className="font-inter text-base leading-relaxed text-secondary-text sm:text-lg">
             One organized workspace for managing the information and everyday responsibilities of a
             dairy farm.
           </p>
         </div>
 
-        <div className="sh-product-frame">
-          <div className="sh-product-frame__bar">
-            <span className="sh-product-frame__dots" aria-hidden="true">
-              <i />
-              <i />
-              <i />
-            </span>
-            <strong>
-              <span aria-hidden="true" /> SmartFarm Operations Hub
-            </strong>
-            <span className="sh-product-frame__chip">Illustrative workspace</span>
-          </div>
-          <div className="sh-product-frame__body">
-            <aside className="sh-product-sidebar">
-              <span className="sh-product-sidebar__label">Management</span>
-              {[
-                'Daily Overview',
-                'Animal Records',
-                'Milk Production',
-                'Paddock & Feed',
-                'Quality & Vet Reports',
-              ].map((item, index) => (
-                <span
-                  className={
-                    index === 0
-                      ? 'sh-product-sidebar__item sh-product-sidebar__item--active'
-                      : 'sh-product-sidebar__item'
-                  }
-                  key={item}
-                >
-                  {item}
-                </span>
-              ))}
-              <div className="sh-product-sidebar__note">
-                <strong>Sample Interface</strong>
-                Displaying illustrative management dashboard layout.
+        <div className="relative overflow-hidden rounded-2xl border border-border-subtle bg-white shadow-2xl lg:rounded-3xl">
+          <div className="flex items-center justify-between border-b border-deep-forest/40 bg-deep-forest px-6 py-4 text-white">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <span className="h-3 w-3 rounded-full bg-white/20" />
+                <span className="h-3 w-3 rounded-full bg-white/20" />
+                <span className="h-3 w-3 rounded-full bg-white/20" />
               </div>
-            </aside>
-            <div className="sh-product-main">
-              <div className="sh-product-stats">
-                {['Daily Production', 'Bulk Tank Temp', 'Pending Health Checks'].map((label) => (
-                  <div key={label}>
-                    <span>{label}</span>
-                    <strong>—</strong>
-                    <em>Illustrative value</em>
+              <div className="ml-1 h-4 w-px bg-white/20" />
+              <span className="flex items-center gap-2 font-heading text-sm font-bold tracking-wide">
+                <span className="h-2 w-2 rounded-full bg-pasture-green" />
+                SmartFarm Operations Hub
+              </span>
+            </div>
+            <div className="flex items-center gap-3 text-xs text-white/70">
+              <span className="hidden sm:inline">Illustrative workspace</span>
+              <span className="rounded bg-white/10 px-2.5 py-1 font-medium text-white">
+                Sample interface
+              </span>
+            </div>
+          </div>
+
+          <div className="grid min-h-[520px] grid-cols-1 lg:grid-cols-12">
+            <div className="flex flex-col justify-between border-r border-border-subtle bg-warm-ivory/60 p-5 lg:col-span-3">
+              <div className="space-y-1">
+                <div className="mb-2 px-3 text-[11px] font-bold uppercase tracking-wider text-muted-text">
+                  Management
+                </div>
+                <a
+                  href="#features"
+                  onClick={(event) => scrollToSection(event, 'features')}
+                  className="flex items-center justify-between rounded-lg bg-deep-forest px-3 py-2 text-xs font-semibold text-white"
+                >
+                  <span className="flex items-center gap-2.5">
+                    <svg
+                      className="h-4 w-4 text-pasture-green"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                      />
+                    </svg>
+                    Daily Overview
+                  </span>
+                  <span className="h-1.5 w-1.5 rounded-full bg-harvest-gold" />
+                </a>
+                {[
+                  'Animal Records',
+                  'Milk Production',
+                  'Paddock & Feed',
+                  'Quality & Vet Reports',
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-center rounded-lg px-3 py-2 text-xs text-secondary-text transition-colors hover:bg-white"
+                  >
+                    <span className="flex items-center gap-2.5">
+                      <span className="h-4 w-4 rounded border border-border-subtle bg-warm-ivory" />
+                      {item}
+                    </span>
                   </div>
                 ))}
               </div>
-              <div className="sh-product-table">
-                <div className="sh-product-table__bar">
-                  <strong>Illustrative herd health & yield log</strong>
-                  <span>Sample layout — not live farm data</span>
+              <div className="rounded-xl border border-border-subtle bg-white p-3 text-[11px] text-secondary-text">
+                <span className="mb-0.5 block font-bold text-deep-forest">Sample Interface</span>
+                Displaying illustrative management dashboard layout.
+              </div>
+            </div>
+
+            <div className="bg-white p-6 sm:p-8 lg:col-span-9">
+              <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+                {['Daily Production', 'Bulk Tank Temp', 'Pending Health Checks'].map((label) => (
+                  <div
+                    key={label}
+                    className="rounded-xl border border-border-subtle bg-warm-ivory/40 p-4"
+                  >
+                    <div className="text-xs font-medium uppercase tracking-wider text-muted-text">
+                      {label}
+                    </div>
+                    <div className="mt-1 font-heading text-2xl font-bold text-deep-forest">—</div>
+                    <div className="mt-1 text-[11px] font-medium text-muted-text">
+                      Illustrative value
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="overflow-hidden rounded-xl border border-border-subtle">
+                <div className="flex items-center justify-between border-b border-border-subtle bg-sage-mist/40 px-5 py-3.5">
+                  <span className="font-heading text-xs font-bold uppercase tracking-wider text-deep-forest">
+                    Illustrative Herd Health &amp; Yield Log
+                  </span>
+                  <span className="text-xs text-secondary-text">Sample layout</span>
                 </div>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Tag ID</th>
-                      <th>Animal</th>
-                      <th>Yield (kg)</th>
-                      <th>Butterfat</th>
-                      <th>Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {['Animal record A', 'Animal record B', 'Animal record C'].map((name) => (
-                      <tr key={name}>
-                        <td>—</td>
-                        <td>{name}</td>
-                        <td>—</td>
-                        <td>—</td>
-                        <td>Illustrative</td>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left text-xs text-deep-charcoal">
+                    <thead className="border-b border-border-subtle bg-warm-ivory/60 font-semibold uppercase text-muted-text">
+                      <tr>
+                        <th className="px-4 py-3">Tag ID</th>
+                        <th className="px-4 py-3">Animal</th>
+                        <th className="px-4 py-3">Yield (kg)</th>
+                        <th className="px-4 py-3">Butterfat</th>
+                        <th className="px-4 py-3">Status</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="divide-y divide-border-subtle">
+                      {['Animal record A', 'Animal record B', 'Animal record C'].map((name) => (
+                        <tr key={name} className="transition-colors hover:bg-warm-ivory/30">
+                          <td className="px-4 py-3.5 font-mono font-medium text-deep-forest">—</td>
+                          <td className="px-4 py-3.5 font-medium">{name}</td>
+                          <td className="px-4 py-3.5">—</td>
+                          <td className="px-4 py-3.5">—</td>
+                          <td className="px-4 py-3.5">
+                            <span className="rounded bg-green-50 px-2 py-0.5 text-[11px] font-semibold text-pasture-green">
+                              Illustrative
+                            </span>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
@@ -411,77 +680,128 @@ const HOW_STEPS = [
   },
 ] as const;
 
-function StitchHowItWorksSection() {
+function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="sh-section sh-section--mist sh-how">
-      <div className="sh-container">
-        <div className="sh-section-heading">
-          <p className="sh-kicker sh-kicker--block">Simple Implementation</p>
-          <h2>A clearer way to manage your farm.</h2>
-          <p>A dependable onboarding structure adapted directly to your dairy facilities.</p>
+    <section id="how-it-works" className="relative bg-sage-mist/20 py-28 lg:py-36">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <div className="mb-20 max-w-2xl">
+          <span className="mb-3 block text-xs font-bold uppercase tracking-[0.2em] text-pasture-green">
+            Simple Implementation
+          </span>
+          <h2 className="mb-4 font-heading text-3xl font-extrabold tracking-tight text-deep-forest sm:text-4xl lg:text-5xl">
+            A clearer way to manage your farm.
+          </h2>
+          <p className="text-base text-secondary-text sm:text-lg">
+            A dependable onboarding structure adapted directly to your dairy facilities.
+          </p>
         </div>
-        <div className="sh-steps">
-          {HOW_STEPS.map((step, index) => (
-            <article className="sh-step" key={step.title}>
-              <span
-                className={`sh-step__number sh-step__number--${index + 1}`}
-              >{`0${index + 1}`}</span>
-              <h3>{step.title}</h3>
-              <p>{step.body}</p>
-            </article>
-          ))}
+
+        <div className="relative">
+          <div className="absolute left-12 right-12 top-12 z-0 hidden h-[2px] bg-border-subtle md:block">
+            <div className="h-full w-2/3 bg-pasture-green" />
+          </div>
+          <div className="relative z-10 grid grid-cols-1 gap-12 md:grid-cols-3">
+            {HOW_STEPS.map((step, index) => (
+              <div
+                key={step.title}
+                className="relative rounded-2xl border border-border-subtle bg-white p-8 shadow-sm"
+              >
+                <div
+                  className={`mb-6 flex h-14 w-14 items-center justify-center rounded-full font-heading text-xl font-bold text-white shadow-md ${
+                    index === 0
+                      ? 'bg-deep-forest'
+                      : index === 1
+                        ? 'bg-pasture-green'
+                        : 'bg-harvest-gold text-deep-forest'
+                  }`}
+                >
+                  0{index + 1}
+                </div>
+                <h3 className="mb-3 font-heading text-xl font-extrabold text-deep-forest">
+                  {step.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-secondary-text">{step.body}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-function StitchBenefitsSection() {
+function BenefitsSection() {
   return (
-    <section id="benefits" className="sh-section sh-section--ivory sh-benefits">
-      <div className="sh-container">
-        <div className="sh-section-heading">
-          <p className="sh-kicker sh-kicker--block">Real Operational Value</p>
-          <h2>Built for the realities of dairy-farm management.</h2>
-          <p>Practical digital organization designed for the physical demands of dairy farming.</p>
+    <section className="relative border-b border-border-subtle bg-warm-ivory py-28 lg:py-36">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <div className="mb-16 max-w-3xl">
+          <span className="mb-3 block text-xs font-bold uppercase tracking-[0.2em] text-pasture-green">
+            Real Operational Value
+          </span>
+          <h2 className="mb-4 font-heading text-3xl font-extrabold tracking-tight text-deep-forest sm:text-4xl lg:text-5xl">
+            Built for the realities of dairy-farm management.
+          </h2>
+          <p className="text-base text-secondary-text sm:text-lg">
+            Practical digital organization designed for the physical demands of dairy farming.
+          </p>
         </div>
-        <div className="sh-benefit-grid">
-          <article className="sh-benefit sh-benefit--feature">
-            <p className="sh-benefit__label">Benefit 01</p>
-            <h3>Organized farm information.</h3>
-            <p>
-              Keep important livestock records, milking logs, and operational documents securely
-              organized in one accessible location rather than scattered across paper whiteboards
-              and disparate clipboards.
-            </p>
-            <div className="sh-benefit__facts">
+
+        <div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-12">
+          <div className="flex flex-col justify-between rounded-3xl bg-deep-forest p-8 text-white shadow-xl sm:p-12 lg:col-span-7">
+            <div>
+              <div className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-harvest-gold">
+                Benefit 01
+              </div>
+              <h3 className="mb-6 font-heading text-2xl font-bold leading-tight sm:text-3xl lg:text-4xl">
+                Organized farm information.
+              </h3>
+              <p className="max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+                Keep important livestock records, milking logs, and operational documents securely
+                organized in one accessible location rather than scattered across paper whiteboards
+                and disparate clipboards.
+              </p>
+            </div>
+            <div className="mt-8 grid grid-cols-2 gap-6 border-t border-white/15 pt-10">
               <div>
-                <strong>Record history</strong>
-                <span>Historical herd records preserved in the workspace.</span>
+                <span className="block text-sm font-semibold text-white">Record history</span>
+                <span className="text-xs text-white/60">
+                  Historical herd records preserved in the workspace.
+                </span>
               </div>
               <div>
-                <strong>Role-aware access</strong>
-                <span>Appropriate visibility for Farm Admin and Supervisor.</span>
+                <span className="block text-sm font-semibold text-white">Role-aware access</span>
+                <span className="text-xs text-white/60">
+                  Appropriate visibility for Farm Admin and Supervisor.
+                </span>
               </div>
             </div>
-          </article>
-          <div className="sh-benefit-stack">
-            <article className="sh-benefit sh-benefit--white">
-              <p className="sh-benefit__label">Benefit 02</p>
-              <h3>Connected daily operations.</h3>
-              <p>
+          </div>
+
+          <div className="flex flex-col gap-8 lg:col-span-5">
+            <div className="flex flex-1 flex-col justify-center rounded-3xl border border-border-subtle bg-white p-8 shadow-sm">
+              <div className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-pasture-green">
+                Benefit 02
+              </div>
+              <h3 className="mb-3 font-heading text-xl font-bold text-deep-forest sm:text-2xl">
+                Connected daily operations.
+              </h3>
+              <p className="text-sm leading-relaxed text-secondary-text sm:text-base">
                 Bring animal care, milking sessions, feed ration adjustments, and team assignments
                 into one organized workflow that simplifies daily farm routines.
               </p>
-            </article>
-            <article className="sh-benefit sh-benefit--mist">
-              <p className="sh-benefit__label">Benefit 03</p>
-              <h3>Clearer operational visibility.</h3>
-              <p>
+            </div>
+            <div className="flex flex-1 flex-col justify-center rounded-3xl border border-border-subtle bg-sage-mist/60 p-8 shadow-sm">
+              <div className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-deep-forest">
+                Benefit 03
+              </div>
+              <h3 className="mb-3 font-heading text-xl font-bold text-deep-forest sm:text-2xl">
+                Clearer operational visibility.
+              </h3>
+              <p className="text-sm leading-relaxed text-secondary-text sm:text-base">
                 Understand herd activity, milk production records, and organized operational
                 reporting.
               </p>
-            </article>
+            </div>
           </div>
         </div>
       </div>
@@ -489,55 +809,88 @@ function StitchBenefitsSection() {
   );
 }
 
-function StitchContactSection() {
+function ContactSection() {
   return (
-    <section id="contact" className="sh-section sh-section--ivory sh-contact">
-      <div className="sh-contact__glow" aria-hidden="true" />
-      <div className="sh-container sh-contact__grid">
-        <div className="sh-contact__intro">
-          <p className="sh-kicker">Direct Farm Consultation</p>
-          <h2>Ready to bring more clarity to your dairy operation?</h2>
-          <p>
-            Talk with the SmartFarm team to learn how the platform can support your farm-management
-            needs.
-          </p>
-          <div className="sh-contact__actions">
-            <a
-              className="sf-button sf-button--primary"
-              href="#inquiry-form"
-              onClick={(event) => scrollToSection(event, 'inquiry-form')}
-            >
-              Contact SmartFarm
-            </a>
-            <a
-              className="sh-button-outline"
-              href="#features"
-              onClick={(event) => scrollToSection(event, 'features')}
-            >
-              Explore the Platform
-            </a>
+    <section
+      id="contact"
+      className="relative overflow-hidden border-t border-border-subtle bg-warm-ivory py-28 text-deep-charcoal lg:py-36"
+    >
+      <div className="pointer-events-none absolute right-0 top-0 h-96 w-96 rounded-full bg-pasture-green/10 blur-3xl" />
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-7">
+            <span className="mb-4 inline-block text-xs font-bold uppercase tracking-[0.22em] text-pasture-green">
+              Direct Farm Consultation
+            </span>
+            <h2 className="mb-6 font-heading text-3xl font-extrabold leading-[1.1] tracking-tight text-deep-forest sm:text-5xl lg:text-6xl">
+              Ready to bring more clarity to your dairy operation?
+            </h2>
+            <p className="mb-10 max-w-xl font-inter text-lg leading-relaxed text-secondary-text">
+              Talk with the SmartFarm team to learn how the platform can support your
+              farm-management needs.
+            </p>
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                href="#inquiry-form"
+                onClick={(event) => scrollToSection(event, 'inquiry-form')}
+                className="inline-flex items-center justify-center rounded-lg bg-pasture-green px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-pasture-green/20 transition-all duration-200 hover:scale-[1.02] hover:bg-[#2c6346] focus:ring-2 focus:ring-pasture-green"
+              >
+                Contact SmartFarm
+              </a>
+              <a
+                href="#features"
+                onClick={(event) => scrollToSection(event, 'features')}
+                className="inline-flex items-center justify-center rounded-lg border border-deep-forest bg-white px-8 py-3.5 text-base font-semibold text-deep-forest shadow-sm transition-all duration-200 hover:bg-sage-mist/40"
+              >
+                Explore the Platform
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="sh-contact__form" id="inquiry-form">
-          <h3>Speak With a Specialist</h3>
-          <p>We will contact you to discuss your herd structure and operations.</p>
-          <InquiryForm />
+          <div
+            id="inquiry-form"
+            className="rounded-3xl border border-border-subtle bg-white p-8 text-deep-charcoal shadow-xl sm:p-10 lg:col-span-5"
+          >
+            <h3 className="mb-2 font-heading text-xl font-bold text-deep-forest">
+              Speak With a Specialist
+            </h3>
+            <p className="mb-6 text-xs text-secondary-text">
+              We will contact you to discuss your herd structure and operations.
+            </p>
+            <InquiryForm />
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-function StitchBrandStrip() {
-  const items = ['SMART FARM', 'SMART FARM', 'SMART FARM', 'SMART FARM', 'SMART FARM'];
+function BrandStrip() {
+  const items = [
+    'SMART FARM',
+    'SMART FARM',
+    'SMART FARM',
+    'SMART FARM',
+    'SMART FARM',
+    'SMART FARM',
+  ];
+
   return (
-    <div className="sh-brand-strip" aria-hidden="true">
-      {items.map((item, index) => (
-        <span key={`${item}-${index}`}>
-          {item}
-          <i />
-        </span>
-      ))}
+    <div className="sf-stitch-brand-strip overflow-hidden border-t border-border-subtle/80 bg-white py-6">
+      <div className="flex flex-wrap items-center justify-center gap-8">
+        {items.map((item, index) => (
+          <span
+            key={`${item}-${index}`}
+            className="inline-flex items-center gap-8 font-heading text-xs font-extrabold uppercase tracking-[0.28em] text-[#245C45] sm:text-sm"
+          >
+            {item}
+            <span
+              className={`inline-block h-2 w-2 rounded-full ${
+                index % 2 === 0 ? 'bg-harvest-gold' : 'bg-pasture-green'
+              }`}
+            />
+          </span>
+        ))}
+      </div>
     </div>
   );
 }
@@ -546,13 +899,13 @@ export function StitchHomePage() {
   return (
     <>
       <PublicHomeHero />
-      <StitchAboutSection />
-      <StitchFeaturesSection />
-      <StitchProductRevealSection />
-      <StitchHowItWorksSection />
-      <StitchBenefitsSection />
-      <StitchContactSection />
-      <StitchBrandStrip />
+      <AboutSection />
+      <FeaturesSection />
+      <ProductRevealSection />
+      <HowItWorksSection />
+      <BenefitsSection />
+      <ContactSection />
+      <BrandStrip />
     </>
   );
 }

@@ -5,6 +5,7 @@ import { PrototypeRoleProvider } from './auth/prototype-role';
 import { PrototypeBar } from './components/PrototypeBar';
 import { MotionProvider } from './motion/MotionProvider';
 import './styles/index.css';
+import './styles/stitch-exact.css';
 
 const container = document.getElementById('root');
 

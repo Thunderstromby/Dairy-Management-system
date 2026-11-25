@@ -33,56 +33,73 @@ export function InquiryForm({ source = getDataSource() }: InquiryFormProps) {
   };
 
   return (
-    <form className="sf-form-stack" onSubmit={handleSubmit} noValidate>
-      <div className="sf-field">
-        <label htmlFor="inquiry-name">
-          Your name <span className="sf-field__required">*</span>
+    <form className="space-y-4" onSubmit={handleSubmit} noValidate>
+      <div>
+        <label
+          className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-deep-forest"
+          htmlFor="name"
+        >
+          Your Name
         </label>
         <input
-          id="inquiry-name"
-          className="sf-input"
+          type="text"
+          id="name"
+          required
           value={name}
           onChange={(event) => setName(event.target.value)}
-          required
+          placeholder="Your name"
+          className="w-full rounded-xl border border-border-subtle bg-warm-ivory/40 px-4 py-3 text-sm text-deep-forest placeholder:text-muted-text focus:outline-none focus:ring-2 focus:ring-pasture-green"
         />
       </div>
-      <div className="sf-field">
-        <label htmlFor="inquiry-email">
-          Email address <span className="sf-field__required">*</span>
+      <div>
+        <label
+          className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-deep-forest"
+          htmlFor="email"
+        >
+          Work Email
         </label>
         <input
-          id="inquiry-email"
-          className="sf-input"
           type="email"
+          id="email"
+          required
           value={email}
           onChange={(event) => setEmail(event.target.value)}
-          required
+          placeholder="you@yourfarm.example"
+          className="w-full rounded-xl border border-border-subtle bg-warm-ivory/40 px-4 py-3 text-sm text-deep-forest placeholder:text-muted-text focus:outline-none focus:ring-2 focus:ring-pasture-green"
         />
       </div>
-      <div className="sf-field">
-        <label htmlFor="inquiry-message">
-          How can we help? <span className="sf-field__required">*</span>
+      <div>
+        <label
+          className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-deep-forest"
+          htmlFor="message"
+        >
+          How can we help?
         </label>
         <textarea
-          id="inquiry-message"
-          className="sf-textarea"
+          id="message"
+          required
+          rows={3}
           value={message}
           onChange={(event) => setMessage(event.target.value)}
-          required
+          placeholder="Tell us about your farm and operations"
+          className="w-full rounded-xl border border-border-subtle bg-warm-ivory/40 px-4 py-3 text-sm text-deep-forest placeholder:text-muted-text focus:outline-none focus:ring-2 focus:ring-pasture-green"
         />
-        <span className="sf-field__hint">
+        <span className="mt-1 block text-[11px] text-muted-text">
           Additional inquiry fields are pending owner approval.
         </span>
       </div>
 
       {error ? (
-        <p role="alert" style={{ color: 'var(--color-error)', margin: 0 }}>
+        <p role="alert" className="text-xs text-red-700">
           {error}
         </p>
       ) : null}
       {draftSaved ? <LocalDraftStatus /> : null}
 
-      <button className="sf-button sf-button--primary" type="submit">
+      <button
+        type="submit"
+        className="mt-2 w-full rounded-lg bg-pasture-green py-3.5 text-sm font-semibold text-white shadow-md transition-colors hover:bg-[#2d6346]"
+      >
         Submit Inquiry
       </button>
     </form>

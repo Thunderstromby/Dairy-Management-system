@@ -1,7 +1,7 @@
 # SmartFarm — Prototype visual and functional review tracker
 
 **Status:** ACTIVE GATE — approved screens are scaffolded; no page is marked PASS  
-**Authority:** ACR-001, ACR-002, `docs/stitch-visual-handoff.md` §9, `docs/stitch-coverage-register.md`, SRS, permission matrix, business rules
+**Authority:** ACR-001, ACR-002, ACR-003, `docs/stitch-visual-handoff.md` §9, `docs/stitch-coverage-register.md`, SRS, permission matrix, business rules
 
 This tracker exists so no page is claimed complete without two separate reviews:
 
@@ -22,7 +22,7 @@ No row is PASS by implication. Every implemented page must have two dated entrie
 | Production-build fixture scan | `npm run verify:no-fixtures` after `npm run build` | Implemented and demonstrated: injected marker FAILED, clean production rebuild PASSED |
 | Section 19a motion selection | `docs/design.md` §7.1 selection table + `apps/web/src/motion/` primitives | Selection recorded; primitives implemented; per-page visual/functional evidence pending |
 | ACR-002 3D boundary | `docs/acr-002-public-decorative-3d.md`; CSS/static Home hero only | Implemented; static source boundary test rejects WebGL/canvas/3D/model assets; per-page evidence pending |
-| Owner-approved Stitch Home page mirror | `docs/design.md` §8.5 and `docs/sitemap.md` §§1.1, 1.2, 1.9; owner approval 25 November 2026 | Implemented with Stitch section order/copy, Home-only Stitch navbar/footer, five-tab showcase, product reveal, three stages, benefits, contact CTA and static brand strip; licensed-image slots and neutral illustrative values replace locked-rule conflicts; per-page evidence pending |
+| Owner-approved Stitch Home page mirror | `docs/design.md` §8.5, `docs/acr-003-stitch-visual-assets.md` and `docs/sitemap.md` §§1.1, 1.2, 1.9; owner approval 25 November 2026 | Implemented with Stitch section order/copy, Home-only Stitch navbar/footer, five-tab showcase, product reveal, three stages, benefits, contact CTA and static brand strip; ACR-003 permits the three Stitch-hosted images on this page only; neutral illustrative values still replace fake live data; per-page evidence pending |
 | Stitch export coverage | all 108 `code.html` exports mapped or explicitly excluded | Recorded in `docs/stitch-coverage-register.md`; no export deployed as application code |
 
 ## Page entries

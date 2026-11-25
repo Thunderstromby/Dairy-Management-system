@@ -17,7 +17,7 @@ HOME
 - Primary CTA: Explore SmartFarm.
 - Secondary CTA: See How It Works.
 - Navbar CTA remains Contact Us under §1 Navbar.
-- Authentic dairy farm photography when licensed and supplied; until then, the ACR-002 CSS/static decorative motif on a deep-forest gradient.
+- Stitch-hosted hero photography is approved for Public Home by ACR-003 (owner approval 25 November 2026); replace with authentic licensed photography when supplied. The ACR-002 CSS/static decorative motif remains the external-image failure fallback.
 - 2D visual area: restrained organic shapes and green gradient accents.
 - Lower edge: neutral illustrative label and Scroll to explore cue; no live-status, quota, sync or fictional farm-name cue.
 - Motion: restrained entrance only; reduced motion shows the final state.

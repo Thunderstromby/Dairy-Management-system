@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { MotionProvider } from '../../motion/MotionProvider';
 import { StitchHomePage } from './StitchHome';
+import { STITCH_ASSETS } from './stitchAssets';
 
 vi.mock('./HeroMotif', () => ({
   default: () => <div data-testid="lazy-motif" />,
@@ -83,13 +84,16 @@ describe('Stitch homepage structure', () => {
     ).toBe('true');
   });
 
-  it('uses no external image, fake live metric or animated marquee', () => {
+  it('uses the approved Stitch images and no fake live metric or animated marquee', () => {
     const { container } = renderHome();
+    const imageSources = screen.getAllByRole('img').map((image) => image.getAttribute('src'));
 
-    expect(container.querySelector('img')).toBeNull();
+    expect(imageSources).toContain(STITCH_ASSETS.heroPasture);
+    expect(imageSources).toContain(STITCH_ASSETS.aboutPasture);
     expect(container.querySelector('canvas')).toBeNull();
     expect(screen.queryByText(/Live Operational Overview|Oakview|Herd Sync/i)).toBeNull();
-    expect(screen.queryByText(/11,480 L|4\.28%|\+\$11\.84/i)).toBeNull();
-    expect(container.querySelector('.sh-brand-strip')).not.toBeNull();
+    expect(screen.queryByText(/11,480 L|4\.28%|\+\$11\.84|Active Herd: 412 Cows/i)).toBeNull();
+    expect(container.querySelector('.sf-stitch-brand-strip')).not.toBeNull();
+    expect(container.querySelector('.marquee-track')).toBeNull();
   });
 });

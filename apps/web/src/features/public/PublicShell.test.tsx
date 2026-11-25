@@ -2,6 +2,7 @@ import { cleanup, render, screen, within } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
 import { PublicFooter } from './PublicFooter';
 import { PublicNavbar } from './PublicNavbar';
+import { STITCH_ASSETS } from './stitchAssets';
 
 function renderShell() {
   return render(
@@ -31,6 +32,10 @@ describe('public shell', () => {
       screen.getByText(/The intelligence behind better dairy farming\. Connecting herd care/),
     ).not.toBeNull();
     expect(screen.getByRole('link', { name: 'Connect with our team →' })).not.toBeNull();
+
+    const logos = screen.getAllByRole('img', { name: 'SmartFarm Logo' });
+    expect(logos).toHaveLength(2);
+    expect(logos.every((logo) => logo.getAttribute('src') === STITCH_ASSETS.logo)).toBe(true);
   });
 
   it('keeps the canonical navigation and footer copy on inner public pages', () => {

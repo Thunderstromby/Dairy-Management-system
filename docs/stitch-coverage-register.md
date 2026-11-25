@@ -14,7 +14,7 @@ Every row remains **PENDING** until both reviews are recorded in `docs/visual-re
 
 | Stitch export | Implementation disposition | Boundary applied | Visual | Functional |
 |---|---|---|---|---|
-| `smartfarm_public_website_homepage` | `public.home` | Owner-approved Stitch hero composition, ACR-002 CSS/static motif only, no unlicensed image; critical content remains HTML | PENDING | PENDING |
+| `smartfarm_public_website_homepage` | `public.home` | Owner-approved Stitch Home visual composition; ACR-003 permits the three Stitch-hosted images on this page only; ACR-002 motif is the image-failure fallback; critical content remains HTML | PENDING | PENDING |
 | `smartfarm_about_page` | `public.about` | No unapproved claims or imagery treated as licensed | PENDING | PENDING |
 | `smartfarm_features_page` | `public.features` | Eight approved capability areas only | PENDING | PENDING |
 | `smartfarm_how_it_works_page` | `public.how-it-works` | Pricing link excluded; no checkout or subscription | PENDING | PENDING |
@@ -157,4 +157,4 @@ No Stitch export exists for approved sitemap §2.7 Customer Access Management or
 | C14 | State sheets and combined views counted as pages | Handoff §8 interpretation |
 | C15 | No H1/H2 and no PNG mappings marked UNPROVEN | Handoff evidence rule |
 
-No Stitch export is deployed as application code. No 3D/WebGL/canvas/GLB/GLTF usage was introduced; the only decorative exception remains the ACR-002 CSS/static Home hero motif.
+No Stitch export is deployed as application code; approved visuals are ported into source-owned React/Tailwind components. No 3D/WebGL/canvas/GLB/GLTF usage was introduced. ACR-002 remains the CSS/static Home hero fallback; ACR-003 permits the three Stitch-hosted images on Public Home only.
