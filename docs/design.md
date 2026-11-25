@@ -501,6 +501,9 @@ The project owner approved adopting the Stitch Home hero composition and copy on
 - Public-site editorial display face exception: Georgia/local serif fallback for this H1 only, approved under docs/stitch-visual-handoff.md §4. Manrope remains the heading default everywhere else; Inter remains body text.
 - Motion: restrained 150–250 ms reveal only; reduced motion shows the final state immediately. No continuous pan, autoplay or simulated activity.
 - Mobile: eyebrow, H1, copy and stacked CTAs remain first in DOM and reading order; decorative motif follows.
+
+The Home page follows the complete approved Stitch section order: hero, connected-dairy introduction, five-tab capability showcase, product-interface reveal, three-stage How It Works, three-card benefits, contact CTA, public footer and a static brand strip. Inner public pages keep the approved sitemap components. Locked-rule substitutions remain mandatory: licensed-image slots replace the unverified Googleusercontent photo; neutral illustrative values replace fake live metrics; no live-status, sync, quota or fictional-farm cues; no RFID/IoT, automation, invented formulas or unapproved herd-size field; and the brand strip is static rather than an infinite marquee.
+
 Inner public-page hero
 - Full-width warm ivory surface.
 - Centered title and short supporting text.

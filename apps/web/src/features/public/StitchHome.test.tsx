@@ -1,0 +1,95 @@
+import { cleanup, render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { afterEach, describe, expect, it, vi } from 'vitest';
+import { MotionProvider } from '../../motion/MotionProvider';
+import { StitchHomePage } from './StitchHome';
+
+vi.mock('./HeroMotif', () => ({
+  default: () => <div data-testid="lazy-motif" />,
+}));
+
+function renderHome() {
+  return render(
+    <MotionProvider>
+      <StitchHomePage />
+    </MotionProvider>,
+  );
+}
+
+describe('Stitch homepage structure', () => {
+  afterEach(() => {
+    cleanup();
+  });
+
+  it('renders the approved Stitch section order and copy', () => {
+    renderHome();
+
+    expect(
+      screen.getByRole('heading', {
+        level: 1,
+        name: 'The intelligence behind better dairy farming.',
+      }),
+    ).not.toBeNull();
+    expect(
+      screen.getByRole('heading', {
+        level: 2,
+        name: 'Better farm management starts with better-connected information.',
+      }),
+    ).not.toBeNull();
+    expect(
+      screen.getByRole('heading', { level: 2, name: 'Every part of your farm. Better connected.' }),
+    ).not.toBeNull();
+    expect(
+      screen.getByRole('heading', {
+        level: 2,
+        name: 'Meet the platform behind smarter dairy management.',
+      }),
+    ).not.toBeNull();
+    expect(
+      screen.getByRole('heading', { level: 2, name: 'A clearer way to manage your farm.' }),
+    ).not.toBeNull();
+    expect(
+      screen.getByRole('heading', {
+        level: 2,
+        name: 'Built for the realities of dairy-farm management.',
+      }),
+    ).not.toBeNull();
+    expect(
+      screen.getByRole('heading', {
+        level: 2,
+        name: 'Ready to bring more clarity to your dairy operation?',
+      }),
+    ).not.toBeNull();
+  });
+
+  it('switches the five approved capability tabs', async () => {
+    const user = userEvent.setup();
+    renderHome();
+
+    expect(
+      screen.getByRole('heading', { level: 3, name: 'Animal Records, Profiles & Health History' }),
+    ).not.toBeNull();
+
+    await user.click(screen.getByRole('tab', { name: '02. Milk Production' }));
+
+    expect(
+      screen.getByRole('heading', {
+        level: 3,
+        name: 'Milk Production Records & Bulk Tank Tracking',
+      }),
+    ).not.toBeNull();
+    expect(
+      screen.getByRole('tab', { name: '02. Milk Production' }).getAttribute('aria-selected'),
+    ).toBe('true');
+  });
+
+  it('uses no external image, fake live metric or animated marquee', () => {
+    const { container } = renderHome();
+
+    expect(container.querySelector('img')).toBeNull();
+    expect(container.querySelector('canvas')).toBeNull();
+    expect(screen.queryByText(/Live Operational Overview|Oakview|Herd Sync/i)).toBeNull();
+    expect(screen.queryByText(/11,480 L|4\.28%|\+\$11\.84/i)).toBeNull();
+    expect(container.querySelector('.sh-brand-strip')).not.toBeNull();
+  });
+});
