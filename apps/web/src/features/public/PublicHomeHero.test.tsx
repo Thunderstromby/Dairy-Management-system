@@ -93,8 +93,12 @@ describe('PublicHomeHero', () => {
     expect(
       screen.getByText(/Bring animal care, milk production, daily operations, and farm management/),
     ).not.toBeNull();
-    expect(screen.getByRole('button', { name: 'Explore SmartFarm' })).not.toBeNull();
-    expect(screen.getByRole('link', { name: 'See How It Works' })).not.toBeNull();
+    expect(screen.getByRole('link', { name: 'Explore SmartFarm' }).getAttribute('href')).toBe(
+      '#features',
+    );
+    expect(screen.getByRole('link', { name: 'See How It Works' }).getAttribute('href')).toBe(
+      '#how-it-works',
+    );
     expect(screen.getByText(/Illustrative design preview — not live farm data/)).not.toBeNull();
     expect(document.querySelector('.sf-hero__static-motif')).not.toBeNull();
     expect(screen.queryByTestId('lazy-motif')).toBeNull();

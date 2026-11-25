@@ -9,6 +9,7 @@ HOME
 - Sticky navigation on scroll.
 - Mobile: collapsible navigation drawer.
 - Motion: subtle menu and scroll-state transitions.
+- Owner-approved Home-only override (25 November 2026): the Home navbar uses Stitch's five section links (Home, About, Features, How It Works, Contact) and the “Let's Talk” CTA; section links scroll to the corresponding Home section. Inner public pages keep the seven canonical links and “Contact Us” CTA above.
 2. Hero (owner-approved Stitch override, 25 November 2026)
 - Eyebrow: “SMARTER DAIRY FARM MANAGEMENT”.
 - Main headline: “The intelligence behind better dairy farming.”
@@ -71,6 +72,7 @@ HOME
 - Approved contact information.
 - Copyright information.
 - Legal links only if approved content is supplied.
+- Owner-approved Home-only override (25 November 2026): use Stitch's Home footer wording, seven section links and “Connect with our team →” consultation cue. Legal link labels remain text-only until approved content is supplied. Inner public pages keep the canonical footer.
 
 2. Super Admin Panel
 Shared Super Admin layout

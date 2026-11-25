@@ -2,6 +2,7 @@ import { Check } from 'lucide-react';
 import { useState, type ReactNode } from 'react';
 import { PublicHomeHero } from './PublicHomeHero';
 import { InquiryForm } from './InquiryForm';
+import { scrollToSection } from './scrollToSection';
 import './stitch-home.css';
 
 type FeatureTab = {
@@ -300,7 +301,7 @@ function StitchFeaturesSection() {
 
 function StitchProductRevealSection() {
   return (
-    <section className="sh-section sh-section--ivory sh-product">
+    <section id="dashboard-preview" className="sh-section sh-section--ivory sh-product">
       <div className="sh-container">
         <div className="sh-section-heading sh-section-heading--center">
           <p className="sh-kicker">The Platform Interface</p>
@@ -437,7 +438,7 @@ function StitchHowItWorksSection() {
 
 function StitchBenefitsSection() {
   return (
-    <section className="sh-section sh-section--ivory sh-benefits">
+    <section id="benefits" className="sh-section sh-section--ivory sh-benefits">
       <div className="sh-container">
         <div className="sh-section-heading">
           <p className="sh-kicker sh-kicker--block">Real Operational Value</p>
@@ -501,10 +502,18 @@ function StitchContactSection() {
             needs.
           </p>
           <div className="sh-contact__actions">
-            <a className="sf-button sf-button--primary" href="#inquiry-form">
+            <a
+              className="sf-button sf-button--primary"
+              href="#inquiry-form"
+              onClick={(event) => scrollToSection(event, 'inquiry-form')}
+            >
               Contact SmartFarm
             </a>
-            <a className="sh-button-outline" href="#/public/features">
+            <a
+              className="sh-button-outline"
+              href="#features"
+              onClick={(event) => scrollToSection(event, 'features')}
+            >
               Explore the Platform
             </a>
           </div>

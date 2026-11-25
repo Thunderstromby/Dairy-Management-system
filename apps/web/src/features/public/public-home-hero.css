@@ -12,6 +12,11 @@
   color: #ffffff;
 }
 
+.sf-page--home .sf-hero {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
 .sf-hero__aura {
   z-index: 0;
   opacity: 0.35;

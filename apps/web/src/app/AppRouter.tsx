@@ -55,7 +55,7 @@ export function AppRouter() {
 
   if (screen.surface === 'public') {
     return (
-      <div className="sf-page">
+      <div className={screen.template === 'home' ? 'sf-page sf-page--home' : 'sf-page'}>
         <PublicNavbar />
         <main>
           {screen.template === 'home' ? null : (
