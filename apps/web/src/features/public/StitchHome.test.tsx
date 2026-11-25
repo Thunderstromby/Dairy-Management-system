@@ -93,7 +93,7 @@ describe('Stitch homepage structure', () => {
     expect(container.querySelector('canvas')).toBeNull();
     expect(screen.queryByText(/Live Operational Overview|Oakview|Herd Sync/i)).toBeNull();
     expect(screen.queryByText(/11,480 L|4\.28%|\+\$11\.84|Active Herd: 412 Cows/i)).toBeNull();
-    expect(container.querySelector('.sf-stitch-brand-strip')).not.toBeNull();
+    expect(container.querySelector('.sf-stitch-brand-strip')).toBeNull();
     expect(container.querySelector('.marquee-track')).toBeNull();
   });
 });

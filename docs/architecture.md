@@ -642,6 +642,7 @@ Official documentation for provider limits and integration; verify again before 
 | Supporting architecture | LOCKED — approved as scaffold baseline |
 | ACR-002 CSS/static Home hero motif | APPROVED by project owner — 25 November 2026 |
 | ACR-003 Stitch-hosted Public Home visual assets | APPROVED by project owner — 25 November 2026; Public Home only |
+| ACR-004 Stitch visual treatment across approved public pages | APPROVED by owner instruction — 25 November 2026; no new routes, no private surfaces, neutral preview data only |
 | True WebGL / GLB / R3F 3D | Conditional; requires a separate written ACR |
 | Free infrastructure and recovery | Conditional; pending capacity and operational acceptance |
 | Approved by / date | Project owner — 24 November 2026 |

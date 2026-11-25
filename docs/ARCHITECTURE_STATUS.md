@@ -96,3 +96,4 @@ The owner supplied the following content specification for "System architecture 
 | ACR-001 prototype fixture exception | Approved by owner 24 November 2026; mapped to `apps/web/src/fixtures` and `@smartfarm/data-source` |
 | ACR-002 limited CSS/static Home hero 3D motif | Approved by owner 25 November 2026; no WebGL, canvas, GLB/GLTF or private-surface 3D |
 | ACR-003 Stitch-hosted Public Home visual assets | Approved by owner 25 November 2026; three Stitch URLs limited to Public Home, owner accepts unverified license/availability risk |
+| ACR-004 Stitch visual treatment across approved public pages | Approved by owner instruction 25 November 2026; no new routes, static signature strip, local logo fallback from approved screenshot, neutral preview data only |

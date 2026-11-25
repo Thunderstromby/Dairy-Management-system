@@ -4,6 +4,7 @@ import { RoleGuard } from '../auth/prototype-role';
 import { PublicFooter } from '../features/public/PublicFooter';
 import { PublicInnerContent } from '../features/public/PublicContent';
 import { PublicNavbar } from '../features/public/PublicNavbar';
+import { StitchBrandStrip } from '../features/public/StitchBrandStrip';
 import { StandaloneScreen, WorkspaceAppShell } from '../features/workspace/AppShell';
 import { WorkspaceScreen } from '../features/workspace/WorkspaceScreens';
 import type { ScreenDefinition } from './types';
@@ -58,18 +59,10 @@ export function AppRouter() {
       <div className={screen.template === 'home' ? 'sf-page sf-page--home' : 'sf-page'}>
         <PublicNavbar />
         <main>
-          {screen.template === 'home' ? null : (
-            <div className="sf-inner-hero">
-              <div className="sf-inner-hero__inner">
-                <p className="sf-eyebrow">SmartFarm</p>
-                <h1>{screen.title}</h1>
-                <p>{screen.description}</p>
-              </div>
-            </div>
-          )}
           <PublicInnerContent screenId={screen.id} />
         </main>
         <PublicFooter />
+        <StitchBrandStrip />
       </div>
     );
   }

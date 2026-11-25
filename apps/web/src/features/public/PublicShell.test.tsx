@@ -18,16 +18,22 @@ describe('public shell', () => {
     cleanup();
   });
 
-  it('uses the approved Stitch navigation and footer copy on Home', () => {
+  it('uses the Stitch navigation and footer on every approved public page', () => {
     window.location.hash = '#/public/home';
     renderShell();
 
     const nav = screen.getByRole('navigation', { name: 'Public navigation' });
 
-    expect(within(nav).getByRole('link', { name: 'Home' })).not.toBeNull();
-    expect(within(nav).getByRole('link', { name: 'How It Works' })).not.toBeNull();
+    expect(within(nav).getByRole('link', { name: 'Home' }).getAttribute('href')).toBe(
+      '#/public/home',
+    );
+    expect(within(nav).getByRole('link', { name: 'How It Works' }).getAttribute('href')).toBe(
+      '#/public/how-it-works',
+    );
     expect(within(nav).queryByRole('link', { name: 'Benefits' })).toBeNull();
-    expect(screen.getByRole('link', { name: "Let's Talk" })).not.toBeNull();
+    expect(screen.getByRole('link', { name: "Let's Talk" }).getAttribute('href')).toBe(
+      '#/public/contact',
+    );
     expect(
       screen.getByText(/The intelligence behind better dairy farming\. Connecting herd care/),
     ).not.toBeNull();
@@ -38,17 +44,23 @@ describe('public shell', () => {
     expect(logos.every((logo) => logo.getAttribute('src') === STITCH_ASSETS.logo)).toBe(true);
   });
 
-  it('keeps the canonical navigation and footer copy on inner public pages', () => {
+  it('exposes every approved public page through the footer', () => {
     window.location.hash = '#/public/about';
     renderShell();
 
-    const nav = screen.getByRole('navigation', { name: 'Public navigation' });
+    const expected = [
+      ['Home', '#/public/home'],
+      ['About SmartFarm', '#/public/about'],
+      ['Features', '#/public/features'],
+      ['How It Works', '#/public/how-it-works'],
+      ['Benefits', '#/public/benefits'],
+      ['Dashboard Preview', '#/public/dashboard-preview'],
+      ['Contact', '#/public/contact'],
+    ] as const;
 
-    expect(within(nav).getByRole('link', { name: 'Benefits' })).not.toBeNull();
-    expect(within(nav).getByRole('link', { name: 'Dashboard Preview' })).not.toBeNull();
-    expect(screen.getAllByRole('link', { name: 'Contact Us' })[0].getAttribute('href')).toBe(
-      '#/public/contact',
-    );
-    expect(screen.queryByRole('link', { name: "Let's Talk" })).toBeNull();
+    for (const [label, href] of expected) {
+      const links = screen.getAllByRole('link', { name: label });
+      expect(links.some((link) => link.getAttribute('href') === href)).toBe(true);
+    }
   });
 });

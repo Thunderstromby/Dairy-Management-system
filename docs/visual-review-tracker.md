@@ -1,7 +1,7 @@
 # SmartFarm — Prototype visual and functional review tracker
 
 **Status:** ACTIVE GATE — approved screens are scaffolded; no page is marked PASS  
-**Authority:** ACR-001, ACR-002, ACR-003, `docs/stitch-visual-handoff.md` §9, `docs/stitch-coverage-register.md`, SRS, permission matrix, business rules
+**Authority:** ACR-001, ACR-002, ACR-003, ACR-004, `docs/stitch-visual-handoff.md` §9, `docs/stitch-coverage-register.md`, SRS, permission matrix, business rules
 
 This tracker exists so no page is claimed complete without two separate reviews:
 
@@ -23,6 +23,7 @@ No row is PASS by implication. Every implemented page must have two dated entrie
 | Section 19a motion selection | `docs/design.md` §7.1 selection table + `apps/web/src/motion/` primitives | Selection recorded; primitives implemented; per-page visual/functional evidence pending |
 | ACR-002 3D boundary | `docs/acr-002-public-decorative-3d.md`; CSS/static Home hero only | Implemented; static source boundary test rejects WebGL/canvas/3D/model assets; per-page evidence pending |
 | Owner-approved Stitch Home page mirror | `docs/design.md` §8.5, `docs/acr-003-stitch-visual-assets.md` and `docs/sitemap.md` §§1.1, 1.2, 1.9; owner approval 25 November 2026 | Implemented with Stitch section order/copy, Home-only Stitch navbar/footer, five-tab showcase, product reveal, three stages, benefits, contact CTA and static brand strip; ACR-003 permits the three Stitch-hosted images on this page only; neutral illustrative values still replace fake live data; per-page evidence pending |
+| ACR-004 public page visual port | `docs/acr-004-stitch-public-pages.md`; Stitch nav/footer and static strip on all public routes | Implemented with source-owned visual ports for all six inner public pages, route-based navigation, local logo fallback and below-footer signature strip; neutral preview values only; per-page evidence pending |
 | Stitch export coverage | all 108 `code.html` exports mapped or explicitly excluded | Recorded in `docs/stitch-coverage-register.md`; no export deployed as application code |
 
 ## Page entries
@@ -31,7 +32,7 @@ The complete per-export page matrix lives in `docs/stitch-coverage-register.md`.
 
 | Surface | Routes | Sitemap coverage | Visual review | Functional review |
 |---|---:|---|---|---|
-| Public website | 7 | §1.1–§1.8 | PENDING — Home now mirrors approved Stitch section order/copy and Home-only navigation/footer with CSS/static imagery; authentic photography and screenshot comparison outstanding | PENDING — inquiry delivery remains unwired and owner content pending |
+| Public website | 7 | §1.1–§1.8 | PENDING — all seven pages now use source-owned Stitch visual ports, route-based Stitch shell and below-footer static strip; authentic licensed photography replacement and dated screenshot comparison outstanding | PENDING — inquiry delivery remains unwired and owner content pending |
 | Super Admin | 13 | §2.1–§2.8 | PENDING — no Stitch exports for §2.7/§2.8; all other exports are reference only | PENDING — provisioning, access and suspension remain local-draft prototypes |
 | Farm Admin | 65 including shared auth/state screens | §3, §4.1–§4.16 | PENDING — token reconciliation and responsive screenshot evidence outstanding | PENDING — unresolved formulas and workflows remain blocked |
 | Farm Supervisor | Shared routes with role-filtered navigation | §3, §5 | PENDING — role-filtered shell implemented; screenshot evidence outstanding | PENDING — payroll, finance, stock correction, leave approval, settings and High/Critical alerts excluded |

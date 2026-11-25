@@ -864,37 +864,6 @@ function ContactSection() {
   );
 }
 
-function BrandStrip() {
-  const items = [
-    'SMART FARM',
-    'SMART FARM',
-    'SMART FARM',
-    'SMART FARM',
-    'SMART FARM',
-    'SMART FARM',
-  ];
-
-  return (
-    <div className="sf-stitch-brand-strip overflow-hidden border-t border-border-subtle/80 bg-white py-6">
-      <div className="flex flex-wrap items-center justify-center gap-8">
-        {items.map((item, index) => (
-          <span
-            key={`${item}-${index}`}
-            className="inline-flex items-center gap-8 font-heading text-xs font-extrabold uppercase tracking-[0.28em] text-[#245C45] sm:text-sm"
-          >
-            {item}
-            <span
-              className={`inline-block h-2 w-2 rounded-full ${
-                index % 2 === 0 ? 'bg-harvest-gold' : 'bg-pasture-green'
-              }`}
-            />
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export function StitchHomePage() {
   return (
     <>
@@ -905,7 +874,6 @@ export function StitchHomePage() {
       <HowItWorksSection />
       <BenefitsSection />
       <ContactSection />
-      <BrandStrip />
     </>
   );
 }

@@ -34,6 +34,17 @@ describe('AppRouter role boundaries', () => {
     cleanup();
   });
 
+  it('places the static signature strip after the footer on public pages', async () => {
+    const { container } = await renderAt('#/public/home');
+
+    const footer = container.querySelector('footer');
+    const strip = container.querySelector('.sf-stitch-brand-strip');
+    expect(footer).not.toBeNull();
+    expect(strip).not.toBeNull();
+    const position = footer!.compareDocumentPosition(strip!);
+    expect(position & Node.DOCUMENT_POSITION_FOLLOWING).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
+  });
+
   it('allows a Farm Admin to open the approved farm dashboard', async () => {
     await renderAt('#/farm/dashboard', 'farm-admin');
 

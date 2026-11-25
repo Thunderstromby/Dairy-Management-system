@@ -32,3 +32,7 @@ Use the three exact Stitch-hosted image URLs on Public Home only, and port the S
 | Owner approval of ACR-003 | **APPROVED** by project owner, 25 November 2026 |
 | Affected surfaces | Public Home only |
 | Follow-up | Replace external URLs with licensed local assets when supplied |
+
+## Addendum — logo availability (25 November 2026)
+
+The approved logo URL was rechecked and returns HTTP 403, while both pasture images return HTTP 200. `apps/web/src/assets/stitch-logo.png` is a local fallback cropped from the owner-supplied Stitch Home screenshot so the mark remains visible. The original URL is retained in `stitchAssets.ts` as `logoRemote` for provenance. ACR-004 records the owner's instruction to use this fallback and extend the visual treatment to the other approved public pages.
