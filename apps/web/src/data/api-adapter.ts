@@ -25,6 +25,7 @@ export function createApiDataSource(): DataSource {
     mode: 'api',
     labels,
     getIllustrativeChart: async () => notWired(),
+    getScreenData: async () => notWired(),
     drafts: () => unavailableDrafts,
   };
 }

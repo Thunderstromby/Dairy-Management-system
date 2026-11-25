@@ -11,8 +11,14 @@ interface PrototypeRoleContextValue {
 
 const PrototypeRoleContext = createContext<PrototypeRoleContextValue | null>(null);
 
-export function PrototypeRoleProvider({ children }: { children: ReactNode }) {
-  const [role, setRole] = useState<PrototypeRole>('guest');
+export function PrototypeRoleProvider({
+  children,
+  initialRole = 'guest',
+}: {
+  children: ReactNode;
+  initialRole?: PrototypeRole;
+}) {
+  const [role, setRole] = useState<PrototypeRole>(initialRole);
   const value = useMemo(() => ({ role, setRole }), [role]);
 
   return <PrototypeRoleContext.Provider value={value}>{children}</PrototypeRoleContext.Provider>;

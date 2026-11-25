@@ -22,6 +22,26 @@ describe('data-source seam', () => {
     expect(() => source.drafts().list()).toThrow(DATA_SOURCE_NOT_WIRED);
   });
 
+  it('returns neutral screen layouts without restricted values or hardcoded currency', async () => {
+    const request = {
+      id: 'farm.reports.milk',
+      title: 'Milk Reports',
+      template: 'report',
+      description: 'Milk production report preview.',
+    };
+    const screen = await createFixtureDataSource().getScreenData(request);
+    const cellText = screen.rows.flatMap((row) => row.cells).join(' ');
+
+    expect(screen.notice).toMatch(/Illustrative layout only/);
+    expect(screen.columns.length).toBeGreaterThan(0);
+    expect(screen.sections.length).toBeGreaterThan(0);
+    expect(cellText).not.toMatch(/High|Critical/i);
+    expect(cellText).not.toMatch(/\$|USD/i);
+    await expect(createApiDataSource().getScreenData(request)).rejects.toThrow(
+      DATA_SOURCE_NOT_WIRED,
+    );
+  });
+
   it('keeps fixture labels out of the production adapter', () => {
     const fixture = createFixtureDataSource();
     const api = createApiDataSource();

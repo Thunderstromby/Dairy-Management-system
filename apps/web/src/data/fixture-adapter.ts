@@ -1,4 +1,5 @@
 import { illustrativeChart } from '../fixtures/illustrative-chart';
+import { createScreenData } from '../fixtures/screen-data';
 import { createLocalDraftCollection } from './local-drafts';
 import type { DataSource, PrototypeLabels } from './types';
 
@@ -16,6 +17,7 @@ export function createFixtureDataSource(): DataSource {
     mode: 'fixture',
     labels,
     getIllustrativeChart: async () => illustrativeChart,
+    getScreenData: async (request) => createScreenData(request),
     drafts: () => localDrafts,
   };
 }

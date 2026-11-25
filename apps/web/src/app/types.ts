@@ -1,3 +1,5 @@
+import type { PrototypeRole } from '../data/types';
+
 export type Surface = 'public' | 'platform' | 'farm';
 
 export type ScreenTemplate =
@@ -21,6 +23,6 @@ export interface ScreenDefinition {
   description: string;
   stitchReference?: string;
   sitemapReference: string;
-  allowedRoles?: readonly string[];
+  allowedRoles?: readonly PrototypeRole[];
   group?: string;
 }

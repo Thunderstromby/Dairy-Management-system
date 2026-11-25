@@ -380,6 +380,40 @@ textarea {
   grid-template-columns: 76px minmax(0, 1fr);
 }
 
+.sf-shell__mobile-toggle {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  margin-right: 12px;
+  padding: 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.sf-sidebar-backdrop {
+  display: none;
+}
+
+.sf-spin {
+  animation: sf-spin 1s linear infinite;
+}
+
+@keyframes sf-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sf-spin {
+    animation: none;
+  }
+}
+
 .sf-sidebar {
   display: flex;
   flex-direction: column;
@@ -903,6 +937,35 @@ textarea {
 
   .sf-sidebar {
     display: none;
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 60;
+    width: min(280px, 86vw);
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgb(14 23 18 / 24%);
+  }
+
+  .sf-sidebar--open {
+    display: flex;
+  }
+
+  .sf-sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 55;
+    border: 0;
+    background: rgb(14 23 18 / 45%);
+    cursor: pointer;
+  }
+
+  .sf-shell__mobile-toggle {
+    display: inline-flex;
+  }
+
+  .sf-topbar__context {
+    display: flex;
+    align-items: center;
   }
 
   .sf-public-nav__links {
