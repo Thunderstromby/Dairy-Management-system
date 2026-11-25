@@ -1,5 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { MotionProvider } from './motion/MotionProvider';
 import './styles/index.css';
 
 const container = document.getElementById('root');
@@ -10,6 +11,8 @@ if (!container) {
 
 createRoot(container).render(
   <StrictMode>
-    <div data-app="smartfarm" />
+    <MotionProvider>
+      <div data-app="smartfarm" />
+    </MotionProvider>
   </StrictMode>,
 );

@@ -322,6 +322,46 @@ Do not use:
 - Excessive bouncing or elastic effects.
 Respect prefers-reduced-motion. In reduced-motion mode, remove nonessential movement and replace animated transitions with immediate state changes.
 
+7.1 Motion Pattern Selection
+
+Scope: approved public Home page only (`sitemap.md` §1, `appflow.md` Journey 01). Private surfaces keep the standard state transitions in `design-system.md` §§8.2–8.3; no Section 19a signature effect is added there. At most one signature text effect and one signature scroll effect are selected. Only transform and opacity are animated. No new library is introduced.
+
+| Pattern | Type (text / micro-interaction / scroll) | Where used | Purpose | Library | Mobile behavior | Reduced-motion fallback |
+|---|---|---|---|---|---|---|
+| Word Stagger | text | Hero H1 on public Home | Signature text effect: sets a premium, calm tone without adding information | Native CSS transforms/opacity + React; no motion library | Words are shown together at final position; no stagger | Full text appears immediately with no transform or opacity animation |
+| Layered Parallax | scroll | Hero sage organic layer and Dashboard Preview frame | Signature scroll effect: restrained 2D depth behind content only | Native CSS custom properties + shared pointer/scroll source with `requestAnimationFrame`; no motion library | Disabled on coarse pointers; layers remain static and readable | Layers stay static; no pointer or scroll transform updates |
+| Loading to Success | micro-interaction | Contact Inquiry submit button | Communicates a real submission state change only | Native CSS + React state | Same label/state order; no hover dependency | Immediate label/icon change with no morphing |
+| Error Shake | micro-interaction | Contact Inquiry field-level validation | Communicates real invalid input; keeps focus and message | Native CSS + React state | Border/message appears without movement | Border/message appears immediately; no shake |
+| Toast Drop | micro-interaction | Contact Inquiry success/error result | Confirms the actual inquiry result without blocking navigation | Native CSS + React state | Inline status message replaces the moving toast; same wording | Status appears immediately in place |
+
+7.1.1 Additional approved 2D effects outside Section 19a
+
+These are already permitted by `design-system.md` §§8.3–8.6 and are implemented under the same transform/opacity and reduced-motion constraints. They are supporting polish, not signature patterns.
+
+| Effect | Where used | Constraint |
+|---|---|---|
+| Subtle scroll reveal | About, Features, How It Works, Benefits, Footer | Short fade/translate only; content is readable before reveal completes |
+| Pointer-follow decorative layer | Public hero background only | Non-interactive, `aria-hidden`, low amplitude, disabled on touch and reduced motion |
+| Cursor-reactive highlight | Public hero decorative layer only | No custom cursor; native pointer/text/not-allowed cursors are preserved |
+| Magnetic primary CTA | Hero `Contact Us` only | Small transform on fine pointers; full-size hit area retained; static on mobile/reduced motion |
+| Hover lift | Feature cards only | 150ms elevation via transform/shadow; never required to discover content |
+| Image reveal/movement | Hero photograph and Dashboard Preview frame | Fixed aspect ratio to prevent layout shift; no continuous motion |
+| Smooth section transition | Anchor navigation between approved Home sections | Short fade only; no scroll-jacking |
+
+7.1.2 Rejected Section 19a patterns
+
+| Rejected pattern(s) | Reason |
+|---|---|
+| Typewriter, Scramble Decode, Rotating Word, Wave, Letter Bounce, Letter Flip, RGB Glitch, Split Halves | Novel or game-like; compete with the serious agricultural-technology identity and slow reading. |
+| Gradient Flow, Outline to Fill, Marker Highlight, Squiggle Underline, Zoom Punch, Tracking Expand, Blur In | Decorative text treatment that adds no state or information; risks readability and reads as generic template motion. |
+| Number Count-up | Dashboard preview values are illustrative; animating numbers would imply real saved values. Revisit only with approved real data. |
+| Pinned Heading, 3D Card Zoom, Card Arc Carousel, Fixed 3D Model, Stacking Cards, Focus-frame Slider, Scroll-triggered Demo | Scroll-jacking, heavy composition, or 3D/game language; excluded by the 2D direction and `sitemap.md`/`scope.md`. |
+| Line-by-line Reveal | Would become a second competing scroll signature alongside Layered Parallax; short section reveals already cover this need. |
+| Like Burst, Add to Cart, Star Rating, Bookmark Save, Copy Link, Pull to Refresh, Swipe to Delete, Long Press Menu, Segmented Control, Number Stepper | No matching state or control exists in the approved public journey; add-to-cart is incompatible with COD/manual inquiry-only sales. |
+| Toggle Switch, Password Reveal, Progress Ring, Accordion Expand | No eligible public state; password reveal belongs to authenticated surfaces and progress rings require real progress data. Accordion expansion would introduce layout movement. |
+
+Implementation seam: `apps/web/src/motion/` with global styles in `apps/web/src/styles/motion.css`. Per-page usage remains subject to `docs/visual-review-tracker.md`; no feature page is claimed complete by these primitives alone.
+
 8. Repeating structural system
 These components are locked and must be reused consistently.
 8.1 Public navbar

@@ -20,6 +20,7 @@ No row is PASS by implication. Every implemented page must have two dated entrie
 | Prototype route guards per role | guard present and labelled “Prototype guard only” | Component available; pending per-page evidence |
 | Double page review | dated visual + functional entries for each page | No feature pages implemented; nothing marked PASS |
 | Production-build fixture scan | `npm run verify:no-fixtures` after `npm run build` | Implemented and demonstrated: injected marker FAILED, clean production rebuild PASSED |
+| Section 19a motion selection | `docs/design.md` §7.1 selection table + `apps/web/src/motion/` primitives | Selection recorded; primitives implemented; per-page visual/functional evidence pending |
 
 ## Page entries
 
