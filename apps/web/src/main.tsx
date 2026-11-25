@@ -1,6 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { PublicHomeHero } from './features/public/PublicHomeHero';
+import { AppRouter } from './app/AppRouter';
+import { PrototypeRoleProvider } from './auth/prototype-role';
+import { PrototypeBar } from './components/PrototypeBar';
 import { MotionProvider } from './motion/MotionProvider';
 import './styles/index.css';
 
@@ -13,9 +15,10 @@ if (!container) {
 createRoot(container).render(
   <StrictMode>
     <MotionProvider>
-      <div data-app="smartfarm">
-        <PublicHomeHero />
-      </div>
+      <PrototypeRoleProvider>
+        <PrototypeBar />
+        <AppRouter />
+      </PrototypeRoleProvider>
     </MotionProvider>
   </StrictMode>,
 );

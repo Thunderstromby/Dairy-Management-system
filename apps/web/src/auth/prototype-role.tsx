@@ -1,3 +1,4 @@
+import { getDataSource } from '@smartfarm/data-source';
 import { createContext, useContext, useMemo, useState, type ReactNode } from 'react';
 import type { PrototypeRole } from '../data/types';
 
@@ -30,7 +31,7 @@ export function PrototypeRoleSelector() {
 
   return (
     <fieldset>
-      <legend>Prototype role selector — not authentication</legend>
+      <legend>{getDataSource().labels.roleSelector}</legend>
       {ROLES.map((option) => (
         <label key={option}>
           <input
@@ -58,11 +59,7 @@ export function RoleGuard({
   const permitted = allow.includes(role);
 
   if (!permitted) {
-    return (
-      <p role="status">
-        Restricted in this prototype. Prototype guard only — server enforcement pending.
-      </p>
-    );
+    return <p role="status">Restricted in this preview. {getDataSource().labels.roleGuard}</p>;
   }
 
   return <>{children}</>;

@@ -15,6 +15,13 @@ export interface IllustrativeChartData {
   summary: string;
 }
 
+export interface PrototypeLabels {
+  fixtureNotice: string;
+  localDraft: string;
+  roleGuard: string;
+  roleSelector: string;
+}
+
 export interface DraftRecord {
   id: string;
   label: string;
@@ -29,6 +36,7 @@ export interface DraftCollection {
 
 export interface DataSource {
   readonly mode: 'fixture' | 'api';
+  readonly labels: PrototypeLabels;
   getIllustrativeChart(): Promise<IllustrativeChartData>;
   drafts(): DraftCollection;
 }

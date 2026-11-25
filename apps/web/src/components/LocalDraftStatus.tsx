@@ -1,3 +1,5 @@
+import { getDataSource } from '@smartfarm/data-source';
+
 export function LocalDraftStatus() {
-  return <p role="status">Local draft — not saved; no server action was performed.</p>;
+  return <p role="status">{getDataSource().labels.localDraft}</p>;
 }

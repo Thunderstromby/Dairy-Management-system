@@ -1,20 +1,50 @@
-/* Canonical semantic tokens from docs/architecture.md section 7. */
+/* Canonical semantic tokens from docs/architecture.md section 7 and docs/design.md §2. */
 :root {
   --color-primary: #245c45;
+  --color-primary-hover: #194833;
+  --color-primary-light: #e4efe7;
   --color-secondary: #397a58;
+  --color-secondary-light: #e9efe5;
   --color-accent: #d5a64a;
+  --color-accent-light: #f7eed9;
   --color-background: #f7f7f1;
   --color-surface: #ffffff;
+  --color-surface-alt: #f0f2ea;
   --color-text: #25332c;
+  --color-text-secondary: #58675d;
+  --color-muted: #849087;
   --color-border: #dce3da;
+  --color-success: #28784a;
+  --color-success-bg: #e5f3e9;
+  --color-warning: #a96d13;
+  --color-warning-bg: #fbf0d9;
+  --color-error: #b64036;
+  --color-error-bg: #fbe9e6;
+  --color-info: #39748a;
+  --color-info-bg: #e8f2f5;
 }
 
 [data-theme='dark'] {
   --color-primary: #8dc6a1;
+  --color-primary-hover: #a5d7b5;
+  --color-primary-light: #263f32;
   --color-secondary: #75b38b;
+  --color-secondary-light: #2d4234;
   --color-accent: #e4bc69;
+  --color-accent-light: #3b3220;
   --color-background: #151d19;
   --color-surface: #1e2922;
+  --color-surface-alt: #27342c;
   --color-text: #edf3ee;
+  --color-text-secondary: #bbc8be;
+  --color-muted: #91a096;
   --color-border: #35443a;
+  --color-success: #83c99a;
+  --color-success-bg: #253c2d;
+  --color-warning: #e8bc69;
+  --color-warning-bg: #3b3220;
+  --color-error: #ef9a92;
+  --color-error-bg: #3d2926;
+  --color-info: #8cc8d9;
+  --color-info-bg: #223b43;
 }

@@ -14,7 +14,7 @@ describe('prototype route guard', () => {
     );
 
     expect(screen.queryByText('Protected content')).toBeNull();
-    expect(screen.getByText(/Prototype guard only/)).toBeTruthy();
+    expect(screen.getByText(/Restricted in this preview/)).toBeTruthy();
   });
 
   it('permits an explicitly selected prototype role', async () => {

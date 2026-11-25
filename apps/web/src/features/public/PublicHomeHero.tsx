@@ -52,12 +52,12 @@ export function PublicHomeHero() {
             <MagneticButton
               className="sf-button sf-button--primary"
               onClick={() => {
-                window.location.hash = '#contact';
+                window.location.hash = '#/public/contact';
               }}
             >
               Contact Us
             </MagneticButton>
-            <a className="sf-button sf-button--secondary" href="#features">
+            <a className="sf-button sf-button--secondary" href="#/public/features">
               Explore Features
             </a>
           </div>

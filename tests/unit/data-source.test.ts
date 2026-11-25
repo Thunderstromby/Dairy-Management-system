@@ -22,6 +22,20 @@ describe('data-source seam', () => {
     expect(() => source.drafts().list()).toThrow(DATA_SOURCE_NOT_WIRED);
   });
 
+  it('keeps fixture labels out of the production adapter', () => {
+    const fixture = createFixtureDataSource();
+    const api = createApiDataSource();
+
+    expect(fixture.labels.localDraft).toBe(
+      'Local draft — not saved; no server action was performed.',
+    );
+    expect(fixture.labels.roleGuard).toContain('Prototype guard only');
+    expect(api.labels.localDraft).not.toContain('Local draft — not saved');
+    expect(api.labels.roleGuard).not.toContain('Prototype guard only');
+    expect(api.labels.fixtureNotice).not.toContain('visual-only fixture');
+    expect(api.labels.roleSelector).not.toContain('prototype role selector');
+  });
+
   it('keeps simulated create, edit and delete in local memory only', () => {
     const drafts = createFixtureDataSource().drafts();
     const created = drafts.create('Local entry');

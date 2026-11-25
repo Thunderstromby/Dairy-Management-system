@@ -20,7 +20,7 @@ describe('illustrative chart', () => {
 
   it('labels simulated changes as local drafts only', () => {
     render(<LocalDraftStatus />);
-    expect(screen.getByText(/Local draft — not saved/)).toBeTruthy();
+    expect(screen.getByText(/No local draft is available/)).toBeTruthy();
   });
 
   it('renders fixture data through the data-access seam', async () => {
