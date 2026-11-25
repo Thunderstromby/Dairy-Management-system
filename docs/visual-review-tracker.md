@@ -1,7 +1,7 @@
 # SmartFarm — Prototype visual and functional review tracker
 
-**Status:** ACTIVE GATE — no feature pages are implemented in the scaffold yet  
-**Authority:** ACR-001, `docs/stitch-visual-handoff.md` §9, SRS, permission matrix, business rules
+**Status:** ACTIVE GATE — approved screens are scaffolded; no page is marked PASS  
+**Authority:** ACR-001, ACR-002, `docs/stitch-visual-handoff.md` §9, `docs/stitch-coverage-register.md`, SRS, permission matrix, business rules
 
 This tracker exists so no page is claimed complete without two separate reviews:
 
@@ -14,18 +14,31 @@ No row is PASS by implication. Every implemented page must have two dated entrie
 |---|---|---|
 | Visual-only fixtures labelled and neutral | `// visual-only sample data` first line; neutral tokens only | Implemented at data layer; pending per-page evidence |
 | Components use `@smartfarm/data-source` only | import review per component | Implemented at seam; pending per-page evidence |
-| Local draft UI never claims server success | “Local draft — not saved” label in each simulated mutation state | Component available; pending per-page evidence |
+| Local draft UI never claims server success | Adapter-supplied local draft label in each simulated mutation state | Implemented; pending per-page evidence |
 | No invented APIs, DB behavior or formulas | `DATA_SOURCE_NOT_WIRED` until approved API spec; OPEN QUESTION for unresolved values | Implemented at seam; pending per-page evidence |
 | Charts state period, unit, source and “Illustrative” | visible figcaption + accessible text summary | Component available; pending per-page evidence |
-| Prototype route guards per role | guard present and labelled “Prototype guard only” | Component available; pending per-page evidence |
-| Double page review | dated visual + functional entries for each page | No feature pages implemented; nothing marked PASS |
+| Prototype route guards per role | RoleGuard + adapter-supplied guard label | Implemented and tested; pending per-page evidence |
+| Double page review | dated visual + functional entries for each page | No page marked PASS; see `docs/stitch-coverage-register.md` |
 | Production-build fixture scan | `npm run verify:no-fixtures` after `npm run build` | Implemented and demonstrated: injected marker FAILED, clean production rebuild PASSED |
 | Section 19a motion selection | `docs/design.md` §7.1 selection table + `apps/web/src/motion/` primitives | Selection recorded; primitives implemented; per-page visual/functional evidence pending |
-| ACR-002 3D boundary | `docs/acr-002-public-decorative-3d.md`; CSS/static Home hero only | Implemented; no WebGL/canvas/GLB; per-page visual/functional evidence pending |
+| ACR-002 3D boundary | `docs/acr-002-public-decorative-3d.md`; CSS/static Home hero only | Implemented; static source boundary test rejects WebGL/canvas/3D/model assets; per-page evidence pending |
+| Stitch export coverage | all 108 `code.html` exports mapped or explicitly excluded | Recorded in `docs/stitch-coverage-register.md`; no export deployed as application code |
 
 ## Page entries
 
-| Page | Sitemap reference | Stitch reference | Visual review | Functional review |
-|---|---|---|---|---|
-| — | No feature pages implemented yet | — | NOT APPLICABLE | NOT APPLICABLE |
-| Public Home — hero | `sitemap.md` §1.2 | `design.md` §8.5 | PENDING — ACR-002 CSS/static motif present; authentic photography asset still required | PENDING — CTA destinations and inquiry flow not yet implemented |
+The complete per-export page matrix lives in `docs/stitch-coverage-register.md`. It records all 108 Stitch exports with their implemented route or explicit exclusion, plus PENDING visual and functional review columns. The summary below tracks the implemented sitemap surfaces.
+
+| Surface | Routes | Sitemap coverage | Visual review | Functional review |
+|---|---:|---|---|---|
+| Public website | 7 | §1.1–§1.8 | PENDING — Home hero has CSS/static motif; authentic photography and screenshot comparison outstanding | PENDING — inquiry delivery remains unwired and owner content pending |
+| Super Admin | 13 | §2.1–§2.8 | PENDING — no Stitch exports for §2.7/§2.8; all other exports are reference only | PENDING — provisioning, access and suspension remain local-draft prototypes |
+| Farm Admin | 65 including shared auth/state screens | §3, §4.1–§4.16 | PENDING — token reconciliation and responsive screenshot evidence outstanding | PENDING — unresolved formulas and workflows remain blocked |
+| Farm Supervisor | Shared routes with role-filtered navigation | §3, §5 | PENDING — role-filtered shell implemented; screenshot evidence outstanding | PENDING — payroll, finance, stock correction, leave approval, settings and High/Critical alerts excluded |
+
+## Evidence still required before any PASS
+
+1. Owner-provided or approved-licensed Stitch screenshot comparison for each page at 320px, tablet and wide desktop widths.
+2. Recorded keyboard and screen-reader checks for every dialog, form, table and chart.
+3. Functional sign-off against `docs/srs.md`, `docs/role-permission-matrix.md` and `docs/bussiness rules.md`, including explicit OPEN QUESTION disposition.
+4. Confirmation that no page implies live telemetry, server success, public file access or fabricated financial truth.
+5. A fresh `npm run build` followed by `npm run verify:no-fixtures` on the reviewed commit.

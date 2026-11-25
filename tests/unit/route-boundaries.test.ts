@@ -95,6 +95,19 @@ describe('approved sitemap route registry', () => {
   });
 });
 
+describe('Stitch coverage register', () => {
+  it('accounts for all 108 visual exports without marking any page PASS', () => {
+    const register = readFileSync(
+      resolve(process.cwd(), 'docs/stitch-coverage-register.md'),
+      'utf8',
+    );
+    const exportRows = register.match(/^\| `[a-z0-9_]+` \|/gm) ?? [];
+
+    expect(exportRows).toHaveLength(108);
+    expect(register).not.toMatch(/\| PASS \|/);
+  });
+});
+
 describe('private frontend boundary', () => {
   it('contains no WebGL, canvas, 3D library or model asset usage', () => {
     const forbidden =
