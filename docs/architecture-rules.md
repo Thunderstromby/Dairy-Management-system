@@ -65,6 +65,7 @@ Allowed direction:
 5. Worker → PostgreSQL outbox → policy check → provider adapter.
 6. UI component → owned/shared UI primitives; navigation visibility follows role but never grants permission.
 7. Prototype UI component → `@smartfarm/data-source` only (ACR-001). The build-time switch selects `apps/web/src/fixtures/` in development and the non-fixture adapter in production. Components never import fixture files directly.
+8. Public Home hero → CSS/static decorative motif in `apps/web/src/features/public/` only (ACR-002), with lazy import, static fallback and no shared root import.
 
 Named forbidden paths:
 
@@ -78,6 +79,7 @@ Named forbidden paths:
 - Super Admin → routine farm operational or financial browsing.
 - Supervisor → payroll, finance, stock correction, leave approval, animal archive, or High/Critical health alerts.
 - Private route or private interface → 3D/WebGL code.
+- Any route → WebGL, canvas, Three.js/R3F or GLB/GLTF assets unless a later ACR explicitly approves that runtime.
 - Runtime database role → table ownership or `BYPASSRLS`.
 - Application → payment gateway, worker login, RFID, PIN, social login, JWT replacement, or public registration.
 - Application → public bucket or permanent public URL for a private file.
@@ -109,7 +111,7 @@ Named forbidden paths:
 - Private files use opaque keys and authorized streaming; no public bucket and no permanent private URL.
 - Secrets, credentials, production data and realistic worker records never enter source control, logs or error responses; sensitive fields are redacted.
 - Unresolved business rules, formulas, transitions and statuses stay blocked. No fake data, fake metrics or simulated live telemetry.
-- 3D/WebGL is excluded by default; any 3D work requires explicit written scope and design change approval.
+- 3D/WebGL is excluded by default; any 3D work requires explicit written scope and design change approval. ACR-002 permits one CSS/static public Home hero motif only; no WebGL is authorized.
 - ACR-001 is the only sample-data exception: fixtures are visual-only, labelled, neutral, reached through `@smartfarm/data-source`, and excluded from production bundles. Prototype route guards and local-draft state are never authorization or persistence.
 - No library outside the approved stack; no new package for a trivial utility.
 

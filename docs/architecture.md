@@ -26,7 +26,7 @@ This document supersedes the earlier architecture drafts, not the approved produ
 | `stitch-visual-handoff.md` | Visual references only |
 | `acr-001-prototype-fixtures.md` | Approved prototype fixture and data-access seam exception |
 
-The SRS, permission matrix and approved business rules govern behavior. Stitch is not a source of permissions, calculations, routes, fake statuses or new features. Unresolved requirements remain open questions. ACR-001, approved 24 November 2026, permits visual-only fixtures only under `apps/web/src/fixtures/`, reached exclusively through the build-time data-access seam at `@smartfarm/data-source`; production builds use the non-fixture adapter by default and must contain no fixture markers. Prototype route guards and local-draft UI state are labels only and never substitute for server enforcement or persistence. The owner has requested a small amount of 3D in this revision; because SRS section 24 and scope section 6.3 exclude dedicated 3D, this is a **proposed limited marketing enhancement**, requiring scope/design approval before implementation. It does not authorize operational 3D, farm simulations or additional pages.
+The SRS, permission matrix and approved business rules govern behavior. Stitch is not a source of permissions, calculations, routes, fake statuses or new features. Unresolved requirements remain open questions. ACR-001, approved 24 November 2026, permits visual-only fixtures only under `apps/web/src/fixtures/`, reached exclusively through the build-time data-access seam at `@smartfarm/data-source`; production builds use the non-fixture adapter by default and must contain no fixture markers. Prototype route guards and local-draft UI state are labels only and never substitute for server enforcement or persistence. Because SRS section 24 and scope section 6.3 exclude dedicated 3D, the small marketing enhancement is authorized only by **ACR-002**, approved by the owner on 25 November 2026 for one CSS/static Home hero motif. It does not authorize WebGL, operational 3D, farm simulations or additional pages.
 
 ## 2. Project evaluation
 
@@ -196,11 +196,11 @@ In-app alerts remain independent of email; preserve capacity for urgent alerts a
 
 **What:** CSS, SVG, Lucide React, Recharts, authentic licensed dairy photography and approved screenshots. Use local SVG for simple process/empty-state illustrations. **Why:** Accurate data visualization and restrained agricultural identity. **Alternatives:** Canvas/Lottie when justified; unnecessary initially. **Trade-off:** SVG/chart density must be managed. **Cost:** $0 libraries; use original or commercially licensed free assets. **Complexity:** Low–medium. **Risk:** Fake metrics, excessive effects, unlicensed photography.
 
-### 4.14 Limited 3D rendering — proposed enhancement
+### 4.14 Limited 3D rendering — approved CSS/static enhancement (ACR-002)
 
-**What:** One small decorative 3D element on the existing public Home hero or How It Works section (choose one, not both by default). An abstract pasture/leaf and milk-drop brand motif using simple geometry and warm Forest Green, sage and gold materials; authentic farm photography remains the primary imagery. No livestock models, game-like farms, operational simulations or new routes.
+**What:** One small decorative 3D-style CSS/static element on the existing public Home hero. How It Works remains 2D/static. The motif is an abstract pasture/leaf and milk-drop brand mark using warm Forest Green, sage and gold materials; authentic farm photography remains the primary imagery when supplied. No livestock models, game-like farms, operational simulations or new routes.
 
-**Preferred implementation:** CSS perspective/transform for a layered 3D-style motif when sufficient. If true mesh rendering is necessary, use Three.js + React Three Fiber (`three`, `@react-three/fiber`) with locally generated primitive geometry or a small original GLB asset; Blender optional for asset creation. Match the React and R3F major versions, use the official React integration, no paid Spline subscription or hosted 3D API. Drei only if a helper is actually needed.
+**Approved implementation:** CSS perspective/transform for a layered 3D-style motif. ACR-002 explicitly selected CSS/static first, so this change introduces no WebGL, canvas, Three.js, React Three Fiber, GLB/GLTF, textures or new library. True mesh rendering remains a conditional future change requiring its own approval; if ever approved, use Three.js + React Three Fiber (`three`, `@react-three/fiber`) with locally generated primitive geometry or a small original GLB asset, official React integration, no paid Spline subscription or hosted 3D API, and Drei only if a helper is actually needed.
 
 **Visual behavior:** Fixed camera, gentle pointer tilt on desktop only, no continuous rotation, autoplay video, heavy shadows, physics, orbit controls or required gesture. Render on demand; stop when outside viewport. Decorative canvas is hidden from assistive technology; real headings and CTAs remain ordinary HTML. Static SVG/WebP fallback for mobile, reduced motion, WebGL failure or slow device. Do not use 3D on login, dashboards, forms, tables, reports or any other private interface.
 
@@ -208,7 +208,7 @@ In-app alerts remain independent of email; preserve capacity for urgent alerts a
 
 **Why:** Adds a small distinctive brand moment without altering farm workflows. **Alternatives:** CSS-only 3D (preferred if visually adequate), direct Three.js (more imperative integration), static Blender render (no client GPU). **Trade-off:** True 3D introduces GPU/bundle overhead and asset/QA work. **Cost:** $0 libraries and original assets, no GPU server or paid service; development effort is real. **Complexity:** Low for CSS/static; medium for R3F. **Risk:** Mobile performance, context loss and scope creep.
 
-**Approval boundary:** The owner's request is captured here, but SRS section 24, scope and design exclusions must be reconciled by an explicit approved change. Until then the default is static/2D. Acceptance: fallback works without WebGL, reduced motion honored, no private route loads 3D code, no layout shift or CTA obstruction, all assets appropriately licensed, and mobile performance verified.
+**Approval boundary:** ACR-002 is the explicit approved scope/design change. It authorizes only the CSS/static Home hero motif described above and preserves the static/2D default everywhere else. Acceptance: static fallback works on reduced motion, coarse pointers and load failure; no WebGL code or canvas exists; no private route loads decorative 3D code; no layout shift or CTA obstruction; no critical content is placed inside the decorative element; mobile performance is verified. Frame-rate monitoring applies only if a later ACR approves a real rendering loop.
 
 ### 4.15 Motion
 
@@ -601,7 +601,7 @@ Official documentation for provider limits and integration; verify again before 
 
 ## 16. APPROVED ARCHITECTURE (LOCKED)
 
-**Approved and LOCKED by the project owner on 24 November 2026. The core stack and supporting architecture are locked; production services and limited 3D scope remain conditional as recorded below.**
+**Approved and LOCKED by the project owner on 24 November 2026. The core stack and supporting architecture are locked; production services remain conditional, and limited 3D is approved only as the CSS/static Home hero motif recorded in ACR-002.**
 
 | Category | Decision |
 |---|---|
@@ -617,7 +617,7 @@ Official documentation for provider limits and integration; verify again before 
 | UI / data | shadcn/ui, Radix, React Router, TanStack Query/Table, React Hook Form |
 | Charts / icons / fonts | Recharts, Lucide React, Manrope + Inter |
 | Motion | CSS + selective Motion |
-| 3D | Small public-only decorative motif; CSS first, Three.js + R3F conditional, static fallback |
+| 3D | ACR-002 approved: one CSS/static Home hero motif, no WebGL/GLB; Three.js + R3F remain conditional |
 | Search / caching | PostgreSQL native search, HTTP and TanStack Query |
 | Background jobs | Graphile Worker, PostgreSQL, cron-style schedules |
 | Payments | COD/manual only; no online gateways |
@@ -634,12 +634,13 @@ Official documentation for provider limits and integration; verify again before 
 | SEO / accessibility | Static pre-render, semantic HTML, proposed WCAG 2.2 AA |
 | Excluded | Payment gateways, Redis initially, microservices, Kubernetes, operational 3D, IoT, offline sync, unapproved AI predictions, paid API tiers |
 
-**Approval record:** The locked-stack application architecture and supporting open-source selections were approved and LOCKED by the project owner on 24 November 2026. Limited 3D remains conditional pending written scope/design approval. Production hosting, email, storage and independent backups remain conditional until verified capacity, costs, availability and recovery requirements are satisfied. Guaranteed zero ongoing production cost is not established by the current requirements.
+**Approval record:** The locked-stack application architecture and supporting open-source selections were approved and LOCKED by the project owner on 24 November 2026. Limited 3D is approved only through ACR-002 as a CSS/static Home hero motif; true WebGL, GLB/GLTF and private-surface 3D remain conditional pending separate written approval. Production hosting, email, storage and independent backups remain conditional until verified capacity, costs, availability and recovery requirements are satisfied. Guaranteed zero ongoing production cost is not established by the current requirements.
 
 | Human decision | Status |
 |---|---|
 | Locked core stack | LOCKED — confirmed by project owner |
 | Supporting architecture | LOCKED — approved as scaffold baseline |
-| Limited 3D change | Conditional; written scope/design approval still required |
+| ACR-002 CSS/static Home hero motif | APPROVED by project owner — 25 November 2026 |
+| True WebGL / GLB / R3F 3D | Conditional; requires a separate written ACR |
 | Free infrastructure and recovery | Conditional; pending capacity and operational acceptance |
 | Approved by / date | Project owner — 24 November 2026 |

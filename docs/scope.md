@@ -302,6 +302,8 @@ Not included
 No dedicated 3D modeling, 3D farm visualization, 3D animal models, or interactive 3D environments are included in the current scope.
 
 These can be considered separately if required.
+
+ACR-002, approved 25 November 2026, adds one CSS/static decorative motif to the public Home hero only. It is not a 3D scene and does not authorize WebGL, 3D models, simulations or additional pages.
 7. Admin Scope
 Super Admin
 - Platform-level authentication.

@@ -787,12 +787,12 @@ Do not use gradients as the default background of every card or button.
 
 10. 3D system
 Not included
-3D usage: 0%.
+3D usage: 0% true 3D.
 
-The SRS and creative direction explicitly exclude 3D functionality.
+The SRS and creative direction explicitly exclude 3D functionality. ACR-002 approves one CSS/static decorative Home hero motif only; it is not a 3D runtime and does not introduce WebGL, canvas, GLB/GLTF or textures.
 Requested dimension	SmartFarm decision
-Whether 3D is used	No
-Where it is used	Nowhere
+Whether 3D is used	No true 3D; ACR-002 CSS/static motif only
+Where it is used	Public Home hero decorative layer only (ACR-002)
 Scene style	Not applicable
 Camera behavior	Not applicable
 Interaction	Not applicable

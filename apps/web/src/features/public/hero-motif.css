@@ -1,0 +1,86 @@
+.sf-hero__motif {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  perspective: 900px;
+}
+
+.sf-hero__motif-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  transform-style: preserve-3d;
+  transform: rotateX(calc(var(--sf-pointer-y, 0) * -2deg))
+    rotateY(calc(var(--sf-pointer-x, 0) * 2deg));
+  transition: transform var(--sf-motion-normal) var(--sf-ease);
+}
+
+.sf-hero__motif-ground,
+.sf-hero__motif-leaf,
+.sf-hero__motif-drop {
+  position: absolute;
+  display: block;
+}
+
+.sf-hero__motif-ground {
+  right: 8%;
+  bottom: 16%;
+  left: 8%;
+  height: 14%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgb(141 198 161 / 45%) 0%, transparent 72%);
+  transform: translateZ(0);
+}
+
+.sf-hero__motif-leaf {
+  border-radius: 100% 0 100% 0;
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+}
+
+.sf-hero__motif-leaf--back {
+  top: 30%;
+  left: 18%;
+  width: 54%;
+  height: 27%;
+  opacity: 0.78;
+  transform: translateZ(24px) rotate(-28deg);
+}
+
+.sf-hero__motif-leaf--front {
+  right: 14%;
+  bottom: 25%;
+  width: 50%;
+  height: 25%;
+  opacity: 0.9;
+  transform: translateZ(36px) rotate(152deg);
+}
+
+.sf-hero__motif-drop {
+  top: 12%;
+  right: 28%;
+  width: 20%;
+  aspect-ratio: 1 / 1.25;
+  border-radius: 50% 50% 50% 0;
+  background: linear-gradient(160deg, var(--color-accent), var(--color-primary));
+  opacity: 0.82;
+  transform: translateZ(48px) rotate(-45deg);
+}
+
+[data-pointer-effects='false'] .sf-hero__motif-scene {
+  transform: none;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .sf-hero__motif-scene {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sf-hero__motif-scene {
+    transform: none;
+    transition: none;
+  }
+}

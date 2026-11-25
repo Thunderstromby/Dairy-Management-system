@@ -21,9 +21,11 @@ No row is PASS by implication. Every implemented page must have two dated entrie
 | Double page review | dated visual + functional entries for each page | No feature pages implemented; nothing marked PASS |
 | Production-build fixture scan | `npm run verify:no-fixtures` after `npm run build` | Implemented and demonstrated: injected marker FAILED, clean production rebuild PASSED |
 | Section 19a motion selection | `docs/design.md` §7.1 selection table + `apps/web/src/motion/` primitives | Selection recorded; primitives implemented; per-page visual/functional evidence pending |
+| ACR-002 3D boundary | `docs/acr-002-public-decorative-3d.md`; CSS/static Home hero only | Implemented; no WebGL/canvas/GLB; per-page visual/functional evidence pending |
 
 ## Page entries
 
 | Page | Sitemap reference | Stitch reference | Visual review | Functional review |
 |---|---|---|---|---|
 | — | No feature pages implemented yet | — | NOT APPLICABLE | NOT APPLICABLE |
+| Public Home — hero | `sitemap.md` §1.2 | `design.md` §8.5 | PENDING — ACR-002 CSS/static motif present; authentic photography asset still required | PENDING — CTA destinations and inquiry flow not yet implemented |

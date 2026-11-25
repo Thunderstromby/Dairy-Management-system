@@ -26,7 +26,7 @@ Super Admin	Professional, structured, neutral
 Farm application	Operational, information-dense, clean
 Visual personality	Natural, dependable, intelligent
 Decoration	Restrained
-3D	Excluded
+3D	Excluded except ACR-002 CSS/static Home hero motif; no WebGL
 Dark/light mode	Both supported
 
 1.3 Non-negotiable design rules
@@ -1368,7 +1368,7 @@ Locked
 11. Use the documented responsive breakpoints.
 12. Include loading, empty, error, disabled, success and validation states.
 13. Respect the role-permission matrix.
-14. Never use 3D or WebGL.
+14. Use only the ACR-002 approved CSS/static decorative Home hero motif; never use WebGL or any other 3D.
 15. Do not replace the specified layouts with generic SaaS templates.
 
 20. Final design acceptance checklist

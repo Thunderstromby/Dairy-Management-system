@@ -3,6 +3,8 @@
   --sf-motion-normal: 200ms;
   --sf-motion-slow: 250ms;
   --sf-ease: cubic-bezier(0.2, 0, 0, 1);
+  --sf-pointer-x: 0;
+  --sf-pointer-y: 0;
   --sf-pointer-near-x: 0px;
   --sf-pointer-near-y: 0px;
   --sf-pointer-far-x: 0px;

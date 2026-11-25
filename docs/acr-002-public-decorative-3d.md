@@ -1,6 +1,6 @@
 # ACR-002 — Limited public-only decorative 3D motif
 
-**Status:** DRAFT — BLOCKED pending explicit owner approval  
+**Status:** APPROVED — owner approved scope, Home hero location, and CSS/static implementation on 25 November 2026  
 **Date:** 25 November 2026  
 **Requested by:** Owner instruction: “Implement the approved 3D experience. Follow the locked 3D architecture.”  
 **Authority:** `docs/architecture.md` (LOCKED), `docs/architecture-rules.md`, `AGENTS.md` §13 and §24, `docs/ARCHITECTURE_STATUS.md`
@@ -67,10 +67,20 @@ The request says the 3D experience is approved, but the repository contains no a
 
 | Item | Status |
 |---|---|
-| Owner approval of ACR-002 | **PENDING** |
-| Location selected | **PENDING** |
-| Implementation path selected | **PENDING** |
-| `docs/architecture.md` and `docs/ARCHITECTURE_STATUS.md` update | Blocked until approval |
-| Implementation | Blocked until approval |
+| Owner approval of ACR-002 | **APPROVED** by project owner, 25 November 2026 |
+| Location selected | **Home hero** only; How It Works remains 2D/static |
+| Implementation path selected | **CSS/static first**; no WebGL, canvas, GLB/GLTF or new library |
+| `docs/architecture.md` and `docs/ARCHITECTURE_STATUS.md` update | Completed 25 November 2026 |
+| Implementation | Completed 25 November 2026 — see evidence below |
 
-**Until all pending items are resolved, the locked 2D/static default remains authoritative and no 3D code may be committed as complete.**
+## 8. Implementation evidence
+
+- Public Home hero uses approved copy and keeps the heading, description and CTAs in ordinary HTML.
+- `apps/web/src/features/public/HeroMotif.tsx` is dynamically imported only after the hero intersects on fine pointers. Production build emits separate `HeroMotif` JS (0.46 kB / 0.21 kB gzip) and CSS (1.47 kB / 0.61 kB gzip) chunks; motif CSS is absent from the initial CSS bundle.
+- Static SVG fallback is used on coarse pointers, under reduced motion, before the lazy chunk resolves, and if the lazy chunk fails.
+- No `<canvas>`, WebGL context, Three.js/R3F package, GLB/GLTF asset or texture is introduced. Draw-call, texture-size and frame-rate budgets are therefore not applicable to this approved change.
+- Frame-rate monitoring is not added because the approved CSS/static implementation has no rendering loop; a later WebGL ACR must define that gate.
+- Tests assert static fallback, reduced-motion behavior, explicit loading state, deferred scene loading, and absence of canvas.
+- Release checks passed: format, lint, typecheck, 19 tests, build and production fixture scan.
+
+**Scope boundary after approval:** one decorative CSS/static Home hero motif only. WebGL, canvas scenes, GLB/GLTF assets, livestock models, simulations, new routes and private-surface 3D remain excluded unless a later ACR is approved.

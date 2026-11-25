@@ -27,6 +27,8 @@ const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
 const FINE_POINTER_QUERY = '(hover: hover) and (pointer: fine)';
 
 const POINTER_PROPERTIES = [
+  '--sf-pointer-x',
+  '--sf-pointer-y',
   '--sf-pointer-near-x',
   '--sf-pointer-near-y',
   '--sf-pointer-far-x',
@@ -120,6 +122,8 @@ export function MotionProvider({ children }: MotionProviderProps) {
 
     const apply = () => {
       frame = 0;
+      root.style.setProperty('--sf-pointer-x', pointerX.toFixed(3));
+      root.style.setProperty('--sf-pointer-y', pointerY.toFixed(3));
       root.style.setProperty('--sf-pointer-near-x', `${(pointerX * 6).toFixed(2)}px`);
       root.style.setProperty('--sf-pointer-near-y', `${(pointerY * 6).toFixed(2)}px`);
       root.style.setProperty('--sf-pointer-far-x', `${(pointerX * 3).toFixed(2)}px`);
