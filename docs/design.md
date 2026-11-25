@@ -343,7 +343,7 @@ These are already permitted by `design-system.md` §§8.3–8.6 and are implemen
 | Subtle scroll reveal | About, Features, How It Works, Benefits, Footer | Short fade/translate only; content is readable before reveal completes |
 | Pointer-follow decorative layer | Public hero background only | Non-interactive, `aria-hidden`, low amplitude, disabled on touch and reduced motion |
 | Cursor-reactive highlight | Public hero decorative layer only | No custom cursor; native pointer/text/not-allowed cursors are preserved |
-| Magnetic primary CTA | Hero `Contact Us` only | Small transform on fine pointers; full-size hit area retained; static on mobile/reduced motion |
+| Magnetic primary CTA | Hero primary CTA only | Small transform on fine pointers; full-size hit area retained; static on mobile/reduced motion |
 | Hover lift | Feature cards only | 150ms elevation via transform/shadow; never required to discover content |
 | Image reveal/movement | Hero photograph and Dashboard Preview frame | Fixed aspect ratio to prevent layout shift; no continuous motion |
 | Smooth section transition | Anchor navigation between approved Home sections | Short fade only; no scroll-jacking |

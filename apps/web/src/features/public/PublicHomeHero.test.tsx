@@ -81,19 +81,27 @@ describe('PublicHomeHero', () => {
     document.documentElement.removeAttribute('data-pointer-effects');
   });
 
-  it('keeps critical content in HTML and uses the static motif on coarse pointers', () => {
+  it('keeps approved Stitch copy and CTAs in HTML with the static motif on coarse pointers', () => {
     setMediaState({ [REDUCED_MOTION_QUERY]: false, [FINE_POINTER_QUERY]: false });
 
     renderHero();
 
     expect(screen.getByRole('heading', { level: 1 }).textContent).toBe(
-      'Manage your dairy farm with clarity.',
+      'The intelligence behind better dairy farming.',
     );
-    expect(screen.getByRole('link', { name: 'Explore Features' })).not.toBeNull();
+    expect(screen.getByText('Smarter dairy farm management')).not.toBeNull();
+    expect(
+      screen.getByText(/Bring animal care, milk production, daily operations, and farm management/),
+    ).not.toBeNull();
+    expect(screen.getByRole('button', { name: 'Explore SmartFarm' })).not.toBeNull();
+    expect(screen.getByRole('link', { name: 'See How It Works' })).not.toBeNull();
+    expect(screen.getByText(/Illustrative design preview — not live farm data/)).not.toBeNull();
     expect(document.querySelector('.sf-hero__static-motif')).not.toBeNull();
     expect(screen.queryByTestId('lazy-motif')).toBeNull();
     expect(screen.queryByRole('status')).toBeNull();
     expect(document.querySelector('canvas')).toBeNull();
+    expect(document.querySelector('img')).toBeNull();
+    expect(screen.queryByText(/Oakview|Live Operational Overview/i)).toBeNull();
   });
 
   it('uses the static motif under reduced motion and never loads the scene', () => {

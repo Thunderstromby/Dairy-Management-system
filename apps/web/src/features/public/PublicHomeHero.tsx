@@ -1,3 +1,4 @@
+import { ArrowDown, ArrowRight } from 'lucide-react';
 import { Component, Suspense, lazy, type ReactNode } from 'react';
 import { MagneticButton } from '../../motion/MagneticButton';
 import { ParallaxLayer } from '../../motion/ParallaxLayer';
@@ -35,40 +36,54 @@ export function PublicHomeHero() {
   return (
     <section ref={ref} id="home" className="sf-hero" aria-labelledby="home-title">
       <PointerAura className="sf-hero__aura" />
-      <ParallaxLayer depth="far" className="sf-hero__backdrop">
-        <span className="sf-hero__organic" />
-      </ParallaxLayer>
 
-      <div className="sf-hero__inner">
-        <div className="sf-hero__content">
-          <p className="sf-hero__eyebrow">Smart dairy management</p>
-          <h1 id="home-title" className="sf-hero__title">
-            <WordStagger text="Manage your dairy farm with clarity." />
-          </h1>
-          <p className="sf-hero__description">
-            Organize animals, milk production, inventory and daily operations.
-          </p>
-          <div className="sf-hero__actions">
-            <MagneticButton
-              className="sf-button sf-button--primary"
-              onClick={() => {
-                window.location.hash = '#/public/contact';
-              }}
-            >
-              Contact Us
-            </MagneticButton>
-            <a className="sf-button sf-button--secondary" href="#/public/features">
-              Explore Features
-            </a>
-          </div>
-        </div>
-
+      <div className="sf-hero__backdrop" aria-hidden="true">
+        <span className="sf-hero__gradient" />
+        <ParallaxLayer depth="far" className="sf-hero__organic-layer">
+          <span className="sf-hero__organic" />
+        </ParallaxLayer>
         <div className="sf-hero__visual">
           <MotifBoundary fallback={<StaticHeroMotif />}>
             <Suspense fallback={<StaticHeroMotif loading />}>
               {shouldLoadScene ? <LazyHeroMotif /> : <StaticHeroMotif />}
             </Suspense>
           </MotifBoundary>
+        </div>
+      </div>
+
+      <div className="sf-hero__inner">
+        <div className="sf-hero__content">
+          <p className="sf-hero__eyebrow">Smarter dairy farm management</p>
+          <h1 id="home-title" className="sf-hero__title">
+            <WordStagger text="The intelligence behind better dairy farming." />
+          </h1>
+          <p className="sf-hero__description">
+            Bring animal care, milk production, daily operations, and farm management together with
+            one connected platform built for modern dairy farms.
+          </p>
+          <div className="sf-hero__actions">
+            <MagneticButton
+              className="sf-button sf-button--hero-primary"
+              onClick={() => {
+                window.location.hash = '#/public/features';
+              }}
+            >
+              Explore SmartFarm <ArrowRight size={16} aria-hidden="true" />
+            </MagneticButton>
+            <a className="sf-button sf-button--hero-secondary" href="#/public/how-it-works">
+              See How It Works
+            </a>
+          </div>
+        </div>
+
+        <div className="sf-hero__footer">
+          <span className="sf-hero__illustrative">
+            <span className="sf-hero__footer-mark" aria-hidden="true" />
+            Illustrative design preview — not live farm data
+          </span>
+          <a href="#/public/about">
+            Scroll to explore <ArrowDown size={14} aria-hidden="true" />
+          </a>
         </div>
       </div>
     </section>
