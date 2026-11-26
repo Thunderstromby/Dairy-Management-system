@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import { AppRouter } from './app/AppRouter';
+import { DocumentMeta } from './app/DocumentMeta';
 import { PrototypeRoleProvider } from './auth/prototype-role';
 import { PrototypeBar } from './components/PrototypeBar';
 import { MotionProvider } from './motion/MotionProvider';
@@ -17,6 +18,7 @@ if (!container) {
 createRoot(container).render(
   <StrictMode>
     <HashRouter>
+      <DocumentMeta />
       <MotionProvider>
         <PrototypeRoleProvider>
           <PrototypeBar />

@@ -25,6 +25,8 @@ No row is PASS by implication. Every implemented page must have two dated entrie
 | Owner-approved Stitch Home page mirror | `docs/design.md` §8.5, `docs/acr-003-stitch-visual-assets.md` and `docs/sitemap.md` §§1.1, 1.2, 1.9; owner approval 25 November 2026 | Implemented with Stitch section order/copy, Home-only Stitch navbar/footer, five-tab showcase, product reveal, three stages, benefits, contact CTA and static brand strip; ACR-003 permits the three Stitch-hosted images on this page only; neutral illustrative values still replace fake live data; per-page evidence pending |
 | ACR-004 public page visual port | `docs/acr-004-stitch-public-pages.md`; Stitch nav/footer and static strip on all public routes | Implemented with source-owned visual ports for all six inner public pages (no Googleusercontent imagery; source-owned gradient only), route-based navigation, local logo fallback and below-footer signature strip; neutral preview values only; per-page evidence pending |
 | Stitch export coverage | all 108 `code.html` exports mapped or explicitly excluded | Recorded in `docs/stitch-coverage-register.md`; no export deployed as application code |
+| Public SEO metadata | per-route title, description, canonical, Open Graph and `robots` | Implemented via `apps/web/src/app/DocumentMeta.tsx` with tests; private/unknown routes are `noindex`; per-page evidence pending |
+| Build-time pre-render, `sitemap.xml`, `robots.txt` | `AGENTS.md` §15; `architecture.md` §§4.1, 4.21 | **BLOCKED** — conflicts with the approved hash-route URL shape; see `docs/acr-005-public-seo-routing-conflict.md` for the owner decision |
 
 ## Page entries
 
