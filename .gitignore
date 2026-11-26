@@ -37,6 +37,9 @@ yarn-error.log*
 # Testing / coverage
 coverage/
 .nyc_output/
+test-results/
+playwright-report/
+blob-report/
 
 # Editor / OS
 .vscode/
