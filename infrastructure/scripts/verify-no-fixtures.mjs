@@ -6,11 +6,11 @@ const textExtensions = new Set(['.css', '.html', '.js', '.json', '.map', '.svg',
 const markers = [
   'visual-only sample data',
   'visual-only fixture',
-  'ILLUSTRATIVE-SAMPLE-',
-  'PLACEHOLDER-CURRENCY',
+  'Illustrative layout only',
+  'Prototype preview — visual-only fixtures',
   'Local draft — not saved',
   'Prototype guard only',
-  'prototype role selector',
+  'Prototype role selector',
   'Prototype week 01',
 ];
 
