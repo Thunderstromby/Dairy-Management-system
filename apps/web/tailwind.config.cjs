@@ -27,7 +27,6 @@ module.exports = {
         manrope: ['Manrope', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
         heading: ['Manrope', 'sans-serif'],
-        signature: ['Caveat', 'cursive'],
         'serif-display': ['"DM Serif Display"', 'Georgia', 'serif'],
       },
     },

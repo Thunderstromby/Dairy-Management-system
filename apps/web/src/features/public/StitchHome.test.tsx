@@ -1,13 +1,9 @@
 import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { afterEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, describe, expect, it } from 'vitest';
 import { MotionProvider } from '../../motion/MotionProvider';
 import { StitchHomePage } from './StitchHome';
 import { STITCH_ASSETS } from './stitchAssets';
-
-vi.mock('./HeroMotif', () => ({
-  default: () => <div data-testid="lazy-motif" />,
-}));
 
 function renderHome() {
   return render(
