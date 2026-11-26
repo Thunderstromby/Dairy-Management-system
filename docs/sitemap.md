@@ -9,7 +9,7 @@ HOME
 - Sticky navigation on scroll.
 - Mobile: collapsible navigation drawer.
 - Motion: subtle menu and scroll-state transitions.
-- Owner-approved Stitch shell override (25 November 2026, expanded by ACR-004): all approved public pages use Stitch's five navigation labels (Home, About, Features, How It Works, Contact) and the “Let's Talk” CTA. The labels resolve to approved hash routes so every public page is reachable; Benefits and Dashboard Preview remain available in the footer.
+- Owner-approved Stitch shell override (25 November 2026, expanded by ACR-004): all approved public pages use Stitch's five navigation labels (Home, About, Features, How It Works, Contact) and the “Let's Talk” CTA. The labels resolve to approved hash routes (implemented with React Router `HashRouter`) so every public page is reachable; Benefits and Dashboard Preview remain available in the footer.
 2. Hero (owner-approved Stitch override, 25 November 2026)
 - Eyebrow: “SMARTER DAIRY FARM MANAGEMENT”.
 - Main headline: “The intelligence behind better dairy farming.”

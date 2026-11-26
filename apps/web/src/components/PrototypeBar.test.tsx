@@ -1,5 +1,6 @@
 import { cleanup, render } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { HashRouter } from 'react-router-dom';
 import { publicRoutes } from '../app/routes';
 import { PrototypeRoleProvider } from '../auth/prototype-role';
 import { PrototypeBar } from './PrototypeBar';
@@ -11,9 +12,11 @@ vi.mock('@smartfarm/data-source', async () => {
 
 function renderBar() {
   return render(
-    <PrototypeRoleProvider initialRole="guest">
-      <PrototypeBar />
-    </PrototypeRoleProvider>,
+    <HashRouter>
+      <PrototypeRoleProvider initialRole="guest">
+        <PrototypeBar />
+      </PrototypeRoleProvider>
+    </HashRouter>,
   );
 }
 

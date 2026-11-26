@@ -1,4 +1,5 @@
 import { ClipboardList, Droplets, HeartPulse, Layers3, Package, Users } from 'lucide-react';
+import { AppLink } from '../../app/AppLink';
 import { NeutralVisual, SectionHeading, StitchCTASection, StitchPageHero } from './StitchPageParts';
 
 const UNIFIED_AREAS = [
@@ -131,12 +132,12 @@ export function StitchAboutPage() {
               title="A calm, structured workspace behind the dairy operation"
               body="The interface keeps the work visible without turning farm activity into simulated telemetry."
             />
-            <a
+            <AppLink
               href="#/public/dashboard-preview"
               className="inline-flex items-center justify-center rounded-lg border border-deep-forest bg-white px-6 py-3 text-sm font-semibold text-deep-forest transition-colors hover:bg-sage-mist/40"
             >
               View the preview
-            </a>
+            </AppLink>
           </div>
           <div className="lg:col-span-7">
             <NeutralVisual title="Workspace structure preview">

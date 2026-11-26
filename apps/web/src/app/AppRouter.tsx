@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
+import { AppLink } from './AppLink';
 import { findScreen } from './routes';
-import { useHashRoute } from './useHashRoute';
+import { DEFAULT_ROUTE, useAppRoute } from './useAppRoute';
 import { RoleGuard } from '../auth/prototype-role';
 import { PublicFooter } from '../features/public/PublicFooter';
 import { PublicInnerContent } from '../features/public/PublicContent';
@@ -17,13 +19,13 @@ function NotFound() {
         <div className="sf-state">
           <h1>Screen not found</h1>
           <p>No approved sitemap screen matches this address.</p>
-          <a
+          <AppLink
             className="sf-button sf-button--primary"
             href="#/public/home"
             style={{ marginTop: 16 }}
           >
             Return Home
-          </a>
+          </AppLink>
         </div>
       </div>
     </main>
@@ -48,13 +50,18 @@ function PrivateScreen({ screen }: { screen: ScreenDefinition }) {
 }
 
 export function AppRouter() {
-  const route = useHashRoute();
+  const location = useLocation();
+  const route = useAppRoute();
   const screen = findScreen(route);
 
   useEffect(() => {
     const scrollingElement = document.scrollingElement ?? document.documentElement;
     scrollingElement.scrollTop = 0;
   }, [route]);
+
+  if (location.pathname === '/') {
+    return <Navigate to={DEFAULT_ROUTE} replace />;
+  }
 
   if (!screen) {
     return <NotFound />;

@@ -1,5 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { HashRouter } from 'react-router-dom';
 import { AppRouter } from './app/AppRouter';
 import { PrototypeRoleProvider } from './auth/prototype-role';
 import { PrototypeBar } from './components/PrototypeBar';
@@ -15,11 +16,13 @@ if (!container) {
 
 createRoot(container).render(
   <StrictMode>
-    <MotionProvider>
-      <PrototypeRoleProvider>
-        <PrototypeBar />
-        <AppRouter />
-      </PrototypeRoleProvider>
-    </MotionProvider>
+    <HashRouter>
+      <MotionProvider>
+        <PrototypeRoleProvider>
+          <PrototypeBar />
+          <AppRouter />
+        </PrototypeRoleProvider>
+      </MotionProvider>
+    </HashRouter>
   </StrictMode>,
 );

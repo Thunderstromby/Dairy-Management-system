@@ -1,4 +1,5 @@
 import { cleanup, render, screen, within } from '@testing-library/react';
+import { HashRouter } from 'react-router-dom';
 import { afterEach, describe, expect, it } from 'vitest';
 import { PublicFooter } from './PublicFooter';
 import { PublicNavbar } from './PublicNavbar';
@@ -6,10 +7,10 @@ import { STITCH_ASSETS } from './stitchAssets';
 
 function renderShell() {
   return render(
-    <>
+    <HashRouter>
       <PublicNavbar />
       <PublicFooter />
-    </>,
+    </HashRouter>,
   );
 }
 

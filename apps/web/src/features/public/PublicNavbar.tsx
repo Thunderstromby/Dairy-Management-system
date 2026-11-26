@@ -1,6 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { useHashRoute } from '../../app/useHashRoute';
+import { AppLink } from '../../app/AppLink';
+import { useAppRoute } from '../../app/useAppRoute';
 import { StitchLogo } from './StitchLogo';
 
 const STITCH_NAV_LINKS = [
@@ -12,7 +13,7 @@ const STITCH_NAV_LINKS = [
 ] as const;
 
 export function PublicNavbar() {
-  const route = useHashRoute();
+  const route = useAppRoute();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -42,7 +43,7 @@ export function PublicNavbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-12">
-        <a
+        <AppLink
           href="#/public/home"
           className="group flex items-center gap-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-pasture-green"
         >
@@ -54,32 +55,32 @@ export function PublicNavbar() {
           >
             SmartFarm
           </span>
-        </a>
+        </AppLink>
 
         <nav
           className="hidden items-center space-x-9 text-[15px] font-medium tracking-wide md:flex"
           aria-label="Public navigation"
         >
           {STITCH_NAV_LINKS.map((item) => (
-            <a
+            <AppLink
               key={item.path}
               href={`#${item.path}`}
               aria-current={route === item.path ? 'page' : undefined}
               className={navLinkClass(route === item.path)}
             >
               {item.label}
-            </a>
+            </AppLink>
           ))}
         </nav>
 
         <div className="hidden items-center md:flex">
-          <a
+          <AppLink
             href="#/public/contact"
             aria-current={route === '/public/contact' ? 'page' : undefined}
             className="nav-cta inline-flex items-center justify-center rounded-lg bg-pasture-green px-5 py-2.5 text-sm font-semibold tracking-wide text-white shadow-sm transition-all duration-200 hover:scale-[1.02] hover:bg-[#2e6447] hover:shadow-md focus:ring-2 focus:ring-pasture-green focus:ring-offset-2"
           >
             {`Let's Talk`}
-          </a>
+          </AppLink>
         </div>
 
         <button
@@ -104,7 +105,7 @@ export function PublicNavbar() {
         >
           <div className="flex flex-col space-y-6 pt-4 font-heading text-lg font-semibold text-deep-forest">
             {STITCH_NAV_LINKS.map((item) => (
-              <a
+              <AppLink
                 key={item.path}
                 href={`#${item.path}`}
                 aria-current={route === item.path ? 'page' : undefined}
@@ -112,17 +113,17 @@ export function PublicNavbar() {
                 onClick={() => setOpen(false)}
               >
                 {item.label}
-              </a>
+              </AppLink>
             ))}
           </div>
           <div className="pb-12">
-            <a
+            <AppLink
               href="#/public/contact"
               onClick={() => setOpen(false)}
               className="inline-flex w-full items-center justify-center rounded-lg bg-pasture-green py-3.5 text-base font-semibold text-white shadow-md"
             >
               {`Let's Talk`}
-            </a>
+            </AppLink>
           </div>
         </nav>
       ) : null}

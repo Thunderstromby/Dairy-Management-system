@@ -1,6 +1,7 @@
 import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { HashRouter } from 'react-router-dom';
 import { PrototypeRoleProvider } from '../auth/prototype-role';
 import type { PrototypeRole } from '../data/types';
 import { AppRouter } from './AppRouter';
@@ -13,9 +14,11 @@ vi.mock('@smartfarm/data-source', async () => {
 async function renderAt(path: string, role: PrototypeRole = 'guest') {
   window.location.hash = path;
   const result = render(
-    <PrototypeRoleProvider initialRole={role}>
-      <AppRouter />
-    </PrototypeRoleProvider>,
+    <HashRouter>
+      <PrototypeRoleProvider initialRole={role}>
+        <AppRouter />
+      </PrototypeRoleProvider>
+    </HashRouter>,
   );
 
   await waitFor(() => {

@@ -23,6 +23,7 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 import { useState, type ReactNode } from 'react';
+import { AppLink } from '../../app/AppLink';
 import { routesForSurface } from '../../app/routes';
 import type { ScreenDefinition, Surface } from '../../app/types';
 import { usePrototypeRole } from '../../auth/prototype-role';
@@ -91,12 +92,12 @@ export function WorkspaceAppShell({
         aria-label={`${surfaceLabel(screen.surface)} navigation`}
       >
         <div className="sf-sidebar__head">
-          <a className="sf-brand" href="#/public/home">
+          <AppLink className="sf-brand" href="#/public/home">
             <span className="sf-brand__mark" aria-hidden="true">
               S
             </span>
             <span className="sf-sidebar__label">SmartFarm</span>
-          </a>
+          </AppLink>
           <button
             type="button"
             className="sf-sidebar__collapse"
@@ -120,7 +121,7 @@ export function WorkspaceAppShell({
                 <div key={group.name}>
                   <p className="sf-sidebar__group">{group.name}</p>
                   {group.items.map((item) => (
-                    <a
+                    <AppLink
                       key={item.id}
                       className="sf-sidebar__link"
                       href={`#${item.path}`}
@@ -130,7 +131,7 @@ export function WorkspaceAppShell({
                     >
                       <Icon size={17} aria-hidden="true" />
                       <span className="sf-sidebar__label">{item.title}</span>
-                    </a>
+                    </AppLink>
                   ))}
                 </div>
               );
@@ -169,9 +170,9 @@ export function WorkspaceAppShell({
           </div>
           <div className="sf-topbar__actions">
             <span className="sf-topbar__badge">Preview role: {role}</span>
-            <a className="sf-link" href="#/public/home">
+            <AppLink className="sf-link" href="#/public/home">
               Public site
-            </a>
+            </AppLink>
           </div>
         </header>
 
@@ -202,12 +203,12 @@ export function StandaloneScreen({
   return (
     <main className="sf-login-wrap">
       <div className="sf-login-card">
-        <a className="sf-brand" href="#/public/home">
+        <AppLink className="sf-brand" href="#/public/home">
           <span className="sf-brand__mark" aria-hidden="true">
             S
           </span>
           SmartFarm
-        </a>
+        </AppLink>
         <p className="sf-eyebrow" style={{ marginTop: 20 }}>
           {screen.surface === 'platform' ? 'Super Admin Panel' : 'Farm application'}
         </p>
@@ -215,9 +216,9 @@ export function StandaloneScreen({
         <p>{screen.description}</p>
         {children}
         <p style={{ marginTop: 20 }}>
-          <a className="sf-link" href="#/public/home">
+          <AppLink className="sf-link" href="#/public/home">
             Return to public site
-          </a>
+          </AppLink>
         </p>
       </div>
     </main>

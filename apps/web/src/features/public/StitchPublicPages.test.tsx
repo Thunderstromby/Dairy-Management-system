@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react';
+import { HashRouter } from 'react-router-dom';
 import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { StitchAboutPage } from './StitchAboutPage';
@@ -40,6 +42,10 @@ const PAGES = [
   },
 ] as const;
 
+function renderPage(component: ReactNode) {
+  return render(<HashRouter>{component}</HashRouter>);
+}
+
 describe('Stitch public pages', () => {
   const originalScrollIntoView = Object.getOwnPropertyDescriptor(
     Element.prototype,
@@ -67,7 +73,7 @@ describe('Stitch public pages', () => {
   });
 
   it.each(PAGES)('renders the $name page hero', ({ component, heading }) => {
-    const { container } = render(component);
+    const { container } = renderPage(component);
 
     expect(screen.getByRole('heading', { level: 1, name: heading })).not.toBeNull();
     expect(container.querySelector('canvas')).toBeNull();
@@ -78,14 +84,14 @@ describe('Stitch public pages', () => {
   });
 
   it('keeps the illustrative label on the dashboard preview', () => {
-    render(<StitchDashboardPreviewPage />);
+    renderPage(<StitchDashboardPreviewPage />);
 
     expect(screen.getByText(/Demonstration interface only/i)).not.toBeNull();
     expect(screen.getAllByText(/Illustrative — not live data/i).length).toBeGreaterThan(0);
   });
 
   it('keeps the inquiry form local-draft only', () => {
-    render(<StitchContactPage />);
+    renderPage(<StitchContactPage />);
 
     expect(screen.getByRole('button', { name: 'Submit Inquiry' })).not.toBeNull();
     expect(
@@ -119,7 +125,7 @@ describe('Stitch public pages', () => {
     'scrolls the $name hero CTA to its section without changing pages',
     ({ hash, component, label, sectionId }) => {
       window.location.hash = hash;
-      const { container } = render(component);
+      const { container } = renderPage(component);
       const cta = screen
         .getAllByRole('link', { name: label })
         .find((link) => link.getAttribute('href') === `#${sectionId}`);

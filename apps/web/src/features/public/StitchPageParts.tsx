@@ -1,3 +1,4 @@
+import { AppLink } from '../../app/AppLink';
 import type { ReactNode } from 'react';
 import { scrollToHref } from './scrollToSection';
 
@@ -38,20 +39,20 @@ export function StitchPageHero({
             {body}
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
-            <a
+            <AppLink
               href={primaryHref}
               onClick={(event) => scrollToHref(event, primaryHref)}
               className="inline-flex items-center justify-center rounded-lg bg-pasture-green px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-deep-forest/30 transition-all duration-200 hover:scale-[1.02] hover:bg-[#2c6346] focus:ring-2 focus:ring-harvest-gold"
             >
               {primaryLabel}
-            </a>
-            <a
+            </AppLink>
+            <AppLink
               href={secondaryHref}
               onClick={(event) => scrollToHref(event, secondaryHref)}
               className="inline-flex items-center justify-center rounded-lg border border-white/25 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/20 focus:ring-2 focus:ring-harvest-gold"
             >
               {secondaryLabel}
-            </a>
+            </AppLink>
           </div>
         </div>
       </div>
@@ -124,18 +125,18 @@ export function StitchCTASection({
           </p>
         </div>
         <div className="flex flex-wrap items-start gap-4 lg:col-span-5 lg:pt-12">
-          <a
+          <AppLink
             href="#/public/contact"
             className="inline-flex items-center justify-center rounded-lg bg-pasture-green px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-pasture-green/20 transition-all duration-200 hover:scale-[1.02] hover:bg-[#2c6346] focus:ring-2 focus:ring-pasture-green"
           >
             Contact SmartFarm
-          </a>
-          <a
+          </AppLink>
+          <AppLink
             href="#/public/features"
             className="inline-flex items-center justify-center rounded-lg border border-deep-forest bg-white px-7 py-3.5 text-sm font-semibold text-deep-forest shadow-sm transition-colors hover:bg-sage-mist/40 focus:ring-2 focus:ring-pasture-green"
           >
             Explore the Platform
-          </a>
+          </AppLink>
         </div>
       </div>
     </section>

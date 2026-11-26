@@ -1,4 +1,5 @@
 import { ArrowRight, ClipboardCheck, LockKeyhole, Users } from 'lucide-react';
+import { AppLink } from '../../app/AppLink';
 import { InquiryForm } from './InquiryForm';
 import { SectionHeading, StitchCTASection, StitchPageHero } from './StitchPageParts';
 
@@ -99,18 +100,18 @@ export function StitchContactPage() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <a
+              <AppLink
                 href="#/public/features"
                 className="inline-flex items-center gap-2 rounded-lg bg-pasture-green px-5 py-3 text-sm font-semibold text-white"
               >
                 Features <ArrowRight size={15} aria-hidden="true" />
-              </a>
-              <a
+              </AppLink>
+              <AppLink
                 href="#/public/dashboard-preview"
                 className="inline-flex items-center gap-2 rounded-lg border border-deep-forest px-5 py-3 text-sm font-semibold text-deep-forest"
               >
                 Preview <ArrowRight size={15} aria-hidden="true" />
-              </a>
+              </AppLink>
             </div>
           </div>
         </div>

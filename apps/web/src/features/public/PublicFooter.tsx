@@ -1,3 +1,4 @@
+import { AppLink } from '../../app/AppLink';
 import { StitchLogo } from './StitchLogo';
 
 const STITCH_FOOTER_LINKS = [
@@ -35,9 +36,9 @@ export function PublicFooter() {
             <ul className="grid grid-cols-2 gap-y-2.5 text-sm">
               {STITCH_FOOTER_LINKS.map((item) => (
                 <li key={item.path}>
-                  <a href={`#${item.path}`} className="transition-colors hover:text-white">
+                  <AppLink href={`#${item.path}`} className="transition-colors hover:text-white">
                     {item.label}
-                  </a>
+                  </AppLink>
                 </li>
               ))}
             </ul>
@@ -50,12 +51,12 @@ export function PublicFooter() {
             <p className="mb-3 text-sm leading-relaxed text-white/70">
               Schedule an operational consultation with our agricultural software engineering team.
             </p>
-            <a
+            <AppLink
               href="#/public/contact"
               className="text-sm font-semibold text-harvest-gold hover:underline"
             >
               Connect with our team →
-            </a>
+            </AppLink>
           </div>
         </div>
 
