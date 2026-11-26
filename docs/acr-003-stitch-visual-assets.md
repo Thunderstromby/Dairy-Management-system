@@ -35,4 +35,8 @@ Use the three exact Stitch-hosted image URLs on Public Home only, and port the S
 
 ## Addendum — logo availability (25 November 2026)
 
-The approved logo URL was rechecked and returns HTTP 403, while both pasture images return HTTP 200. `apps/web/src/assets/stitch-logo.png` is a local fallback cropped from the owner-supplied Stitch Home screenshot so the mark remains visible. The original URL is retained in `stitchAssets.ts` as `logoRemote` for provenance. ACR-004 records the owner's instruction to use this fallback and extend the visual treatment to the other approved public pages.
+The approved logo URL was rechecked and returns HTTP 403, while both pasture images return HTTP 200. `apps/web/src/assets/stitch-logo.png` is a local fallback cropped from the owner-supplied Stitch Home screenshot so the mark remains visible. The original URL was initially retained in `stitchAssets.ts` as `logoRemote` for provenance; the 26 November addendum below removes that unused constant. ACR-004 records the owner's instruction to use this fallback and extend the visual treatment to the other approved public pages.
+
+## Addendum — imagery scope (26 November 2026)
+
+By owner instruction the three ACR-003 Googleusercontent assets are used on Public Home only. The `aboutPasture` image was removed from the shared inner-page hero; the six inner public pages use the source-owned deep-forest gradient and no remote imagery. The unused `logoRemote` constant was removed from `stitchAssets.ts`; the local PNG fallback remains the logo on every page. This narrows the implementation back to the ACR-003 approved surface and adds no new permission.

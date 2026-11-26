@@ -21,7 +21,7 @@ ACR-003 approved Stitch-hosted imagery and the exact Stitch visual composition f
 - **Data:** Placeholder labels remain neutral and are explicitly marked “Illustrative — not live data”. No fake farm names, live status, telemetry, RFID/IoT, invented formulas or unapproved status values are introduced.
 - **Security:** Public shell remains presentational. Server authorization, RLS and data-source boundaries are unchanged.
 - **Motion:** The signature strip is static. The Stitch animated marquee and continuous cinematic motion are not reproduced, preserving `AGENTS.md` §§12 and 21.
-- **Assets:** The approved external pasture images remain in use. The dead Stitch logo URL is retained as `logoRemote` for provenance; the visible logo is a local PNG cropped from the owner-supplied Stitch Home screenshot and recorded as a fallback.
+- **Assets:** The approved external pasture images are used on Public Home only. The six inner public pages use the source-owned deep-forest gradient and carry no Googleusercontent imagery (owner instruction, 26 November 2026). The dead Stitch logo URL was removed; the visible logo is a local PNG cropped from the owner-supplied Stitch Home screenshot and recorded as a fallback.
 
 ## Smallest approved change
 
@@ -36,9 +36,10 @@ ACR-003 approved Stitch-hosted imagery and the exact Stitch visual composition f
 | --- | --- |
 | Owner instruction to include the additional public pages | **APPROVED** 25 November 2026 |
 | New public routes | **None added** |
-| Remote pasture images | Covered by ACR-003 |
+| Remote pasture images | ACR-003 covers Public Home only; removed from the six inner public pages by owner instruction, 26 November 2026 |
 | Local logo fallback derived from approved Stitch screenshot | **Approved by this instruction** |
 | Animated marquee | **Not approved**; static strip only |
 | Fake operational data | **Prohibited**; neutral illustrative labels only |
+| Remote imagery on inner pages | **Removed** by owner instruction, 26 November 2026; Home-only ACR-003 scope restored |
 
 Visual and functional reviews remain recorded as PENDING until the dated review evidence is captured.

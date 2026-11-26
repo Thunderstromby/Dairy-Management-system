@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react';
 import { scrollToHref } from './scrollToSection';
-import { STITCH_ASSETS } from './stitchAssets';
 
 type StitchPageHeroProps = {
   eyebrow: string;
@@ -23,17 +22,10 @@ export function StitchPageHero({
 }: StitchPageHeroProps) {
   return (
     <section className="relative overflow-hidden bg-deep-forest pb-24 pt-32 text-white sm:pb-28 sm:pt-36">
-      <div className="absolute inset-0" aria-hidden="true">
-        <img
-          src={STITCH_ASSETS.aboutPasture}
-          alt=""
-          className="h-full w-full object-cover object-center opacity-30 brightness-[0.7]"
-          onError={(event) => {
-            event.currentTarget.style.display = 'none';
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-deep-forest via-deep-forest/90 to-deep-forest/40" />
-      </div>
+      <div
+        className="absolute inset-0 bg-gradient-to-r from-deep-forest via-deep-forest/90 to-deep-forest/40"
+        aria-hidden="true"
+      />
       <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
         <div className="max-w-3xl">
           <span className="mb-5 inline-block text-xs font-bold uppercase tracking-[0.22em] text-harvest-gold">

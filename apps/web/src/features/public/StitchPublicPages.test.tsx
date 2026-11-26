@@ -71,6 +71,7 @@ describe('Stitch public pages', () => {
 
     expect(screen.getByRole('heading', { level: 1, name: heading })).not.toBeNull();
     expect(container.querySelector('canvas')).toBeNull();
+    expect(container.querySelector('img[src*="googleusercontent.com"]')).toBeNull();
     expect(screen.queryByText(/Oakview|Highland|RFID|IoT|live telemetry/i)).toBeNull();
     expect(screen.queryByText(/11,480 L|412 Cows|Active Herd/i)).toBeNull();
     expect(screen.queryByText(/Marquee|autoplay/i)).toBeNull();
