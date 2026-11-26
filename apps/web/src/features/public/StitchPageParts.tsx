@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { scrollToHref } from './scrollToSection';
 import { STITCH_ASSETS } from './stitchAssets';
 
 type StitchPageHeroProps = {
@@ -47,12 +48,14 @@ export function StitchPageHero({
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
               href={primaryHref}
+              onClick={(event) => scrollToHref(event, primaryHref)}
               className="inline-flex items-center justify-center rounded-lg bg-pasture-green px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-deep-forest/30 transition-all duration-200 hover:scale-[1.02] hover:bg-[#2c6346] focus:ring-2 focus:ring-harvest-gold"
             >
               {primaryLabel}
             </a>
             <a
               href={secondaryHref}
+              onClick={(event) => scrollToHref(event, secondaryHref)}
               className="inline-flex items-center justify-center rounded-lg border border-white/25 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/20 focus:ring-2 focus:ring-harvest-gold"
             >
               {secondaryLabel}

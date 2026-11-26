@@ -1,5 +1,5 @@
-import { cleanup, render, screen } from '@testing-library/react';
-import { afterEach, describe, expect, it } from 'vitest';
+import { cleanup, fireEvent, render, screen } from '@testing-library/react';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { StitchAboutPage } from './StitchAboutPage';
 import { StitchBenefitsPage } from './StitchBenefitsPage';
 import { StitchContactPage } from './StitchContactPage';
@@ -41,8 +41,29 @@ const PAGES = [
 ] as const;
 
 describe('Stitch public pages', () => {
+  const originalScrollIntoView = Object.getOwnPropertyDescriptor(
+    Element.prototype,
+    'scrollIntoView',
+  );
+  let scrollIntoView: ReturnType<typeof vi.fn>;
+
+  beforeEach(() => {
+    scrollIntoView = vi.fn();
+    Object.defineProperty(Element.prototype, 'scrollIntoView', {
+      configurable: true,
+      writable: true,
+      value: scrollIntoView,
+    });
+  });
+
   afterEach(() => {
     cleanup();
+    if (originalScrollIntoView) {
+      Object.defineProperty(Element.prototype, 'scrollIntoView', originalScrollIntoView);
+    } else {
+      Reflect.deleteProperty(Element.prototype, 'scrollIntoView');
+    }
+    window.location.hash = '#/public/home';
   });
 
   it.each(PAGES)('renders the $name page hero', ({ component, heading }) => {
@@ -70,4 +91,45 @@ describe('Stitch public pages', () => {
       screen.getByText(/saves a local draft in this prototype; it does not send email/i),
     ).not.toBeNull();
   });
+
+  it.each([
+    {
+      name: 'Features',
+      hash: '#/public/features',
+      component: <StitchFeaturesPage />,
+      label: 'Explore the Platform',
+      sectionId: 'modules',
+    },
+    {
+      name: 'How It Works',
+      hash: '#/public/how-it-works',
+      component: <StitchHowItWorksPage />,
+      label: 'Explore the Process',
+      sectionId: 'process',
+    },
+    {
+      name: 'Contact',
+      hash: '#/public/contact',
+      component: <StitchContactPage />,
+      label: 'Go to Inquiry Form',
+      sectionId: 'inquiry-form',
+    },
+  ])(
+    'scrolls the $name hero CTA to its section without changing pages',
+    ({ hash, component, label, sectionId }) => {
+      window.location.hash = hash;
+      const { container } = render(component);
+      const cta = screen
+        .getAllByRole('link', { name: label })
+        .find((link) => link.getAttribute('href') === `#${sectionId}`);
+
+      expect(cta).not.toBeNull();
+      expect(container.querySelector(`#${sectionId}`)).not.toBeNull();
+
+      fireEvent.click(cta!);
+
+      expect(window.location.hash).toBe(hash);
+      expect(scrollIntoView).toHaveBeenCalledTimes(1);
+    },
+  );
 });

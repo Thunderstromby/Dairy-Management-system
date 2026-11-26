@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { findScreen } from './routes';
 import { useHashRoute } from './useHashRoute';
 import { RoleGuard } from '../auth/prototype-role';
@@ -49,6 +50,11 @@ function PrivateScreen({ screen }: { screen: ScreenDefinition }) {
 export function AppRouter() {
   const route = useHashRoute();
   const screen = findScreen(route);
+
+  useEffect(() => {
+    const scrollingElement = document.scrollingElement ?? document.documentElement;
+    scrollingElement.scrollTop = 0;
+  }, [route]);
 
   if (!screen) {
     return <NotFound />;

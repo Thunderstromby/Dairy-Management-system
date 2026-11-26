@@ -1,4 +1,4 @@
-import { cleanup, render, screen, waitFor } from '@testing-library/react';
+import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { PrototypeRoleProvider } from '../auth/prototype-role';
@@ -43,6 +43,25 @@ describe('AppRouter role boundaries', () => {
     expect(strip).not.toBeNull();
     const position = footer!.compareDocumentPosition(strip!);
     expect(position & Node.DOCUMENT_POSITION_FOLLOWING).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
+  });
+
+  it('starts each public page at the top after following a page link', async () => {
+    await renderAt('#/public/home');
+    const scrollingElement = document.scrollingElement ?? document.documentElement;
+    scrollingElement.scrollTop = 400;
+
+    window.location.hash = '#/public/about';
+    fireEvent(window, new Event('hashchange'));
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole('heading', {
+          level: 1,
+          name: 'Better understanding. Better connected dairy farming.',
+        }),
+      ).not.toBeNull();
+    });
+    expect(scrollingElement.scrollTop).toBe(0);
   });
 
   it('allows a Farm Admin to open the approved farm dashboard', async () => {

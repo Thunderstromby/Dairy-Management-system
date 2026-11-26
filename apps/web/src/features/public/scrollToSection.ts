@@ -24,3 +24,13 @@ export function scrollToSection(event: SectionLinkEvent, id: string): void {
     block: 'start',
   });
 }
+
+export function scrollToHref(event: SectionLinkEvent, href: string): void {
+  const isSectionHref = href.startsWith('#') && !href.startsWith('#/') && href.length > 1;
+
+  if (!isSectionHref) {
+    return;
+  }
+
+  scrollToSection(event, href.slice(1));
+}
