@@ -18,7 +18,7 @@ This document supersedes the earlier architecture drafts, not the approved produ
 | `scope.md` | Deliverables and exclusions |
 | `srs.md` | Functional and non-functional requirements |
 | `role-permission-matrix.md` | Server-enforced access and conditional permissions |
-| `business-rules.md` (uploaded as `bussiness rules.md`) | Calculations, transitions, automation and exceptions |
+| `business-rules.md` (renamed from the uploaded `bussiness rules.md`) | Calculations, transitions, automation and exceptions |
 | `data-requirements.md` | Logical entities, relationships and integrity |
 | `design.md` | Detailed UI blueprint |
 | `design-system.md` | Reusable visual rules |

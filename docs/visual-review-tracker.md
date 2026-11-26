@@ -41,6 +41,6 @@ The complete per-export page matrix lives in `docs/stitch-coverage-register.md`.
 
 1. Owner-provided or approved-licensed Stitch screenshot comparison for each page at 320px, tablet and wide desktop widths.
 2. Recorded keyboard and screen-reader checks for every dialog, form, table and chart.
-3. Functional sign-off against `docs/srs.md`, `docs/role-permission-matrix.md` and `docs/bussiness rules.md`, including explicit OPEN QUESTION disposition.
+3. Functional sign-off against `docs/srs.md`, `docs/role-permission-matrix.md` and `docs/business-rules.md`, including explicit OPEN QUESTION disposition.
 4. Confirmation that no page implies live telemetry, server success, public file access or fabricated financial truth.
 5. A fresh `npm run build` followed by `npm run verify:no-fixtures` on the reviewed commit.
