@@ -1,11 +1,11 @@
 import { getDataSource } from '@smartfarm/data-source';
-import { DEFAULT_ROUTE, useHashRoute } from '../app/useHashRoute';
+import { useHashRoute } from '../app/useHashRoute';
 import { PrototypeRoleSelector } from '../auth/prototype-role';
 
 export function PrototypeBar() {
   const route = useHashRoute();
 
-  if (route === DEFAULT_ROUTE) {
+  if (route.startsWith('/public/')) {
     return null;
   }
 
