@@ -1,7 +1,8 @@
 import { defineConfig } from 'vitest/config';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const rootDir = __dirname;
+const rootDir = path.dirname(fileURLToPath(import.meta.url));
 const requested = process.env.VITE_DATA_SOURCE;
 const dataSourceMode = requested === 'fixture' ? 'fixture' : 'api';
 
@@ -16,12 +17,29 @@ export default defineConfig({
   },
   test: {
     globals: true,
-    environment: 'node',
-    environmentMatchGlobs: [
-      ['**/apps/web/**', 'jsdom'],
-      ['**/tests/unit/**/*.dom.test.*', 'jsdom'],
-    ],
-    include: ['tests/**/*.test.{ts,tsx}', 'apps/**/*.test.{ts,tsx}'],
     passWithNoTests: true,
+    projects: [
+      {
+        test: {
+          name: 'web',
+          environment: 'jsdom',
+          include: ['apps/**/*.test.{ts,tsx}'],
+        },
+      },
+      {
+        test: {
+          name: 'node',
+          environment: 'node',
+          include: ['tests/**/*.test.{ts,tsx}', '!tests/**/*.dom.test.{ts,tsx}'],
+        },
+      },
+      {
+        test: {
+          name: 'dom',
+          environment: 'jsdom',
+          include: ['tests/**/*.dom.test.{ts,tsx}'],
+        },
+      },
+    ],
   },
 });

@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 export default defineConfig(({ command }) => {
-  const rootDir = __dirname;
+  const rootDir = path.dirname(fileURLToPath(import.meta.url));
   const requested = process.env.VITE_DATA_SOURCE;
   const dataSourceMode =
     requested === 'fixture' || (requested === undefined && command === 'serve') ? 'fixture' : 'api';
