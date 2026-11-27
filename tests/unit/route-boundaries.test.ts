@@ -41,6 +41,9 @@ describe('approved sitemap route registry', () => {
       'public.benefits',
       'public.dashboard-preview',
       'public.contact',
+      'public.privacy-policy',
+      'public.terms-of-service',
+      'public.operational-security',
     ]);
   });
 

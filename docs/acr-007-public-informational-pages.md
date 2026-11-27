@@ -1,6 +1,6 @@
 # ACR-007 — Public informational pages from the new Stitch exports
 
-**Status:** OPEN — owner decision required. No routes or screens have been added.  
+**Status:** CLOSED — owner approved the three routes on 27 November 2026. Implemented as static, source-owned placeholder pages using the export copy; no legal claims were invented.  
 **Authority:** `AGENTS.md` §§7, 8, 15, 19, 24; `docs/architecture.md` §4.1; `docs/sitemap.md`; `docs/acr-004-stitch-public-pages.md`
 
 ## Conflict
@@ -30,6 +30,6 @@ On approval, add exactly three static public pages (Privacy Policy, Terms of Ser
 | Item | Status |
 | --- | --- |
 | Owner supplied the informational exports | **RECEIVED** 27 November 2026 |
-| New public routes (up to three) | **BLOCKED** — explicit owner approval required |
-| Legal/policy body copy | **BLOCKED** — owner-supplied or approved wording required |
+| New public routes (three) | **APPROVED** 27 November 2026 — `/public/privacy-policy`, `/public/terms-of-service`, `/public/operational-security` |
+| Legal/policy body copy | **Not invented** — the exports' own "Coming Soon" placeholder copy is used verbatim; substantive policy wording remains pending owner content |
 | Stitch export code deployed as source | **PROHIBITED** — source-owned port only |

@@ -148,6 +148,33 @@ export const publicRoutes: readonly ScreenDefinition[] = [
     'sitemap.md §1.8',
     'smartfarm_contact_page',
   ),
+  publicRoute(
+    'public.privacy-policy',
+    '/public/privacy-policy',
+    'Privacy Policy',
+    'content',
+    'Owner-approved placeholder informational page; no legal claims.',
+    'sitemap.md §10',
+    'privacy_policy',
+  ),
+  publicRoute(
+    'public.terms-of-service',
+    '/public/terms-of-service',
+    'Terms of Service',
+    'content',
+    'Owner-approved placeholder informational page; no legal claims.',
+    'sitemap.md §11',
+    'terms_of_service',
+  ),
+  publicRoute(
+    'public.operational-security',
+    '/public/operational-security',
+    'Operational Security',
+    'content',
+    'Owner-approved placeholder informational page; no live-status or telemetry claims.',
+    'sitemap.md §12',
+    'operational_security',
+  ),
 ];
 
 export const platformRoutes: readonly ScreenDefinition[] = [

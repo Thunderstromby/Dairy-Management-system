@@ -5,6 +5,7 @@ import { StitchDashboardPreviewPage } from './StitchDashboardPreviewPage';
 import { StitchFeaturesPage } from './StitchFeaturesPage';
 import { StitchHomePage } from './StitchHome';
 import { StitchHowItWorksPage } from './StitchHowItWorksPage';
+import { StitchInformationalPage } from './StitchInformationalPage';
 
 export function PublicInnerContent({ screenId }: { screenId: string }) {
   switch (screenId) {
@@ -20,6 +21,12 @@ export function PublicInnerContent({ screenId }: { screenId: string }) {
       return <StitchDashboardPreviewPage />;
     case 'public.contact':
       return <StitchContactPage />;
+    case 'public.privacy-policy':
+      return <StitchInformationalPage title="Privacy Policy" />;
+    case 'public.terms-of-service':
+      return <StitchInformationalPage title="Terms of Service" />;
+    case 'public.operational-security':
+      return <StitchInformationalPage title="Operational Security" />;
     default:
       return <StitchHomePage />;
   }

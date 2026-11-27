@@ -71,8 +71,15 @@ HOME
 - Relevant website navigation links.
 - Approved contact information.
 - Copyright information.
-- Legal links only if approved content is supplied.
-- Owner-approved Stitch footer override (25 November 2026, expanded by ACR-004): all approved public pages use Stitch's Home footer wording, seven route links and “Connect with our team →” consultation cue. Legal link labels remain text-only until approved content is supplied.
+- Legal links only if approved content is supplied. Three informational links were approved by the owner on 27 November 2026 (ACR-007).
+10. Privacy Policy (ACR-007, owner approval 27 November 2026)
+- Static placeholder page using the approved Stitch export heading and "Coming Soon" copy.
+- No legal claim is invented; substantive wording awaits owner content.
+11. Terms of Service (ACR-007, owner approval 27 November 2026)
+- Static placeholder page using the approved Stitch export heading and "Coming Soon" copy.
+12. Operational Security (ACR-007, owner approval 27 November 2026)
+- Static placeholder page using the approved Stitch export heading and "Coming Soon" copy; no telemetry or live-status indicator.
+- Owner-approved Stitch footer override (25 November 2026, expanded by ACR-004): all approved public pages use Stitch's Home footer wording, the original seven route links plus three ACR-007 informational links, and the “Connect with our team →” consultation cue. Legal link labels resolve to approved static placeholder pages.
 - Static signature strip directly below the footer on all public pages, as shown in Stitch. It is not an animated marquee and carries no operational data.
 
 2. Super Admin Panel

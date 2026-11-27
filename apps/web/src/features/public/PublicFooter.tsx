@@ -63,9 +63,15 @@ export function PublicFooter() {
         <div className="flex flex-col items-center justify-between gap-4 pt-8 text-xs text-white/50 sm:flex-row">
           <span>Copyright © 2026 SmartFarm. All rights reserved.</span>
           <div className="flex items-center space-x-6">
-            <span>Privacy Policy</span>
-            <span>Terms of Service</span>
-            <span>Operational Security</span>
+            <AppLink href="#/public/privacy-policy" className="hover:text-white">
+              Privacy Policy
+            </AppLink>
+            <AppLink href="#/public/terms-of-service" className="hover:text-white">
+              Terms of Service
+            </AppLink>
+            <AppLink href="#/public/operational-security" className="hover:text-white">
+              Operational Security
+            </AppLink>
           </div>
         </div>
       </div>

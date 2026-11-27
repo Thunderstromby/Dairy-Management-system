@@ -14,7 +14,7 @@ With hash routing, every public page is served from the single `index.html` at `
 ## Evidence
 
 - `apps/web/src/main.tsx` — app is wrapped in React Router `HashRouter`.
-- `apps/web/src/app/routes.ts` — exactly seven approved public hash routes; no route added or removed.
+- `apps/web/src/app/routes.ts` — ten approved public hash routes: the original seven plus three ACR-007 informational routes; no route removed.
 - `apps/web/src/app/DocumentMeta.tsx` — per-route title, description, canonical, Open Graph and `robots` are now set client-side; private and unknown routes receive `noindex, nofollow`.
 - `apps/web/index.html` — default title/description/OG fallback for the single shared document; canonical is set at runtime because a static root-relative hash URL is parsed by Vite as an asset path.
 - `docs/sitemap.md:12`, `docs/design.md:505` — nav resolves to approved hash routes.
