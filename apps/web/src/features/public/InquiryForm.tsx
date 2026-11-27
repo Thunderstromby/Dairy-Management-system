@@ -28,7 +28,7 @@ export function InquiryForm({ source = getDataSource() }: InquiryFormProps) {
       setError(undefined);
       setDraftSaved(true);
     } catch {
-      setError('DATA_SOURCE_NOT_WIRED: inquiry delivery is not connected in production builds.');
+      setError('Inquiry delivery is not available yet. Please try again later.');
     }
   };
 

@@ -9,7 +9,7 @@ function notWired(): never {
 const labels: PrototypeLabels = {
   fixtureNotice: 'API data adapter; no sample fixture data is included in production builds.',
   localDraft: 'No local draft is available in the production data adapter.',
-  roleGuard: 'Restricted in this preview; server enforcement pending.',
+  roleGuard: 'Server enforcement pending.',
   roleSelector: 'Preview role selector — not authentication',
 };
 
