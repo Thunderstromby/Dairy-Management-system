@@ -40,3 +40,12 @@ The approved logo URL was rechecked and returns HTTP 403, while both pasture ima
 ## Addendum — imagery scope (26 November 2026)
 
 By owner instruction the three ACR-003 Googleusercontent assets are used on Public Home only. The `aboutPasture` image was removed from the shared inner-page hero; the six inner public pages use the source-owned deep-forest gradient and no remote imagery. The unused `logoRemote` constant was removed from `stitchAssets.ts`; the local PNG fallback remains the logo on every page. This narrows the implementation back to the ACR-003 approved surface and adds no new permission.
+
+## Addendum — owner-supplied local assets (26 November 2026)
+
+The owner supplied the two licensed local files that the ACR-003 follow-up anticipated:
+
+- Hero photograph: `design/Hero Image/Golden Pasture with Grazing Holsteins.png` (1672×941) copied unchanged to `apps/web/src/assets/hero-pasture.png`.
+- Official logo: `design/Logo/logo.png` (1448×1086, white background, no alpha) copied unchanged to `apps/web/src/assets/smartfarm-logo.png`.
+
+`stitchAssets.ts` now imports both files locally: `heroPasture` replaces the remote hero Googleusercontent URL, and `logo` replaces the screenshot-cropped `apps/web/src/assets/stitch-logo.png` fallback, which is deleted as superseded. Colours, proportions and transparency are preserved; no re-encoding, regeneration or stock substitute was used. The remote `aboutPasture` URL remains only for the Home connected-dairy section until a local file is supplied. This is the documented execution of the ACR-003 follow-up and adds no new permission. The same instruction updates the Home hero copy and typography to the owner-approved text and Manrope/Inter specifications recorded in `docs/design.md` §8.5 and `docs/sitemap.md` §1.2.

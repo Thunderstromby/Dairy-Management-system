@@ -20,36 +20,37 @@ export function PublicHomeHero() {
         ) : (
           <img
             src={STITCH_ASSETS.heroPasture}
-            alt="Cinematic dairy pasture with authentic grazing herd in morning light"
-            className="animate-cinematic h-full w-full object-cover object-center brightness-[0.88] contrast-[1.04]"
+            alt="Golden pasture with grazing Holsteins in warm sunset light"
+            className="animate-cinematic h-full w-full object-cover object-[70%_center] md:object-center"
             onError={() => setImageFailed(true)}
           />
         )}
 
-        <div className="absolute inset-0 bg-gradient-to-t from-deep-forest/90 via-deep-forest/40 to-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-deep-forest/60 via-transparent to-transparent" />
+        {/* Localized scrims only: text sits bottom-left, navbar sits top. The photograph stays visible. */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/15 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/65 via-black/35 to-transparent" />
       </div>
 
       <div className="relative z-10 w-full max-w-7xl px-6 pt-32 lg:px-12">
         <div className="max-w-4xl">
           <div className="reveal-line-1 mb-4 flex items-center gap-3">
             <span className="inline-block h-[2px] w-8 bg-harvest-gold" />
-            <span className="font-inter text-xs font-semibold uppercase tracking-[0.22em] text-harvest-gold sm:text-sm">
+            <span className="font-inter text-xs font-semibold uppercase tracking-[0.16em] text-harvest-gold sm:text-sm">
               Smarter dairy farm management
             </span>
           </div>
 
           <h1
-            className="reveal-line-2 mb-7 font-serif-display text-4xl font-normal leading-[1.08] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-[80px]"
+            className="reveal-line-2 mb-7 font-manrope text-[40px] font-semibold leading-[1.08] tracking-[-0.035em] text-white sm:text-[48px] md:text-[64px] lg:text-[80px]"
             style={{ textShadow: 'rgba(0, 0, 0, 0.35) 0px 2px 24px' }}
           >
-            The intelligence behind
-            <br className="hidden sm:inline" /> better dairy farming.
+            Every farm deserves a<br className="hidden sm:inline" /> smarter tomorrow.
           </h1>
 
-          <p className="reveal-line-3 mb-10 max-w-2xl font-inter text-lg font-normal leading-relaxed text-white/90 sm:text-xl lg:text-2xl">
-            Bring animal care, milk production, daily operations, and farm management together with
-            one connected platform built for modern dairy farms.
+          <p className="reveal-line-3 mb-10 max-w-[520px] font-inter text-[17px] font-normal leading-[1.6] text-white/90 sm:text-[18px]">
+            From animal care to milk production, bring everything that matters to your farm together
+            in one simple, connected place.
           </p>
 
           <div className="reveal-line-3 flex flex-wrap items-center gap-4 sm:gap-6">

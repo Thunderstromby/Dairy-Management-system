@@ -24,7 +24,7 @@ describe('Stitch homepage structure', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: 'The intelligence behind better dairy farming.',
+        name: 'Every farm deserves a smarter tomorrow.',
       }),
     ).not.toBeNull();
     expect(

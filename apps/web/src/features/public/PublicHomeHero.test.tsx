@@ -17,11 +17,11 @@ describe('PublicHomeHero', () => {
     const { container } = renderHero();
 
     expect(screen.getByRole('heading', { level: 1 }).textContent).toBe(
-      'The intelligence behind better dairy farming.',
+      'Every farm deserves a smarter tomorrow.',
     );
     expect(screen.getByText('Smarter dairy farm management')).not.toBeNull();
     expect(
-      screen.getByText(/Bring animal care, milk production, daily operations, and farm management/),
+      screen.getByText(/From animal care to milk production, bring everything that matters/),
     ).not.toBeNull();
     expect(screen.getByRole('link', { name: 'Explore SmartFarm' }).getAttribute('href')).toBe(
       '#features',
@@ -31,7 +31,7 @@ describe('PublicHomeHero', () => {
     );
 
     const image = screen.getByRole('img', {
-      name: 'Cinematic dairy pasture with authentic grazing herd in morning light',
+      name: 'Golden pasture with grazing Holsteins in warm sunset light',
     });
     expect(image.getAttribute('src')).toBe(STITCH_ASSETS.heroPasture);
     expect(image.className).toContain('animate-cinematic');
@@ -45,7 +45,7 @@ describe('PublicHomeHero', () => {
 
     fireEvent.error(
       screen.getByRole('img', {
-        name: 'Cinematic dairy pasture with authentic grazing herd in morning light',
+        name: 'Golden pasture with grazing Holsteins in warm sunset light',
       }),
     );
 

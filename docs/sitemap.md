@@ -12,8 +12,8 @@ HOME
 - Owner-approved Stitch shell override (25 November 2026, expanded by ACR-004): all approved public pages use Stitch's five navigation labels (Home, About, Features, How It Works, Contact) and the “Let's Talk” CTA. The labels resolve to approved hash routes (implemented with React Router `HashRouter`) so every public page is reachable; Benefits and Dashboard Preview remain available in the footer.
 2. Hero (owner-approved Stitch override, 25 November 2026)
 - Eyebrow: “SMARTER DAIRY FARM MANAGEMENT”.
-- Main headline: “The intelligence behind better dairy farming.”
-- Supporting text: “Bring animal care, milk production, daily operations, and farm management together with one connected platform built for modern dairy farms.”
+- Main headline: “Every farm deserves a smarter tomorrow.” (owner-supplied copy, 26 November 2026)
+- Supporting text: “From animal care to milk production, bring everything that matters to your farm together in one simple, connected place.” (owner-supplied copy, 26 November 2026)
 - Primary CTA: Explore SmartFarm.
 - Secondary CTA: See How It Works.
 - Navbar CTA remains Contact Us under §1 Navbar.

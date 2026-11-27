@@ -157,4 +157,4 @@ No Stitch export exists for approved sitemap §2.7 Customer Access Management or
 | C14 | State sheets and combined views counted as pages | Handoff §8 interpretation |
 | C15 | No H1/H2 and no PNG mappings marked UNPROVEN | Handoff evidence rule |
 
-No Stitch export is deployed as application code; approved visuals are ported into source-owned React/Tailwind components. No 3D/WebGL/canvas/GLB/GLTF usage was introduced. ACR-002 remains the CSS/static Home hero fallback; ACR-003 permits the three Stitch-hosted images on Public Home only.
+No Stitch export is deployed as application code; approved visuals are ported into source-owned React/Tailwind components. No 3D/WebGL/canvas/GLB/GLTF usage was introduced. ACR-002 remains the CSS/static Home hero fallback; ACR-003 permitted the three Stitch-hosted images on Public Home only, and its follow-up has now replaced the hero and logo with the owner-supplied local files (`hero-pasture.png`, `smartfarm-logo.png`) — only the Home `aboutPasture` URL remains external.
