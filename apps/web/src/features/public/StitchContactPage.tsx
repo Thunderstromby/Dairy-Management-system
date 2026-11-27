@@ -1,4 +1,5 @@
 import { ArrowRight, ClipboardCheck, LockKeyhole, Users } from 'lucide-react';
+import innerHeroContact from '../../assets/inner-hero-contact.png';
 import { AppLink } from '../../app/AppLink';
 import { InquiryForm } from './InquiryForm';
 import { SectionHeading, StitchCTASection, StitchPageHero } from './StitchPageParts';
@@ -28,6 +29,7 @@ export function StitchContactPage() {
         eyebrow="Contact SmartFarm"
         title="Let's talk about better-connected dairy farm management."
         body="Have questions about SmartFarm? Contact our team to discuss the platform, its capabilities and how workspace setup works."
+        image={innerHeroContact}
         primaryLabel="Go to Inquiry Form"
         primaryHref="#inquiry-form"
         secondaryLabel="How It Works"

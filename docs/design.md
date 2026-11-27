@@ -509,7 +509,7 @@ Inner public-page hero
 - Centered title and short supporting text.
 - Maximum text width: 760px.
 - Optional small icon or agricultural line illustration.
-- No large photographic hero unless the sitemap explicitly requires one.
+- No large photographic hero unless the sitemap explicitly requires one. Owner instruction 27 November 2026 adds four licensed local photographs as decorative hero backgrounds on About, Features, How It Works and Contact only (ACR-004 addendum); they sit behind a left-side scrim so the white hero copy stays legible, and Benefits/Dashboard Preview keep the deep-forest gradient. No external URL or new route is introduced.
 Application page header
 - Left aligned.
 - Breadcrumb where applicable.

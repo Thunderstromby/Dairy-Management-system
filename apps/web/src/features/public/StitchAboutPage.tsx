@@ -1,4 +1,5 @@
 import { ClipboardList, Droplets, HeartPulse, Layers3, Package, Users } from 'lucide-react';
+import innerHeroAbout from '../../assets/inner-hero-about.png';
 import { AppLink } from '../../app/AppLink';
 import { NeutralVisual, SectionHeading, StitchCTASection, StitchPageHero } from './StitchPageParts';
 
@@ -44,6 +45,7 @@ export function StitchAboutPage() {
         eyebrow="About SmartFarm"
         title="Better understanding. Better connected dairy farming."
         body="SmartFarm brings the essential parts of dairy farm management into one connected platform—helping farms organize information, understand daily operations, and manage with greater clarity."
+        image={innerHeroAbout}
         primaryLabel="Explore Features"
         primaryHref="#/public/features"
         secondaryLabel="Contact SmartFarm"

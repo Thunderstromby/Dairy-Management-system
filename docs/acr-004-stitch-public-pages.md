@@ -41,5 +41,10 @@ ACR-003 approved Stitch-hosted imagery and the exact Stitch visual composition f
 | Animated marquee | **Not approved**; static strip only |
 | Fake operational data | **Prohibited**; neutral illustrative labels only |
 | Remote imagery on inner pages | **Removed** by owner instruction, 26 November 2026; Home-only ACR-003 scope restored |
+| Owner-supplied local hero photographs | **Approved by owner instruction, 27 November 2026** for About, Features, How It Works and Contact heroes only; Benefits and Dashboard Preview stay source-owned gradient |
+
+## Addendum — owner-supplied inner hero photographs (27 November 2026)
+
+The owner supplied four licensed local photographs and instructed that each be used as the hero background of its matching inner public page: `Golden Hour Dairy Farm Panorama.png` (About), `Golden Hour Dairy Farm Overseer.png` (Features), `Sunrise at the Holstein Dairy Farm.png` (How It Works) and `Golden Hour Greenhouse Harvest.png` (Contact). They were copied unchanged into `apps/web/src/assets/` and are rendered as decorative `object-cover` backgrounds with a left-side scrim so the existing white hero copy stays legible; the shared `StitchPageHero` accepts an optional image so Benefits and Dashboard Preview retain the earlier deep-forest gradient. No external URL, new route, navigation change or extra public page is introduced. This narrows, rather than expands, the ACR-003 imagery scope: only Home uses Stitch-hosted imagery, while these four pages use owner-supplied local files.
 
 Visual and functional reviews remain recorded as PENDING until the dated review evidence is captured.

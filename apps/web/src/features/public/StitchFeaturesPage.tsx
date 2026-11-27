@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import innerHeroFeatures from '../../assets/inner-hero-features.png';
 import { NeutralVisual, SectionHeading, StitchCTASection, StitchPageHero } from './StitchPageParts';
 
 const MODULES = [
@@ -74,6 +75,7 @@ export function StitchFeaturesPage() {
         eyebrow="SmartFarm capabilities"
         title="Everything your dairy farm needs to stay connected."
         body="Bring animal information, milk production, daily operations, people management and farm reporting together in one organized platform."
+        image={innerHeroFeatures}
         primaryLabel="Explore the Platform"
         primaryHref="#modules"
         secondaryLabel="Contact SmartFarm"

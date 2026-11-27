@@ -1,4 +1,5 @@
 import { ClipboardCheck, FolderKanban, ShieldCheck } from 'lucide-react';
+import innerHeroHowItWorks from '../../assets/inner-hero-how-it-works.png';
 import { NeutralVisual, SectionHeading, StitchCTASection, StitchPageHero } from './StitchPageParts';
 
 const STAGES = [
@@ -57,6 +58,7 @@ export function StitchHowItWorksPage() {
         eyebrow="How it works"
         title="A clearer way to manage your farm"
         body="From farm setup to everyday management, SmartFarm brings your dairy farm's management activities into one organized platform."
+        image={innerHeroHowItWorks}
         primaryLabel="Explore the Process"
         primaryHref="#process"
         secondaryLabel="Contact SmartFarm"

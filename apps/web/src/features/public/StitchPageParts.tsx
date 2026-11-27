@@ -10,6 +10,7 @@ type StitchPageHeroProps = {
   primaryHref: string;
   secondaryLabel: string;
   secondaryHref: string;
+  image?: string;
 };
 
 export function StitchPageHero({
@@ -20,19 +21,35 @@ export function StitchPageHero({
   primaryHref,
   secondaryLabel,
   secondaryHref,
+  image,
 }: StitchPageHeroProps) {
   return (
     <section className="relative overflow-hidden bg-deep-forest pb-24 pt-32 text-white sm:pb-28 sm:pt-36">
-      <div
-        className="absolute inset-0 bg-gradient-to-r from-deep-forest via-deep-forest/90 to-deep-forest/40"
-        aria-hidden="true"
-      />
+      {image ? (
+        <div
+          className="pointer-events-none absolute inset-0 select-none overflow-hidden"
+          aria-hidden="true"
+        >
+          <img
+            src={image}
+            alt=""
+            className="h-full w-full object-cover object-[65%_center] md:object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-deep-forest/95 via-deep-forest/75 to-deep-forest/25" />
+          <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-deep-forest/60 to-transparent" />
+        </div>
+      ) : (
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-deep-forest via-deep-forest/90 to-deep-forest/40"
+          aria-hidden="true"
+        />
+      )}
       <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
         <div className="max-w-3xl">
           <span className="mb-5 inline-block text-xs font-bold uppercase tracking-[0.22em] text-harvest-gold">
             {eyebrow}
           </span>
-          <h1 className="font-serif-display text-4xl leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
+          <h1 className="font-serif-display text-4xl leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
             {title}
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
