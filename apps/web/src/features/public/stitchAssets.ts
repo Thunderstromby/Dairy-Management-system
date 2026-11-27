@@ -2,8 +2,10 @@
 // pages use the source-owned gradient treatment instead. On 26 November 2026 the
 // owner supplied the official hero photograph and logo, which replace the remote
 // hero URL and the screenshot-cropped logo fallback (ACR-003 follow-up).
+// On 27 November 2026 the owner asked for the mark alone, with no white
+// container; the transparent variant is derived from that same official file.
 import heroPasture from '../../assets/hero-pasture.png';
-import localLogo from '../../assets/smartfarm-logo.png';
+import localLogo from '../../assets/smartfarm-logo-transparent.png';
 
 export const STITCH_ASSETS = {
   logo: localLogo,
