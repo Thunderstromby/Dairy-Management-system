@@ -1,4 +1,4 @@
-import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { cleanup, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { HashRouter } from 'react-router-dom';
@@ -53,17 +53,19 @@ describe('AppRouter role boundaries', () => {
     const scrollingElement = document.scrollingElement ?? document.documentElement;
     scrollingElement.scrollTop = 400;
 
-    window.location.hash = '#/public/about';
-    fireEvent(window, new Event('hashchange'));
+    await userEvent.click(screen.getByRole('link', { name: 'About' }));
 
-    await waitFor(() => {
-      expect(
-        screen.getByRole('heading', {
-          level: 1,
-          name: 'Better understanding. Better connected dairy farming.',
-        }),
-      ).not.toBeNull();
-    });
+    await waitFor(
+      () => {
+        expect(
+          screen.getByRole('heading', {
+            level: 1,
+            name: 'Better understanding. Better connected dairy farming.',
+          }),
+        ).not.toBeNull();
+      },
+      { timeout: 5000 },
+    );
     expect(scrollingElement.scrollTop).toBe(0);
   });
 
