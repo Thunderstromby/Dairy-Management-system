@@ -752,7 +752,7 @@ function BenefitsSection() {
               <div className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-harvest-gold">
                 Benefit 01
               </div>
-              <h3 className="mb-6 font-heading text-2xl font-bold leading-tight sm:text-3xl lg:text-4xl">
+              <h3 className="mb-6 font-heading text-2xl font-bold leading-tight text-white sm:text-3xl lg:text-4xl">
                 Organized farm information.
               </h3>
               <p className="max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
