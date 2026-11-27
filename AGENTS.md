@@ -1,6 +1,6 @@
 # SmartFarm Dairy Management System — Agent Instructions
 
-**Status:** Architecture approved and LOCKED by the project owner. This is a scaffold-stage repository: no application features are implemented yet.
+**Status:** Architecture approved and LOCKED by the project owner. The UI scaffold and prototype screens are implemented; backend, database and feature work remain scaffold-stage.
 **Authority:** This file is binding for all agents in this repository. When it conflicts with a visual export, template, or an unapproved assumption, this file and the approved architecture documents win.
 
 > **CRITICAL — LOCKED ARCHITECTURE**

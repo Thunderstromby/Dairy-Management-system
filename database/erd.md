@@ -1,6 +1,6 @@
 # SmartFarm — ERD Description
 
-**Reference:** `docs/database.md` and `docs/schema.sql` (24 November 2026).  
+**Reference:** `docs/database.md` and `database/schema.sql` (24 November 2026).  
 **Notation:** `||--o{` = one to zero/many; `}o--o{` = many-to-many through a junction. All farm-owned records include `workspace_id` and its composite FK requirement, even where omitted for readability.
 
 ## 1. Platform / access

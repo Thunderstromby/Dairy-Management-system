@@ -3,7 +3,7 @@
   "version": "0.1.0-scaffold",
   "private": true,
   "type": "module",
-  "description": "SmartFarm Dairy Management System - architecture-compliant scaffold. No application features implemented.",
+  "description": "SmartFarm Dairy Management System - architecture-compliant monorepo with prototype UI screens; backend and feature work remain scaffold-stage.",
   "workspaces": [
     "apps/*",
     "packages/*"
