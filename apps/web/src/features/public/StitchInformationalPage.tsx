@@ -8,14 +8,27 @@ const PLACEHOLDER_BODY =
  * copy are ported from the owner-supplied Stitch exports; no legal claim,
  * external asset or live-status indicator is introduced.
  */
-export function StitchInformationalPage({ title }: { title: string }) {
+export function StitchInformationalPage({ title, image }: { title: string; image?: string }) {
   return (
     <>
       <section className="relative overflow-hidden bg-deep-forest pb-24 pt-32 text-white sm:pb-28 sm:pt-36">
         <div
-          className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full bg-pasture-green/10 blur-3xl"
+          className="pointer-events-none absolute inset-0 select-none overflow-hidden"
           aria-hidden="true"
-        />
+        >
+          {image ? (
+            <>
+              <img
+                src={image}
+                alt=""
+                className="h-full w-full object-cover object-[65%_center] md:object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-deep-forest/95 via-deep-forest/80 to-deep-forest/30" />
+            </>
+          ) : (
+            <div className="absolute inset-0 bg-gradient-to-r from-deep-forest via-deep-forest/90 to-deep-forest/40" />
+          )}
+        </div>
         <div className="relative mx-auto max-w-4xl px-6 text-center lg:px-12">
           <span className="mb-5 inline-block font-inter text-xs font-bold uppercase tracking-[0.22em] text-harvest-gold">
             SmartFarm Information

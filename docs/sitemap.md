@@ -80,7 +80,7 @@ HOME
 12. Operational Security (ACR-007, owner approval 27 November 2026)
 - Static placeholder page using the approved Stitch export heading and "Coming Soon" copy; no telemetry or live-status indicator.
 - Owner-approved Stitch footer override (25 November 2026, expanded by ACR-004): all approved public pages use Stitch's Home footer wording, the original seven route links plus three ACR-007 informational links, and the “Connect with our team →” consultation cue. Legal link labels resolve to approved static placeholder pages.
-- Static signature strip directly below the footer on all public pages, as shown in Stitch. It is not an animated marquee and carries no operational data.
+- Decorative CSS-marquee signature strip directly below the footer on all public pages (owner approval 27 November 2026), static under reduced motion; it carries no operational data.
 
 2. Super Admin Panel
 Shared Super Admin layout

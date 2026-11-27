@@ -20,7 +20,7 @@ ACR-003 approved Stitch-hosted imagery and the exact Stitch visual composition f
 - **Scope:** Visual port only; no new public routes, no private-surface changes and no business-rule changes.
 - **Data:** Placeholder labels remain neutral and are explicitly marked “Illustrative — not live data”. No fake farm names, live status, telemetry, RFID/IoT, invented formulas or unapproved status values are introduced.
 - **Security:** Public shell remains presentational. Server authorization, RLS and data-source boundaries are unchanged.
-- **Motion:** The signature strip is static. The Stitch animated marquee and continuous cinematic motion are not reproduced, preserving `AGENTS.md` §§12 and 21.
+- **Motion:** The signature strip is a continuous CSS marquee approved by the owner on 27 November 2026; it is a purely decorative wordmark repeat with a static `prefers-reduced-motion` state. Other continuous cinematic motion and live-status simulation remain excluded.
 - **Assets:** The approved external pasture images are used on Public Home only. The six inner public pages use the source-owned deep-forest gradient and carry no Googleusercontent imagery (owner instruction, 26 November 2026). The dead Stitch logo URL was removed; the visible logo is a local PNG cropped from the owner-supplied Stitch Home screenshot and recorded as a fallback.
 
 ## Smallest approved change
@@ -38,13 +38,13 @@ ACR-003 approved Stitch-hosted imagery and the exact Stitch visual composition f
 | New public routes | **None added** |
 | Remote pasture images | ACR-003 covers Public Home only; removed from the six inner public pages by owner instruction, 26 November 2026 |
 | Local logo fallback derived from approved Stitch screenshot | **Approved by this instruction** |
-| Animated marquee | **Not approved**; static strip only |
+| Animated marquee | **APPROVED** by owner 27 November 2026 — decorative CSS strip only, static under reduced motion |
 | Fake operational data | **Prohibited**; neutral illustrative labels only |
 | Remote imagery on inner pages | **Removed** by owner instruction, 26 November 2026; Home-only ACR-003 scope restored |
-| Owner-supplied local hero photographs | **Approved by owner instruction, 27 November 2026** for About, Features, How It Works and Contact heroes only; Benefits and Dashboard Preview stay source-owned gradient |
+| Owner-supplied local hero photographs | **Approved by owner instruction, 27 November 2026** for About, Features, How It Works, Contact and Dashboard Preview heroes; Benefits stays source-owned gradient |
 
 ## Addendum — owner-supplied inner hero photographs (27 November 2026)
 
-The owner supplied four licensed local photographs and instructed that each be used as the hero background of its matching inner public page: `Golden Hour Dairy Farm Panorama.png` (About), `Golden Hour Dairy Farm Overseer.png` (Features), `Sunrise at the Holstein Dairy Farm.png` (How It Works) and `Golden Hour Greenhouse Harvest.png` (Contact). They were copied unchanged into `apps/web/src/assets/` and are rendered as decorative `object-cover` backgrounds with a left-side scrim so the existing white hero copy stays legible; the shared `StitchPageHero` accepts an optional image so Benefits and Dashboard Preview retain the earlier deep-forest gradient. No external URL, new route, navigation change or extra public page is introduced. This narrows, rather than expands, the ACR-003 imagery scope: only Home uses Stitch-hosted imagery, while these four pages use owner-supplied local files.
+The owner supplied four licensed local photographs and instructed that each be used as the hero background of its matching inner public page: `Golden Hour Dairy Farm Panorama.png` (About), `Golden Hour Dairy Farm Overseer.png` (Features), `Sunrise at the Holstein Dairy Farm.png` (How It Works) and `Golden Hour Greenhouse Harvest.png` (Contact). A fifth, `Smart Dairy Farm at Sunrise.png`, was supplied for Dashboard Preview on 27 November 2026. They were copied unchanged into `apps/web/src/assets/` and are rendered as decorative `object-cover` backgrounds with a left-side scrim so the existing white hero copy stays legible; the shared `StitchPageHero` accepts an optional image so Benefits retains the earlier deep-forest gradient. No external URL, new route, navigation change or extra public page is introduced. This narrows, rather than expands, the ACR-003 imagery scope: only Home may use Stitch-hosted imagery, while these pages use owner-supplied local files.
 
 Visual and functional reviews remain recorded as PENDING until the dated review evidence is captured.

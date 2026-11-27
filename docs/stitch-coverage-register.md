@@ -14,7 +14,7 @@ Every row remains **PENDING** until both reviews are recorded in `docs/visual-re
 
 | Stitch export | Implementation disposition | Boundary applied | Visual | Functional |
 |---|---|---|---|---|
-| `smartfarm_public_website_homepage` | `public.home` | Owner-approved Stitch Home visual composition; ACR-003 permits the Stitch-hosted images; ACR-002 motif is the image-failure fallback; ACR-004 adds the local logo fallback and below-footer static strip | PENDING | PENDING |
+| `smartfarm_public_website_homepage` | `public.home` | Owner-approved Stitch Home visual composition; ACR-003 permits the Stitch-hosted images; ACR-002 motif is the image-failure fallback; ACR-004 adds the local logo fallback and below-footer CSS-marquee signature strip (owner approval, 27 November 2026) | PENDING | PENDING |
 | `smartfarm_about_page` | `public.about` | ACR-004 source-owned visual port; no Googleusercontent imagery; no unapproved claims or imagery treated as licensed | PENDING | PENDING |
 | `smartfarm_features_page` | `public.features` | ACR-004 source-owned visual port; no Googleusercontent imagery; twelve approved module labels; no fake snapshots or RFID/IoT | PENDING | PENDING |
 | `smartfarm_how_it_works_page` | `public.how-it-works` | ACR-004 source-owned visual port; no Googleusercontent imagery; pricing excluded; no checkout or subscription | PENDING | PENDING |

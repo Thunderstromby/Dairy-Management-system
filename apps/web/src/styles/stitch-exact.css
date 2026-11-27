@@ -100,7 +100,8 @@ h4 {
   .animate-cinematic,
   .reveal-line-1,
   .reveal-line-2,
-  .reveal-line-3 {
+  .reveal-line-3,
+  .sf-stitch-marquee {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
@@ -110,6 +111,21 @@ h4 {
   .tab-pane {
     transition: none !important;
   }
+}
+
+/* Owner-approved signature strip marquee (27 November 2026). The two
+   identical groups make the -50% translation seamless. */
+@keyframes sfMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.sf-stitch-marquee {
+  animation: sfMarquee 32s linear infinite;
 }
 
 /* ACR-002 static hero motif fallback (shown when the external hero image fails). */

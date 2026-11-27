@@ -33,3 +33,8 @@ On approval, add exactly three static public pages (Privacy Policy, Terms of Ser
 | New public routes (three) | **APPROVED** 27 November 2026 — `/public/privacy-policy`, `/public/terms-of-service`, `/public/operational-security` |
 | Legal/policy body copy | **Not invented** — the exports' own "Coming Soon" placeholder copy is used verbatim; substantive policy wording remains pending owner content |
 | Stitch export code deployed as source | **PROHIBITED** — source-owned port only |
+| Local hero photographs | **APPROVED** 27 November 2026 — one per informational page, used as decorative hero backgrounds |
+
+## Addendum — informational hero photographs (27 November 2026)
+
+The owner supplied one local photograph for each informational page: `ChatGPT Image Nov 27, 2026, 09_28_47 PM.png` (Privacy Policy), `ChatGPT Image Nov 27, 2026, 09_29_23 PM.png` (Terms of Service) and `ChatGPT Image Nov 27, 2026, 09_29_49 PM.png` (Operational Security). They were copied unchanged into `apps/web/src/assets/` and are rendered as decorative hero backgrounds behind a left-side scrim; the placeholder copy and routes are unchanged.

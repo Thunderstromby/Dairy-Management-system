@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import innerHeroDashboardPreview from '../../assets/inner-hero-dashboard-preview.png';
 import { NeutralVisual, SectionHeading, StitchCTASection, StitchPageHero } from './StitchPageParts';
 
 const PREVIEW_TABS = [
@@ -72,7 +73,7 @@ const REVIEW_AREAS = [
 
 function AreaCard({ title }: { title: string }) {
   return (
-    <div className="rounded-xl border border-border-subtle bg-warm-ivory px-4 py-3">
+    <div className="cursor-default rounded-xl border border-border-subtle bg-warm-ivory px-4 py-3 transition-colors duration-200 hover:border-pasture-green/50 hover:bg-sage-mist motion-reduce:transition-none">
       <h3 className="font-heading text-sm font-bold text-deep-forest">{title}</h3>
     </div>
   );
@@ -88,6 +89,7 @@ export function StitchDashboardPreviewPage() {
         eyebrow="Illustrative product preview"
         title="A clearer view of your dairy farm management."
         body="Take a closer look at how SmartFarm organizes animal information, milk production, daily operations, people management and reports. All values shown here are neutral placeholders."
+        image={innerHeroDashboardPreview}
         primaryLabel="Explore Features"
         primaryHref="#/public/features"
         secondaryLabel="Contact SmartFarm"
@@ -249,7 +251,7 @@ export function StitchDashboardPreviewPage() {
               {['Farm Admin Workspace', 'Farm Supervisor Console', 'Navigation'].map((area) => (
                 <div
                   key={area}
-                  className="rounded-xl border border-border-subtle bg-warm-ivory p-4"
+                  className="cursor-default rounded-xl border border-border-subtle bg-warm-ivory p-4 transition-colors duration-200 hover:border-pasture-green/50 hover:bg-sage-mist motion-reduce:transition-none"
                 >
                   <h3 className="font-heading text-sm font-bold text-deep-forest">{area}</h3>
                 </div>

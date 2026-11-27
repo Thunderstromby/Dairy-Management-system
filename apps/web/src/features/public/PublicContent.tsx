@@ -1,3 +1,6 @@
+import innerHeroPrivacy from '../../assets/inner-hero-privacy-policy.png';
+import innerHeroSecurity from '../../assets/inner-hero-operational-security.png';
+import innerHeroTerms from '../../assets/inner-hero-terms-of-service.png';
 import { StitchAboutPage } from './StitchAboutPage';
 import { StitchBenefitsPage } from './StitchBenefitsPage';
 import { StitchContactPage } from './StitchContactPage';
@@ -22,11 +25,11 @@ export function PublicInnerContent({ screenId }: { screenId: string }) {
     case 'public.contact':
       return <StitchContactPage />;
     case 'public.privacy-policy':
-      return <StitchInformationalPage title="Privacy Policy" />;
+      return <StitchInformationalPage title="Privacy Policy" image={innerHeroPrivacy} />;
     case 'public.terms-of-service':
-      return <StitchInformationalPage title="Terms of Service" />;
+      return <StitchInformationalPage title="Terms of Service" image={innerHeroTerms} />;
     case 'public.operational-security':
-      return <StitchInformationalPage title="Operational Security" />;
+      return <StitchInformationalPage title="Operational Security" image={innerHeroSecurity} />;
     default:
       return <StitchHomePage />;
   }
