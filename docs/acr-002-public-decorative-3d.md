@@ -71,16 +71,16 @@ The request says the 3D experience is approved, but the repository contains no a
 | Location selected | **Home hero** only; How It Works remains 2D/static |
 | Implementation path selected | **CSS/static first**; no WebGL, canvas, GLB/GLTF or new library |
 | `docs/architecture.md` and `docs/ARCHITECTURE_STATUS.md` update | Completed 25 November 2026 |
-| Implementation | Completed 25 November 2026 — see evidence below |
+| Implementation | Completed 25 November 2026; static fallback retained after the ACR-003 asset follow-up on 27 November 2026 — see evidence below |
 
 ## 8. Implementation evidence
 
-- Public Home hero uses approved copy and keeps the heading, description and CTAs in ordinary HTML.
-- `apps/web/src/features/public/HeroMotif.tsx` is dynamically imported only after the hero intersects on fine pointers. Production build emits separate `HeroMotif` JS (0.46 kB / 0.21 kB gzip) and CSS (1.47 kB / 0.61 kB gzip) chunks; motif CSS is absent from the initial CSS bundle.
-- Static SVG fallback is used on coarse pointers, under reduced motion, before the lazy chunk resolves, and if the lazy chunk fails.
+- Public Home hero keeps the heading, description and CTAs in ordinary HTML; the primary visual is the owner-supplied local photograph recorded in the ACR-003 follow-up (26 November 2026).
+- `apps/web/src/features/public/StaticHeroMotif.tsx` is the ACR-002 CSS/static motif. It is an inline SVG rendered only when the hero photograph fails to load. It is statically imported, so there is no lazy JS/CSS chunk, no deferred scene loading and no production loading placeholder.
+- Motif styling stays in the source-owned `apps/web/src/styles/stitch-exact.css`. The earlier `HeroMotif.tsx` / `hero-motif.css` dynamic-import implementation was orphaned by the ACR-003 visual hand-off and removed on 27 November 2026; no deferred scene behaviour is claimed.
 - No `<canvas>`, WebGL context, Three.js/R3F package, GLB/GLTF asset or texture is introduced. Draw-call, texture-size and frame-rate budgets are therefore not applicable to this approved change.
 - Frame-rate monitoring is not added because the approved CSS/static implementation has no rendering loop; a later WebGL ACR must define that gate.
-- Tests assert static fallback, reduced-motion behavior, explicit loading state, deferred scene loading, and absence of canvas.
-- Release checks passed: format, lint, typecheck, 19 tests, build and production fixture scan.
+- Tests assert the static fallback on image error, reduced-motion behaviour and absence of canvas.
+- Release checks passed on 27 November 2026: format, lint, typecheck, 61 tests, build and production fixture scan.
 
 **Scope boundary after approval:** one decorative CSS/static Home hero motif only. WebGL, canvas scenes, GLB/GLTF assets, livestock models, simulations, new routes and private-surface 3D remain excluded unless a later ACR is approved.
