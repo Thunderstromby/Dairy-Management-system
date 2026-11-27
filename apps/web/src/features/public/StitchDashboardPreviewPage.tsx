@@ -4,19 +4,19 @@ import { NeutralVisual, SectionHeading, StitchCTASection, StitchPageHero } from 
 const PREVIEW_TABS = [
   {
     label: 'Overview',
-    title: 'Farm daily summary',
+    title: 'Farm Daily Summary',
     body: 'A single place to review the approved operational picture without simulated live activity.',
     rows: ['Milking session status', 'Bulk tank record', 'Duty roster', 'Pending reviews'],
   },
   {
     label: 'Animals',
-    title: 'Animal ledger and registrations',
+    title: 'Animal Ledger & Registrations',
     body: 'Individual records keep identity, grouping and lifecycle history together.',
     rows: ['Animal record A', 'Animal record B', 'Animal record C'],
   },
   {
     label: 'Health',
-    title: 'Health event records',
+    title: 'Clinical Ledger & Withholdings',
     body: 'Sensitive health details stay within the approved role boundaries.',
     rows: ['Recorded event A', 'Recorded event B', 'Recorded event C'],
   },
@@ -33,6 +33,45 @@ const PREVIEW_TABS = [
     rows: ['Operational summary', 'Milk report', 'Inventory usage'],
   },
 ] as const;
+
+const MANAGEMENT_AREAS = [
+  'Farm Daily Summary',
+  'Animal Ledger & Registrations',
+  'Clinical Ledger & Withholdings',
+  'Vat & Harvest Monitoring',
+  'On-Farm Supplies & Feed Reserves',
+  'Feed Allocation & Grazing Breaks',
+  'Staff Rostering & Qualifications',
+  'Shift Logs & Paddock Presence',
+  'Payroll Export Verification',
+  'Operational Cost Centers & Margins',
+  'Farm Operational Statements',
+  'Platform Dispatch & Logs',
+] as const;
+
+const STARTING_POINT = [
+  'Herd Register Snapshot',
+  'Operational Checklist',
+  'Audited Event Log',
+] as const;
+
+const PRODUCTION_AREAS = ['Milk Production', 'Inventory & Silos', 'Pasture Allocation'] as const;
+
+const PEOPLE_AREAS = ['Rostering & Shift Logs', 'Cost Center Breakdown & Margin'] as const;
+
+const REVIEW_AREAS = [
+  'Clinical Ledger & Withholding Safeguards',
+  'Monthly Milk Quality Audit',
+  'Withholding Compliance Log',
+] as const;
+
+function AreaCard({ title }: { title: string }) {
+  return (
+    <div className="rounded-xl border border-border-subtle bg-warm-ivory px-4 py-3">
+      <h3 className="font-heading text-sm font-bold text-deep-forest">{title}</h3>
+    </div>
+  );
+}
 
 export function StitchDashboardPreviewPage() {
   const [active, setActive] = useState(0);
@@ -106,11 +145,117 @@ export function StitchDashboardPreviewPage() {
               </div>
             </div>
           </div>
+
+          <div className="mt-10 rounded-3xl border border-border-subtle bg-white p-7">
+            <h3 className="font-heading text-xl font-bold text-deep-forest">
+              Explore the platform's management areas.
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-secondary-text">
+              This preview shows structure, not operational truth. No values are connected to a
+              farm, and no calculation formula is implied.
+            </p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {MANAGEMENT_AREAS.map((area) => (
+                <AreaCard key={area} title={area} />
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            <div className="rounded-3xl border border-border-subtle bg-white p-7">
+              <h3 className="font-heading text-lg font-bold text-deep-forest">
+                An organized starting point for farm management.
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-secondary-text">
+                A single place to review the approved operational picture without simulated live
+                activity.
+              </p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                {STARTING_POINT.map((area) => (
+                  <AreaCard key={area} title={area} />
+                ))}
+              </div>
+            </div>
+            <div className="rounded-3xl border border-border-subtle bg-white p-7">
+              <h3 className="font-heading text-lg font-bold text-deep-forest">
+                Animal information at a glance.
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-secondary-text">
+                Individual records keep identity, grouping and lifecycle history together.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 rounded-3xl border border-border-subtle bg-white p-7">
+            <h3 className="font-heading text-lg font-bold text-deep-forest">
+              Production and operations in one place.
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-secondary-text">
+              Session entries and daily totals stay structured for later review.
+            </p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              {PRODUCTION_AREAS.map((area) => (
+                <AreaCard key={area} title={area} />
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            <div className="rounded-3xl border border-border-subtle bg-white p-7">
+              <h3 className="font-heading text-lg font-bold text-deep-forest">
+                Organized information for people and management.
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-secondary-text">
+                Take a closer look at how SmartFarm organizes animal information, milk production,
+                daily operations, people management and reports. All values shown here are neutral
+                placeholders.
+              </p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {PEOPLE_AREAS.map((area) => (
+                  <AreaCard key={area} title={area} />
+                ))}
+              </div>
+            </div>
+            <div className="rounded-3xl border border-border-subtle bg-white p-7">
+              <h3 className="font-heading text-lg font-bold text-deep-forest">
+                Review organized farm information.
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-secondary-text">
+                Reporting stays bounded by the access matrix and never presents simulated live
+                views.
+              </p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {REVIEW_AREAS.map((area) => (
+                  <AreaCard key={area} title={area} />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 rounded-3xl border border-border-subtle bg-white p-7">
+            <h3 className="font-heading text-lg font-bold text-deep-forest">
+              Access shaped around responsibility.
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-secondary-text">
+              This preview shows structure, not operational truth. No values are connected to a
+              farm, and no calculation formula is implied.
+            </p>
+            <div className="mt-6 grid gap-3 md:grid-cols-3">
+              {['Farm Admin Workspace', 'Farm Supervisor Console', 'Navigation'].map((area) => (
+                <div
+                  key={area}
+                  className="rounded-xl border border-border-subtle bg-warm-ivory p-4"
+                >
+                  <h3 className="font-heading text-sm font-bold text-deep-forest">{area}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       <StitchCTASection
-        title="Discuss a real workspace setup"
+        title="Want to see how SmartFarm fits your farm?"
         body="The production workspace uses actual records entered by authorized farm users. Contact the team to learn how provisioning works."
       />
     </>

@@ -84,7 +84,7 @@ export function StitchFeaturesPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <SectionHeading
             eyebrow="Modular operating suite"
-            title="Explore all 12 functional modules"
+            title="Explore All 12 Functional Modules"
             body="Select an area to review the record structure and the access boundaries that apply to it."
           />
 
@@ -159,8 +159,85 @@ export function StitchFeaturesPage() {
         </div>
       </section>
 
+      <section className="bg-white py-24 sm:py-28">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <SectionHeading
+            eyebrow="Across the platform"
+            title="One connected platform for dairy farm management."
+            body="Bring animal information, milk production, daily operations, people management and farm reporting together in one organized platform."
+          />
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                level: 'h3',
+                title: 'Animal Registration & Paddock Roster',
+                body: 'Organize identity, lifecycle groups and individual animal records in one registry.',
+              },
+              {
+                level: 'h2',
+                title: 'Keep animal health information organized.',
+                body: 'Keep health events and treatment records associated with the correct animal.',
+              },
+              {
+                level: 'h2',
+                title: 'Bring milk production records together.',
+                body: 'Record milking sessions, daily totals and approved production reports.',
+              },
+              {
+                level: 'h2',
+                title: 'Manage the details behind daily farm operations.',
+                body: 'Track stock items, movements and current quantities in the farm workspace.',
+              },
+              {
+                level: 'h3',
+                title: 'Inventory Management',
+                body: 'Item records and usage history for daily stock decisions.',
+              },
+              {
+                level: 'h3',
+                title: 'Feeding Management',
+                body: 'Plans and actual feeding records kept side by side.',
+              },
+              {
+                level: 'h3',
+                title: 'Equipment Management',
+                body: 'Maintenance and usage history for farm equipment.',
+              },
+              {
+                level: 'h2',
+                title: 'Organize the people and work behind your farm.',
+                body: 'Maintain worker records as farm data, not login accounts.',
+              },
+              {
+                level: 'h2',
+                title: 'Keep farm financial information organized.',
+                body: 'Record approved income, expenses and financial reports.',
+              },
+              {
+                level: 'h2',
+                title: 'See organized information. Stay informed.',
+                body: 'Surface role-appropriate operational notices without simulated live status.',
+              },
+            ].map((item) => {
+              const Heading = item.level === 'h2' ? 'h2' : 'h3';
+              return (
+                <div
+                  key={item.title}
+                  className="rounded-2xl border border-border-subtle bg-warm-ivory p-6"
+                >
+                  <Heading className="font-heading text-lg font-bold leading-snug text-deep-forest">
+                    {item.title}
+                  </Heading>
+                  <p className="mt-3 text-sm leading-relaxed text-secondary-text">{item.body}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       <StitchCTASection
-        title="See how the modules fit together"
+        title="Ready to explore SmartFarm?"
         body="Review the illustrative workspace preview, then contact the team to discuss the right setup for your farm."
       />
     </>

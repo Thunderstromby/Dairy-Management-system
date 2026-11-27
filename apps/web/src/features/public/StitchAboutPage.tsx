@@ -5,13 +5,21 @@ import { NeutralVisual, SectionHeading, StitchCTASection, StitchPageHero } from 
 const UNIFIED_AREAS = [
   {
     icon: HeartPulse,
-    title: 'Animal information',
+    title: 'Animal Management',
     body: 'Identity, lifecycle and health records.',
   },
-  { icon: Droplets, title: 'Milk production', body: 'Session entries, daily totals and reports.' },
-  { icon: Package, title: 'Inventory and feeding', body: 'Stock, usage and feeding records.' },
-  { icon: Users, title: 'People', body: 'Worker records, attendance and role-aware access.' },
-  { icon: ClipboardList, title: 'Reporting', body: 'Approved operational summaries and exports.' },
+  { icon: Droplets, title: 'Milk Production', body: 'Session entries, daily totals and reports.' },
+  { icon: Package, title: 'Farm Operations', body: 'Stock, usage and feeding records.' },
+  {
+    icon: Users,
+    title: 'People Management',
+    body: 'Worker records, attendance and role-aware access.',
+  },
+  {
+    icon: ClipboardList,
+    title: 'Farm Intelligence',
+    body: 'Approved operational summaries and exports.',
+  },
 ] as const;
 
 const AUDIENCES = [
@@ -86,7 +94,7 @@ export function StitchAboutPage() {
                     >
                       <Icon size={18} className="mt-0.5 text-pasture-green" aria-hidden="true" />
                       <div>
-                        <p className="text-sm font-semibold text-deep-forest">{title}</p>
+                        <h3 className="text-sm font-semibold text-deep-forest">{title}</h3>
                         <p className="text-xs text-secondary-text">{body}</p>
                       </div>
                     </div>
@@ -102,7 +110,7 @@ export function StitchAboutPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <SectionHeading
             eyebrow="Our approach"
-            title="Unified architecture for everyday farm management"
+            title="Connected information for everyday farm management."
             body="SmartFarm is organized around the records and responsibilities that dairy farms already manage. We do not add hardware, automation or invented predictions."
           />
           <div className="grid gap-6 md:grid-cols-3">
@@ -125,11 +133,65 @@ export function StitchAboutPage() {
       </section>
 
       <section className="bg-white py-24 sm:py-28">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <SectionHeading
+            eyebrow="Design philosophy"
+            title="Technology should work with the way farms operate."
+            body="The interface keeps the work visible without turning farm activity into simulated telemetry."
+          />
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: 'Practical by design',
+                body: 'Information is structured around one isolated farm workspace.',
+              },
+              {
+                title: 'Connected by purpose',
+                body: 'Navigation, records and reports arranged around approved farm areas.',
+              },
+              {
+                title: 'Clarity for management',
+                body: 'Records remain available for operational review rather than being overwritten.',
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-border-subtle bg-warm-ivory p-6"
+              >
+                <h3 className="font-heading text-lg font-bold text-deep-forest">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-secondary-text">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-sage-mist/40 py-24 sm:py-28">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <SectionHeading
+            eyebrow="Agricultural roles"
+            title="Designed around the people managing the farm."
+            body="SmartFarm is organized around the records and responsibilities that dairy farms already manage. We do not add hardware, automation or invented predictions."
+          />
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="rounded-2xl border border-border-subtle bg-white p-6">
+              <h3 className="font-heading text-lg font-bold text-deep-forest">
+                Farm Owners & Administrators
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-secondary-text">
+                Keep an organized view of the records that support daily decisions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-24 sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-12 lg:items-center lg:px-12">
           <div className="lg:col-span-5">
             <SectionHeading
               eyebrow="Platform reveal"
-              title="A calm, structured workspace behind the dairy operation"
+              title="See the bigger picture of your farm."
               body="The interface keeps the work visible without turning farm activity into simulated telemetry."
             />
             <AppLink
@@ -149,6 +211,16 @@ export function StitchAboutPage() {
               </div>
             </NeutralVisual>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-sage-mist/40 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <SectionHeading
+            eyebrow="Operational clarity"
+            title="Bring your farm management into better focus."
+            body="Talk with the SmartFarm team to learn how the platform can support your farm-management needs."
+          />
         </div>
       </section>
 

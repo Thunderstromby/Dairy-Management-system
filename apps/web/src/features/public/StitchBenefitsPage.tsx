@@ -5,18 +5,53 @@ import { NeutralVisual, SectionHeading, StitchCTASection, StitchPageHero } from 
 const BENEFITS = [
   {
     icon: ClipboardList,
-    title: 'Organized farm information',
+    title: 'Keep important farm information organized.',
     body: 'Keep animal, health, milking and operational documents structured in one workspace.',
   },
   {
     icon: Layers3,
-    title: 'Connected daily operations',
+    title: 'Bring daily farm activities into one platform.',
     body: 'Bring feeding, inventory, equipment and attendance records into the same review flow.',
   },
   {
     icon: Users,
-    title: 'Clear people management',
+    title: 'Bring workforce information into clearer focus.',
     body: 'Maintain worker records and duty information with role-appropriate visibility.',
+  },
+] as const;
+
+const VALUE_AREAS = [
+  'Structured Animal Identification',
+  'Health and Production History',
+  'Secure Multi-User Access',
+  'Milking Rotation Rosters',
+  'Streamlined Field Attendance',
+  'Protected Payroll & Financial Scope',
+] as const;
+
+const ROLE_HIGHLIGHTS = [
+  {
+    title: 'Full Administrative Authority',
+    body: 'Full workspace administration with privileged finance and approval areas.',
+  },
+  {
+    title: 'Focused Daily Coordination',
+    body: 'Operational records and permitted daily views only.',
+  },
+  {
+    title: 'Consolidated Enterprise Overview',
+    body: 'SmartFarm brings essential dairy farm information and management activities together, helping your team work with organized records and a clearer view of operations.',
+  },
+] as const;
+
+const NEXT_STEPS = [
+  {
+    title: 'Explore Platform',
+    body: 'SmartFarm brings essential dairy farm information and management activities together, helping your team work with organized records and a clearer view of operations.',
+  },
+  {
+    title: 'Inquiries & Support',
+    body: 'Contact the team to discuss how the approved modules and role boundaries fit your farm.',
   },
 ] as const;
 
@@ -99,6 +134,15 @@ export function StitchBenefitsPage() {
               </div>
             </div>
           </div>
+          <div className="mt-6 rounded-3xl border border-border-subtle bg-white p-7">
+            <h3 className="font-heading text-lg font-bold text-deep-forest">
+              One platform. Connected management areas.
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-secondary-text">
+              When information is spread across disconnected records, whiteboards, paper logs and
+              separate spreadsheets, it becomes harder to maintain an organized view.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -117,52 +161,91 @@ export function StitchBenefitsPage() {
               </div>
             ))}
           </div>
+          <div className="mt-10 rounded-3xl border border-border-subtle bg-white p-7">
+            <h3 className="font-heading text-xl font-bold text-deep-forest">
+              Understand your farm through organized records and reports.
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-secondary-text">
+              Keep animal, health, milking and operational documents structured in one workspace.
+            </p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {VALUE_AREAS.map((area) => (
+                <div
+                  key={area}
+                  className="rounded-xl border border-border-subtle bg-warm-ivory p-4"
+                >
+                  <h3 className="font-heading text-sm font-bold text-deep-forest">{area}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="bg-white py-24 sm:py-28">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-12 lg:items-center lg:px-12">
-          <div className="lg:col-span-5">
-            <SectionHeading
-              eyebrow="Benefit by role"
-              title="One workspace, two appropriate views"
-              body="The interface reflects the approved access matrix rather than granting shared permissions."
-            />
-            <div className="flex gap-2">
-              {ROLE_VIEWS.map((item, index) => (
-                <button
-                  key={item.role}
-                  type="button"
-                  aria-pressed={roleIndex === index}
-                  onClick={() => setRoleIndex(index)}
-                  className={`tab-btn rounded-full border px-4 py-2 text-xs font-semibold ${
-                    roleIndex === index
-                      ? 'active border-deep-forest bg-deep-forest text-white'
-                      : 'border-border-subtle bg-white text-deep-forest'
-                  }`}
-                >
-                  {item.role}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className="lg:col-span-7">
-            <NeutralVisual title={`${role.role} view`}>
-              <p className="mb-5 text-sm text-secondary-text">{role.summary}</p>
-              <div className="grid gap-3 sm:grid-cols-2">
-                {role.items.map((item) => (
-                  <div key={item} className="rounded-xl bg-warm-ivory p-4 text-sm text-deep-forest">
-                    {item}
-                  </div>
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <SectionHeading
+            eyebrow="Benefit by role"
+            title="Useful information for different farm responsibilities."
+            body="The interface reflects the approved access matrix rather than granting shared permissions."
+          />
+          <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+            <div className="lg:col-span-5">
+              <div className="flex gap-2">
+                {ROLE_VIEWS.map((item, index) => (
+                  <button
+                    key={item.role}
+                    type="button"
+                    aria-pressed={roleIndex === index}
+                    onClick={() => setRoleIndex(index)}
+                    className={`tab-btn rounded-full border px-4 py-2 text-xs font-semibold ${
+                      roleIndex === index
+                        ? 'active border-deep-forest bg-deep-forest text-white'
+                        : 'border-border-subtle bg-white text-deep-forest'
+                    }`}
+                  >
+                    {item.role}
+                  </button>
                 ))}
               </div>
-            </NeutralVisual>
+            </div>
+            <div className="lg:col-span-7">
+              <NeutralVisual title={`${role.role} view`}>
+                <p className="mb-5 text-sm text-secondary-text">{role.summary}</p>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {role.items.map((item) => (
+                    <div
+                      key={item}
+                      className="rounded-xl bg-warm-ivory p-4 text-sm text-deep-forest"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </NeutralVisual>
+            </div>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {ROLE_HIGHLIGHTS.map(({ title, body }) => (
+              <div key={title} className="rounded-3xl border border-border-subtle bg-white p-7">
+                <h3 className="font-heading text-lg font-bold text-deep-forest">{title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-secondary-text">{body}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            {NEXT_STEPS.map(({ title, body }) => (
+              <div key={title} className="rounded-3xl border border-border-subtle bg-white p-7">
+                <h3 className="font-heading text-lg font-bold text-deep-forest">{title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-secondary-text">{body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       <StitchCTASection
-        title="See the value in your own operation"
+        title="See what connected farm management can look like."
         body="Contact the team to discuss how the approved modules and role boundaries fit your farm."
       />
     </>

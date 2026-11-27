@@ -67,11 +67,45 @@ export function StitchContactPage() {
         </div>
       </section>
 
+      <section className="bg-white py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <SectionHeading
+            eyebrow="Process transparency"
+            title="What happens after you contact us?"
+            body="We will contact you to discuss your farm structure and operations."
+          />
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: 'Share Your Inquiry',
+                body: 'We discuss farm structure and which approved modules are relevant.',
+              },
+              {
+                title: 'Team Review',
+                body: 'Workspace creation is handled manually by Super Admin after approval.',
+              },
+              {
+                title: 'Discuss Next Steps',
+                body: 'We confirm who will hold Farm Admin and Supervisor responsibilities.',
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-border-subtle bg-warm-ivory p-6"
+              >
+                <h3 className="font-heading text-lg font-bold text-deep-forest">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-secondary-text">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-sage-mist/40 py-24 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <SectionHeading
             eyebrow="Workspace setup information"
-            title="SmartFarm is implemented purposefully"
+            title="How SmartFarm access is arranged."
             body="Our specialists collaborate with operational leads to map farm structure, record ownership and role access before a workspace is provisioned."
           />
           <div className="grid gap-6 md:grid-cols-3">
@@ -93,7 +127,7 @@ export function StitchContactPage() {
           <div className="flex flex-wrap items-center justify-between gap-6 rounded-3xl border border-border-subtle bg-warm-ivory p-8">
             <div>
               <h2 className="font-heading text-2xl font-bold text-deep-forest">
-                Continue exploring SmartFarm
+                Explore the platform before getting in touch.
               </h2>
               <p className="mt-2 text-sm text-secondary-text">
                 Review the modules or the illustrative workspace preview.
@@ -114,11 +148,35 @@ export function StitchContactPage() {
               </AppLink>
             </div>
           </div>
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            {[
+              {
+                title: 'About SmartFarm',
+                body: 'Workspace boundaries and farm configuration',
+              },
+              {
+                title: 'Explore Features',
+                body: 'Record areas and approval responsibilities',
+              },
+              {
+                title: 'Dashboard Preview',
+                body: 'Farm Admin and Supervisor access review',
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-border-subtle bg-warm-ivory p-5"
+              >
+                <h3 className="font-heading text-base font-bold text-deep-forest">{item.title}</h3>
+                <p className="mt-2 text-sm text-secondary-text">{item.body}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <StitchCTASection
-        title="Ready to discuss your farm?"
+        title="Start a conversation with SmartFarm."
         body="Send an inquiry and we will follow up through the configured contact process. No public registration or payment is taken."
       />
     </>

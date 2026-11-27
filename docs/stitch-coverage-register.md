@@ -150,6 +150,7 @@ No Stitch export exists for approved sitemap §2.7 Customer Access Management or
 | C6 | Supervisor export/archive/High-Critical/finance/payroll cues | Permission matrix and sitemap §5 |
 | C7 | Invented finance, payroll and milk formulas | Unresolved business rules remain blocked |
 | C8 | Fake telemetry, sync, quota, RFID, solenoids, barcode gates | Locked scope and no fake data rules |
+| C16 | Exact Stitch inner-page headings containing fictional identities, telemetry or unapproved formulas | ACR-006: non-conflicting headings ported; blocked strings excluded |
 | C9 | Hardcoded USD and pricing defaults | Farm-configured currency |
 | C10 | Farm Admin Supervisor provisioning page | No approved sitemap page; provisioning details unresolved |
 | C11 | Master passkey / RFID / PIN login | Authentication rules forbid them |
@@ -157,4 +158,4 @@ No Stitch export exists for approved sitemap §2.7 Customer Access Management or
 | C14 | State sheets and combined views counted as pages | Handoff §8 interpretation |
 | C15 | No H1/H2 and no PNG mappings marked UNPROVEN | Handoff evidence rule |
 
-No Stitch export is deployed as application code; approved visuals are ported into source-owned React/Tailwind components. No 3D/WebGL/canvas/GLB/GLTF usage was introduced. ACR-002 remains the CSS/static Home hero fallback; ACR-003 permitted the three Stitch-hosted images on Public Home only, and its follow-up has now replaced the hero and logo with the owner-supplied local files (`hero-pasture.png`, `smartfarm-logo.png`) — only the Home `aboutPasture` URL remains external.
+No Stitch export is deployed as application code; approved visuals are ported into source-owned React/Tailwind components. No 3D/WebGL/canvas/GLB/GLTF usage was introduced. ACR-002 remains the CSS/static Home hero fallback; ACR-003 permitted the three Stitch-hosted images on Public Home only, and its follow-up has now replaced the hero and logo with the owner-supplied local files (`hero-pasture.png`, `smartfarm-logo.png`) — only the Home `aboutPasture` URL remains external. Under ACR-006 the six inner public pages port the owner-approved exact Stitch H2/H3 strings, excluding the fictional-identity, telemetry and formula strings that remain blocked.
