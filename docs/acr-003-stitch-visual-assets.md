@@ -9,7 +9,7 @@ The owner requires the Public Home page to match the Stitch visual export exactl
 
 ## Evidence
 
-- `design/stitch_smartfarm_homepage_experience/stitch_smartfarm_homepage_experience/smartfarm_public_website_homepage/code.html` lines 164, 217 and 306.
+- `design/stitch_smartfarm_homepage_experience/smartfarm_public_website_homepage/code.html` lines 164, 217 and 306.
 - The owner explicitly approved using the Stitch-hosted image URLs on 25 November 2026 after being told that the asset license is unverified.
 - This approval is limited to the Public Home visual composition. It does not approve Stitch code as application source, additional Stitch exports, private-surface visuals, WebGL/canvas/3D, fake live data or new routes.
 

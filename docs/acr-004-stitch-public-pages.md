@@ -11,7 +11,7 @@ ACR-003 approved Stitch-hosted imagery and the exact Stitch visual composition f
 
 - Owner instruction in the current work thread: “the logo is missing the pages is missing there are more than homepage and the strip below the footer is also missing”.
 - `apps/web/src/app/routes.ts` already defines exactly seven approved public routes; no new route is requested or added.
-- `design/stitch_smartfarm_homepage_experience/.../smartfarm_public_website_homepage/code.html` lines 1016–1078 place the logo in the nav/footer and the signature strip after `</footer>`.
+- `design/stitch_smartfarm_homepage_experience/smartfarm_public_website_homepage/code.html` lines 1016–1078 place the logo in the nav/footer and the signature strip after `</footer>`.
 - The six remaining public exports provide `code.html` visual references for About, Features, How It Works, Benefits, Dashboard Preview and Contact.
 - HTTP verification on 25 November 2026: hero image `200 image/jpeg`; about image `200 image/jpeg`; logo URL `403 text/html`.
 
