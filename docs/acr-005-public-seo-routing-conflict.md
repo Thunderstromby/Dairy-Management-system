@@ -1,6 +1,6 @@
 # ACR-005 — Public SEO pre-render versus approved hash routes
 
-**Status:** OPEN — owner decision required. No architecture change has been applied.  
+**Status:** DECIDED — owner selected Option A on 27 November 2026. No architecture change applied. The pre-render/sitemap/robots gates remain **BLOCKED** by that decision and are not claimed complete.  
 **Authority:** `AGENTS.md` §§6, 15, 24; `docs/architecture.md` §§4.1, 4.21, 4.25, 16; `docs/sitemap.md` §1; `docs/design.md` §8.5; `docs/acr-004-stitch-public-pages.md`
 
 ## Conflict
@@ -34,6 +34,6 @@ With hash routing, every public page is served from the single `index.html` at `
 
 **B — Adopt clean paths with React Router `BrowserRouter`.** Serve one static file per approved public route, generate `sitemap.xml`/`robots.txt`, and add an SPA fallback rule. This requires owner approval to change the documented hash-route shape, updates to `docs/sitemap.md`, `docs/design.md`, ACR-004 and `docs/deployment.md`, and a confirmed hosting target (`docs/deployment.md` is still an approved placeholder).
 
-## Owner decision required
+## Owner decision record
 
-Until one option is chosen, option A remains the implemented state and the pre-render/sitemap gates remain **BLOCKED**, not complete. No workaround that silently changes the URL shape or the locked stack has been applied.
+On 27 November 2026 the owner chose **Option A — retain the approved hash routes**. React Router `HashRouter` stays; all documented hash URLs and route IDs stay unchanged; client-side metadata remains in `DocumentMeta.tsx`. Build-time per-route pre-render, an effective `sitemap.xml` and `robots.txt` are recorded as **BLOCKED** SEO gates, not as delivered work. Option B is not approved and requires a fresh ACR with a confirmed hosting target.
