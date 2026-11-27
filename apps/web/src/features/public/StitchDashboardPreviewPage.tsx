@@ -47,6 +47,11 @@ const MANAGEMENT_AREAS = [
   'Operational Cost Centers & Margins',
   'Farm Operational Statements',
   'Platform Dispatch & Logs',
+  'Animal record overview',
+  'Equipment service records',
+  'Equipment records',
+  'Operational records',
+  'Feed and milk records',
 ] as const;
 
 const STARTING_POINT = [

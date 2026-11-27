@@ -150,7 +150,7 @@ No Stitch export exists for approved sitemap §2.7 Customer Access Management or
 | C6 | Supervisor export/archive/High-Critical/finance/payroll cues | Permission matrix and sitemap §5 |
 | C7 | Invented finance, payroll and milk formulas | Unresolved business rules remain blocked |
 | C8 | Fake telemetry, sync, quota, RFID, solenoids, barcode gates | Locked scope and no fake data rules |
-| C16 | Exact Stitch inner-page headings containing fictional identities, telemetry or unapproved formulas | ACR-006: non-conflicting headings ported; blocked strings excluded |
+| C16 | Exact Stitch inner-page headings containing fictional identities, telemetry or unapproved formulas | ACR-006 closed: neutral replacements ported; original strings excluded |
 | C9 | Hardcoded USD and pricing defaults | Farm-configured currency |
 | C10 | Farm Admin Supervisor provisioning page | No approved sitemap page; provisioning details unresolved |
 | C11 | Master passkey / RFID / PIN login | Authentication rules forbid them |

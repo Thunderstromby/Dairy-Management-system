@@ -1,6 +1,6 @@
 # ACR-006 — Exact Stitch inner-page headings versus locked content rules
 
-**Status:** OPEN — owner decision required for the blocked strings. No architecture change is proposed or applied.  
+**Status:** CLOSED — owner approved neutral replacements on 27 November 2026. No architecture change was applied.  
 **Authority:** `AGENTS.md` §§5, 22, 24; `docs/architecture-rules.md`; `docs/stitch-visual-handoff.md` §9; `docs/acr-004-stitch-public-pages.md`
 
 ## Conflict
@@ -35,5 +35,6 @@ Port every non-conflicting exported heading as real, visible H2/H3 content in th
 | Item | Status |
 | --- | --- |
 | Owner instruction to port exact headings | **APPROVED** 27 November 2026 |
-| Blocked strings (fictional identities, telemetry, formulas) | **BLOCKED** pending owner decision or neutral replacement |
+| Blocked strings (fictional identities, telemetry, formulas) | **CLOSED** 27 November 2026 — owner approved neutral replacements; blocked strings remain excluded |
+| Neutral replacements implemented | `Animal record overview`, `Farm management workspace`, `Equipment service records`, `Equipment records`, `Operational records`, `Income and feed records`, `Feed and milk records` |
 | Affected surfaces | Six inner public pages only |

@@ -216,6 +216,16 @@ export function StitchFeaturesPage() {
                 body: 'Record approved income, expenses and financial reports.',
               },
               {
+                level: 'h3',
+                title: 'Farm management workspace',
+                body: 'Record structure for animal identities, groups and lifecycle history.',
+              },
+              {
+                level: 'h3',
+                title: 'Income and feed records',
+                body: 'Record approved income, expenses and financial reports.',
+              },
+              {
                 level: 'h2',
                 title: 'See organized information. Stay informed.',
                 body: 'Surface role-appropriate operational notices without simulated live status.',
