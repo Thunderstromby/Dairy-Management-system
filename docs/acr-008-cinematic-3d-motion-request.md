@@ -1,6 +1,6 @@
 # ACR-008 — Requested 3D cinematic scrolling and typography motion
 
-**Status:** OPEN — owner decision required. No 3D, WebGL or scroll-driven 3D has been implemented.  
+**Status:** APPROVED — owner selected Option B on 28 November 2026. Implemented with CSS 3D transforms only; no WebGL, canvas, Three.js/R3F, 3D asset or new dependency is introduced.  
 **Authority:** `AGENTS.md` §§12, 13, 22, 24; `docs/design.md` §§8.5, 12; ACR-002
 
 ## Conflict
@@ -31,11 +31,16 @@ On 27 November 2026 the owner requested:
 
 **B — Approved 3D treatment.** Requires explicit owner approval to amend §13 and ACR-002, plus a written scope: decorative public-only motif, static/WebP/SVG fallback, reduced-motion support, WebGL failure handling, no layout shift or CTA obstruction, lazy load after critical content, DPR cap 1.5, <20k triangles, <10 draw calls, ~300 KB incremental budget, low-end mobile verification, licensed assets, and no 3D in private routes. This is a materially larger scope and is not implemented yet.
 
+## Implementation decision (owner approval 28 November 2026)
+
+Option B was approved. The smallest change that satisfies it is **CSS perspective/3D transforms**: a hover shine sweep on the navbar wordmark, staggered per-character 3D roll on nav links, and restrained CSS scroll-reveal entrances on public sections. No WebGL context, canvas, Three.js/R3F, GLB/GLTF, texture or new dependency is added, so triangle/draw-call/DPR budgets are not applicable; the static/reduced-motion state is the fallback. All effects are public-only, stop under `prefers-reduced-motion`, do not shift layout or obstruct CTAs, and never enter private routes.
+
 ## Approval record
 
 | Item | Status |
 | --- | --- |
 | Owner request received | **RECEIVED** 27 November 2026 |
-| Shine/per-character CSS hover motion | **BLOCKED** pending choice of A or B |
-| Site-wide 3D cinematic scrolling | **BLOCKED** pending owner approval under B |
+| Owner choice | **APPROVED** Option B, 28 November 2026 |
+| Shine/per-character CSS hover motion | **APPROVED** public-only, reduced-motion safe |
+| Site-wide 3D cinematic scrolling | **APPROVED** as CSS 3D scroll-reveal entrances; no WebGL |
 | Existing reduced-motion guarantees | **RETAINED** regardless of outcome |

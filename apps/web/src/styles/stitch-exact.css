@@ -111,6 +111,93 @@ h4 {
   .tab-pane {
     transition: none !important;
   }
+
+  .sf-brand-shine::after,
+  .sf-brand:hover .sf-brand-shine::after {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+
+  .sf-nav-label:hover .sf-nav-char,
+  .sf-nav-char {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  .sf-scroll-reveal,
+  .sf-scroll-reveal.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ACR-008 — public-only CSS 3D motion. No WebGL/canvas or 3D asset. */
+@keyframes sfShine {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.sf-brand-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.sf-brand-shine::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(100deg, transparent 25%, rgb(255 255 255 / 75%) 50%, transparent 75%);
+  background-size: 200% 100%;
+  background-position: 200% 0;
+}
+
+.sf-brand:hover .sf-brand-shine::after,
+.sf-brand:focus-visible .sf-brand-shine::after {
+  opacity: 1;
+  animation: sfShine 1.4s linear infinite;
+}
+
+.sf-nav-char {
+  display: inline-block;
+  white-space: pre;
+}
+
+@keyframes sfCharRoll {
+  from {
+    transform: perspective(240px) rotateX(-90deg) translateY(0.35em);
+    opacity: 0;
+  }
+  to {
+    transform: perspective(240px) rotateX(0deg) translateY(0);
+    opacity: 1;
+  }
+}
+
+.sf-nav-label:hover .sf-nav-char,
+.sf-nav-label:focus-visible .sf-nav-char {
+  animation: sfCharRoll 320ms ease both;
+}
+
+.sf-scroll-reveal {
+  opacity: 0;
+  transform: perspective(900px) rotateX(5deg) translateY(18px) translateZ(-24px);
+  transform-origin: center top;
+  transition:
+    opacity 500ms ease,
+    transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sf-scroll-reveal.is-visible {
+  opacity: 1;
+  transform: none;
 }
 
 /* Owner-approved signature strip marquee (27 November 2026). The two

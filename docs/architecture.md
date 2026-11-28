@@ -601,7 +601,7 @@ Official documentation for provider limits and integration; verify again before 
 
 ## 16. APPROVED ARCHITECTURE (LOCKED)
 
-**Approved and LOCKED by the project owner on 24 November 2026. The core stack and supporting architecture are locked; production services remain conditional, and limited 3D is approved only as the CSS/static Home hero motif recorded in ACR-002.**
+**Approved and LOCKED by the project owner on 24 November 2026. The core stack and supporting architecture are locked; production services remain conditional, and limited 3D is approved only as the CSS/static Home hero motif recorded in ACR-002 and the public-only CSS 3D motion recorded in ACR-008 (28 November 2026).**
 
 | Category | Decision |
 |---|---|

@@ -153,6 +153,7 @@ Brevo email, OCI private Object Storage, Cloudflare Pages/OCI hosting, independe
 
 - **Default: excluded.** `design.md`, `design-system.md`, `design-direction.md`, `scope.md`, `sitemap.md` and README exclude 3D/WebGL. Do not add Three.js/R3F or any 3D asset by default.
 - Any 3D work requires an explicit written scope/design change approval recorded through the Architecture Change Request process.
+- **Approved exception (ACR-008, owner approval 28 November 2026):** CSS 3D-transform motion on public surfaces only — navbar wordmark shine, per-character nav-link roll and restrained scroll-reveal entrances. The approved implementation uses CSS perspective/transforms only: no WebGL, canvas, Three.js/R3F, 3D asset or new dependency. Private routes remain strictly 2D; reduced motion disables every effect.
 - If approved: one small decorative public-only motif (Home hero **or** How It Works, not both by default); CSS/static implementation first; no livestock models, game-like farms, simulations, or new routes.
 - Never import 3D code into login, dashboards, forms, tables, reports, or any private interface.
 - Required acceptance: static/WebP/SVG fallback, reduced-motion support, WebGL failure handling, no layout shift or CTA obstruction, lazy load after critical content, DPR cap 1.5, <20k triangles, <10 draw calls, ~300 KB incremental budget, low-end mobile verification, licensed assets.

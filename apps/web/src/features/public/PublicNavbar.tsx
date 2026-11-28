@@ -12,6 +12,23 @@ const STITCH_NAV_LINKS = [
   { path: '/public/contact', label: 'Contact' },
 ] as const;
 
+const AnimatedNavLabel = ({ label }: { label: string }) => (
+  <span className="sf-nav-label inline-block">
+    <span className="sr-only">{label}</span>
+    <span aria-hidden="true">
+      {[...label].map((character, index) => (
+        <span
+          key={`${character}-${index}`}
+          className="sf-nav-char"
+          style={{ animationDelay: `${index * 35}ms` }}
+        >
+          {character}
+        </span>
+      ))}
+    </span>
+  </span>
+);
+
 export function PublicNavbar() {
   const route = useAppRoute();
   const [open, setOpen] = useState(false);
@@ -45,11 +62,11 @@ export function PublicNavbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-12">
         <AppLink
           href="#/public/home"
-          className="group flex items-center gap-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-pasture-green"
+          className="group sf-brand flex items-center gap-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-pasture-green"
         >
           <StitchLogo />
           <span
-            className={`font-heading text-xl font-extrabold tracking-tight transition-colors ${
+            className={`sf-brand-shine font-heading text-xl font-extrabold tracking-tight transition-colors ${
               scrolled ? 'text-deep-forest' : 'text-white'
             }`}
           >
@@ -68,7 +85,7 @@ export function PublicNavbar() {
               aria-current={route === item.path ? 'page' : undefined}
               className={navLinkClass(route === item.path)}
             >
-              {item.label}
+              <AnimatedNavLabel label={item.label} />
             </AppLink>
           ))}
         </nav>
@@ -112,7 +129,7 @@ export function PublicNavbar() {
                 className="border-b border-border-subtle py-2"
                 onClick={() => setOpen(false)}
               >
-                {item.label}
+                <AnimatedNavLabel label={item.label} />
               </AppLink>
             ))}
           </div>

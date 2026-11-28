@@ -59,6 +59,41 @@ export function AppRouter() {
     scrollingElement.scrollTop = 0;
   }, [route]);
 
+  useEffect(() => {
+    if (
+      typeof IntersectionObserver === 'undefined' ||
+      typeof window.matchMedia !== 'function' ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    ) {
+      return;
+    }
+    const sections = Array.from(document.querySelectorAll<HTMLElement>('main section'));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        }
+      },
+      { threshold: 0.06, rootMargin: '0px 0px -40px 0px' },
+    );
+    sections.forEach((section, index) => {
+      if (section.id === 'hero') return;
+      section.classList.add('sf-scroll-reveal');
+      section.style.transitionDelay = `${Math.min(index, 3) * 60}ms`;
+      observer.observe(section);
+    });
+    return () => {
+      observer.disconnect();
+      sections.forEach((section) => {
+        section.classList.remove('sf-scroll-reveal', 'is-visible');
+        section.style.removeProperty('transition-delay');
+      });
+    };
+  }, [route]);
+
   if (location.pathname === '/') {
     return <Navigate to={DEFAULT_ROUTE} replace />;
   }
