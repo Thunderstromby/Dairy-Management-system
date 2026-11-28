@@ -82,6 +82,17 @@ export function AppRouter() {
     sections.forEach((section, index) => {
       if (section.id === 'hero') return;
       section.classList.add('sf-scroll-reveal');
+      const depth =
+        section.dataset.sfDepth ??
+        (section.querySelector('[data-sf-depth="product"]')
+          ? 'product'
+          : index === 0
+            ? 'editorial'
+            : 'standard');
+      if (depth !== 'standard') section.dataset.sfDepth = depth;
+      section.querySelectorAll<HTMLElement>('[data-sf-item]').forEach((item, itemIndex) => {
+        item.style.setProperty('--sf-index', String(itemIndex));
+      });
       section.style.transitionDelay = `${Math.min(index, 3) * 60}ms`;
       observer.observe(section);
     });
@@ -91,6 +102,37 @@ export function AppRouter() {
         section.classList.remove('sf-scroll-reveal', 'is-visible');
         section.style.removeProperty('transition-delay');
       });
+    };
+  }, [route]);
+
+  useEffect(() => {
+    if (
+      typeof window.matchMedia !== 'function' ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+      !window.matchMedia('(min-width: 641px)').matches
+    ) {
+      return;
+    }
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const hero = document.querySelector<HTMLElement>('#hero');
+      if (!hero) return;
+      const offset = Math.min(window.scrollY * 0.12, 72);
+      hero.style.setProperty('--sf-hero-shift', `${offset}px`);
+      hero.style.setProperty('--sf-hero-scale', `${1 + Math.min(window.scrollY / 12000, 0.035)}`);
+    };
+    const onScroll = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    update();
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+      const hero = document.querySelector<HTMLElement>('#hero');
+      hero?.style.removeProperty('--sf-hero-shift');
+      hero?.style.removeProperty('--sf-hero-scale');
     };
   }, [route]);
 

@@ -19,12 +19,14 @@ export function PublicHomeHero() {
             <StaticHeroMotif />
           </div>
         ) : (
-          <img
-            src={STITCH_ASSETS.heroPasture}
-            alt="Golden pasture with grazing Holsteins in warm sunset light"
-            className="animate-cinematic h-full w-full object-cover object-[70%_center] md:object-center"
-            onError={() => setImageFailed(true)}
-          />
+          <div className="sf-hero-parallax h-full w-full">
+            <img
+              src={STITCH_ASSETS.heroPasture}
+              alt="Golden pasture with grazing Holsteins in warm sunset light"
+              className="animate-cinematic h-full w-full object-cover object-[70%_center] md:object-center"
+              onError={() => setImageFailed(true)}
+            />
+          </div>
         )}
 
         {/* Localized scrims only: text sits bottom-left, navbar sits top. The photograph stays visible. */}

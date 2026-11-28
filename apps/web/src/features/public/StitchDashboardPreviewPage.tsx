@@ -1,4 +1,23 @@
 import { useState } from 'react';
+import {
+  ArrowUpRight,
+  Beef,
+  CalendarCheck,
+  ChartColumn,
+  ChartNoAxesCombined,
+  ClipboardList,
+  LayoutDashboard,
+  ListChecks,
+  Milk,
+  Package,
+  Stethoscope,
+  Tractor,
+  Users,
+  Wallet,
+  Wheat,
+  Wrench,
+  type LucideIcon,
+} from 'lucide-react';
 import innerHeroDashboardPreview from '../../assets/inner-hero-dashboard-preview.png';
 import { NeutralVisual, SectionHeading, StitchCTASection, StitchPageHero } from './StitchPageParts';
 
@@ -36,23 +55,23 @@ const PREVIEW_TABS = [
 ] as const;
 
 const MANAGEMENT_AREAS = [
-  'Farm Daily Summary',
-  'Animal Ledger & Registrations',
-  'Clinical Ledger & Withholdings',
-  'Vat & Harvest Monitoring',
-  'On-Farm Supplies & Feed Reserves',
-  'Feed Allocation & Grazing Breaks',
-  'Staff Rostering & Qualifications',
-  'Shift Logs & Paddock Presence',
-  'Payroll Export Verification',
-  'Operational Cost Centers & Margins',
-  'Farm Operational Statements',
-  'Platform Dispatch & Logs',
-  'Animal record overview',
-  'Equipment service records',
-  'Equipment records',
-  'Operational records',
-  'Feed and milk records',
+  { title: 'Farm Daily Summary', icon: LayoutDashboard },
+  { title: 'Animal Ledger & Registrations', icon: Beef },
+  { title: 'Clinical Ledger & Withholdings', icon: Stethoscope },
+  { title: 'Vat & Harvest Monitoring', icon: Milk },
+  { title: 'On-Farm Supplies & Feed Reserves', icon: Package },
+  { title: 'Feed Allocation & Grazing Breaks', icon: Wheat },
+  { title: 'Staff Rostering & Qualifications', icon: Users },
+  { title: 'Shift Logs & Paddock Presence', icon: CalendarCheck },
+  { title: 'Payroll Export Verification', icon: Wallet },
+  { title: 'Operational Cost Centers & Margins', icon: ChartNoAxesCombined },
+  { title: 'Farm Operational Statements', icon: ChartColumn },
+  { title: 'Platform Dispatch & Logs', icon: ClipboardList },
+  { title: 'Animal record overview', icon: ListChecks },
+  { title: 'Equipment service records', icon: Wrench },
+  { title: 'Equipment records', icon: Tractor },
+  { title: 'Operational records', icon: ClipboardList },
+  { title: 'Feed and milk records', icon: Package },
 ] as const;
 
 const STARTING_POINT = [
@@ -75,6 +94,37 @@ function AreaCard({ title }: { title: string }) {
   return (
     <div className="cursor-default rounded-xl border border-border-subtle bg-warm-ivory px-4 py-3 transition-colors duration-200 hover:border-pasture-green/50 hover:bg-sage-mist motion-reduce:transition-none">
       <h3 className="font-heading text-sm font-bold text-deep-forest">{title}</h3>
+    </div>
+  );
+}
+
+function PremiumAreaCard({ title, icon: Icon }: { title: string; icon: LucideIcon }) {
+  return (
+    <div
+      data-sf-item
+      className="group relative flex min-h-[104px] items-center gap-4 overflow-hidden rounded-[22px] border border-[#E2E8DC] bg-white px-5 py-5 shadow-[0_8px_26px_-18px_rgba(24,63,48,0.35)] transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-[3px] hover:border-pasture-green/40 hover:shadow-[0_18px_36px_-18px_rgba(24,63,48,0.35)] motion-reduce:transform-none motion-reduce:transition-none"
+    >
+      <span className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-sage-mist text-deep-forest">
+        <Icon size={20} strokeWidth={1.75} aria-hidden="true" />
+      </span>
+      <h3 className="relative z-10 min-w-0 flex-1 font-inter text-base font-semibold leading-snug tracking-[-0.01em] text-deep-forest sm:text-[17px]">
+        {title}
+      </h3>
+      <span
+        className="relative z-10 ml-auto flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage-mist text-deep-forest transition-colors duration-300 group-hover:bg-pasture-green group-hover:text-white motion-reduce:transition-none"
+        aria-hidden="true"
+      >
+        <ArrowUpRight size={18} strokeWidth={1.75} />
+      </span>
+      <svg
+        className="pointer-events-none absolute -bottom-6 right-0 h-16 w-40 opacity-40"
+        viewBox="0 0 160 64"
+        fill="none"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path d="M0 48 C 40 18, 92 58, 160 26 L160 64 L0 64 Z" fill="#E9EFE5" />
+      </svg>
     </div>
   );
 }
@@ -153,7 +203,10 @@ export function StitchDashboardPreviewPage() {
             </div>
           </div>
 
-          <div className="mt-10 rounded-3xl border border-border-subtle bg-white p-7">
+          <div
+            data-sf-depth="product"
+            className="mt-10 rounded-3xl border border-border-subtle bg-white p-7"
+          >
             <h3 className="font-heading text-xl font-bold text-deep-forest">
               Explore the platform's management areas.
             </h3>
@@ -161,9 +214,9 @@ export function StitchDashboardPreviewPage() {
               This preview shows structure, not operational truth. No values are connected to a
               farm, and no calculation formula is implied.
             </p>
-            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {MANAGEMENT_AREAS.map((area) => (
-                <AreaCard key={area} title={area} />
+                <PremiumAreaCard key={area.title} title={area.title} icon={area.icon} />
               ))}
             </div>
           </div>
