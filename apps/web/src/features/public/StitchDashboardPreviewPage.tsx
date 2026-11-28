@@ -3,17 +3,24 @@ import {
   ArrowUpRight,
   Beef,
   CalendarCheck,
+  CalendarClock,
   ChartColumn,
   ChartNoAxesCombined,
+  ClipboardCheck,
   ClipboardList,
+  FileCheck2,
   LayoutDashboard,
   ListChecks,
   Milk,
   Package,
+  Route,
+  Shield,
   Stethoscope,
   Tractor,
   Users,
+  UsersRound,
   Wallet,
+  Warehouse,
   Wheat,
   Wrench,
   type LucideIcon,
@@ -75,28 +82,33 @@ const MANAGEMENT_AREAS = [
 ] as const;
 
 const STARTING_POINT = [
-  'Herd Register Snapshot',
-  'Operational Checklist',
-  'Audited Event Log',
+  { title: 'Herd Register Snapshot', icon: Beef },
+  { title: 'Operational Checklist', icon: ClipboardCheck },
+  { title: 'Audited Event Log', icon: FileCheck2 },
 ] as const;
 
-const PRODUCTION_AREAS = ['Milk Production', 'Inventory & Silos', 'Pasture Allocation'] as const;
+const PRODUCTION_AREAS = [
+  { title: 'Milk Production', icon: Milk },
+  { title: 'Inventory & Silos', icon: Warehouse },
+  { title: 'Pasture Allocation', icon: Wheat },
+] as const;
 
-const PEOPLE_AREAS = ['Rostering & Shift Logs', 'Cost Center Breakdown & Margin'] as const;
+const PEOPLE_AREAS = [
+  { title: 'Rostering & Shift Logs', icon: CalendarClock },
+  { title: 'Cost Center Breakdown & Margin', icon: ChartNoAxesCombined },
+] as const;
 
 const REVIEW_AREAS = [
-  'Clinical Ledger & Withholding Safeguards',
-  'Monthly Milk Quality Audit',
-  'Withholding Compliance Log',
+  { title: 'Clinical Ledger & Withholding Safeguards', icon: Stethoscope },
+  { title: 'Monthly Milk Quality Audit', icon: ClipboardCheck },
+  { title: 'Withholding Compliance Log', icon: FileCheck2 },
 ] as const;
 
-function AreaCard({ title }: { title: string }) {
-  return (
-    <div className="cursor-default rounded-xl border border-border-subtle bg-warm-ivory px-4 py-3 transition-colors duration-200 hover:border-pasture-green/50 hover:bg-sage-mist motion-reduce:transition-none">
-      <h3 className="font-heading text-sm font-bold text-deep-forest">{title}</h3>
-    </div>
-  );
-}
+const ACCESS_AREAS = [
+  { title: 'Farm Admin Workspace', icon: Shield },
+  { title: 'Farm Supervisor Console', icon: UsersRound },
+  { title: 'Navigation', icon: Route },
+] as const;
 
 function PremiumAreaCard({ title, icon: Icon }: { title: string; icon: LucideIcon }) {
   return (
@@ -230,9 +242,9 @@ export function StitchDashboardPreviewPage() {
                 A single place to review the approved operational picture without simulated live
                 activity.
               </p>
-              <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              <div className="mt-6 grid gap-5 sm:grid-cols-3">
                 {STARTING_POINT.map((area) => (
-                  <AreaCard key={area} title={area} />
+                  <PremiumAreaCard key={area.title} title={area.title} icon={area.icon} />
                 ))}
               </div>
             </div>
@@ -253,9 +265,9 @@ export function StitchDashboardPreviewPage() {
             <p className="mt-3 text-sm leading-relaxed text-secondary-text">
               Session entries and daily totals stay structured for later review.
             </p>
-            <div className="mt-6 grid gap-3 sm:grid-cols-3">
+            <div className="mt-6 grid gap-5 sm:grid-cols-3">
               {PRODUCTION_AREAS.map((area) => (
-                <AreaCard key={area} title={area} />
+                <PremiumAreaCard key={area.title} title={area.title} icon={area.icon} />
               ))}
             </div>
           </div>
@@ -270,9 +282,9 @@ export function StitchDashboardPreviewPage() {
                 daily operations, people management and reports. All values shown here are neutral
                 placeholders.
               </p>
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              <div className="mt-6 grid gap-5 sm:grid-cols-2">
                 {PEOPLE_AREAS.map((area) => (
-                  <AreaCard key={area} title={area} />
+                  <PremiumAreaCard key={area.title} title={area.title} icon={area.icon} />
                 ))}
               </div>
             </div>
@@ -284,9 +296,9 @@ export function StitchDashboardPreviewPage() {
                 Reporting stays bounded by the access matrix and never presents simulated live
                 views.
               </p>
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              <div className="mt-6 grid gap-5 sm:grid-cols-2">
                 {REVIEW_AREAS.map((area) => (
-                  <AreaCard key={area} title={area} />
+                  <PremiumAreaCard key={area.title} title={area.title} icon={area.icon} />
                 ))}
               </div>
             </div>
@@ -300,14 +312,9 @@ export function StitchDashboardPreviewPage() {
               This preview shows structure, not operational truth. No values are connected to a
               farm, and no calculation formula is implied.
             </p>
-            <div className="mt-6 grid gap-3 md:grid-cols-3">
-              {['Farm Admin Workspace', 'Farm Supervisor Console', 'Navigation'].map((area) => (
-                <div
-                  key={area}
-                  className="cursor-default rounded-xl border border-border-subtle bg-warm-ivory p-4 transition-colors duration-200 hover:border-pasture-green/50 hover:bg-sage-mist motion-reduce:transition-none"
-                >
-                  <h3 className="font-heading text-sm font-bold text-deep-forest">{area}</h3>
-                </div>
+            <div className="mt-6 grid gap-5 md:grid-cols-3">
+              {ACCESS_AREAS.map((area) => (
+                <PremiumAreaCard key={area.title} title={area.title} icon={area.icon} />
               ))}
             </div>
           </div>
