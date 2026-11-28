@@ -82,9 +82,9 @@ const MANAGEMENT_AREAS = [
 ] as const;
 
 const STARTING_POINT = [
-  { title: 'Herd Register Snapshot', icon: Beef },
-  { title: 'Operational Checklist', icon: ClipboardCheck },
-  { title: 'Audited Event Log', icon: FileCheck2 },
+  'Herd Register Snapshot',
+  'Operational Checklist',
+  'Audited Event Log',
 ] as const;
 
 const PRODUCTION_AREAS = [
@@ -114,7 +114,7 @@ function PremiumAreaCard({ title, icon: Icon }: { title: string; icon: LucideIco
   return (
     <div
       data-sf-item
-      className="group relative flex min-h-[104px] items-center gap-4 overflow-hidden rounded-[22px] border border-[#E2E8DC] bg-white px-5 py-5 shadow-[0_8px_26px_-18px_rgba(24,63,48,0.35)] transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-[3px] hover:border-pasture-green/40 hover:shadow-[0_18px_36px_-18px_rgba(24,63,48,0.35)] motion-reduce:transform-none motion-reduce:transition-none"
+      className="group relative flex min-h-[104px] items-center gap-3 overflow-hidden rounded-[22px] border border-[#E2E8DC] bg-white px-4 py-5 sm:gap-4 sm:px-5 shadow-[0_8px_26px_-18px_rgba(24,63,48,0.35)] transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-[3px] hover:border-pasture-green/40 hover:shadow-[0_18px_36px_-18px_rgba(24,63,48,0.35)] motion-reduce:transform-none motion-reduce:transition-none"
     >
       <span className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-sage-mist text-deep-forest">
         <Icon size={20} strokeWidth={1.75} aria-hidden="true" />
@@ -242,11 +242,19 @@ export function StitchDashboardPreviewPage() {
                 A single place to review the approved operational picture without simulated live
                 activity.
               </p>
-              <div className="mt-6 grid gap-5 sm:grid-cols-3">
-                {STARTING_POINT.map((area) => (
-                  <PremiumAreaCard key={area.title} title={area.title} icon={area.icon} />
+              <ul className="mt-6 space-y-3">
+                {STARTING_POINT.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span
+                      className="mt-2 h-2 w-2 shrink-0 rounded-full bg-pasture-green"
+                      aria-hidden="true"
+                    />
+                    <span className="font-inter text-sm font-semibold text-deep-forest sm:text-[15px]">
+                      {item}
+                    </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
             <div className="rounded-3xl border border-border-subtle bg-white p-7">
               <h3 className="font-heading text-lg font-bold text-deep-forest">
@@ -265,7 +273,7 @@ export function StitchDashboardPreviewPage() {
             <p className="mt-3 text-sm leading-relaxed text-secondary-text">
               Session entries and daily totals stay structured for later review.
             </p>
-            <div className="mt-6 grid gap-5 sm:grid-cols-3">
+            <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {PRODUCTION_AREAS.map((area) => (
                 <PremiumAreaCard key={area.title} title={area.title} icon={area.icon} />
               ))}
@@ -312,7 +320,7 @@ export function StitchDashboardPreviewPage() {
               This preview shows structure, not operational truth. No values are connected to a
               farm, and no calculation formula is implied.
             </p>
-            <div className="mt-6 grid gap-5 md:grid-cols-3">
+            <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {ACCESS_AREAS.map((area) => (
                 <PremiumAreaCard key={area.title} title={area.title} icon={area.icon} />
               ))}

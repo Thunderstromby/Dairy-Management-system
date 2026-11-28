@@ -13,7 +13,7 @@ const STITCH_NAV_LINKS = [
 ] as const;
 
 const AnimatedNavLabel = ({ label }: { label: string }) => (
-  <span className="sf-nav-label inline-block">
+  <span className="sf-nav-label inline-block whitespace-nowrap">
     <span className="sr-only">{label}</span>
     <span aria-hidden="true">
       {[...label].map((character, index) => (
@@ -75,7 +75,7 @@ export function PublicNavbar() {
         </AppLink>
 
         <nav
-          className="hidden items-center space-x-9 text-[15px] font-medium tracking-wide md:flex"
+          className="hidden items-center gap-4 text-[13px] font-medium tracking-wide md:flex lg:gap-8 lg:text-[15px]"
           aria-label="Public navigation"
         >
           {STITCH_NAV_LINKS.map((item) => (

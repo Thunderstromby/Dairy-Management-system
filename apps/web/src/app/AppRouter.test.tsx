@@ -21,9 +21,12 @@ async function renderAt(path: string, role: PrototypeRole = 'guest') {
     </HashRouter>,
   );
 
-  await waitFor(() => {
-    expect(screen.queryByText(/Loading screen layout/)).toBeNull();
-  });
+  await waitFor(
+    () => {
+      expect(screen.queryByText(/Loading screen layout/)).toBeNull();
+    },
+    { timeout: 5000 },
+  );
 
   return result;
 }

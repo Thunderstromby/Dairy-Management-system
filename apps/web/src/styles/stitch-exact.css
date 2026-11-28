@@ -272,7 +272,8 @@ h4 {
 }
 
 .sf-stitch-marquee {
-  animation: sfMarquee 32s linear infinite;
+  animation: sfMarquee 22s linear infinite;
+  will-change: transform;
 }
 
 /* ACR-002 static hero motif fallback (shown when the external hero image fails). */

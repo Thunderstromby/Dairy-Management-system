@@ -101,6 +101,15 @@ export function AppRouter() {
       section.querySelectorAll<HTMLElement>('[data-sf-item]').forEach((item, itemIndex) => {
         item.style.setProperty('--sf-index', String(itemIndex));
       });
+      if (screen?.surface === 'public') {
+        section
+          .querySelectorAll<HTMLElement>('[class*="rounded-2xl"], [class*="rounded-3xl"]')
+          .forEach((card, cardIndex) => {
+            if (card.hasAttribute('data-sf-item')) return;
+            card.setAttribute('data-sf-item', '');
+            card.style.setProperty('--sf-index', String(cardIndex % 6));
+          });
+      }
       section.style.transitionDelay = `${Math.min(index, 3) * 60}ms`;
       observer.observe(section);
     });
@@ -111,7 +120,7 @@ export function AppRouter() {
         section.style.removeProperty('transition-delay');
       });
     };
-  }, [route]);
+  }, [route, screen?.surface]);
 
   useEffect(() => {
     if (
