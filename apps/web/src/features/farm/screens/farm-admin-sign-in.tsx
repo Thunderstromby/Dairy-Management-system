@@ -14,7 +14,7 @@ export function FarmAdminSignIn() {
   const [status, setStatus] = useState<string>();
 
   return (
-    <main className="relative flex min-h-screen items-center justify-center bg-[#FBF9F3] p-4 lg:p-10">
+    <main className="sf-private-auth relative flex min-h-screen items-center justify-center bg-[#FBF9F3] p-4 lg:p-10">
       <div
         className="pointer-events-none fixed inset-0 -z-10 overflow-hidden opacity-35"
         aria-hidden="true"

@@ -80,6 +80,10 @@ The owner explicitly **does not approve** the measured differences below as fina
 
 Any restoration of Stitch content, per-interface background tokens or font treatment must be checked against the SRS/permission matrix first; unsupported functionality must be reported, not implemented. Plus Jakarta Sans is not an approved font, so Manrope/Inter remain in force pending an ACR.
 
+## Private dashboard typography (owner-approved typography-only override)
+
+Plus Jakarta Sans is used for private headings and KPI values; DM Sans is used for navigation, forms, tables, buttons and supporting text. Tokens are scoped to `.sf-shell`, `.sf-login-wrap` and `.sf-private-auth`, so public-site typography (Manrope/Inter) is unchanged. No layout, permission, data or business-rule changes were made with this override.
+
 ## Shared foundation
 
 `apps/web/src/features/workspace/AppShell.tsx` provides the role shells; ported screens are content-only. The role-aware registry `apps/web/src/features/private/privateScreens.ts` maps route ids to lazy-loaded screen components, selecting Supervisor variants when the prototype role is `farm-supervisor`. Approved tokens: Manrope headings, Inter body, Lucide icons, Stitch surface/outline colors per interface. No backend or database work was performed.

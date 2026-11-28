@@ -27,7 +27,7 @@ export function SupervisorSignInScreen() {
   };
 
   return (
-    <main className="w-full bg-[#fbf9f3] font-inter text-[#1b1c18]">
+    <main className="sf-private-auth w-full bg-[#fbf9f3] font-inter text-[#1b1c18]">
       <div className="mx-auto flex w-full max-w-lg justify-center px-4 py-10 sm:px-6">
         <section className="w-full rounded-xl bg-white p-6 shadow-[0_4px_16px_-2px_rgba(41,45,40,0.08)] sm:p-8">
           <div className="flex items-center justify-between text-[11px] font-semibold uppercase tracking-[0.14em] text-[#444840]">

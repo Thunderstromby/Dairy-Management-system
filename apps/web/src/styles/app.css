@@ -25,6 +25,83 @@ h4 {
   color: var(--color-text);
 }
 
+/* Private-interface typography override. Scoped so public pages stay unchanged. */
+.sf-shell,
+.sf-login-wrap,
+.sf-private-auth {
+  --font-dashboard-display: 'Plus Jakarta Sans', Manrope, sans-serif;
+  --font-dashboard-body: 'DM Sans', Inter, sans-serif;
+  font-family: var(--font-dashboard-body);
+}
+
+.sf-shell h1,
+.sf-shell h2,
+.sf-shell h3,
+.sf-shell h4,
+.sf-shell .font-heading,
+.sf-shell .font-manrope,
+.sf-login-wrap h1,
+.sf-login-wrap h2,
+.sf-login-wrap h3,
+.sf-login-wrap h4,
+.sf-login-wrap .font-heading,
+.sf-private-auth h1,
+.sf-private-auth h2,
+.sf-private-auth h3,
+.sf-private-auth h4,
+.sf-private-auth .font-heading {
+  font-family: var(--font-dashboard-display);
+}
+
+.sf-shell h1,
+.sf-login-wrap h1,
+.sf-private-auth h1 {
+  font-size: clamp(24px, 2.4vw, 36px);
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+}
+
+.sf-shell h2,
+.sf-login-wrap h2,
+.sf-private-auth h2 {
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+.sf-shell h3,
+.sf-login-wrap h3,
+.sf-private-auth h3 {
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+}
+
+.sf-shell .tabular-nums,
+.sf-login-wrap .tabular-nums,
+.sf-private-auth .tabular-nums {
+  font-family: var(--font-dashboard-display);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+}
+
+.sf-shell th,
+.sf-shell td,
+.sf-shell button,
+.sf-shell input,
+.sf-shell select,
+.sf-shell textarea,
+.sf-shell .font-inter,
+.sf-login-wrap button,
+.sf-login-wrap input,
+.sf-login-wrap .font-inter,
+.sf-private-auth,
+.sf-private-auth.font-inter,
+.sf-private-auth .font-inter,
+.sf-private-auth button,
+.sf-private-auth input {
+  font-family: var(--font-dashboard-body);
+}
+
 a {
   color: var(--color-primary);
 }

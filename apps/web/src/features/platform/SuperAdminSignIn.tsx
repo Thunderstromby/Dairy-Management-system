@@ -104,7 +104,7 @@ export function SuperAdminSignIn() {
   const [status, setStatus] = useState<string>();
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#F7FAF2] p-4 lg:p-10">
+    <main className="sf-private-auth flex min-h-screen items-center justify-center bg-[#F7FAF2] p-4 lg:p-10">
       <div className="flex w-full max-w-6xl flex-col overflow-hidden rounded-xl bg-white shadow-xl lg:flex-row">
         <BrandPanel />
 

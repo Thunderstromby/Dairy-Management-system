@@ -28,6 +28,8 @@ module.exports = {
         inter: ['Inter', 'sans-serif'],
         heading: ['Manrope', 'sans-serif'],
         'serif-display': ['"DM Serif Display"', 'Georgia', 'serif'],
+        'dashboard-display': ['"Plus Jakarta Sans"', 'Manrope', 'sans-serif'],
+        'dashboard-body': ['"DM Sans"', 'Inter', 'sans-serif'],
       },
     },
   },
