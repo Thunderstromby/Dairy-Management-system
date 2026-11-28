@@ -13,14 +13,6 @@ export function StitchBrandStrip() {
       className="sf-stitch-brand-strip relative overflow-hidden border-t border-border-subtle/80 bg-white py-6"
       aria-label="SmartFarm signature"
     >
-      <div
-        className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-white via-white/80 to-transparent sm:w-32"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-white via-white/80 to-transparent sm:w-32"
-        aria-hidden="true"
-      />
       <div className="sf-stitch-marquee flex w-max">
         {[0, 1].map((group) => (
           <div

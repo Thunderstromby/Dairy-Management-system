@@ -276,6 +276,24 @@ h4 {
   will-change: transform;
 }
 
+/* Narrow edge fade keeps the tape seamless without washing out whole words. */
+.sf-stitch-brand-strip {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 20px,
+    #000 calc(100% - 20px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 20px,
+    #000 calc(100% - 20px),
+    transparent 100%
+  );
+}
+
 /* ACR-002 static hero motif fallback (shown when the external hero image fails). */
 .sf-hero__motif-fallback {
   position: relative;
