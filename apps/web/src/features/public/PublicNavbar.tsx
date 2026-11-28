@@ -20,7 +20,7 @@ const AnimatedNavLabel = ({ label }: { label: string }) => (
         <span
           key={`${character}-${index}`}
           className="sf-nav-char"
-          style={{ animationDelay: `${index * 35}ms` }}
+          style={{ animationDelay: `${index * 80}ms` }}
         >
           {character}
         </span>

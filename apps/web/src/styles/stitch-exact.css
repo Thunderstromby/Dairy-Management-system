@@ -167,7 +167,7 @@ h4 {
 .sf-brand:hover .sf-brand-shine::after,
 .sf-brand:focus-visible .sf-brand-shine::after {
   opacity: 1;
-  animation: sfShine 1.4s linear infinite;
+  animation: sfShine 3.6s linear infinite;
 }
 
 .sf-nav-char {
@@ -192,7 +192,7 @@ h4 {
 
 .sf-nav-label:hover .sf-nav-char,
 .sf-nav-label:focus-visible .sf-nav-char {
-  animation: sfCharFerris 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: sfCharFerris 1000ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .sf-scroll-reveal {
