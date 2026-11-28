@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react';
 import { ArrowRight, Eye, EyeOff, Info, LockKeyhole, ShieldCheck, UserRound } from 'lucide-react';
+import { StitchLogo } from '../../public/StitchLogo';
 
 const focusRing =
   'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2f4126]';
@@ -35,9 +36,7 @@ export function SupervisorSignInScreen() {
           </div>
 
           <div className="mt-6 flex flex-col items-center gap-3 text-center">
-            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#f0eee8] text-[#2f4126]">
-              <ShieldCheck size={28} aria-hidden="true" />
-            </div>
+            <StitchLogo className="h-14 w-14" />
             <div>
               <h1 className="font-heading text-2xl font-bold tracking-tight text-[#1b1c18]">
                 SmartFarm Dairy

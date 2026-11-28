@@ -27,6 +27,7 @@ import { AppLink } from '../../app/AppLink';
 import { routesForSurface } from '../../app/routes';
 import type { ScreenDefinition, Surface } from '../../app/types';
 import { usePrototypeRole } from '../../auth/prototype-role';
+import { StitchLogo } from '../public/StitchLogo';
 
 const GROUP_ICONS: Record<string, LucideIcon> = {
   Overview: LayoutDashboard,
@@ -101,9 +102,7 @@ export function WorkspaceAppShell({
       >
         <div className="sf-sidebar__head">
           <AppLink className="sf-brand" href="#/public/home">
-            <span className="sf-brand__mark" aria-hidden="true">
-              S
-            </span>
+            <StitchLogo className="h-7 w-7 shrink-0" />
             <span className="sf-sidebar__label">SmartFarm</span>
           </AppLink>
           <button
@@ -214,9 +213,7 @@ export function StandaloneScreen({
     <main className="sf-login-wrap">
       <div className="sf-login-card">
         <AppLink className="sf-brand" href="#/public/home">
-          <span className="sf-brand__mark" aria-hidden="true">
-            S
-          </span>
+          <StitchLogo className="h-7 w-7 shrink-0" />
           SmartFarm
         </AppLink>
         <p className="sf-eyebrow" style={{ marginTop: 20 }}>
