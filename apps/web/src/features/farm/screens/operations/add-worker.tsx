@@ -12,15 +12,22 @@ import {
 import {
   Badge,
   Card,
+  Field,
   Notice,
   PageHeader,
   SelectField,
   TextField,
+  inputClass,
   primaryButtonClass,
   secondaryButtonClass,
 } from './OperationsPrimitives';
 
-export function AddWorkerScreen() {
+type AddWorkerScreenProps = {
+  compact?: boolean;
+  onCancel?: () => void;
+};
+
+export function AddWorkerScreen({ compact = false, onCancel }: AddWorkerScreenProps = {}) {
   const [name, setName] = useState('');
   const [identity, setIdentity] = useState('');
   const [role, setRole] = useState('Milking parlor operator');
@@ -30,21 +37,33 @@ export function AddWorkerScreen() {
   const [feedback, setFeedback] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#fbf9f3] p-4 font-inter sm:p-6 lg:p-8">
+    <div
+      className={
+        compact
+          ? 'bg-[#fbf9f3] p-2 font-inter sm:p-4'
+          : 'min-h-screen bg-[#fbf9f3] p-4 font-inter sm:p-6 lg:p-8'
+      }
+    >
       <PageHeader
         eyebrow="Workers / Add Worker"
         title="Register New Farm Worker"
         description="Illustrative personnel intake form. Workers are records only — no application login is provisioned."
         badge="Farm Admin"
         actions={
-          <>
-            <button type="button" className={secondaryButtonClass}>
-              <ArrowLeft size={16} aria-hidden="true" /> Cancel &amp; return
-            </button>
-            <button type="button" className={primaryButtonClass} onClick={() => setFeedback(true)}>
-              <Save size={16} aria-hidden="true" /> Save (local preview)
-            </button>
-          </>
+          compact ? undefined : (
+            <>
+              <button type="button" className={secondaryButtonClass} onClick={onCancel}>
+                <ArrowLeft size={16} aria-hidden="true" /> Cancel &amp; return
+              </button>
+              <button
+                type="button"
+                className={primaryButtonClass}
+                onClick={() => setFeedback(true)}
+              >
+                <Save size={16} aria-hidden="true" /> Save (local preview)
+              </button>
+            </>
+          )
         }
       />
       <Notice title="Record-only worker model" variant="restricted">
@@ -75,7 +94,7 @@ export function AddWorkerScreen() {
           <div className="grid gap-4 sm:grid-cols-2">
             <TextField
               id="worker-name"
-              label="Worker name"
+              label="Full Legal Name"
               value={name}
               onChange={setName}
               placeholder="Illustrative name"
@@ -83,7 +102,7 @@ export function AddWorkerScreen() {
             />
             <TextField
               id="worker-identity"
-              label="National identity reference"
+              label="National Identity (CNIC)"
               value={identity}
               onChange={setIdentity}
               placeholder="Illustrative reference — redacted"
@@ -92,7 +111,7 @@ export function AddWorkerScreen() {
             />
             <TextField
               id="worker-dob"
-              label="Date of birth"
+              label="Date of Birth"
               type="date"
               value=""
               onChange={() => undefined}
@@ -104,20 +123,64 @@ export function AddWorkerScreen() {
               onChange={() => undefined}
               options={['Not specified', 'Female', 'Male']}
             />
-            <TextField
-              id="worker-contact"
-              label="Emergency contact"
-              value=""
-              onChange={() => undefined}
-              placeholder="Illustrative contact"
-            />
-            <TextField
-              id="worker-address"
-              label="Residential address"
-              value=""
-              onChange={() => undefined}
-              placeholder="Illustrative address"
-            />
+            <div className="space-y-2 sm:col-span-2">
+              <p className="font-inter text-xs font-bold uppercase tracking-wider text-[#1b1c18]">
+                Emergency Contact Information
+              </p>
+              <div className="grid gap-3 sm:grid-cols-2">
+                <TextField
+                  id="worker-contact-name"
+                  label="Contact Name & Relation"
+                  value=""
+                  onChange={() => undefined}
+                  placeholder="Illustrative contact name"
+                />
+                <TextField
+                  id="worker-contact-phone"
+                  label="Contact Phone Number"
+                  type="tel"
+                  value=""
+                  onChange={() => undefined}
+                  placeholder="Illustrative phone"
+                />
+              </div>
+            </div>
+            <div className="sm:col-span-2">
+              <Field label="Permanent Residential Address" htmlFor="worker-address">
+                <textarea
+                  id="worker-address"
+                  rows={2}
+                  placeholder="Illustrative address"
+                  className={inputClass}
+                />
+              </Field>
+            </div>
+            <div className="space-y-1 sm:col-span-2">
+              <p className="font-inter text-xs font-semibold text-[#1b1c18]">
+                Worker Profile Photo
+              </p>
+              <div className="flex items-center gap-3 rounded-xl bg-[#f5f3ed] p-3 transition-colors hover:bg-[#f0eee8]">
+                <div className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#e4e2dd] text-[#75786f]">
+                  <UserRound size={28} aria-hidden="true" />
+                </div>
+                <div className="min-w-0 flex-1 space-y-1">
+                  <p className="font-inter text-xs text-[#444840]">
+                    No portrait selected. PNG, JPG or WEBP (max 8MB) — local preview only.
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <button type="button" className={secondaryButtonClass}>
+                      Choose File
+                    </button>
+                    <button
+                      type="button"
+                      className="font-inter text-xs font-semibold text-[#ba1a1a] hover:underline"
+                    >
+                      Remove
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </Card>
 
@@ -162,7 +225,7 @@ export function AddWorkerScreen() {
             />
             <SelectField
               id="worker-lead"
-              label="Reporting lead"
+              label="Reporting Supervisor / Lead"
               value="Supervisor A"
               onChange={() => undefined}
               options={['Supervisor A', 'Supervisor B']}

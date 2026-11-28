@@ -68,6 +68,18 @@ Folders with `code.html` are ported as content components. Canonical versions ar
 - Finance/payroll, leave approval, stock correction, archive and backup/export controls are Farm Admin-only; Supervisor variants are informational only.
 - All metric values are explicitly labelled “Illustrative”; no formulas, persistence or live status are implied.
 
+## Deferred visual fidelity corrections (owner decision 28 November 2026)
+
+The owner explicitly **does not approve** the measured differences below as final. They are recorded for targeted correction and were **not modified** during the `add_worker` integration:
+
+| Screen | Stitch HTML reference vs React route (1440×900) | Evidence | Status |
+| --- | --- | --- | --- |
+| Super Admin dashboard | `platform_analytics_dashboard/code.html` vs `platform.dashboard` | 20.9% changed pixels; background `#F7FAF2` vs app `#F7F7F1`; Plus Jakarta Sans vs Inter; duplicate H1 from app shell | NEEDS APPROVAL for correction |
+| Farm Admin dashboard | `farm_operations_dashboard/code.html` vs `farm.dashboard` | 21.1% changed pixels; text length 6427 vs 4654; background `#FBF9F3` vs app `#F7F7F1` | NEEDS APPROVAL for correction |
+| Supervisor daily totals | `daily_production_totals_monthly_summary/code.html` vs `farm.milk.daily-totals` | 41.9% changed pixels; text length 5112 vs 2234; buttons 17 vs 7 | NEEDS APPROVAL for correction |
+
+Any restoration of Stitch content, per-interface background tokens or font treatment must be checked against the SRS/permission matrix first; unsupported functionality must be reported, not implemented.
+
 ## Shared foundation
 
 `apps/web/src/features/workspace/AppShell.tsx` provides the role shells; ported screens are content-only. The role-aware registry `apps/web/src/features/private/privateScreens.ts` maps route ids to lazy-loaded screen components, selecting Supervisor variants when the prototype role is `farm-supervisor`. Approved tokens: Manrope headings, Inter body, Lucide icons, Stitch surface/outline colors per interface. No backend or database work was performed.
