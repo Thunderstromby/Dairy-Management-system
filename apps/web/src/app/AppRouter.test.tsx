@@ -73,7 +73,7 @@ describe('AppRouter role boundaries', () => {
     await renderAt('#/farm/dashboard', 'farm-admin');
 
     expect(screen.getByRole('heading', { level: 1, name: 'Dashboard' })).toBeTruthy();
-    expect(screen.getByText(/Primary overview/)).toBeTruthy();
+    expect(screen.getByRole('heading', { name: 'Milk Production & Shift Yield' })).toBeTruthy();
     expect(screen.getByRole('link', { name: 'Public site' })).toBeTruthy();
   });
 
@@ -101,8 +101,10 @@ describe('AppRouter role boundaries', () => {
   it('allows a Super Admin to open customer management', async () => {
     await renderAt('#/platform/customers', 'super-admin');
 
-    expect(screen.getByRole('heading', { level: 1, name: 'Customer Management' })).toBeTruthy();
-    expect(screen.getByRole('link', { name: 'Customer Detail' })).toBeTruthy();
+    expect(screen.getAllByRole('heading', { name: 'Customer Management' }).length).toBeGreaterThan(
+      0,
+    );
+    expect(screen.getAllByText(/View Details/).length).toBeGreaterThan(0);
   });
 
   it('hides report export controls from a Supervisor', async () => {
@@ -110,9 +112,7 @@ describe('AppRouter role boundaries', () => {
 
     expect(screen.getByRole('heading', { level: 1, name: 'Milk Reports' })).toBeTruthy();
     expect(screen.queryByRole('button', { name: /Export/ })).toBeNull();
-    expect(
-      screen.getByText(/Report export and print are not available for this preview role/),
-    ).toBeTruthy();
+    expect(screen.getByText(/No export or print action is available here/)).toBeTruthy();
   });
 
   it('hides Farm Admin-only routes from Supervisor navigation', async () => {

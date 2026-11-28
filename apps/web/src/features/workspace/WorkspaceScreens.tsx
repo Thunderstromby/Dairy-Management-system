@@ -1,7 +1,9 @@
 import { getDataSource } from '@smartfarm/data-source';
 import { AlertCircle, LockKeyhole } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
+import { usePrototypeRole } from '../../auth/prototype-role';
 import type { ScreenDefinition } from '../../app/types';
+import { resolvePrivateScreen } from '../private/privateScreens';
 import { LocalDraftStatus } from '../../components/LocalDraftStatus';
 import { ScreenTemplateRenderer } from './ScreenTemplates';
 
@@ -99,6 +101,12 @@ function SuspensionConfirmation({ title }: { title: string }) {
 }
 
 export function WorkspaceScreen({ screen }: { screen: ScreenDefinition }) {
+  const { role } = usePrototypeRole();
+  const StitchScreen = resolvePrivateScreen(screen.surface, screen.id, role);
+  if (StitchScreen) {
+    return <StitchScreen />;
+  }
+
   const request = {
     id: screen.id,
     title: screen.title,

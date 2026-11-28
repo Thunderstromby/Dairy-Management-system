@@ -1,11 +1,12 @@
-import { useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { AppLink } from './AppLink';
 import { findScreen } from './routes';
 import { DEFAULT_ROUTE, useAppRoute } from './useAppRoute';
 import { RoleGuard } from '../auth/prototype-role';
+import { usePrototypeRole } from '../auth/prototype-role';
 import { PublicFooter } from '../features/public/PublicFooter';
-import { SuperAdminSignIn } from '../features/platform/SuperAdminSignIn';
+import { resolvePrivateScreen } from '../features/private/privateScreens';
 import { PublicInnerContent } from '../features/public/PublicContent';
 import { PublicNavbar } from '../features/public/PublicNavbar';
 import { StitchBrandStrip } from '../features/public/StitchBrandStrip';
@@ -34,8 +35,10 @@ function NotFound() {
 }
 
 function PrivateScreen({ screen }: { screen: ScreenDefinition }) {
-  if (screen.id === 'platform.login') {
-    return <SuperAdminSignIn />;
+  const { role } = usePrototypeRole();
+  if (screen.id === 'platform.login' || screen.id === 'farm.login') {
+    const LoginScreen = resolvePrivateScreen(screen.surface, screen.id, role);
+    return LoginScreen ? <LoginScreen /> : null;
   }
 
   const content = <WorkspaceScreen screen={screen} />;
@@ -162,5 +165,9 @@ export function AppRouter() {
     );
   }
 
-  return <PrivateScreen screen={screen} />;
+  return (
+    <Suspense fallback={<p className="sf-state">Loading screen layout</p>}>
+      <PrivateScreen screen={screen} />
+    </Suspense>
+  );
 }

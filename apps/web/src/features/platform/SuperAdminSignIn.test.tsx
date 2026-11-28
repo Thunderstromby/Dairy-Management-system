@@ -2,6 +2,7 @@ import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { HashRouter } from 'react-router-dom';
 import { afterEach, describe, expect, it } from 'vitest';
+import { PrototypeRoleProvider } from '../../auth/prototype-role';
 import { AppRouter } from '../../app/AppRouter';
 import { SuperAdminSignIn } from './SuperAdminSignIn';
 
@@ -50,11 +51,13 @@ describe('Super Admin sign-in (Stitch screen)', () => {
     window.location.hash = '#/platform/login';
     render(
       <HashRouter>
-        <AppRouter />
+        <PrototypeRoleProvider>
+          <AppRouter />
+        </PrototypeRoleProvider>
       </HashRouter>,
     );
     expect(
-      screen.getByRole('heading', {
+      await screen.findByRole('heading', {
         level: 1,
         name: 'Enterprise Dairy Management & Tenant Administration',
       }),
