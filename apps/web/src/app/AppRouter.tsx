@@ -5,6 +5,7 @@ import { findScreen } from './routes';
 import { DEFAULT_ROUTE, useAppRoute } from './useAppRoute';
 import { RoleGuard } from '../auth/prototype-role';
 import { PublicFooter } from '../features/public/PublicFooter';
+import { SuperAdminSignIn } from '../features/platform/SuperAdminSignIn';
 import { PublicInnerContent } from '../features/public/PublicContent';
 import { PublicNavbar } from '../features/public/PublicNavbar';
 import { StitchBrandStrip } from '../features/public/StitchBrandStrip';
@@ -33,6 +34,10 @@ function NotFound() {
 }
 
 function PrivateScreen({ screen }: { screen: ScreenDefinition }) {
+  if (screen.id === 'platform.login') {
+    return <SuperAdminSignIn />;
+  }
+
   const content = <WorkspaceScreen screen={screen} />;
   const standalone = screen.template === 'login' || screen.template === 'state';
 
