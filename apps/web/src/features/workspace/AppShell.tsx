@@ -102,7 +102,9 @@ export function WorkspaceAppShell({
       >
         <div className="sf-sidebar__head">
           <AppLink className="sf-brand" href="#/public/home">
-            <StitchLogo className="h-7 w-7 shrink-0" />
+            <span className="sf-sidebar__logo">
+              <StitchLogo className="h-7 w-7 shrink-0" />
+            </span>
             <span className="sf-sidebar__label">SmartFarm</span>
           </AppLink>
           <button

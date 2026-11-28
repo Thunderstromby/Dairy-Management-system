@@ -84,6 +84,10 @@ Any restoration of Stitch content, per-interface background tokens or font treat
 
 Plus Jakarta Sans is used for private headings and KPI values; DM Sans is used for navigation, forms, tables, buttons and supporting text. Tokens are scoped to `.sf-shell`, `.sf-login-wrap` and `.sf-private-auth`, so public-site typography (Manrope/Inter) is unchanged. No layout, permission, data or business-rule changes were made with this override.
 
+## Private sidebar palette (owner-approved sidebar-only change)
+
+Sidebar-scoped tokens in `apps/web/src/styles/app.css` use Deep Forest Green `#183F30`, hover `#28513D`, active `#346449`, active indicator `#B7D5A7`, warm-ivory navigation text `#F7F7F1`, muted sage headings `#ACC7AE`, icon text `#D7E4D7`, borders `#355846` and muted info `#A9C0AD`. The shared sidebar serves all three roles and the mobile drawer; main dashboard surfaces and public styles are unchanged.
+
 ## Shared foundation
 
 `apps/web/src/features/workspace/AppShell.tsx` provides the role shells; ported screens are content-only. The role-aware registry `apps/web/src/features/private/privateScreens.ts` maps route ids to lazy-loaded screen components, selecting Supervisor variants when the prototype role is `farm-supervisor`. Approved tokens: Manrope headings, Inter body, Lucide icons, Stitch surface/outline colors per interface. No backend or database work was performed.
