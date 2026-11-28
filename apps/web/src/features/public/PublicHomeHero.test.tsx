@@ -1,10 +1,15 @@
 import { fireEvent, render, screen } from '@testing-library/react';
+import { HashRouter } from 'react-router-dom';
 import { afterEach, describe, expect, it } from 'vitest';
 import { PublicHomeHero } from './PublicHomeHero';
 import { STITCH_ASSETS } from './stitchAssets';
 
 function renderHero() {
-  return render(<PublicHomeHero />);
+  return render(
+    <HashRouter>
+      <PublicHomeHero />
+    </HashRouter>,
+  );
 }
 
 describe('PublicHomeHero', () => {
@@ -26,8 +31,8 @@ describe('PublicHomeHero', () => {
     expect(screen.getByRole('link', { name: 'Explore SmartFarm' }).getAttribute('href')).toBe(
       '#features',
     );
-    expect(screen.getByRole('link', { name: 'See How It Works' }).getAttribute('href')).toBe(
-      '#how-it-works',
+    expect(screen.getByRole('link', { name: 'Dashboard Preview' }).getAttribute('href')).toBe(
+      '#/public/dashboard-preview',
     );
 
     const image = screen.getByRole('img', {

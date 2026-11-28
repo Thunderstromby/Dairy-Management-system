@@ -1,5 +1,6 @@
 import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { HashRouter } from 'react-router-dom';
 import { afterEach, describe, expect, it } from 'vitest';
 import { MotionProvider } from '../../motion/MotionProvider';
 import { StitchHomePage } from './StitchHome';
@@ -7,9 +8,11 @@ import { STITCH_ASSETS } from './stitchAssets';
 
 function renderHome() {
   return render(
-    <MotionProvider>
-      <StitchHomePage />
-    </MotionProvider>,
+    <HashRouter>
+      <MotionProvider>
+        <StitchHomePage />
+      </MotionProvider>
+    </HashRouter>,
   );
 }
 

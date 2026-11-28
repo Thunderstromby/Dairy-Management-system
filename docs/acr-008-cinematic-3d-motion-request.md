@@ -33,7 +33,7 @@ On 27 November 2026 the owner requested:
 
 ## Implementation decision (owner approval 28 November 2026)
 
-Option B was approved. The smallest change that satisfies it is **CSS perspective/3D transforms**: a hover shine sweep on the navbar wordmark, staggered per-character 3D roll on nav links, and restrained CSS scroll-reveal entrances on public sections. No WebGL context, canvas, Three.js/R3F, GLB/GLTF, texture or new dependency is added, so triangle/draw-call/DPR budgets are not applicable; the static/reduced-motion state is the fallback. All effects are public-only, stop under `prefers-reduced-motion`, do not shift layout or obstruct CTAs, and never enter private routes.
+Option B was approved. The smallest change that satisfies it is **CSS perspective/3D transforms**: a hover shine sweep on the navbar wordmark, staggered per-character Ferris-wheel arcs on nav links (revised 28 November 2026), and restrained CSS scroll-reveal entrances on public sections. No WebGL context, canvas, Three.js/R3F, GLB/GLTF, texture or new dependency is added, so triangle/draw-call/DPR budgets are not applicable; the static/reduced-motion state is the fallback. All effects are public-only, stop under `prefers-reduced-motion`, do not shift layout or obstruct CTAs, and never enter private routes.
 
 ## Approval record
 

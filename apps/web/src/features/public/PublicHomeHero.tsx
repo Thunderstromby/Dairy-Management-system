@@ -1,5 +1,6 @@
 import { ArrowDown, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
+import { AppLink } from '../../app/AppLink';
 import { StaticHeroMotif } from './StaticHeroMotif';
 import { scrollToSection } from './scrollToSection';
 import { STITCH_ASSETS } from './stitchAssets';
@@ -66,13 +67,12 @@ export function PublicHomeHero() {
                 className="ml-2.5 transition-transform group-hover:translate-x-1"
               />
             </a>
-            <a
-              href="#how-it-works"
-              onClick={(event) => scrollToSection(event, 'how-it-works')}
+            <AppLink
+              href="#/public/dashboard-preview"
               className="inline-flex items-center justify-center rounded-lg border border-white/25 bg-white/10 px-8 py-3.5 text-base font-semibold text-white backdrop-blur-md transition-all duration-200 hover:bg-white/20"
             >
-              See How It Works
-            </a>
+              Dashboard Preview
+            </AppLink>
           </div>
         </div>
 

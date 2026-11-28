@@ -15,7 +15,7 @@ HOME
 - Main headline: “Every farm deserves a smarter tomorrow.” (owner-supplied copy, 26 November 2026)
 - Supporting text: “From animal care to milk production, bring everything that matters to your farm together in one simple, connected place.” (owner-supplied copy, 26 November 2026)
 - Primary CTA: Explore SmartFarm.
-- Secondary CTA: See How It Works.
+- Secondary CTA: Dashboard Preview (owner instruction 28 November 2026).
 - Navbar CTA remains Contact Us under §1 Navbar.
 - Stitch-hosted hero photography is approved for Public Home by ACR-003 (owner approval 25 November 2026); replace with authentic licensed photography when supplied. The ACR-002 CSS/static decorative motif remains the external-image failure fallback.
 - 2D visual area: restrained organic shapes and green gradient accents.
