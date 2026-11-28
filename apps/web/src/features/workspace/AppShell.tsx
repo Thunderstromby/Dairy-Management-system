@@ -65,6 +65,10 @@ export function WorkspaceAppShell({
   const { role } = usePrototypeRole();
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const stitchOwnHeader =
+    screen.id === 'platform.dashboard' ||
+    screen.id === 'farm.dashboard' ||
+    (screen.id === 'farm.milk.daily-totals' && role === 'farm-supervisor');
 
   const visibleRoutes = routesForSurface(screen.surface).filter(
     (item) =>
@@ -85,7 +89,11 @@ export function WorkspaceAppShell({
   }
 
   return (
-    <div className="sf-shell" data-sidebar={collapsed ? 'collapsed' : 'expanded'}>
+    <div
+      className="sf-shell"
+      data-sidebar={collapsed ? 'collapsed' : 'expanded'}
+      data-surface={screen.surface}
+    >
       <aside
         id="workspace-nav"
         className={`sf-sidebar${mobileOpen ? ' sf-sidebar--open' : ''}`}
@@ -176,16 +184,18 @@ export function WorkspaceAppShell({
           </div>
         </header>
 
-        <main className="sf-content">
-          <div className="sf-page-header">
-            <div>
-              <p className="sf-breadcrumb">
-                {surfaceLabel(screen.surface)} / {screen.group ?? 'Access'} / {screen.title}
-              </p>
-              <h1>{screen.title}</h1>
-              <p>{screen.description}</p>
+        <main className={stitchOwnHeader ? 'sf-content sf-content--stitch' : 'sf-content'}>
+          {stitchOwnHeader ? null : (
+            <div className="sf-page-header">
+              <div>
+                <p className="sf-breadcrumb">
+                  {surfaceLabel(screen.surface)} / {screen.group ?? 'Access'} / {screen.title}
+                </p>
+                <h1>{screen.title}</h1>
+                <p>{screen.description}</p>
+              </div>
             </div>
-          </div>
+          )}
           {children}
         </main>
       </div>

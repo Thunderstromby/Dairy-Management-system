@@ -155,7 +155,7 @@ export function FarmOperationsDashboard() {
   });
 
   return (
-    <div className="w-full bg-[#fbf9f3] px-4 py-6 font-inter text-[#1b1c18] sm:px-6 lg:px-8">
+    <div className="min-h-screen w-full bg-[#fbf9f3] px-4 py-6 font-inter text-[#1b1c18] sm:px-6 lg:px-8">
       <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-6">
         <header className="rounded-xl border border-[#c4c8bd]/50 bg-white p-5 shadow-sm">
           <div className="flex flex-wrap items-center gap-2 font-inter text-[11px] font-semibold uppercase tracking-wider text-[#444840]">
@@ -432,6 +432,81 @@ export function FarmOperationsDashboard() {
             ))}
           </ol>
         </Card>
+
+        <div className="grid gap-4 xl:grid-cols-2">
+          <section className="rounded-xl border border-[#c4c8bd]/50 bg-white p-5 shadow-sm">
+            <div className="flex items-center justify-between gap-3">
+              <div>
+                <p className="font-inter text-[11px] font-bold uppercase tracking-wider text-[#556249]">
+                  Nutritional Management
+                </p>
+                <h3 className="font-heading text-base font-bold text-[#2f4126]">
+                  Feeding Plans &amp; Shift Allocations
+                </h3>
+              </div>
+              <span className="rounded-lg bg-[#f5f3ed] p-2 text-[#556249]">
+                <Sprout size={20} aria-hidden="true" />
+              </span>
+            </div>
+            <div className="mt-4 space-y-3">
+              {[
+                'High Lactation Ration',
+                'Dry Cow Forage Maintenance',
+                'Calf Starter & Replacer',
+              ].map((plan) => (
+                <div key={plan} className="rounded-xl bg-[#f5f3ed]/70 p-3">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <p className="font-inter text-sm font-bold text-[#1b1c18]">{plan}</p>
+                    <span className="font-inter text-xs font-semibold text-[#2f4126]">
+                      Illustrative allocation
+                    </span>
+                  </div>
+                  <p className="mt-1 font-inter text-xs text-[#444840]">
+                    Ration details are not calculated in this preview.
+                  </p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-4 border-t border-[#c4c8bd]/40 pt-3 font-inter text-[11px] text-[#444840]">
+              No feeding formula or stock deduction is applied.
+            </p>
+          </section>
+
+          <section className="rounded-xl border border-[#c4c8bd]/50 bg-white p-5 shadow-sm">
+            <div className="flex items-center justify-between gap-3">
+              <div>
+                <p className="font-inter text-[11px] font-bold uppercase tracking-wider text-[#556249]">
+                  Inventory Reserves
+                </p>
+                <h3 className="font-heading text-base font-bold text-[#2f4126]">
+                  Feed Stock &amp; Critical Reminders
+                </h3>
+              </div>
+              <span className="rounded-lg bg-[#f5f3ed] p-2 text-[#2f4126]">
+                <Warehouse size={20} aria-hidden="true" />
+              </span>
+            </div>
+            <div className="mt-4 space-y-3">
+              {['Corn Silage', 'Alfalfa Haylage'].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center justify-between rounded-lg bg-[#f5f3ed]/70 p-3"
+                >
+                  <div className="flex items-center gap-2">
+                    <Warehouse size={16} aria-hidden="true" className="text-[#2f4126]" />
+                    <p className="font-inter text-sm font-bold text-[#1b1c18]">{item}</p>
+                  </div>
+                  <span className="font-inter text-xs font-semibold text-[#2f4126]">
+                    Illustrative reserve
+                  </span>
+                </div>
+              ))}
+            </div>
+            <p className="mt-4 border-t border-[#c4c8bd]/40 pt-3 font-inter text-[11px] text-[#444840]">
+              No stock correction or expiry calculation is performed in this preview.
+            </p>
+          </section>
+        </div>
 
         <footer className="flex flex-wrap gap-4 font-inter text-[11px] text-[#444840]">
           <span className="flex items-center gap-1">

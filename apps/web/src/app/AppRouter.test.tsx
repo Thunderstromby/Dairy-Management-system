@@ -72,7 +72,9 @@ describe('AppRouter role boundaries', () => {
   it('allows a Farm Admin to open the approved farm dashboard', async () => {
     await renderAt('#/farm/dashboard', 'farm-admin');
 
-    expect(screen.getByRole('heading', { level: 1, name: 'Dashboard' })).toBeTruthy();
+    expect(
+      screen.getByRole('heading', { level: 1, name: 'Farm Operations Dashboard' }),
+    ).toBeTruthy();
     expect(screen.getByRole('heading', { name: 'Milk Production & Shift Yield' })).toBeTruthy();
     expect(screen.getByRole('link', { name: 'Public site' })).toBeTruthy();
   });

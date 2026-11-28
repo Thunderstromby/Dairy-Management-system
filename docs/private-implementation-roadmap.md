@@ -72,13 +72,13 @@ Folders with `code.html` are ported as content components. Canonical versions ar
 
 The owner explicitly **does not approve** the measured differences below as final. They are recorded for targeted correction and were **not modified** during the `add_worker` integration:
 
-| Screen | Stitch HTML reference vs React route (1440×900) | Evidence | Status |
+| Screen | Original measurement | After targeted correction (1440×900) | Status |
 | --- | --- | --- | --- |
-| Super Admin dashboard | `platform_analytics_dashboard/code.html` vs `platform.dashboard` | 20.9% changed pixels; background `#F7FAF2` vs app `#F7F7F1`; Plus Jakarta Sans vs Inter; duplicate H1 from app shell | NEEDS APPROVAL for correction |
-| Farm Admin dashboard | `farm_operations_dashboard/code.html` vs `farm.dashboard` | 21.1% changed pixels; text length 6427 vs 4654; background `#FBF9F3` vs app `#F7F7F1` | NEEDS APPROVAL for correction |
-| Supervisor daily totals | `daily_production_totals_monthly_summary/code.html` vs `farm.milk.daily-totals` | 41.9% changed pixels; text length 5112 vs 2234; buttons 17 vs 7 | NEEDS APPROVAL for correction |
+| Super Admin dashboard | 20.9% changed pixels; background `#F7FAF2` vs app `#F7F7F1`; Plus Jakarta Sans vs Inter; duplicate H1 from app shell | H1 duplicate removed; per-surface shell canvas `#F7FAF2`; 21.4% changed pixels remain — shell/topbar and approved font substitution still differ | PARTIALLY CORRECTED |
+| Farm Admin dashboard | 21.1% changed pixels; text length 6427 vs 4654; background `#FBF9F3` vs app `#F7F7F1` | Restored `Feeding Plans & Shift Allocations` and `Feed Stock & Critical Reminders` sections (text 5168); per-surface canvas `#FBF9F3`; 24.4% changed pixels remain | PARTIALLY CORRECTED |
+| Supervisor daily totals | 41.9% changed pixels; text length 5112 vs 2234; buttons 17 vs 7 | Restored named pen groups, 7-day/milking/ledger/monthly headings and aggregate section (text 2340); 45.1% changed pixels remain because the app uses tabs and hides most restored sections by default | PARTIALLY CORRECTED — further structural change (removing tabs) and any font change need approval |
 
-Any restoration of Stitch content, per-interface background tokens or font treatment must be checked against the SRS/permission matrix first; unsupported functionality must be reported, not implemented.
+Any restoration of Stitch content, per-interface background tokens or font treatment must be checked against the SRS/permission matrix first; unsupported functionality must be reported, not implemented. Plus Jakarta Sans is not an approved font, so Manrope/Inter remain in force pending an ACR.
 
 ## Shared foundation
 

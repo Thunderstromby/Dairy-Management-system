@@ -600,6 +600,15 @@ textarea {
   min-height: calc(100vh - 39px);
 }
 
+/* Stitch surface canvases; scoped to private shells only. */
+.sf-shell[data-surface='platform'] {
+  background: #f7faf2;
+}
+
+.sf-shell[data-surface='farm'] {
+  background: #fbf9f3;
+}
+
 .sf-shell[data-sidebar='collapsed'] {
   grid-template-columns: 76px minmax(0, 1fr);
 }
@@ -748,6 +757,12 @@ textarea {
   max-width: 1400px;
   margin: 0 auto;
   padding: 28px;
+}
+
+/* Approved Stitch dashboards supply their own header and 1600px canvas. */
+.sf-content--stitch {
+  max-width: 1600px;
+  padding: 0;
 }
 
 .sf-page-header {

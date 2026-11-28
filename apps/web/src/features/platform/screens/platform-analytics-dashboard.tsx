@@ -100,7 +100,7 @@ function CardHeading({ eyebrow, title }: { eyebrow: string; title: string }) {
 
 export function PlatformAnalyticsDashboard() {
   return (
-    <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8">
+    <div className="mx-auto flex min-h-screen w-full max-w-[1600px] flex-col gap-6 bg-[#f7faf2] px-4 py-6 font-inter sm:px-6 lg:px-8">
       <header className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div className="space-y-2">
           <div className="flex flex-wrap items-center gap-2">

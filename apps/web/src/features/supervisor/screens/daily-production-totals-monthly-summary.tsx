@@ -11,18 +11,18 @@ const MONTH = [
 ] as const;
 
 const PENS = [
-  { code: 'PEN 01', name: 'Fresh group', am: '480.0 L', pm: '410.0 L', total: '890.0 L' },
-  { code: 'PEN 02', name: 'Peak lactation', am: '1,120.0 L', pm: '960.0 L', total: '2,080.0 L' },
+  { code: 'PEN 01', name: 'Fresh Cows', am: '480.0 L', pm: '410.0 L', total: '890.0 L' },
+  { code: 'PEN 02', name: 'Peak Lactation', am: '1,120.0 L', pm: '960.0 L', total: '2,080.0 L' },
   {
     code: 'PEN 03',
-    name: 'Mid-late lactation',
+    name: 'Mid-Late Lactation',
     am: '1,040.0 L',
     pm: '810.5 L',
     total: '1,850.5 L',
   },
   {
     code: 'PEN 04',
-    name: 'Separate observation group',
+    name: 'Hospital Pen',
     am: 'Recorded separately',
     pm: 'Recorded separately',
     total: 'Not added to bulk',
@@ -158,7 +158,7 @@ export function DailyProductionTotalsMonthlySummaryScreen() {
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
                 <h2 className="font-heading text-base font-bold text-[#1b1c18]">
-                  Seven-day session overview
+                  7-Day Herd Milking Trajectory
                 </h2>
                 <p className="mt-1 text-sm text-[#444840]">
                   Illustrative morning and evening bars. No target formula, prediction or telemetry
@@ -192,38 +192,43 @@ export function DailyProductionTotalsMonthlySummaryScreen() {
         ) : null}
 
         {tab === 'Pen allocation' ? (
-          <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {PENS.map((pen) => (
-              <article key={pen.code} className="rounded-xl border border-[#c4c8bd] bg-white p-4">
-                <span className="rounded bg-[#f0eee8] px-2 py-0.5 font-mono text-xs font-bold text-[#46583b]">
-                  {pen.code}
-                </span>
-                <h3 className="mt-2 font-heading text-sm font-bold text-[#1b1c18]">{pen.name}</h3>
-                <dl className="mt-3 space-y-1 text-sm">
-                  <div className="flex justify-between gap-2">
-                    <dt className="text-[#444840]">AM</dt>
-                    <dd className="font-mono">{pen.am}</dd>
-                  </div>
-                  <div className="flex justify-between gap-2">
-                    <dt className="text-[#444840]">PM</dt>
-                    <dd className="font-mono">{pen.pm}</dd>
-                  </div>
-                  <div className="flex justify-between gap-2 border-t border-[#f0eee8] pt-1">
-                    <dt className="font-semibold">Total</dt>
-                    <dd className="font-mono font-bold">{pen.total}</dd>
-                  </div>
-                </dl>
-                <p className="mt-3 text-xs text-[#444840]">Illustrative</p>
-              </article>
-            ))}
-          </section>
+          <>
+            <h2 className="font-heading text-base font-bold text-[#1b1c18]">
+              Pen-Level Milking Groups Breakdown
+            </h2>
+            <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {PENS.map((pen) => (
+                <article key={pen.code} className="rounded-xl border border-[#c4c8bd] bg-white p-4">
+                  <span className="rounded bg-[#f0eee8] px-2 py-0.5 font-mono text-xs font-bold text-[#46583b]">
+                    {pen.code}
+                  </span>
+                  <h3 className="mt-2 font-heading text-sm font-bold text-[#1b1c18]">{pen.name}</h3>
+                  <dl className="mt-3 space-y-1 text-sm">
+                    <div className="flex justify-between gap-2">
+                      <dt className="text-[#444840]">AM</dt>
+                      <dd className="font-mono">{pen.am}</dd>
+                    </div>
+                    <div className="flex justify-between gap-2">
+                      <dt className="text-[#444840]">PM</dt>
+                      <dd className="font-mono">{pen.pm}</dd>
+                    </div>
+                    <div className="flex justify-between gap-2 border-t border-[#f0eee8] pt-1">
+                      <dt className="font-semibold">Total</dt>
+                      <dd className="font-mono font-bold">{pen.total}</dd>
+                    </div>
+                  </dl>
+                  <p className="mt-3 text-xs text-[#444840]">Illustrative</p>
+                </article>
+              ))}
+            </section>
+          </>
         ) : null}
 
         <section className="space-y-4 rounded-xl border border-[#c4c8bd] bg-white p-5">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h2 className="font-heading text-base font-bold text-[#1b1c18]">
-                Individual animal ledger
+                Individual Milking Ledger
               </h2>
               <p className="mt-1 text-sm text-[#444840]">Sample records · no export is available</p>
             </div>
@@ -316,6 +321,9 @@ export function DailyProductionTotalsMonthlySummaryScreen() {
                 </div>
               ))}
             </div>
+            <h3 className="font-heading text-sm font-bold text-[#1b1c18]">
+              Daily Volume Distribution (Days 1–24 October)
+            </h3>
             <div
               className="grid grid-cols-6 gap-1.5 sm:grid-cols-12"
               role="img"
@@ -333,6 +341,29 @@ export function DailyProductionTotalsMonthlySummaryScreen() {
             </div>
           </section>
         ) : null}
+
+        <section className="rounded-xl border border-[#c4c8bd] bg-white p-5">
+          <h2 className="font-heading text-lg font-bold text-[#1b1c18]">
+            October 2024 Operational Aggregate
+          </h2>
+          <p className="mt-1 text-sm text-[#444840]">
+            Permitted volumetric summary only. No pricing, billing or commercial data is shown.
+          </p>
+          <dl className="mt-4 grid gap-3 sm:grid-cols-3">
+            {[
+              ['Recorded sessions', 'Illustrative'],
+              ['Collected volume', 'Illustrative'],
+              ['Reviewed summaries', 'Illustrative'],
+            ].map(([label, value]) => (
+              <div key={label} className="rounded-lg bg-[#f0eee8] p-3">
+                <dt className="text-[11px] font-semibold uppercase tracking-wider text-[#444840]">
+                  {label}
+                </dt>
+                <dd className="mt-1 font-heading text-sm font-bold text-[#2f4126]">{value}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
 
         <div className="flex items-start gap-3 rounded-xl bg-[#f0eee8] p-4">
           <Info size={18} aria-hidden="true" className="mt-0.5 shrink-0 text-[#46583b]" />
